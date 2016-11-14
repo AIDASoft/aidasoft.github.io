@@ -1,0 +1,175 @@
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object}{
+\section{DD4hep::Alignments::AlignmentsManagerObject Class Reference}
+\label{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object}\index{DD4hep::Alignments::AlignmentsManagerObject@{DD4hep::Alignments::AlignmentsManagerObject}}
+}
+
+
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} manager.  
+
+
+{\ttfamily \#include $<$AlignmentsManager.h$>$}Inheritance diagram for DD4hep::Alignments::AlignmentsManagerObject::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection}{AlignmentsManager::Dependencies} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_a833ee244e731bbe8cf28bb209181dabc}{Dependencies}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_a8fb4e0202704fdcf8101a42494deca7b}{AlignmentsManagerObject} ()
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_a4eb2f5609448d4e70e2cab1b33311f96}{$\sim$AlignmentsManagerObject} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_af49fc575ee0f8340b2655fd0dab17cbb}{compute} (UserPool \&user\_\-pool) const 
+\begin{DoxyCompactList}\small\item\em Compute all alignment conditions of the internal dependency list. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_af1c948318a90348d15de1cf11c1ee5e0}{compute} (UserPool \&user\_\-pool, const \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection}{Dependencies} \&deps) const 
+\begin{DoxyCompactList}\small\item\em Compute all alignment conditions of the specified dependency list. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection}{Dependencies} $\ast$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_ad936882d8b5fcccecb4a13821539413e}{dependencies}
+\begin{DoxyCompactList}\small\item\em Full list of alignment dependencies. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_align_context}{AlignContext} $\ast$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_ace0f6d572f7c1432436db1aab7a82dca}{all\_\-alignments}
+\begin{DoxyCompactList}\small\item\em References to all alignment possibilities known. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_a69d0f7c21afe5cdd6d34a8c8e460f285}{to\_\-world} (\hyperlink{class_d_d4hep_1_1_alignments_1_1_align_context}{AlignContext} \&new\_\-alignments, UserPool \&pool, \hyperlink{namespace_d_d4hep_a21dd977310ff183f61ca6ae14b59a989}{DetElement} det, TGeoHMatrix \&mat) const 
+\begin{DoxyCompactList}\small\item\em Compute the transformation from the closest detector element of the alignment to the world system. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_aa1b340adcf40221ef1e07ca6e297660f}{compute} (\hyperlink{class_d_d4hep_1_1_alignments_1_1_align_context}{AlignContext} \&new\_\-alignments, UserPool \&pool, \hyperlink{namespace_d_d4hep_a21dd977310ff183f61ca6ae14b59a989}{DetElement} child, int level) const 
+\begin{DoxyCompactList}\small\item\em Compute all alignment conditions of the lower levels. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} manager. Uses internally the conditions mechanism to manager the alignment conditions.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 110 of file AlignmentsManager.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_a833ee244e731bbe8cf28bb209181dabc}{
+\index{DD4hep::Alignments::AlignmentsManagerObject@{DD4hep::Alignments::AlignmentsManagerObject}!Dependencies@{Dependencies}}
+\index{Dependencies@{Dependencies}!DD4hep::Alignments::AlignmentsManagerObject@{DD4hep::Alignments::AlignmentsManagerObject}}
+\subsubsection[{Dependencies}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf AlignmentsManager::Dependencies} {\bf DD4hep::Alignments::AlignmentsManagerObject::Dependencies}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_a833ee244e731bbe8cf28bb209181dabc}
+
+
+Definition at line 112 of file AlignmentsManager.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_a8fb4e0202704fdcf8101a42494deca7b}{
+\index{DD4hep::Alignments::AlignmentsManagerObject@{DD4hep::Alignments::AlignmentsManagerObject}!AlignmentsManagerObject@{AlignmentsManagerObject}}
+\index{AlignmentsManagerObject@{AlignmentsManagerObject}!DD4hep::Alignments::AlignmentsManagerObject@{DD4hep::Alignments::AlignmentsManagerObject}}
+\subsubsection[{AlignmentsManagerObject}]{\setlength{\rightskip}{0pt plus 5cm}AlignmentsManagerObject::AlignmentsManagerObject ()}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_a8fb4e0202704fdcf8101a42494deca7b}
+
+
+Initializing constructor. 
+
+Definition at line 92 of file AlignmentsManager.cpp.
+
+References all\_\-alignments, dependencies, and DD4hep::InstanceCount::increment().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_a4eb2f5609448d4e70e2cab1b33311f96}{
+\index{DD4hep::Alignments::AlignmentsManagerObject@{DD4hep::Alignments::AlignmentsManagerObject}!$\sim$AlignmentsManagerObject@{$\sim$AlignmentsManagerObject}}
+\index{$\sim$AlignmentsManagerObject@{$\sim$AlignmentsManagerObject}!DD4hep::Alignments::AlignmentsManagerObject@{DD4hep::Alignments::AlignmentsManagerObject}}
+\subsubsection[{$\sim$AlignmentsManagerObject}]{\setlength{\rightskip}{0pt plus 5cm}AlignmentsManagerObject::$\sim$AlignmentsManagerObject ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_a4eb2f5609448d4e70e2cab1b33311f96}
+
+
+Default destructor. 
+
+Definition at line 99 of file AlignmentsManager.cpp.
+
+References all\_\-alignments, DD4hep::Conditions::ConditionsDependencyCollection::clear(), DD4hep::InstanceCount::decrement(), DD4hep::deletePtr(), and dependencies.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_af1c948318a90348d15de1cf11c1ee5e0}{
+\index{DD4hep::Alignments::AlignmentsManagerObject@{DD4hep::Alignments::AlignmentsManagerObject}!compute@{compute}}
+\index{compute@{compute}!DD4hep::Alignments::AlignmentsManagerObject@{DD4hep::Alignments::AlignmentsManagerObject}}
+\subsubsection[{compute}]{\setlength{\rightskip}{0pt plus 5cm}void AlignmentsManagerObject::compute (UserPool \& {\em user\_\-pool}, \/  const {\bf Dependencies} \& {\em deps}) const}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_af1c948318a90348d15de1cf11c1ee5e0}
+
+
+Compute all alignment conditions of the specified dependency list. 
+
+Definition at line 146 of file AlignmentsManager.cpp.
+
+References compute(), DD4hep::DEBUG, DD4hep::Alignments::AlignContext::Entry::det, DD4hep::Alignments::AlignContext::detectors, DD4hep::Alignments::AlignContext::entries, DD4hep::INFO, DD4hep::Geometry::DetElementObject::path, DD4hep::printout(), DD4hep::Conditions::ConditionsDependencyCollection::size(), and DD4hep::Alignments::AlignContext::Entry::top.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_af49fc575ee0f8340b2655fd0dab17cbb}{
+\index{DD4hep::Alignments::AlignmentsManagerObject@{DD4hep::Alignments::AlignmentsManagerObject}!compute@{compute}}
+\index{compute@{compute}!DD4hep::Alignments::AlignmentsManagerObject@{DD4hep::Alignments::AlignmentsManagerObject}}
+\subsubsection[{compute}]{\setlength{\rightskip}{0pt plus 5cm}void AlignmentsManagerObject::compute (UserPool \& {\em user\_\-pool}) const}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_af49fc575ee0f8340b2655fd0dab17cbb}
+
+
+Compute all alignment conditions of the internal dependency list. 
+
+Definition at line 141 of file AlignmentsManager.cpp.
+
+References compute(), and dependencies.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_aa1b340adcf40221ef1e07ca6e297660f}{
+\index{DD4hep::Alignments::AlignmentsManagerObject@{DD4hep::Alignments::AlignmentsManagerObject}!compute@{compute}}
+\index{compute@{compute}!DD4hep::Alignments::AlignmentsManagerObject@{DD4hep::Alignments::AlignmentsManagerObject}}
+\subsubsection[{compute}]{\setlength{\rightskip}{0pt plus 5cm}void AlignmentsManagerObject::compute ({\bf AlignContext} \& {\em new\_\-alignments}, \/  UserPool \& {\em pool}, \/  {\bf DetElement} {\em child}, \/  int {\em level}) const\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_aa1b340adcf40221ef1e07ca6e297660f}
+
+
+Compute all alignment conditions of the lower levels. 
+
+Definition at line 208 of file AlignmentsManager.cpp.
+
+References DD4hep::Geometry::\_\-transform(), computeDelta(), DD4hep::Alignments::AlignContext::Entry::cond, DD4hep::Alignments::AlignmentCondition::data(), DD4hep::DEBUG, DD4hep::Alignments::AlignContext::entries, DD4hep::Alignments::AlignmentCondition::iov(), DD4hep::Alignments::AlignContext::keys, DD4hep::printout(), to\_\-world(), DD4hep::Alignments::AlignmentData::trToWorld, and DD4hep::Alignments::AlignmentData::worldTrafo.
+
+Referenced by DD4hep::Alignments::AlignmentsManager::compute(), and compute().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_a69d0f7c21afe5cdd6d34a8c8e460f285}{
+\index{DD4hep::Alignments::AlignmentsManagerObject@{DD4hep::Alignments::AlignmentsManagerObject}!to\_\-world@{to\_\-world}}
+\index{to\_\-world@{to\_\-world}!DD4hep::Alignments::AlignmentsManagerObject@{DD4hep::Alignments::AlignmentsManagerObject}}
+\subsubsection[{to\_\-world}]{\setlength{\rightskip}{0pt plus 5cm}void AlignmentsManagerObject::to\_\-world ({\bf AlignContext} \& {\em new\_\-alignments}, \/  UserPool \& {\em pool}, \/  {\bf DetElement} {\em det}, \/  TGeoHMatrix \& {\em mat}) const\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_a69d0f7c21afe5cdd6d34a8c8e460f285}
+
+
+Compute the transformation from the closest detector element of the alignment to the world system. 
+
+Definition at line 106 of file AlignmentsManager.cpp.
+
+References all\_\-alignments, DD4hep::Alignments::AlignContext::Entry::cond, DD4hep::Alignments::AlignmentCondition::data(), DD4hep::Alignments::AlignContext::Entry::dep, DD4hep::Alignments::AlignContext::entries, DD4hep::Alignments::AlignContext::keys, DD4hep::Geometry::DetElement::parent(), DD4hep::Conditions::ConditionDependency::target, and DD4hep::Alignments::AlignmentData::worldTransformation().
+
+Referenced by compute().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_ace0f6d572f7c1432436db1aab7a82dca}{
+\index{DD4hep::Alignments::AlignmentsManagerObject@{DD4hep::Alignments::AlignmentsManagerObject}!all\_\-alignments@{all\_\-alignments}}
+\index{all\_\-alignments@{all\_\-alignments}!DD4hep::Alignments::AlignmentsManagerObject@{DD4hep::Alignments::AlignmentsManagerObject}}
+\subsubsection[{all\_\-alignments}]{\setlength{\rightskip}{0pt plus 5cm}{\bf AlignContext}$\ast$ {\bf DD4hep::Alignments::AlignmentsManagerObject::all\_\-alignments}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_ace0f6d572f7c1432436db1aab7a82dca}
+
+
+References to all alignment possibilities known. 
+
+Definition at line 117 of file AlignmentsManager.h.
+
+Referenced by DD4hep::Alignments::AlignmentsManager::adoptDependency(), AlignmentsManagerObject(), to\_\-world(), and $\sim$AlignmentsManagerObject().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_ad936882d8b5fcccecb4a13821539413e}{
+\index{DD4hep::Alignments::AlignmentsManagerObject@{DD4hep::Alignments::AlignmentsManagerObject}!dependencies@{dependencies}}
+\index{dependencies@{dependencies}!DD4hep::Alignments::AlignmentsManagerObject@{DD4hep::Alignments::AlignmentsManagerObject}}
+\subsubsection[{dependencies}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dependencies}$\ast$ {\bf DD4hep::Alignments::AlignmentsManagerObject::dependencies}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignments_manager_object_ad936882d8b5fcccecb4a13821539413e}
+
+
+Full list of alignment dependencies. 
+
+Definition at line 115 of file AlignmentsManager.h.
+
+Referenced by DD4hep::Alignments::AlignmentsManager::adoptDependency(), AlignmentsManagerObject(), DD4hep::Alignments::AlignmentsManager::compute(), compute(), DD4hep::Alignments::AlignmentsManager::knownDependencies(), and $\sim$AlignmentsManagerObject().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDAlign/include/DDAlign/\hyperlink{_alignments_manager_8h}{AlignmentsManager.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDAlign/src/\hyperlink{_alignments_manager_8cpp}{AlignmentsManager.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,164 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map}{
+\section{DD4hep::Simulation::Geant4PrimaryMap Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map}\index{DD4hep::Simulation::Geant4PrimaryMap@{DD4hep::Simulation::Geant4PrimaryMap}}
+}
+
+
+Data structure to map primaries to particles.  
+
+
+{\ttfamily \#include $<$Geant4Primary.h$>$}\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std::map$<$ const G4PrimaryParticle $\ast$, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle}{Geant4Particle} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_aec80e9bb254e582ef410dc65da5809c3}{Primaries}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_af51091630c9dbeb00db33d3871af05e4}{Geant4PrimaryMap} ()
+\begin{DoxyCompactList}\small\item\em not persistent \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_a7e013501b60e0d0516648405dcf7affd}{$\sim$Geant4PrimaryMap} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_affe8f0277373092a08624108d677e7f2}{insert} (G4PrimaryParticle $\ast$g4\_\-particle, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle}{Geant4Particle} $\ast$particle)
+\begin{DoxyCompactList}\small\item\em Add a new object pair (G4 primary particle, DDG4 particle) into the maps. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle}{Geant4Particle} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_a4b4f4c2acc5258bdf1cc2b1c9aa735d9}{get} (const G4PrimaryParticle $\ast$particle)
+\begin{DoxyCompactList}\small\item\em Access DDG4 particle by G4 primary particle. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle}{Geant4Particle} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_ae787c8c255966394d5c222fdee02e0c7}{get} (const G4PrimaryParticle $\ast$particle) const 
+\begin{DoxyCompactList}\small\item\em Access DDG4 particle by G4 primary particle (const). \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_aec80e9bb254e582ef410dc65da5809c3}{Primaries} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_a3c59e375ae3f9c00b5924a627cf73241}{primaries} ()
+\begin{DoxyCompactList}\small\item\em Access primary map directly. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_aec80e9bb254e582ef410dc65da5809c3}{Primaries} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_a1eb1af14b00a614c5402bdf6c050fef7}{primaries} () const 
+\begin{DoxyCompactList}\small\item\em Access primary map directly (const). \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_aec80e9bb254e582ef410dc65da5809c3}{Primaries} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_aa3b3cffcec11c5ced24ca4f9ac4e6bde}{m\_\-primaryMap}
+\begin{DoxyCompactList}\small\item\em Mapping of primary particles of this event. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Data structure to map primaries to particles. This data structure is added to the \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event}{Geant4Event} data extensions by the Geant4GenerationInit action.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 65 of file Geant4Primary.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_aec80e9bb254e582ef410dc65da5809c3}{
+\index{DD4hep::Simulation::Geant4PrimaryMap@{DD4hep::Simulation::Geant4PrimaryMap}!Primaries@{Primaries}}
+\index{Primaries@{Primaries}!DD4hep::Simulation::Geant4PrimaryMap@{DD4hep::Simulation::Geant4PrimaryMap}}
+\subsubsection[{Primaries}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$const G4PrimaryParticle$\ast$,{\bf Geant4Particle}$\ast$$>$ {\bf DD4hep::Simulation::Geant4PrimaryMap::Primaries}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_aec80e9bb254e582ef410dc65da5809c3}
+
+
+Definition at line 67 of file Geant4Primary.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_af51091630c9dbeb00db33d3871af05e4}{
+\index{DD4hep::Simulation::Geant4PrimaryMap@{DD4hep::Simulation::Geant4PrimaryMap}!Geant4PrimaryMap@{Geant4PrimaryMap}}
+\index{Geant4PrimaryMap@{Geant4PrimaryMap}!DD4hep::Simulation::Geant4PrimaryMap@{DD4hep::Simulation::Geant4PrimaryMap}}
+\subsubsection[{Geant4PrimaryMap}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4PrimaryMap::Geant4PrimaryMap ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_af51091630c9dbeb00db33d3871af05e4}
+
+
+not persistent Default constructor 
+
+Definition at line 74 of file Geant4Primary.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_a7e013501b60e0d0516648405dcf7affd}{
+\index{DD4hep::Simulation::Geant4PrimaryMap@{DD4hep::Simulation::Geant4PrimaryMap}!$\sim$Geant4PrimaryMap@{$\sim$Geant4PrimaryMap}}
+\index{$\sim$Geant4PrimaryMap@{$\sim$Geant4PrimaryMap}!DD4hep::Simulation::Geant4PrimaryMap@{DD4hep::Simulation::Geant4PrimaryMap}}
+\subsubsection[{$\sim$Geant4PrimaryMap}]{\setlength{\rightskip}{0pt plus 5cm}Geant4PrimaryMap::$\sim$Geant4PrimaryMap ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_a7e013501b60e0d0516648405dcf7affd}
+
+
+Default destructor. 
+
+Definition at line 35 of file Geant4Primary.cpp.
+
+References m\_\-primaryMap, and DD4hep::releaseObjects().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_ae787c8c255966394d5c222fdee02e0c7}{
+\index{DD4hep::Simulation::Geant4PrimaryMap@{DD4hep::Simulation::Geant4PrimaryMap}!get@{get}}
+\index{get@{get}!DD4hep::Simulation::Geant4PrimaryMap@{DD4hep::Simulation::Geant4PrimaryMap}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Geant4Particle} $\ast$ Geant4PrimaryMap::get (const G4PrimaryParticle $\ast$ {\em particle}) const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_ae787c8c255966394d5c222fdee02e0c7}
+
+
+Access DDG4 particle by G4 primary particle (const). 
+
+Definition at line 51 of file Geant4Primary.cpp.
+
+References m\_\-primaryMap.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_a4b4f4c2acc5258bdf1cc2b1c9aa735d9}{
+\index{DD4hep::Simulation::Geant4PrimaryMap@{DD4hep::Simulation::Geant4PrimaryMap}!get@{get}}
+\index{get@{get}!DD4hep::Simulation::Geant4PrimaryMap@{DD4hep::Simulation::Geant4PrimaryMap}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Particle} $\ast$ Geant4PrimaryMap::get (const G4PrimaryParticle $\ast$ {\em particle})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_a4b4f4c2acc5258bdf1cc2b1c9aa735d9}
+
+
+Access DDG4 particle by G4 primary particle. 
+
+Definition at line 45 of file Geant4Primary.cpp.
+
+References m\_\-primaryMap.
+
+Referenced by DD4hep::Simulation::Geant4ParticleHandler::begin().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_affe8f0277373092a08624108d677e7f2}{
+\index{DD4hep::Simulation::Geant4PrimaryMap@{DD4hep::Simulation::Geant4PrimaryMap}!insert@{insert}}
+\index{insert@{insert}!DD4hep::Simulation::Geant4PrimaryMap@{DD4hep::Simulation::Geant4PrimaryMap}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4PrimaryMap::insert (G4PrimaryParticle $\ast$ {\em g4\_\-particle}, \/  {\bf Geant4Particle} $\ast$ {\em particle})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_affe8f0277373092a08624108d677e7f2}
+
+
+Add a new object pair (G4 primary particle, DDG4 particle) into the maps. 
+
+Definition at line 40 of file Geant4Primary.cpp.
+
+References DD4hep::Simulation::Geant4Particle::addRef(), and m\_\-primaryMap.
+
+Referenced by collectPrimaries(), and DD4hep::Simulation::generatePrimaries().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_a1eb1af14b00a614c5402bdf6c050fef7}{
+\index{DD4hep::Simulation::Geant4PrimaryMap@{DD4hep::Simulation::Geant4PrimaryMap}!primaries@{primaries}}
+\index{primaries@{primaries}!DD4hep::Simulation::Geant4PrimaryMap@{DD4hep::Simulation::Geant4PrimaryMap}}
+\subsubsection[{primaries}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Primaries}\& DD4hep::Simulation::Geant4PrimaryMap::primaries () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_a1eb1af14b00a614c5402bdf6c050fef7}
+
+
+Access primary map directly (const). 
+
+Definition at line 86 of file Geant4Primary.h.
+
+References m\_\-primaryMap.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_a3c59e375ae3f9c00b5924a627cf73241}{
+\index{DD4hep::Simulation::Geant4PrimaryMap@{DD4hep::Simulation::Geant4PrimaryMap}!primaries@{primaries}}
+\index{primaries@{primaries}!DD4hep::Simulation::Geant4PrimaryMap@{DD4hep::Simulation::Geant4PrimaryMap}}
+\subsubsection[{primaries}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Primaries}\& DD4hep::Simulation::Geant4PrimaryMap::primaries ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_a3c59e375ae3f9c00b5924a627cf73241}
+
+
+Access primary map directly. 
+
+Definition at line 84 of file Geant4Primary.h.
+
+References m\_\-primaryMap.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_aa3b3cffcec11c5ced24ca4f9ac4e6bde}{
+\index{DD4hep::Simulation::Geant4PrimaryMap@{DD4hep::Simulation::Geant4PrimaryMap}!m\_\-primaryMap@{m\_\-primaryMap}}
+\index{m\_\-primaryMap@{m\_\-primaryMap}!DD4hep::Simulation::Geant4PrimaryMap@{DD4hep::Simulation::Geant4PrimaryMap}}
+\subsubsection[{m\_\-primaryMap}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Primaries} {\bf DD4hep::Simulation::Geant4PrimaryMap::m\_\-primaryMap}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map_aa3b3cffcec11c5ced24ca4f9ac4e6bde}
+
+
+Mapping of primary particles of this event. 
+
+Definition at line 70 of file Geant4Primary.h.
+
+Referenced by get(), insert(), primaries(), and $\sim$Geant4PrimaryMap().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_primary_8h}{Geant4Primary.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_primary_8cpp}{Geant4Primary.cpp}\end{DoxyCompactItemize}

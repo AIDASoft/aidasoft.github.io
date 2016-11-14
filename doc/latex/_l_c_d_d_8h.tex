@@ -1,0 +1,105 @@
+\hypertarget{_l_c_d_d_8h}{
+\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/LCDD.h File Reference}
+\label{_l_c_d_d_8h}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/LCDD.h@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/LCDD.h}}
+}
+{\ttfamily \#include \char`\"{}DD4hep/Handle.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/Fields.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/Objects.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/Shapes.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/Volumes.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/Readout.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/Detector.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/Segmentations.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/VolumeManager.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/NamedObject.h\char`\"{}}\par
+{\ttfamily \#include $<$map$>$}\par
+{\ttfamily \#include $<$vector$>$}\par
+{\ttfamily \#include $<$string$>$}\par
+{\ttfamily \#include $<$cstdio$>$}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{DD4hep::Geometry::LCDD}
+\begin{DoxyCompactList}\small\item\em The main interface to the \hyperlink{namespace_d_d4hep}{DD4hep} detector description package. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_d_d4hep}{DD4hep}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the AIDA detector description toolkit. \item\end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_d_d4hep_1_1_x_m_l}{DD4hep::XML}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace containing utilities to parse \hyperlink{namespace_d_d4hep_1_1_x_m_l}{XML} files using XercesC or TinyXML. \item\end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_d_d4hep_1_1_geometry}{DD4hep::Geometry}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the geometry part of the AIDA detector description toolkit. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_l_c_d_d_8h_ae50ce5e4ea20b25bfe6336613a3a0d10}{DD4HEP\_\-MAJOR\_\-VERSION}~0
+\item 
+\#define \hyperlink{_l_c_d_d_8h_a177f38d432c172264e55bdf8dbfe557d}{DD4HEP\_\-MINOR\_\-VERSION}~18
+\item 
+\#define \hyperlink{_l_c_d_d_8h_a54c4d07e025d78740b44335ccd22b8c1}{DD4HEP\_\-VERSION\_\-GE}(MAJV, MINV)~( (  DD4HEP\_\-MAJOR\_\-VERSION  $>$ MAJV ) $|$$|$ ( (DD4HEP\_\-MAJOR\_\-VERSION==MAJV) \&\& ( DD4HEP\_\-MINOR\_\-VERSION $>$= MINV ) ) )
+\item 
+\#define \hyperlink{_l_c_d_d_8h_aba01f289ab5467cc66ceb60d421c798a}{DD4HEP\_\-VERSION\_\-GT}(MAJV, MINV)~( (  DD4HEP\_\-MAJOR\_\-VERSION  $>$ MAJV ) $|$$|$ ( (DD4HEP\_\-MAJOR\_\-VERSION==MAJV) \&\& ( DD4HEP\_\-MINOR\_\-VERSION $>$  MINV ) ) )
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespace_d_d4hep_acafe43ba4537ab6e999e808142965fab}{DD4hep::LCDDBuildType} \{ \par
+\hyperlink{namespace_d_d4hep_acafe43ba4537ab6e999e808142965faba640bf17b4ac1e133c23f07c8c983c6f7}{DD4hep::BUILD\_\-NONE} =  0, 
+\hyperlink{namespace_d_d4hep_acafe43ba4537ab6e999e808142965fabaceac720f961afd2369fcc9f343113a2e}{DD4hep::BUILD\_\-DEFAULT} =  1, 
+\hyperlink{namespace_d_d4hep_acafe43ba4537ab6e999e808142965faba8c3847bad85ccef6c9240131de017021}{DD4hep::BUILD\_\-SIMU} =  BUILD\_\-DEFAULT, 
+\hyperlink{namespace_d_d4hep_acafe43ba4537ab6e999e808142965faba9c4bfd1d0144d79c9a880703ba87a972}{DD4hep::BUILD\_\-RECO}, 
+\par
+\hyperlink{namespace_d_d4hep_acafe43ba4537ab6e999e808142965fabadda35babdc91945a198025c3bec4e28b}{DD4hep::BUILD\_\-DISPLAY}, 
+\hyperlink{namespace_d_d4hep_acafe43ba4537ab6e999e808142965faba3dd6e816b0b296c4ed843934356e3330}{DD4hep::BUILD\_\-ENVELOPE}
+ \}
+\begin{DoxyCompactList}\small\item\em Detector description build types. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std::string \hyperlink{namespace_d_d4hep_ad8fb70d431a1af32b6220b348af93c60}{DD4hep::versionString} ()
+\begin{DoxyCompactList}\small\item\em return a string with the current \hyperlink{namespace_d_d4hep}{DD4hep} version in the form vXX-\/YY. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\std::string \hyperlink{namespace_d_d4hep_1_1_geometry_a843a7721428e666fa132e20b0706a6ff}{DD4hep::Geometry::LCDD::constant$<$ std::string $>$} (const std::string \&name) const 
+\begin{DoxyCompactList}\small\item\em Typed access to constants: string values. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_l_c_d_d_8h_ae50ce5e4ea20b25bfe6336613a3a0d10}{
+\index{LCDD.h@{LCDD.h}!DD4HEP\_\-MAJOR\_\-VERSION@{DD4HEP\_\-MAJOR\_\-VERSION}}
+\index{DD4HEP\_\-MAJOR\_\-VERSION@{DD4HEP\_\-MAJOR\_\-VERSION}!LCDD.h@{LCDD.h}}
+\subsubsection[{DD4HEP\_\-MAJOR\_\-VERSION}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-MAJOR\_\-VERSION~0}}
+\label{_l_c_d_d_8h_ae50ce5e4ea20b25bfe6336613a3a0d10}
+
+
+Definition at line 17 of file LCDD.h.
+
+Referenced by DD4hep::versionString().\hypertarget{_l_c_d_d_8h_a177f38d432c172264e55bdf8dbfe557d}{
+\index{LCDD.h@{LCDD.h}!DD4HEP\_\-MINOR\_\-VERSION@{DD4HEP\_\-MINOR\_\-VERSION}}
+\index{DD4HEP\_\-MINOR\_\-VERSION@{DD4HEP\_\-MINOR\_\-VERSION}!LCDD.h@{LCDD.h}}
+\subsubsection[{DD4HEP\_\-MINOR\_\-VERSION}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-MINOR\_\-VERSION~18}}
+\label{_l_c_d_d_8h_a177f38d432c172264e55bdf8dbfe557d}
+
+
+Definition at line 18 of file LCDD.h.
+
+Referenced by DD4hep::versionString().\hypertarget{_l_c_d_d_8h_a54c4d07e025d78740b44335ccd22b8c1}{
+\index{LCDD.h@{LCDD.h}!DD4HEP\_\-VERSION\_\-GE@{DD4HEP\_\-VERSION\_\-GE}}
+\index{DD4HEP\_\-VERSION\_\-GE@{DD4HEP\_\-VERSION\_\-GE}!LCDD.h@{LCDD.h}}
+\subsubsection[{DD4HEP\_\-VERSION\_\-GE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-VERSION\_\-GE(MAJV, \/  MINV)~( (  DD4HEP\_\-MAJOR\_\-VERSION  $>$ MAJV ) $|$$|$ ( (DD4HEP\_\-MAJOR\_\-VERSION==MAJV) \&\& ( DD4HEP\_\-MINOR\_\-VERSION $>$= MINV ) ) )}}
+\label{_l_c_d_d_8h_a54c4d07e025d78740b44335ccd22b8c1}
+
+
+Definition at line 20 of file LCDD.h.\hypertarget{_l_c_d_d_8h_aba01f289ab5467cc66ceb60d421c798a}{
+\index{LCDD.h@{LCDD.h}!DD4HEP\_\-VERSION\_\-GT@{DD4HEP\_\-VERSION\_\-GT}}
+\index{DD4HEP\_\-VERSION\_\-GT@{DD4HEP\_\-VERSION\_\-GT}!LCDD.h@{LCDD.h}}
+\subsubsection[{DD4HEP\_\-VERSION\_\-GT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-VERSION\_\-GT(MAJV, \/  MINV)~( (  DD4HEP\_\-MAJOR\_\-VERSION  $>$ MAJV ) $|$$|$ ( (DD4HEP\_\-MAJOR\_\-VERSION==MAJV) \&\& ( DD4HEP\_\-MINOR\_\-VERSION $>$  MINV ) ) )}}
+\label{_l_c_d_d_8h_aba01f289ab5467cc66ceb60d421c798a}
+
+
+Definition at line 22 of file LCDD.h.

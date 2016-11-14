@@ -1,0 +1,193 @@
+\hypertarget{class_d_d4hep_1_1_r_o_o_t_u_i}{
+\section{DD4hep::ROOTUI Class Reference}
+\label{class_d_d4hep_1_1_r_o_o_t_u_i}\index{DD4hep::ROOTUI@{DD4hep::ROOTUI}}
+}
+
+
+\hyperlink{namespace_r_o_o_t}{ROOT} interactive UI for \hyperlink{namespace_d_d4hep}{DD4hep} applications.  
+
+
+{\ttfamily \#include $<$ROOTUI.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_r_o_o_t_u_i_ab1850fd130f80807ff936d85f307e3e0}{ROOTUI} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{Geometry::LCDD} \&instance)
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_r_o_o_t_u_i_a029c3848c27bda2a4d12e706918c109f}{$\sim$ROOTUI} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{Geometry::LCDD} $\ast$ \hyperlink{class_d_d4hep_1_1_r_o_o_t_u_i_ab1866996cf6e9cc337a67373fde2e83e}{instance} () const 
+\begin{DoxyCompactList}\small\item\em Access to the LCDD instance. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_d_d4hep_1_1_named_object}{NamedObject} $>$ \hyperlink{class_d_d4hep_1_1_r_o_o_t_u_i_a8a768db5f211c292dc2a752e6339eec6}{conditionsMgr} () const 
+\begin{DoxyCompactList}\small\item\em Install the \hyperlink{namespace_d_d4hep}{DD4hep} conditions manager object. \item\end{DoxyCompactList}\item 
+long \hyperlink{class_d_d4hep_1_1_r_o_o_t_u_i_a01bf0e443e30c09a85381461d9cc5f5a}{loadConditions} (const std::string \&fname) const 
+\begin{DoxyCompactList}\small\item\em Load conditions from file. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_d_d4hep_1_1_named_object}{NamedObject} $>$ \hyperlink{class_d_d4hep_1_1_r_o_o_t_u_i_ad04f23bceb40da60a17096f5f7e366e0}{alignmentMgr} () const 
+\begin{DoxyCompactList}\small\item\em Install the \hyperlink{namespace_d_d4hep}{DD4hep} alignment manager object. \item\end{DoxyCompactList}\item 
+virtual long \hyperlink{class_d_d4hep_1_1_r_o_o_t_u_i_a5c59ec6627aef8074bf2cf5bb7b82ec6}{apply} (const char $\ast$factory, int argc, char $\ast$$\ast$argv) const 
+\begin{DoxyCompactList}\small\item\em LCDD interface: Manipulate geometry using facroy converter. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_r_o_o_t_u_i_add5b84b3c19270a94e7c23d6bf7e3692}{fromXML} (const std::string \&fname, \hyperlink{namespace_d_d4hep_acafe43ba4537ab6e999e808142965fab}{LCDDBuildType} type=BUILD\_\-DEFAULT) const 
+\begin{DoxyCompactList}\small\item\em LCDD interface: Read any geometry description or alignment file. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_r_o_o_t_u_i_ab7154426f968621a5b8ad26b57716fec}{redraw} () const 
+\begin{DoxyCompactList}\small\item\em LCDD interface: Re-\/draw the entire scene. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{Geometry::LCDD} \& \hyperlink{class_d_d4hep_1_1_r_o_o_t_u_i_a5ee50c37b731dbace8e02609727c937d}{m\_\-lcdd}
+\begin{DoxyCompactList}\small\item\em Reference to the LCDD instance object. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_d_d4hep_1_1_named_object}{NamedObject} $>$ \hyperlink{class_d_d4hep_1_1_r_o_o_t_u_i_aad76877df2fc04d079cf63b9898c123a}{m\_\-condMgr}
+\item 
+\hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_d_d4hep_1_1_named_object}{NamedObject} $>$ \hyperlink{class_d_d4hep_1_1_r_o_o_t_u_i_a4e3cba5482c1e2fa75291a27437d039b}{m\_\-alignMgr}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{namespace_r_o_o_t}{ROOT} interactive UI for \hyperlink{namespace_d_d4hep}{DD4hep} applications. \begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 29 of file ROOTUI.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_r_o_o_t_u_i_ab1850fd130f80807ff936d85f307e3e0}{
+\index{DD4hep::ROOTUI@{DD4hep::ROOTUI}!ROOTUI@{ROOTUI}}
+\index{ROOTUI@{ROOTUI}!DD4hep::ROOTUI@{DD4hep::ROOTUI}}
+\subsubsection[{ROOTUI}]{\setlength{\rightskip}{0pt plus 5cm}ROOTUI::ROOTUI ({\bf Geometry::LCDD} \& {\em instance})}}
+\label{class_d_d4hep_1_1_r_o_o_t_u_i_ab1850fd130f80807ff936d85f307e3e0}
+
+
+Default constructor. 
+
+Definition at line 23 of file ROOTUI.cpp.\hypertarget{class_d_d4hep_1_1_r_o_o_t_u_i_a029c3848c27bda2a4d12e706918c109f}{
+\index{DD4hep::ROOTUI@{DD4hep::ROOTUI}!$\sim$ROOTUI@{$\sim$ROOTUI}}
+\index{$\sim$ROOTUI@{$\sim$ROOTUI}!DD4hep::ROOTUI@{DD4hep::ROOTUI}}
+\subsubsection[{$\sim$ROOTUI}]{\setlength{\rightskip}{0pt plus 5cm}ROOTUI::$\sim$ROOTUI ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_r_o_o_t_u_i_a029c3848c27bda2a4d12e706918c109f}
+
+
+Default destructor. 
+
+Definition at line 27 of file ROOTUI.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_r_o_o_t_u_i_ad04f23bceb40da60a17096f5f7e366e0}{
+\index{DD4hep::ROOTUI@{DD4hep::ROOTUI}!alignmentMgr@{alignmentMgr}}
+\index{alignmentMgr@{alignmentMgr}!DD4hep::ROOTUI@{DD4hep::ROOTUI}}
+\subsubsection[{alignmentMgr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Handle}$<$ {\bf NamedObject} $>$ ROOTUI::alignmentMgr () const}}
+\label{class_d_d4hep_1_1_r_o_o_t_u_i_ad04f23bceb40da60a17096f5f7e366e0}
+
+
+Install the \hyperlink{namespace_d_d4hep}{DD4hep} alignment manager object. 
+
+Definition at line 60 of file ROOTUI.cpp.
+
+References apply(), DD4hep::except(), DD4hep::Handle$<$ T $>$::isValid(), and m\_\-alignMgr.\hypertarget{class_d_d4hep_1_1_r_o_o_t_u_i_a5c59ec6627aef8074bf2cf5bb7b82ec6}{
+\index{DD4hep::ROOTUI@{DD4hep::ROOTUI}!apply@{apply}}
+\index{apply@{apply}!DD4hep::ROOTUI@{DD4hep::ROOTUI}}
+\subsubsection[{apply}]{\setlength{\rightskip}{0pt plus 5cm}long ROOTUI::apply (const char $\ast$ {\em factory}, \/  int {\em argc}, \/  char $\ast$$\ast$ {\em argv}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_r_o_o_t_u_i_a5c59ec6627aef8074bf2cf5bb7b82ec6}
+
+
+LCDD interface: Manipulate geometry using facroy converter. 
+
+Definition at line 74 of file ROOTUI.cpp.
+
+References DD4hep::Geometry::LCDD::apply(), and m\_\-lcdd.
+
+Referenced by alignmentMgr(), and conditionsMgr().\hypertarget{class_d_d4hep_1_1_r_o_o_t_u_i_a8a768db5f211c292dc2a752e6339eec6}{
+\index{DD4hep::ROOTUI@{DD4hep::ROOTUI}!conditionsMgr@{conditionsMgr}}
+\index{conditionsMgr@{conditionsMgr}!DD4hep::ROOTUI@{DD4hep::ROOTUI}}
+\subsubsection[{conditionsMgr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Handle}$<$ {\bf NamedObject} $>$ ROOTUI::conditionsMgr () const}}
+\label{class_d_d4hep_1_1_r_o_o_t_u_i_a8a768db5f211c292dc2a752e6339eec6}
+
+
+Install the \hyperlink{namespace_d_d4hep}{DD4hep} conditions manager object. 
+
+Definition at line 36 of file ROOTUI.cpp.
+
+References apply(), DD4hep::except(), DD4hep::Handle$<$ T $>$::isValid(), and m\_\-condMgr.
+
+Referenced by loadConditions().\hypertarget{class_d_d4hep_1_1_r_o_o_t_u_i_add5b84b3c19270a94e7c23d6bf7e3692}{
+\index{DD4hep::ROOTUI@{DD4hep::ROOTUI}!fromXML@{fromXML}}
+\index{fromXML@{fromXML}!DD4hep::ROOTUI@{DD4hep::ROOTUI}}
+\subsubsection[{fromXML}]{\setlength{\rightskip}{0pt plus 5cm}void ROOTUI::fromXML (const std::string \& {\em fname}, \/  {\bf LCDDBuildType} {\em type} = {\ttfamily BUILD\_\-DEFAULT}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_r_o_o_t_u_i_add5b84b3c19270a94e7c23d6bf7e3692}
+
+
+LCDD interface: Read any geometry description or alignment file. 
+
+Definition at line 79 of file ROOTUI.cpp.
+
+References DD4hep::Geometry::LCDD::fromXML(), and m\_\-lcdd.\hypertarget{class_d_d4hep_1_1_r_o_o_t_u_i_ab1866996cf6e9cc337a67373fde2e83e}{
+\index{DD4hep::ROOTUI@{DD4hep::ROOTUI}!instance@{instance}}
+\index{instance@{instance}!DD4hep::ROOTUI@{DD4hep::ROOTUI}}
+\subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LCDD} $\ast$ ROOTUI::instance () const}}
+\label{class_d_d4hep_1_1_r_o_o_t_u_i_ab1866996cf6e9cc337a67373fde2e83e}
+
+
+Access to the LCDD instance. 
+
+Definition at line 31 of file ROOTUI.cpp.
+
+References m\_\-lcdd.\hypertarget{class_d_d4hep_1_1_r_o_o_t_u_i_a01bf0e443e30c09a85381461d9cc5f5a}{
+\index{DD4hep::ROOTUI@{DD4hep::ROOTUI}!loadConditions@{loadConditions}}
+\index{loadConditions@{loadConditions}!DD4hep::ROOTUI@{DD4hep::ROOTUI}}
+\subsubsection[{loadConditions}]{\setlength{\rightskip}{0pt plus 5cm}long ROOTUI::loadConditions (const std::string \& {\em fname}) const}}
+\label{class_d_d4hep_1_1_r_o_o_t_u_i_a01bf0e443e30c09a85381461d9cc5f5a}
+
+
+Load conditions from file. 
+
+Definition at line 50 of file ROOTUI.cpp.
+
+References DD4hep::BUILD\_\-DEFAULT, conditionsMgr(), DD4hep::Geometry::LCDD::fromXML(), DD4hep::Handle$<$ T $>$::isValid(), and m\_\-lcdd.\hypertarget{class_d_d4hep_1_1_r_o_o_t_u_i_ab7154426f968621a5b8ad26b57716fec}{
+\index{DD4hep::ROOTUI@{DD4hep::ROOTUI}!redraw@{redraw}}
+\index{redraw@{redraw}!DD4hep::ROOTUI@{DD4hep::ROOTUI}}
+\subsubsection[{redraw}]{\setlength{\rightskip}{0pt plus 5cm}void ROOTUI::redraw () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_r_o_o_t_u_i_ab7154426f968621a5b8ad26b57716fec}
+
+
+LCDD interface: Re-\/draw the entire scene. 
+
+Definition at line 84 of file ROOTUI.cpp.
+
+References m\_\-lcdd, and DD4hep::Geometry::LCDD::worldVolume().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_r_o_o_t_u_i_a4e3cba5482c1e2fa75291a27437d039b}{
+\index{DD4hep::ROOTUI@{DD4hep::ROOTUI}!m\_\-alignMgr@{m\_\-alignMgr}}
+\index{m\_\-alignMgr@{m\_\-alignMgr}!DD4hep::ROOTUI@{DD4hep::ROOTUI}}
+\subsubsection[{m\_\-alignMgr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Handle}$<${\bf NamedObject}$>$ {\bf DD4hep::ROOTUI::m\_\-alignMgr}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_r_o_o_t_u_i_a4e3cba5482c1e2fa75291a27437d039b}
+
+
+Definition at line 34 of file ROOTUI.h.
+
+Referenced by alignmentMgr().\hypertarget{class_d_d4hep_1_1_r_o_o_t_u_i_aad76877df2fc04d079cf63b9898c123a}{
+\index{DD4hep::ROOTUI@{DD4hep::ROOTUI}!m\_\-condMgr@{m\_\-condMgr}}
+\index{m\_\-condMgr@{m\_\-condMgr}!DD4hep::ROOTUI@{DD4hep::ROOTUI}}
+\subsubsection[{m\_\-condMgr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Handle}$<${\bf NamedObject}$>$ {\bf DD4hep::ROOTUI::m\_\-condMgr}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_r_o_o_t_u_i_aad76877df2fc04d079cf63b9898c123a}
+
+
+Definition at line 33 of file ROOTUI.h.
+
+Referenced by conditionsMgr().\hypertarget{class_d_d4hep_1_1_r_o_o_t_u_i_a5ee50c37b731dbace8e02609727c937d}{
+\index{DD4hep::ROOTUI@{DD4hep::ROOTUI}!m\_\-lcdd@{m\_\-lcdd}}
+\index{m\_\-lcdd@{m\_\-lcdd}!DD4hep::ROOTUI@{DD4hep::ROOTUI}}
+\subsubsection[{m\_\-lcdd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geometry::LCDD}\& {\bf DD4hep::ROOTUI::m\_\-lcdd}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_r_o_o_t_u_i_a5ee50c37b731dbace8e02609727c937d}
+
+
+Reference to the LCDD instance object. 
+
+Definition at line 32 of file ROOTUI.h.
+
+Referenced by apply(), fromXML(), instance(), loadConditions(), and redraw().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_r_o_o_t_u_i_8h}{ROOTUI.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_r_o_o_t_u_i_8cpp}{ROOTUI.cpp}\end{DoxyCompactItemize}

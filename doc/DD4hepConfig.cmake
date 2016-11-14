@@ -1,0 +1,112 @@
+##############################################################################
+# cmake configuration file for DD4hep
+#
+# returns following variables:
+#
+#   DD4hep_FOUND      : set to TRUE if DD4hep found
+#   DD4hep_VERSION    : package version
+#   DD4hep_ROOT       : path to this DD4hep installation
+#   DD4hep_LIBRARIES  : list of DD4hep libraries
+#   DD4hep_INCLUDE_DIRS  : list of paths to be used with INCLUDE_DIRECTORIES
+#   DD4hep_LIBRARY_DIRS  : list of paths to be used with LINK_DIRECTORIES
+#
+# @author Jan Engels, Desy
+##############################################################################
+
+set ( DD4hep_DIR         "$ENV{DD4hep_DIR}" )
+set ( DD4hep_ROOT        "$ENV{DD4hep_ROOT}" )
+set ( DD4hep_VERSION     "0.18" )
+set ( DD4hep_SOVERSION   "0.18" )
+set ( DD4HEP_USE_BOOST   "ON" )
+set ( DD4HEP_USE_GEANT4  "ON" )
+set ( DD4HEP_USE_XERCESC "OFF" )
+set ( DD4HEP_USE_CXX11   "ON" )
+set ( DD4HEP_USE_CXX14   "OFF" )
+set ( Geant4_DIR         "/cvmfs/clicdp.cern.ch/software/Geant4/10.02.p02/x86_64-slc6-gcc62-opt/lib64/Geant4-10.2.2" )
+set ( GEANT4_USE_CLHEP   "" )
+
+set ( ROOTSYS            "$ENV{ROOTSYS}" )
+set ( ROOT_DIR           "$ENV{ROOTSYS}/cmake" )
+set ( ROOT_VERSION_MAJOR "6" )
+
+include ( ${DD4hep_DIR}/cmake/DD4hep.cmake )
+
+set (CMAKE_MODULE_PATH  ${CMAKE_MODULE_PATH} ${DD4hep_DIR}/cmake  )
+
+# ---------- include dirs -----------------------------------------------------
+# do not store find results in cache
+set( DD4hep_INCLUDE_DIRS DD4hep_INCLUDE_DIRS-NOTFOUND )
+
+mark_as_advanced( DD4hep_INCLUDE_DIRS )
+
+find_path( DD4hep_INCLUDE_DIRS
+  NAMES DD4hep/Detector.h
+  PATHS ${DD4hep_DIR}/include
+  NO_DEFAULT_PATH
+)
+
+# ---------- default build type  --------------------------------------------------------
+if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
+  set (CMAKE_BUILD_TYPE RelWithDebInfo CACHE STRING "One of: None Debug Release RelWithDebInfo MinSizeRel." FORCE)
+endif()
+
+# ---------- libraries --------------------------------------------------------
+# do not store find results in cache
+set( DD4hep_LIBRARY_DIRS ${DD4hep_DIR}/lib )
+set( DD4hep_LIBRARIES    DD4hep_LIBRARIES-NOTFOUND )
+mark_as_advanced( DD4hep_LIBRARY_DIRS DD4hep_LIBRARIES )
+
+include( ${DD4hep_DIR}/cmake/DD4hepMacros.cmake )
+
+# only standard libraries should be passed as arguments to CHECK_PACKAGE_LIBS
+# additional components are set by cmake in variable PKG_FIND_COMPONENTS
+# first argument should be the package name
+if ( ${DD4HEP_USE_GEANT4} )
+  #--- if geant 4 was built with CLHEP we need to export this to client packages
+  if( ${GEANT4_USE_CLHEP} )
+    set( GEANT4_USE_CLHEP  1 ) 
+  endif()
+  set(Geant4_DIR ${Geant4_DIR} )
+endif()
+
+CHECK_PACKAGE_LIBS(DD4hep DDCore)
+
+IF(DD4hep_FIND_COMPONENTS)
+  MESSAGE( STATUS "DD4hep: Looking for Components: ${DD4hep_FIND_COMPONENTS}" )
+
+  FOREACH(comp ${DD4hep_FIND_COMPONENTS})
+    #CHECK_PACKAGE_LIBS is looking for components too, just need to check if they were found, if requested
+    STRING( TOUPPER ${comp} _ulibname )
+    if(NOT DD4hep_${_ulibname}_FOUND)
+      MESSAGE(FATAL_ERROR "Did not find required component: ${comp}")
+    ENDIF()
+  ENDFOREACH()
+ENDIF()
+
+#---- build with xercesc or tinyxml ?
+if( OFF )
+  set( DD4HEP_USE_XERCESC True )
+endif()
+INCLUDE( ${DD4hep_DIR}/cmake/DD4hep_XML_setup.cmake )
+
+# -----------------------------------------
+if( OFF )
+  SET( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14" )
+  ADD_DEFINITIONs(-DDD4HEP_USE_CXX14)
+elseif( ON )
+  SET( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11" )
+  ADD_DEFINITIONs(-DDD4HEP_USE_CXX11)
+else()
+endif()
+
+#----- APPLE ? -------
+
+set( USE_DYLD  )
+MARK_AS_ADVANCED( USE_DYLD )
+
+# ---------- final checking ---------------------------------------------------
+INCLUDE( FindPackageHandleStandardArgs )
+# set DD4HEP_FOUND to TRUE if all listed variables are TRUE and not empty
+FIND_PACKAGE_HANDLE_STANDARD_ARGS( DD4hep DEFAULT_MSG DD4hep_DIR DD4hep_INCLUDE_DIRS DD4hep_LIBRARIES )
+
+SET( DD4hep_FOUND ${DD4HEP_FOUND} )

@@ -1,0 +1,313 @@
+\hypertarget{class_d_d4hep_1_1_surface_installer}{
+\section{DD4hep::SurfaceInstaller Class Reference}
+\label{class_d_d4hep_1_1_surface_installer}\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+}
+
+
+{\ttfamily \#include $<$SurfaceInstaller.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_surface_installer_a3d66822b1627a31f133d29f0c330b82c}{SurfaceInstaller} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \&lcdd, int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_surface_installer_a4fa5c2ba032d20b735556b8e90aacfdb}{$\sim$SurfaceInstaller} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_surface_installer_a57fe4482c0759fc874a4248c0f4d89d8}{stopScanning} ()
+\begin{DoxyCompactList}\small\item\em Set flag to stop scanning volumes and detector elements. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_surface_installer_a28890bdc758b65cf6224680631988d06}{invalidInstaller} (const std::string \&msg) const 
+\begin{DoxyCompactList}\small\item\em Indicate error message and throw exception. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \hyperlink{class_d_d4hep_1_1_surface_installer_a18aa921877964baf2b272bd0e80d4b8e}{parentVolume} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} component) const 
+\begin{DoxyCompactList}\small\item\em Shortcut to access the parent detectorelement's volume. \item\end{DoxyCompactList}\item 
+const double $\ast$ \hyperlink{class_d_d4hep_1_1_surface_installer_a169f1f28ec4bc4d6006dd49bb5eb6d39}{placementTranslation} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} component) const 
+\begin{DoxyCompactList}\small\item\em Shortcut to access the translation vector of a given component. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_surface_installer_ac0d1ae22918e04feaba80f6e928f8d45}{scan} ()
+\begin{DoxyCompactList}\small\item\em Scan through tree of detector elements. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_surface_installer_a88f2c3a607b0ef1f36ac4f00a28bd21b}{install} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} e, \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} pv)
+\begin{DoxyCompactList}\small\item\em Install volume information. Default implementation only prints! \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static long \hyperlink{class_d_d4hep_1_1_surface_installer_ad33b6be30b4f7defecb2f1b256b92bb9}{run} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \&lcdd, int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Executor. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{Geometry::LCDD} \hyperlink{class_d_d4hep_1_1_surface_installer_a155d137884c31b56d13fb58846e562a3}{LCDD}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Geometry::DetElement} \hyperlink{class_d_d4hep_1_1_surface_installer_ab88f41bd9efd54b4b67baee892bfa926}{DetElement}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Geometry::Volume} \hyperlink{class_d_d4hep_1_1_surface_installer_a32a727cbf3cfca5204b7eaf344a5304f}{Volume}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Geometry::PlacedVolume} \hyperlink{class_d_d4hep_1_1_surface_installer_a48fe5565640dc158344c63c2fbb9c506}{PlacedVolume}
+\item 
+typedef \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57c8f37a975258fd84676a69e74c56ab}{Geometry::DetectorTools::ElementPath} \hyperlink{class_d_d4hep_1_1_surface_installer_a731a72c192bdf217f206f0a04ff9dea7}{ElementPath}
+\item 
+typedef \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Geometry::DetectorTools::PlacementPath} \hyperlink{class_d_d4hep_1_1_surface_installer_a73ea611f3129bed899d4282cd126c4e5}{PlacementPath}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_vol_surface_base}{DDRec::VolSurfaceBase} \hyperlink{class_d_d4hep_1_1_surface_installer_adf9b9c7ac69d57dd6e262891e925be3c}{SurfaceData}
+\item 
+typedef \hyperlink{class_d_d_surfaces_1_1_surface_type}{DDSurfaces::SurfaceType} \hyperlink{class_d_d4hep_1_1_surface_installer_a8989d1da18081ccd8afbe70a21d0c918}{SurfaceType}
+\item 
+typedef std::map$<$ TGeoVolume $\ast$, \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_vol_surface_base}{SurfaceData} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_surface_installer_a16346209b86955ff4a4a380c3ce1bcd2}{Surfaces}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_d_d4hep_1_1_surface_installer_ade9e70ab94841f49b0c070e1c7a3e16a}{scan} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} de)
+\begin{DoxyCompactList}\small\item\em Scan through tree of detector elements. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_surface_installer_a557d1f8fd057ae637f855dca603ebaf9}{m\_\-lcdd}
+\begin{DoxyCompactList}\small\item\em Reference to the LCDD instance. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \hyperlink{class_d_d4hep_1_1_surface_installer_a8a8f3acac5b96cd94464d886e06bf6df}{m\_\-det}
+\begin{DoxyCompactList}\small\item\em Reference to the detector element of the subdetector. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_surface_installer_a16346209b86955ff4a4a380c3ce1bcd2}{Surfaces} \hyperlink{class_d_d4hep_1_1_surface_installer_aa301ec142bb36afc171389e0e8acabd2}{m\_\-surfaces}
+\begin{DoxyCompactList}\small\item\em Map of surface instances keyed by the logical volume. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_surface_installer_ab8193ffcef2d5b522aba8d594a2da412}{m\_\-stopScanning}
+\begin{DoxyCompactList}\small\item\em Flag to inhibit useless further scans. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class to implement surface installers for known detector patterns
+
+The class scans the geometry of a subdetector and gives callbacks to user classes, which then should install in the proper callback routines the surface instances to the detector elements.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 51 of file SurfaceInstaller.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_surface_installer_ab88f41bd9efd54b4b67baee892bfa926}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!DetElement@{DetElement}}
+\index{DetElement@{DetElement}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{DetElement}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::DetElement} {\bf DD4hep::SurfaceInstaller::DetElement}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_surface_installer_ab88f41bd9efd54b4b67baee892bfa926}
+
+
+Definition at line 54 of file SurfaceInstaller.h.\hypertarget{class_d_d4hep_1_1_surface_installer_a731a72c192bdf217f206f0a04ff9dea7}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!ElementPath@{ElementPath}}
+\index{ElementPath@{ElementPath}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{ElementPath}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::DetectorTools::ElementPath} {\bf DD4hep::SurfaceInstaller::ElementPath}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_surface_installer_a731a72c192bdf217f206f0a04ff9dea7}
+
+
+Definition at line 57 of file SurfaceInstaller.h.\hypertarget{class_d_d4hep_1_1_surface_installer_a155d137884c31b56d13fb58846e562a3}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!LCDD@{LCDD}}
+\index{LCDD@{LCDD}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{LCDD}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::LCDD} {\bf DD4hep::SurfaceInstaller::LCDD}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_surface_installer_a155d137884c31b56d13fb58846e562a3}
+
+
+Definition at line 53 of file SurfaceInstaller.h.\hypertarget{class_d_d4hep_1_1_surface_installer_a48fe5565640dc158344c63c2fbb9c506}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!PlacedVolume@{PlacedVolume}}
+\index{PlacedVolume@{PlacedVolume}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{PlacedVolume}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::PlacedVolume} {\bf DD4hep::SurfaceInstaller::PlacedVolume}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_surface_installer_a48fe5565640dc158344c63c2fbb9c506}
+
+
+Definition at line 56 of file SurfaceInstaller.h.\hypertarget{class_d_d4hep_1_1_surface_installer_a73ea611f3129bed899d4282cd126c4e5}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!PlacementPath@{PlacementPath}}
+\index{PlacementPath@{PlacementPath}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{PlacementPath}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::DetectorTools::PlacementPath} {\bf DD4hep::SurfaceInstaller::PlacementPath}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_surface_installer_a73ea611f3129bed899d4282cd126c4e5}
+
+
+Definition at line 58 of file SurfaceInstaller.h.\hypertarget{class_d_d4hep_1_1_surface_installer_adf9b9c7ac69d57dd6e262891e925be3c}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!SurfaceData@{SurfaceData}}
+\index{SurfaceData@{SurfaceData}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{SurfaceData}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf DDRec::VolSurfaceBase} {\bf DD4hep::SurfaceInstaller::SurfaceData}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_surface_installer_adf9b9c7ac69d57dd6e262891e925be3c}
+
+
+Definition at line 59 of file SurfaceInstaller.h.\hypertarget{class_d_d4hep_1_1_surface_installer_a16346209b86955ff4a4a380c3ce1bcd2}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!Surfaces@{Surfaces}}
+\index{Surfaces@{Surfaces}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{Surfaces}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$TGeoVolume$\ast$, {\bf SurfaceData}$\ast$ $>$ {\bf DD4hep::SurfaceInstaller::Surfaces}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_surface_installer_a16346209b86955ff4a4a380c3ce1bcd2}
+
+
+Definition at line 62 of file SurfaceInstaller.h.\hypertarget{class_d_d4hep_1_1_surface_installer_a8989d1da18081ccd8afbe70a21d0c918}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!SurfaceType@{SurfaceType}}
+\index{SurfaceType@{SurfaceType}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{SurfaceType}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf DDSurfaces::SurfaceType} {\bf DD4hep::SurfaceInstaller::SurfaceType}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_surface_installer_a8989d1da18081ccd8afbe70a21d0c918}
+
+
+Definition at line 60 of file SurfaceInstaller.h.\hypertarget{class_d_d4hep_1_1_surface_installer_a32a727cbf3cfca5204b7eaf344a5304f}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!Volume@{Volume}}
+\index{Volume@{Volume}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{Volume}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::Volume} {\bf DD4hep::SurfaceInstaller::Volume}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_surface_installer_a32a727cbf3cfca5204b7eaf344a5304f}
+
+
+Definition at line 55 of file SurfaceInstaller.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_surface_installer_a3d66822b1627a31f133d29f0c330b82c}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!SurfaceInstaller@{SurfaceInstaller}}
+\index{SurfaceInstaller@{SurfaceInstaller}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{SurfaceInstaller}]{\setlength{\rightskip}{0pt plus 5cm}SurfaceInstaller::SurfaceInstaller ({\bf LCDD} \& {\em lcdd}, \/  int {\em argc}, \/  char $\ast$$\ast$ {\em argv})}}
+\label{class_d_d4hep_1_1_surface_installer_a3d66822b1627a31f133d29f0c330b82c}
+
+
+Initializing constructor. 
+
+Definition at line 33 of file SurfaceInstaller.cpp.
+
+References DD4hep::Geometry::LCDD::detector(), DD4hep::INFO, DD4hep::Handle$<$ T $>$::isValid(), m\_\-det, DD4hep::Handle$<$ T $>$::name(), and DD4hep::printout().\hypertarget{class_d_d4hep_1_1_surface_installer_a4fa5c2ba032d20b735556b8e90aacfdb}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!$\sim$SurfaceInstaller@{$\sim$SurfaceInstaller}}
+\index{$\sim$SurfaceInstaller@{$\sim$SurfaceInstaller}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{$\sim$SurfaceInstaller}]{\setlength{\rightskip}{0pt plus 5cm}virtual DD4hep::SurfaceInstaller::$\sim$SurfaceInstaller ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_surface_installer_a4fa5c2ba032d20b735556b8e90aacfdb}
+
+
+Default destructor. 
+
+Definition at line 78 of file SurfaceInstaller.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_surface_installer_a88f2c3a607b0ef1f36ac4f00a28bd21b}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!install@{install}}
+\index{install@{install}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{install}]{\setlength{\rightskip}{0pt plus 5cm}void SurfaceInstaller::install ({\bf DetElement} {\em e}, \/  {\bf PlacedVolume} {\em pv})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_surface_installer_a88f2c3a607b0ef1f36ac4f00a28bd21b}
+
+
+Install volume information. Default implementation only prints! Printout volume information. 
+
+Definition at line 80 of file SurfaceInstaller.cpp.
+
+References DD4hep::Geometry::DetectorTools::elementPath(), DD4hep::INFO, DD4hep::Geometry::Volume::isSensitive(), m\_\-det, DD4hep::Handle$<$ T $>$::name(), DD4hep::Geometry::DetectorTools::placementPath(), DD4hep::printout(), DD4hep::Handle$<$ T $>$::ptr(), DD4hep::Geometry::Volume::solid(), DD4hep::Geometry::Solid\_\-type$<$ T $>$::toString(), DD4hep::Geometry::PlacedVolume::volIDs(), and DD4hep::Geometry::PlacedVolume::volume().
+
+Referenced by scan().\hypertarget{class_d_d4hep_1_1_surface_installer_a28890bdc758b65cf6224680631988d06}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!invalidInstaller@{invalidInstaller}}
+\index{invalidInstaller@{invalidInstaller}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{invalidInstaller}]{\setlength{\rightskip}{0pt plus 5cm}void SurfaceInstaller::invalidInstaller (const std::string \& {\em msg}) const}}
+\label{class_d_d4hep_1_1_surface_installer_a28890bdc758b65cf6224680631988d06}
+
+
+Indicate error message and throw exception. 
+
+Definition at line 53 of file SurfaceInstaller.cpp.
+
+References DD4hep::FATAL, DD4hep::Handle$<$ T $>$::isValid(), m\_\-det, DD4hep::Handle$<$ T $>$::name(), DD4hep::printout(), and DD4hep::Geometry::DetElement::type().\hypertarget{class_d_d4hep_1_1_surface_installer_a18aa921877964baf2b272bd0e80d4b8e}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!parentVolume@{parentVolume}}
+\index{parentVolume@{parentVolume}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{parentVolume}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Volume} SurfaceInstaller::parentVolume ({\bf DetElement} {\em component}) const}}
+\label{class_d_d4hep_1_1_surface_installer_a18aa921877964baf2b272bd0e80d4b8e}
+
+
+Shortcut to access the parent detectorelement's volume. 
+
+Definition at line 64 of file SurfaceInstaller.cpp.
+
+References DD4hep::Handle$<$ T $>$::isValid(), DD4hep::Geometry::DetElement::parent(), DD4hep::Geometry::DetElement::placement(), and DD4hep::Geometry::PlacedVolume::volume().\hypertarget{class_d_d4hep_1_1_surface_installer_a169f1f28ec4bc4d6006dd49bb5eb6d39}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!placementTranslation@{placementTranslation}}
+\index{placementTranslation@{placementTranslation}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{placementTranslation}]{\setlength{\rightskip}{0pt plus 5cm}const double $\ast$ SurfaceInstaller::placementTranslation ({\bf DetElement} {\em component}) const}}
+\label{class_d_d4hep_1_1_surface_installer_a169f1f28ec4bc4d6006dd49bb5eb6d39}
+
+
+Shortcut to access the translation vector of a given component. 
+
+Definition at line 73 of file SurfaceInstaller.cpp.
+
+References DD4hep::Geometry::DetElement::placement().\hypertarget{class_d_d4hep_1_1_surface_installer_ad33b6be30b4f7defecb2f1b256b92bb9}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!run@{run}}
+\index{run@{run}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ long DD4hep::SurfaceInstaller::run ({\bf Geometry::LCDD} \& {\em lcdd}, \/  int {\em argc}, \/  char $\ast$$\ast$ {\em argv})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_surface_installer_ad33b6be30b4f7defecb2f1b256b92bb9}
+
+
+Executor. Action routine to execute the test. 
+
+Definition at line 96 of file SurfaceInstaller.h.\hypertarget{class_d_d4hep_1_1_surface_installer_ac0d1ae22918e04feaba80f6e928f8d45}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!scan@{scan}}
+\index{scan@{scan}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{scan}]{\setlength{\rightskip}{0pt plus 5cm}void SurfaceInstaller::scan ()}}
+\label{class_d_d4hep_1_1_surface_installer_ac0d1ae22918e04feaba80f6e928f8d45}
+
+
+Scan through tree of detector elements. Scan through tree of volume placements. 
+
+Definition at line 132 of file SurfaceInstaller.cpp.
+
+References m\_\-det.
+
+Referenced by scan().\hypertarget{class_d_d4hep_1_1_surface_installer_ade9e70ab94841f49b0c070e1c7a3e16a}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!scan@{scan}}
+\index{scan@{scan}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{scan}]{\setlength{\rightskip}{0pt plus 5cm}void SurfaceInstaller::scan ({\bf DetElement} {\em de})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_surface_installer_ade9e70ab94841f49b0c070e1c7a3e16a}
+
+
+Scan through tree of detector elements. Scan through tree of volume placements. 
+
+Definition at line 124 of file SurfaceInstaller.cpp.
+
+References DD4hep::Geometry::DetElement::children(), install(), m\_\-stopScanning, DD4hep::Geometry::DetElement::placement(), and scan().\hypertarget{class_d_d4hep_1_1_surface_installer_a57fe4482c0759fc874a4248c0f4d89d8}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!stopScanning@{stopScanning}}
+\index{stopScanning@{stopScanning}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{stopScanning}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::SurfaceInstaller::stopScanning ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_surface_installer_a57fe4482c0759fc874a4248c0f4d89d8}
+
+
+Set flag to stop scanning volumes and detector elements. 
+
+Definition at line 80 of file SurfaceInstaller.h.
+
+References m\_\-stopScanning.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_surface_installer_a8a8f3acac5b96cd94464d886e06bf6df}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!m\_\-det@{m\_\-det}}
+\index{m\_\-det@{m\_\-det}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{m\_\-det}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} {\bf DD4hep::SurfaceInstaller::m\_\-det}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_surface_installer_a8a8f3acac5b96cd94464d886e06bf6df}
+
+
+Reference to the detector element of the subdetector. 
+
+Definition at line 66 of file SurfaceInstaller.h.
+
+Referenced by install(), invalidInstaller(), scan(), and SurfaceInstaller().\hypertarget{class_d_d4hep_1_1_surface_installer_a557d1f8fd057ae637f855dca603ebaf9}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!m\_\-lcdd@{m\_\-lcdd}}
+\index{m\_\-lcdd@{m\_\-lcdd}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{m\_\-lcdd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LCDD}\& {\bf DD4hep::SurfaceInstaller::m\_\-lcdd}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_surface_installer_a557d1f8fd057ae637f855dca603ebaf9}
+
+
+Reference to the LCDD instance. 
+
+Definition at line 64 of file SurfaceInstaller.h.\hypertarget{class_d_d4hep_1_1_surface_installer_ab8193ffcef2d5b522aba8d594a2da412}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!m\_\-stopScanning@{m\_\-stopScanning}}
+\index{m\_\-stopScanning@{m\_\-stopScanning}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{m\_\-stopScanning}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf DD4hep::SurfaceInstaller::m\_\-stopScanning}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_surface_installer_ab8193ffcef2d5b522aba8d594a2da412}
+
+
+Flag to inhibit useless further scans. 
+
+Definition at line 70 of file SurfaceInstaller.h.
+
+Referenced by scan(), and stopScanning().\hypertarget{class_d_d4hep_1_1_surface_installer_aa301ec142bb36afc171389e0e8acabd2}{
+\index{DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}!m\_\-surfaces@{m\_\-surfaces}}
+\index{m\_\-surfaces@{m\_\-surfaces}!DD4hep::SurfaceInstaller@{DD4hep::SurfaceInstaller}}
+\subsubsection[{m\_\-surfaces}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Surfaces} {\bf DD4hep::SurfaceInstaller::m\_\-surfaces}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_surface_installer_aa301ec142bb36afc171389e0e8acabd2}
+
+
+Map of surface instances keyed by the logical volume. 
+
+Definition at line 68 of file SurfaceInstaller.h.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_surface_installer_8h}{SurfaceInstaller.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_surface_installer_8cpp}{SurfaceInstaller.cpp}\end{DoxyCompactItemize}

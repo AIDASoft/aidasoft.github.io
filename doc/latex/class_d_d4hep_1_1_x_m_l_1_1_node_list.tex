@@ -1,0 +1,171 @@
+\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_node_list}{
+\section{DD4hep::XML::NodeList Class Reference}
+\label{class_d_d4hep_1_1_x_m_l_1_1_node_list}\index{DD4hep::XML::NodeList@{DD4hep::XML::NodeList}}
+}
+
+
+Class describing a list of \hyperlink{namespace_d_d4hep_1_1_x_m_l}{XML} nodes.  
+
+
+{\ttfamily \#include $<$XMLElements.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_node_list_a26cb6e55d1caaceb8753eb05280a7e46}{NodeList} (const \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_node_list}{NodeList} \&l)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_node_list_a8711c5612f382425754b2b8d7b01a7dc}{NodeList} (XmlElement $\ast$frst, const \hyperlink{namespace_d_d4hep_1_1_x_m_l_a09e5d9cc86ed782f6826dfe0778c1815}{XmlChar} $\ast$t)
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_node_list_a77b664c0c6c93d1c6eccbd10581396af}{$\sim$NodeList} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+XmlElement $\ast$ \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_node_list_ac1d472d2a7418c4dadf545044143901d}{reset} ()
+\begin{DoxyCompactList}\small\item\em Reset the nodelist -\/ e.g. restart iteration from beginning. \item\end{DoxyCompactList}\item 
+XmlElement $\ast$ \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_node_list_a81be6bf4c65bb7d5b74ad77d4a66d55e}{next} () const 
+\begin{DoxyCompactList}\small\item\em Advance to next element. \item\end{DoxyCompactList}\item 
+XmlElement $\ast$ \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_node_list_aacc9959baf384d70d7e87dab17dd291e}{previous} () const 
+\begin{DoxyCompactList}\small\item\em Go back to previous element. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_node_list}{NodeList} \& \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_node_list_a4b07c12f6c886a8400c27797bc85a544}{operator=} (const \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_node_list}{NodeList} \&l)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_tag__t}{Tag\_\-t} \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_node_list_ab375956d567e51de6da40c2ddbd3724d}{m\_\-tag}
+\item 
+XmlElement $\ast$ \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_node_list_a14d433901c24fd64952a21eb7700ec42}{m\_\-node}
+\item 
+XmlElement $\ast$ \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_node_list_ac57599e511cd4e3d6d8643eef39839c5}{m\_\-ptr}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class describing a list of \hyperlink{namespace_d_d4hep_1_1_x_m_l}{XML} nodes. Definition of a \char`\"{}list\char`\"{} of xml elements hanging of the parent. The list allows iterations, which can be restarted. Please not: Copies are not entirely free, since the string tag need to be replicated using strdup/free (or when using xerces the corresponding unicode routines).
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 330 of file XMLElements.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_node_list_a26cb6e55d1caaceb8753eb05280a7e46}{
+\index{DD4hep::XML::NodeList@{DD4hep::XML::NodeList}!NodeList@{NodeList}}
+\index{NodeList@{NodeList}!DD4hep::XML::NodeList@{DD4hep::XML::NodeList}}
+\subsubsection[{NodeList}]{\setlength{\rightskip}{0pt plus 5cm}NodeList::NodeList (const {\bf NodeList} \& {\em l})}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_node_list_a26cb6e55d1caaceb8753eb05280a7e46}
+
+
+Copy constructor. 
+
+Definition at line 556 of file XMLElements.cpp.
+
+References reset().\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_node_list_a8711c5612f382425754b2b8d7b01a7dc}{
+\index{DD4hep::XML::NodeList@{DD4hep::XML::NodeList}!NodeList@{NodeList}}
+\index{NodeList@{NodeList}!DD4hep::XML::NodeList@{DD4hep::XML::NodeList}}
+\subsubsection[{NodeList}]{\setlength{\rightskip}{0pt plus 5cm}NodeList::NodeList (XmlElement $\ast$ {\em frst}, \/  const {\bf XmlChar} $\ast$ {\em t})}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_node_list_a8711c5612f382425754b2b8d7b01a7dc}
+
+
+Initializing constructor. 
+
+Definition at line 563 of file XMLElements.cpp.
+
+References reset().\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_node_list_a77b664c0c6c93d1c6eccbd10581396af}{
+\index{DD4hep::XML::NodeList@{DD4hep::XML::NodeList}!$\sim$NodeList@{$\sim$NodeList}}
+\index{$\sim$NodeList@{$\sim$NodeList}!DD4hep::XML::NodeList@{DD4hep::XML::NodeList}}
+\subsubsection[{$\sim$NodeList}]{\setlength{\rightskip}{0pt plus 5cm}NodeList::$\sim$NodeList ()}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_node_list_a77b664c0c6c93d1c6eccbd10581396af}
+
+
+Default destructor. 
+
+Definition at line 570 of file XMLElements.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_node_list_a81be6bf4c65bb7d5b74ad77d4a66d55e}{
+\index{DD4hep::XML::NodeList@{DD4hep::XML::NodeList}!next@{next}}
+\index{next@{next}!DD4hep::XML::NodeList@{DD4hep::XML::NodeList}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}XmlElement $\ast$ NodeList::next () const}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_node_list_a81be6bf4c65bb7d5b74ad77d4a66d55e}
+
+
+Advance to next element. 
+
+Definition at line 579 of file XMLElements.cpp.
+
+References \_\-E, DD4hep::XML::\_\-toString(), \_\-XE, m\_\-ptr, m\_\-tag, and DD4hep::XML::Tag\_\-t::str().
+
+Referenced by DD4hep::XML::Collection\_\-t::operator++().\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_node_list_a4b07c12f6c886a8400c27797bc85a544}{
+\index{DD4hep::XML::NodeList@{DD4hep::XML::NodeList}!operator=@{operator=}}
+\index{operator=@{operator=}!DD4hep::XML::NodeList@{DD4hep::XML::NodeList}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf NodeList} \& NodeList::operator= (const {\bf NodeList} \& {\em l})}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_node_list_a4b07c12f6c886a8400c27797bc85a544}
+
+
+Assignment operator. 
+
+Definition at line 613 of file XMLElements.cpp.
+
+References m\_\-node, m\_\-tag, and reset().\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_node_list_aacc9959baf384d70d7e87dab17dd291e}{
+\index{DD4hep::XML::NodeList@{DD4hep::XML::NodeList}!previous@{previous}}
+\index{previous@{previous}!DD4hep::XML::NodeList@{DD4hep::XML::NodeList}}
+\subsubsection[{previous}]{\setlength{\rightskip}{0pt plus 5cm}XmlElement $\ast$ NodeList::previous () const}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_node_list_aacc9959baf384d70d7e87dab17dd291e}
+
+
+Go back to previous element. 
+
+Definition at line 596 of file XMLElements.cpp.
+
+References \_\-E, DD4hep::XML::\_\-toString(), \_\-XE, m\_\-ptr, m\_\-tag, and DD4hep::XML::Tag\_\-t::str().
+
+Referenced by DD4hep::XML::Collection\_\-t::operator-\/-\/().\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_node_list_ac1d472d2a7418c4dadf545044143901d}{
+\index{DD4hep::XML::NodeList@{DD4hep::XML::NodeList}!reset@{reset}}
+\index{reset@{reset}!DD4hep::XML::NodeList@{DD4hep::XML::NodeList}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}XmlElement $\ast$ NodeList::reset ()}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_node_list_ac1d472d2a7418c4dadf545044143901d}
+
+
+Reset the nodelist -\/ e.g. restart iteration from beginning. Reset the nodelist. 
+
+Definition at line 574 of file XMLElements.cpp.
+
+References m\_\-node, m\_\-ptr, and m\_\-tag.
+
+Referenced by DD4hep::XML::Collection\_\-t::Collection\_\-t(), NodeList(), operator=(), and DD4hep::XML::Collection\_\-t::reset().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_node_list_a14d433901c24fd64952a21eb7700ec42}{
+\index{DD4hep::XML::NodeList@{DD4hep::XML::NodeList}!m\_\-node@{m\_\-node}}
+\index{m\_\-node@{m\_\-node}!DD4hep::XML::NodeList@{DD4hep::XML::NodeList}}
+\subsubsection[{m\_\-node}]{\setlength{\rightskip}{0pt plus 5cm}XmlElement$\ast$ {\bf DD4hep::XML::NodeList::m\_\-node}}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_node_list_a14d433901c24fd64952a21eb7700ec42}
+
+
+Definition at line 333 of file XMLElements.h.
+
+Referenced by operator=(), reset(), and DD4hep::XML::Collection\_\-t::size().\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_node_list_ac57599e511cd4e3d6d8643eef39839c5}{
+\index{DD4hep::XML::NodeList@{DD4hep::XML::NodeList}!m\_\-ptr@{m\_\-ptr}}
+\index{m\_\-ptr@{m\_\-ptr}!DD4hep::XML::NodeList@{DD4hep::XML::NodeList}}
+\subsubsection[{m\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}XmlElement$\ast$ {\bf DD4hep::XML::NodeList::m\_\-ptr}\hspace{0.3cm}{\ttfamily  \mbox{[}mutable\mbox{]}}}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_node_list_ac57599e511cd4e3d6d8643eef39839c5}
+
+
+Definition at line 334 of file XMLElements.h.
+
+Referenced by next(), previous(), and reset().\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_node_list_ab375956d567e51de6da40c2ddbd3724d}{
+\index{DD4hep::XML::NodeList@{DD4hep::XML::NodeList}!m\_\-tag@{m\_\-tag}}
+\index{m\_\-tag@{m\_\-tag}!DD4hep::XML::NodeList@{DD4hep::XML::NodeList}}
+\subsubsection[{m\_\-tag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tag\_\-t} {\bf DD4hep::XML::NodeList::m\_\-tag}}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_node_list_ab375956d567e51de6da40c2ddbd3724d}
+
+
+Definition at line 332 of file XMLElements.h.
+
+Referenced by next(), operator=(), previous(), reset(), and DD4hep::XML::Collection\_\-t::size().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/XML/\hyperlink{_x_m_l_elements_8h}{XMLElements.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/XML/\hyperlink{_x_m_l_elements_8cpp}{XMLElements.cpp}\end{DoxyCompactItemize}

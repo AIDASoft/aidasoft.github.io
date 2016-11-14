@@ -1,0 +1,35 @@
+\hypertarget{_geant4_input_handling_8h}{
+\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/Geant4InputHandling.h File Reference}
+\label{_geant4_input_handling_8h}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/Geant4InputHandling.h@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/Geant4InputHandling.h}}
+}
+{\ttfamily \#include \char`\"{}DDG4/Geant4Primary.h\char`\"{}}\par
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_d_d4hep}{DD4hep}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the AIDA detector description toolkit. \item\end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_d_d4hep_1_1_simulation}{DD4hep::Simulation}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the Geant4 based simulation part of the AIDA detector description toolkit. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_vertex}{Geant4Vertex} $\ast$ \hyperlink{namespace_d_d4hep_1_1_simulation_ab6d15d53b34ea70681d56870814d48b2}{DD4hep::Simulation::createPrimary} (const G4PrimaryVertex $\ast$g4)
+\begin{DoxyCompactList}\small\item\em Create a vertex object from it's G4 counterpart. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle}{Geant4Particle} $\ast$ \hyperlink{namespace_d_d4hep_1_1_simulation_a4ba463edde87d20831a604346d29a129}{DD4hep::Simulation::createPrimary} (int particle\_\-id, const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_vertex}{Geant4Vertex} $\ast$\hyperlink{_multi_view_8cpp_a8320ee13ac034dbf6d624fe8953dd337}{v}, const G4PrimaryParticle $\ast$g4p)
+\begin{DoxyCompactList}\small\item\em Create a particle object from it's G4 counterpart. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_interaction}{Geant4PrimaryInteraction} $\ast$ \hyperlink{namespace_d_d4hep_1_1_simulation_a36acd8dbd545f60bf3b6c7f06209898e}{DD4hep::Simulation::createPrimary} (int mask, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map}{Geant4PrimaryMap} $\ast$pm, const G4PrimaryVertex $\ast$gv)
+\begin{DoxyCompactList}\small\item\em Create a DDG4 interaction record from a Geant4 interaction defined by a primary vertex. \item\end{DoxyCompactList}\item 
+int \hyperlink{namespace_d_d4hep_1_1_simulation_aaf70bd3ee9651c20efdf16a10dfa8dc8}{DD4hep::Simulation::generationInitialization} (const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} $\ast$caller, const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Initialize the generation of one event. \item\end{DoxyCompactList}\item 
+int \hyperlink{namespace_d_d4hep_1_1_simulation_a443dcc90d4d35ae2cab73956bbd2a2d8}{DD4hep::Simulation::mergeInteractions} (const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} $\ast$caller, const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Merge all interactions present in the context. \item\end{DoxyCompactList}\item 
+int \hyperlink{namespace_d_d4hep_1_1_simulation_a5af9f919753af128d90ae3bc13dc1c34}{DD4hep::Simulation::boostInteraction} (const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} $\ast$caller, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_interaction}{Geant4PrimaryEvent::Interaction} $\ast$inter, double alpha)
+\begin{DoxyCompactList}\small\item\em Boost particles of one interaction identified by its mask. \item\end{DoxyCompactList}\item 
+int \hyperlink{namespace_d_d4hep_1_1_simulation_a139e5502767fe9672b4d32c1e276aec3}{DD4hep::Simulation::smearInteraction} (const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} $\ast$caller, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_interaction}{Geant4PrimaryEvent::Interaction} $\ast$inter, double dx, double dy, double dz, double dt)
+\begin{DoxyCompactList}\small\item\em Smear the primary vertex of an interaction. \item\end{DoxyCompactList}\item 
+int \hyperlink{namespace_d_d4hep_1_1_simulation_af9101fceaeec2ab63e17c360a22638cd}{DD4hep::Simulation::generatePrimaries} (const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} $\ast$caller, const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$context, G4Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Generate all primary vertices corresponding to the merged interaction. \item\end{DoxyCompactList}\end{DoxyCompactItemize}

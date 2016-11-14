@@ -1,0 +1,400 @@
+\hypertarget{struct_d_d4hep_1_1_callback_sequence}{
+\section{DD4hep::CallbackSequence Struct Reference}
+\label{struct_d_d4hep_1_1_callback_sequence}\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+}
+
+
+Definition of an actor on sequences of callbacks.  
+
+
+{\ttfamily \#include $<$Callback.h$>$}\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{struct_d_d4hep_1_1_callback_sequence_a7753490247479633aed16a2376821ef7}{Location} \{ \hyperlink{struct_d_d4hep_1_1_callback_sequence_a7753490247479633aed16a2376821ef7a3aef5fe72e4b9e6f6f4b20a655e78ef2}{FRONT}, 
+\hyperlink{struct_d_d4hep_1_1_callback_sequence_a7753490247479633aed16a2376821ef7ac39eeb1bcfc1c235ab1d0d9315c310ac}{END}
+ \}
+\item 
+typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_callback}{Callback} $>$ \hyperlink{struct_d_d4hep_1_1_callback_sequence_a2d9d9488b193731498c4b9cc0fdc4a6b}{Callbacks}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_d_d4hep_1_1_callback_sequence_aefd8cccc83fbe0ded44aea01a4da2e77}{CallbackSequence} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{struct_d_d4hep_1_1_callback_sequence_a0ab0fc2e4541f1d9ce38cb3f87c29773}{CallbackSequence} (const \hyperlink{struct_d_d4hep_1_1_callback_sequence}{CallbackSequence} \&c)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{struct_d_d4hep_1_1_callback_sequence}{CallbackSequence} \& \hyperlink{struct_d_d4hep_1_1_callback_sequence_ae72a363494db733a31d47f70564f9ae1}{operator=} (const \hyperlink{struct_d_d4hep_1_1_callback_sequence}{CallbackSequence} \&c)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \item\end{DoxyCompactList}\item 
+bool \hyperlink{struct_d_d4hep_1_1_callback_sequence_a3d00ddfa75fbd3e04d292eac41a8d4ea}{empty} () const 
+\item 
+void \hyperlink{struct_d_d4hep_1_1_callback_sequence_a3a410a493cc8cd2424b70c9dd2f0a7e9}{clear} ()
+\begin{DoxyCompactList}\small\item\em Clear the sequence and remove all callbacks. \item\end{DoxyCompactList}\item 
+void \hyperlink{struct_d_d4hep_1_1_callback_sequence_a5941696a51eacc65b1c9221e03e4077d}{add} (const \hyperlink{class_d_d4hep_1_1_callback}{Callback} \&cb, \hyperlink{struct_d_d4hep_1_1_callback_sequence_a7753490247479633aed16a2376821ef7}{Location} where)
+\begin{DoxyCompactList}\small\item\em Generically Add a new callback to the sequence depending on the location arguments. \item\end{DoxyCompactList}\item 
+void \hyperlink{struct_d_d4hep_1_1_callback_sequence_ae4fc09e6d68a198eba141cffc1875479}{operator()} () const 
+\begin{DoxyCompactList}\small\item\em Execution overload for callbacks with no arguments. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename A0 $>$ }\\void \hyperlink{struct_d_d4hep_1_1_callback_sequence_a020fb8efdc61f29ac5d8740d96912af3}{operator()} (A0 a0) const 
+\begin{DoxyCompactList}\small\item\em Execution overload for callbacks with 1 argument. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename A0 , typename A1 $>$ }\\void \hyperlink{struct_d_d4hep_1_1_callback_sequence_ae44f3102042e74244b739d273b0e7e24}{operator()} (A0 a0, A1 a1) const 
+\begin{DoxyCompactList}\small\item\em Execution overload for callbacks with 2 arguments. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename A0 , typename A1 , typename A2 $>$ }\\void \hyperlink{struct_d_d4hep_1_1_callback_sequence_a00453acada1059910e01af33f61d9b93}{operator()} (A0 a0, A1 a1, A2 a2) const 
+\begin{DoxyCompactList}\small\item\em Execution overload for callbacks with 3 arguments. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE , typename R , typename OBJECT $>$ }\\void \hyperlink{struct_d_d4hep_1_1_callback_sequence_aa230d1d7e0c5a15b469a8997c90d738c}{add} (TYPE $\ast$pointer, R(OBJECT::$\ast$pmf)(), \hyperlink{struct_d_d4hep_1_1_callback_sequence_a7753490247479633aed16a2376821ef7}{Location} where=CallbackSequence::END)
+\begin{DoxyCompactList}\small\item\em Add a new callback to a member function with explicit return type and no arguments. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE , typename R , typename OBJECT $>$ }\\void \hyperlink{struct_d_d4hep_1_1_callback_sequence_a75e9d2323c3ceffbedd940b089d9a279}{add} (TYPE $\ast$pointer, R(OBJECT::$\ast$pmf)() const, \hyperlink{struct_d_d4hep_1_1_callback_sequence_a7753490247479633aed16a2376821ef7}{Location} where=CallbackSequence::END)
+\begin{DoxyCompactList}\small\item\em Add a new callback to a const member function with explicit return type and no arguments. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE , typename OBJECT $>$ }\\void \hyperlink{struct_d_d4hep_1_1_callback_sequence_a032881e6a1d22611ffed927b6847a6be}{add} (TYPE $\ast$pointer, void(OBJECT::$\ast$pmf)(), \hyperlink{struct_d_d4hep_1_1_callback_sequence_a7753490247479633aed16a2376821ef7}{Location} where=CallbackSequence::END)
+\begin{DoxyCompactList}\small\item\em Add a new callback to a void member function with no arguments. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE , typename OBJECT $>$ }\\void \hyperlink{struct_d_d4hep_1_1_callback_sequence_a6924856939e0486f5afc0f7847c098cb}{add} (TYPE $\ast$pointer, void(OBJECT::$\ast$pmf)() const, \hyperlink{struct_d_d4hep_1_1_callback_sequence_a7753490247479633aed16a2376821ef7}{Location} where=CallbackSequence::END)
+\begin{DoxyCompactList}\small\item\em Add a new callback to a const void member function and no arguments. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE , typename R , typename OBJECT , typename A $>$ }\\void \hyperlink{struct_d_d4hep_1_1_callback_sequence_a1af126fe7c1fd9b2d7df9c4946b25507}{add} (TYPE $\ast$pointer, R(OBJECT::$\ast$pmf)(A), \hyperlink{struct_d_d4hep_1_1_callback_sequence_a7753490247479633aed16a2376821ef7}{Location} where=CallbackSequence::END)
+\begin{DoxyCompactList}\small\item\em Add a new callback to a member function with explicit return type and 1 argument. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE , typename OBJECT , typename A $>$ }\\void \hyperlink{struct_d_d4hep_1_1_callback_sequence_a193702d2e926545fcd103cab1fb2d37c}{add} (TYPE $\ast$pointer, void(OBJECT::$\ast$pmf)(A), \hyperlink{struct_d_d4hep_1_1_callback_sequence_a7753490247479633aed16a2376821ef7}{Location} where=CallbackSequence::END)
+\begin{DoxyCompactList}\small\item\em Add a new callback to a void member function and 1 argument. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE , typename R , typename OBJECT , typename A $>$ }\\void \hyperlink{struct_d_d4hep_1_1_callback_sequence_a1f32b3cb3cfcafe241242a8bbdc55fcf}{add} (TYPE $\ast$pointer, R(OBJECT::$\ast$pmf)(A) const, \hyperlink{struct_d_d4hep_1_1_callback_sequence_a7753490247479633aed16a2376821ef7}{Location} where=CallbackSequence::END)
+\begin{DoxyCompactList}\small\item\em Add a new callback to a const member function with explicit return type and 1 argument. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE , typename OBJECT , typename A $>$ }\\void \hyperlink{struct_d_d4hep_1_1_callback_sequence_ac7198c9f6c25ecbbc37d642032d7cf72}{add} (TYPE $\ast$pointer, void(OBJECT::$\ast$pmf)(A) const, \hyperlink{struct_d_d4hep_1_1_callback_sequence_a7753490247479633aed16a2376821ef7}{Location} where=CallbackSequence::END)
+\begin{DoxyCompactList}\small\item\em Add a new callback to a const void member function and 1 argument. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE , typename R , typename OBJECT , typename A1 , typename A2 $>$ }\\void \hyperlink{struct_d_d4hep_1_1_callback_sequence_ad73a7b5a1c07c298dbbc62730b945c93}{add} (TYPE $\ast$pointer, R(OBJECT::$\ast$pmf)(A1, A2), \hyperlink{struct_d_d4hep_1_1_callback_sequence_a7753490247479633aed16a2376821ef7}{Location} where=CallbackSequence::END)
+\begin{DoxyCompactList}\small\item\em Add a new callback to a member function with explicit return type and 2 arguments. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE , typename R , typename OBJECT , typename A1 , typename A2 $>$ }\\void \hyperlink{struct_d_d4hep_1_1_callback_sequence_a176f9409cc71b2811746680da84989ce}{add} (TYPE $\ast$pointer, R(OBJECT::$\ast$pmf)(A1, A2) const, \hyperlink{struct_d_d4hep_1_1_callback_sequence_a7753490247479633aed16a2376821ef7}{Location} where=CallbackSequence::END)
+\begin{DoxyCompactList}\small\item\em Add a new callback to a const member function with explicit return type and 2 arguments. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE , typename OBJECT , typename A1 , typename A2 $>$ }\\void \hyperlink{struct_d_d4hep_1_1_callback_sequence_a2eb666ee1a72d56de7100f8fd8742626}{add} (TYPE $\ast$pointer, void(OBJECT::$\ast$pmf)(A1, A2), \hyperlink{struct_d_d4hep_1_1_callback_sequence_a7753490247479633aed16a2376821ef7}{Location} where=CallbackSequence::END)
+\begin{DoxyCompactList}\small\item\em Add a new callback to a void member function with 2 arguments. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE , typename OBJECT , typename A1 , typename A2 $>$ }\\void \hyperlink{struct_d_d4hep_1_1_callback_sequence_a2a10a126c6b2c0ab9ae1c5925b72b615}{add} (TYPE $\ast$pointer, void(OBJECT::$\ast$pmf)(A1, A2) const, \hyperlink{struct_d_d4hep_1_1_callback_sequence_a7753490247479633aed16a2376821ef7}{Location} where=CallbackSequence::END)
+\begin{DoxyCompactList}\small\item\em Add a new callback to a const void member function with 2 arguments. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{struct_d_d4hep_1_1_callback_sequence_a79ff90bc3241fad2b0eafd5adb4dee86}{checkTypes} (const std::type\_\-info \&typ1, const std::type\_\-info \&typ2, void $\ast$test)
+\begin{DoxyCompactList}\small\item\em Check the compatibility of two typed objects. The test is the result of a dynamic\_\-cast. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_d_d4hep_1_1_callback_sequence_a2d9d9488b193731498c4b9cc0fdc4a6b}{Callbacks} \hyperlink{struct_d_d4hep_1_1_callback_sequence_a76c6c81bd2cd430ca45bde9206fb1839}{callbacks}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definition of an actor on sequences of callbacks. A callback sequence is a set of callbacks with identical signature, so that the can be called consecutively using the same arguments.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+01/03/2013 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.1 
+\end{DoxyVersion}
+
+
+Definition at line 334 of file Callback.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{struct_d_d4hep_1_1_callback_sequence_a2d9d9488b193731498c4b9cc0fdc4a6b}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!Callbacks@{Callbacks}}
+\index{Callbacks@{Callbacks}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{Callbacks}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf Callback}$>$ {\bf DD4hep::CallbackSequence::Callbacks}}}
+\label{struct_d_d4hep_1_1_callback_sequence_a2d9d9488b193731498c4b9cc0fdc4a6b}
+
+
+Definition at line 335 of file Callback.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{struct_d_d4hep_1_1_callback_sequence_a7753490247479633aed16a2376821ef7}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!Location@{Location}}
+\index{Location@{Location}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{Location}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DD4hep::CallbackSequence::Location}}}
+\label{struct_d_d4hep_1_1_callback_sequence_a7753490247479633aed16a2376821ef7}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{FRONT@{FRONT}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!FRONT@{FRONT}}\item[{\em 
+\hypertarget{struct_d_d4hep_1_1_callback_sequence_a7753490247479633aed16a2376821ef7a3aef5fe72e4b9e6f6f4b20a655e78ef2}{
+FRONT}
+\label{struct_d_d4hep_1_1_callback_sequence_a7753490247479633aed16a2376821ef7a3aef5fe72e4b9e6f6f4b20a655e78ef2}
+}]\index{END@{END}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!END@{END}}\item[{\em 
+\hypertarget{struct_d_d4hep_1_1_callback_sequence_a7753490247479633aed16a2376821ef7ac39eeb1bcfc1c235ab1d0d9315c310ac}{
+END}
+\label{struct_d_d4hep_1_1_callback_sequence_a7753490247479633aed16a2376821ef7ac39eeb1bcfc1c235ab1d0d9315c310ac}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 336 of file Callback.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_d_d4hep_1_1_callback_sequence_aefd8cccc83fbe0ded44aea01a4da2e77}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!CallbackSequence@{CallbackSequence}}
+\index{CallbackSequence@{CallbackSequence}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{CallbackSequence}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::CallbackSequence::CallbackSequence ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_aefd8cccc83fbe0ded44aea01a4da2e77}
+
+
+Default constructor. 
+
+Definition at line 339 of file Callback.h.\hypertarget{struct_d_d4hep_1_1_callback_sequence_a0ab0fc2e4541f1d9ce38cb3f87c29773}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!CallbackSequence@{CallbackSequence}}
+\index{CallbackSequence@{CallbackSequence}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{CallbackSequence}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::CallbackSequence::CallbackSequence (const {\bf CallbackSequence} \& {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_a0ab0fc2e4541f1d9ce38cb3f87c29773}
+
+
+Copy constructor. 
+
+Definition at line 342 of file Callback.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_d_d4hep_1_1_callback_sequence_a2a10a126c6b2c0ab9ae1c5925b72b615}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!add@{add}}
+\index{add@{add}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE , typename OBJECT , typename A1 , typename A2 $>$ void DD4hep::CallbackSequence::add (TYPE $\ast$ {\em pointer}, \/  void(OBJECT::$\ast$)(A1, A2) const  {\em pmf}, \/  {\bf Location} {\em where} = {\ttfamily CallbackSequence::END})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_a2a10a126c6b2c0ab9ae1c5925b72b615}
+
+
+Add a new callback to a const void member function with 2 arguments. 
+
+Definition at line 453 of file Callback.h.
+
+References add(), and checkTypes().\hypertarget{struct_d_d4hep_1_1_callback_sequence_a2eb666ee1a72d56de7100f8fd8742626}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!add@{add}}
+\index{add@{add}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE , typename OBJECT , typename A1 , typename A2 $>$ void DD4hep::CallbackSequence::add (TYPE $\ast$ {\em pointer}, \/  void(OBJECT::$\ast$)(A1, A2) {\em pmf}, \/  {\bf Location} {\em where} = {\ttfamily CallbackSequence::END})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_a2eb666ee1a72d56de7100f8fd8742626}
+
+
+Add a new callback to a void member function with 2 arguments. 
+
+Definition at line 447 of file Callback.h.
+
+References add(), and checkTypes().\hypertarget{struct_d_d4hep_1_1_callback_sequence_a176f9409cc71b2811746680da84989ce}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!add@{add}}
+\index{add@{add}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE , typename R , typename OBJECT , typename A1 , typename A2 $>$ void DD4hep::CallbackSequence::add (TYPE $\ast$ {\em pointer}, \/  R(OBJECT::$\ast$)(A1, A2) const  {\em pmf}, \/  {\bf Location} {\em where} = {\ttfamily CallbackSequence::END})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_a176f9409cc71b2811746680da84989ce}
+
+
+Add a new callback to a const member function with explicit return type and 2 arguments. 
+
+Definition at line 441 of file Callback.h.
+
+References add(), and checkTypes().\hypertarget{struct_d_d4hep_1_1_callback_sequence_ad73a7b5a1c07c298dbbc62730b945c93}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!add@{add}}
+\index{add@{add}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE , typename R , typename OBJECT , typename A1 , typename A2 $>$ void DD4hep::CallbackSequence::add (TYPE $\ast$ {\em pointer}, \/  R(OBJECT::$\ast$)(A1, A2) {\em pmf}, \/  {\bf Location} {\em where} = {\ttfamily CallbackSequence::END})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_ad73a7b5a1c07c298dbbc62730b945c93}
+
+
+Add a new callback to a member function with explicit return type and 2 arguments. \hyperlink{class_d_d4hep_1_1_callback}{Callback} setup for callbacks with 2 arguments 
+
+Definition at line 435 of file Callback.h.
+
+References add(), and checkTypes().\hypertarget{struct_d_d4hep_1_1_callback_sequence_ac7198c9f6c25ecbbc37d642032d7cf72}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!add@{add}}
+\index{add@{add}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE , typename OBJECT , typename A $>$ void DD4hep::CallbackSequence::add (TYPE $\ast$ {\em pointer}, \/  void(OBJECT::$\ast$)(A) const  {\em pmf}, \/  {\bf Location} {\em where} = {\ttfamily CallbackSequence::END})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_ac7198c9f6c25ecbbc37d642032d7cf72}
+
+
+Add a new callback to a const void member function and 1 argument. 
+
+Definition at line 426 of file Callback.h.
+
+References add(), and checkTypes().\hypertarget{struct_d_d4hep_1_1_callback_sequence_a1f32b3cb3cfcafe241242a8bbdc55fcf}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!add@{add}}
+\index{add@{add}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE , typename R , typename OBJECT , typename A $>$ void DD4hep::CallbackSequence::add (TYPE $\ast$ {\em pointer}, \/  R(OBJECT::$\ast$)(A) const  {\em pmf}, \/  {\bf Location} {\em where} = {\ttfamily CallbackSequence::END})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_a1f32b3cb3cfcafe241242a8bbdc55fcf}
+
+
+Add a new callback to a const member function with explicit return type and 1 argument. 
+
+Definition at line 420 of file Callback.h.
+
+References add(), and checkTypes().\hypertarget{struct_d_d4hep_1_1_callback_sequence_a193702d2e926545fcd103cab1fb2d37c}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!add@{add}}
+\index{add@{add}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE , typename OBJECT , typename A $>$ void DD4hep::CallbackSequence::add (TYPE $\ast$ {\em pointer}, \/  void(OBJECT::$\ast$)(A) {\em pmf}, \/  {\bf Location} {\em where} = {\ttfamily CallbackSequence::END})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_a193702d2e926545fcd103cab1fb2d37c}
+
+
+Add a new callback to a void member function and 1 argument. 
+
+Definition at line 414 of file Callback.h.
+
+References add(), and checkTypes().\hypertarget{struct_d_d4hep_1_1_callback_sequence_a1af126fe7c1fd9b2d7df9c4946b25507}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!add@{add}}
+\index{add@{add}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE , typename R , typename OBJECT , typename A $>$ void DD4hep::CallbackSequence::add (TYPE $\ast$ {\em pointer}, \/  R(OBJECT::$\ast$)(A) {\em pmf}, \/  {\bf Location} {\em where} = {\ttfamily CallbackSequence::END})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_a1af126fe7c1fd9b2d7df9c4946b25507}
+
+
+Add a new callback to a member function with explicit return type and 1 argument. \hyperlink{class_d_d4hep_1_1_callback}{Callback} setup for callbacks with 1 argument 
+
+Definition at line 408 of file Callback.h.
+
+References add(), and checkTypes().\hypertarget{struct_d_d4hep_1_1_callback_sequence_a6924856939e0486f5afc0f7847c098cb}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!add@{add}}
+\index{add@{add}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE , typename OBJECT $>$ void DD4hep::CallbackSequence::add (TYPE $\ast$ {\em pointer}, \/  void(OBJECT::$\ast$)() const  {\em pmf}, \/  {\bf Location} {\em where} = {\ttfamily CallbackSequence::END})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_a6924856939e0486f5afc0f7847c098cb}
+
+
+Add a new callback to a const void member function and no arguments. 
+
+Definition at line 400 of file Callback.h.
+
+References add(), and checkTypes().\hypertarget{struct_d_d4hep_1_1_callback_sequence_a032881e6a1d22611ffed927b6847a6be}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!add@{add}}
+\index{add@{add}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE , typename OBJECT $>$ void DD4hep::CallbackSequence::add (TYPE $\ast$ {\em pointer}, \/  void(OBJECT::$\ast$)() {\em pmf}, \/  {\bf Location} {\em where} = {\ttfamily CallbackSequence::END})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_a032881e6a1d22611ffed927b6847a6be}
+
+
+Add a new callback to a void member function with no arguments. 
+
+Definition at line 394 of file Callback.h.
+
+References add(), and checkTypes().\hypertarget{struct_d_d4hep_1_1_callback_sequence_a75e9d2323c3ceffbedd940b089d9a279}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!add@{add}}
+\index{add@{add}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE , typename R , typename OBJECT $>$ void DD4hep::CallbackSequence::add (TYPE $\ast$ {\em pointer}, \/  R(OBJECT::$\ast$)() const  {\em pmf}, \/  {\bf Location} {\em where} = {\ttfamily CallbackSequence::END})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_a75e9d2323c3ceffbedd940b089d9a279}
+
+
+Add a new callback to a const member function with explicit return type and no arguments. 
+
+Definition at line 388 of file Callback.h.
+
+References add(), and checkTypes().\hypertarget{struct_d_d4hep_1_1_callback_sequence_aa230d1d7e0c5a15b469a8997c90d738c}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!add@{add}}
+\index{add@{add}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE , typename R , typename OBJECT $>$ void DD4hep::CallbackSequence::add (TYPE $\ast$ {\em pointer}, \/  R(OBJECT::$\ast$)() {\em pmf}, \/  {\bf Location} {\em where} = {\ttfamily CallbackSequence::END})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_aa230d1d7e0c5a15b469a8997c90d738c}
+
+
+Add a new callback to a member function with explicit return type and no arguments. \hyperlink{class_d_d4hep_1_1_callback}{Callback} setup for callbacks with no arguments 
+
+Definition at line 382 of file Callback.h.
+
+References add(), and checkTypes().\hypertarget{struct_d_d4hep_1_1_callback_sequence_a5941696a51eacc65b1c9221e03e4077d}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!add@{add}}
+\index{add@{add}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::CallbackSequence::add (const {\bf Callback} \& {\em cb}, \/  {\bf Location} {\em where})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_a5941696a51eacc65b1c9221e03e4077d}
+
+
+Generically Add a new callback to the sequence depending on the location arguments. 
+
+Definition at line 362 of file Callback.h.
+
+References callbacks, and FRONT.
+
+Referenced by add(), DD4hep::Simulation::Geant4UserInitializationSequence::build(), DD4hep::Simulation::Geant4UserInitializationSequence::buildMaster(), DD4hep::Simulation::Geant4SteppingActionSequence::call(), DD4hep::Simulation::Geant4GeneratorActionSequence::call(), DD4hep::Simulation::Geant4TrackingActionSequence::callAtBegin(), DD4hep::Simulation::Geant4SensDetActionSequence::callAtBegin(), DD4hep::Simulation::Geant4RunActionSequence::callAtBegin(), DD4hep::Simulation::Geant4EventActionSequence::callAtBegin(), DD4hep::Simulation::Geant4SensDetActionSequence::callAtClear(), DD4hep::Simulation::Geant4TrackingActionSequence::callAtEnd(), DD4hep::Simulation::Geant4SensDetActionSequence::callAtEnd(), DD4hep::Simulation::Geant4RunActionSequence::callAtEnd(), DD4hep::Simulation::Geant4EventActionSequence::callAtEnd(), DD4hep::Simulation::Geant4TrackingActionSequence::callAtFinal(), DD4hep::Simulation::Geant4EventActionSequence::callAtFinal(), DD4hep::Simulation::Geant4StackingActionSequence::callAtNewStage(), DD4hep::Simulation::Geant4StackingActionSequence::callAtPrepare(), DD4hep::Simulation::Geant4SensDetActionSequence::callAtProcess(), DD4hep::Simulation::Geant4TrackingActionSequence::callUpFront(), DD4hep::Simulation::Geant4PhysicsListActionSequence::constructParticle(), DD4hep::Simulation::Geant4PhysicsListActionSequence::constructPhysics(), and DD4hep::Simulation::Geant4PhysicsListActionSequence::constructProcess().\hypertarget{struct_d_d4hep_1_1_callback_sequence_a79ff90bc3241fad2b0eafd5adb4dee86}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!checkTypes@{checkTypes}}
+\index{checkTypes@{checkTypes}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{checkTypes}]{\setlength{\rightskip}{0pt plus 5cm}void CallbackSequence::checkTypes (const std::type\_\-info \& {\em typ1}, \/  const std::type\_\-info \& {\em typ2}, \/  void $\ast$ {\em test})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_a79ff90bc3241fad2b0eafd5adb4dee86}
+
+
+Check the compatibility of two typed objects. The test is the result of a dynamic\_\-cast. 
+
+Definition at line 22 of file Callback.cpp.
+
+Referenced by add(), DD4hep::Simulation::Geant4UIMessenger::addCall(), DD4hep::Geometry::DetElement::addExtension(), and DD4hep::Geometry::DetElement::callAtUpdate().\hypertarget{struct_d_d4hep_1_1_callback_sequence_a3a410a493cc8cd2424b70c9dd2f0a7e9}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!clear@{clear}}
+\index{clear@{clear}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::CallbackSequence::clear ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_a3a410a493cc8cd2424b70c9dd2f0a7e9}
+
+
+Clear the sequence and remove all callbacks. 
+
+Definition at line 358 of file Callback.h.
+
+References callbacks.
+
+Referenced by DD4hep::Simulation::Geant4EventActionSequence::$\sim$Geant4EventActionSequence(), DD4hep::Simulation::Geant4GeneratorActionSequence::$\sim$Geant4GeneratorActionSequence(), DD4hep::Simulation::Geant4PhysicsListActionSequence::$\sim$Geant4PhysicsListActionSequence(), DD4hep::Simulation::Geant4RunActionSequence::$\sim$Geant4RunActionSequence(), DD4hep::Simulation::Geant4StackingActionSequence::$\sim$Geant4StackingActionSequence(), DD4hep::Simulation::Geant4SteppingActionSequence::$\sim$Geant4SteppingActionSequence(), DD4hep::Simulation::Geant4TrackingActionSequence::$\sim$Geant4TrackingActionSequence(), and DD4hep::Simulation::Geant4UserInitializationSequence::$\sim$Geant4UserInitializationSequence().\hypertarget{struct_d_d4hep_1_1_callback_sequence_a3d00ddfa75fbd3e04d292eac41a8d4ea}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!empty@{empty}}
+\index{empty@{empty}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::CallbackSequence::empty () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_a3d00ddfa75fbd3e04d292eac41a8d4ea}
+
+
+Definition at line 354 of file Callback.h.
+
+References callbacks.\hypertarget{struct_d_d4hep_1_1_callback_sequence_a00453acada1059910e01af33f61d9b93}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!operator()@{operator()}}
+\index{operator()@{operator()}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename A0 , typename A1 , typename A2 $>$ void DD4hep::CallbackSequence::operator() (A0 {\em a0}, \/  A1 {\em a1}, \/  A2 {\em a2}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_a00453acada1059910e01af33f61d9b93}
+
+
+Execution overload for callbacks with 3 arguments. 
+
+Definition at line 487 of file Callback.h.
+
+References callbacks.\hypertarget{struct_d_d4hep_1_1_callback_sequence_ae44f3102042e74244b739d273b0e7e24}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!operator()@{operator()}}
+\index{operator()@{operator()}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename A0 , typename A1 $>$ void DD4hep::CallbackSequence::operator() (A0 {\em a0}, \/  A1 {\em a1}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_ae44f3102042e74244b739d273b0e7e24}
+
+
+Execution overload for callbacks with 2 arguments. 
+
+Definition at line 478 of file Callback.h.
+
+References callbacks.\hypertarget{struct_d_d4hep_1_1_callback_sequence_a020fb8efdc61f29ac5d8740d96912af3}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!operator()@{operator()}}
+\index{operator()@{operator()}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename A0 $>$ void DD4hep::CallbackSequence::operator() (A0 {\em a0}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_a020fb8efdc61f29ac5d8740d96912af3}
+
+
+Execution overload for callbacks with 1 argument. 
+
+Definition at line 469 of file Callback.h.
+
+References callbacks.\hypertarget{struct_d_d4hep_1_1_callback_sequence_ae4fc09e6d68a198eba141cffc1875479}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!operator()@{operator()}}
+\index{operator()@{operator()}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::CallbackSequence::operator() () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_ae4fc09e6d68a198eba141cffc1875479}
+
+
+Execution overload for callbacks with no arguments. 
+
+Definition at line 460 of file Callback.h.
+
+References callbacks.\hypertarget{struct_d_d4hep_1_1_callback_sequence_ae72a363494db733a31d47f70564f9ae1}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!operator=@{operator=}}
+\index{operator=@{operator=}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CallbackSequence}\& DD4hep::CallbackSequence::operator= (const {\bf CallbackSequence} \& {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_callback_sequence_ae72a363494db733a31d47f70564f9ae1}
+
+
+Assignment operator. 
+
+Definition at line 346 of file Callback.h.
+
+References callbacks.
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_d_d4hep_1_1_callback_sequence_a76c6c81bd2cd430ca45bde9206fb1839}{
+\index{DD4hep::CallbackSequence@{DD4hep::CallbackSequence}!callbacks@{callbacks}}
+\index{callbacks@{callbacks}!DD4hep::CallbackSequence@{DD4hep::CallbackSequence}}
+\subsubsection[{callbacks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Callbacks} {\bf DD4hep::CallbackSequence::callbacks}}}
+\label{struct_d_d4hep_1_1_callback_sequence_a76c6c81bd2cd430ca45bde9206fb1839}
+
+
+Definition at line 337 of file Callback.h.
+
+Referenced by add(), clear(), empty(), operator()(), and operator=().
+
+The documentation for this struct was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_callback_8h}{Callback.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_callback_8cpp}{Callback.cpp}\end{DoxyCompactItemize}

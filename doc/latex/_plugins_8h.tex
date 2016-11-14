@@ -1,0 +1,236 @@
+\hypertarget{_plugins_8h}{
+\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/Plugins.h File Reference}
+\label{_plugins_8h}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/Plugins.h@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/Plugins.h}}
+}
+{\ttfamily \#include $<$string$>$}\par
+{\ttfamily \#include $<$vector$>$}\par
+{\ttfamily \#include $<$typeinfo$>$}\par
+{\ttfamily \#include \char`\"{}RVersion.h\char`\"{}}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_d_d4hep_1_1_plugin_factory_base}{DD4hep::PluginFactoryBase}
+\begin{DoxyCompactList}\small\item\em Factory base class implementing some utilities. \item\end{DoxyCompactList}\item 
+struct \hyperlink{struct_d_d4hep_1_1_plugin_debug}{DD4hep::PluginDebug}
+\begin{DoxyCompactList}\small\item\em Helper to debug plugin manager calls. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_plugin_service}{DD4hep::PluginService}
+\begin{DoxyCompactList}\small\item\em Factory template for the plugin mechanism. \item\end{DoxyCompactList}\item 
+struct \hyperlink{struct_d_d4hep_1_1_plugin_service_1_1_func_pointer}{DD4hep::PluginService::FuncPointer$<$ FUNCTION $>$}
+\item 
+class \hyperlink{class_d_d4hep_1_1_plugin_registry}{DD4hep::PluginRegistry$<$ SIGNATURE $>$}
+\begin{DoxyCompactList}\small\item\em Factory template for the plugin mechanism. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_d_d4hep}{DD4hep}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the AIDA detector description toolkit. \item\end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_d_d4hep_1_1_geometry}{DD4hep::Geometry}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the geometry part of the AIDA detector description toolkit. \item\end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_d_d4hep_1_1_x_m_l}{DD4hep::XML}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace containing utilities to parse \hyperlink{namespace_d_d4hep_1_1_x_m_l}{XML} files using XercesC or TinyXML. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_plugins_8h_a7d32b09c0ee0a49529f7ac33740206bc}{DD4HEP\_\-FACTORY\_\-CALL}(type, name, signature)~\hyperlink{class_d_d4hep_1_1_plugin_registry}{DD4hep::PluginRegistry}$<$signature$>$::add(name,Factory$<$type,signature$>$::call)
+\item 
+\#define \hyperlink{_plugins_8h_a3b3cf4cafcbb2dcc5311a448259a3b6a}{DD4HEP\_\-IMPLEMENT\_\-PLUGIN\_\-REGISTRY}(X, Y)
+\item 
+\#define \hyperlink{_plugins_8h_a7555036476e7a8ad530e7a9c32716f96}{DD4HEP\_\-OPEN\_\-PLUGIN}(ns, name)~namespace ns \{ namespace \{ struct name \{\}; \} \} namespace DD4hep
+\item 
+\#define \hyperlink{_plugins_8h_a0f5362e7d8f5e58dac5709185307c9c5}{DD4HEP\_\-PLUGINSVC\_\-CNAME}(name, serial)~name\#\#\_\-dict\_\-\#\#serial
+\item 
+\#define \hyperlink{_plugins_8h_a13a8db65f6501989dba7d2e8fde940c2}{DD4HEP\_\-PLUGINSVC\_\-FACTORY}(type, name, signature, serial)
+\item 
+\#define \hyperlink{_plugins_8h_a050ee0294195810965e225fd9175a79d}{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-0}(R)
+\item 
+\#define \hyperlink{_plugins_8h_a34c96bd1d17c05e955300dfb90143f8c}{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-1}(R, A0)
+\item 
+\#define \hyperlink{_plugins_8h_ae0c6e2852415260fafd218490ed2c402}{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-2}(R, A0, A1)
+\item 
+\#define \hyperlink{_plugins_8h_aba8957753d44a8b5460500676b9b8725}{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-3}(R, A0, A1, A2)
+\item 
+\#define \hyperlink{_plugins_8h_a409f34fa4c9ce0444c5ae761edb1d2ab}{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-4}(R, A0, A1, A2, A3)
+\item 
+\#define \hyperlink{_plugins_8h_a4dfa4ce7e0eecaf92188443a5a4983de}{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-5}(R, A0, A1, A2, A3, A4)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$$>$ }\\std::string \hyperlink{namespace_d_d4hep_a5b5167e44073fdcee5af1fdcb724d8f1}{DD4hep::PluginFactoryBase::value$<$ std::string $>$} (const void $\ast$p)
+\item 
+{\footnotesize template$<$$>$ }\\const std::string \& \hyperlink{namespace_d_d4hep_a6d3b9a78f7f80ec6ee1366b7769f3b1d}{DD4hep::PluginFactoryBase::value$<$ const std::string \& $>$} (const void $\ast$p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_plugins_8h_a7d32b09c0ee0a49529f7ac33740206bc}{
+\index{Plugins.h@{Plugins.h}!DD4HEP\_\-FACTORY\_\-CALL@{DD4HEP\_\-FACTORY\_\-CALL}}
+\index{DD4HEP\_\-FACTORY\_\-CALL@{DD4HEP\_\-FACTORY\_\-CALL}!Plugins.h@{Plugins.h}}
+\subsubsection[{DD4HEP\_\-FACTORY\_\-CALL}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-FACTORY\_\-CALL(type, \/  name, \/  signature)~{\bf DD4hep::PluginRegistry}$<$signature$>$::add(name,Factory$<$type,signature$>$::call)}}
+\label{_plugins_8h_a7d32b09c0ee0a49529f7ac33740206bc}
+
+
+Definition at line 172 of file Plugins.h.\hypertarget{_plugins_8h_a3b3cf4cafcbb2dcc5311a448259a3b6a}{
+\index{Plugins.h@{Plugins.h}!DD4HEP\_\-IMPLEMENT\_\-PLUGIN\_\-REGISTRY@{DD4HEP\_\-IMPLEMENT\_\-PLUGIN\_\-REGISTRY}}
+\index{DD4HEP\_\-IMPLEMENT\_\-PLUGIN\_\-REGISTRY@{DD4HEP\_\-IMPLEMENT\_\-PLUGIN\_\-REGISTRY}!Plugins.h@{Plugins.h}}
+\subsubsection[{DD4HEP\_\-IMPLEMENT\_\-PLUGIN\_\-REGISTRY}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-IMPLEMENT\_\-PLUGIN\_\-REGISTRY(X, \/  Y)}}
+\label{_plugins_8h_a3b3cf4cafcbb2dcc5311a448259a3b6a}
+
+
+Definition at line 173 of file Plugins.h.\hypertarget{_plugins_8h_a7555036476e7a8ad530e7a9c32716f96}{
+\index{Plugins.h@{Plugins.h}!DD4HEP\_\-OPEN\_\-PLUGIN@{DD4HEP\_\-OPEN\_\-PLUGIN}}
+\index{DD4HEP\_\-OPEN\_\-PLUGIN@{DD4HEP\_\-OPEN\_\-PLUGIN}!Plugins.h@{Plugins.h}}
+\subsubsection[{DD4HEP\_\-OPEN\_\-PLUGIN}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-OPEN\_\-PLUGIN(ns, \/  name)~namespace ns \{ namespace \{ struct name \{\}; \} \} namespace DD4hep}}
+\label{_plugins_8h_a7555036476e7a8ad530e7a9c32716f96}
+
+
+Definition at line 176 of file Plugins.h.\hypertarget{_plugins_8h_a050ee0294195810965e225fd9175a79d}{
+\index{Plugins.h@{Plugins.h}!DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-0@{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-0}}
+\index{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-0@{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-0}!Plugins.h@{Plugins.h}}
+\subsubsection[{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-0(R)}}
+\label{_plugins_8h_a050ee0294195810965e225fd9175a79d}
+{\bfseries Value:}
+\begin{DoxyCode}
+template <typename P> class Factory<P, R()>                           \
+    : public DD4hep::PluginFactoryBase {                                \
+  public:                                                               \
+    static void wrapper(void *ret,void*,const std::vector<void*>& ,void*) { \
+      *(void**)ret = (void*)call();                                     \
+    }                                                                   \
+    static R call();                                                    \
+  };                                                                    \
+  template <typename P> inline R Factory<P,R()>::call()
+\end{DoxyCode}
+
+
+Definition at line 186 of file Plugins.h.\hypertarget{_plugins_8h_a34c96bd1d17c05e955300dfb90143f8c}{
+\index{Plugins.h@{Plugins.h}!DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-1@{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-1}}
+\index{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-1@{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-1}!Plugins.h@{Plugins.h}}
+\subsubsection[{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-1(R, \/  A0)}}
+\label{_plugins_8h_a34c96bd1d17c05e955300dfb90143f8c}
+{\bfseries Value:}
+\begin{DoxyCode}
+template <typename P> class Factory<P, R(A0)>                         \
+    : public DD4hep::PluginFactoryBase  {                               \
+  public:                                                               \
+    static void wrapper(void *ret,void*,const std::vector<void*>& a,void*) { \
+      *(void**)ret = (void*)call(value<A0>(a[0]));                      \
+    }                                                                   \
+    static R call(A0 a0);                                               \
+  };                                                                    \
+  template <typename P> inline R Factory<P,R(A0)>::call(A0 a0)
+\end{DoxyCode}
+
+
+Definition at line 197 of file Plugins.h.\hypertarget{_plugins_8h_ae0c6e2852415260fafd218490ed2c402}{
+\index{Plugins.h@{Plugins.h}!DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-2@{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-2}}
+\index{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-2@{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-2}!Plugins.h@{Plugins.h}}
+\subsubsection[{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-2(R, \/  A0, \/  A1)}}
+\label{_plugins_8h_ae0c6e2852415260fafd218490ed2c402}
+{\bfseries Value:}
+\begin{DoxyCode}
+template <typename P> class Factory<P, R(A0,A1)>                      \
+    : public DD4hep::PluginFactoryBase  {                               \
+  public:                                                               \
+    static void wrapper(void *ret,void*,const std::vector<void*>& a,void*) { \
+      *(void**)ret = (void*)call(value<A0>(a[0]),value<A1>(a[1]));      \
+    }                                                                   \
+    static R call(A0 a0,A1 a1);                                         \
+  };                                                                    \
+  template <typename P> inline R Factory<P,R(A0,A1)>::call(A0 a0, A1 a1)
+\end{DoxyCode}
+
+
+Definition at line 208 of file Plugins.h.\hypertarget{_plugins_8h_aba8957753d44a8b5460500676b9b8725}{
+\index{Plugins.h@{Plugins.h}!DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-3@{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-3}}
+\index{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-3@{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-3}!Plugins.h@{Plugins.h}}
+\subsubsection[{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-3(R, \/  A0, \/  A1, \/  A2)}}
+\label{_plugins_8h_aba8957753d44a8b5460500676b9b8725}
+{\bfseries Value:}
+\begin{DoxyCode}
+template <typename P> class Factory<P, R(A0,A1,A2)>                 \
+      : public DD4hep::PluginFactoryBase  {                             \
+    public:                                                             \
+      static void wrapper(void *ret,void*,const std::vector<void*>& a,void*) { \
+        *(void**)ret = (void*)call(value<A0>(a[0]),value<A1>(a[1]),value<A2>(a[2]
+      )); \
+      }                                                                 \
+      static R call(A0 a0,A1 a1,A2 a2);                                 \
+    };                                                                  \
+    template <typename P> inline R Factory<P,R(A0,A1,A2)>::call(A0 a0, A1 a1, A2 
+      a2)
+\end{DoxyCode}
+
+
+Definition at line 219 of file Plugins.h.\hypertarget{_plugins_8h_a409f34fa4c9ce0444c5ae761edb1d2ab}{
+\index{Plugins.h@{Plugins.h}!DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-4@{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-4}}
+\index{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-4@{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-4}!Plugins.h@{Plugins.h}}
+\subsubsection[{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-4(R, \/  A0, \/  A1, \/  A2, \/  A3)}}
+\label{_plugins_8h_a409f34fa4c9ce0444c5ae761edb1d2ab}
+{\bfseries Value:}
+\begin{DoxyCode}
+template <typename P> class Factory<P, R(A0,A1,A2,A3)>              \
+      : public DD4hep::PluginFactoryBase  {                             \
+    public:                                                             \
+      static void wrapper(void *ret,void*,const std::vector<void*>& a,void*) { \
+        *(void**)ret = (void*)call(value<A0>(a[0]),value<A1>(a[1]),value<A2>(a[2]
+      ),value<A3>(a[3])); \
+      }                                                                 \
+      static R call(A0 a0,A1 a1,A2 a2, A3 a3);                          \
+    };                                                                  \
+    template <typename P> inline R Factory<P,R(A0,A1,A2,A3)>::call(A0 a0, A1 a1, 
+      A2 a2, A3 a3)
+\end{DoxyCode}
+
+
+Definition at line 230 of file Plugins.h.\hypertarget{_plugins_8h_a4dfa4ce7e0eecaf92188443a5a4983de}{
+\index{Plugins.h@{Plugins.h}!DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-5@{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-5}}
+\index{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-5@{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-5}!Plugins.h@{Plugins.h}}
+\subsubsection[{DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-5}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-PLUGIN\_\-FACTORY\_\-ARGS\_\-5(R, \/  A0, \/  A1, \/  A2, \/  A3, \/  A4)}}
+\label{_plugins_8h_a4dfa4ce7e0eecaf92188443a5a4983de}
+{\bfseries Value:}
+\begin{DoxyCode}
+template <typename P> class Factory<P, R(A0,A1,A2,A3,A4)>           \
+      : public DD4hep::PluginFactoryBase  {                             \
+    public:                                                             \
+      static void wrapper(void *ret,void*,const std::vector<void*>& a,void*) { \
+        *(void**)ret = (void*)call(value<A0>(a[0]),value<A1>(a[1]),value<A2>(a[2]
+      ),value<A3>(a[3]),value<A4>(a[4])); \
+      }                                                                 \
+      static R call(A0 a0,A1 a1,A2 a2, A3 a3, A4 a4);                   \
+    };                                                                  \
+    template <typename P> inline R Factory<P,R(A0,A1,A2,A3,A4)>::call(A0 a0, A1 a
+      1, A2 a2, A3 a3, A4 a4)
+\end{DoxyCode}
+
+
+Definition at line 241 of file Plugins.h.\hypertarget{_plugins_8h_a0f5362e7d8f5e58dac5709185307c9c5}{
+\index{Plugins.h@{Plugins.h}!DD4HEP\_\-PLUGINSVC\_\-CNAME@{DD4HEP\_\-PLUGINSVC\_\-CNAME}}
+\index{DD4HEP\_\-PLUGINSVC\_\-CNAME@{DD4HEP\_\-PLUGINSVC\_\-CNAME}!Plugins.h@{Plugins.h}}
+\subsubsection[{DD4HEP\_\-PLUGINSVC\_\-CNAME}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-PLUGINSVC\_\-CNAME(name, \/  serial)~name\#\#\_\-dict\_\-\#\#serial}}
+\label{_plugins_8h_a0f5362e7d8f5e58dac5709185307c9c5}
+
+
+Definition at line 177 of file Plugins.h.\hypertarget{_plugins_8h_a13a8db65f6501989dba7d2e8fde940c2}{
+\index{Plugins.h@{Plugins.h}!DD4HEP\_\-PLUGINSVC\_\-FACTORY@{DD4HEP\_\-PLUGINSVC\_\-FACTORY}}
+\index{DD4HEP\_\-PLUGINSVC\_\-FACTORY@{DD4HEP\_\-PLUGINSVC\_\-FACTORY}!Plugins.h@{Plugins.h}}
+\subsubsection[{DD4HEP\_\-PLUGINSVC\_\-FACTORY}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-PLUGINSVC\_\-FACTORY(type, \/  name, \/  signature, \/  serial)}}
+\label{_plugins_8h_a13a8db65f6501989dba7d2e8fde940c2}
+{\bfseries Value:}
+\begin{DoxyCode}
+namespace {                                                           \
+    struct DD4HEP_PLUGINSVC_CNAME(__typeFactory__,serial)  {            \
+      DD4HEP_PLUGINSVC_CNAME(__typeFactory__,serial)()  { DD4HEP_FACTORY_CALL(typ
+      e,#name,signature); } \
+    } DD4HEP_PLUGINSVC_CNAME(s____typeFactory__,serial);                \
+  }
+\end{DoxyCode}
+
+
+Definition at line 178 of file Plugins.h.

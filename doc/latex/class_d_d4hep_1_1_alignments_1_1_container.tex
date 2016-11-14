@@ -1,0 +1,174 @@
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_container}{
+\section{DD4hep::Alignments::Container Class Reference}
+\label{class_d_d4hep_1_1_alignments_1_1_container}\index{DD4hep::Alignments::Container@{DD4hep::Alignments::Container}}
+}
+
+
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_container}{Container} class for alignment handles aggregated by a detector element.  
+
+
+{\ttfamily \#include $<$Alignments.h$>$}Inheritance diagram for DD4hep::Alignments::Container::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_alignments_1_1_container}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container}{Interna::AlignmentContainer} \hyperlink{class_d_d4hep_1_1_alignments_1_1_container_aac463478e91949b594ffe837fd9bd9a8}{Object}
+\begin{DoxyCompactList}\small\item\em Standard object type. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_ab824a65f935a0c79b9ea1a7a85014b88}{Alignment::key\_\-type} \hyperlink{class_d_d4hep_1_1_alignments_1_1_container_a4101ffa946cedbaf996682533e57c44e}{key\_\-type}
+\begin{DoxyCompactList}\small\item\em Forward definition of the key type. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_i_o_v}{Alignment::iov\_\-type} \hyperlink{class_d_d4hep_1_1_alignments_1_1_container_a0da2fec1e4433deea86defda82886128}{iov\_\-type}
+\begin{DoxyCompactList}\small\item\em Forward definition of the iov type. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_container_a17cf12ead74ea2c6359818a3b54668af}{Container} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_alignments_1_1_container_a28afaf22b27288ea423e7cbc79027eef}{Container} (const \hyperlink{class_d_d4hep_1_1_alignments_1_1_container}{Container} \&c)
+\begin{DoxyCompactList}\small\item\em Constructor to be used when reading the already parsed object. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_alignments_1_1_container_a91f8253c2ad3e6c2d82b46a40d762b82}{Container} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&e)
+\begin{DoxyCompactList}\small\item\em Constructor to be used when reading the already parsed object. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{class_d_d4hep_1_1_alignments_1_1_container_ad423d94cea1ea683a5279fea77ece42d}{numKeys} () const 
+\begin{DoxyCompactList}\small\item\em Access the number of conditons keys available for this detector element. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_container_a7a1e125b1ea376bc6a05a7a523418211}{get} (const std::string \&alignment\_\-key, const \hyperlink{class_d_d4hep_1_1_i_o_v}{iov\_\-type} \&iov)
+\begin{DoxyCompactList}\small\item\em Access to alignment objects by key and \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_container_a9ce366840ca326bf5258e6ac94537048}{get} (\hyperlink{class_d_d4hep_1_1_alignments_1_1_container_a4101ffa946cedbaf996682533e57c44e}{key\_\-type} alignment\_\-key, const \hyperlink{class_d_d4hep_1_1_i_o_v}{iov\_\-type} \&iov)
+\begin{DoxyCompactList}\small\item\em Access to alignment objects directly by their hash key. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_container_aea9d9f1fddacb999c394add07ff9fd67}{get} (const std::string \&alignment\_\-key, const UserPool \&iov)
+\begin{DoxyCompactList}\small\item\em Access to alignment objects. Only alignments in the pool are accessed. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_container_a36da0db1c28a345f4363738dca05c023}{get} (\hyperlink{class_d_d4hep_1_1_alignments_1_1_container_a4101ffa946cedbaf996682533e57c44e}{key\_\-type} alignment\_\-key, const UserPool \&iov)
+\begin{DoxyCompactList}\small\item\em Access to alignment objects. Only alignments in the pool are accessed. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_container}{Container} class for alignment handles aggregated by a detector element. Note: The alignments container is owner by the detector element On deletion the detector element will destroy the container and all associated entries.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 183 of file Alignments.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_container_a0da2fec1e4433deea86defda82886128}{
+\index{DD4hep::Alignments::Container@{DD4hep::Alignments::Container}!iov\_\-type@{iov\_\-type}}
+\index{iov\_\-type@{iov\_\-type}!DD4hep::Alignments::Container@{DD4hep::Alignments::Container}}
+\subsubsection[{iov\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Alignment::iov\_\-type} {\bf DD4hep::Alignments::Container::iov\_\-type}}}
+\label{class_d_d4hep_1_1_alignments_1_1_container_a0da2fec1e4433deea86defda82886128}
+
+
+Forward definition of the iov type. 
+
+Definition at line 190 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_container_a4101ffa946cedbaf996682533e57c44e}{
+\index{DD4hep::Alignments::Container@{DD4hep::Alignments::Container}!key\_\-type@{key\_\-type}}
+\index{key\_\-type@{key\_\-type}!DD4hep::Alignments::Container@{DD4hep::Alignments::Container}}
+\subsubsection[{key\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Alignment::key\_\-type} {\bf DD4hep::Alignments::Container::key\_\-type}}}
+\label{class_d_d4hep_1_1_alignments_1_1_container_a4101ffa946cedbaf996682533e57c44e}
+
+
+Forward definition of the key type. 
+
+Definition at line 188 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_container_aac463478e91949b594ffe837fd9bd9a8}{
+\index{DD4hep::Alignments::Container@{DD4hep::Alignments::Container}!Object@{Object}}
+\index{Object@{Object}!DD4hep::Alignments::Container@{DD4hep::Alignments::Container}}
+\subsubsection[{Object}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Interna::AlignmentContainer} {\bf DD4hep::Alignments::Container::Object}}}
+\label{class_d_d4hep_1_1_alignments_1_1_container_aac463478e91949b594ffe837fd9bd9a8}
+
+
+Standard object type. 
+
+Definition at line 186 of file Alignments.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_container_a17cf12ead74ea2c6359818a3b54668af}{
+\index{DD4hep::Alignments::Container@{DD4hep::Alignments::Container}!Container@{Container}}
+\index{Container@{Container}!DD4hep::Alignments::Container@{DD4hep::Alignments::Container}}
+\subsubsection[{Container}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Alignments::Container::Container ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_container_a17cf12ead74ea2c6359818a3b54668af}
+
+
+Default constructor. 
+
+Definition at line 219 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_container_a28afaf22b27288ea423e7cbc79027eef}{
+\index{DD4hep::Alignments::Container@{DD4hep::Alignments::Container}!Container@{Container}}
+\index{Container@{Container}!DD4hep::Alignments::Container@{DD4hep::Alignments::Container}}
+\subsubsection[{Container}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q $>$ DD4hep::Alignments::Container::Container (const {\bf Container} \& {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_container_a28afaf22b27288ea423e7cbc79027eef}
+
+
+Constructor to be used when reading the already parsed object. 
+
+Definition at line 197 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_container_a91f8253c2ad3e6c2d82b46a40d762b82}{
+\index{DD4hep::Alignments::Container@{DD4hep::Alignments::Container}!Container@{Container}}
+\index{Container@{Container}!DD4hep::Alignments::Container@{DD4hep::Alignments::Container}}
+\subsubsection[{Container}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q $>$ DD4hep::Alignments::Container::Container (const {\bf Handle}$<$ Q $>$ \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_container_a91f8253c2ad3e6c2d82b46a40d762b82}
+
+
+Constructor to be used when reading the already parsed object. 
+
+Definition at line 200 of file Alignments.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_container_a36da0db1c28a345f4363738dca05c023}{
+\index{DD4hep::Alignments::Container@{DD4hep::Alignments::Container}!get@{get}}
+\index{get@{get}!DD4hep::Alignments::Container@{DD4hep::Alignments::Container}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignment} Container::get ({\bf key\_\-type} {\em alignment\_\-key}, \/  const UserPool \& {\em iov})}}
+\label{class_d_d4hep_1_1_alignments_1_1_container_a36da0db1c28a345f4363738dca05c023}
+
+
+Access to alignment objects. Only alignments in the pool are accessed. Access to alignment objects. 
+
+Definition at line 166 of file Alignments.cpp.
+
+References DD4hep::Alignments::Interna::AlignmentContainer::get(), DD4hep::Handle$<$ T $>$::isValid(), and DD4hep::Handle$<$ Interna::AlignmentContainer $>$::ptr().\hypertarget{class_d_d4hep_1_1_alignments_1_1_container_aea9d9f1fddacb999c394add07ff9fd67}{
+\index{DD4hep::Alignments::Container@{DD4hep::Alignments::Container}!get@{get}}
+\index{get@{get}!DD4hep::Alignments::Container@{DD4hep::Alignments::Container}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignment} DD4hep::Alignments::Container::get (const std::string \& {\em alignment\_\-key}, \/  const UserPool \& {\em iov})}}
+\label{class_d_d4hep_1_1_alignments_1_1_container_aea9d9f1fddacb999c394add07ff9fd67}
+
+
+Access to alignment objects. Only alignments in the pool are accessed. \hypertarget{class_d_d4hep_1_1_alignments_1_1_container_a9ce366840ca326bf5258e6ac94537048}{
+\index{DD4hep::Alignments::Container@{DD4hep::Alignments::Container}!get@{get}}
+\index{get@{get}!DD4hep::Alignments::Container@{DD4hep::Alignments::Container}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignment} Container::get ({\bf key\_\-type} {\em alignment\_\-key}, \/  const {\bf iov\_\-type} \& {\em iov})}}
+\label{class_d_d4hep_1_1_alignments_1_1_container_a9ce366840ca326bf5258e6ac94537048}
+
+
+Access to alignment objects directly by their hash key. Access to alignment objects. 
+
+Definition at line 138 of file Alignments.cpp.
+
+References DD4hep::Alignments::Interna::AlignmentContainer::get(), DD4hep::Handle$<$ T $>$::isValid(), and DD4hep::Handle$<$ Interna::AlignmentContainer $>$::ptr().\hypertarget{class_d_d4hep_1_1_alignments_1_1_container_a7a1e125b1ea376bc6a05a7a523418211}{
+\index{DD4hep::Alignments::Container@{DD4hep::Alignments::Container}!get@{get}}
+\index{get@{get}!DD4hep::Alignments::Container@{DD4hep::Alignments::Container}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignment} DD4hep::Alignments::Container::get (const std::string \& {\em alignment\_\-key}, \/  const {\bf iov\_\-type} \& {\em iov})}}
+\label{class_d_d4hep_1_1_alignments_1_1_container_a7a1e125b1ea376bc6a05a7a523418211}
+
+
+Access to alignment objects by key and \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. 
+
+Referenced by DD4hep::Alignments::DetAlign::get().\hypertarget{class_d_d4hep_1_1_alignments_1_1_container_ad423d94cea1ea683a5279fea77ece42d}{
+\index{DD4hep::Alignments::Container@{DD4hep::Alignments::Container}!numKeys@{numKeys}}
+\index{numKeys@{numKeys}!DD4hep::Alignments::Container@{DD4hep::Alignments::Container}}
+\subsubsection[{numKeys}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t Container::numKeys () const}}
+\label{class_d_d4hep_1_1_alignments_1_1_container_ad423d94cea1ea683a5279fea77ece42d}
+
+
+Access the number of conditons keys available for this detector element. 
+
+Definition at line 119 of file Alignments.cpp.
+
+References DD4hep::Handle$<$ Interna::AlignmentContainer $>$::access(), and DD4hep::Alignments::Interna::AlignmentContainer::keys.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_alignments_8h}{Alignments.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_alignments_8cpp}{Alignments.cpp}\end{DoxyCompactItemize}

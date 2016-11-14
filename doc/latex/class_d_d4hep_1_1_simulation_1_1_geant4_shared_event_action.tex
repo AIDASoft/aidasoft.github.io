@@ -1,0 +1,144 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action}{
+\section{DD4hep::Simulation::Geant4SharedEventAction Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action}\index{DD4hep::Simulation::Geant4SharedEventAction@{DD4hep::Simulation::Geant4SharedEventAction}}
+}
+
+
+Implementation of the Geant4 shared event action.  
+
+
+{\ttfamily \#include $<$Geant4EventAction.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4SharedEventAction::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_a2060121b3b93e2ae9d8680d531a20b9a}{Geant4SharedEventAction} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$context, const std::string \&nam)
+\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_a094e353ce282d06dac18c5752c078c63}{$\sim$Geant4SharedEventAction} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_a7933d545b7caacaca3928b3af1038df6}{configureFiber} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$thread\_\-context)
+\begin{DoxyCompactList}\small\item\em Set or update client for the use in a new thread fiber. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_a1b553e6983d3ce8bb3a84f660216175b}{use} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action}{Geant4EventAction} $\ast$action)
+\begin{DoxyCompactList}\small\item\em Underlying object to be used during the execution of this thread. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_a64b5998713b09c32de56774b1d69f64d}{begin} (const G4Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Begin-\/of-\/event callback. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_a207f1882eece3c87364b38b266bd9935}{end} (const G4Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em End-\/of-\/event callback. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action}{Geant4EventAction} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_aa79a57a0581a48e4f211acec481ada26}{m\_\-action}
+\begin{DoxyCompactList}\small\item\em Reference to the shared action. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of the Geant4 shared event action. Wrapper to share single instances of event actions for multi-\/threaded purposes. The wrapper ensures the locking of the basic actions to avoid race conditions.
+
+Shared action should be 'fast'. The global lock otherwise inhibits the efficient use of the multiple threads.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 81 of file Geant4EventAction.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_a2060121b3b93e2ae9d8680d531a20b9a}{
+\index{DD4hep::Simulation::Geant4SharedEventAction@{DD4hep::Simulation::Geant4SharedEventAction}!Geant4SharedEventAction@{Geant4SharedEventAction}}
+\index{Geant4SharedEventAction@{Geant4SharedEventAction}!DD4hep::Simulation::Geant4SharedEventAction@{DD4hep::Simulation::Geant4SharedEventAction}}
+\subsubsection[{Geant4SharedEventAction}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4SharedEventAction::Geant4SharedEventAction ({\bf Geant4Context} $\ast$ {\em context}, \/  const std::string \& {\em nam})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_a2060121b3b93e2ae9d8680d531a20b9a}
+
+
+Standard constructor. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_a094e353ce282d06dac18c5752c078c63}{
+\index{DD4hep::Simulation::Geant4SharedEventAction@{DD4hep::Simulation::Geant4SharedEventAction}!$\sim$Geant4SharedEventAction@{$\sim$Geant4SharedEventAction}}
+\index{$\sim$Geant4SharedEventAction@{$\sim$Geant4SharedEventAction}!DD4hep::Simulation::Geant4SharedEventAction@{DD4hep::Simulation::Geant4SharedEventAction}}
+\subsubsection[{$\sim$Geant4SharedEventAction}]{\setlength{\rightskip}{0pt plus 5cm}Geant4SharedEventAction::$\sim$Geant4SharedEventAction ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_a094e353ce282d06dac18c5752c078c63}
+
+
+Default destructor. 
+
+Definition at line 59 of file Geant4EventAction.cpp.
+
+References DD4hep::InstanceCount::decrement(), m\_\-action, and DD4hep::releasePtr().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_a64b5998713b09c32de56774b1d69f64d}{
+\index{DD4hep::Simulation::Geant4SharedEventAction@{DD4hep::Simulation::Geant4SharedEventAction}!begin@{begin}}
+\index{begin@{begin}!DD4hep::Simulation::Geant4SharedEventAction@{DD4hep::Simulation::Geant4SharedEventAction}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SharedEventAction::begin (const G4Event $\ast$ {\em event})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_a64b5998713b09c32de56774b1d69f64d}
+
+
+Begin-\/of-\/event callback. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_ad10785d157fa962f4ef2a5361bb0f5da}{DD4hep::Simulation::Geant4EventAction}.
+
+Definition at line 81 of file Geant4EventAction.cpp.
+
+References DD4hep::Simulation::Geant4EventAction::begin(), DD4hep::Simulation::Geant4Action::context(), and m\_\-action.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_a7933d545b7caacaca3928b3af1038df6}{
+\index{DD4hep::Simulation::Geant4SharedEventAction@{DD4hep::Simulation::Geant4SharedEventAction}!configureFiber@{configureFiber}}
+\index{configureFiber@{configureFiber}!DD4hep::Simulation::Geant4SharedEventAction@{DD4hep::Simulation::Geant4SharedEventAction}}
+\subsubsection[{configureFiber}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SharedEventAction::configureFiber ({\bf Geant4Context} $\ast$ {\em thread\_\-context})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_a7933d545b7caacaca3928b3af1038df6}
+
+
+Set or update client for the use in a new thread fiber. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a6adc7138508303e4e417cb48a737ab19}{DD4hep::Simulation::Geant4Action}.
+
+Definition at line 65 of file Geant4EventAction.cpp.
+
+References DD4hep::Simulation::Geant4Action::configureFiber(), and m\_\-action.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_a207f1882eece3c87364b38b266bd9935}{
+\index{DD4hep::Simulation::Geant4SharedEventAction@{DD4hep::Simulation::Geant4SharedEventAction}!end@{end}}
+\index{end@{end}!DD4hep::Simulation::Geant4SharedEventAction@{DD4hep::Simulation::Geant4SharedEventAction}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SharedEventAction::end (const G4Event $\ast$ {\em event})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_a207f1882eece3c87364b38b266bd9935}
+
+
+End-\/of-\/event callback. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_af131bad73c28da3419af7c29e0b8c250}{DD4hep::Simulation::Geant4EventAction}.
+
+Definition at line 91 of file Geant4EventAction.cpp.
+
+References DD4hep::Simulation::Geant4Action::context(), DD4hep::Simulation::Geant4EventAction::end(), and m\_\-action.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_a1b553e6983d3ce8bb3a84f660216175b}{
+\index{DD4hep::Simulation::Geant4SharedEventAction@{DD4hep::Simulation::Geant4SharedEventAction}!use@{use}}
+\index{use@{use}!DD4hep::Simulation::Geant4SharedEventAction@{DD4hep::Simulation::Geant4SharedEventAction}}
+\subsubsection[{use}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SharedEventAction::use ({\bf Geant4EventAction} $\ast$ {\em action})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_a1b553e6983d3ce8bb3a84f660216175b}
+
+
+Underlying object to be used during the execution of this thread. 
+
+Definition at line 70 of file Geant4EventAction.cpp.
+
+References DD4hep::Simulation::Geant4Action::addRef(), DD4hep::PropertyManager::adopt(), m\_\-action, DD4hep::Simulation::Geant4Action::m\_\-properties, and DD4hep::Simulation::Geant4Action::properties().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_aa79a57a0581a48e4f211acec481ada26}{
+\index{DD4hep::Simulation::Geant4SharedEventAction@{DD4hep::Simulation::Geant4SharedEventAction}!m\_\-action@{m\_\-action}}
+\index{m\_\-action@{m\_\-action}!DD4hep::Simulation::Geant4SharedEventAction@{DD4hep::Simulation::Geant4SharedEventAction}}
+\subsubsection[{m\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4EventAction}$\ast$ {\bf DD4hep::Simulation::Geant4SharedEventAction::m\_\-action}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_aa79a57a0581a48e4f211acec481ada26}
+
+
+Reference to the shared action. 
+
+Definition at line 84 of file Geant4EventAction.h.
+
+Referenced by begin(), configureFiber(), end(), use(), and $\sim$Geant4SharedEventAction().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_event_action_8h}{Geant4EventAction.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_event_action_8cpp}{Geant4EventAction.cpp}\end{DoxyCompactItemize}

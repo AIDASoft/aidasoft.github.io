@@ -1,0 +1,1095 @@
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{
+\section{DD4hep::Geometry::LCDD Class Reference}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+}
+
+
+The main interface to the \hyperlink{namespace_d_d4hep}{DD4hep} detector description package.  
+
+
+{\ttfamily \#include $<$LCDD.h$>$}Inheritance diagram for DD4hep::Geometry::LCDD::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_uri_reader}{XML::UriReader} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a69f1e3e4fbcef1d57f1df1c2bd85918f}{UriReader}
+\begin{DoxyCompactList}\small\item\em Type definition of a map of named handles. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_d_d4hep_1_1_named_object}{NamedObject} $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a5502368683a5c78c91e9f814ff72b705}{NamedHandle}
+\item 
+typedef std::map$<$ std::string, \hyperlink{class_d_d4hep_1_1_handle}{NamedHandle} $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a05cb11e7355772c7b0794bcca59bf477}{HandleMap}
+\item 
+typedef std::map$<$ std::string, std::string $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a2a0388e0d76c73a3582439953ac3be53}{PropertyValues}
+\item 
+typedef std::map$<$ std::string, \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a2a0388e0d76c73a3582439953ac3be53}{PropertyValues} $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a89096744868821bf5dcb0c0560b348c9}{Properties}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a420f99b6dbdcde67557bafb49a8c18c1}{$\sim$LCDD} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{namespace_d_d4hep_acafe43ba4537ab6e999e808142965fab}{LCDDBuildType} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a73400f14f6384e1c84470595fc3667fd}{buildType} () const =0
+\begin{DoxyCompactList}\small\item\em Access flag to steer the detail of building of the geometry/detector description. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a9a4f55004e7375b2b20fb64e1a7ee8de}{init} ()=0
+\begin{DoxyCompactList}\small\item\em Initialize geometry. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_abe2147b8363040ce95bb40f810d95b36}{endDocument} ()=0
+\begin{DoxyCompactList}\small\item\em Finalize the geometry. \item\end{DoxyCompactList}\item 
+virtual TGeoManager \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_af209f1ecaad7336e14ffee002215aa93}{manager} () const =0
+\begin{DoxyCompactList}\small\item\em Access the geometry manager of this instance. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a89096744868821bf5dcb0c0560b348c9}{Properties} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a15fac6166c5a16968cf9f60b515f4125}{properties} () const =0
+\begin{DoxyCompactList}\small\item\em Access to properties map. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_material}{Material} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a35239d8469cba6c091e970a1baec312b}{air} () const =0
+\begin{DoxyCompactList}\small\item\em Return handle to material describing air. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_material}{Material} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_adf89eaa970c7c23b6896f79a6ad28b7f}{vacuum} () const =0
+\begin{DoxyCompactList}\small\item\em Return handle to material describing vacuum. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_vis_attr}{VisAttr} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_acafee280cadae2b44117eb751e0790aa}{invisible} () const =0
+\begin{DoxyCompactList}\small\item\em Return handle to \char`\"{}invisible\char`\"{} visualization attributes. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ae61d027023791272cf976432c0b3a977}{world} () const =0
+\begin{DoxyCompactList}\small\item\em Return reference to the top-\/most (world) detector element. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a23b3868f3b09adccc62799612285c7db}{trackers} () const =0
+\begin{DoxyCompactList}\small\item\em Return reference to detector element with all tracker devices. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aa7d089039516ff312cf95168288019fe}{worldVolume} () const =0
+\begin{DoxyCompactList}\small\item\em Return handle to the world volume containing everything. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a351b289056485f960e9121382018c92b}{trackingVolume} () const =0
+\begin{DoxyCompactList}\small\item\em Return handle to the volume containing the tracking devices. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{VolumeManager} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a2112b2267f5f07ecc94e909d696ffdbd}{volumeManager} () const =0
+\begin{DoxyCompactList}\small\item\em Return handle to the \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{VolumeManager}. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_header}{Header} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ad09f49fc86a5b286ae55901e2b169d7c}{header} () const =0
+\begin{DoxyCompactList}\small\item\em Accessor to the map of header entries. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a9927ac6aeae1dad18e22413deba9aa65}{setHeader} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_header}{Header} h)=0
+\begin{DoxyCompactList}\small\item\em Accessor to the header entry. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field}{OverlayedField} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a62750fbd02e0f4e06c570d00dc9eb2ca}{field} () const =0
+\begin{DoxyCompactList}\small\item\em Return handle to the combined electromagentic field description. \item\end{DoxyCompactList}\item 
+virtual const \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a05cb11e7355772c7b0794bcca59bf477}{HandleMap} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a14d6ac1a5de3cd514372ab8717b6420e}{constants} () const =0
+\begin{DoxyCompactList}\small\item\em Accessor to the map of constants. \item\end{DoxyCompactList}\item 
+virtual const \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a05cb11e7355772c7b0794bcca59bf477}{HandleMap} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ab068e5aaa1d76a2348ea74ea3d76f96f}{regions} () const =0
+\begin{DoxyCompactList}\small\item\em Accessor to the map of region settings. \item\end{DoxyCompactList}\item 
+virtual const \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a05cb11e7355772c7b0794bcca59bf477}{HandleMap} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ad06f71146140dc2682bc586ba7bffeaf}{detectors} () const =0
+\begin{DoxyCompactList}\small\item\em Accessor to the map of sub-\/detectors. \item\end{DoxyCompactList}\item 
+virtual const \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a05cb11e7355772c7b0794bcca59bf477}{HandleMap} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a576c24cc18698eb14658466999fca65d}{sensitiveDetectors} () const =0
+\begin{DoxyCompactList}\small\item\em Accessor to the map of sub-\/detectors. \item\end{DoxyCompactList}\item 
+virtual const \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a05cb11e7355772c7b0794bcca59bf477}{HandleMap} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a5c815f21643ebb5cce9d1d1e71772431}{readouts} () const =0
+\begin{DoxyCompactList}\small\item\em Accessor to the map of readout structures. \item\end{DoxyCompactList}\item 
+virtual const \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a05cb11e7355772c7b0794bcca59bf477}{HandleMap} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_abb60505e37d62147725d126cb21d171b}{visAttributes} () const =0
+\begin{DoxyCompactList}\small\item\em Accessor to the map of visualisation attributes. \item\end{DoxyCompactList}\item 
+virtual const \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a05cb11e7355772c7b0794bcca59bf477}{HandleMap} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aeacdfb972606fef31bc1b69e6e982956}{limitsets} () const =0
+\begin{DoxyCompactList}\small\item\em Accessor to the map of limit settings. \item\end{DoxyCompactList}\item 
+virtual const \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a05cb11e7355772c7b0794bcca59bf477}{HandleMap} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a48553ea87301f9eb1237e41e7e2a0f16}{alignments} () const =0
+\begin{DoxyCompactList}\small\item\em Accessor to the map of aligment entries. \item\end{DoxyCompactList}\item 
+virtual const \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a05cb11e7355772c7b0794bcca59bf477}{HandleMap} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_af2622f438504300116fabfa214b23be5}{fields} () const =0
+\begin{DoxyCompactList}\small\item\em Accessor to the map of field entries, which together form the global field. \item\end{DoxyCompactList}\item 
+virtual const \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a05cb11e7355772c7b0794bcca59bf477}{HandleMap} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a16ddadf18c24ad54b816354107338a80}{idSpecifications} () const =0
+\begin{DoxyCompactList}\small\item\em Accessor to the map of ID specifications. \item\end{DoxyCompactList}\item 
+virtual const std::vector$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} $>$ \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a0f8e72265d7c6fd7d0dcdd293e13031f}{detectors} (const std::string \&type, bool throw\_\-exc=false)=0
+\begin{DoxyCompactList}\small\item\em Access a set of subdetectors according to the sensitive type. \item\end{DoxyCompactList}\item 
+virtual std::vector$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aee911f853a0e585f0ac9be7852ed6954}{detectors} (const std::string \&type1, const std::string \&type2, const std::string \&type3=\char`\"{}\char`\"{}, const std::string \&type4=\char`\"{}\char`\"{}, const std::string \&type5=\char`\"{}\char`\"{})=0
+\begin{DoxyCompactList}\small\item\em Access a set of subdetectors according to several sensitive types. \item\end{DoxyCompactList}\item 
+virtual std::vector$<$ std::string $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a196cc776b69db52d89f3396bf03d224f}{detectorTypes} () const =0
+\begin{DoxyCompactList}\small\item\em Access the availible detector types. \item\end{DoxyCompactList}\item 
+virtual std::vector$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a1cdc7a631ac397f64b40e7232ee04639}{detectors} (unsigned int includeFlag, unsigned int excludeFlag=0) const =0
+\item 
+virtual void \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a6cbadc0074dd9cc3b88b5e0a527586a2}{declareMotherVolume} (const std::string \&detector\_\-name, const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \&vol)=0
+\begin{DoxyCompactList}\small\item\em Register new mother volume using the detector name. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ad239fb24b7d6eb41abf697f2710ad6a3}{pickMotherVolume} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \&sd) const =0
+\begin{DoxyCompactList}\small\item\em Access mother volume by detector element. \item\end{DoxyCompactList}\item 
+virtual std::string \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a6857611520c86f1d242a1698ab5c181f}{constantAsString} (const std::string \&name) const =0
+\begin{DoxyCompactList}\small\item\em Typed access to constants: access string values. \item\end{DoxyCompactList}\item 
+virtual long \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a95370880f4063064af089b943b0e4ce2}{constantAsLong} (const std::string \&name) const =0
+\begin{DoxyCompactList}\small\item\em Typed access to constants: long values. \item\end{DoxyCompactList}\item 
+virtual double \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a9696a0bb5af8abd3667460a617d4dc83}{constantAsDouble} (const std::string \&name) const =0
+\begin{DoxyCompactList}\small\item\em Typed access to constants: double values. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_constant}{Constant} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a636bc57de8b0334a83c52ef2b43c465d}{constant} (const std::string \&name) const =0
+\begin{DoxyCompactList}\small\item\em Retrieve a constant by it's name from the detector description. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\\hyperlink{class_t}{T} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ae0b36775a484f3b7e6f7b3d5910062a2}{constant} (const std::string \&name) const 
+\begin{DoxyCompactList}\small\item\em Typed access to constants: access any type values. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_material}{Material} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aec8adc99bc62ade78afd0a444a76fd04}{material} (const std::string \&name) const =0
+\begin{DoxyCompactList}\small\item\em Retrieve a matrial by it's name from the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor}{IDDescriptor} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ac08b5db047061a7b08d8b78bd7cb5e72}{idSpecification} (const std::string \&name) const =0
+\begin{DoxyCompactList}\small\item\em Retrieve a id descriptor by it's name from the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_region}{Region} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_adbe06759881707fe995472c03810c0ff}{region} (const std::string \&name) const =0
+\begin{DoxyCompactList}\small\item\em Retrieve a region object by it's name from the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_vis_attr}{VisAttr} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a449330acbb5a5d6ba6f1fa2d97cea338}{visAttributes} (const std::string \&name) const =0
+\begin{DoxyCompactList}\small\item\em Retrieve a visualization attribute by it's name from the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_limit_set}{LimitSet} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a7e98996675e9c00d6b64010415511813}{limitSet} (const std::string \&name) const =0
+\begin{DoxyCompactList}\small\item\em Retrieve a limitset by it's name from the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_readout}{Readout} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aa29f75fba9942edd7f73226a11c9598e}{readout} (const std::string \&name) const =0
+\begin{DoxyCompactList}\small\item\em Retrieve a readout object by it's name from the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_alignment_entry}{AlignmentEntry} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a5661c5a5c9519f58e3044fa66e5393fa}{alignment} (const std::string \&path) const =0
+\begin{DoxyCompactList}\small\item\em Retrieve an alignment entry by it's name from the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_sensitive_detector}{SensitiveDetector} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_af476b8241b93e82350ec1e5cbf145941}{sensitiveDetector} (const std::string \&name) const =0
+\begin{DoxyCompactList}\small\item\em Retrieve a sensitive detector by it's name from the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field}{CartesianField} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_adcc7929860f5ac592d8f4c2d476555e9}{field} (const std::string \&name) const =0
+\begin{DoxyCompactList}\small\item\em Retrieve a subdetector element by it's name from the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a0ed0c4e5d72a1e07ce11cf2592d6de3e}{detector} (const std::string \&name) const =0
+\begin{DoxyCompactList}\small\item\em Retrieve a field component by it's name from the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a438cd36346d10c381b99bdfaa80ba50e}{add} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_constant}{Constant} constant)=0
+\begin{DoxyCompactList}\small\item\em Add a new constant to the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a4913f783de23fed9eb9dc11678226aa8}{add} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_vis_attr}{VisAttr} attr)=0
+\begin{DoxyCompactList}\small\item\em Add a new visualisation attribute to the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a2b6a8c58332d26518c9def51f1acbc0d}{add} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_limit_set}{LimitSet} limitset)=0
+\begin{DoxyCompactList}\small\item\em Add a new limit set to the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a618c1268be853682f6da33777aae71a8}{add} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_region}{Region} region)=0
+\begin{DoxyCompactList}\small\item\em Add a new detector region to the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a346e521d7e74531597650fa812394e89}{add} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor}{IDDescriptor} spec)=0
+\begin{DoxyCompactList}\small\item\em Add a new id descriptor to the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a68f3490691ccf2937987fbb60969a70d}{add} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_readout}{Readout} readout)=0
+\begin{DoxyCompactList}\small\item\em Add a new detector readout to the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a6c10312be5b4fdf8132e25eae6abdac0}{add} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_sensitive_detector}{SensitiveDetector} entry)=0
+\begin{DoxyCompactList}\small\item\em Add a new sensitive detector to the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a9b756dac3f0ebc5393072f23c96cb490}{add} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} detector)=0
+\begin{DoxyCompactList}\small\item\em Add a new subdetector to the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a338b46c3a01bcd48b9c9f8ad74501c1d}{add} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_alignment_entry}{AlignmentEntry} entry)=0
+\begin{DoxyCompactList}\small\item\em Add alignment entry to the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a57833b868c0abeb0d1ee43d1895a5996}{add} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field}{CartesianField} entry)=0
+\begin{DoxyCompactList}\small\item\em Add a field component to the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ac2bc82eba942bd452da56bbf958d8aad}{addConstant} (const \hyperlink{group___d_d4_h_e_p___g_e_o_m_e_t_r_y_ga40af83be6718bb8828a3d83dc7f8c930}{Ref\_\-t} \&element)=0
+\begin{DoxyCompactList}\small\item\em Add a new constant by named reference to the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a705cc171273fe3aa63100385b1bd7191}{addVisAttribute} (const \hyperlink{group___d_d4_h_e_p___g_e_o_m_e_t_r_y_ga40af83be6718bb8828a3d83dc7f8c930}{Ref\_\-t} \&element)=0
+\begin{DoxyCompactList}\small\item\em Add a new visualisation attribute by named reference to the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_af11d7a6aaeb91256f14d5892d84e2b30}{addLimitSet} (const \hyperlink{group___d_d4_h_e_p___g_e_o_m_e_t_r_y_ga40af83be6718bb8828a3d83dc7f8c930}{Ref\_\-t} \&limset)=0
+\begin{DoxyCompactList}\small\item\em Add a new limit set by named reference to the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a93f80b4976e72a8a64d73baa6cf50a4d}{addIDSpecification} (const \hyperlink{group___d_d4_h_e_p___g_e_o_m_e_t_r_y_ga40af83be6718bb8828a3d83dc7f8c930}{Ref\_\-t} \&element)=0
+\begin{DoxyCompactList}\small\item\em Add a new id descriptor by named reference to the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a633c913dcf2a31b52976e5f5bd8a63e2}{addRegion} (const \hyperlink{group___d_d4_h_e_p___g_e_o_m_e_t_r_y_ga40af83be6718bb8828a3d83dc7f8c930}{Ref\_\-t} \&region)=0
+\begin{DoxyCompactList}\small\item\em Add a new detector region by named reference to the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a9823ad063bd9986e92e66c29f13e28f7}{addReadout} (const \hyperlink{group___d_d4_h_e_p___g_e_o_m_e_t_r_y_ga40af83be6718bb8828a3d83dc7f8c930}{Ref\_\-t} \&readout)=0
+\begin{DoxyCompactList}\small\item\em Add a new detector readout by named reference to the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aa574186ef096f626835ea6f389769230}{addSensitiveDetector} (const \hyperlink{group___d_d4_h_e_p___g_e_o_m_e_t_r_y_ga40af83be6718bb8828a3d83dc7f8c930}{Ref\_\-t} \&element)=0
+\begin{DoxyCompactList}\small\item\em Add a new sensitive detector by named reference to the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a53a88518d0ab797a11bd61f9c567f7ac}{addDetector} (const \hyperlink{group___d_d4_h_e_p___g_e_o_m_e_t_r_y_ga40af83be6718bb8828a3d83dc7f8c930}{Ref\_\-t} \&detector)=0
+\begin{DoxyCompactList}\small\item\em Add a new subdetector by named reference to the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a50e3654851b950da20f19a13e36fbcc4}{addAlignment} (const \hyperlink{group___d_d4_h_e_p___g_e_o_m_e_t_r_y_ga40af83be6718bb8828a3d83dc7f8c930}{Ref\_\-t} \&alignment)=0
+\begin{DoxyCompactList}\small\item\em Add alignment entry by named reference to the detector description. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a91ae6cfee73a663c46f296bc403b5c63}{addField} (const \hyperlink{group___d_d4_h_e_p___g_e_o_m_e_t_r_y_ga40af83be6718bb8828a3d83dc7f8c930}{Ref\_\-t} \&field)=0
+\begin{DoxyCompactList}\small\item\em Add a field component by named reference to the detector description. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_abc18ac1b03188da6e4400943eca4bd2e}{fromCompact} (const std::string \&fname, \hyperlink{namespace_d_d4hep_acafe43ba4537ab6e999e808142965fab}{LCDDBuildType} type=BUILD\_\-DEFAULT)=0
+\begin{DoxyCompactList}\small\item\em Deprecated call (use fromXML): Read compact geometry description or alignment file. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ad6e8de7ab4f0374cea7e3e15e33af66e}{fromXML} (const std::string \&fname, \hyperlink{namespace_d_d4hep_acafe43ba4537ab6e999e808142965fab}{LCDDBuildType} type=BUILD\_\-DEFAULT)=0
+\begin{DoxyCompactList}\small\item\em Read any geometry description or alignment file. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aab90efbd334c08ee8a06b0f97d219243}{fromXML} (const std::string \&fname, \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_uri_reader}{UriReader} $\ast$entity\_\-resolver, \hyperlink{namespace_d_d4hep_acafe43ba4537ab6e999e808142965fab}{LCDDBuildType} type=BUILD\_\-DEFAULT)=0
+\begin{DoxyCompactList}\small\item\em Read any geometry description or alignment file with external \hyperlink{namespace_d_d4hep_1_1_x_m_l}{XML} entity resolution. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aa67b3fbf93d48e08c08b60cdd83b729f}{dump} () const =0
+\begin{DoxyCompactList}\small\item\em Stupid legacy method. \item\end{DoxyCompactList}\item 
+virtual long \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ab47f82e5a5bfda6f58624b3553a08c68}{apply} (const char $\ast$factory, int argc, char $\ast$$\ast$argv)=0
+\begin{DoxyCompactList}\small\item\em Manipulate geometry using factory converter. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename IFACE , typename CONCRETE $>$ }\\IFACE $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a48b0708471772f0a63461840319e12ed}{addExtension} (CONCRETE $\ast$c)
+\begin{DoxyCompactList}\small\item\em Extend the sensitive detector element with an arbitrary structure accessible by the type. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\\hyperlink{class_t}{T} $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a9ddb061fc3a827afe0349e3a841ea885}{removeExtension} (bool destroy=true)
+\begin{DoxyCompactList}\small\item\em Remove an existing extension object from the \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} instance. If not destroyed, the instance is returned. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\\hyperlink{class_t}{T} $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aac5486912a4f88cbad59f6e0ec137289}{extension} (bool alert=true) const 
+\begin{DoxyCompactList}\small\item\em Access extension element by the type. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a4ba28eb0e53e15856d7a773c4ff758b9}{getInstance} (void)
+\begin{DoxyCompactList}\small\item\em -\/-\/-\/Factory method-\/-\/-\/-\/-\/-\/-\/ \item\end{DoxyCompactList}\item 
+static void \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a7470fc11102bacc2b486590de49a8017}{destroyInstance} ()
+\begin{DoxyCompactList}\small\item\em Destroy the instance. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ae4fdea118902519ae7581fe0bd733559}{addUserExtension} (void $\ast$ptr, const std::type\_\-info \&info, void($\ast$destruct)(void $\ast$))=0
+\begin{DoxyCompactList}\small\item\em Add an extension object to the detector element. \item\end{DoxyCompactList}\item 
+virtual void $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a05c121b360d248ce34a2d9337df9f49b}{removeUserExtension} (const std::type\_\-info \&info, bool destroy)=0
+\begin{DoxyCompactList}\small\item\em Remove an existing extension object from the \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} instance. If not destroyed, the instance is returned. \item\end{DoxyCompactList}\item 
+virtual void $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a699d446afe8b33487cdce57d4e2f26c6}{userExtension} (const std::type\_\-info \&info, bool alert=true) const =0
+\begin{DoxyCompactList}\small\item\em Access an existing extension object from the detector element. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static void \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aa5ca16bda234eac32f855dfd93cf1cd3}{\_\-delete} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Templated destructor function. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The main interface to the \hyperlink{namespace_d_d4hep}{DD4hep} detector description package. Note: The usage of the factory method:
+
+static \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD}\& \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a4ba28eb0e53e15856d7a773c4ff758b9}{getInstance(void)};
+
+is DEPRECATED!
+
+You should rather use the plugin mechanism to create a new instance.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 91 of file LCDD.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a05cb11e7355772c7b0794bcca59bf477}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!HandleMap@{HandleMap}}
+\index{HandleMap@{HandleMap}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{HandleMap}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$std::string, {\bf NamedHandle} $>$ {\bf DD4hep::Geometry::LCDD::HandleMap}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a05cb11e7355772c7b0794bcca59bf477}
+
+
+Definition at line 96 of file LCDD.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a5502368683a5c78c91e9f814ff72b705}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!NamedHandle@{NamedHandle}}
+\index{NamedHandle@{NamedHandle}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{NamedHandle}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Handle}$<${\bf NamedObject}$>$ {\bf DD4hep::Geometry::LCDD::NamedHandle}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a5502368683a5c78c91e9f814ff72b705}
+
+
+Definition at line 95 of file LCDD.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a89096744868821bf5dcb0c0560b348c9}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!Properties@{Properties}}
+\index{Properties@{Properties}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{Properties}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$std::string, {\bf PropertyValues}$>$ {\bf DD4hep::Geometry::LCDD::Properties}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a89096744868821bf5dcb0c0560b348c9}
+
+
+Definition at line 98 of file LCDD.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a2a0388e0d76c73a3582439953ac3be53}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!PropertyValues@{PropertyValues}}
+\index{PropertyValues@{PropertyValues}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{PropertyValues}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$std::string, std::string$>$ {\bf DD4hep::Geometry::LCDD::PropertyValues}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a2a0388e0d76c73a3582439953ac3be53}
+
+
+Definition at line 97 of file LCDD.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a69f1e3e4fbcef1d57f1df1c2bd85918f}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!UriReader@{UriReader}}
+\index{UriReader@{UriReader}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{UriReader}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf XML::UriReader} {\bf DD4hep::Geometry::LCDD::UriReader}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a69f1e3e4fbcef1d57f1df1c2bd85918f}
+
+
+Type definition of a map of named handles. 
+
+Definition at line 94 of file LCDD.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a420f99b6dbdcde67557bafb49a8c18c1}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!$\sim$LCDD@{$\sim$LCDD}}
+\index{$\sim$LCDD@{$\sim$LCDD}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{$\sim$LCDD}]{\setlength{\rightskip}{0pt plus 5cm}virtual DD4hep::Geometry::LCDD::$\sim$LCDD ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a420f99b6dbdcde67557bafb49a8c18c1}
+
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aa5ca16bda234eac32f855dfd93cf1cd3}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!\_\-delete@{\_\-delete}}
+\index{\_\-delete@{\_\-delete}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ static void DD4hep::Geometry::LCDD::\_\-delete (void $\ast$ {\em ptr})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aa5ca16bda234eac32f855dfd93cf1cd3}
+
+
+Templated destructor function. 
+
+Definition at line 320 of file LCDD.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a57833b868c0abeb0d1ee43d1895a5996}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!add@{add}}
+\index{add@{add}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf LCDD}\& DD4hep::Geometry::LCDD::add ({\bf CartesianField} {\em entry})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a57833b868c0abeb0d1ee43d1895a5996}
+
+
+Add a field component to the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_aefc75f3c9c031176d3d3e5eafe091716}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a338b46c3a01bcd48b9c9f8ad74501c1d}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!add@{add}}
+\index{add@{add}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf LCDD}\& DD4hep::Geometry::LCDD::add ({\bf AlignmentEntry} {\em entry})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a338b46c3a01bcd48b9c9f8ad74501c1d}
+
+
+Add alignment entry to the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a8322896ad0d803ecb38fd3ccd3cdb989}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a9b756dac3f0ebc5393072f23c96cb490}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!add@{add}}
+\index{add@{add}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf LCDD}\& DD4hep::Geometry::LCDD::add ({\bf DetElement} {\em detector})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a9b756dac3f0ebc5393072f23c96cb490}
+
+
+Add a new subdetector to the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a06e5ca9521c2527da58eded16edce69e}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a6c10312be5b4fdf8132e25eae6abdac0}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!add@{add}}
+\index{add@{add}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf LCDD}\& DD4hep::Geometry::LCDD::add ({\bf SensitiveDetector} {\em entry})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a6c10312be5b4fdf8132e25eae6abdac0}
+
+
+Add a new sensitive detector to the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a2b9390272a836536b6ffb8545165f0db}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a68f3490691ccf2937987fbb60969a70d}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!add@{add}}
+\index{add@{add}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf LCDD}\& DD4hep::Geometry::LCDD::add ({\bf Readout} {\em readout})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a68f3490691ccf2937987fbb60969a70d}
+
+
+Add a new detector readout to the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a387c7f1ec836f427515add50ca1c51ad}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a346e521d7e74531597650fa812394e89}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!add@{add}}
+\index{add@{add}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf LCDD}\& DD4hep::Geometry::LCDD::add ({\bf IDDescriptor} {\em spec})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a346e521d7e74531597650fa812394e89}
+
+
+Add a new id descriptor to the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_ae03550f5bda6285d2bbf3dfa53919791}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a618c1268be853682f6da33777aae71a8}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!add@{add}}
+\index{add@{add}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf LCDD}\& DD4hep::Geometry::LCDD::add ({\bf Region} {\em region})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a618c1268be853682f6da33777aae71a8}
+
+
+Add a new detector region to the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_ab8c4f8e119f235e5f050349b19892d47}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a2b6a8c58332d26518c9def51f1acbc0d}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!add@{add}}
+\index{add@{add}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf LCDD}\& DD4hep::Geometry::LCDD::add ({\bf LimitSet} {\em limitset})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a2b6a8c58332d26518c9def51f1acbc0d}
+
+
+Add a new limit set to the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_acd0d23dbb73da1b5b16169443f9fb975}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a4913f783de23fed9eb9dc11678226aa8}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!add@{add}}
+\index{add@{add}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf LCDD}\& DD4hep::Geometry::LCDD::add ({\bf VisAttr} {\em attr})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a4913f783de23fed9eb9dc11678226aa8}
+
+
+Add a new visualisation attribute to the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a43d0c83fce1485a129e721f0efa9ea6a}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a438cd36346d10c381b99bdfaa80ba50e}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!add@{add}}
+\index{add@{add}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf LCDD}\& DD4hep::Geometry::LCDD::add ({\bf Constant} {\em constant})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a438cd36346d10c381b99bdfaa80ba50e}
+
+
+Add a new constant to the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_aad80a2a7fab34d16dfdc2da299076dab}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a50e3654851b950da20f19a13e36fbcc4}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!addAlignment@{addAlignment}}
+\index{addAlignment@{addAlignment}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{addAlignment}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf LCDD}\& DD4hep::Geometry::LCDD::addAlignment (const {\bf Ref\_\-t} \& {\em alignment})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a50e3654851b950da20f19a13e36fbcc4}
+
+
+Add alignment entry by named reference to the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a408e628b36591e17b7f44f7c3246be39}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ac2bc82eba942bd452da56bbf958d8aad}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!addConstant@{addConstant}}
+\index{addConstant@{addConstant}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{addConstant}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf LCDD}\& DD4hep::Geometry::LCDD::addConstant (const {\bf Ref\_\-t} \& {\em element})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ac2bc82eba942bd452da56bbf958d8aad}
+
+
+Add a new constant by named reference to the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_aec684bd86c26b609a33668364f595d96}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a53a88518d0ab797a11bd61f9c567f7ac}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!addDetector@{addDetector}}
+\index{addDetector@{addDetector}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{addDetector}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf LCDD}\& DD4hep::Geometry::LCDD::addDetector (const {\bf Ref\_\-t} \& {\em detector})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a53a88518d0ab797a11bd61f9c567f7ac}
+
+
+Add a new subdetector by named reference to the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_ad0926dfc64d99cddfdec4990829d3622}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a48b0708471772f0a63461840319e12ed}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!addExtension@{addExtension}}
+\index{addExtension@{addExtension}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{addExtension}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename IFACE , typename CONCRETE $>$ IFACE$\ast$ DD4hep::Geometry::LCDD::addExtension (CONCRETE $\ast$ {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a48b0708471772f0a63461840319e12ed}
+
+
+Extend the sensitive detector element with an arbitrary structure accessible by the type. 
+
+Definition at line 299 of file LCDD.h.
+
+References addUserExtension().
+
+Referenced by DD4hep::DDRec::createSurfaceManager(), DD4hep::Display::Display(), and DD4hep::Simulation::Geant4Kernel::Geant4Kernel().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a91ae6cfee73a663c46f296bc403b5c63}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!addField@{addField}}
+\index{addField@{addField}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{addField}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf LCDD}\& DD4hep::Geometry::LCDD::addField (const {\bf Ref\_\-t} \& {\em field})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a91ae6cfee73a663c46f296bc403b5c63}
+
+
+Add a field component by named reference to the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a94f5aafcc5fc95d0b15feb960f244019}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a93f80b4976e72a8a64d73baa6cf50a4d}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!addIDSpecification@{addIDSpecification}}
+\index{addIDSpecification@{addIDSpecification}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{addIDSpecification}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf LCDD}\& DD4hep::Geometry::LCDD::addIDSpecification (const {\bf Ref\_\-t} \& {\em element})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a93f80b4976e72a8a64d73baa6cf50a4d}
+
+
+Add a new id descriptor by named reference to the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_ac67bb4f3004262373f24c9f02431dbe0}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_af11d7a6aaeb91256f14d5892d84e2b30}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!addLimitSet@{addLimitSet}}
+\index{addLimitSet@{addLimitSet}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{addLimitSet}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf LCDD}\& DD4hep::Geometry::LCDD::addLimitSet (const {\bf Ref\_\-t} \& {\em limset})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_af11d7a6aaeb91256f14d5892d84e2b30}
+
+
+Add a new limit set by named reference to the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a846ba4e66d0a38eddaae795bf4b4b43b}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a9823ad063bd9986e92e66c29f13e28f7}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!addReadout@{addReadout}}
+\index{addReadout@{addReadout}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{addReadout}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf LCDD}\& DD4hep::Geometry::LCDD::addReadout (const {\bf Ref\_\-t} \& {\em readout})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a9823ad063bd9986e92e66c29f13e28f7}
+
+
+Add a new detector readout by named reference to the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a876f792d25fd05a99646cd6c0df77d09}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a633c913dcf2a31b52976e5f5bd8a63e2}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!addRegion@{addRegion}}
+\index{addRegion@{addRegion}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{addRegion}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf LCDD}\& DD4hep::Geometry::LCDD::addRegion (const {\bf Ref\_\-t} \& {\em region})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a633c913dcf2a31b52976e5f5bd8a63e2}
+
+
+Add a new detector region by named reference to the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a9b24c9ac8dde50f36fbeea3e6cb8d2cb}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aa574186ef096f626835ea6f389769230}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!addSensitiveDetector@{addSensitiveDetector}}
+\index{addSensitiveDetector@{addSensitiveDetector}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{addSensitiveDetector}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf LCDD}\& DD4hep::Geometry::LCDD::addSensitiveDetector (const {\bf Ref\_\-t} \& {\em element})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aa574186ef096f626835ea6f389769230}
+
+
+Add a new sensitive detector by named reference to the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a5509dc3840aa73a8c5d5e8f886f3be3f}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ae4fdea118902519ae7581fe0bd733559}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!addUserExtension@{addUserExtension}}
+\index{addUserExtension@{addUserExtension}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{addUserExtension}]{\setlength{\rightskip}{0pt plus 5cm}virtual void$\ast$ DD4hep::Geometry::LCDD::addUserExtension (void $\ast$ {\em ptr}, \/  const std::type\_\-info \& {\em info}, \/  void($\ast$)(void $\ast$) {\em destruct})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ae4fdea118902519ae7581fe0bd733559}
+
+
+Add an extension object to the detector element. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a6a8e772cd986a1e6211b4e3b0b1ae997}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by addExtension().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a705cc171273fe3aa63100385b1bd7191}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!addVisAttribute@{addVisAttribute}}
+\index{addVisAttribute@{addVisAttribute}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{addVisAttribute}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf LCDD}\& DD4hep::Geometry::LCDD::addVisAttribute (const {\bf Ref\_\-t} \& {\em element})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a705cc171273fe3aa63100385b1bd7191}
+
+
+Add a new visualisation attribute by named reference to the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a6b0b4c0f5d67a156215447e385820dc4}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a35239d8469cba6c091e970a1baec312b}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!air@{air}}
+\index{air@{air}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{air}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Material} DD4hep::Geometry::LCDD::air () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a35239d8469cba6c091e970a1baec312b}
+
+
+Return handle to material describing air. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a7cbfdb3a6fc06844d2a9e4f3d0f52d92}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by create\_\-detector().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a5661c5a5c9519f58e3044fa66e5393fa}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!alignment@{alignment}}
+\index{alignment@{alignment}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{alignment}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf AlignmentEntry} DD4hep::Geometry::LCDD::alignment (const std::string \& {\em path}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a5661c5a5c9519f58e3044fa66e5393fa}
+
+
+Retrieve an alignment entry by it's name from the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_af544526d9d90bffac48221b8f77eb265}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a48553ea87301f9eb1237e41e7e2a0f16}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!alignments@{alignments}}
+\index{alignments@{alignments}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{alignments}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf HandleMap}\& DD4hep::Geometry::LCDD::alignments () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a48553ea87301f9eb1237e41e7e2a0f16}
+
+
+Accessor to the map of aligment entries. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a3db8df3854b34f1f60a091c135274bc4}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ab47f82e5a5bfda6f58624b3553a08c68}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!apply@{apply}}
+\index{apply@{apply}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{apply}]{\setlength{\rightskip}{0pt plus 5cm}virtual long DD4hep::Geometry::LCDD::apply (const char $\ast$ {\em factory}, \/  int {\em argc}, \/  char $\ast$$\ast$ {\em argv})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ab47f82e5a5bfda6f58624b3553a08c68}
+
+
+Manipulate geometry using factory converter. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a3dfdf0180fa0a61067bd1f12fa15ecd6}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by DD4hep::ROOTUI::apply(), DD4hep::Simulation::Geant4DetectorGeometryConstruction::constructGeo(), DD4hep::Simulation::Geant4Kernel::loadGeometry(), and DD4hep::Simulation::Geant4Kernel::loadXML().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a73400f14f6384e1c84470595fc3667fd}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!buildType@{buildType}}
+\index{buildType@{buildType}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{buildType}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf LCDDBuildType} DD4hep::Geometry::LCDD::buildType () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a73400f14f6384e1c84470595fc3667fd}
+
+
+Access flag to steer the detail of building of the geometry/detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_ab38d01be5ddf4db043ea23a77b04a21a}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ae0b36775a484f3b7e6f7b3d5910062a2}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!constant@{constant}}
+\index{constant@{constant}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{constant}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf T} DD4hep::Geometry::LCDD::constant (const std::string \& {\em name}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ae0b36775a484f3b7e6f7b3d5910062a2}
+
+
+Typed access to constants: access any type values. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_aa67202d22d5ce08316bbbc6f7b00fa1c}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a636bc57de8b0334a83c52ef2b43c465d}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!constant@{constant}}
+\index{constant@{constant}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{constant}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::Geometry::LCDD::constant$<$ double $>$ (const std::string \& {\em name}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a636bc57de8b0334a83c52ef2b43c465d}
+
+
+Retrieve a constant by it's name from the detector description. Typed access to constants: double values.
+
+Typed access to constants: float values.
+
+Typed access to constants: unsigned long values.
+
+Typed access to constants: long values.
+
+Typed access to constants: unsigned integer values.
+
+Typed access to constants: integer values.
+
+Typed access to constants: unsigned short values.
+
+Typed access to constants: short values. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_aa67202d22d5ce08316bbbc6f7b00fa1c}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by DD4hep::DDRec::createGearForILD().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a9696a0bb5af8abd3667460a617d4dc83}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!constantAsDouble@{constantAsDouble}}
+\index{constantAsDouble@{constantAsDouble}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{constantAsDouble}]{\setlength{\rightskip}{0pt plus 5cm}virtual double DD4hep::Geometry::LCDD::constantAsDouble (const std::string \& {\em name}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a9696a0bb5af8abd3667460a617d4dc83}
+
+
+Typed access to constants: double values. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a5d935f74487075d2297b2ae2884471b2}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a95370880f4063064af089b943b0e4ce2}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!constantAsLong@{constantAsLong}}
+\index{constantAsLong@{constantAsLong}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{constantAsLong}]{\setlength{\rightskip}{0pt plus 5cm}virtual long DD4hep::Geometry::LCDD::constantAsLong (const std::string \& {\em name}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a95370880f4063064af089b943b0e4ce2}
+
+
+Typed access to constants: long values. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a02ab7c49c65ba0c8c8df216b280ece39}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a6857611520c86f1d242a1698ab5c181f}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!constantAsString@{constantAsString}}
+\index{constantAsString@{constantAsString}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{constantAsString}]{\setlength{\rightskip}{0pt plus 5cm}virtual std::string DD4hep::Geometry::LCDD::constantAsString (const std::string \& {\em name}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a6857611520c86f1d242a1698ab5c181f}
+
+
+Typed access to constants: access string values. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a4f7a333b0a12119a8a5d64591b38a298}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a14d6ac1a5de3cd514372ab8717b6420e}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!constants@{constants}}
+\index{constants@{constants}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{constants}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf HandleMap}\& DD4hep::Geometry::LCDD::constants () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a14d6ac1a5de3cd514372ab8717b6420e}
+
+
+Accessor to the map of constants. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_ad448fac04887abd5b7c6a0158e293c8c}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a6cbadc0074dd9cc3b88b5e0a527586a2}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!declareMotherVolume@{declareMotherVolume}}
+\index{declareMotherVolume@{declareMotherVolume}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{declareMotherVolume}]{\setlength{\rightskip}{0pt plus 5cm}virtual void DD4hep::Geometry::LCDD::declareMotherVolume (const std::string \& {\em detector\_\-name}, \/  const {\bf Volume} \& {\em vol})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a6cbadc0074dd9cc3b88b5e0a527586a2}
+
+
+Register new mother volume using the detector name. Miscaneleous accessors to the detexctor description Volumes must be registered/declared PRIOR to be picked up! The method throws an exception if another volume was already declared for this subdetector The method throws an exception if the volume to be registered is invalid. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_ac8faeaaa5f56b48c6306cb3099f84568}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by create\_\-element().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a7470fc11102bacc2b486590de49a8017}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!destroyInstance@{destroyInstance}}
+\index{destroyInstance@{destroyInstance}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{destroyInstance}]{\setlength{\rightskip}{0pt plus 5cm}void LCDD::destroyInstance ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a7470fc11102bacc2b486590de49a8017}
+
+
+Destroy the instance. 
+
+Definition at line 94 of file LCDDImp.cpp.
+
+Referenced by DD4hep::Simulation::Geant4Kernel::terminate(), and DD4hep::Simulation::Geant4Kernel::$\sim$Geant4Kernel().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a0ed0c4e5d72a1e07ce11cf2592d6de3e}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!detector@{detector}}
+\index{detector@{detector}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{detector}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf DetElement} DD4hep::Geometry::LCDD::detector (const std::string \& {\em name}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a0ed0c4e5d72a1e07ce11cf2592d6de3e}
+
+
+Retrieve a field component by it's name from the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a43a6f0c97177fee5dda8b9a93cee6bad}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by DD4hep::DDRec::createGearForCLIC(), DD4hep::DDRec::createGearForILD(), DD4hep::Simulation::Geant4Handle$<$ TYPE $>$::Geant4Handle(), DD4hep::Converter$<$ T, ARG $>$::operator()(), and DD4hep::SurfaceInstaller::SurfaceInstaller().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a1cdc7a631ac397f64b40e7232ee04639}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!detectors@{detectors}}
+\index{detectors@{detectors}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{detectors}]{\setlength{\rightskip}{0pt plus 5cm}virtual std::vector$<${\bf DetElement}$>$ DD4hep::Geometry::LCDD::detectors (unsigned int {\em includeFlag}, \/  unsigned int {\em excludeFlag} = {\ttfamily 0}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a1cdc7a631ac397f64b40e7232ee04639}
+return a vector with all detectors that have all the type properties in includeFlag set but none of the properties given in excludeFlag 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_ab46d786f0e67c07c818b2e022ddd6dc4}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aee911f853a0e585f0ac9be7852ed6954}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!detectors@{detectors}}
+\index{detectors@{detectors}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{detectors}]{\setlength{\rightskip}{0pt plus 5cm}virtual std::vector$<${\bf DetElement}$>$ DD4hep::Geometry::LCDD::detectors (const std::string \& {\em type1}, \/  const std::string \& {\em type2}, \/  const std::string \& {\em type3} = {\ttfamily \char`\"{}\char`\"{}}, \/  const std::string \& {\em type4} = {\ttfamily \char`\"{}\char`\"{}}, \/  const std::string \& {\em type5} = {\ttfamily \char`\"{}\char`\"{}})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aee911f853a0e585f0ac9be7852ed6954}
+
+
+Access a set of subdetectors according to several sensitive types. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_aa0b21c4dda1cce4ae1681f6b75b1b380}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a0f8e72265d7c6fd7d0dcdd293e13031f}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!detectors@{detectors}}
+\index{detectors@{detectors}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{detectors}]{\setlength{\rightskip}{0pt plus 5cm}virtual const std::vector$<${\bf DetElement}$>$\& DD4hep::Geometry::LCDD::detectors (const std::string \& {\em type}, \/  bool {\em throw\_\-exc} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a0f8e72265d7c6fd7d0dcdd293e13031f}
+
+
+Access a set of subdetectors according to the sensitive type. Access to predefined caches of subdetectors according to the sensitive type Please note:
+\begin{DoxyItemize}
+\item The sensitive type of a detector is set in the 'detector constructor'.
+\item Not sensitive detector structures have the name 'passive'
+\item Compounds (ie. nested detectors) are of type 'compound'
+\item If throw\_\-exc is set to true, an exception is thrown if the type is not present. Otherwise an empty detector container is returned. 
+\end{DoxyItemize}
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a31d7d48549b622ff2aef524cc1996993}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ad06f71146140dc2682bc586ba7bffeaf}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!detectors@{detectors}}
+\index{detectors@{detectors}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{detectors}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf HandleMap}\& DD4hep::Geometry::LCDD::detectors () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ad06f71146140dc2682bc586ba7bffeaf}
+
+
+Accessor to the map of sub-\/detectors. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a7ec6dc28b69a23fcdaff59e73fc7c440}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by DD4hep::Geometry::DetectorSelector::detectors(), and DD4hep::DDRec::SurfaceManager::initialize().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a196cc776b69db52d89f3396bf03d224f}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!detectorTypes@{detectorTypes}}
+\index{detectorTypes@{detectorTypes}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{detectorTypes}]{\setlength{\rightskip}{0pt plus 5cm}virtual std::vector$<$std::string$>$ DD4hep::Geometry::LCDD::detectorTypes () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a196cc776b69db52d89f3396bf03d224f}
+
+
+Access the availible detector types. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a5d48161088950c2686eee7f28d58fde3}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by DD4hep::DDRec::SurfaceManager::initialize().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aa67b3fbf93d48e08c08b60cdd83b729f}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!dump@{dump}}
+\index{dump@{dump}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{dump}]{\setlength{\rightskip}{0pt plus 5cm}virtual void DD4hep::Geometry::LCDD::dump () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aa67b3fbf93d48e08c08b60cdd83b729f}
+
+
+Stupid legacy method. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_ad50f1540a6b3d99e049e1e4a91eabf8a}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_abe2147b8363040ce95bb40f810d95b36}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!endDocument@{endDocument}}
+\index{endDocument@{endDocument}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{endDocument}]{\setlength{\rightskip}{0pt plus 5cm}virtual void DD4hep::Geometry::LCDD::endDocument ()\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_abe2147b8363040ce95bb40f810d95b36}
+
+
+Finalize the geometry. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_aa3fa37aa7608b67f95aa644dc381389f}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aac5486912a4f88cbad59f6e0ec137289}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!extension@{extension}}
+\index{extension@{extension}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{extension}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf T}$\ast$ DD4hep::Geometry::LCDD::extension (bool {\em alert} = {\ttfamily true}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aac5486912a4f88cbad59f6e0ec137289}
+
+
+Access extension element by the type. 
+
+Definition at line 309 of file LCDD.h.
+
+References userExtension().
+
+Referenced by DD4hep::DDRec::createSurfaceManager(), and setup\_\-DDEve().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_adcc7929860f5ac592d8f4c2d476555e9}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!field@{field}}
+\index{field@{field}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{field}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf CartesianField} DD4hep::Geometry::LCDD::field (const std::string \& {\em name}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_adcc7929860f5ac592d8f4c2d476555e9}
+
+
+Retrieve a subdetector element by it's name from the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a32dc56ebdd198ff9d03d5fcbcb358bc8}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a62750fbd02e0f4e06c570d00dc9eb2ca}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!field@{field}}
+\index{field@{field}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{field}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf OverlayedField} DD4hep::Geometry::LCDD::field () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a62750fbd02e0f4e06c570d00dc9eb2ca}
+
+
+Return handle to the combined electromagentic field description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a9aaabd067b030c0999bad0ea212d8e2e}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by DD4hep::Simulation::Geant4FieldTrackingSetup::execute().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_af2622f438504300116fabfa214b23be5}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!fields@{fields}}
+\index{fields@{fields}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{fields}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf HandleMap}\& DD4hep::Geometry::LCDD::fields () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_af2622f438504300116fabfa214b23be5}
+
+
+Accessor to the map of field entries, which together form the global field. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_aa4d77c879e369bc0e637e02448c5651f}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_abc18ac1b03188da6e4400943eca4bd2e}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!fromCompact@{fromCompact}}
+\index{fromCompact@{fromCompact}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{fromCompact}]{\setlength{\rightskip}{0pt plus 5cm}virtual void DD4hep::Geometry::LCDD::fromCompact (const std::string \& {\em fname}, \/  {\bf LCDDBuildType} {\em type} = {\ttfamily BUILD\_\-DEFAULT})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_abc18ac1b03188da6e4400943eca4bd2e}
+
+
+Deprecated call (use fromXML): Read compact geometry description or alignment file. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a4eb2edfae225abead99a6cd6a85e84f7}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by main().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aab90efbd334c08ee8a06b0f97d219243}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!fromXML@{fromXML}}
+\index{fromXML@{fromXML}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{fromXML}]{\setlength{\rightskip}{0pt plus 5cm}virtual void DD4hep::Geometry::LCDD::fromXML (const std::string \& {\em fname}, \/  {\bf UriReader} $\ast$ {\em entity\_\-resolver}, \/  {\bf LCDDBuildType} {\em type} = {\ttfamily BUILD\_\-DEFAULT})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aab90efbd334c08ee8a06b0f97d219243}
+
+
+Read any geometry description or alignment file with external \hyperlink{namespace_d_d4hep_1_1_x_m_l}{XML} entity resolution. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_ae1c435032cd33235cd6405ca8d8aae9b}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ad6e8de7ab4f0374cea7e3e15e33af66e}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!fromXML@{fromXML}}
+\index{fromXML@{fromXML}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{fromXML}]{\setlength{\rightskip}{0pt plus 5cm}virtual void DD4hep::Geometry::LCDD::fromXML (const std::string \& {\em fname}, \/  {\bf LCDDBuildType} {\em type} = {\ttfamily BUILD\_\-DEFAULT})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ad6e8de7ab4f0374cea7e3e15e33af66e}
+
+
+Read any geometry description or alignment file. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a23921e95e2ba300135d635e58ecb0c51}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by DD4hep::ROOTUI::fromXML(), DD4hep::ROOTUI::loadConditions(), and DD4hep::Display::LoadXML().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a4ba28eb0e53e15856d7a773c4ff758b9}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{getInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LCDD} \& LCDD::getInstance (void)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a4ba28eb0e53e15856d7a773c4ff758b9}
+
+
+-\/-\/-\/Factory method-\/-\/-\/-\/-\/-\/-\/ 
+
+Definition at line 87 of file LCDDImp.cpp.
+
+Referenced by DD4hep::Geometry::SimpleGDMLWriter::create(), DD4hep::Display::Display(), DD4hep::DDRec::SurfaceManager::initialize(), DD4hep::DDRec::SurfaceHelper::initialize(), DD4hep::Simulation::Geant4Mapping::instance(), DD4hep::Simulation::KernelHandle::KernelHandle(), DD4hep::DDRec::LayeringExtensionImpl::LayerAttributes::LayerAttributes(), and DD4hep::DDRec::MaterialManager::MaterialManager().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ad09f49fc86a5b286ae55901e2b169d7c}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!header@{header}}
+\index{header@{header}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{header}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Header} DD4hep::Geometry::LCDD::header () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ad09f49fc86a5b286ae55901e2b169d7c}
+
+
+Accessor to the map of header entries. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a04116248704015c4691e4918b3ff0c07}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ac08b5db047061a7b08d8b78bd7cb5e72}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!idSpecification@{idSpecification}}
+\index{idSpecification@{idSpecification}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{idSpecification}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf IDDescriptor} DD4hep::Geometry::LCDD::idSpecification (const std::string \& {\em name}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ac08b5db047061a7b08d8b78bd7cb5e72}
+
+
+Retrieve a id descriptor by it's name from the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_ade361431838946ea24068e4e74632da4}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a16ddadf18c24ad54b816354107338a80}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!idSpecifications@{idSpecifications}}
+\index{idSpecifications@{idSpecifications}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{idSpecifications}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf HandleMap}\& DD4hep::Geometry::LCDD::idSpecifications () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a16ddadf18c24ad54b816354107338a80}
+
+
+Accessor to the map of ID specifications. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a85a31743f9716ca28a09afb1409ee3be}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a9a4f55004e7375b2b20fb64e1a7ee8de}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!init@{init}}
+\index{init@{init}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}virtual void DD4hep::Geometry::LCDD::init ()\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a9a4f55004e7375b2b20fb64e1a7ee8de}
+
+
+Initialize geometry. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_af0cf7ab83180ee15085bcc7e1383f561}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_acafee280cadae2b44117eb751e0790aa}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!invisible@{invisible}}
+\index{invisible@{invisible}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{invisible}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf VisAttr} DD4hep::Geometry::LCDD::invisible () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_acafee280cadae2b44117eb751e0790aa}
+
+
+Return handle to \char`\"{}invisible\char`\"{} visualization attributes. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_acd728b63a476d036e305dcd5fc82cd9d}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by create\_\-detector().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a7e98996675e9c00d6b64010415511813}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!limitSet@{limitSet}}
+\index{limitSet@{limitSet}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{limitSet}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf LimitSet} DD4hep::Geometry::LCDD::limitSet (const std::string \& {\em name}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a7e98996675e9c00d6b64010415511813}
+
+
+Retrieve a limitset by it's name from the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a1c46d8eb90566d0d9644ff42d2803f00}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aeacdfb972606fef31bc1b69e6e982956}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!limitsets@{limitsets}}
+\index{limitsets@{limitsets}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{limitsets}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf HandleMap}\& DD4hep::Geometry::LCDD::limitsets () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aeacdfb972606fef31bc1b69e6e982956}
+
+
+Accessor to the map of limit settings. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a6716761058e0530f528c669b4b0f0671}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_af209f1ecaad7336e14ffee002215aa93}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!manager@{manager}}
+\index{manager@{manager}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{manager}]{\setlength{\rightskip}{0pt plus 5cm}virtual TGeoManager\& DD4hep::Geometry::LCDD::manager () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_af209f1ecaad7336e14ffee002215aa93}
+
+
+Access the geometry manager of this instance. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a957f19ec408e006ba36e216a8d63ae17}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by DD4hep::Display::LoadXML().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aec8adc99bc62ade78afd0a444a76fd04}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!material@{material}}
+\index{material@{material}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{material}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Material} DD4hep::Geometry::LCDD::material (const std::string \& {\em name}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aec8adc99bc62ade78afd0a444a76fd04}
+
+
+Retrieve a matrial by it's name from the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_acd3ac5d06042d6c1adda04ef5a974b62}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by DD4hep::Simulation::Geant4Converter::create(), create\_\-detector(), create\_\-element(), and DD4hep::XML::createPlacedEnvelope().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ad239fb24b7d6eb41abf697f2710ad6a3}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!pickMotherVolume@{pickMotherVolume}}
+\index{pickMotherVolume@{pickMotherVolume}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{pickMotherVolume}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Volume} DD4hep::Geometry::LCDD::pickMotherVolume (const {\bf DetElement} \& {\em sd}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ad239fb24b7d6eb41abf697f2710ad6a3}
+
+
+Access mother volume by detector element. The method uses the detector element's name for volume identification. Unregistered detectors are hosted by the world volume. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_ac46cbee27ebc2412e82455305c54c25f}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by create\_\-detector(), create\_\-element(), and DD4hep::XML::createPlacedEnvelope().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a15fac6166c5a16968cf9f60b515f4125}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!properties@{properties}}
+\index{properties@{properties}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{properties}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Properties}\& DD4hep::Geometry::LCDD::properties () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a15fac6166c5a16968cf9f60b515f4125}
+
+
+Access to properties map. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a0b1b69a5950f1780233ff1f1a801a152}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by DD4hep::Simulation::Geant4Converter::create().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aa29f75fba9942edd7f73226a11c9598e}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!readout@{readout}}
+\index{readout@{readout}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{readout}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Readout} DD4hep::Geometry::LCDD::readout (const std::string \& {\em name}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aa29f75fba9942edd7f73226a11c9598e}
+
+
+Retrieve a readout object by it's name from the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a0ab6375a7cb75751b8f434c06c58d3b2}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a5c815f21643ebb5cce9d1d1e71772431}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!readouts@{readouts}}
+\index{readouts@{readouts}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{readouts}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf HandleMap}\& DD4hep::Geometry::LCDD::readouts () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a5c815f21643ebb5cce9d1d1e71772431}
+
+
+Accessor to the map of readout structures. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a0064b7e246b1e505e1b6d14483172325}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_adbe06759881707fe995472c03810c0ff}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!region@{region}}
+\index{region@{region}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{region}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Region} DD4hep::Geometry::LCDD::region (const std::string \& {\em name}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_adbe06759881707fe995472c03810c0ff}
+
+
+Retrieve a region object by it's name from the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a4588edf168376c44fce31c62a92b48df}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ab068e5aaa1d76a2348ea74ea3d76f96f}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!regions@{regions}}
+\index{regions@{regions}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{regions}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf HandleMap}\& DD4hep::Geometry::LCDD::regions () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ab068e5aaa1d76a2348ea74ea3d76f96f}
+
+
+Accessor to the map of region settings. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a6037f7f69bd80cb6c73f8399a739645f}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a9ddb061fc3a827afe0349e3a841ea885}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!removeExtension@{removeExtension}}
+\index{removeExtension@{removeExtension}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{removeExtension}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf T}$\ast$ DD4hep::Geometry::LCDD::removeExtension (bool {\em destroy} = {\ttfamily true})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a9ddb061fc3a827afe0349e3a841ea885}
+
+
+Remove an existing extension object from the \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} instance. If not destroyed, the instance is returned. 
+
+Definition at line 304 of file LCDD.h.
+
+References removeUserExtension().
+
+Referenced by DD4hep::Simulation::Geant4Kernel::terminate(), DD4hep::Display::$\sim$Display(), and DD4hep::Simulation::Geant4Kernel::$\sim$Geant4Kernel().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a05c121b360d248ce34a2d9337df9f49b}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!removeUserExtension@{removeUserExtension}}
+\index{removeUserExtension@{removeUserExtension}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{removeUserExtension}]{\setlength{\rightskip}{0pt plus 5cm}virtual void$\ast$ DD4hep::Geometry::LCDD::removeUserExtension (const std::type\_\-info \& {\em info}, \/  bool {\em destroy})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a05c121b360d248ce34a2d9337df9f49b}
+
+
+Remove an existing extension object from the \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} instance. If not destroyed, the instance is returned. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a9e43af7ad956710acab4aead5a41dc13}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by removeExtension().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_af476b8241b93e82350ec1e5cbf145941}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!sensitiveDetector@{sensitiveDetector}}
+\index{sensitiveDetector@{sensitiveDetector}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{sensitiveDetector}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf SensitiveDetector} DD4hep::Geometry::LCDD::sensitiveDetector (const std::string \& {\em name}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_af476b8241b93e82350ec1e5cbf145941}
+
+
+Retrieve a sensitive detector by it's name from the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_ac67b0ebe0d7ccb694c0d7a9e53cb4662}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by DD4hep::View::ConfigureEvent(), DD4hep::View::ConfigureGeometry(), DD4hep::DDRec::createGearForILD(), DD4hep::View::CreateGeometry(), DD4hep::Simulation::Geant4SensDet::Geant4SensDet(), DD4hep::View::GetGlobalGeometry(), DD4hep::Display::LoadGeoChildren(), and DD4hep::Converter$<$ T, ARG $>$::operator()().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a576c24cc18698eb14658466999fca65d}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!sensitiveDetectors@{sensitiveDetectors}}
+\index{sensitiveDetectors@{sensitiveDetectors}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{sensitiveDetectors}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf HandleMap}\& DD4hep::Geometry::LCDD::sensitiveDetectors () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a576c24cc18698eb14658466999fca65d}
+
+
+Accessor to the map of sub-\/detectors. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a493e9d19391553cb1ce589dbc5248904}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by DD4hep::Simulation::Geant4Exec::configure().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a9927ac6aeae1dad18e22413deba9aa65}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!setHeader@{setHeader}}
+\index{setHeader@{setHeader}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{setHeader}]{\setlength{\rightskip}{0pt plus 5cm}virtual void DD4hep::Geometry::LCDD::setHeader ({\bf Header} {\em h})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a9927ac6aeae1dad18e22413deba9aa65}
+
+
+Accessor to the header entry. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_af37d163b4c62d1ef1602555d39e0eff8}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a23b3868f3b09adccc62799612285c7db}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!trackers@{trackers}}
+\index{trackers@{trackers}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{trackers}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf DetElement} DD4hep::Geometry::LCDD::trackers () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a23b3868f3b09adccc62799612285c7db}
+
+
+Return reference to detector element with all tracker devices. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a0456a61fe57ba6e772da7668a26e4eb9}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a351b289056485f960e9121382018c92b}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!trackingVolume@{trackingVolume}}
+\index{trackingVolume@{trackingVolume}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{trackingVolume}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Volume} DD4hep::Geometry::LCDD::trackingVolume () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a351b289056485f960e9121382018c92b}
+
+
+Return handle to the volume containing the tracking devices. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_afb0ba5d32423a9a36a2d02e5dc8d63ef}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a699d446afe8b33487cdce57d4e2f26c6}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!userExtension@{userExtension}}
+\index{userExtension@{userExtension}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{userExtension}]{\setlength{\rightskip}{0pt plus 5cm}virtual void$\ast$ DD4hep::Geometry::LCDD::userExtension (const std::type\_\-info \& {\em info}, \/  bool {\em alert} = {\ttfamily true}) const\hspace{0.3cm}{\ttfamily  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a699d446afe8b33487cdce57d4e2f26c6}
+
+
+Access an existing extension object from the detector element. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_adfeb342464586b682c1da99b0c2e023b}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by extension().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_adf89eaa970c7c23b6896f79a6ad28b7f}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!vacuum@{vacuum}}
+\index{vacuum@{vacuum}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{vacuum}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Material} DD4hep::Geometry::LCDD::vacuum () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_adf89eaa970c7c23b6896f79a6ad28b7f}
+
+
+Return handle to material describing vacuum. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_ac1c1ef94c95b0c6e1d0bd0089a537ebe}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by create\_\-detector().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a449330acbb5a5d6ba6f1fa2d97cea338}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!visAttributes@{visAttributes}}
+\index{visAttributes@{visAttributes}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{visAttributes}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf VisAttr} DD4hep::Geometry::LCDD::visAttributes (const std::string \& {\em name}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a449330acbb5a5d6ba6f1fa2d97cea338}
+
+
+Retrieve a visualization attribute by it's name from the detector description. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a18c14707abd2efd108fa6ec686c74ebd}{DD4hep::Geometry::LCDDImp}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_abb60505e37d62147725d126cb21d171b}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!visAttributes@{visAttributes}}
+\index{visAttributes@{visAttributes}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{visAttributes}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf HandleMap}\& DD4hep::Geometry::LCDD::visAttributes () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_abb60505e37d62147725d126cb21d171b}
+
+
+Accessor to the map of visualisation attributes. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a7ba04b265420787088b76beea40c5733}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by create\_\-detector().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a2112b2267f5f07ecc94e909d696ffdbd}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!volumeManager@{volumeManager}}
+\index{volumeManager@{volumeManager}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{volumeManager}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf VolumeManager} DD4hep::Geometry::LCDD::volumeManager () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_a2112b2267f5f07ecc94e909d696ffdbd}
+
+
+Return handle to the \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{VolumeManager}. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a43a6947e79f1d935cae13ffa14dec807}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by DD4hep::DDRec::IDDecoder::IDDecoder().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ae61d027023791272cf976432c0b3a977}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!world@{world}}
+\index{world@{world}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{world}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf DetElement} DD4hep::Geometry::LCDD::world () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_ae61d027023791272cf976432c0b3a977}
+
+
+Return reference to the top-\/most (world) detector element. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a8aeb5997ee6b66d4207ccab82c2bf8f1}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by DD4hep::View::ConfigureEvent(), DD4hep::View::ConfigureGeometry(), DD4hep::Simulation::Geant4DetectorGeometryConstruction::constructGeo(), DD4hep::Geometry::DetectorTools::findElement(), DD4hep::Simulation::Geant4VolumeManager::Geant4VolumeManager(), DD4hep::DDRec::IDDecoder::IDDecoder(), DD4hep::DDRec::SurfaceHelper::initialize(), DD4hep::DDRec::LayeringExtensionImpl::LayerAttributes::LayerAttributes(), DD4hep::Display::LoadGeoChildren(), and DD4hep::DDRec::MaterialManager::MaterialManager().\hypertarget{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aa7d089039516ff312cf95168288019fe}{
+\index{DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}!worldVolume@{worldVolume}}
+\index{worldVolume@{worldVolume}!DD4hep::Geometry::LCDD@{DD4hep::Geometry::LCDD}}
+\subsubsection[{worldVolume}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Volume} DD4hep::Geometry::LCDD::worldVolume () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_aa7d089039516ff312cf95168288019fe}
+
+
+Return handle to the world volume containing everything. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_imp_a299a2cba9bd2dcb247df2e254fb07125}{DD4hep::Geometry::LCDDImp}.
+
+Referenced by DD4hep::ROOTUI::redraw().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_l_c_d_d_8h}{LCDD.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_l_c_d_d_imp_8cpp}{LCDDImp.cpp}\end{DoxyCompactItemize}

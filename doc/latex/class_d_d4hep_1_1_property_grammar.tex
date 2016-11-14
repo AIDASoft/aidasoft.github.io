@@ -1,0 +1,163 @@
+\hypertarget{class_d_d4hep_1_1_property_grammar}{
+\section{DD4hep::PropertyGrammar Class Reference}
+\label{class_d_d4hep_1_1_property_grammar}\index{DD4hep::PropertyGrammar@{DD4hep::PropertyGrammar}}
+}
+
+
+Class describing the grammar representation of a given data type.  
+
+
+{\ttfamily \#include $<$ComponentProperties.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_property_grammar_a667cf30a8e7df73005e88e30871716c8}{PropertyGrammar} (const \hyperlink{class_d_d4hep_1_1_basic_grammar}{BasicGrammar} \&g)
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_property_grammar_a5de8cc9e35a539f8ad254950e6f1f6dc}{$\sim$PropertyGrammar} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+virtual const std::type\_\-info \& \hyperlink{class_d_d4hep_1_1_property_grammar_a602f5977dbe746e90b69bc5b6f24f8ee}{type} () const 
+\begin{DoxyCompactList}\small\item\em Access to the type information. \item\end{DoxyCompactList}\item 
+virtual std::string \hyperlink{class_d_d4hep_1_1_property_grammar_a876ca7bd3ed0fa75bb4abce8a877d569}{str} (const void $\ast$ptr) const 
+\begin{DoxyCompactList}\small\item\em Serialize an opaque value to a string. \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_property_grammar_afe1395246530dea8a90baaf3747ffe5e}{fromString} (void $\ast$ptr, const std::string \&value) const 
+\begin{DoxyCompactList}\small\item\em Set value from serialized string. On successful data conversion TRUE is returned. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_d_d4hep_1_1_property_grammar_ac36bdd6df04d3f26daff768377e1583a}{invalidConversion} (const std::type\_\-info \&from, const std::type\_\-info \&to)
+\begin{DoxyCompactList}\small\item\em Error callback on invalid conversion. \item\end{DoxyCompactList}\item 
+static void \hyperlink{class_d_d4hep_1_1_property_grammar_af0a4553e93979108dd872da16091e206}{invalidConversion} (const std::string \&value, const std::type\_\-info \&to)
+\begin{DoxyCompactList}\small\item\em Error callback on invalid conversion. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{class_d_d4hep_1_1_basic_grammar}{BasicGrammar} \& \hyperlink{class_d_d4hep_1_1_property_grammar_a49c47d61452e560f0186eef943cf711e}{m\_\-grammar}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_d_d4hep_1_1_property_grammar_a386f5a9cf65610cb62143865e5637272}{Property}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class describing the grammar representation of a given data type. \begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 53 of file ComponentProperties.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_property_grammar_a667cf30a8e7df73005e88e30871716c8}{
+\index{DD4hep::PropertyGrammar@{DD4hep::PropertyGrammar}!PropertyGrammar@{PropertyGrammar}}
+\index{PropertyGrammar@{PropertyGrammar}!DD4hep::PropertyGrammar@{DD4hep::PropertyGrammar}}
+\subsubsection[{PropertyGrammar}]{\setlength{\rightskip}{0pt plus 5cm}PropertyGrammar::PropertyGrammar (const {\bf BasicGrammar} \& {\em g})}}
+\label{class_d_d4hep_1_1_property_grammar_a667cf30a8e7df73005e88e30871716c8}
+
+
+Default constructor. 
+
+Definition at line 29 of file ComponentProperties.cpp.\hypertarget{class_d_d4hep_1_1_property_grammar_a5de8cc9e35a539f8ad254950e6f1f6dc}{
+\index{DD4hep::PropertyGrammar@{DD4hep::PropertyGrammar}!$\sim$PropertyGrammar@{$\sim$PropertyGrammar}}
+\index{$\sim$PropertyGrammar@{$\sim$PropertyGrammar}!DD4hep::PropertyGrammar@{DD4hep::PropertyGrammar}}
+\subsubsection[{$\sim$PropertyGrammar}]{\setlength{\rightskip}{0pt plus 5cm}PropertyGrammar::$\sim$PropertyGrammar ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_property_grammar_a5de8cc9e35a539f8ad254950e6f1f6dc}
+
+
+Default destructor. 
+
+Definition at line 33 of file ComponentProperties.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_property_grammar_afe1395246530dea8a90baaf3747ffe5e}{
+\index{DD4hep::PropertyGrammar@{DD4hep::PropertyGrammar}!fromString@{fromString}}
+\index{fromString@{fromString}!DD4hep::PropertyGrammar@{DD4hep::PropertyGrammar}}
+\subsubsection[{fromString}]{\setlength{\rightskip}{0pt plus 5cm}bool PropertyGrammar::fromString (void $\ast$ {\em ptr}, \/  const std::string \& {\em value}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_property_grammar_afe1395246530dea8a90baaf3747ffe5e}
+
+
+Set value from serialized string. On successful data conversion TRUE is returned. 
+
+Definition at line 57 of file ComponentProperties.cpp.
+
+References DD4hep::BasicGrammar::fromString(), and m\_\-grammar.
+
+Referenced by DD4hep::Property::set(), and DD4hep::Property::str().\hypertarget{class_d_d4hep_1_1_property_grammar_af0a4553e93979108dd872da16091e206}{
+\index{DD4hep::PropertyGrammar@{DD4hep::PropertyGrammar}!invalidConversion@{invalidConversion}}
+\index{invalidConversion@{invalidConversion}!DD4hep::PropertyGrammar@{DD4hep::PropertyGrammar}}
+\subsubsection[{invalidConversion}]{\setlength{\rightskip}{0pt plus 5cm}void PropertyGrammar::invalidConversion (const std::string \& {\em value}, \/  const std::type\_\-info \& {\em to})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_property_grammar_af0a4553e93979108dd872da16091e206}
+
+
+Error callback on invalid conversion. 
+
+Definition at line 42 of file ComponentProperties.cpp.
+
+References invalidConversion().\hypertarget{class_d_d4hep_1_1_property_grammar_ac36bdd6df04d3f26daff768377e1583a}{
+\index{DD4hep::PropertyGrammar@{DD4hep::PropertyGrammar}!invalidConversion@{invalidConversion}}
+\index{invalidConversion@{invalidConversion}!DD4hep::PropertyGrammar@{DD4hep::PropertyGrammar}}
+\subsubsection[{invalidConversion}]{\setlength{\rightskip}{0pt plus 5cm}void PropertyGrammar::invalidConversion (const std::type\_\-info \& {\em from}, \/  const std::type\_\-info \& {\em to})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_property_grammar_ac36bdd6df04d3f26daff768377e1583a}
+
+
+Error callback on invalid conversion. 
+
+Definition at line 37 of file ComponentProperties.cpp.
+
+Referenced by invalidConversion(), DD4hep::Property::set(), and DD4hep::Property::value().\hypertarget{class_d_d4hep_1_1_property_grammar_a876ca7bd3ed0fa75bb4abce8a877d569}{
+\index{DD4hep::PropertyGrammar@{DD4hep::PropertyGrammar}!str@{str}}
+\index{str@{str}!DD4hep::PropertyGrammar@{DD4hep::PropertyGrammar}}
+\subsubsection[{str}]{\setlength{\rightskip}{0pt plus 5cm}std::string PropertyGrammar::str (const void $\ast$ {\em ptr}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_property_grammar_a876ca7bd3ed0fa75bb4abce8a877d569}
+
+
+Serialize an opaque value to a string. 
+
+Definition at line 52 of file ComponentProperties.cpp.
+
+References m\_\-grammar, and DD4hep::BasicGrammar::str().
+
+Referenced by DD4hep::Property::str().\hypertarget{class_d_d4hep_1_1_property_grammar_a602f5977dbe746e90b69bc5b6f24f8ee}{
+\index{DD4hep::PropertyGrammar@{DD4hep::PropertyGrammar}!type@{type}}
+\index{type@{type}!DD4hep::PropertyGrammar@{DD4hep::PropertyGrammar}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}const std::type\_\-info \& PropertyGrammar::type () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_property_grammar_a602f5977dbe746e90b69bc5b6f24f8ee}
+
+
+Access to the type information. 
+
+Definition at line 47 of file ComponentProperties.cpp.
+
+References m\_\-grammar, and DD4hep::BasicGrammar::type().
+
+Referenced by DD4hep::Property::set(), DD4hep::Property::type(), and DD4hep::Property::value().
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_d_d4hep_1_1_property_grammar_a386f5a9cf65610cb62143865e5637272}{
+\index{DD4hep::PropertyGrammar@{DD4hep::PropertyGrammar}!Property@{Property}}
+\index{Property@{Property}!DD4hep::PropertyGrammar@{DD4hep::PropertyGrammar}}
+\subsubsection[{Property}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Property}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{class_d_d4hep_1_1_property_grammar_a386f5a9cf65610cb62143865e5637272}
+
+
+Definition at line 55 of file ComponentProperties.h.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_property_grammar_a49c47d61452e560f0186eef943cf711e}{
+\index{DD4hep::PropertyGrammar@{DD4hep::PropertyGrammar}!m\_\-grammar@{m\_\-grammar}}
+\index{m\_\-grammar@{m\_\-grammar}!DD4hep::PropertyGrammar@{DD4hep::PropertyGrammar}}
+\subsubsection[{m\_\-grammar}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf BasicGrammar}\& {\bf DD4hep::PropertyGrammar::m\_\-grammar}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_property_grammar_a49c47d61452e560f0186eef943cf711e}
+
+
+Definition at line 56 of file ComponentProperties.h.
+
+Referenced by fromString(), str(), and type().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_component_properties_8h}{ComponentProperties.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_component_properties_8cpp}{ComponentProperties.cpp}\end{DoxyCompactItemize}

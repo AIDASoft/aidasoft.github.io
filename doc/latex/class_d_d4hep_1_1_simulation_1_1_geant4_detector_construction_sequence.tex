@@ -1,0 +1,272 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence}{
+\section{DD4hep::Simulation::Geant4DetectorConstructionSequence Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence}\index{DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}}
+}
+
+
+Concrete basic implementation of the Geant4 detector construction sequencer.  
+
+
+{\ttfamily \#include $<$Geant4DetectorConstruction.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4DetectorConstructionSequence::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_abd65d829a42c5d6e403349c9ffbb13d1}{Geant4DetectorConstructionSequence} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$context, const std::string \&nam)
+\begin{DoxyCompactList}\small\item\em Standard Constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a417d49c67bf4903def46532f17dd7d20}{$\sim$Geant4DetectorConstructionSequence} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a2ccfc854d0b38a4b1547422c2779e346}{updateContext} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$ctxt)
+\begin{DoxyCompactList}\small\item\em Set or update client context. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a883d0336b5983474af9479c03e90a35b}{adopt} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction}{Geant4DetectorConstruction} $\ast$action)
+\begin{DoxyCompactList}\small\item\em Add an actor responding to all callbacks. Sequence takes ownership. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a7c2512ab15fa66370409585d60becc99}{constructGeo} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_context}{Geant4DetectorConstructionContext} $\ast$ctxt)
+\begin{DoxyCompactList}\small\item\em \hyperlink{namespace_d_d4hep_1_1_geometry}{Geometry} construction callback. Called at \char`\"{}Construct()\char`\"{}. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a74d488648a50cae0230ca9dedf678160}{constructField} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_context}{Geant4DetectorConstructionContext} $\ast$ctxt)
+\begin{DoxyCompactList}\small\item\em Electromagnetic field construction callback. Called at \char`\"{}ConstructSDandField()\char`\"{}. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_ab242c91f95283ed32133f48f2bc573fa}{constructSensitives} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_context}{Geant4DetectorConstructionContext} $\ast$ctxt)
+\begin{DoxyCompactList}\small\item\em Sensitive detector construction callback. Called at \char`\"{}ConstructSDandField()\char`\"{}. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}{\bf }\par
+{\em \label{_amgrpd41d8cd98f00b204e9800998ecf8427e}
+ }\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_geant4_geometry_maps_a0ae377c64e684c47bd3045a9d3d8e248}{Geant4GeometryMaps::MaterialMap} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_abd810f881c6a11acd9ad048b8f908ce6}{materials} () const 
+\begin{DoxyCompactList}\small\item\em Access to the converted materials. \item\end{DoxyCompactList}\item 
+const \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_geant4_geometry_maps_a175b532b796e7de3d9128c1f0e1ee406}{Geant4GeometryMaps::ElementMap} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a1b65d4014a1354c2b56158173cd2a108}{elements} () const 
+\begin{DoxyCompactList}\small\item\em Access to the converted elements. \item\end{DoxyCompactList}\item 
+const \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_geant4_geometry_maps_a5591dbffcd2e6432004034209abd630e}{Geant4GeometryMaps::SolidMap} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a6fd2ab223f31016b42d3cf07d2901da9}{shapes} () const 
+\begin{DoxyCompactList}\small\item\em Access to the converted shapes. \item\end{DoxyCompactList}\item 
+const \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_geant4_geometry_maps_a85199a23e6a837678c8e5d5f902fb2e2}{Geant4GeometryMaps::VolumeMap} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a1e85bfd70c6a133dca29b6b77fb8e12d}{volumes} () const 
+\begin{DoxyCompactList}\small\item\em Access to the converted volumes. \item\end{DoxyCompactList}\item 
+const \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_geant4_geometry_maps_a587c0a02d3847f03e6427093c90e93d2}{Geant4GeometryMaps::PlacementMap} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a58bd5c2c34f328ecb506084ba1a8f4a3}{placements} () const 
+\begin{DoxyCompactList}\small\item\em Access to the converted placements. \item\end{DoxyCompactList}\item 
+const \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_geant4_geometry_maps_ae1f67e315dd299b17e4ea1c58a47b312}{Geant4GeometryMaps::AssemblyMap} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a914734773cc27cac0e21c92af06427bc}{assemblies} () const 
+\begin{DoxyCompactList}\small\item\em Access to the converted assemblys. \item\end{DoxyCompactList}\item 
+const \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_geant4_geometry_maps_a338013d6709b82358b8e2490cdba0ed2}{Geant4GeometryMaps::LimitMap} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a99b5ddba09b53b9fad6193b59c903e79}{limits} () const 
+\begin{DoxyCompactList}\small\item\em Access to the converted limit sets. \item\end{DoxyCompactList}\item 
+const \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_geant4_geometry_maps_afb7f77d7599fee831bfb2341123e8377}{Geant4GeometryMaps::RegionMap} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a88b08b2719f3da5bc1a8d4c398c74169}{regions} () const 
+\begin{DoxyCompactList}\small\item\em Access to the converted regions. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_1_1_actors}{Actors}$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction}{Geant4DetectorConstruction} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_aa67150ae24c47c85655faf5bd89fad28}{m\_\-actors}
+\begin{DoxyCompactList}\small\item\em The list of action objects to be called. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Concrete basic implementation of the Geant4 detector construction sequencer. Concrete implementation of the Geant4 detector construction sequence. The sequence dispatches the callbacks for the \char`\"{}Construct()\char`\"{} method to create a detector geometry and to dispatch the \char`\"{}ConstructSDandField()\char`\"{} calls for each worker.
+
+Please note: \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a74d488648a50cae0230ca9dedf678160}{constructField()} and \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_ab242c91f95283ed32133f48f2bc573fa}{constructSensitives()} are executed in a thread-\/local context. See the Geant4 documentation for details: \href{https://twiki.cern.ch/twiki/bin/view/Geant4/QuickMigrationGuideForGeant4V10}{\tt https://twiki.cern.ch/twiki/bin/view/Geant4/QuickMigrationGuideForGeant4V10}
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 133 of file Geant4DetectorConstruction.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_abd65d829a42c5d6e403349c9ffbb13d1}{
+\index{DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}!Geant4DetectorConstructionSequence@{Geant4DetectorConstructionSequence}}
+\index{Geant4DetectorConstructionSequence@{Geant4DetectorConstructionSequence}!DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}}
+\subsubsection[{Geant4DetectorConstructionSequence}]{\setlength{\rightskip}{0pt plus 5cm}Geant4DetectorConstructionSequence::Geant4DetectorConstructionSequence ({\bf Geant4Context} $\ast$ {\em context}, \/  const std::string \& {\em nam})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_abd65d829a42c5d6e403349c9ffbb13d1}
+
+
+Standard Constructor. 
+
+Definition at line 59 of file Geant4DetectorConstruction.cpp.
+
+References DD4hep::InstanceCount::increment(), and DD4hep::Simulation::Geant4Action::m\_\-needsControl.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a417d49c67bf4903def46532f17dd7d20}{
+\index{DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}!$\sim$Geant4DetectorConstructionSequence@{$\sim$Geant4DetectorConstructionSequence}}
+\index{$\sim$Geant4DetectorConstructionSequence@{$\sim$Geant4DetectorConstructionSequence}!DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}}
+\subsubsection[{$\sim$Geant4DetectorConstructionSequence}]{\setlength{\rightskip}{0pt plus 5cm}Geant4DetectorConstructionSequence::$\sim$Geant4DetectorConstructionSequence ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a417d49c67bf4903def46532f17dd7d20}
+
+
+Default destructor. 
+
+Definition at line 67 of file Geant4DetectorConstruction.cpp.
+
+References DD4hep::InstanceCount::decrement(), m\_\-actors, and DD4hep::Simulation::Geant4Action::release().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a883d0336b5983474af9479c03e90a35b}{
+\index{DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}!adopt@{adopt}}
+\index{adopt@{adopt}!DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}}
+\subsubsection[{adopt}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4DetectorConstructionSequence::adopt ({\bf Geant4DetectorConstruction} $\ast$ {\em action})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a883d0336b5983474af9479c03e90a35b}
+
+
+Add an actor responding to all callbacks. Sequence takes ownership. 
+
+Definition at line 79 of file Geant4DetectorConstruction.cpp.
+
+References DD4hep::Simulation::Geant4Action::addRef(), and m\_\-actors.
+
+Referenced by Geant4Compatibility::buildDefaultDetectorConstruction().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a914734773cc27cac0e21c92af06427bc}{
+\index{DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}!assemblies@{assemblies}}
+\index{assemblies@{assemblies}!DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}}
+\subsubsection[{assemblies}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Geant4GeometryMaps::AssemblyMap} \& Geant4DetectorConstructionSequence::assemblies () const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a914734773cc27cac0e21c92af06427bc}
+
+
+Access to the converted assemblys. Access to the converted assemblies. 
+
+Definition at line 139 of file Geant4DetectorConstruction.cpp.
+
+References DD4hep::Simulation::Geant4GeometryInfo::g4AssemblyVolumes, DD4hep::Simulation::Geant4Mapping::instance(), and DD4hep::Simulation::Geant4Mapping::ptr().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a74d488648a50cae0230ca9dedf678160}{
+\index{DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}!constructField@{constructField}}
+\index{constructField@{constructField}!DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}}
+\subsubsection[{constructField}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4DetectorConstructionSequence::constructField ({\bf Geant4DetectorConstructionContext} $\ast$ {\em ctxt})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a74d488648a50cae0230ca9dedf678160}
+
+
+Electromagnetic field construction callback. Called at \char`\"{}ConstructSDandField()\char`\"{}. 
+
+Definition at line 94 of file Geant4DetectorConstruction.cpp.
+
+References DD4hep::Simulation::Geant4DetectorConstruction::constructField(), and m\_\-actors.
+
+Referenced by DD4hep::Simulation::Geant4UserDetectorConstruction::ConstructSDandField().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a7c2512ab15fa66370409585d60becc99}{
+\index{DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}!constructGeo@{constructGeo}}
+\index{constructGeo@{constructGeo}!DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}}
+\subsubsection[{constructGeo}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4DetectorConstructionSequence::constructGeo ({\bf Geant4DetectorConstructionContext} $\ast$ {\em ctxt})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a7c2512ab15fa66370409585d60becc99}
+
+
+\hyperlink{namespace_d_d4hep_1_1_geometry}{Geometry} construction callback. Called at \char`\"{}Construct()\char`\"{}. 
+
+Definition at line 89 of file Geant4DetectorConstruction.cpp.
+
+References DD4hep::Simulation::Geant4DetectorConstruction::constructGeo(), and m\_\-actors.
+
+Referenced by DD4hep::Simulation::Geant4UserDetectorConstruction::Construct().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_ab242c91f95283ed32133f48f2bc573fa}{
+\index{DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}!constructSensitives@{constructSensitives}}
+\index{constructSensitives@{constructSensitives}!DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}}
+\subsubsection[{constructSensitives}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4DetectorConstructionSequence::constructSensitives ({\bf Geant4DetectorConstructionContext} $\ast$ {\em ctxt})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_ab242c91f95283ed32133f48f2bc573fa}
+
+
+Sensitive detector construction callback. Called at \char`\"{}ConstructSDandField()\char`\"{}. 
+
+Definition at line 99 of file Geant4DetectorConstruction.cpp.
+
+References DD4hep::Simulation::Geant4DetectorConstruction::constructSensitives(), and m\_\-actors.
+
+Referenced by DD4hep::Simulation::Geant4UserDetectorConstruction::ConstructSDandField().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a1b65d4014a1354c2b56158173cd2a108}{
+\index{DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}!elements@{elements}}
+\index{elements@{elements}!DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}}
+\subsubsection[{elements}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Geant4GeometryMaps::ElementMap} \& Geant4DetectorConstructionSequence::elements () const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a1b65d4014a1354c2b56158173cd2a108}
+
+
+Access to the converted elements. 
+
+Definition at line 160 of file Geant4DetectorConstruction.cpp.
+
+References DD4hep::Simulation::Geant4GeometryInfo::g4Elements, DD4hep::Simulation::Geant4Mapping::instance(), and DD4hep::Simulation::Geant4Mapping::ptr().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a99b5ddba09b53b9fad6193b59c903e79}{
+\index{DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}!limits@{limits}}
+\index{limits@{limits}!DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}}
+\subsubsection[{limits}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Geant4GeometryMaps::LimitMap} \& Geant4DetectorConstructionSequence::limits () const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a99b5ddba09b53b9fad6193b59c903e79}
+
+
+Access to the converted limit sets. 
+
+Definition at line 132 of file Geant4DetectorConstruction.cpp.
+
+References DD4hep::Simulation::Geant4GeometryInfo::g4Limits, DD4hep::Simulation::Geant4Mapping::instance(), and DD4hep::Simulation::Geant4Mapping::ptr().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_abd810f881c6a11acd9ad048b8f908ce6}{
+\index{DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}!materials@{materials}}
+\index{materials@{materials}!DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}}
+\subsubsection[{materials}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Geant4GeometryMaps::MaterialMap} \& Geant4DetectorConstructionSequence::materials () const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_abd810f881c6a11acd9ad048b8f908ce6}
+
+
+Access to the converted materials. 
+
+Definition at line 153 of file Geant4DetectorConstruction.cpp.
+
+References DD4hep::Simulation::Geant4GeometryInfo::g4Materials, DD4hep::Simulation::Geant4Mapping::instance(), and DD4hep::Simulation::Geant4Mapping::ptr().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a58bd5c2c34f328ecb506084ba1a8f4a3}{
+\index{DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}!placements@{placements}}
+\index{placements@{placements}!DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}}
+\subsubsection[{placements}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Geant4GeometryMaps::PlacementMap} \& Geant4DetectorConstructionSequence::placements () const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a58bd5c2c34f328ecb506084ba1a8f4a3}
+
+
+Access to the converted placements. 
+
+Definition at line 146 of file Geant4DetectorConstruction.cpp.
+
+References DD4hep::Simulation::Geant4GeometryInfo::g4Placements, DD4hep::Simulation::Geant4Mapping::instance(), and DD4hep::Simulation::Geant4Mapping::ptr().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a88b08b2719f3da5bc1a8d4c398c74169}{
+\index{DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}!regions@{regions}}
+\index{regions@{regions}!DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}}
+\subsubsection[{regions}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Geant4GeometryMaps::RegionMap} \& Geant4DetectorConstructionSequence::regions () const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a88b08b2719f3da5bc1a8d4c398c74169}
+
+
+Access to the converted regions. 
+
+Definition at line 104 of file Geant4DetectorConstruction.cpp.
+
+References DD4hep::Simulation::Geant4GeometryInfo::g4Regions, DD4hep::Simulation::Geant4Mapping::instance(), and DD4hep::Simulation::Geant4Mapping::ptr().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a6fd2ab223f31016b42d3cf07d2901da9}{
+\index{DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}!shapes@{shapes}}
+\index{shapes@{shapes}!DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}}
+\subsubsection[{shapes}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Geant4GeometryMaps::SolidMap} \& Geant4DetectorConstructionSequence::shapes () const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a6fd2ab223f31016b42d3cf07d2901da9}
+
+
+Access to the converted shapes. 
+
+Definition at line 125 of file Geant4DetectorConstruction.cpp.
+
+References DD4hep::Simulation::Geant4GeometryInfo::g4Solids, DD4hep::Simulation::Geant4Mapping::instance(), and DD4hep::Simulation::Geant4Mapping::ptr().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a2ccfc854d0b38a4b1547422c2779e346}{
+\index{DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}!updateContext@{updateContext}}
+\index{updateContext@{updateContext}!DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}}
+\subsubsection[{updateContext}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4DetectorConstructionSequence::updateContext ({\bf Geant4Context} $\ast$ {\em ctxt})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a2ccfc854d0b38a4b1547422c2779e346}
+
+
+Set or update client context. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae3b9daf2af881df956c46568c0743313}{DD4hep::Simulation::Geant4Action}.
+
+Definition at line 73 of file Geant4DetectorConstruction.cpp.
+
+References m\_\-actors, DD4hep::Simulation::Geant4Action::m\_\-context, and DD4hep::Simulation::Geant4Action::updateContext().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a1e85bfd70c6a133dca29b6b77fb8e12d}{
+\index{DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}!volumes@{volumes}}
+\index{volumes@{volumes}!DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}}
+\subsubsection[{volumes}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Geant4GeometryMaps::VolumeMap} \& Geant4DetectorConstructionSequence::volumes () const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a1e85bfd70c6a133dca29b6b77fb8e12d}
+
+
+Access to the converted volumes. 
+
+Definition at line 118 of file Geant4DetectorConstruction.cpp.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_aa67150ae24c47c85655faf5bd89fad28}{
+\index{DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}!m\_\-actors@{m\_\-actors}}
+\index{m\_\-actors@{m\_\-actors}!DD4hep::Simulation::Geant4DetectorConstructionSequence@{DD4hep::Simulation::Geant4DetectorConstructionSequence}}
+\subsubsection[{m\_\-actors}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Actors}$<${\bf Geant4DetectorConstruction}$>$ {\bf DD4hep::Simulation::Geant4DetectorConstructionSequence::m\_\-actors}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_aa67150ae24c47c85655faf5bd89fad28}
+
+
+The list of action objects to be called. 
+
+Definition at line 136 of file Geant4DetectorConstruction.h.
+
+Referenced by adopt(), constructField(), constructGeo(), constructSensitives(), updateContext(), and $\sim$Geant4DetectorConstructionSequence().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_detector_construction_8h}{Geant4DetectorConstruction.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_detector_construction_8cpp}{Geant4DetectorConstruction.cpp}\end{DoxyCompactItemize}

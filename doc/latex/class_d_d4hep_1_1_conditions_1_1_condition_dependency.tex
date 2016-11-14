@@ -1,0 +1,272 @@
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_dependency}{
+\section{DD4hep::Conditions::ConditionDependency Class Reference}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_dependency}\index{DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}}
+}
+
+
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} dependency definition.  
+
+
+{\ttfamily \#include $<$ConditionDerived.h$>$}\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Geometry::DetElement} \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency_a0a9ea458cf85d1d76dec51d85830f738}{DetElement}
+\item 
+typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_key}{ConditionKey} $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency_af1594501f40e514c5748092b94e4fd84}{Dependencies}
+\begin{DoxyCompactList}\small\item\em Defintion of the depencency container. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition::key\_\-type} \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency_aeeb9606d1e1aae0a6eb4063ccfd1fca2}{key\_\-type}
+\begin{DoxyCompactList}\small\item\em Forward definition of the key type. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency_aaf35fcc834e5ee49cc9d13fe9cff7ab5}{ConditionDependency} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_key}{ConditionKey} \&tar, const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency_af1594501f40e514c5748092b94e4fd84}{Dependencies} deps, \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_update_call}{ConditionUpdateCall} $\ast$call)
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency_aa3f6e8cb34ed2a24a07d6648668bf594}{ConditionDependency} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_key}{ConditionKey} \&tar, \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_update_call}{ConditionUpdateCall} $\ast$call)
+\begin{DoxyCompactList}\small\item\em Initializing constructor used by builder. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency_a9468a2ef21f829e7acf1569392ba2711}{ConditionDependency} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency_aeeb9606d1e1aae0a6eb4063ccfd1fca2}{key\_\-type} \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency_a5eb216418c1f020fec66e221a38b9655}{key} () const 
+\begin{DoxyCompactList}\small\item\em Access the dependency key. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency}{ConditionDependency} $\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency_a84b132a3ba867a4588d34e75e8fc297a}{addRef} ()
+\begin{DoxyCompactList}\small\item\em Add use count to the object. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency_afdaaf31337b8f15156a1b8fad3895107}{release} ()
+\begin{DoxyCompactList}\small\item\em Release object. May not be used any longer. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency_a967bc771b0504b80f8ecfa879e03e498}{detector}
+\begin{DoxyCompactList}\small\item\em Reference to the target's detector element. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_key}{ConditionKey} \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency_a1a6c5ef0f44fa4c97fda1f750dd81dc2}{target}
+\begin{DoxyCompactList}\small\item\em Key to the condition to be updated. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency_af1594501f40e514c5748092b94e4fd84}{Dependencies} \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency_ac90a62165ff00d712a03d48716521c51}{dependencies}
+\begin{DoxyCompactList}\small\item\em Dependency keys this condition depends on. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_update_call}{ConditionUpdateCall} $\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency_aa90b6ad647f576574502b6c023b88372}{callback}
+\begin{DoxyCompactList}\small\item\em Reference to the update callback. No auto pointer. callback may be shared. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency_ac121f9859fa375681429907880f99bc0}{ConditionDependency} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency}{ConditionDependency} \&c)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency}{ConditionDependency} \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency_ac1f45d820f6c9dc85e453aa3c3a1cd27}{operator=} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency}{ConditionDependency} \&c)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency_ae92b62f4f395a37f0acbf30f797ccdcd}{$\sim$ConditionDependency} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency_a0962b46c90825f3ee632af2a25520639}{m\_\-refCount}
+\begin{DoxyCompactList}\small\item\em Reference count. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} dependency definition. Used by clients to update a condition.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 152 of file ConditionDerived.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_dependency_af1594501f40e514c5748092b94e4fd84}{
+\index{DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}!Dependencies@{Dependencies}}
+\index{Dependencies@{Dependencies}!DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}}
+\subsubsection[{Dependencies}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf ConditionKey}$>$ {\bf DD4hep::Conditions::ConditionDependency::Dependencies}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_dependency_af1594501f40e514c5748092b94e4fd84}
+
+
+Defintion of the depencency container. 
+
+Definition at line 160 of file ConditionDerived.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_dependency_a0a9ea458cf85d1d76dec51d85830f738}{
+\index{DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}!DetElement@{DetElement}}
+\index{DetElement@{DetElement}!DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}}
+\subsubsection[{DetElement}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::DetElement} {\bf DD4hep::Conditions::ConditionDependency::DetElement}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_dependency_a0a9ea458cf85d1d76dec51d85830f738}
+
+
+Definition at line 158 of file ConditionDerived.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_dependency_aeeb9606d1e1aae0a6eb4063ccfd1fca2}{
+\index{DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}!key\_\-type@{key\_\-type}}
+\index{key\_\-type@{key\_\-type}!DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}}
+\subsubsection[{key\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Condition::key\_\-type} {\bf DD4hep::Conditions::ConditionDependency::key\_\-type}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_dependency_aeeb9606d1e1aae0a6eb4063ccfd1fca2}
+
+
+Forward definition of the key type. 
+
+Definition at line 162 of file ConditionDerived.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_dependency_ac121f9859fa375681429907880f99bc0}{
+\index{DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}!ConditionDependency@{ConditionDependency}}
+\index{ConditionDependency@{ConditionDependency}!DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}}
+\subsubsection[{ConditionDependency}]{\setlength{\rightskip}{0pt plus 5cm}ConditionDependency::ConditionDependency (const {\bf ConditionDependency} \& {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_dependency_ac121f9859fa375681429907880f99bc0}
+
+
+Copy constructor. 
+
+Definition at line 60 of file ConditionDerived.cpp.
+
+References DD4hep::Conditions::ConditionUpdateCall::addRef(), callback, DD4hep::except(), DD4hep::InstanceCount::increment(), DD4hep::Conditions::ConditionKey::name, and target.\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_dependency_ae92b62f4f395a37f0acbf30f797ccdcd}{
+\index{DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}!$\sim$ConditionDependency@{$\sim$ConditionDependency}}
+\index{$\sim$ConditionDependency@{$\sim$ConditionDependency}!DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}}
+\subsubsection[{$\sim$ConditionDependency}]{\setlength{\rightskip}{0pt plus 5cm}ConditionDependency::$\sim$ConditionDependency ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_dependency_ae92b62f4f395a37f0acbf30f797ccdcd}
+
+
+Default destructor. 
+
+Definition at line 71 of file ConditionDerived.cpp.
+
+References callback, DD4hep::InstanceCount::decrement(), and DD4hep::releasePtr().\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_dependency_aaf35fcc834e5ee49cc9d13fe9cff7ab5}{
+\index{DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}!ConditionDependency@{ConditionDependency}}
+\index{ConditionDependency@{ConditionDependency}!DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}}
+\subsubsection[{ConditionDependency}]{\setlength{\rightskip}{0pt plus 5cm}ConditionDependency::ConditionDependency (const {\bf ConditionKey} \& {\em tar}, \/  const {\bf Dependencies} {\em deps}, \/  {\bf ConditionUpdateCall} $\ast$ {\em call})}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_dependency_aaf35fcc834e5ee49cc9d13fe9cff7ab5}
+
+
+Initializing constructor. Default constructor. 
+
+Definition at line 34 of file ConditionDerived.cpp.
+
+References DD4hep::Conditions::ConditionUpdateCall::addRef(), callback, and DD4hep::InstanceCount::increment().\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_dependency_aa3f6e8cb34ed2a24a07d6648668bf594}{
+\index{DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}!ConditionDependency@{ConditionDependency}}
+\index{ConditionDependency@{ConditionDependency}!DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}}
+\subsubsection[{ConditionDependency}]{\setlength{\rightskip}{0pt plus 5cm}ConditionDependency::ConditionDependency (const {\bf ConditionKey} \& {\em tar}, \/  {\bf ConditionUpdateCall} $\ast$ {\em call})}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_dependency_aa3f6e8cb34ed2a24a07d6648668bf594}
+
+
+Initializing constructor used by builder. Initializing constructor. 
+
+Definition at line 44 of file ConditionDerived.cpp.
+
+References DD4hep::Conditions::ConditionUpdateCall::addRef(), callback, and DD4hep::InstanceCount::increment().\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_dependency_a9468a2ef21f829e7acf1569392ba2711}{
+\index{DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}!ConditionDependency@{ConditionDependency}}
+\index{ConditionDependency@{ConditionDependency}!DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}}
+\subsubsection[{ConditionDependency}]{\setlength{\rightskip}{0pt plus 5cm}ConditionDependency::ConditionDependency ()}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_dependency_a9468a2ef21f829e7acf1569392ba2711}
+
+
+Default constructor. 
+
+Definition at line 53 of file ConditionDerived.cpp.
+
+References DD4hep::InstanceCount::increment().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_dependency_a84b132a3ba867a4588d34e75e8fc297a}{
+\index{DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}!addRef@{addRef}}
+\index{addRef@{addRef}!DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}}
+\subsubsection[{addRef}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ConditionDependency}$\ast$ DD4hep::Conditions::ConditionDependency::addRef ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_dependency_a84b132a3ba867a4588d34e75e8fc297a}
+
+
+Add use count to the object. 
+
+Definition at line 191 of file ConditionDerived.h.
+
+References m\_\-refCount.
+
+Referenced by DD4hep::Conditions::ConditionsDependencyCollection::insert().\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_dependency_a5eb216418c1f020fec66e221a38b9655}{
+\index{DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}!key@{key}}
+\index{key@{key}!DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf key\_\-type} DD4hep::Conditions::ConditionDependency::key () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_dependency_a5eb216418c1f020fec66e221a38b9655}
+
+
+Access the dependency key. 
+
+Definition at line 189 of file ConditionDerived.h.
+
+References DD4hep::Conditions::ConditionKey::hash, and target.
+
+Referenced by DD4hep::Conditions::ConditionsDependencyCollection::insert().\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_dependency_ac1f45d820f6c9dc85e453aa3c3a1cd27}{
+\index{DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}!operator=@{operator=}}
+\index{operator=@{operator=}!DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ConditionDependency} \& ConditionDependency::operator= (const {\bf ConditionDependency} \& {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_dependency_ac1f45d820f6c9dc85e453aa3c3a1cd27}
+
+
+Assignment operator. 
+
+Definition at line 77 of file ConditionDerived.cpp.
+
+References DD4hep::except(), DD4hep::Conditions::ConditionKey::name, and target.\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_dependency_afdaaf31337b8f15156a1b8fad3895107}{
+\index{DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}!release@{release}}
+\index{release@{release}!DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Conditions::ConditionDependency::release ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_dependency_afdaaf31337b8f15156a1b8fad3895107}
+
+
+Release object. May not be used any longer. 
+
+Definition at line 193 of file ConditionDerived.h.
+
+References m\_\-refCount.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_dependency_aa90b6ad647f576574502b6c023b88372}{
+\index{DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}!callback@{callback}}
+\index{callback@{callback}!DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}}
+\subsubsection[{callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ConditionUpdateCall}$\ast$ {\bf DD4hep::Conditions::ConditionDependency::callback}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_dependency_aa90b6ad647f576574502b6c023b88372}
+
+
+Reference to the update callback. No auto pointer. callback may be shared. 
+
+Definition at line 171 of file ConditionDerived.h.
+
+Referenced by ConditionDependency(), DD4hep::Conditions::ConditionsDependencyHandler::do\_\-callback(), and $\sim$ConditionDependency().\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_dependency_ac90a62165ff00d712a03d48716521c51}{
+\index{DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}!dependencies@{dependencies}}
+\index{dependencies@{dependencies}!DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}}
+\subsubsection[{dependencies}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dependencies} {\bf DD4hep::Conditions::ConditionDependency::dependencies}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_dependency_ac90a62165ff00d712a03d48716521c51}
+
+
+Dependency keys this condition depends on. 
+
+Definition at line 169 of file ConditionDerived.h.
+
+Referenced by DD4hep::Conditions::DependencyBuilder::add(), and DD4hep::Conditions::ConditionUpdateContext::key().\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_dependency_a967bc771b0504b80f8ecfa879e03e498}{
+\index{DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}!detector@{detector}}
+\index{detector@{detector}!DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}}
+\subsubsection[{detector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} {\bf DD4hep::Conditions::ConditionDependency::detector}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_dependency_a967bc771b0504b80f8ecfa879e03e498}
+
+
+Reference to the target's detector element. 
+
+Definition at line 165 of file ConditionDerived.h.
+
+Referenced by DD4hep::Alignments::AlignmentsManager::adoptDependency().\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_dependency_a0962b46c90825f3ee632af2a25520639}{
+\index{DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}!m\_\-refCount@{m\_\-refCount}}
+\index{m\_\-refCount@{m\_\-refCount}!DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}}
+\subsubsection[{m\_\-refCount}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::Conditions::ConditionDependency::m\_\-refCount}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_dependency_a0962b46c90825f3ee632af2a25520639}
+
+
+Reference count. 
+
+Definition at line 155 of file ConditionDerived.h.
+
+Referenced by addRef(), and release().\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_dependency_a1a6c5ef0f44fa4c97fda1f750dd81dc2}{
+\index{DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}!target@{target}}
+\index{target@{target}!DD4hep::Conditions::ConditionDependency@{DD4hep::Conditions::ConditionDependency}}
+\subsubsection[{target}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ConditionKey} {\bf DD4hep::Conditions::ConditionDependency::target}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_dependency_a1a6c5ef0f44fa4c97fda1f750dd81dc2}
+
+
+Key to the condition to be updated. 
+
+Definition at line 167 of file ConditionDerived.h.
+
+Referenced by ConditionDependency(), DD4hep::Conditions::ConditionsDependencyHandler::do\_\-callback(), key(), operator=(), and DD4hep::Alignments::AlignmentsManagerObject::to\_\-world().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_condition_derived_8h}{ConditionDerived.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_condition_derived_8cpp}{ConditionDerived.cpp}\end{DoxyCompactItemize}

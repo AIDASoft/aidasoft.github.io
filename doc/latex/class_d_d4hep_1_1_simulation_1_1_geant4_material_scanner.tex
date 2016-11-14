@@ -1,0 +1,184 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner}{
+\section{DD4hep::Simulation::Geant4MaterialScanner Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner}\index{DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}}
+}
+
+
+Class to perform directional material scans using Geantinos.  
+Inheritance diagram for DD4hep::Simulation::Geant4MaterialScanner::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_1_1_step_info}{StepInfo}
+\begin{DoxyCompactList}\small\item\em Structure to hold the information of one simulation step. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_ab91cbd7d8fe29498eacee9be0f95b6d1}{Geant4MaterialScanner} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$context, const std::string \&name)
+\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_af31f21a00b4c9cab1a73aeddb1a3773b}{$\sim$Geant4MaterialScanner} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_abd897a6b73a1855f674962d0e6126c17}{operator()} (const G4Step $\ast$step, G4SteppingManager $\ast$mgr)
+\begin{DoxyCompactList}\small\item\em User stepping callback. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_adb6b4a72be62b6b7c440db01d147d7e1}{begin} (const G4Track $\ast$track)
+\begin{DoxyCompactList}\small\item\em Begin-\/of-\/tracking callback. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_a08dd7d2ac6bece93af5709c1c2edc64c}{end} (const G4Track $\ast$track)
+\begin{DoxyCompactList}\small\item\em End-\/of-\/tracking callback. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_af8c21aaac99b7f654c98f83a3382c9f4}{beginEvent} (const G4Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Registered callback on Begin-\/event. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_1_1_step_info}{StepInfo} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_af5f8938342c8e56e7db11a372b8d4d9c}{Steps}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_aa34c1dce75b345ef9586ad6f0cc24382}{m\_\-sumX0}
+\item 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_a0632ba964c16dfa195aef83134e51430}{m\_\-sumLambda}
+\item 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_a2e04ec21c3f2d1800037e2dd427c8dc7}{m\_\-sumPath}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_af5f8938342c8e56e7db11a372b8d4d9c}{Steps} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_aa8e97ed5d8812c6b4b4ceb0dce5f37d8}{m\_\-steps}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to perform directional material scans using Geantinos. \begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 36 of file Geant4MaterialScanner.cpp.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_af5f8938342c8e56e7db11a372b8d4d9c}{
+\index{DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}!Steps@{Steps}}
+\index{Steps@{Steps}!DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}}
+\subsubsection[{Steps}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf StepInfo}$\ast$$>$ {\bf DD4hep::Simulation::Geant4MaterialScanner::Steps}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_af5f8938342c8e56e7db11a372b8d4d9c}
+
+
+Definition at line 55 of file Geant4MaterialScanner.cpp.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_ab91cbd7d8fe29498eacee9be0f95b6d1}{
+\index{DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}!Geant4MaterialScanner@{Geant4MaterialScanner}}
+\index{Geant4MaterialScanner@{Geant4MaterialScanner}!DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}}
+\subsubsection[{Geant4MaterialScanner}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4MaterialScanner::Geant4MaterialScanner ({\bf Geant4Context} $\ast$ {\em context}, \/  const std::string \& {\em name})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_ab91cbd7d8fe29498eacee9be0f95b6d1}
+
+
+Standard constructor. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_af31f21a00b4c9cab1a73aeddb1a3773b}{
+\index{DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}!$\sim$Geant4MaterialScanner@{$\sim$Geant4MaterialScanner}}
+\index{$\sim$Geant4MaterialScanner@{$\sim$Geant4MaterialScanner}!DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}}
+\subsubsection[{$\sim$Geant4MaterialScanner}]{\setlength{\rightskip}{0pt plus 5cm}Geant4MaterialScanner::$\sim$Geant4MaterialScanner ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_af31f21a00b4c9cab1a73aeddb1a3773b}
+
+
+Default destructor. 
+
+Definition at line 137 of file Geant4MaterialScanner.cpp.
+
+References DD4hep::InstanceCount::decrement().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_adb6b4a72be62b6b7c440db01d147d7e1}{
+\index{DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}!begin@{begin}}
+\index{begin@{begin}!DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4MaterialScanner::begin (const G4Track $\ast$ {\em track})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_adb6b4a72be62b6b7c440db01d147d7e1}
+
+
+Begin-\/of-\/tracking callback. 
+
+Definition at line 164 of file Geant4MaterialScanner.cpp.
+
+References m\_\-steps, m\_\-sumLambda, m\_\-sumPath, m\_\-sumX0, and DD4hep::Simulation::Geant4Action::printP2().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_af8c21aaac99b7f654c98f83a3382c9f4}{
+\index{DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}!beginEvent@{beginEvent}}
+\index{beginEvent@{beginEvent}!DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}}
+\subsubsection[{beginEvent}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4MaterialScanner::beginEvent (const G4Event $\ast$ {\em event})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_af8c21aaac99b7f654c98f83a3382c9f4}
+
+
+Registered callback on Begin-\/event. 
+
+Definition at line 155 of file Geant4MaterialScanner.cpp.
+
+References m\_\-steps, m\_\-sumLambda, m\_\-sumPath, and m\_\-sumX0.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_a08dd7d2ac6bece93af5709c1c2edc64c}{
+\index{DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}!end@{end}}
+\index{end@{end}!DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4MaterialScanner::end (const G4Track $\ast$ {\em track})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_a08dd7d2ac6bece93af5709c1c2edc64c}
+
+
+End-\/of-\/tracking callback. 
+
+Definition at line 174 of file Geant4MaterialScanner.cpp.
+
+References dd4hep::cm, dd4hep::cm3, dd4hep::gram, m\_\-steps, m\_\-sumLambda, m\_\-sumPath, and m\_\-sumX0.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_abd897a6b73a1855f674962d0e6126c17}{
+\index{DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}!operator()@{operator()}}
+\index{operator()@{operator()}!DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4MaterialScanner::operator() (const G4Step $\ast$ {\em step}, \/  G4SteppingManager $\ast$ {\em mgr})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_abd897a6b73a1855f674962d0e6126c17}
+
+
+User stepping callback. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_ab6b61f6eaed6d06ddb3a7ed319258317}{DD4hep::Simulation::Geant4SteppingAction}.
+
+Definition at line 142 of file Geant4MaterialScanner.cpp.
+
+References DD4hep::Simulation::Geant4StepHandler::logvol(), m\_\-steps, DD4hep::Simulation::Geant4TouchableHandler::path(), DD4hep::Simulation::Geant4StepHandler::postPos(), DD4hep::Simulation::Geant4StepHandler::pre, and DD4hep::Simulation::Geant4StepHandler::prePos().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_aa8e97ed5d8812c6b4b4ceb0dce5f37d8}{
+\index{DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}!m\_\-steps@{m\_\-steps}}
+\index{m\_\-steps@{m\_\-steps}!DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}}
+\subsubsection[{m\_\-steps}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Steps} {\bf DD4hep::Simulation::Geant4MaterialScanner::m\_\-steps}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_aa8e97ed5d8812c6b4b4ceb0dce5f37d8}
+
+
+Definition at line 60 of file Geant4MaterialScanner.cpp.
+
+Referenced by begin(), beginEvent(), end(), and operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_a0632ba964c16dfa195aef83134e51430}{
+\index{DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}!m\_\-sumLambda@{m\_\-sumLambda}}
+\index{m\_\-sumLambda@{m\_\-sumLambda}!DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}}
+\subsubsection[{m\_\-sumLambda}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::Simulation::Geant4MaterialScanner::m\_\-sumLambda}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_a0632ba964c16dfa195aef83134e51430}
+
+
+Definition at line 58 of file Geant4MaterialScanner.cpp.
+
+Referenced by begin(), beginEvent(), and end().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_a2e04ec21c3f2d1800037e2dd427c8dc7}{
+\index{DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}!m\_\-sumPath@{m\_\-sumPath}}
+\index{m\_\-sumPath@{m\_\-sumPath}!DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}}
+\subsubsection[{m\_\-sumPath}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::Simulation::Geant4MaterialScanner::m\_\-sumPath}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_a2e04ec21c3f2d1800037e2dd427c8dc7}
+
+
+Definition at line 59 of file Geant4MaterialScanner.cpp.
+
+Referenced by begin(), beginEvent(), and end().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_aa34c1dce75b345ef9586ad6f0cc24382}{
+\index{DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}!m\_\-sumX0@{m\_\-sumX0}}
+\index{m\_\-sumX0@{m\_\-sumX0}!DD4hep::Simulation::Geant4MaterialScanner@{DD4hep::Simulation::Geant4MaterialScanner}}
+\subsubsection[{m\_\-sumX0}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::Simulation::Geant4MaterialScanner::m\_\-sumX0}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_material_scanner_aa34c1dce75b345ef9586ad6f0cc24382}
+
+
+Definition at line 57 of file Geant4MaterialScanner.cpp.
+
+Referenced by begin(), beginEvent(), and end().
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/plugins/\hyperlink{_geant4_material_scanner_8cpp}{Geant4MaterialScanner.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,241 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data}{
+\section{DD4hep::Simulation::Geant4HitData Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data}\index{DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}}
+}
+
+
+Base class for geant4 hit structures used by the default DDG4 sensitive detector implementations.  
+
+
+{\ttfamily \#include $<$Geant4Data.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4HitData::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_1_1_monte_carlo_contrib}{MonteCarloContrib}
+\begin{DoxyCompactList}\small\item\em Utility class describing the monte carlo contribution of a given particle to a hit. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fc}{HitFlags} \{ \par
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fcaa17858fa257d170caa5b0699ec7ddfa5}{HIT\_\-KILLED\_\-TRACK} =  1$<$$<$0, 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fca977f4bc3d591a19ac784671d9cc39d52}{HIT\_\-SECONDARY\_\-TRACK} =  1$<$$<$1, 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fca3ef4c312d3f007a40c5fffb49841a2bf}{HIT\_\-NEW\_\-TRACK} =  1$<$$<$2, 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fca1088e191ba77f3d839371a364940b011}{HIT\_\-STARTED\_\-INSIDE} =  1$<$$<$10, 
+\par
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fca3eba160dfc155fb1883208e66583cc04}{HIT\_\-STARTED\_\-SURFACE} =  1$<$$<$11, 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fcab3d9ded6a94e70ceba2c95de8a0f9b5c}{HIT\_\-STARTED\_\-OUTSIDE} =  1$<$$<$12, 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fca4a055391a911e049b0056831ed5112c5}{HIT\_\-ENDED\_\-INSIDE} =  1$<$$<$13, 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fca387b78da12a127cacf8ca7248e1e2f53}{HIT\_\-ENDED\_\-SURFACE} =  1$<$$<$14, 
+\par
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fca41a83b74bf2428cc739f995928acf9d2}{HIT\_\-ENDED\_\-OUTSIDE} =  1$<$$<$15
+ \}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_1_1_monte_carlo_contrib}{MonteCarloContrib} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_aec2f53237eac2db7d83dd03bca8719c5}{Contribution}
+\item 
+typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_1_1_monte_carlo_contrib}{MonteCarloContrib} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_aee3759a12612c2f2712e44f87e343a2f}{Contributions}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a720c9f6193739b3ce4f23c321a4af1be}{Geant4HitData} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a57540b8795c4a198a0925773269d99f3}{$\sim$Geant4HitData} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_1_1_monte_carlo_contrib}{Contribution} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_aa05fcd729fd401c61e2fa7a48887efc5}{extractContribution} (const G4Step $\ast$step)
+\begin{DoxyCompactList}\small\item\em Extract the MC contribution for a given hit from the step information. \item\end{DoxyCompactList}\item 
+static \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_1_1_monte_carlo_contrib}{Contribution} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a53b06813612ad68f26dc3ad1ca2662b3}{extractContribution} (const G4Step $\ast$step, bool ApplyBirksLaw)
+\begin{DoxyCompactList}\small\item\em Extract the MC contribution for a given hit from the step information with BirksLaw option. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long long int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a3ad003b720e4d7a1c6e66e0eabb58540}{cellID}
+\begin{DoxyCompactList}\small\item\em cellID \item\end{DoxyCompactList}\item 
+long \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_aee4dddb74fa4230f4a450f5eb96416af}{flag}
+\begin{DoxyCompactList}\small\item\em User flag to classify hits. \item\end{DoxyCompactList}\item 
+long \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_adaf354d937bc941aac70b2327aa1d1f3}{g4ID}
+\begin{DoxyCompactList}\small\item\em Original Geant 4 track identifier of the creating track (debugging). \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1dd4hep__ptr}{dd4hep\_\-ptr}$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_data_extension}{DataExtension} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a56ce0428b9799cf18cab288a77c6e3c5}{extension}
+\begin{DoxyCompactList}\small\item\em User data extension if required. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for geant4 hit structures used by the default DDG4 sensitive detector implementations. 
+
+Definition at line 108 of file Geant4Data.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_aec2f53237eac2db7d83dd03bca8719c5}{
+\index{DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}!Contribution@{Contribution}}
+\index{Contribution@{Contribution}!DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}}
+\subsubsection[{Contribution}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf MonteCarloContrib} {\bf DD4hep::Simulation::Geant4HitData::Contribution}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_aec2f53237eac2db7d83dd03bca8719c5}
+
+
+Definition at line 198 of file Geant4Data.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_aee3759a12612c2f2712e44f87e343a2f}{
+\index{DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}!Contributions@{Contributions}}
+\index{Contributions@{Contributions}!DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}}
+\subsubsection[{Contributions}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf MonteCarloContrib}$>$ {\bf DD4hep::Simulation::Geant4HitData::Contributions}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_aee3759a12612c2f2712e44f87e343a2f}
+
+
+Definition at line 199 of file Geant4Data.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fc}{
+\index{DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}!HitFlags@{HitFlags}}
+\index{HitFlags@{HitFlags}!DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}}
+\subsubsection[{HitFlags}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DD4hep::Simulation::Geant4HitData::HitFlags}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fc}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{HIT\_\-KILLED\_\-TRACK@{HIT\_\-KILLED\_\-TRACK}!DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}}\index{DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}!HIT\_\-KILLED\_\-TRACK@{HIT\_\-KILLED\_\-TRACK}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fcaa17858fa257d170caa5b0699ec7ddfa5}{
+HIT\_\-KILLED\_\-TRACK}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fcaa17858fa257d170caa5b0699ec7ddfa5}
+}]\index{HIT\_\-SECONDARY\_\-TRACK@{HIT\_\-SECONDARY\_\-TRACK}!DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}}\index{DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}!HIT\_\-SECONDARY\_\-TRACK@{HIT\_\-SECONDARY\_\-TRACK}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fca977f4bc3d591a19ac784671d9cc39d52}{
+HIT\_\-SECONDARY\_\-TRACK}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fca977f4bc3d591a19ac784671d9cc39d52}
+}]\index{HIT\_\-NEW\_\-TRACK@{HIT\_\-NEW\_\-TRACK}!DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}}\index{DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}!HIT\_\-NEW\_\-TRACK@{HIT\_\-NEW\_\-TRACK}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fca3ef4c312d3f007a40c5fffb49841a2bf}{
+HIT\_\-NEW\_\-TRACK}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fca3ef4c312d3f007a40c5fffb49841a2bf}
+}]\index{HIT\_\-STARTED\_\-INSIDE@{HIT\_\-STARTED\_\-INSIDE}!DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}}\index{DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}!HIT\_\-STARTED\_\-INSIDE@{HIT\_\-STARTED\_\-INSIDE}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fca1088e191ba77f3d839371a364940b011}{
+HIT\_\-STARTED\_\-INSIDE}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fca1088e191ba77f3d839371a364940b011}
+}]\index{HIT\_\-STARTED\_\-SURFACE@{HIT\_\-STARTED\_\-SURFACE}!DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}}\index{DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}!HIT\_\-STARTED\_\-SURFACE@{HIT\_\-STARTED\_\-SURFACE}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fca3eba160dfc155fb1883208e66583cc04}{
+HIT\_\-STARTED\_\-SURFACE}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fca3eba160dfc155fb1883208e66583cc04}
+}]\index{HIT\_\-STARTED\_\-OUTSIDE@{HIT\_\-STARTED\_\-OUTSIDE}!DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}}\index{DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}!HIT\_\-STARTED\_\-OUTSIDE@{HIT\_\-STARTED\_\-OUTSIDE}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fcab3d9ded6a94e70ceba2c95de8a0f9b5c}{
+HIT\_\-STARTED\_\-OUTSIDE}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fcab3d9ded6a94e70ceba2c95de8a0f9b5c}
+}]\index{HIT\_\-ENDED\_\-INSIDE@{HIT\_\-ENDED\_\-INSIDE}!DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}}\index{DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}!HIT\_\-ENDED\_\-INSIDE@{HIT\_\-ENDED\_\-INSIDE}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fca4a055391a911e049b0056831ed5112c5}{
+HIT\_\-ENDED\_\-INSIDE}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fca4a055391a911e049b0056831ed5112c5}
+}]\index{HIT\_\-ENDED\_\-SURFACE@{HIT\_\-ENDED\_\-SURFACE}!DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}}\index{DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}!HIT\_\-ENDED\_\-SURFACE@{HIT\_\-ENDED\_\-SURFACE}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fca387b78da12a127cacf8ca7248e1e2f53}{
+HIT\_\-ENDED\_\-SURFACE}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fca387b78da12a127cacf8ca7248e1e2f53}
+}]\index{HIT\_\-ENDED\_\-OUTSIDE@{HIT\_\-ENDED\_\-OUTSIDE}!DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}}\index{DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}!HIT\_\-ENDED\_\-OUTSIDE@{HIT\_\-ENDED\_\-OUTSIDE}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fca41a83b74bf2428cc739f995928acf9d2}{
+HIT\_\-ENDED\_\-OUTSIDE}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a2ae584db022f0919214459dffcaf41fca41a83b74bf2428cc739f995928acf9d2}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 110 of file Geant4Data.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a720c9f6193739b3ce4f23c321a4af1be}{
+\index{DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}!Geant4HitData@{Geant4HitData}}
+\index{Geant4HitData@{Geant4HitData}!DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}}
+\subsubsection[{Geant4HitData}]{\setlength{\rightskip}{0pt plus 5cm}Geant4HitData::Geant4HitData ()}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a720c9f6193739b3ce4f23c321a4af1be}
+
+
+Default constructor. 
+
+Definition at line 57 of file Geant4Data.cpp.
+
+References DD4hep::InstanceCount::increment().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a57540b8795c4a198a0925773269d99f3}{
+\index{DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}!$\sim$Geant4HitData@{$\sim$Geant4HitData}}
+\index{$\sim$Geant4HitData@{$\sim$Geant4HitData}!DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}}
+\subsubsection[{$\sim$Geant4HitData}]{\setlength{\rightskip}{0pt plus 5cm}Geant4HitData::$\sim$Geant4HitData ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a57540b8795c4a198a0925773269d99f3}
+
+
+Default destructor. 
+
+Definition at line 63 of file Geant4Data.cpp.
+
+References DD4hep::InstanceCount::decrement().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a53b06813612ad68f26dc3ad1ca2662b3}{
+\index{DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}!extractContribution@{extractContribution}}
+\index{extractContribution@{extractContribution}!DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}}
+\subsubsection[{extractContribution}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4HitData::Contribution} Geant4HitData::extractContribution (const G4Step $\ast$ {\em step}, \/  bool {\em ApplyBirksLaw})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a53b06813612ad68f26dc3ad1ca2662b3}
+
+
+Extract the MC contribution for a given hit from the step information with BirksLaw option. Extract the MC contribution for a given hit from the step information with BirksLaw effect option. 
+
+Definition at line 79 of file Geant4Data.cpp.
+
+References DD4hep::Simulation::Geant4StepHandler::doApplyBirksLaw(), DD4hep::Simulation::Geant4StepHandler::postPosG4(), DD4hep::Simulation::Geant4StepHandler::prePosG4(), DD4hep::Simulation::Geant4StepHandler::totalEnergy(), DD4hep::Simulation::Geant4StepHandler::trackDef(), DD4hep::Simulation::Geant4StepHandler::trkEnergy(), DD4hep::Simulation::Geant4StepHandler::trkID(), DD4hep::Simulation::Geant4StepHandler::trkPdgID(), and DD4hep::Simulation::Geant4StepHandler::trkTime().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_aa05fcd729fd401c61e2fa7a48887efc5}{
+\index{DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}!extractContribution@{extractContribution}}
+\index{extractContribution@{extractContribution}!DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}}
+\subsubsection[{extractContribution}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4HitData::Contribution} Geant4HitData::extractContribution (const G4Step $\ast$ {\em step})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_aa05fcd729fd401c61e2fa7a48887efc5}
+
+
+Extract the MC contribution for a given hit from the step information. 
+
+Definition at line 68 of file Geant4Data.cpp.
+
+References DD4hep::Simulation::Geant4StepHandler::postPosG4(), DD4hep::Simulation::Geant4StepHandler::prePosG4(), DD4hep::Simulation::Geant4StepHandler::totalEnergy(), DD4hep::Simulation::Geant4StepHandler::trackDef(), DD4hep::Simulation::Geant4StepHandler::trkEnergy(), DD4hep::Simulation::Geant4StepHandler::trkID(), DD4hep::Simulation::Geant4StepHandler::trkPdgID(), and DD4hep::Simulation::Geant4StepHandler::trkTime().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a3ad003b720e4d7a1c6e66e0eabb58540}{
+\index{DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}!cellID@{cellID}}
+\index{cellID@{cellID}!DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}}
+\subsubsection[{cellID}]{\setlength{\rightskip}{0pt plus 5cm}long long int {\bf DD4hep::Simulation::Geant4HitData::cellID}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a3ad003b720e4d7a1c6e66e0eabb58540}
+
+
+cellID 
+
+Definition at line 122 of file Geant4Data.h.
+
+Referenced by DD4hep::Simulation::TrackerWeighted::extractHit(), DD4hep::Simulation::TrackerCombine::extractHit(), DD4hep::Simulation::Geant4DataDump::print(), and DD4hep::Simulation::Geant4EscapeCounter::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a56ce0428b9799cf18cab288a77c6e3c5}{
+\index{DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}!extension@{extension}}
+\index{extension@{extension}!DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}}
+\subsubsection[{extension}]{\setlength{\rightskip}{0pt plus 5cm}{\bf dd4hep\_\-ptr}$<${\bf DataExtension}$>$ {\bf DD4hep::Simulation::Geant4HitData::extension}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_a56ce0428b9799cf18cab288a77c6e3c5}
+
+
+User data extension if required. 
+
+Definition at line 129 of file Geant4Data.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_aee4dddb74fa4230f4a450f5eb96416af}{
+\index{DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}!flag@{flag}}
+\index{flag@{flag}!DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}}
+\subsubsection[{flag}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf DD4hep::Simulation::Geant4HitData::flag}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_aee4dddb74fa4230f4a450f5eb96416af}
+
+
+User flag to classify hits. 
+
+Definition at line 124 of file Geant4Data.h.
+
+Referenced by DD4hep::Simulation::TrackerWeighted::extractHit().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_adaf354d937bc941aac70b2327aa1d1f3}{
+\index{DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}!g4ID@{g4ID}}
+\index{g4ID@{g4ID}!DD4hep::Simulation::Geant4HitData@{DD4hep::Simulation::Geant4HitData}}
+\subsubsection[{g4ID}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf DD4hep::Simulation::Geant4HitData::g4ID}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_data_adaf354d937bc941aac70b2327aa1d1f3}
+
+
+Original Geant 4 track identifier of the creating track (debugging). 
+
+Definition at line 126 of file Geant4Data.h.
+
+Referenced by DD4hep::Simulation::TrackerWeighted::extractHit().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_data_8h}{Geant4Data.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_data_8cpp}{Geant4Data.cpp}\end{DoxyCompactItemize}

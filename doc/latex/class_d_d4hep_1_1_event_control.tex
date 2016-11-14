@@ -1,0 +1,381 @@
+\hypertarget{class_d_d4hep_1_1_event_control}{
+\section{DD4hep::EventControl Class Reference}
+\label{class_d_d4hep_1_1_event_control}\index{DD4hep::EventControl@{DD4hep::EventControl}}
+}
+
+
+{\ttfamily \#include $<$EventControl.h$>$}Inheritance diagram for DD4hep::EventControl::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{class_d_d4hep_1_1_event_control}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_event_control_a5abad625ba8ddb768f2dff26ec06c987}{EventControl} (\hyperlink{class_d_d4hep_1_1_display}{Display} $\ast$disp, unsigned int width, unsigned int height)
+\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_event_control_ad8fcc15169bd6829ac92497adf216b94}{$\sim$EventControl} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_event_control_ada9bb8f5e290f6acb6832208f407a53a}{OnBuild} ()
+\begin{DoxyCompactList}\small\item\em User callback to add elements to the control. \item\end{DoxyCompactList}\item 
+TGCompositeFrame $\ast$ \hyperlink{class_d_d4hep_1_1_event_control_a10479ca8f5f5836f6e3a9c1367eea1fb}{CreateFrame} ()
+\begin{DoxyCompactList}\small\item\em Create the frame for this control structure. Default: create horizontal frame. \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_event_control_ac317c6010a8ee404fb90da3081a05d8d}{Open} ()
+\begin{DoxyCompactList}\small\item\em Open a new event data file. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_event_control_ac176e09a639beea7cc010b5f66b7b129}{NextEvent} ()
+\begin{DoxyCompactList}\small\item\em Load the next event. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_event_control_aa313ad37f6a3a7b3d5a26abb37c051d3}{PreviousEvent} ()
+\begin{DoxyCompactList}\small\item\em Load the previous event. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_event_control_a4804b629feb785168b1ddb18592587bb}{GotoEvent} ()
+\begin{DoxyCompactList}\small\item\em Goto a specified event. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_event_control_af3644b3a91372e313440eaca8cf893c2}{OnNewEvent} (\hyperlink{class_d_d4hep_1_1_event_handler}{EventHandler} $\ast$handler)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_event_consumer}{EventConsumer} overload: New consumer event data. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_event_control_a651a44af5e16dd7c9f98e3ccec5971a2}{OnFileOpen} (\hyperlink{class_d_d4hep_1_1_event_handler}{EventHandler} $\ast$handler)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_event_consumer}{EventConsumer} overload: New event data file. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{class_d_d4hep_1_1_event_control_a9a7c581934b4dff35b3753b630b15f74a0e8834462de33571d882f9225d1ca704}{NUM\_\-DATA\_\-LINES} =  40
+ \}
+\item 
+typedef std::pair$<$ TGLabel $\ast$, TGLabel $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_event_control_a12b653cc77607d8916f8a5ec009036ed}{Labels}
+\item 
+typedef std::pair$<$ TGCompositeFrame $\ast$, \hyperlink{class_d_d4hep_1_1_event_control_a12b653cc77607d8916f8a5ec009036ed}{Labels} $>$ \hyperlink{class_d_d4hep_1_1_event_control_a8195e2f8755ede7627abeaaacd0155e2}{Line}
+\item 
+typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_event_control_a8195e2f8755ede7627abeaaacd0155e2}{Line} $>$ \hyperlink{class_d_d4hep_1_1_event_control_a662fec8b3e1e89af1cf704e41cb7df78}{Lines}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_display}{Display} $\ast$ \hyperlink{class_d_d4hep_1_1_event_control_ad9786c7cb28b2c715ba6343a2c62362a}{m\_\-display}
+\begin{DoxyCompactList}\small\item\em Refernece to the display object. \item\end{DoxyCompactList}\item 
+TGGroupFrame $\ast$ \hyperlink{class_d_d4hep_1_1_event_control_af0528badfa37dba89e2d73c83f246e08}{m\_\-dataGroup}
+\begin{DoxyCompactList}\small\item\em Data frame. \item\end{DoxyCompactList}\item 
+TGCompositeFrame $\ast$ \hyperlink{class_d_d4hep_1_1_event_control_aee2bb0377218bcfbad0fc757ffd926cb}{m\_\-dataFrame}
+\item 
+TGGroupFrame $\ast$ \hyperlink{class_d_d4hep_1_1_event_control_a26358da45905074e309f36f245558a92}{m\_\-eventGroup}
+\begin{DoxyCompactList}\small\item\em Data frame. \item\end{DoxyCompactList}\item 
+TGCompositeFrame $\ast$ \hyperlink{class_d_d4hep_1_1_event_control_a0c4a8e3502931ab1b993054ef87942c7}{m\_\-numEvtFrame}
+\item 
+TGLabel $\ast$ \hyperlink{class_d_d4hep_1_1_event_control_ac057e1afd1f6e5f3490a6e2b35dc6caa}{m\_\-input1}
+\item 
+TGLabel $\ast$ \hyperlink{class_d_d4hep_1_1_event_control_a1d9b69907b96154bc0cca2b7619b903b}{m\_\-input2}
+\item 
+TGLabel $\ast$ \hyperlink{class_d_d4hep_1_1_event_control_aa88e023fadd68daabea42dad9aa4cbe6}{m\_\-numEvtLabel}
+\item 
+TGPictureButton $\ast$ \hyperlink{class_d_d4hep_1_1_event_control_ae2a938df9e309454c1170c23c69a4214}{m\_\-open}
+\item 
+TGPictureButton $\ast$ \hyperlink{class_d_d4hep_1_1_event_control_a5dc965be42f51a9499cb4fecbd269ed5}{m\_\-prev}
+\item 
+TGPictureButton $\ast$ \hyperlink{class_d_d4hep_1_1_event_control_a238b8108eaa10db3e1b50872795cd9a6}{m\_\-next}
+\item 
+TGPictureButton $\ast$ \hyperlink{class_d_d4hep_1_1_event_control_ac6976dc6f6e1356fa5e6243338f41d05}{m\_\-goto}
+\item 
+\hyperlink{class_d_d4hep_1_1_event_control_a662fec8b3e1e89af1cf704e41cb7df78}{Lines} \hyperlink{class_d_d4hep_1_1_event_control_a773981f8dbddb1f17a2f7801a62206bd}{m\_\-lines}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_d_d4hep_1_1_event_control}{EventControl} \hyperlink{_event_control_8h}{EventControl.h} \hyperlink{_event_control_8h}{DDEve/EventControl.h}
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 37 of file EventControl.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_event_control_a12b653cc77607d8916f8a5ec009036ed}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!Labels@{Labels}}
+\index{Labels@{Labels}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{Labels}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::pair$<$TGLabel$\ast$,TGLabel$\ast$$>$ {\bf DD4hep::EventControl::Labels}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_a12b653cc77607d8916f8a5ec009036ed}
+
+
+Definition at line 50 of file EventControl.h.\hypertarget{class_d_d4hep_1_1_event_control_a8195e2f8755ede7627abeaaacd0155e2}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!Line@{Line}}
+\index{Line@{Line}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{Line}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::pair$<$TGCompositeFrame$\ast$,{\bf Labels}$>$ {\bf DD4hep::EventControl::Line}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_a8195e2f8755ede7627abeaaacd0155e2}
+
+
+Definition at line 51 of file EventControl.h.\hypertarget{class_d_d4hep_1_1_event_control_a662fec8b3e1e89af1cf704e41cb7df78}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!Lines@{Lines}}
+\index{Lines@{Lines}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{Lines}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf Line} $>$ {\bf DD4hep::EventControl::Lines}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_a662fec8b3e1e89af1cf704e41cb7df78}
+
+
+Definition at line 52 of file EventControl.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_d_d4hep_1_1_event_control_a9a7c581934b4dff35b3753b630b15f74}{
+\subsubsection[{"@18}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_a9a7c581934b4dff35b3753b630b15f74}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{NUM\_\-DATA\_\-LINES@{NUM\_\-DATA\_\-LINES}!DD4hep::EventControl@{DD4hep::EventControl}}\index{DD4hep::EventControl@{DD4hep::EventControl}!NUM\_\-DATA\_\-LINES@{NUM\_\-DATA\_\-LINES}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_event_control_a9a7c581934b4dff35b3753b630b15f74a0e8834462de33571d882f9225d1ca704}{
+NUM\_\-DATA\_\-LINES}
+\label{class_d_d4hep_1_1_event_control_a9a7c581934b4dff35b3753b630b15f74a0e8834462de33571d882f9225d1ca704}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 38 of file EventControl.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_event_control_a5abad625ba8ddb768f2dff26ec06c987}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!EventControl@{EventControl}}
+\index{EventControl@{EventControl}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{EventControl}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::EventControl::EventControl ({\bf Display} $\ast$ {\em disp}, \/  unsigned int {\em width}, \/  unsigned int {\em height})}}
+\label{class_d_d4hep_1_1_event_control_a5abad625ba8ddb768f2dff26ec06c987}
+
+
+Standard constructor. \hypertarget{class_d_d4hep_1_1_event_control_ad8fcc15169bd6829ac92497adf216b94}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!$\sim$EventControl@{$\sim$EventControl}}
+\index{$\sim$EventControl@{$\sim$EventControl}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{$\sim$EventControl}]{\setlength{\rightskip}{0pt plus 5cm}EventControl::$\sim$EventControl ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_ad8fcc15169bd6829ac92497adf216b94}
+
+
+Default destructor. 
+
+Definition at line 50 of file EventControl.cpp.
+
+References DD4hep::InstanceCount::decrement(), DD4hep::Display::eventHandler(), m\_\-display, and DD4hep::GenericEventHandler::Unsubscribe().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_event_control_a10479ca8f5f5836f6e3a9c1367eea1fb}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!CreateFrame@{CreateFrame}}
+\index{CreateFrame@{CreateFrame}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{CreateFrame}]{\setlength{\rightskip}{0pt plus 5cm}TGCompositeFrame $\ast$ EventControl::CreateFrame ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_a10479ca8f5f5836f6e3a9c1367eea1fb}
+
+
+Create the frame for this control structure. Default: create horizontal frame. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_frame_control_a3622593e0da13ddc3719d845782ec7be}{DD4hep::FrameControl}.
+
+Definition at line 56 of file EventControl.cpp.\hypertarget{class_d_d4hep_1_1_event_control_a4804b629feb785168b1ddb18592587bb}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!GotoEvent@{GotoEvent}}
+\index{GotoEvent@{GotoEvent}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{GotoEvent}]{\setlength{\rightskip}{0pt plus 5cm}void EventControl::GotoEvent ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_a4804b629feb785168b1ddb18592587bb}
+
+
+Goto a specified event. 
+
+Definition at line 71 of file EventControl.cpp.
+
+References DD4hep::Display::eventHandler(), DD4hep::GenericEventHandler::GotoEvent(), and m\_\-display.\hypertarget{class_d_d4hep_1_1_event_control_ac176e09a639beea7cc010b5f66b7b129}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!NextEvent@{NextEvent}}
+\index{NextEvent@{NextEvent}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{NextEvent}]{\setlength{\rightskip}{0pt plus 5cm}void EventControl::NextEvent ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_ac176e09a639beea7cc010b5f66b7b129}
+
+
+Load the next event. 
+
+Definition at line 61 of file EventControl.cpp.
+
+References DD4hep::Display::eventHandler(), m\_\-display, and DD4hep::GenericEventHandler::NextEvent().\hypertarget{class_d_d4hep_1_1_event_control_ada9bb8f5e290f6acb6832208f407a53a}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!OnBuild@{OnBuild}}
+\index{OnBuild@{OnBuild}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{OnBuild}]{\setlength{\rightskip}{0pt plus 5cm}void EventControl::OnBuild ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_ada9bb8f5e290f6acb6832208f407a53a}
+
+
+User callback to add elements to the control. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_frame_control_a934ef76420162167364133e43c7be8b5}{DD4hep::FrameControl}.
+
+Definition at line 156 of file EventControl.cpp.
+
+References DD4hep::GenericEventHandler::datasourceName(), DD4hep::Display::eventHandler(), DD4hep::EventHandler::hasFile(), DD4hep::FrameControl::LoadPicture(), m\_\-dataFrame, m\_\-dataGroup, m\_\-display, m\_\-eventGroup, DD4hep::FrameControl::m\_\-frame, m\_\-goto, m\_\-input1, m\_\-input2, m\_\-lines, m\_\-next, m\_\-numEvtFrame, m\_\-open, m\_\-prev, NUM\_\-DATA\_\-LINES, and DD4hep::GenericEventHandler::numEvents().\hypertarget{class_d_d4hep_1_1_event_control_a651a44af5e16dd7c9f98e3ccec5971a2}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!OnFileOpen@{OnFileOpen}}
+\index{OnFileOpen@{OnFileOpen}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{OnFileOpen}]{\setlength{\rightskip}{0pt plus 5cm}void EventControl::OnFileOpen ({\bf EventHandler} $\ast$ {\em handler})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_a651a44af5e16dd7c9f98e3ccec5971a2}
+
+
+\hyperlink{class_d_d4hep_1_1_event_consumer}{EventConsumer} overload: New event data file. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_event_consumer_a0a1c56dd7a70e28812fb68c9144ef2fa}{DD4hep::EventConsumer}.
+
+Definition at line 91 of file EventControl.cpp.
+
+References DD4hep::FrameControl::client(), DD4hep::EventHandler::datasourceName(), DD4hep::EventHandler::hasFile(), m\_\-eventGroup, m\_\-input1, m\_\-input2, and DD4hep::EventHandler::numEvents().\hypertarget{class_d_d4hep_1_1_event_control_af3644b3a91372e313440eaca8cf893c2}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!OnNewEvent@{OnNewEvent}}
+\index{OnNewEvent@{OnNewEvent}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{OnNewEvent}]{\setlength{\rightskip}{0pt plus 5cm}void EventControl::OnNewEvent ({\bf EventHandler} $\ast$ {\em handler})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_af3644b3a91372e313440eaca8cf893c2}
+
+
+\hyperlink{class_d_d4hep_1_1_event_consumer}{EventConsumer} overload: New consumer event data. Consumer event data. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_event_consumer_a755b12d11f8676c4f2957f6a1f26fb31}{DD4hep::EventConsumer}.
+
+Definition at line 111 of file EventControl.cpp.
+
+References DD4hep::FrameControl::client(), DD4hep::EventHandler::data(), m\_\-dataGroup, and m\_\-lines.\hypertarget{class_d_d4hep_1_1_event_control_ac317c6010a8ee404fb90da3081a05d8d}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!Open@{Open}}
+\index{Open@{Open}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{Open}]{\setlength{\rightskip}{0pt plus 5cm}bool EventControl::Open ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_ac317c6010a8ee404fb90da3081a05d8d}
+
+
+Open a new event data file. 
+
+Definition at line 77 of file EventControl.cpp.
+
+References DD4hep::Display::eventHandler(), DD4hep::Display::getEventHandlerName(), m\_\-display, DD4hep::GenericEventHandler::Open(), and DD4hep::Display::OpenEventFileDialog().
+
+Referenced by DD4hep::DD4hepMenu::OnOpenEventData().\hypertarget{class_d_d4hep_1_1_event_control_aa313ad37f6a3a7b3d5a26abb37c051d3}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!PreviousEvent@{PreviousEvent}}
+\index{PreviousEvent@{PreviousEvent}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{PreviousEvent}]{\setlength{\rightskip}{0pt plus 5cm}void EventControl::PreviousEvent ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_aa313ad37f6a3a7b3d5a26abb37c051d3}
+
+
+Load the previous event. 
+
+Definition at line 66 of file EventControl.cpp.
+
+References DD4hep::Display::eventHandler(), m\_\-display, and DD4hep::GenericEventHandler::PreviousEvent().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_event_control_aee2bb0377218bcfbad0fc757ffd926cb}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!m\_\-dataFrame@{m\_\-dataFrame}}
+\index{m\_\-dataFrame@{m\_\-dataFrame}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{m\_\-dataFrame}]{\setlength{\rightskip}{0pt plus 5cm}TGCompositeFrame$\ast$ {\bf DD4hep::EventControl::m\_\-dataFrame}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_aee2bb0377218bcfbad0fc757ffd926cb}
+
+
+Definition at line 43 of file EventControl.h.
+
+Referenced by OnBuild().\hypertarget{class_d_d4hep_1_1_event_control_af0528badfa37dba89e2d73c83f246e08}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!m\_\-dataGroup@{m\_\-dataGroup}}
+\index{m\_\-dataGroup@{m\_\-dataGroup}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{m\_\-dataGroup}]{\setlength{\rightskip}{0pt plus 5cm}TGGroupFrame$\ast$ {\bf DD4hep::EventControl::m\_\-dataGroup}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_af0528badfa37dba89e2d73c83f246e08}
+
+
+Data frame. 
+
+Definition at line 42 of file EventControl.h.
+
+Referenced by OnBuild(), and OnNewEvent().\hypertarget{class_d_d4hep_1_1_event_control_ad9786c7cb28b2c715ba6343a2c62362a}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!m\_\-display@{m\_\-display}}
+\index{m\_\-display@{m\_\-display}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{m\_\-display}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Display}$\ast$ {\bf DD4hep::EventControl::m\_\-display}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_ad9786c7cb28b2c715ba6343a2c62362a}
+
+
+Refernece to the display object. 
+
+Definition at line 40 of file EventControl.h.
+
+Referenced by GotoEvent(), NextEvent(), OnBuild(), Open(), PreviousEvent(), and $\sim$EventControl().\hypertarget{class_d_d4hep_1_1_event_control_a26358da45905074e309f36f245558a92}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!m\_\-eventGroup@{m\_\-eventGroup}}
+\index{m\_\-eventGroup@{m\_\-eventGroup}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{m\_\-eventGroup}]{\setlength{\rightskip}{0pt plus 5cm}TGGroupFrame$\ast$ {\bf DD4hep::EventControl::m\_\-eventGroup}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_a26358da45905074e309f36f245558a92}
+
+
+Data frame. 
+
+Definition at line 45 of file EventControl.h.
+
+Referenced by OnBuild(), and OnFileOpen().\hypertarget{class_d_d4hep_1_1_event_control_ac6976dc6f6e1356fa5e6243338f41d05}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!m\_\-goto@{m\_\-goto}}
+\index{m\_\-goto@{m\_\-goto}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{m\_\-goto}]{\setlength{\rightskip}{0pt plus 5cm}TGPictureButton $\ast$ {\bf DD4hep::EventControl::m\_\-goto}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_ac6976dc6f6e1356fa5e6243338f41d05}
+
+
+Definition at line 49 of file EventControl.h.
+
+Referenced by OnBuild().\hypertarget{class_d_d4hep_1_1_event_control_ac057e1afd1f6e5f3490a6e2b35dc6caa}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!m\_\-input1@{m\_\-input1}}
+\index{m\_\-input1@{m\_\-input1}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{m\_\-input1}]{\setlength{\rightskip}{0pt plus 5cm}TGLabel$\ast$ {\bf DD4hep::EventControl::m\_\-input1}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_ac057e1afd1f6e5f3490a6e2b35dc6caa}
+
+
+Definition at line 47 of file EventControl.h.
+
+Referenced by OnBuild(), and OnFileOpen().\hypertarget{class_d_d4hep_1_1_event_control_a1d9b69907b96154bc0cca2b7619b903b}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!m\_\-input2@{m\_\-input2}}
+\index{m\_\-input2@{m\_\-input2}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{m\_\-input2}]{\setlength{\rightskip}{0pt plus 5cm}TGLabel $\ast$ {\bf DD4hep::EventControl::m\_\-input2}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_a1d9b69907b96154bc0cca2b7619b903b}
+
+
+Definition at line 47 of file EventControl.h.
+
+Referenced by OnBuild(), and OnFileOpen().\hypertarget{class_d_d4hep_1_1_event_control_a773981f8dbddb1f17a2f7801a62206bd}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!m\_\-lines@{m\_\-lines}}
+\index{m\_\-lines@{m\_\-lines}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{m\_\-lines}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Lines} {\bf DD4hep::EventControl::m\_\-lines}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_a773981f8dbddb1f17a2f7801a62206bd}
+
+
+Definition at line 53 of file EventControl.h.
+
+Referenced by OnBuild(), and OnNewEvent().\hypertarget{class_d_d4hep_1_1_event_control_a238b8108eaa10db3e1b50872795cd9a6}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!m\_\-next@{m\_\-next}}
+\index{m\_\-next@{m\_\-next}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{m\_\-next}]{\setlength{\rightskip}{0pt plus 5cm}TGPictureButton $\ast$ {\bf DD4hep::EventControl::m\_\-next}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_a238b8108eaa10db3e1b50872795cd9a6}
+
+
+Definition at line 49 of file EventControl.h.
+
+Referenced by OnBuild().\hypertarget{class_d_d4hep_1_1_event_control_a0c4a8e3502931ab1b993054ef87942c7}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!m\_\-numEvtFrame@{m\_\-numEvtFrame}}
+\index{m\_\-numEvtFrame@{m\_\-numEvtFrame}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{m\_\-numEvtFrame}]{\setlength{\rightskip}{0pt plus 5cm}TGCompositeFrame$\ast$ {\bf DD4hep::EventControl::m\_\-numEvtFrame}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_a0c4a8e3502931ab1b993054ef87942c7}
+
+
+Definition at line 46 of file EventControl.h.
+
+Referenced by OnBuild().\hypertarget{class_d_d4hep_1_1_event_control_aa88e023fadd68daabea42dad9aa4cbe6}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!m\_\-numEvtLabel@{m\_\-numEvtLabel}}
+\index{m\_\-numEvtLabel@{m\_\-numEvtLabel}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{m\_\-numEvtLabel}]{\setlength{\rightskip}{0pt plus 5cm}TGLabel$\ast$ {\bf DD4hep::EventControl::m\_\-numEvtLabel}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_aa88e023fadd68daabea42dad9aa4cbe6}
+
+
+Definition at line 48 of file EventControl.h.\hypertarget{class_d_d4hep_1_1_event_control_ae2a938df9e309454c1170c23c69a4214}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!m\_\-open@{m\_\-open}}
+\index{m\_\-open@{m\_\-open}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{m\_\-open}]{\setlength{\rightskip}{0pt plus 5cm}TGPictureButton$\ast$ {\bf DD4hep::EventControl::m\_\-open}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_ae2a938df9e309454c1170c23c69a4214}
+
+
+Definition at line 49 of file EventControl.h.
+
+Referenced by OnBuild().\hypertarget{class_d_d4hep_1_1_event_control_a5dc965be42f51a9499cb4fecbd269ed5}{
+\index{DD4hep::EventControl@{DD4hep::EventControl}!m\_\-prev@{m\_\-prev}}
+\index{m\_\-prev@{m\_\-prev}!DD4hep::EventControl@{DD4hep::EventControl}}
+\subsubsection[{m\_\-prev}]{\setlength{\rightskip}{0pt plus 5cm}TGPictureButton $\ast$ {\bf DD4hep::EventControl::m\_\-prev}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_event_control_a5dc965be42f51a9499cb4fecbd269ed5}
+
+
+Definition at line 49 of file EventControl.h.
+
+Referenced by OnBuild().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDEve/include/DDEve/\hyperlink{_event_control_8h}{EventControl.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDEve/src/\hyperlink{_event_control_8cpp}{EventControl.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,423 @@
+\hypertarget{class_d_d4hep_1_1_handle}{
+\section{DD4hep::Handle$<$ T $>$ Class Template Reference}
+\label{class_d_d4hep_1_1_handle}\index{DD4hep::Handle@{DD4hep::Handle}}
+}
+
+
+\hyperlink{class_d_d4hep_1_1_handle}{Handle}: a templated class like a shared pointer, which allows specialized access to tgeometry objects.  
+
+
+{\ttfamily \#include $<$Handle.h$>$}Inheritance diagram for DD4hep::Handle$<$ T $>$::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12cm]{class_d_d4hep_1_1_handle}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_t}{T} \hyperlink{class_d_d4hep_1_1_handle_ad7ff728a25806079516b8965b9113f1a}{Implementation}
+\begin{DoxyCompactList}\small\item\em Extern accessible definition of the contained element type. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_t}{Implementation} $>$ \hyperlink{class_d_d4hep_1_1_handle_a3d9df9d5b334e984b288ffbabcacb564}{handle\_\-t}
+\begin{DoxyCompactList}\small\item\em Declaration of 'self'. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_handle_a97b64b3f6c35305e77fe00bc2f73aeb7}{Handle} ()
+\begin{DoxyCompactList}\small\item\em Defaulot constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_handle_aae5fd1b909826186406e57e41679ab8d}{Handle} (\hyperlink{class_t}{T} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Initializing constructor from pointer. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_handle_ae0d7f77a5c4bb5dd1662c694f59eee6e}{Handle} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_t}{T} $>$ \&e)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_handle_a3e6a892a565350ab440205c4ec2e06f8}{Handle} (Q $\ast$e)
+\begin{DoxyCompactList}\small\item\em Initializing constructor from unrelated pointer with type checking. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_handle_a992ea44be93dc5e115007c052b0044f8}{Handle} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&e)
+\begin{DoxyCompactList}\small\item\em Initializing constructor from unrelated handle with type checking. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_t}{T} $>$ \& \hyperlink{class_d_d4hep_1_1_handle_a9bbf8f498df42e81ad26fb00233505a6}{operator=} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_t}{T} $>$ \&e)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_handle_a618470283b3a2cc5ed0545fec90dc759}{operator==} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_t}{T} $>$ \&e) const 
+\begin{DoxyCompactList}\small\item\em Boolean operator == used for RB tree insertions. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_handle_a287ad7d458faab8f84dbfa6fd48e1d30}{operator$<$} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_t}{T} $>$ \&e) const 
+\begin{DoxyCompactList}\small\item\em Boolean operator $<$ used for RB tree insertions. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_handle_a31b4a56e1f449b035e07a38ffd9b7d5a}{operator$>$} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_t}{T} $>$ \&e) const 
+\begin{DoxyCompactList}\small\item\em Boolean operator $>$ used for RB tree insertions. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_handle_a4c5293aecb11989a708ec7615d0f0842}{isValid} () const 
+\begin{DoxyCompactList}\small\item\em Check the validity of the object held by the handle. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_handle_a20ce72f3771ce4e1a3b58d652efda06d}{operator!} () const 
+\begin{DoxyCompactList}\small\item\em Check the validity of the object held by the handle. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_t}{T} $>$ \& \hyperlink{class_d_d4hep_1_1_handle_ad50d0ea67a1c9a4e87d232f96ebe52f1}{clear} ()
+\begin{DoxyCompactList}\small\item\em Release the object held by the handle. \item\end{DoxyCompactList}\item 
+\hyperlink{class_t}{T} $\ast$ \hyperlink{class_d_d4hep_1_1_handle_afb3984a2a89e50232d519c535818d74b}{operator-\/$>$} () const 
+\begin{DoxyCompactList}\small\item\em Access the held object using the -\/$>$ operator. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_handle_a065ea7927cff8151c3fb800dbef5658c}{operator T \&} () const 
+\begin{DoxyCompactList}\small\item\em Automatic type conversion to an object references. \item\end{DoxyCompactList}\item 
+\hyperlink{class_t}{T} \& \hyperlink{class_d_d4hep_1_1_handle_a9524715e3d0523206bc51be8c13deb32}{operator$\ast$} () const 
+\begin{DoxyCompactList}\small\item\em Access the held object using the $\ast$ operator. \item\end{DoxyCompactList}\item 
+\hyperlink{class_t}{T} $\ast$ \hyperlink{class_d_d4hep_1_1_handle_a51a7d12a15a2a18977a0036bc6435cc8}{ptr} () const 
+\begin{DoxyCompactList}\small\item\em Access to the held object. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\Q $\ast$ \hyperlink{class_d_d4hep_1_1_handle_a72866c3c06a9e008cc390b7a1ef859e7}{\_\-ptr} () const 
+\begin{DoxyCompactList}\small\item\em Access to an unrelated object type. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\Q $\ast$ \hyperlink{class_d_d4hep_1_1_handle_a821fe41f46aa5ce97cfb04a6a60e5cd5}{data} () const 
+\begin{DoxyCompactList}\small\item\em Access to an unrelated object type. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\Q \& \hyperlink{class_d_d4hep_1_1_handle_a4e03007979a62db6fa11af123f2b318c}{object} () const 
+\begin{DoxyCompactList}\small\item\em Access to an unrelated object type. \item\end{DoxyCompactList}\item 
+\hyperlink{class_t}{T} $\ast$ \hyperlink{class_d_d4hep_1_1_handle_a1a5500d3bf236420d8ba63979aff8599}{access} () const 
+\begin{DoxyCompactList}\small\item\em Checked object access. Throws invalid handle runtime exception. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_handle_a664da2f5ac76434379046989853da656}{verifyObject} () const 
+\begin{DoxyCompactList}\small\item\em Verify the object type after a (re-\/)assignment. \item\end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_d_d4hep_1_1_handle_a9c62b8d37e0f2354bae0093498dc15a1}{name} () const 
+\begin{DoxyCompactList}\small\item\em Access the object name (or \char`\"{}\char`\"{} if not supported by the object). \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_handle_a9f5b5d3feb89adf95fdfc4148c711209}{assign} (\hyperlink{class_t}{Implementation} $\ast$n, const std::string \&nam, const std::string \&title)
+\begin{DoxyCompactList}\small\item\em Assign a new named object. Note: object references must be managed by the user. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{class_d_d4hep_1_1_handle_a021b31343bc6d67c3c1743f2e1fbc2b7}{assign} (\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation}{\_\-Segmentation} $\ast$\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s}, const std::string \&n, const std::string \&)
+\item 
+{\footnotesize template$<$$>$ }\\const char $\ast$ \hyperlink{class_d_d4hep_1_1_handle_ae67b99a35c987f292e426386d6a28552}{name} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_d_d4hep_1_1_handle_a7d6ad39bc68063a34d8d42ce1d9aef75}{bad\_\-assignment} (const std::type\_\-info \&from, const std::type\_\-info \&to)
+\begin{DoxyCompactList}\small\item\em Helper routine called when unrelated types are assigned. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_t}{T} $\ast$ \hyperlink{class_d_d4hep_1_1_handle_a207411705e86b0f4053357c7a8b5532e}{m\_\-element}
+\begin{DoxyCompactList}\small\item\em Single and only data member: Reference to the actual element. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$ class DD4hep::Handle$<$ T $>$}
+
+\hyperlink{class_d_d4hep_1_1_handle}{Handle}: a templated class like a shared pointer, which allows specialized access to tgeometry objects. The \hyperlink{class_d_d4hep_1_1_handle}{Handle} is the base class to access all objects in \hyperlink{namespace_d_d4hep}{DD4hep}. Objects, which consist ONLY of data are NEVER passed directly. They are ALWAYS passed using handles. Such handles are 'handy' ;-\/). Assignment is to and from different handles is possible using concrete type checking.
+
+Real benefits can result from sophisticated handle subclasses, which can implement any desired user functionality with out compromising the object's data content. This leads to very flexible implementations, where the same data may be shared by many handle implementations providing different functionality to the clients.
+
+In this sense, is the consequent use of handles to access data nothing else then the consequent application of component oriented programming using local objects from the heap.
+
+Note: If you cannot live with this approach, it is better you get hands of this software package, because you will try to consequently fight the framework, which will frustrate you (and also me).
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 87 of file Handle.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_handle_a3d9df9d5b334e984b288ffbabcacb564}{
+\index{DD4hep::Handle@{DD4hep::Handle}!handle\_\-t@{handle\_\-t}}
+\index{handle\_\-t@{handle\_\-t}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{handle\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ typedef {\bf Handle}$<${\bf Implementation}$>$ {\bf DD4hep::Handle}$<$ {\bf T} $>$::{\bf handle\_\-t}}}
+\label{class_d_d4hep_1_1_handle_a3d9df9d5b334e984b288ffbabcacb564}
+
+
+Declaration of 'self'. 
+
+Definition at line 93 of file Handle.h.\hypertarget{class_d_d4hep_1_1_handle_ad7ff728a25806079516b8965b9113f1a}{
+\index{DD4hep::Handle@{DD4hep::Handle}!Implementation@{Implementation}}
+\index{Implementation@{Implementation}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{Implementation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ typedef {\bf T} {\bf DD4hep::Handle}$<$ {\bf T} $>$::{\bf Implementation}}}
+\label{class_d_d4hep_1_1_handle_ad7ff728a25806079516b8965b9113f1a}
+
+
+Extern accessible definition of the contained element type. Type definitions and class specific abbreviations and forward declarations 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a660e91d2703f947ad759fe0cbef3bbc6}{DD4hep::Geometry::Solid\_\-type$<$ T $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a660e91d2703f947ad759fe0cbef3bbc6}{DD4hep::Geometry::Solid\_\-type$<$ TGeoArb8 $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a660e91d2703f947ad759fe0cbef3bbc6}{DD4hep::Geometry::Solid\_\-type$<$ TGeoSphere $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a660e91d2703f947ad759fe0cbef3bbc6}{DD4hep::Geometry::Solid\_\-type$<$ TGeoHalfSpace $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a660e91d2703f947ad759fe0cbef3bbc6}{DD4hep::Geometry::Solid\_\-type$<$ TGeoTorus $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a660e91d2703f947ad759fe0cbef3bbc6}{DD4hep::Geometry::Solid\_\-type$<$ TGeoParaboloid $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a660e91d2703f947ad759fe0cbef3bbc6}{DD4hep::Geometry::Solid\_\-type$<$ TGeoShape $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a660e91d2703f947ad759fe0cbef3bbc6}{DD4hep::Geometry::Solid\_\-type$<$ TGeoEltu $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a660e91d2703f947ad759fe0cbef3bbc6}{DD4hep::Geometry::Solid\_\-type$<$ TGeoPgon $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a660e91d2703f947ad759fe0cbef3bbc6}{DD4hep::Geometry::Solid\_\-type$<$ TGeoCone $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a660e91d2703f947ad759fe0cbef3bbc6}{DD4hep::Geometry::Solid\_\-type$<$ TGeoTrd2 $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a660e91d2703f947ad759fe0cbef3bbc6}{DD4hep::Geometry::Solid\_\-type$<$ TGeoPcon $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a660e91d2703f947ad759fe0cbef3bbc6}{DD4hep::Geometry::Solid\_\-type$<$ TGeoCompositeShape $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a660e91d2703f947ad759fe0cbef3bbc6}{DD4hep::Geometry::Solid\_\-type$<$ TGeoConeSeg $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a660e91d2703f947ad759fe0cbef3bbc6}{DD4hep::Geometry::Solid\_\-type$<$ TGeoTrap $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a660e91d2703f947ad759fe0cbef3bbc6}{DD4hep::Geometry::Solid\_\-type$<$ TGeoHype $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a660e91d2703f947ad759fe0cbef3bbc6}{DD4hep::Geometry::Solid\_\-type$<$ MyConeSeg $>$}, and \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a660e91d2703f947ad759fe0cbef3bbc6}{DD4hep::Geometry::Solid\_\-type$<$ TGeoBBox $>$}.
+
+Definition at line 91 of file Handle.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_handle_a97b64b3f6c35305e77fe00bc2f73aeb7}{
+\index{DD4hep::Handle@{DD4hep::Handle}!Handle@{Handle}}
+\index{Handle@{Handle}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{Handle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf DD4hep::Handle}$<$ {\bf T} $>$::{\bf Handle} ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_a97b64b3f6c35305e77fe00bc2f73aeb7}
+
+
+Defaulot constructor. 
+
+Definition at line 98 of file Handle.h.\hypertarget{class_d_d4hep_1_1_handle_aae5fd1b909826186406e57e41679ab8d}{
+\index{DD4hep::Handle@{DD4hep::Handle}!Handle@{Handle}}
+\index{Handle@{Handle}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{Handle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf DD4hep::Handle}$<$ {\bf T} $>$::{\bf Handle} ({\bf T} $\ast$ {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_aae5fd1b909826186406e57e41679ab8d}
+
+
+Initializing constructor from pointer. 
+
+Definition at line 100 of file Handle.h.\hypertarget{class_d_d4hep_1_1_handle_ae0d7f77a5c4bb5dd1662c694f59eee6e}{
+\index{DD4hep::Handle@{DD4hep::Handle}!Handle@{Handle}}
+\index{Handle@{Handle}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{Handle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf DD4hep::Handle}$<$ {\bf T} $>$::{\bf Handle} (const {\bf Handle}$<$ {\bf T} $>$ \& {\em e})}}
+\label{class_d_d4hep_1_1_handle_ae0d7f77a5c4bb5dd1662c694f59eee6e}
+
+
+Copy constructor. \hypertarget{class_d_d4hep_1_1_handle_a3e6a892a565350ab440205c4ec2e06f8}{
+\index{DD4hep::Handle@{DD4hep::Handle}!Handle@{Handle}}
+\index{Handle@{Handle}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{Handle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename Q $>$ {\bf DD4hep::Handle}$<$ {\bf T} $>$::{\bf Handle} (Q $\ast$ {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_a3e6a892a565350ab440205c4ec2e06f8}
+
+
+Initializing constructor from unrelated pointer with type checking. 
+
+Definition at line 104 of file Handle.h.\hypertarget{class_d_d4hep_1_1_handle_a992ea44be93dc5e115007c052b0044f8}{
+\index{DD4hep::Handle@{DD4hep::Handle}!Handle@{Handle}}
+\index{Handle@{Handle}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{Handle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename Q $>$ {\bf DD4hep::Handle}$<$ {\bf T} $>$::{\bf Handle} (const {\bf Handle}$<$ Q $>$ \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_a992ea44be93dc5e115007c052b0044f8}
+
+
+Initializing constructor from unrelated handle with type checking. 
+
+Definition at line 107 of file Handle.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_handle_a72866c3c06a9e008cc390b7a1ef859e7}{
+\index{DD4hep::Handle@{DD4hep::Handle}!\_\-ptr@{\_\-ptr}}
+\index{\_\-ptr@{\_\-ptr}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename Q $>$ Q$\ast$ {\bf DD4hep::Handle}$<$ {\bf T} $>$::\_\-ptr () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_a72866c3c06a9e008cc390b7a1ef859e7}
+
+
+Access to an unrelated object type. 
+
+Definition at line 153 of file Handle.h.
+
+Referenced by DD4hep::Geometry::Volume::setMaterial().\hypertarget{class_d_d4hep_1_1_handle_a1a5500d3bf236420d8ba63979aff8599}{
+\index{DD4hep::Handle@{DD4hep::Handle}!access@{access}}
+\index{access@{access}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{access}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf T} $\ast$ {\bf DD4hep::Handle}$<$ {\bf T} $>$::access () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_a1a5500d3bf236420d8ba63979aff8599}
+
+
+Checked object access. Throws invalid handle runtime exception. 
+
+Definition at line 41 of file Handle.inl.
+
+References DD4hep::invalidHandleError(), and DD4hep::Handle$<$ T $>$::m\_\-element.
+
+Referenced by DD4hep::Geometry::DetElement::add(), DD4hep::Geometry::World::alignmentsLoader(), DD4hep::Geometry::WaferGridXY::cellDimensions(), DD4hep::Geometry::PolarGridRPhi2::cellDimensions(), DD4hep::Geometry::PolarGridRPhi::cellDimensions(), DD4hep::Geometry::MultiSegmentation::cellDimensions(), DD4hep::Geometry::CartesianGridYZ::cellDimensions(), DD4hep::Geometry::CartesianGridXZ::cellDimensions(), DD4hep::Geometry::CartesianGridXYZ::cellDimensions(), DD4hep::Geometry::CartesianGridXY::cellDimensions(), DD4hep::Geometry::WaferGridXY::cellID(), DD4hep::Geometry::PolarGridRPhi2::cellID(), DD4hep::Geometry::PolarGridRPhi::cellID(), DD4hep::Geometry::MultiSegmentation::cellID(), DD4hep::Geometry::CartesianGridYZ::cellID(), DD4hep::Geometry::CartesianGridXZ::cellID(), DD4hep::Geometry::CartesianGridXYZ::cellID(), DD4hep::Geometry::CartesianGridXY::cellID(), DD4hep::Geometry::DetElement::children(), DD4hep::Geometry::SensitiveDetector::combineHits(), DD4hep::Geometry::DetElement::combineHits(), DD4hep::Geometry::World::conditionsLoader(), DD4hep::Geometry::MultiSegmentation::discriminator(), DD4hep::Geometry::MultiSegmentation::discriminatorName(), DD4hep::Geometry::SensitiveDetector::energyCutoff(), DD4hep::Geometry::PolarGridRPhi2::fieldNamePhi(), DD4hep::Geometry::PolarGridRPhi::fieldNamePhi(), DD4hep::Geometry::PolarGridRPhi2::fieldNameR(), DD4hep::Geometry::PolarGridRPhi::fieldNameR(), DD4hep::Geometry::WaferGridXY::fieldNameX(), DD4hep::Geometry::CartesianGridXZ::fieldNameX(), DD4hep::Geometry::CartesianGridXYZ::fieldNameX(), DD4hep::Geometry::CartesianGridXY::fieldNameX(), DD4hep::Geometry::WaferGridXY::fieldNameY(), DD4hep::Geometry::CartesianGridYZ::fieldNameY(), DD4hep::Geometry::CartesianGridXYZ::fieldNameY(), DD4hep::Geometry::CartesianGridXY::fieldNameY(), DD4hep::Geometry::CartesianGridYZ::fieldNameZ(), DD4hep::Geometry::CartesianGridXZ::fieldNameZ(), DD4hep::Geometry::CartesianGridXYZ::fieldNameZ(), DD4hep::Geometry::PolarGridRPhi2::gridPhiValues(), DD4hep::Geometry::PolarGridRPhi2::gridRValues(), DD4hep::Geometry::PolarGridRPhi::gridSizePhi(), DD4hep::Geometry::PolarGridRPhi::gridSizeR(), DD4hep::Geometry::WaferGridXY::gridSizeX(), DD4hep::Geometry::CartesianGridXZ::gridSizeX(), DD4hep::Geometry::CartesianGridXYZ::gridSizeX(), DD4hep::Geometry::CartesianGridXY::gridSizeX(), DD4hep::Geometry::WaferGridXY::gridSizeY(), DD4hep::Geometry::CartesianGridYZ::gridSizeY(), DD4hep::Geometry::CartesianGridXYZ::gridSizeY(), DD4hep::Geometry::CartesianGridXY::gridSizeY(), DD4hep::Geometry::CartesianGridYZ::gridSizeZ(), DD4hep::Geometry::CartesianGridXZ::gridSizeZ(), DD4hep::Geometry::CartesianGridXYZ::gridSizeZ(), DD4hep::Geometry::DetElement::hasAlignments(), DD4hep::Geometry::DetElement::hasConditions(), DD4hep::Geometry::SensitiveDetector::hitsCollection(), DD4hep::Geometry::DetElement::i\_\-addUpdateCall(), DD4hep::Geometry::DetElement::id(), DD4hep::Geometry::World::lcdd(), DD4hep::Geometry::SensitiveDetector::limits(), DD4hep::Geometry::DetElement::nominal(), DD4hep::Geometry::PolarGridRPhi2::offsetPhi(), DD4hep::Geometry::PolarGridRPhi::offsetPhi(), DD4hep::Geometry::PolarGridRPhi2::offsetR(), DD4hep::Geometry::PolarGridRPhi::offsetR(), DD4hep::Geometry::WaferGridXY::offsetX(), DD4hep::Geometry::CartesianGridXZ::offsetX(), DD4hep::Geometry::CartesianGridXYZ::offsetX(), DD4hep::Geometry::CartesianGridXY::offsetX(), DD4hep::Geometry::WaferGridXY::offsetY(), DD4hep::Geometry::CartesianGridYZ::offsetY(), DD4hep::Geometry::CartesianGridXYZ::offsetY(), DD4hep::Geometry::CartesianGridXY::offsetY(), DD4hep::Geometry::CartesianGridYZ::offsetZ(), DD4hep::Geometry::CartesianGridXZ::offsetZ(), DD4hep::Geometry::CartesianGridXYZ::offsetZ(), DD4hep::Geometry::DetElement::parentTransformation(), DD4hep::Geometry::WaferGridXY::position(), DD4hep::Geometry::PolarGridRPhi2::position(), DD4hep::Geometry::PolarGridRPhi::position(), DD4hep::Geometry::MultiSegmentation::position(), DD4hep::Geometry::CartesianGridYZ::position(), DD4hep::Geometry::CartesianGridXZ::position(), DD4hep::Geometry::CartesianGridXYZ::position(), DD4hep::Geometry::CartesianGridXY::position(), DD4hep::Geometry::SensitiveDetector::readout(), DD4hep::Geometry::SensitiveDetector::region(), DD4hep::Geometry::DetElement::removeAtUpdate(), DD4hep::Geometry::SensitiveDetector::setCombineHits(), DD4hep::Geometry::DetElement::setCombineHits(), DD4hep::Geometry::SensitiveDetector::setEnergyCutoff(), DD4hep::Geometry::PolarGridRPhi2::setGridPhiValues(), DD4hep::Geometry::PolarGridRPhi2::setGridRValues(), DD4hep::Geometry::PolarGridRPhi2::setGridSizePhi(), DD4hep::Geometry::PolarGridRPhi::setGridSizePhi(), DD4hep::Geometry::PolarGridRPhi2::setGridSizeR(), DD4hep::Geometry::PolarGridRPhi::setGridSizeR(), DD4hep::Geometry::CartesianGridXZ::setGridSizeX(), DD4hep::Geometry::CartesianGridXYZ::setGridSizeX(), DD4hep::Geometry::CartesianGridXY::setGridSizeX(), DD4hep::Geometry::CartesianGridYZ::setGridSizeY(), DD4hep::Geometry::CartesianGridXYZ::setGridSizeY(), DD4hep::Geometry::CartesianGridXY::setGridSizeY(), DD4hep::Geometry::CartesianGridYZ::setGridSizeZ(), DD4hep::Geometry::CartesianGridXZ::setGridSizeZ(), DD4hep::Geometry::CartesianGridXYZ::setGridSizeZ(), DD4hep::Geometry::SensitiveDetector::setLimitSet(), DD4hep::Geometry::PolarGridRPhi2::setOffsetPhi(), DD4hep::Geometry::PolarGridRPhi::setOffsetPhi(), DD4hep::Geometry::PolarGridRPhi2::setOffsetR(), DD4hep::Geometry::PolarGridRPhi::setOffsetR(), DD4hep::Geometry::CartesianGridXZ::setOffsetX(), DD4hep::Geometry::CartesianGridXYZ::setOffsetX(), DD4hep::Geometry::CartesianGridXY::setOffsetX(), DD4hep::Geometry::CartesianGridYZ::setOffsetY(), DD4hep::Geometry::CartesianGridXYZ::setOffsetY(), DD4hep::Geometry::CartesianGridXY::setOffsetY(), DD4hep::Geometry::CartesianGridYZ::setOffsetZ(), DD4hep::Geometry::CartesianGridXZ::setOffsetZ(), DD4hep::Geometry::CartesianGridXYZ::setOffsetZ(), DD4hep::Geometry::DetElement::setPlacement(), DD4hep::Geometry::SensitiveDetector::setReadout(), DD4hep::Geometry::SensitiveDetector::setRegion(), DD4hep::Geometry::DetElement::setTypeFlag(), DD4hep::Geometry::SensitiveDetector::setVerbose(), DD4hep::Geometry::MultiSegmentation::subSegmentations(), DD4hep::Geometry::DetElement::survey(), DD4hep::Geometry::SensitiveDetector::verbose(), DD4hep::Geometry::DetElement::volume(), DD4hep::Geometry::WaferGridXY::waferOffsetX(), DD4hep::Geometry::WaferGridXY::waferOffsetY(), and DD4hep::Geometry::DetElement::worldTransformation().\hypertarget{class_d_d4hep_1_1_handle_a021b31343bc6d67c3c1743f2e1fbc2b7}{
+\index{DD4hep::Handle@{DD4hep::Handle}!assign@{assign}}
+\index{assign@{assign}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{assign}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void {\bf DD4hep::Handle}$<$ {\bf \_\-Segmentation} $>$::assign ({\bf \_\-Segmentation} $\ast$ {\em s}, \/  const std::string \& {\em n}, \/  const std::string \&)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_a021b31343bc6d67c3c1743f2e1fbc2b7}
+
+
+Definition at line 261 of file Handle.cpp.
+
+References DD4hep::Handle$<$ T $>$::m\_\-element, and DD4hep::DDSegmentation::Segmentation::setName().\hypertarget{class_d_d4hep_1_1_handle_a9f5b5d3feb89adf95fdfc4148c711209}{
+\index{DD4hep::Handle@{DD4hep::Handle}!assign@{assign}}
+\index{assign@{assign}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{assign}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf DD4hep::Handle}$<$ {\bf T} $>$::assign ({\bf Implementation} $\ast$ {\em n}, \/  const std::string \& {\em nam}, \/  const std::string \& {\em title})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_a9f5b5d3feb89adf95fdfc4148c711209}
+
+
+Assign a new named object. Note: object references must be managed by the user. 
+
+Definition at line 27 of file Handle.inl.
+
+References DD4hep::Handle$<$ T $>$::m\_\-element.
+
+Referenced by DD4hep::Geometry::DetElementObject::assign\_\-conditions(), DD4hep::Geometry::VisAttr::VisAttr(), and DD4hep::Geometry::VolumeManager::VolumeManager().\hypertarget{class_d_d4hep_1_1_handle_a7d6ad39bc68063a34d8d42ce1d9aef75}{
+\index{DD4hep::Handle@{DD4hep::Handle}!bad\_\-assignment@{bad\_\-assignment}}
+\index{bad\_\-assignment@{bad\_\-assignment}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{bad\_\-assignment}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf DD4hep::Handle}$<$ {\bf T} $>$::bad\_\-assignment (const std::type\_\-info \& {\em from}, \/  const std::type\_\-info \& {\em to})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_a7d6ad39bc68063a34d8d42ce1d9aef75}
+
+
+Helper routine called when unrelated types are assigned. 
+
+Definition at line 21 of file Handle.inl.
+
+References DD4hep::invalidHandleAssignmentError().\hypertarget{class_d_d4hep_1_1_handle_ad50d0ea67a1c9a4e87d232f96ebe52f1}{
+\index{DD4hep::Handle@{DD4hep::Handle}!clear@{clear}}
+\index{clear@{clear}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Handle}$<${\bf T}$>$\& {\bf DD4hep::Handle}$<$ {\bf T} $>$::clear ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_ad50d0ea67a1c9a4e87d232f96ebe52f1}
+
+
+Release the object held by the handle. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_af1a5f51d3f887ebee75eb32094d1ee3f}{DD4hep::Conditions::ConditionsManager}.
+
+Definition at line 132 of file Handle.h.
+
+Referenced by DD4hep::Geometry::LCDDData::clearData(), DD4hep::Geometry::LCDDData::destroyData(), DD4hep::Geometry::DetElementObject::$\sim$DetElementObject(), DD4hep::Geometry::SensitiveDetectorObject::$\sim$SensitiveDetectorObject(), and DD4hep::Geometry::VolumeExtension::$\sim$VolumeExtension().\hypertarget{class_d_d4hep_1_1_handle_a821fe41f46aa5ce97cfb04a6a60e5cd5}{
+\index{DD4hep::Handle@{DD4hep::Handle}!data@{data}}
+\index{data@{data}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename Q $>$ Q$\ast$ {\bf DD4hep::Handle}$<$ {\bf T} $>$::data () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_a821fe41f46aa5ce97cfb04a6a60e5cd5}
+
+
+Access to an unrelated object type. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_a4e3a6f62b476f5fac4a097ae55be8f62}{DD4hep::Alignments::Alignment}, \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a3425870f9b961eef0be9c68cb3117614}{DD4hep::Alignments::AlignmentCondition}, \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a1154252bf161472cd72411149a10702d}{DD4hep::Conditions::Condition}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume_ac13225b8f8408419cc0dd096f59cc934}{DD4hep::Geometry::PlacedVolume}, and \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_aca15c04f667b12b142a300070c9b99ca}{DD4hep::Geometry::Volume}.
+
+Definition at line 157 of file Handle.h.
+
+Referenced by DD4hep::Geometry::operator$<$$<$(), and DD4hep::Geometry::Volume::setVisAttributes().\hypertarget{class_d_d4hep_1_1_handle_a4c5293aecb11989a708ec7615d0f0842}{
+\index{DD4hep::Handle@{DD4hep::Handle}!isValid@{isValid}}
+\index{isValid@{isValid}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{isValid}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf DD4hep::Handle}$<$ {\bf T} $>$::isValid () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_a4c5293aecb11989a708ec7615d0f0842}
+
+
+Check the validity of the object held by the handle. 
+
+Definition at line 124 of file Handle.h.
+
+Referenced by \_\-detector(), DD4hep::Geometry::Material::A(), DD4hep::Geometry::DetElement::add(), DD4hep::Geometry::LCDDImp::addDetector(), DD4hep::DDRec::LayeringExtensionImpl::LayerAttributes::addElement(), DD4hep::Geometry::VolumeManager::addSubdetector(), DD4hep::Geometry::VolumeManager::adoptPlacement(), DD4hep::Geometry::AlignmentEntry::align(), DD4hep::ROOTUI::alignmentMgr(), DD4hep::Geometry::DetElementObject::assign\_\-conditions(), DD4hep::Simulation::Geant4Sensitive::cellID(), DD4hep::Simulation::Geant4VolumeManager::checkValidity(), DD4hep::Geometry::GeoHandler::collect(), DD4hep::Geometry::Readout::collectionNames(), DD4hep::Geometry::Readout::collections(), DD4hep::Conditions::ConditionUpdateContext::condition(), DD4hep::ROOTUI::conditionsMgr(), DD4hep::View::ConfigureEvent(), DD4hep::View::ConfigureGeometry(), DD4hep::Alignments::GlobalAlignmentWriter::createElement(), DD4hep::Utilities::createEveShape(), DD4hep::View::CreateGeometry(), DD4hep::DDRec::invalid\_\-detector\_\-element::createMsg(), DD4hep::XML::createPlacedEnvelope(), DD4hep::XML::createShape(), DD4hep::Geometry::Constant::dataType(), DD4hep::Geometry::LCDDImp::declareMotherVolume(), DD4hep::Geometry::IDDescriptor::decodeFields(), DD4hep::Geometry::Material::density(), DD4hep::Geometry::VolumeManager::detector(), DD4hep::DDRec::IDDecoder::detectorElement(), DD4hep::Geometry::LCDDImp::detectors(), DD4hep::Geometry::DetectorSelector::detectors(), dumpDetectors(), DD4hep::Geometry::DetectorTools::elementPath(), DD4hep::Geometry::IDDescriptor::fields(), DD4hep::Geometry::DetectorTools::findChild(), findChildByName(), DD4hep::Geometry::DetectorTools::findDaughterElement(), DD4hep::DDRec::IDDecoder::findReadout(), DD4hep::Conditions::Container::get(), DD4hep::Alignments::Container::get(), DD4hep::Conditions::ConditionUpdateContext::get(), DD4hep::Conditions::ConditionsDependencyHandler::get(), DD4hep::Simulation::Geant4SensitiveDetector::getCellID(), DD4hep::DDRec::IDDecoder::getClosestDaughter(), DD4hep::View::GetGlobalGeometry(), DD4hep::DDRec::LayeredSubdetector::getLayeringExtension(), DD4hep::DDRec::SubdetectorExtensionImpl::getNSides(), DD4hep::DDRec::SubdetectorExtensionImpl::getRMax(), DD4hep::DDRec::SubdetectorExtensionImpl::getRMin(), DD4hep::DDRec::Subdetector::getSubdetectorExtension(), DD4hep::DDRec::Tracker::getTrackerExtension(), DD4hep::DDRec::SubdetectorExtensionImpl::getZMax(), DD4hep::DDRec::SubdetectorExtensionImpl::getZMin(), DD4hep::Geometry::SimpleGDMLWriter::handleVisualisation(), DD4hep::Alignments::AlignmentData::hasCondition(), DD4hep::Geometry::DetElementObject::i\_\-access\_\-world(), DD4hep::Geometry::GeoHandler::i\_\-collect(), DD4hep::DDRec::IDDecoder::IDDecoder(), DD4hep::Geometry::IDDescriptor::ids(), DD4hep::Geometry::LCDDImp::init(), DD4hep::Geometry::Material::intLength(), DD4hep::SurfaceInstaller::invalidInstaller(), DD4hep::Geometry::DetectorTools::isParentElement(), DD4hep::ROOTUI::loadConditions(), DD4hep::Utilities::LoadDetElement(), DD4hep::Display::LoadGeoChildren(), DD4hep::Geometry::VolumeManager::lookupContext(), DD4hep::Geometry::LCDDImp::mapDetectorTypes(), DD4hep::DDRec::MaterialData::MaterialData(), DD4hep::Geometry::DetElement::nominal(), DD4hep::Geometry::Readout::numCollections(), DD4hep::Converter$<$ T, ARG $>$::operator()(), DD4hep::DDRec::MaterialData::operator=(), DD4hep::SurfaceInstaller::parentVolume(), DD4hep::Geometry::LCDDImp::pickMotherVolume(), DD4hep::Geometry::DetElement::placement(), DD4hep::Geometry::Material::radLength(), DD4hep::Conditions::ConditionsManagerObject::registerUnlocked(), DD4hep::Geometry::DetElementObject::revalidate(), DD4hep::Alignments::GlobalAlignmentWriter::scan(), DD4hep::Geometry::LCDDHelper::sensitiveDetector(), DD4hep::Geometry::DetElement::setCombineHits(), DD4hep::Geometry::Readout::setIDDescriptor(), DD4hep::Geometry::Volume::setMaterial(), DD4hep::Geometry::DetElement::setPlacement(), DD4hep::Geometry::Readout::setSegmentation(), DD4hep::Geometry::Volume::setVisAttributes(), DD4hep::Geometry::VolumeManager::subdetector(), DD4hep::SurfaceInstaller::SurfaceInstaller(), DD4hep::Geometry::DetElement::survey(), DD4hep::Geometry::DetectorTools::topElement(), DD4hep::Geometry::IDDescriptor::toString(), DD4hep::Geometry::DetElement::volumeID(), DD4hep::Geometry::VolumeManager::VolumeManager(), DD4hep::Geometry::DetElementObject::world(), DD4hep::Geometry::Material::Z(), and DD4hep::Geometry::ReadoutObject::$\sim$ReadoutObject().\hypertarget{class_d_d4hep_1_1_handle_ae67b99a35c987f292e426386d6a28552}{
+\index{DD4hep::Handle@{DD4hep::Handle}!name@{name}}
+\index{name@{name}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ const char $\ast$ {\bf DD4hep::Handle}$<$ {\bf \_\-Segmentation} $>$::name () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_ae67b99a35c987f292e426386d6a28552}
+
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_header_a56f8ff7aee494b00bb948dbc2cf55275}{DD4hep::Geometry::Header}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ T $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoArb8 $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoSphere $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoHalfSpace $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoTorus $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoParaboloid $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoShape $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoEltu $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoPgon $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoCone $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoTrd2 $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoPcon $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoCompositeShape $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoConeSeg $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoTrap $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoHype $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ MyConeSeg $>$}, and \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoBBox $>$}.
+
+Definition at line 265 of file Handle.cpp.
+
+References DD4hep::Handle$<$ T $>$::m\_\-element.\hypertarget{class_d_d4hep_1_1_handle_a9c62b8d37e0f2354bae0093498dc15a1}{
+\index{DD4hep::Handle@{DD4hep::Handle}!name@{name}}
+\index{name@{name}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const char $\ast$ {\bf DD4hep::Handle}$<$ {\bf T} $>$::name () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_a9c62b8d37e0f2354bae0093498dc15a1}
+
+
+Access the object name (or \char`\"{}\char`\"{} if not supported by the object). 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_ab4b94316f4df66998b750336ab14dc90}{DD4hep::Conditions::Condition}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_header_a56f8ff7aee494b00bb948dbc2cf55275}{DD4hep::Geometry::Header}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ T $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoArb8 $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoSphere $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoHalfSpace $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoTorus $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoParaboloid $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoShape $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoEltu $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoPgon $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoCone $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoTrd2 $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoPcon $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoCompositeShape $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoConeSeg $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoTrap $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoHype $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ MyConeSeg $>$}, and \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{DD4hep::Geometry::Solid\_\-type$<$ TGeoBBox $>$}.
+
+Definition at line 36 of file Handle.inl.
+
+References DD4hep::Handle$<$ T $>$::m\_\-element.
+
+Referenced by DD4hep::Geometry::DetElement::add(), DD4hep::Geometry::LCDDImp::addDetector(), DD4hep::Geometry::VolumeManager::addSubdetector(), DD4hep::Geometry::VolumeManager::adoptPlacement(), DD4hep::View::ConfigureEvent(), DD4hep::Simulation::Geant4DetectorSensitivesConstruction::constructSensitives(), DD4hep::Simulation::Geant4Converter::create(), create\_\-detector(), DD4hep::DDRec::MaterialManager::createAveragedMaterial(), DD4hep::View::CreateGeometry(), DD4hep::DDRec::invalid\_\-detector\_\-element::createMsg(), DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::declareReadoutFilteredCollection(), Tests::Geant4SensitiveAction$<$ T $>$::defineCollections(), DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::defineReadoutCollection(), DD4hep::DDRec::IDDecoder::detectorElement(), dumpDetectors(), DD4hep::Geometry::DetectorTools::elementPath(), DD4hep::DDRec::findVolume(), DD4hep::Simulation::Geant4ReadoutVolumeFilter::Geant4ReadoutVolumeFilter(), DD4hep::View::GetGlobalGeometry(), DD4hep::Geometry::SimpleGDMLWriter::handleVisualisation(), DD4hep::DDRec::Surface::initialize(), DD4hep::SurfaceInstaller::install(), DD4hep::SurfaceInstaller::invalidInstaller(), DD4hep::Utilities::LoadDetElement(), DD4hep::Display::LoadGeoChildren(), DD4hep::Geometry::LCDDImp::mapDetectorTypes(), DD4hep::DDRec::MaterialData::MaterialData(), DD4hep::DDRec::operator$<$$<$(), DD4hep::Geometry::operator$<$$<$(), DD4hep::DDRec::MaterialData::operator=(), DD4hep::Geometry::LCDDImp::pickMotherVolume(), DD4hep::Geometry::DetElementObject::referenceTransformation(), DD4hep::Geometry::Volume::setMaterial(), DD4hep::Geometry::Volume::setVisAttributes(), DD4hep::SurfaceInstaller::SurfaceInstaller(), DD4hep::Geometry::VolumeManagerObject::update(), and DD4hep::Geometry::VolumeManager::VolumeManager().\hypertarget{class_d_d4hep_1_1_handle_a4e03007979a62db6fa11af123f2b318c}{
+\index{DD4hep::Handle@{DD4hep::Handle}!object@{object}}
+\index{object@{object}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{object}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename Q $>$ Q\& {\bf DD4hep::Handle}$<$ {\bf T} $>$::object () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_a4e03007979a62db6fa11af123f2b318c}
+
+
+Access to an unrelated object type. 
+
+Definition at line 161 of file Handle.h.\hypertarget{class_d_d4hep_1_1_handle_a065ea7927cff8151c3fb800dbef5658c}{
+\index{DD4hep::Handle@{DD4hep::Handle}!operator T \&@{operator T \&}}
+\index{operator T \&@{operator T \&}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{operator T \&}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf DD4hep::Handle}$<$ {\bf T} $>$::operator {\bf T} \& () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_a065ea7927cff8151c3fb800dbef5658c}
+
+
+Automatic type conversion to an object references. 
+
+Definition at line 141 of file Handle.h.\hypertarget{class_d_d4hep_1_1_handle_a20ce72f3771ce4e1a3b58d652efda06d}{
+\index{DD4hep::Handle@{DD4hep::Handle}!operator!@{operator!}}
+\index{operator!@{operator!}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{operator!}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf DD4hep::Handle}$<$ {\bf T} $>$::operator! () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_a20ce72f3771ce4e1a3b58d652efda06d}
+
+
+Check the validity of the object held by the handle. 
+
+Definition at line 128 of file Handle.h.\hypertarget{class_d_d4hep_1_1_handle_a9524715e3d0523206bc51be8c13deb32}{
+\index{DD4hep::Handle@{DD4hep::Handle}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf T}\& {\bf DD4hep::Handle}$<$ {\bf T} $>$::operator$\ast$ () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_a9524715e3d0523206bc51be8c13deb32}
+
+
+Access the held object using the $\ast$ operator. 
+
+Definition at line 145 of file Handle.h.\hypertarget{class_d_d4hep_1_1_handle_afb3984a2a89e50232d519c535818d74b}{
+\index{DD4hep::Handle@{DD4hep::Handle}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{operator-\/$>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf T}$\ast$ {\bf DD4hep::Handle}$<$ {\bf T} $>$::operator-\/$>$ () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_afb3984a2a89e50232d519c535818d74b}
+
+
+Access the held object using the -\/$>$ operator. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a5d2e4f5e2567ddb3c60bf78a25f5e0b4}{DD4hep::Geometry::Solid\_\-type$<$ T $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a5d2e4f5e2567ddb3c60bf78a25f5e0b4}{DD4hep::Geometry::Solid\_\-type$<$ TGeoArb8 $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a5d2e4f5e2567ddb3c60bf78a25f5e0b4}{DD4hep::Geometry::Solid\_\-type$<$ TGeoSphere $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a5d2e4f5e2567ddb3c60bf78a25f5e0b4}{DD4hep::Geometry::Solid\_\-type$<$ TGeoHalfSpace $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a5d2e4f5e2567ddb3c60bf78a25f5e0b4}{DD4hep::Geometry::Solid\_\-type$<$ TGeoTorus $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a5d2e4f5e2567ddb3c60bf78a25f5e0b4}{DD4hep::Geometry::Solid\_\-type$<$ TGeoParaboloid $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a5d2e4f5e2567ddb3c60bf78a25f5e0b4}{DD4hep::Geometry::Solid\_\-type$<$ TGeoShape $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a5d2e4f5e2567ddb3c60bf78a25f5e0b4}{DD4hep::Geometry::Solid\_\-type$<$ TGeoEltu $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a5d2e4f5e2567ddb3c60bf78a25f5e0b4}{DD4hep::Geometry::Solid\_\-type$<$ TGeoPgon $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a5d2e4f5e2567ddb3c60bf78a25f5e0b4}{DD4hep::Geometry::Solid\_\-type$<$ TGeoCone $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a5d2e4f5e2567ddb3c60bf78a25f5e0b4}{DD4hep::Geometry::Solid\_\-type$<$ TGeoTrd2 $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a5d2e4f5e2567ddb3c60bf78a25f5e0b4}{DD4hep::Geometry::Solid\_\-type$<$ TGeoPcon $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a5d2e4f5e2567ddb3c60bf78a25f5e0b4}{DD4hep::Geometry::Solid\_\-type$<$ TGeoCompositeShape $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a5d2e4f5e2567ddb3c60bf78a25f5e0b4}{DD4hep::Geometry::Solid\_\-type$<$ TGeoConeSeg $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a5d2e4f5e2567ddb3c60bf78a25f5e0b4}{DD4hep::Geometry::Solid\_\-type$<$ TGeoTrap $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a5d2e4f5e2567ddb3c60bf78a25f5e0b4}{DD4hep::Geometry::Solid\_\-type$<$ TGeoHype $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a5d2e4f5e2567ddb3c60bf78a25f5e0b4}{DD4hep::Geometry::Solid\_\-type$<$ MyConeSeg $>$}, and \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a5d2e4f5e2567ddb3c60bf78a25f5e0b4}{DD4hep::Geometry::Solid\_\-type$<$ TGeoBBox $>$}.
+
+Definition at line 137 of file Handle.h.\hypertarget{class_d_d4hep_1_1_handle_a287ad7d458faab8f84dbfa6fd48e1d30}{
+\index{DD4hep::Handle@{DD4hep::Handle}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf DD4hep::Handle}$<$ {\bf T} $>$::operator$<$ (const {\bf Handle}$<$ {\bf T} $>$ \& {\em e}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_a287ad7d458faab8f84dbfa6fd48e1d30}
+
+
+Boolean operator $<$ used for RB tree insertions. 
+
+Definition at line 116 of file Handle.h.\hypertarget{class_d_d4hep_1_1_handle_a9bbf8f498df42e81ad26fb00233505a6}{
+\index{DD4hep::Handle@{DD4hep::Handle}!operator=@{operator=}}
+\index{operator=@{operator=}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Handle}$<${\bf T}$>$\& {\bf DD4hep::Handle}$<$ {\bf T} $>$::operator= (const {\bf Handle}$<$ {\bf T} $>$ \& {\em e})}}
+\label{class_d_d4hep_1_1_handle_a9bbf8f498df42e81ad26fb00233505a6}
+
+
+Assignment operator. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_x_y_aa93e75d1fc33ccb737f0eb345aa3581a}{DD4hep::Geometry::CartesianGridXY}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_x_y_z_aee2dbcb91803bc3d6ca773ae722ce716}{DD4hep::Geometry::CartesianGridXYZ}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_x_z_a07eeb7b46619fe93bf00acafb09989d0}{DD4hep::Geometry::CartesianGridXZ}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a5b597a85e6916bf6f4a61123d6bfada3}{DD4hep::Geometry::CartesianGridYZ}, \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a270d3763943c0042ed991a310670ea5c}{DD4hep::Conditions::Condition}, \hyperlink{class_d_d4hep_1_1_conditions_1_1_container_acdaccd39fc497da0eff7dfa97b5319f1}{DD4hep::Conditions::Container}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_sensitive_detector_a6119d874b9539c9c646641bd641209a5}{DD4hep::Geometry::SensitiveDetector}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a22ca67f5376d3d1c641fa02eada16c33}{DD4hep::Geometry::DetElement}, \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a723fc5d2669d586790c48ff820880171}{DD4hep::Alignments::GlobalAlignment}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d_helper_a98179f348166edb136409825f0e74ef7}{DD4hep::Geometry::LCDDHelper}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a71f8f2f78a2f3054f67c4aff149c6137}{DD4hep::Geometry::MultiSegmentation}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_header_acc0a56dbbdcf868bccd82d1bc8216821}{DD4hep::Geometry::Header}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_vis_attr_a02a672b6dc4e30bb7208960a7a54f2ac}{DD4hep::Geometry::VisAttr}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_limit_set_a6590b625e57c2c92da40c8cf0528d45f}{DD4hep::Geometry::LimitSet}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_region_acd0e2208ce7854c4dead0764782cace9}{DD4hep::Geometry::Region}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_polar_grid_r_phi_a6e176a9943b7b44441376e543b01037a}{DD4hep::Geometry::PolarGridRPhi}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_polar_grid_r_phi2_a46530db9beff3425dccd34bc60e9c7db}{DD4hep::Geometry::PolarGridRPhi2}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_readout_aeb7539a6b7ffb865b31eba7d9ee131ca}{DD4hep::Geometry::Readout}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_ace2a6174d3578ff2fdee66e0de399219}{DD4hep::Geometry::Segmentation}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a39edebfe864cbb84ed34759519f0cb5a}{DD4hep::Geometry::Solid\_\-type$<$ T $>$}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_box_a25b695cf830ce545da5718fef3505fd3}{DD4hep::Geometry::Box}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_half_space_ab1c882102bd5a1e615ca7283253a3f01}{DD4hep::Geometry::HalfSpace}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_polycone_af835c690e14207f479b096d84167bad2}{DD4hep::Geometry::Polycone}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_cone_segment_a3645d72628a714d02b81ac229683f3b8}{DD4hep::Geometry::ConeSegment}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_tube_adcf1ecd48e6edfd48c19492d4b4dd049}{DD4hep::Geometry::Tube}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_elliptical_tube_a4488c10cca4a3d2f44757f86da62124e}{DD4hep::Geometry::EllipticalTube}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_cone_af1c438fd229ac53ca1f0c555b8f76e1f}{DD4hep::Geometry::Cone}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_trap_ab77ba113f9b9a64755f8c4f20c076e70}{DD4hep::Geometry::Trap}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_trapezoid_a9d413378312d775bce87cbacefed99e6}{DD4hep::Geometry::Trapezoid}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_torus_a755713aeb9d7fc479897742f420ae256}{DD4hep::Geometry::Torus}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_sphere_a23b08fc1a799d20f1a66e58611c1084d}{DD4hep::Geometry::Sphere}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_paraboloid_ad6b240ee1db323b5a8f69c292632d011}{DD4hep::Geometry::Paraboloid}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_hyperboloid_a8c67ce2f3b902836c6b4c3b7b0e889c4}{DD4hep::Geometry::Hyperboloid}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_polyhedra_regular_ab38a979b481a85b991b407cf30606b60}{DD4hep::Geometry::PolyhedraRegular}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_eight_point_solid_aa9fdc9420f5096e3075540a12b79cd2a}{DD4hep::Geometry::EightPointSolid}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_boolean_solid_a454e550eb5ec2c515b1c38bc8dc54914}{DD4hep::Geometry::BooleanSolid}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_subtraction_solid_a6ee8427252bdb96e1549c59164ee4732}{DD4hep::Geometry::SubtractionSolid}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_union_solid_a797ed87b05428ba918935e35562cb364}{DD4hep::Geometry::UnionSolid}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_intersection_solid_a728f2962e5548d8dd9eee9dad0ec6705}{DD4hep::Geometry::IntersectionSolid}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ad81abecb3dd9f512683df8e41d84f2c9}{DD4hep::Geometry::VolumeManager}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume_a3bd4abac5c77adc45a1c66aff5ff4cb9}{DD4hep::Geometry::PlacedVolume}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_af071e34d365d16c7f7dfe5b2fe59d520}{DD4hep::Geometry::Volume}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_assembly_a49d6772ff3ef1ed2a49a27ce35caaaac}{DD4hep::Geometry::Assembly}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_wafer_grid_x_y_a3b2e049dcb236d6959273c1b2f779789}{DD4hep::Geometry::WaferGridXY}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_world_a8bff84a367718e07ad1e34ac48711327}{DD4hep::Geometry::World}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_abe365aa64b701feeb8ee60d4ca4fbb95}{DD4hep::Simulation::Geant4VolumeManager}, \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignments_manager_afd59ebd7fe38dfa4030f10dd4cae328d}{DD4hep::Alignments::AlignmentsManager}, and \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_a4bffb6047b5d192da0a630dd347616eb}{DD4hep::Conditions::ConditionsManager}.\hypertarget{class_d_d4hep_1_1_handle_a618470283b3a2cc5ed0545fec90dc759}{
+\index{DD4hep::Handle@{DD4hep::Handle}!operator==@{operator==}}
+\index{operator==@{operator==}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf DD4hep::Handle}$<$ {\bf T} $>$::operator== (const {\bf Handle}$<$ {\bf T} $>$ \& {\em e}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_a618470283b3a2cc5ed0545fec90dc759}
+
+
+Boolean operator == used for RB tree insertions. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_x_y_af5cf0fdf544e007c8ed2eba569e1f61c}{DD4hep::Geometry::CartesianGridXY}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_x_y_z_a35dac1689f0207c26e105c88e4529c9f}{DD4hep::Geometry::CartesianGridXYZ}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_x_z_a6ebac42f6146d34bc9e83729e4bf279b}{DD4hep::Geometry::CartesianGridXZ}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a31f625c0056287ae2d993317ed3c661e}{DD4hep::Geometry::CartesianGridYZ}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a4c49fe036eda4b83a03ae28bd2592b6f}{DD4hep::Geometry::MultiSegmentation}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_polar_grid_r_phi_ab90c2c089a725998035253e56ecfd0a3}{DD4hep::Geometry::PolarGridRPhi}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_polar_grid_r_phi2_a06055e1c6d889eee992da2a8b51ba651}{DD4hep::Geometry::PolarGridRPhi2}, and \hyperlink{class_d_d4hep_1_1_geometry_1_1_wafer_grid_x_y_aab6b6ac50d9ce1f24ef7c6e0cb645ab1}{DD4hep::Geometry::WaferGridXY}.
+
+Definition at line 112 of file Handle.h.\hypertarget{class_d_d4hep_1_1_handle_a31b4a56e1f449b035e07a38ffd9b7d5a}{
+\index{DD4hep::Handle@{DD4hep::Handle}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{operator$>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf DD4hep::Handle}$<$ {\bf T} $>$::operator$>$ (const {\bf Handle}$<$ {\bf T} $>$ \& {\em e}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_a31b4a56e1f449b035e07a38ffd9b7d5a}
+
+
+Boolean operator $>$ used for RB tree insertions. 
+
+Definition at line 120 of file Handle.h.\hypertarget{class_d_d4hep_1_1_handle_a51a7d12a15a2a18977a0036bc6435cc8}{
+\index{DD4hep::Handle@{DD4hep::Handle}!ptr@{ptr}}
+\index{ptr@{ptr}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf T}$\ast$ {\bf DD4hep::Handle}$<$ {\bf T} $>$::ptr () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_handle_a51a7d12a15a2a18977a0036bc6435cc8}
+
+
+Access to the held object. 
+
+Definition at line 149 of file Handle.h.
+
+Referenced by DD4hep::Conditions::ConditionsManagerObject::\_\-\_\-queue\_\-update(), DD4hep::Geometry::VolumeManager::\_\-data(), DD4hep::Geometry::Solid\_\-type$<$ T $>$::\_\-setDimensions(), DD4hep::Geometry::VolumeManager::adoptPlacement(), DD4hep::Simulation::Geant4VolumeManager::checkValidity(), DD4hep::Geometry::GeoHandler::collect(), DD4hep::Alignments::AlignmentTools::computeIdeal(), DD4hep::Alignments::AlignmentTools::computeSurvey(), DD4hep::Alignments::AlignmentTools::copy(), DD4hep::Simulation::Geant4Converter::create(), DD4hep::Geometry::IDDescriptor::decodeFields(), DD4hep::Geometry::LCDDHelper::detectorByID(), dumpStructure(), DD4hep::Geometry::DetectorTools::elementPath(), DD4hep::Geometry::MultipoleField::fieldComponents(), DD4hep::Geometry::DetectorTools::findChild(), findChildByName(), DD4hep::Geometry::DetectorTools::findNode(), DD4hep::DDRec::findVolume(), DD4hep::Conditions::ConditionsLoaderImp::get(), DD4hep::Conditions::ConditionsDependencyHandler::get(), DD4hep::Conditions::AlignmentsLoaderImp::get(), DD4hep::Geometry::DetElementObject::i\_\-access\_\-world(), DD4hep::Geometry::LCDDImp::init(), DD4hep::Alignments::GlobalAlignmentCache::insert(), DD4hep::SurfaceInstaller::install(), DD4hep::Geometry::DetectorTools::isParentElement(), DD4hep::Geometry::DetElement::key(), DD4hep::Geometry::DetElement::level(), DD4hep::Utilities::LoadDetElement(), DD4hep::Display::LoadGeoChildren(), DD4hep::Geometry::VolumeManager::lookupContext(), DD4hep::Conditions::make\_\-key(), DD4hep::Geometry::Solid\_\-type$<$ T $>$::name(), DD4hep::Alignments::AlignmentsManager::newEntry(), DD4hep::Conditions::ConditionsPool::onRegister(), DD4hep::Conditions::ConditionsPool::onRemove(), DD4hep::Conditions::KeyedSelect$<$ collection\_\-type $>$::operator()(), DD4hep::Conditions::ActiveSelect$<$ collection\_\-type $>$::operator()(), DD4hep::Conditions::CollectionSelect$<$ collection\_\-type $>$::operator()(), DD4hep::Conditions::PoolInsert$<$ pool\_\-type $>$::operator()(), DD4hep::Conditions::ConditionsPoolRemove::operator()(), DD4hep::Conditions::ConditionsPoolInsert::operator()(), DD4hep::Geometry::DetElement::operator$<$(), DD4hep::Alignments::GlobalAlignment::operator=(), DD4hep::Geometry::DetElement::operator==(), DD4hep::Geometry::DetElement::parent(), DD4hep::Geometry::DetElement::path(), DD4hep::Geometry::DetElement::placementPath(), DD4hep::Geometry::DetElementObject::referenceTransformation(), DD4hep::Conditions::ConditionsManagerObject::registerCondition(), DD4hep::Geometry::DetElementObject::revalidate(), DD4hep::Geometry::LCDDHelper::sensitiveDetector(), DD4hep::Geometry::Readout::setSegmentation(), DD4hep::Geometry::VisAttr::toString(), DD4hep::Simulation::Geant4VolumeManager::volumeDescriptor(), DD4hep::Simulation::Geant4VolumeManager::volumeID(), DD4hep::Geometry::DetElement::world(), DD4hep::Geometry::Box::x(), DD4hep::Geometry::Box::y(), DD4hep::Geometry::Box::z(), and DD4hep::Geometry::ReadoutObject::$\sim$ReadoutObject().\hypertarget{class_d_d4hep_1_1_handle_a664da2f5ac76434379046989853da656}{
+\index{DD4hep::Handle@{DD4hep::Handle}!verifyObject@{verifyObject}}
+\index{verifyObject@{verifyObject}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{verifyObject}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf DD4hep::Handle}$<$ {\bf T} $>$::verifyObject () const}}
+\label{class_d_d4hep_1_1_handle_a664da2f5ac76434379046989853da656}
+
+
+Verify the object type after a (re-\/)assignment. 
+
+Referenced by DD4hep::Handle$<$ ReadoutObject $>$::Handle().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_handle_a207411705e86b0f4053357c7a8b5532e}{
+\index{DD4hep::Handle@{DD4hep::Handle}!m\_\-element@{m\_\-element}}
+\index{m\_\-element@{m\_\-element}!DD4hep::Handle@{DD4hep::Handle}}
+\subsubsection[{m\_\-element}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf T}$\ast$ {\bf DD4hep::Handle}$<$ {\bf T} $>$::{\bf m\_\-element}}}
+\label{class_d_d4hep_1_1_handle_a207411705e86b0f4053357c7a8b5532e}
+
+
+Single and only data member: Reference to the actual element. 
+
+Definition at line 96 of file Handle.h.
+
+Referenced by DD4hep::Handle$<$ ReadoutObject $>$::\_\-ptr(), DD4hep::Handle$<$ T $>$::access(), DD4hep::Geometry::AlignmentEntry::align(), DD4hep::Handle$<$ T $>$::assign(), DD4hep::Handle$<$ ReadoutObject $>$::clear(), DD4hep::Handle$<$ ReadoutObject $>$::data(), DD4hep::Geometry::Constant::dataType(), DD4hep::Handle$<$ ReadoutObject $>$::isValid(), DD4hep::Geometry::Volume::material(), DD4hep::Geometry::PlacedVolume::material(), DD4hep::Geometry::PlacedVolume::motherVol(), DD4hep::Geometry::Header::name(), DD4hep::Handle$<$ T $>$::name(), DD4hep::Handle$<$ ReadoutObject $>$::object(), DD4hep::Geometry::Solid\_\-type$<$ TGeoTrd2 $>$::operator TGeoTrd2 $\ast$(), DD4hep::Geometry::Volume::operator TGeoVolume $\ast$(), DD4hep::Handle$<$ WorldObject $>$::operator WorldObject \&(), DD4hep::Handle$<$ ReadoutObject $>$::operator!(), DD4hep::Handle$<$ ReadoutObject $>$::operator$\ast$(), DD4hep::Geometry::Solid\_\-type$<$ TGeoBBox $>$::operator-\/$>$(), DD4hep::Handle$<$ ReadoutObject $>$::operator-\/$>$(), DD4hep::Handle$<$ ReadoutObject $>$::operator$<$(), DD4hep::Simulation::Geant4VolumeManager::operator=(), DD4hep::Geometry::World::operator=(), DD4hep::Geometry::Assembly::operator=(), DD4hep::Geometry::Volume::operator=(), DD4hep::Geometry::PlacedVolume::operator=(), DD4hep::Geometry::VolumeManager::operator=(), DD4hep::Geometry::Region::operator=(), DD4hep::Geometry::LimitSet::operator=(), DD4hep::Geometry::VisAttr::operator=(), DD4hep::Geometry::Header::operator=(), DD4hep::Conditions::DetConditions::operator=(), DD4hep::Alignments::DetAlign::operator=(), DD4hep::Geometry::WaferGridXY::operator==(), DD4hep::Geometry::PolarGridRPhi2::operator==(), DD4hep::Geometry::PolarGridRPhi::operator==(), DD4hep::Geometry::MultiSegmentation::operator==(), DD4hep::Handle$<$ ReadoutObject $>$::operator==(), DD4hep::Geometry::CartesianGridYZ::operator==(), DD4hep::Geometry::CartesianGridXZ::operator==(), DD4hep::Geometry::CartesianGridXYZ::operator==(), DD4hep::Geometry::CartesianGridXY::operator==(), DD4hep::Handle$<$ ReadoutObject $>$::operator$>$(), DD4hep::Geometry::Volume::placeVolume(), DD4hep::Handle$<$ ReadoutObject $>$::ptr(), DD4hep::Geometry::Volume::setMaterial(), DD4hep::Geometry::Header::setName(), DD4hep::Geometry::Volume::setSolid(), DD4hep::Geometry::Header::setTitle(), DD4hep::Geometry::Volume::setVisAttributes(), DD4hep::Geometry::Header::title(), DD4hep::Geometry::PlacedVolume::toString(), DD4hep::Geometry::Constant::toString(), DD4hep::Geometry::IDDescriptor::toString(), DD4hep::Geometry::Solid\_\-type$<$ TGeoBBox $>$::toString(), DD4hep::Geometry::SensitiveDetector::type(), DD4hep::Geometry::DetElement::type(), DD4hep::Geometry::DetElement::typeFlag(), and DD4hep::Geometry::PlacedVolume::volume().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_handle_8h}{Handle.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_handle_8inl}{Handle.inl}\end{DoxyCompactItemize}

@@ -1,0 +1,169 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init}{
+\section{DD4hep::Simulation::Geant4GeneratorActionInit Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init}\index{DD4hep::Simulation::Geant4GeneratorActionInit@{DD4hep::Simulation::Geant4GeneratorActionInit}}
+}
+
+
+Initialize the \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event}{Geant4Event} objects to host generator and MC truth related information.  
+
+
+{\ttfamily \#include $<$Geant4GeneratorActionInit.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4GeneratorActionInit::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_a33f6258e3b8c24b7ccc09ee2a107e6d7}{Geant4GeneratorActionInit} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$context, const std::string \&nam)
+\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_a8e406b069d1024eb9891cbb979c5a734}{$\sim$Geant4GeneratorActionInit} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_adbcf087dfc4c0ac510b102dfd1f838b0}{operator()} (G4Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Event generation action callback. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_a7f4d99a8f94977444775eabea8080868}{begin} (const G4Run $\ast$run)
+\begin{DoxyCompactList}\small\item\em Begin-\/run action callback. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_aa3b0b224ed839f32af03507be13267a8}{end} (const G4Run $\ast$run)
+\begin{DoxyCompactList}\small\item\em End-\/run action callback. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_a251d29e869dd2401e208f39176cb6fe1}{m\_\-run}
+\begin{DoxyCompactList}\small\item\em Current run identifier. \item\end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_a88579a131b4e22fa0b05f87fe1a8276c}{m\_\-evtTotal}
+\begin{DoxyCompactList}\small\item\em Counter for total number of events. \item\end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_a4d685bb901485377aa271474ed70969b}{m\_\-evtRun}
+\begin{DoxyCompactList}\small\item\em Counter for total number of events in current run. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Initialize the \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event}{Geant4Event} objects to host generator and MC truth related information. Geant4 actions to collect the MC particle information.
+
+This action should register all event extension required for the further processing. We want to avoid that every client has to check if a given object is present or not and than later install the required data structures.
+
+These by default are extensions of type: -\/-\/ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event}{Geant4PrimaryEvent} with multiple interaction sections, one for each interaction This is the MAIN and ONLY information to feed Geant4
+
+-\/-\/ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_interaction}{Geant4PrimaryInteraction} containing the track/vertex information to create the primary particles for Geant4. This record is build from the \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event}{Geant4PrimaryEvent} information. -\/-\/ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map}{Geant4PrimaryMap} a map of the Geant4Particles converted to G4PrimaryParticles to ease particle handling later. -\/-\/ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map}{Geant4ParticleMap} the map of particles created during the event simulation. This map has directly the correct particle offsets, so that the merging of \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_interaction}{Geant4PrimaryInteraction} particles and the simulation particles is easy....
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 55 of file Geant4GeneratorActionInit.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_a33f6258e3b8c24b7ccc09ee2a107e6d7}{
+\index{DD4hep::Simulation::Geant4GeneratorActionInit@{DD4hep::Simulation::Geant4GeneratorActionInit}!Geant4GeneratorActionInit@{Geant4GeneratorActionInit}}
+\index{Geant4GeneratorActionInit@{Geant4GeneratorActionInit}!DD4hep::Simulation::Geant4GeneratorActionInit@{DD4hep::Simulation::Geant4GeneratorActionInit}}
+\subsubsection[{Geant4GeneratorActionInit}]{\setlength{\rightskip}{0pt plus 5cm}Geant4GeneratorActionInit::Geant4GeneratorActionInit ({\bf Geant4Context} $\ast$ {\em context}, \/  const std::string \& {\em nam})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_a33f6258e3b8c24b7ccc09ee2a107e6d7}
+
+
+Standard constructor. 
+
+Definition at line 28 of file Geant4GeneratorActionInit.cpp.
+
+References begin(), DD4hep::Simulation::Geant4RunActionSequence::callAtBegin(), DD4hep::Simulation::Geant4RunActionSequence::callAtEnd(), DD4hep::Simulation::Geant4Action::context(), end(), DD4hep::InstanceCount::increment(), DD4hep::Simulation::Geant4Context::kernel(), and DD4hep::Simulation::Geant4ActionContainer::runAction().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_a8e406b069d1024eb9891cbb979c5a734}{
+\index{DD4hep::Simulation::Geant4GeneratorActionInit@{DD4hep::Simulation::Geant4GeneratorActionInit}!$\sim$Geant4GeneratorActionInit@{$\sim$Geant4GeneratorActionInit}}
+\index{$\sim$Geant4GeneratorActionInit@{$\sim$Geant4GeneratorActionInit}!DD4hep::Simulation::Geant4GeneratorActionInit@{DD4hep::Simulation::Geant4GeneratorActionInit}}
+\subsubsection[{$\sim$Geant4GeneratorActionInit}]{\setlength{\rightskip}{0pt plus 5cm}Geant4GeneratorActionInit::$\sim$Geant4GeneratorActionInit ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_a8e406b069d1024eb9891cbb979c5a734}
+
+
+Default destructor. 
+
+Definition at line 37 of file Geant4GeneratorActionInit.cpp.
+
+References DD4hep::InstanceCount::decrement().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_a7f4d99a8f94977444775eabea8080868}{
+\index{DD4hep::Simulation::Geant4GeneratorActionInit@{DD4hep::Simulation::Geant4GeneratorActionInit}!begin@{begin}}
+\index{begin@{begin}!DD4hep::Simulation::Geant4GeneratorActionInit@{DD4hep::Simulation::Geant4GeneratorActionInit}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4GeneratorActionInit::begin (const G4Run $\ast$ {\em run})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_a7f4d99a8f94977444775eabea8080868}
+
+
+Begin-\/run action callback. 
+
+Definition at line 42 of file Geant4GeneratorActionInit.cpp.
+
+References m\_\-evtRun, and m\_\-run.
+
+Referenced by Geant4GeneratorActionInit().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_aa3b0b224ed839f32af03507be13267a8}{
+\index{DD4hep::Simulation::Geant4GeneratorActionInit@{DD4hep::Simulation::Geant4GeneratorActionInit}!end@{end}}
+\index{end@{end}!DD4hep::Simulation::Geant4GeneratorActionInit@{DD4hep::Simulation::Geant4GeneratorActionInit}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4GeneratorActionInit::end (const G4Run $\ast$ {\em run})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_aa3b0b224ed839f32af03507be13267a8}
+
+
+End-\/run action callback. 
+
+Definition at line 48 of file Geant4GeneratorActionInit.cpp.
+
+References m\_\-evtRun, m\_\-evtTotal, m\_\-run, and DD4hep::Simulation::Geant4Action::printP1().
+
+Referenced by Geant4GeneratorActionInit().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_adbcf087dfc4c0ac510b102dfd1f838b0}{
+\index{DD4hep::Simulation::Geant4GeneratorActionInit@{DD4hep::Simulation::Geant4GeneratorActionInit}!operator()@{operator()}}
+\index{operator()@{operator()}!DD4hep::Simulation::Geant4GeneratorActionInit@{DD4hep::Simulation::Geant4GeneratorActionInit}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4GeneratorActionInit::operator() (G4Event $\ast$ {\em event})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_adbcf087dfc4c0ac510b102dfd1f838b0}
+
+
+Event generation action callback. 
+
+Update event counters
+
++ Printout 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_ac5a1d2335a19e3f9d555081199e01801}{DD4hep::Simulation::Geant4GeneratorAction}.
+
+Definition at line 55 of file Geant4GeneratorActionInit.cpp.
+
+References DD4hep::Simulation::Geant4Action::context(), DD4hep::Simulation::generationInitialization(), m\_\-evtRun, m\_\-evtTotal, m\_\-run, and DD4hep::Simulation::Geant4Action::print().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_a4d685bb901485377aa271474ed70969b}{
+\index{DD4hep::Simulation::Geant4GeneratorActionInit@{DD4hep::Simulation::Geant4GeneratorActionInit}!m\_\-evtRun@{m\_\-evtRun}}
+\index{m\_\-evtRun@{m\_\-evtRun}!DD4hep::Simulation::Geant4GeneratorActionInit@{DD4hep::Simulation::Geant4GeneratorActionInit}}
+\subsubsection[{m\_\-evtRun}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::Simulation::Geant4GeneratorActionInit::m\_\-evtRun}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_a4d685bb901485377aa271474ed70969b}
+
+
+Counter for total number of events in current run. 
+
+Definition at line 62 of file Geant4GeneratorActionInit.h.
+
+Referenced by begin(), end(), and operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_a88579a131b4e22fa0b05f87fe1a8276c}{
+\index{DD4hep::Simulation::Geant4GeneratorActionInit@{DD4hep::Simulation::Geant4GeneratorActionInit}!m\_\-evtTotal@{m\_\-evtTotal}}
+\index{m\_\-evtTotal@{m\_\-evtTotal}!DD4hep::Simulation::Geant4GeneratorActionInit@{DD4hep::Simulation::Geant4GeneratorActionInit}}
+\subsubsection[{m\_\-evtTotal}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::Simulation::Geant4GeneratorActionInit::m\_\-evtTotal}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_a88579a131b4e22fa0b05f87fe1a8276c}
+
+
+Counter for total number of events. 
+
+Definition at line 60 of file Geant4GeneratorActionInit.h.
+
+Referenced by end(), and operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_a251d29e869dd2401e208f39176cb6fe1}{
+\index{DD4hep::Simulation::Geant4GeneratorActionInit@{DD4hep::Simulation::Geant4GeneratorActionInit}!m\_\-run@{m\_\-run}}
+\index{m\_\-run@{m\_\-run}!DD4hep::Simulation::Geant4GeneratorActionInit@{DD4hep::Simulation::Geant4GeneratorActionInit}}
+\subsubsection[{m\_\-run}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::Simulation::Geant4GeneratorActionInit::m\_\-run}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_a251d29e869dd2401e208f39176cb6fe1}
+
+
+Current run identifier. 
+
+Definition at line 58 of file Geant4GeneratorActionInit.h.
+
+Referenced by begin(), end(), and operator()().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_generator_action_init_8h}{Geant4GeneratorActionInit.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_generator_action_init_8cpp}{Geant4GeneratorActionInit.cpp}\end{DoxyCompactItemize}

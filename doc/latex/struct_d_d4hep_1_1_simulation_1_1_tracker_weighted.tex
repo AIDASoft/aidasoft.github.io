@@ -1,0 +1,447 @@
+\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted}{
+\section{DD4hep::Simulation::TrackerWeighted Struct Reference}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted}\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8cdc474134c1f8b3a8344e32fc3d4421a675d7a02b8891bd8f45bc5f27c5c1746}{POSITION\_\-WEIGHTED} =  1, 
+\hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8cdc474134c1f8b3a8344e32fc3d4421a4b7f40d92a4823d71b75c6894d032489}{POSITION\_\-MIDDLE} =  2, 
+\hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8cdc474134c1f8b3a8344e32fc3d4421a1419a617e564f58140744d38381ee4c1}{POSITION\_\-PREPOINT} =  3, 
+\hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8cdc474134c1f8b3a8344e32fc3d4421ac0ca75f525d337568debb34bf3545e29}{POSITION\_\-POSTPOINT} =  4
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to define the calculation of the position of the energy deposit. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection}{Geant4HitCollection} \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a99a4be34af7901b0aab7398894ba906a}{HitCollection}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_ae628c5cfae79d839a0640338ba31a6ad}{TrackerWeighted} ()
+\item 
+\hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted}{TrackerWeighted} \& \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a0c6304d5c3a6b0964f7388c3440235db}{clear} ()
+\begin{DoxyCompactList}\small\item\em Clear collected information and restart for new hit. \item\end{DoxyCompactList}\item 
+\hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted}{TrackerWeighted} \& \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_abb50962377c010e8430400035d5e3dcf}{start} (const G4Step $\ast$step, const G4StepPoint $\ast$point)
+\begin{DoxyCompactList}\small\item\em Start a new hit. \item\end{DoxyCompactList}\item 
+\hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted}{TrackerWeighted} \& \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8ffc0941260d20698a82015cd39cf744}{update} (const G4Step $\ast$step)
+\begin{DoxyCompactList}\small\item\em Update energy and track information during hit info accumulation. \item\end{DoxyCompactList}\item 
+bool \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_add13493ece4035deef171e3528c25b56}{mustSaveTrack} (const G4Track $\ast$tr) const 
+\begin{DoxyCompactList}\small\item\em Helper function to decide if the hit has to be extracted and saved in the collection. \item\end{DoxyCompactList}\item 
+void \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8299b772daa5da7c49399a40c1de172d}{extractHit} (EInside ended)
+\begin{DoxyCompactList}\small\item\em Extract hit information and add the created hit to the collection. \item\end{DoxyCompactList}\item 
+\hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted}{TrackerWeighted} \& \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_ac7628c08fbf29a1dc2133ac7b30e1499}{calc\_\-dist\_\-out} (const G4VSolid $\ast$solid)
+\item 
+\hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted}{TrackerWeighted} \& \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_aa9139da9ecb7c109b7108cc27a27c13d}{calc\_\-dist\_\-in} (const G4VSolid $\ast$solid)
+\item 
+void \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a690b6f7fdcda6bbec2e7cb89f4fce9af}{extractHit} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection}{Geant4HitCollection} $\ast$collection, EInside ended)
+\item 
+G4bool \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_ab258cb542897a7bd369fd204eafbb245}{process} (const G4Step $\ast$step, G4TouchableHistory $\ast$)
+\begin{DoxyCompactList}\small\item\em Method for generating hit(s) using the information of G4Step object. \item\end{DoxyCompactList}\item 
+void \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_aa489deb875d6f5867917d2b7aae00747}{endEvent} ()
+\begin{DoxyCompactList}\small\item\em Post-\/event action callback. \item\end{DoxyCompactList}\item 
+void \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a15fd630fa0e1ca7e3c0516952ad5f976}{startEvent} ()
+\begin{DoxyCompactList}\small\item\em Pre event action callback. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_tracker_1_1_hit}{Geant4Tracker::Hit} \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a3bb8dbd97551f655071ce36e357593ef}{pre}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_tracker_1_1_hit}{Geant4Tracker::Hit} \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_af821b8459359ddcb2713bf34f1d72949}{post}
+\item 
+\hyperlink{namespace_d_d4hep_1_1_simulation_ad6fd94b3439e31d1ba4b2e640d578558}{Position} \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_ab378f01fcca56a21b21f3d90c600c984}{mean\_\-pos}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive}{Geant4Sensitive} $\ast$ \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a6c247f2290b5f072a9be93c75dacf631}{sensitive}
+\item 
+\hyperlink{class_g4_v_sensitive_detector}{G4VSensitiveDetector} $\ast$ \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a75a27a45aa4197181191c68eb92f9863}{thisSD}
+\item 
+double \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a77ce382a300e188a9ed772615abfa4f2}{distance\_\-to\_\-inside}
+\item 
+double \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_ad898a4f6ed0a4424a2bd8f7d52292c32}{distance\_\-to\_\-outside}
+\item 
+double \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a222fd48188979006e286b3688452ff6d}{mean\_\-time}
+\item 
+double \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a82fd5f47ec95d179a132145c54a78873}{step\_\-length}
+\item 
+double \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a404e62198a8830c8e6b7c185873bb4d1}{e\_\-cut}
+\item 
+int \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_ac6ff7cabaf1b1b455979409184e72966}{current}
+\item 
+int \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8fcddaa426fa0d7a901991856f3f4d1a}{parent}
+\item 
+int \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a7059ba8b2d85cb67220b0184f038f9f9}{combined}
+\item 
+int \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a5120f0b661148efb35b7432c8c58c7ce}{hit\_\-position\_\-type}
+\item 
+int \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a9ffa7f998b3a1f16864ecbb894ca2e54}{hit\_\-flag}
+\item 
+int \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a1205a645db026a115eb182e439929818}{g4ID}
+\item 
+EInside \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_afc2a6289bb11f08b03d50e0b8e271083}{last\_\-inside}
+\item 
+long long int \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_aeced4bab28aa79ad7bab14ca9ce02c79}{cell}
+\item 
+bool \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_aca48801717dfd735529eb3fda99e999a}{single\_\-deposit\_\-mode}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 70 of file Geant4TrackerWeightedSD.cpp.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a99a4be34af7901b0aab7398894ba906a}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!HitCollection@{HitCollection}}
+\index{HitCollection@{HitCollection}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{HitCollection}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geant4HitCollection} {\bf DD4hep::Simulation::TrackerWeighted::HitCollection}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a99a4be34af7901b0aab7398894ba906a}
+
+
+Definition at line 71 of file Geant4TrackerWeightedSD.cpp.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8cdc474134c1f8b3a8344e32fc3d4421}{
+\subsubsection[{"@13}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8cdc474134c1f8b3a8344e32fc3d4421}
+
+
+Enumeration to define the calculation of the position of the energy deposit. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{POSITION\_\-WEIGHTED@{POSITION\_\-WEIGHTED}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!POSITION\_\-WEIGHTED@{POSITION\_\-WEIGHTED}}\item[{\em 
+\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8cdc474134c1f8b3a8344e32fc3d4421a675d7a02b8891bd8f45bc5f27c5c1746}{
+POSITION\_\-WEIGHTED}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8cdc474134c1f8b3a8344e32fc3d4421a675d7a02b8891bd8f45bc5f27c5c1746}
+}]\index{POSITION\_\-MIDDLE@{POSITION\_\-MIDDLE}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!POSITION\_\-MIDDLE@{POSITION\_\-MIDDLE}}\item[{\em 
+\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8cdc474134c1f8b3a8344e32fc3d4421a4b7f40d92a4823d71b75c6894d032489}{
+POSITION\_\-MIDDLE}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8cdc474134c1f8b3a8344e32fc3d4421a4b7f40d92a4823d71b75c6894d032489}
+}]\index{POSITION\_\-PREPOINT@{POSITION\_\-PREPOINT}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!POSITION\_\-PREPOINT@{POSITION\_\-PREPOINT}}\item[{\em 
+\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8cdc474134c1f8b3a8344e32fc3d4421a1419a617e564f58140744d38381ee4c1}{
+POSITION\_\-PREPOINT}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8cdc474134c1f8b3a8344e32fc3d4421a1419a617e564f58140744d38381ee4c1}
+}]\index{POSITION\_\-POSTPOINT@{POSITION\_\-POSTPOINT}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!POSITION\_\-POSTPOINT@{POSITION\_\-POSTPOINT}}\item[{\em 
+\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8cdc474134c1f8b3a8344e32fc3d4421ac0ca75f525d337568debb34bf3545e29}{
+POSITION\_\-POSTPOINT}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8cdc474134c1f8b3a8344e32fc3d4421ac0ca75f525d337568debb34bf3545e29}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 74 of file Geant4TrackerWeightedSD.cpp.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_ae628c5cfae79d839a0640338ba31a6ad}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!TrackerWeighted@{TrackerWeighted}}
+\index{TrackerWeighted@{TrackerWeighted}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{TrackerWeighted}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::TrackerWeighted::TrackerWeighted ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_ae628c5cfae79d839a0640338ba31a6ad}
+
+
+Definition at line 98 of file Geant4TrackerWeightedSD.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_aa9139da9ecb7c109b7108cc27a27c13d}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!calc\_\-dist\_\-in@{calc\_\-dist\_\-in}}
+\index{calc\_\-dist\_\-in@{calc\_\-dist\_\-in}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{calc\_\-dist\_\-in}]{\setlength{\rightskip}{0pt plus 5cm}{\bf TrackerWeighted}\& DD4hep::Simulation::TrackerWeighted::calc\_\-dist\_\-in (const G4VSolid $\ast$ {\em solid})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_aa9139da9ecb7c109b7108cc27a27c13d}
+
+
+Definition at line 180 of file Geant4TrackerWeightedSD.cpp.
+
+References distance\_\-to\_\-inside, DD4hep::Simulation::Geant4Tracker::Hit::momentum, DD4hep::Simulation::Geant4Tracker::Hit::position, pre, and v.
+
+Referenced by process().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_ac7628c08fbf29a1dc2133ac7b30e1499}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!calc\_\-dist\_\-out@{calc\_\-dist\_\-out}}
+\index{calc\_\-dist\_\-out@{calc\_\-dist\_\-out}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{calc\_\-dist\_\-out}]{\setlength{\rightskip}{0pt plus 5cm}{\bf TrackerWeighted}\& DD4hep::Simulation::TrackerWeighted::calc\_\-dist\_\-out (const G4VSolid $\ast$ {\em solid})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_ac7628c08fbf29a1dc2133ac7b30e1499}
+
+
+Definition at line 172 of file Geant4TrackerWeightedSD.cpp.
+
+References distance\_\-to\_\-outside, DD4hep::Simulation::Geant4Tracker::Hit::momentum, DD4hep::Simulation::Geant4Tracker::Hit::position, post, pre, and v.
+
+Referenced by process().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a0c6304d5c3a6b0964f7388c3440235db}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!clear@{clear}}
+\index{clear@{clear}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}{\bf TrackerWeighted}\& DD4hep::Simulation::TrackerWeighted::clear ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a0c6304d5c3a6b0964f7388c3440235db}
+
+
+Clear collected information and restart for new hit. 
+
+Definition at line 107 of file Geant4TrackerWeightedSD.cpp.
+
+References cell, DD4hep::Simulation::Geant4Tracker::Hit::clear(), combined, current, distance\_\-to\_\-inside, distance\_\-to\_\-outside, g4ID, hit\_\-flag, last\_\-inside, mean\_\-pos, mean\_\-time, parent, post, pre, and step\_\-length.
+
+Referenced by extractHit(), and start().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_aa489deb875d6f5867917d2b7aae00747}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!endEvent@{endEvent}}
+\index{endEvent@{endEvent}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{endEvent}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Simulation::TrackerWeighted::endEvent ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_aa489deb875d6f5867917d2b7aae00747}
+
+
+Post-\/event action callback. 
+
+Definition at line 362 of file Geant4TrackerWeightedSD.cpp.
+
+References DD4hep::Simulation::Geant4Sensitive::collection(), current, extractHit(), last\_\-inside, DD4hep::Simulation::Geant4Action::print(), and sensitive.\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a690b6f7fdcda6bbec2e7cb89f4fce9af}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!extractHit@{extractHit}}
+\index{extractHit@{extractHit}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{extractHit}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Simulation::TrackerWeighted::extractHit ({\bf Geant4HitCollection} $\ast$ {\em collection}, \/  EInside {\em ended})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a690b6f7fdcda6bbec2e7cb89f4fce9af}
+
+
+Definition at line 188 of file Geant4TrackerWeightedSD.cpp.
+
+References DD4hep::Simulation::Geant4HitCollection::add(), cell, DD4hep::Simulation::Geant4HitData::cellID, clear(), combined, current, distance\_\-to\_\-inside, distance\_\-to\_\-outside, DD4hep::Simulation::Geant4HitData::flag, g4ID, DD4hep::Simulation::Geant4HitData::g4ID, DD4hep::Simulation::Geant4HitCollection::GetSize(), DD4hep::Simulation::Geant4HitData::HIT\_\-ENDED\_\-INSIDE, DD4hep::Simulation::Geant4HitData::HIT\_\-ENDED\_\-OUTSIDE, DD4hep::Simulation::Geant4HitData::HIT\_\-ENDED\_\-SURFACE, hit\_\-flag, hit\_\-position\_\-type, DD4hep::Simulation::Geant4HitData::HIT\_\-STARTED\_\-INSIDE, DD4hep::Simulation::Geant4HitData::HIT\_\-STARTED\_\-OUTSIDE, DD4hep::Simulation::Geant4HitData::HIT\_\-STARTED\_\-SURFACE, dd4hep::keV, DD4hep::Simulation::Geant4Tracker::Hit::length, mean\_\-pos, mean\_\-time, dd4hep::mm, DD4hep::Simulation::Geant4Tracker::Hit::momentum, DD4hep::Simulation::Geant4Tracker::Hit::position, POSITION\_\-MIDDLE, POSITION\_\-POSTPOINT, POSITION\_\-PREPOINT, POSITION\_\-WEIGHTED, post, pre, DD4hep::Simulation::Geant4Action::print(), sensitive, step\_\-length, DD4hep::Simulation::Geant4Tracker::Hit::truth, and dd4hep::um.\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8299b772daa5da7c49399a40c1de172d}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!extractHit@{extractHit}}
+\index{extractHit@{extractHit}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{extractHit}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Simulation::TrackerWeighted::extractHit (EInside {\em ended})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8299b772daa5da7c49399a40c1de172d}
+
+
+Extract hit information and add the created hit to the collection. 
+
+Definition at line 167 of file Geant4TrackerWeightedSD.cpp.
+
+References DD4hep::Simulation::Geant4Sensitive::collection(), and sensitive.
+
+Referenced by endEvent(), and process().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_add13493ece4035deef171e3528c25b56}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!mustSaveTrack@{mustSaveTrack}}
+\index{mustSaveTrack@{mustSaveTrack}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{mustSaveTrack}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Simulation::TrackerWeighted::mustSaveTrack (const G4Track $\ast$ {\em tr}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_add13493ece4035deef171e3528c25b56}
+
+
+Helper function to decide if the hit has to be extracted and saved in the collection. 
+
+Definition at line 162 of file Geant4TrackerWeightedSD.cpp.
+
+References current.\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_ab258cb542897a7bd369fd204eafbb245}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!process@{process}}
+\index{process@{process}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{process}]{\setlength{\rightskip}{0pt plus 5cm}G4bool DD4hep::Simulation::TrackerWeighted::process (const G4Step $\ast$ {\em step}, \/  G4TouchableHistory $\ast$)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_ab258cb542897a7bd369fd204eafbb245}
+
+
+Method for generating hit(s) using the information of G4Step object. 
+
+Definition at line 253 of file Geant4TrackerWeightedSD.cpp.
+
+References calc\_\-dist\_\-in(), calc\_\-dist\_\-out(), current, DD4hep::Simulation::Geant4Action::error(), extractHit(), DD4hep::Simulation::Geant4StepHandler::globalToLocalG4(), hit\_\-flag, DD4hep::Simulation::Geant4HitData::HIT\_\-KILLED\_\-TRACK, DD4hep::Simulation::Geant4HitData::HIT\_\-SECONDARY\_\-TRACK, DD4hep::Simulation::Geant4HitData::HIT\_\-STARTED\_\-INSIDE, DD4hep::Simulation::Geant4HitData::HIT\_\-STARTED\_\-OUTSIDE, DD4hep::Simulation::Geant4HitData::HIT\_\-STARTED\_\-SURFACE, last\_\-inside, DD4hep::Simulation::Geant4StepHandler::post, DD4hep::Simulation::Geant4StepHandler::postPosG4(), DD4hep::Simulation::Geant4StepHandler::postSD(), DD4hep::Simulation::Geant4StepHandler::postVolume(), DD4hep::Simulation::Geant4StepHandler::pre, DD4hep::Simulation::Geant4StepHandler::prePosG4(), DD4hep::Simulation::Geant4StepHandler::preSD(), DD4hep::Simulation::Geant4StepHandler::preVolume(), DD4hep::Simulation::Geant4Action::print(), sensitive, single\_\-deposit\_\-mode, DD4hep::Simulation::Geant4StepHandler::solid(), start(), thisSD, DD4hep::Simulation::Geant4StepHandler::trkAlive(), DD4hep::Simulation::Geant4StepHandler::trkID(), and update().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_abb50962377c010e8430400035d5e3dcf}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!start@{start}}
+\index{start@{start}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf TrackerWeighted}\& DD4hep::Simulation::TrackerWeighted::start (const G4Step $\ast$ {\em step}, \/  const G4StepPoint $\ast$ {\em point})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_abb50962377c010e8430400035d5e3dcf}
+
+
+Start a new hit. 
+
+Definition at line 126 of file Geant4TrackerWeightedSD.cpp.
+
+References clear(), current, g4ID, DD4hep::Simulation::Geant4Sensitive::mark(), parent, post, pre, sensitive, DD4hep::Simulation::Geant4Tracker::Hit::storePoint(), and DD4hep::Simulation::Geant4Tracker::Hit::truth.
+
+Referenced by process().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a15fd630fa0e1ca7e3c0516952ad5f976}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!startEvent@{startEvent}}
+\index{startEvent@{startEvent}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{startEvent}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Simulation::TrackerWeighted::startEvent ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a15fd630fa0e1ca7e3c0516952ad5f976}
+
+
+Pre event action callback. 
+
+Definition at line 374 of file Geant4TrackerWeightedSD.cpp.
+
+References DD4hep::Simulation::Geant4Sensitive::detector(), sensitive, and thisSD.\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8ffc0941260d20698a82015cd39cf744}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!update@{update}}
+\index{update@{update}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf TrackerWeighted}\& DD4hep::Simulation::TrackerWeighted::update (const G4Step $\ast$ {\em step})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8ffc0941260d20698a82015cd39cf744}
+
+
+Update energy and track information during hit info accumulation. 
+
+Definition at line 140 of file Geant4TrackerWeightedSD.cpp.
+
+References cell, DD4hep::Simulation::Geant4Sensitive::cellID(), combined, DD4hep::Simulation::Geant4Action::except(), mean\_\-pos, mean\_\-time, DD4hep::Simulation::Geant4Tracker::Hit::position, post, pre, sensitive, step\_\-length, DD4hep::Simulation::Geant4Tracker::Hit::storePoint(), DD4hep::Simulation::Geant4Tracker::Hit::truth, and DD4hep::Simulation::Geant4Sensitive::volumeID().
+
+Referenced by process().
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_aeced4bab28aa79ad7bab14ca9ce02c79}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!cell@{cell}}
+\index{cell@{cell}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{cell}]{\setlength{\rightskip}{0pt plus 5cm}long long int {\bf DD4hep::Simulation::TrackerWeighted::cell}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_aeced4bab28aa79ad7bab14ca9ce02c79}
+
+
+Definition at line 96 of file Geant4TrackerWeightedSD.cpp.
+
+Referenced by clear(), extractHit(), and update().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a7059ba8b2d85cb67220b0184f038f9f9}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!combined@{combined}}
+\index{combined@{combined}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{combined}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::Simulation::TrackerWeighted::combined}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a7059ba8b2d85cb67220b0184f038f9f9}
+
+
+Definition at line 91 of file Geant4TrackerWeightedSD.cpp.
+
+Referenced by clear(), extractHit(), and update().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_ac6ff7cabaf1b1b455979409184e72966}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!current@{current}}
+\index{current@{current}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{current}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::Simulation::TrackerWeighted::current}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_ac6ff7cabaf1b1b455979409184e72966}
+
+
+Definition at line 90 of file Geant4TrackerWeightedSD.cpp.
+
+Referenced by clear(), endEvent(), extractHit(), mustSaveTrack(), process(), and start().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a77ce382a300e188a9ed772615abfa4f2}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!distance\_\-to\_\-inside@{distance\_\-to\_\-inside}}
+\index{distance\_\-to\_\-inside@{distance\_\-to\_\-inside}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{distance\_\-to\_\-inside}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::Simulation::TrackerWeighted::distance\_\-to\_\-inside}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a77ce382a300e188a9ed772615abfa4f2}
+
+
+Definition at line 85 of file Geant4TrackerWeightedSD.cpp.
+
+Referenced by calc\_\-dist\_\-in(), clear(), and extractHit().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_ad898a4f6ed0a4424a2bd8f7d52292c32}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!distance\_\-to\_\-outside@{distance\_\-to\_\-outside}}
+\index{distance\_\-to\_\-outside@{distance\_\-to\_\-outside}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{distance\_\-to\_\-outside}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::Simulation::TrackerWeighted::distance\_\-to\_\-outside}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_ad898a4f6ed0a4424a2bd8f7d52292c32}
+
+
+Definition at line 86 of file Geant4TrackerWeightedSD.cpp.
+
+Referenced by calc\_\-dist\_\-out(), clear(), and extractHit().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a404e62198a8830c8e6b7c185873bb4d1}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!e\_\-cut@{e\_\-cut}}
+\index{e\_\-cut@{e\_\-cut}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{e\_\-cut}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::Simulation::TrackerWeighted::e\_\-cut}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a404e62198a8830c8e6b7c185873bb4d1}
+
+
+Definition at line 89 of file Geant4TrackerWeightedSD.cpp.\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a1205a645db026a115eb182e439929818}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!g4ID@{g4ID}}
+\index{g4ID@{g4ID}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{g4ID}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::Simulation::TrackerWeighted::g4ID}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a1205a645db026a115eb182e439929818}
+
+
+Definition at line 94 of file Geant4TrackerWeightedSD.cpp.
+
+Referenced by clear(), extractHit(), and start().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a9ffa7f998b3a1f16864ecbb894ca2e54}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!hit\_\-flag@{hit\_\-flag}}
+\index{hit\_\-flag@{hit\_\-flag}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{hit\_\-flag}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::Simulation::TrackerWeighted::hit\_\-flag}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a9ffa7f998b3a1f16864ecbb894ca2e54}
+
+
+Definition at line 93 of file Geant4TrackerWeightedSD.cpp.
+
+Referenced by clear(), extractHit(), and process().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a5120f0b661148efb35b7432c8c58c7ce}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!hit\_\-position\_\-type@{hit\_\-position\_\-type}}
+\index{hit\_\-position\_\-type@{hit\_\-position\_\-type}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{hit\_\-position\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::Simulation::TrackerWeighted::hit\_\-position\_\-type}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a5120f0b661148efb35b7432c8c58c7ce}
+
+
+Definition at line 92 of file Geant4TrackerWeightedSD.cpp.
+
+Referenced by extractHit().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_afc2a6289bb11f08b03d50e0b8e271083}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!last\_\-inside@{last\_\-inside}}
+\index{last\_\-inside@{last\_\-inside}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{last\_\-inside}]{\setlength{\rightskip}{0pt plus 5cm}EInside {\bf DD4hep::Simulation::TrackerWeighted::last\_\-inside}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_afc2a6289bb11f08b03d50e0b8e271083}
+
+
+Definition at line 95 of file Geant4TrackerWeightedSD.cpp.
+
+Referenced by clear(), endEvent(), and process().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_ab378f01fcca56a21b21f3d90c600c984}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!mean\_\-pos@{mean\_\-pos}}
+\index{mean\_\-pos@{mean\_\-pos}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{mean\_\-pos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} {\bf DD4hep::Simulation::TrackerWeighted::mean\_\-pos}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_ab378f01fcca56a21b21f3d90c600c984}
+
+
+Definition at line 82 of file Geant4TrackerWeightedSD.cpp.
+
+Referenced by clear(), extractHit(), and update().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a222fd48188979006e286b3688452ff6d}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!mean\_\-time@{mean\_\-time}}
+\index{mean\_\-time@{mean\_\-time}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{mean\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::Simulation::TrackerWeighted::mean\_\-time}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a222fd48188979006e286b3688452ff6d}
+
+
+Definition at line 87 of file Geant4TrackerWeightedSD.cpp.
+
+Referenced by clear(), extractHit(), and update().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8fcddaa426fa0d7a901991856f3f4d1a}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!parent@{parent}}
+\index{parent@{parent}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::Simulation::TrackerWeighted::parent}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a8fcddaa426fa0d7a901991856f3f4d1a}
+
+
+Definition at line 90 of file Geant4TrackerWeightedSD.cpp.
+
+Referenced by clear(), and start().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_af821b8459359ddcb2713bf34f1d72949}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!post@{post}}
+\index{post@{post}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{post}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Tracker::Hit} {\bf DD4hep::Simulation::TrackerWeighted::post}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_af821b8459359ddcb2713bf34f1d72949}
+
+
+Definition at line 81 of file Geant4TrackerWeightedSD.cpp.
+
+Referenced by calc\_\-dist\_\-out(), clear(), extractHit(), start(), and update().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a3bb8dbd97551f655071ce36e357593ef}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!pre@{pre}}
+\index{pre@{pre}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{pre}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Tracker::Hit} {\bf DD4hep::Simulation::TrackerWeighted::pre}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a3bb8dbd97551f655071ce36e357593ef}
+
+
+Definition at line 81 of file Geant4TrackerWeightedSD.cpp.
+
+Referenced by calc\_\-dist\_\-in(), calc\_\-dist\_\-out(), clear(), extractHit(), start(), and update().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a6c247f2290b5f072a9be93c75dacf631}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!sensitive@{sensitive}}
+\index{sensitive@{sensitive}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{sensitive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Sensitive}$\ast$ {\bf DD4hep::Simulation::TrackerWeighted::sensitive}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a6c247f2290b5f072a9be93c75dacf631}
+
+
+Definition at line 83 of file Geant4TrackerWeightedSD.cpp.
+
+Referenced by endEvent(), extractHit(), process(), start(), startEvent(), and update().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_aca48801717dfd735529eb3fda99e999a}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!single\_\-deposit\_\-mode@{single\_\-deposit\_\-mode}}
+\index{single\_\-deposit\_\-mode@{single\_\-deposit\_\-mode}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{single\_\-deposit\_\-mode}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf DD4hep::Simulation::TrackerWeighted::single\_\-deposit\_\-mode}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_aca48801717dfd735529eb3fda99e999a}
+
+
+Definition at line 97 of file Geant4TrackerWeightedSD.cpp.
+
+Referenced by process().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a82fd5f47ec95d179a132145c54a78873}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!step\_\-length@{step\_\-length}}
+\index{step\_\-length@{step\_\-length}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{step\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::Simulation::TrackerWeighted::step\_\-length}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a82fd5f47ec95d179a132145c54a78873}
+
+
+Definition at line 88 of file Geant4TrackerWeightedSD.cpp.
+
+Referenced by clear(), extractHit(), and update().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a75a27a45aa4197181191c68eb92f9863}{
+\index{DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}!thisSD@{thisSD}}
+\index{thisSD@{thisSD}!DD4hep::Simulation::TrackerWeighted@{DD4hep::Simulation::TrackerWeighted}}
+\subsubsection[{thisSD}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G4VSensitiveDetector}$\ast$ {\bf DD4hep::Simulation::TrackerWeighted::thisSD}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_weighted_a75a27a45aa4197181191c68eb92f9863}
+
+
+Definition at line 84 of file Geant4TrackerWeightedSD.cpp.
+
+Referenced by process(), and startEvent().
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/plugins/\hyperlink{_geant4_tracker_weighted_s_d_8cpp}{Geant4TrackerWeightedSD.cpp}\end{DoxyCompactItemize}

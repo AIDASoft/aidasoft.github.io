@@ -1,0 +1,594 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection}{
+\section{DD4hep::Simulation::Geant4HitCollection Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection}\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+}
+
+
+Generic hit container class using \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_wrapper}{Geant4HitWrapper} objects.  
+
+
+{\ttfamily \#include $<$Geant4HitCollection.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4HitCollection::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{union_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_1_1_collection_flags}{CollectionFlags}
+\item 
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_1_1_compare}{Compare}
+\begin{DoxyCompactList}\small\item\em Generic class template to compare/select hits in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection}{Geant4HitCollection} objects. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a8fe757ca872800562e5317df0597c844a534e41b5b4b31668654894c119d79f10}{OPTIMIZE\_\-NONE} =  0, 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a8fe757ca872800562e5317df0597c844a3831e14471c6e0e7b8b0349696913ea9}{OPTIMIZE\_\-REPEATEDLOOKUP} =  1$<$$<$0, 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a8fe757ca872800562e5317df0597c844a762d4b5ef6144a6b8d6b9f5ae9f70450}{OPTIMIZE\_\-MAPPEDLOOKUP} =  1$<$$<$1, 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a8fe757ca872800562e5317df0597c844ac14cd6ddf70dd174f944eca4790515b8}{OPTIMIZE\_\-LAST}
+ \}
+\item 
+typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_wrapper}{Geant4HitWrapper} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_ada2cbec73b2d5005b514a33b44a1dc05}{WrappedHits}
+\begin{DoxyCompactList}\small\item\em Hit wrapper. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_wrapper_1_1_hit_manipulator}{Geant4HitWrapper::HitManipulator} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a7a4b540fa0c4983ebd755a049a2794b7}{Manip}
+\begin{DoxyCompactList}\small\item\em Hit manipulator. \item\end{DoxyCompactList}\item 
+typedef std::map$<$ VolumeID, size\_\-t $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a0d4d87fb90cf83dceff0b43928426135}{Keys}
+\begin{DoxyCompactList}\small\item\em Hit key map for fast random lookup. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename TYPE $>$ }\\\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a44b9a5315be35dd719cac956ff6f7417}{Geant4HitCollection} (const std::string \&det, const std::string \&coll, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive}{Geant4Sensitive} $\ast$sd)
+\begin{DoxyCompactList}\small\item\em Initializing constructor (C++ version). \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE $>$ }\\\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a747970f0854957004594f49ad45db23f}{Geant4HitCollection} (const std::string \&det, const std::string \&coll, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive}{Geant4Sensitive} $\ast$sd, const TYPE $\ast$)
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a2e586ee3c0a22239858669a4d310e386}{$\sim$Geant4HitCollection} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_component_cast}{ComponentCast} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a263640a2e743c7c59bc497c456fe735a}{type} () const 
+\begin{DoxyCompactList}\small\item\em Type information of the object stored. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_component_cast}{ComponentCast} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a59732e13080bb3b440b3f6674743d80a}{vector\_\-type} () const 
+\begin{DoxyCompactList}\small\item\em Type information of the vector type for extracting data. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a02e7c1123e909477f4b7951e94c10768}{clear} ()
+\begin{DoxyCompactList}\small\item\em Clear the collection (Deletes all valid references to real hits). \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a163e9842ded780e1f39dbe6701c132d8}{setOptimize} (int flag)
+\begin{DoxyCompactList}\small\item\em Set optimization flags. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a5d4547aa0f97d5ef2391986f634806d5}{setSensitive} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive}{Geant4Sensitive} $\ast$detector)
+\begin{DoxyCompactList}\small\item\em Set the sensitive detector. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive}{Geant4Sensitive} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_ad0913228818c6f091502597a00267725}{sensitive} () const 
+\begin{DoxyCompactList}\small\item\em Access the sensitive detector. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_g4_v_hit}{G4VHit} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a43c7326636e5b90a2b114d0fb0696c83}{GetHit} (size\_\-t which) const 
+\begin{DoxyCompactList}\small\item\em Access individual hits. \item\end{DoxyCompactList}\item 
+virtual size\_\-t \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a0d6716e5834a70694d942deb0a412c2d}{GetSize} () const 
+\begin{DoxyCompactList}\small\item\em Access the collection size. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_wrapper}{Geant4HitWrapper} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a6d42d1abdf6f052cc6606f0c55d55388}{hit} (size\_\-t which)
+\begin{DoxyCompactList}\small\item\em Access the hit wrapper. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_wrapper}{Geant4HitWrapper} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a50270ebfe8e744e54db874ec5d8ab075}{hit} (size\_\-t which) const 
+\begin{DoxyCompactList}\small\item\em Access the hit wrapper (CONST). \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE $>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_ac9eec55500c5cc2af9cd0892c8956b76}{add} (TYPE $\ast$hit\_\-pointer)
+\begin{DoxyCompactList}\small\item\em Add a new hit with a check, that the hit is of the same type. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE $>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a881aca58ab7a524451faf1ae4159dfe4}{add} (VolumeID key, TYPE $\ast$hit\_\-pointer)
+\begin{DoxyCompactList}\small\item\em Add a new hit with a check, that the hit is of the same type. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE $>$ }\\TYPE $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a7dfff7bafded0c36cfe093d477b1e518}{find} (const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_1_1_compare}{Compare} \&cmp)
+\begin{DoxyCompactList}\small\item\em Find hits in a collection by comparison of attributes. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE $>$ }\\TYPE $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_acc76f5d25e9936860343b5457829426c}{findByKey} (VolumeID key)
+\begin{DoxyCompactList}\small\item\em Find hits in a collection by comparison of key value. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE $>$ }\\std::vector$<$ TYPE $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a956b41eb42d71e0270e266d4776ee778}{releaseHits} ()
+\begin{DoxyCompactList}\small\item\em Release all hits from the Geant4 container and pass ownership to the caller. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a38a222d3123281d7bb8f19f98027ec0b}{releaseHitsUnchecked} (std::vector$<$ void $\ast$ $>$ \&result)
+\begin{DoxyCompactList}\small\item\em Release all hits from the Geant4 container and pass ownership to the caller. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE $>$ }\\std::vector$<$ TYPE $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a89b8d192b634abba30bcebe231dbf43d}{getHits} ()
+\begin{DoxyCompactList}\small\item\em Release all hits from the Geant4 container. Ownership stays with the container. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a8faab9f1247e2d705da1c501c84197b5}{getHitsUnchecked} (std::vector$<$ void $\ast$ $>$ \&result)
+\begin{DoxyCompactList}\small\item\em Release all hits from the Geant4 container. Ownership stays with the container. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+enum DD4hep::Simulation::Geant4HitCollection:: \{ ... \}  \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a7f71d7699e398712740081192f4dd846}{OptimizationFlags}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_abd59378fa4d12c151299841d340fd63e}{newInstance} ()
+\begin{DoxyCompactList}\small\item\em Notification to increase the instance counter. \item\end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a4c854c0d590b4d453b2863933dfa31a1}{findHit} (const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_1_1_compare}{Compare} \&cmp)
+\begin{DoxyCompactList}\small\item\em Find hit in a collection by comparison of attributes. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_wrapper}{Geant4HitWrapper} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a912bb8ef9922058b0dbb3dbc5ee116bc}{findHitByKey} (VolumeID key)
+\begin{DoxyCompactList}\small\item\em Find hit in a collection by comparison of the key. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a0bd80f5c59a487fef77a04020c9c24a2}{releaseData} (const \hyperlink{class_d_d4hep_1_1_component_cast}{ComponentCast} \&cast, std::vector$<$ void $\ast$ $>$ $\ast$result)
+\begin{DoxyCompactList}\small\item\em Release all hits from the Geant4 container and pass ownership to the caller. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a3374851f839f6caf7eb95aa84aa4d5a8}{getData} (const \hyperlink{class_d_d4hep_1_1_component_cast}{ComponentCast} \&cast, std::vector$<$ void $\ast$ $>$ $\ast$result)
+\begin{DoxyCompactList}\small\item\em Release all hits from the Geant4 container. Ownership stays with the container. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_ada2cbec73b2d5005b514a33b44a1dc05}{WrappedHits} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a8a2e237f209928a1598ccf0b72cd3d44}{m\_\-hits}
+\begin{DoxyCompactList}\small\item\em The collection of hit pointers in the wrapped format. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive}{Geant4Sensitive} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_aaf3c4ccd370663a99af26333af3486e7}{m\_\-detector}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_handle}{Handle} to the sensitive detector. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_wrapper_1_1_hit_manipulator}{Manip} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_ab65b438cada304dbfe15f9be6a329001}{m\_\-manipulator}
+\begin{DoxyCompactList}\small\item\em The type of the objects in this collection. Set by the constructor. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a67cef40b22ad50d9c6a5fdd620e1786f}{m\_\-lastHit}
+\begin{DoxyCompactList}\small\item\em Memorize for speedup the last searched hit. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a0d4d87fb90cf83dceff0b43928426135}{Keys} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a3d45d2544cef7139ad425c2abc66c45a}{m\_\-keys}
+\begin{DoxyCompactList}\small\item\em Hit key map for fast random lookup. \item\end{DoxyCompactList}\item 
+\hyperlink{union_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_1_1_collection_flags}{CollectionFlags} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a9c557501c37d783cbc1be1443aef03a9}{m\_\-flags}
+\begin{DoxyCompactList}\small\item\em Optimization flags. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generic hit container class using \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_wrapper}{Geant4HitWrapper} objects. Opaque hit collection. This hit collection is for good reasons homomorph, Polymorphism without an explicit type would only confuse most users.
+
+Note: This hit collection is optimized to search repeatedly the same cell using
+
+template $<$typename type$>$=\char`\"{}\char`\"{}$>$ TYPE$\ast$ find(const Compare\& cmp) const;
+
+by remembering the last search index. The collection uses this optimization if the corresponding flag OPTIMIZE\_\-REPEATEDLOOKUP is set:
+
+setOptimize(OPTIMIZE\_\-REPEATEDLOOKUP);
+
+The last search index is automatically set to last object insertion, if one happened between 2 search calls. For the typical use case, there always contributions to the same hit are added, this should reduce the lookup speed from O(n) to O(1). This obviously only helps, if contributions to the same cell come in sequence ie. from the same G4Track.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 201 of file Geant4HitCollection.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a0d4d87fb90cf83dceff0b43928426135}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!Keys@{Keys}}
+\index{Keys@{Keys}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{Keys}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$VolumeID, size\_\-t$>$ {\bf DD4hep::Simulation::Geant4HitCollection::Keys}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a0d4d87fb90cf83dceff0b43928426135}
+
+
+Hit key map for fast random lookup. 
+
+Definition at line 209 of file Geant4HitCollection.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a7a4b540fa0c4983ebd755a049a2794b7}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!Manip@{Manip}}
+\index{Manip@{Manip}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{Manip}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geant4HitWrapper::HitManipulator} {\bf DD4hep::Simulation::Geant4HitCollection::Manip}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a7a4b540fa0c4983ebd755a049a2794b7}
+
+
+Hit manipulator. 
+
+Definition at line 207 of file Geant4HitCollection.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_ada2cbec73b2d5005b514a33b44a1dc05}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!WrappedHits@{WrappedHits}}
+\index{WrappedHits@{WrappedHits}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{WrappedHits}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf Geant4HitWrapper}$>$ {\bf DD4hep::Simulation::Geant4HitCollection::WrappedHits}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_ada2cbec73b2d5005b514a33b44a1dc05}
+
+
+Hit wrapper. Local type declarations 
+
+Definition at line 205 of file Geant4HitCollection.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a8fe757ca872800562e5317df0597c844}{
+\subsubsection[{"@10}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a8fe757ca872800562e5317df0597c844}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{OPTIMIZE\_\-NONE@{OPTIMIZE\_\-NONE}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!OPTIMIZE\_\-NONE@{OPTIMIZE\_\-NONE}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a8fe757ca872800562e5317df0597c844a534e41b5b4b31668654894c119d79f10}{
+OPTIMIZE\_\-NONE}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a8fe757ca872800562e5317df0597c844a534e41b5b4b31668654894c119d79f10}
+}]\index{OPTIMIZE\_\-REPEATEDLOOKUP@{OPTIMIZE\_\-REPEATEDLOOKUP}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!OPTIMIZE\_\-REPEATEDLOOKUP@{OPTIMIZE\_\-REPEATEDLOOKUP}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a8fe757ca872800562e5317df0597c844a3831e14471c6e0e7b8b0349696913ea9}{
+OPTIMIZE\_\-REPEATEDLOOKUP}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a8fe757ca872800562e5317df0597c844a3831e14471c6e0e7b8b0349696913ea9}
+}]\index{OPTIMIZE\_\-MAPPEDLOOKUP@{OPTIMIZE\_\-MAPPEDLOOKUP}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!OPTIMIZE\_\-MAPPEDLOOKUP@{OPTIMIZE\_\-MAPPEDLOOKUP}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a8fe757ca872800562e5317df0597c844a762d4b5ef6144a6b8d6b9f5ae9f70450}{
+OPTIMIZE\_\-MAPPEDLOOKUP}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a8fe757ca872800562e5317df0597c844a762d4b5ef6144a6b8d6b9f5ae9f70450}
+}]\index{OPTIMIZE\_\-LAST@{OPTIMIZE\_\-LAST}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!OPTIMIZE\_\-LAST@{OPTIMIZE\_\-LAST}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a8fe757ca872800562e5317df0597c844ac14cd6ddf70dd174f944eca4790515b8}{
+OPTIMIZE\_\-LAST}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a8fe757ca872800562e5317df0597c844ac14cd6ddf70dd174f944eca4790515b8}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 263 of file Geant4HitCollection.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a44b9a5315be35dd719cac956ff6f7417}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!Geant4HitCollection@{Geant4HitCollection}}
+\index{Geant4HitCollection@{Geant4HitCollection}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{Geant4HitCollection}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE $>$ DD4hep::Simulation::Geant4HitCollection::Geant4HitCollection (const std::string \& {\em det}, \/  const std::string \& {\em coll}, \/  {\bf Geant4Sensitive} $\ast$ {\em sd})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a44b9a5315be35dd719cac956ff6f7417}
+
+
+Initializing constructor (C++ version). 
+
+Definition at line 272 of file Geant4HitCollection.h.
+
+References m\_\-flags, m\_\-hits, newInstance(), OPTIMIZE\_\-REPEATEDLOOKUP, and DD4hep::Simulation::Geant4HitCollection::CollectionFlags::value.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a747970f0854957004594f49ad45db23f}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!Geant4HitCollection@{Geant4HitCollection}}
+\index{Geant4HitCollection@{Geant4HitCollection}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{Geant4HitCollection}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE $>$ DD4hep::Simulation::Geant4HitCollection::Geant4HitCollection (const std::string \& {\em det}, \/  const std::string \& {\em coll}, \/  {\bf Geant4Sensitive} $\ast$ {\em sd}, \/  const TYPE $\ast$)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a747970f0854957004594f49ad45db23f}
+
+
+Initializing constructor. 
+
+Definition at line 283 of file Geant4HitCollection.h.
+
+References m\_\-flags, m\_\-hits, newInstance(), and DD4hep::Simulation::Geant4HitCollection::CollectionFlags::value.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a2e586ee3c0a22239858669a4d310e386}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!$\sim$Geant4HitCollection@{$\sim$Geant4HitCollection}}
+\index{$\sim$Geant4HitCollection@{$\sim$Geant4HitCollection}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{$\sim$Geant4HitCollection}]{\setlength{\rightskip}{0pt plus 5cm}Geant4HitCollection::$\sim$Geant4HitCollection ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a2e586ee3c0a22239858669a4d310e386}
+
+
+Default destructor. 
+
+Definition at line 82 of file Geant4HitCollection.cpp.
+
+References DD4hep::InstanceCount::decrement(), m\_\-hits, and m\_\-keys.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a881aca58ab7a524451faf1ae4159dfe4}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!add@{add}}
+\index{add@{add}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE $>$ void DD4hep::Simulation::Geant4HitCollection::add (VolumeID {\em key}, \/  TYPE $\ast$ {\em hit\_\-pointer})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a881aca58ab7a524451faf1ae4159dfe4}
+
+
+Add a new hit with a check, that the hit is of the same type. 
+
+Definition at line 335 of file Geant4HitCollection.h.
+
+References DD4hep::Simulation::Geant4HitWrapper::HitManipulator::castHit(), DD4hep::Utilities::GetName(), m\_\-hits, m\_\-keys, m\_\-lastHit, and m\_\-manipulator.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_ac9eec55500c5cc2af9cd0892c8956b76}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!add@{add}}
+\index{add@{add}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE $>$ void DD4hep::Simulation::Geant4HitCollection::add (TYPE $\ast$ {\em hit\_\-pointer})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_ac9eec55500c5cc2af9cd0892c8956b76}
+
+
+Add a new hit with a check, that the hit is of the same type. 
+
+Definition at line 329 of file Geant4HitCollection.h.
+
+References DD4hep::Simulation::Geant4HitWrapper::HitManipulator::castHit(), m\_\-hits, m\_\-lastHit, and m\_\-manipulator.
+
+Referenced by DD4hep::Simulation::TrackerWeighted::extractHit(), DD4hep::Simulation::TrackerCombine::extractHit(), DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::process(), DD4hep::Simulation::Geant4EscapeCounter::process(), and Tests::Geant4SensitiveAction$<$ T $>$::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a02e7c1123e909477f4b7951e94c10768}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!clear@{clear}}
+\index{clear@{clear}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4HitCollection::clear ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a02e7c1123e909477f4b7951e94c10768}
+
+
+Clear the collection (Deletes all valid references to real hits). 
+
+Definition at line 104 of file Geant4HitCollection.cpp.
+
+References m\_\-hits, m\_\-keys, and m\_\-lastHit.
+
+Referenced by DD4hep::Simulation::moveEntries().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a7dfff7bafded0c36cfe093d477b1e518}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!find@{find}}
+\index{find@{find}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE $>$ TYPE$\ast$ DD4hep::Simulation::Geant4HitCollection::find (const {\bf Compare} \& {\em cmp})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a7dfff7bafded0c36cfe093d477b1e518}
+
+
+Find hits in a collection by comparison of attributes. 
+
+Definition at line 346 of file Geant4HitCollection.h.
+
+References findHit().
+
+Referenced by DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_acc76f5d25e9936860343b5457829426c}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!findByKey@{findByKey}}
+\index{findByKey@{findByKey}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{findByKey}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE $>$ TYPE$\ast$ DD4hep::Simulation::Geant4HitCollection::findByKey (VolumeID {\em key})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_acc76f5d25e9936860343b5457829426c}
+
+
+Find hits in a collection by comparison of key value. 
+
+Definition at line 350 of file Geant4HitCollection.h.
+
+References m\_\-hits, m\_\-keys, and m\_\-lastHit.
+
+Referenced by DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a4c854c0d590b4d453b2863933dfa31a1}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!findHit@{findHit}}
+\index{findHit@{findHit}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{findHit}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ Geant4HitCollection::findHit (const {\bf Compare} \& {\em cmp})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a4c854c0d590b4d453b2863933dfa31a1}
+
+
+Find hit in a collection by comparison of attributes. 
+
+Definition at line 111 of file Geant4HitCollection.cpp.
+
+References DD4hep::Simulation::Geant4HitCollection::CollectionFlags::bits, m\_\-flags, m\_\-hits, m\_\-lastHit, and DD4hep::Simulation::Geant4HitCollection::CollectionFlags::BitItems::repeatedLookup.
+
+Referenced by find().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a912bb8ef9922058b0dbb3dbc5ee116bc}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!findHitByKey@{findHitByKey}}
+\index{findHitByKey@{findHitByKey}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{findHitByKey}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4HitWrapper} $\ast$ Geant4HitCollection::findHitByKey (VolumeID {\em key})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a912bb8ef9922058b0dbb3dbc5ee116bc}
+
+
+Find hit in a collection by comparison of the key. 
+
+Definition at line 127 of file Geant4HitCollection.cpp.
+
+References m\_\-hits, m\_\-keys, and m\_\-lastHit.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a3374851f839f6caf7eb95aa84aa4d5a8}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!getData@{getData}}
+\index{getData@{getData}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{getData}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4HitCollection::getData (const {\bf ComponentCast} \& {\em cast}, \/  std::vector$<$ void $\ast$ $>$ $\ast$ {\em result})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a3374851f839f6caf7eb95aa84aa4d5a8}
+
+
+Release all hits from the Geant4 container. Ownership stays with the container. 
+
+Definition at line 149 of file Geant4HitCollection.cpp.
+
+References DD4hep::ComponentCast::apply\_\-downCast(), DD4hep::Simulation::Geant4HitWrapper::HitManipulator::cast, DD4hep::Simulation::Geant4HitWrapper::data(), dd4hep::m, m\_\-hits, and DD4hep::Simulation::Geant4HitWrapper::manip().
+
+Referenced by getHits().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a43c7326636e5b90a2b114d0fb0696c83}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!GetHit@{GetHit}}
+\index{GetHit@{GetHit}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{GetHit}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf G4VHit}$\ast$ DD4hep::Simulation::Geant4HitCollection::GetHit (size\_\-t {\em which}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a43c7326636e5b90a2b114d0fb0696c83}
+
+
+Access individual hits. 
+
+Definition at line 313 of file Geant4HitCollection.h.
+
+References m\_\-hits.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a89b8d192b634abba30bcebe231dbf43d}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!getHits@{getHits}}
+\index{getHits@{getHits}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{getHits}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE $>$ std::vector$<$TYPE$\ast$$>$ DD4hep::Simulation::Geant4HitCollection::getHits ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a89b8d192b634abba30bcebe231dbf43d}
+
+
+Release all hits from the Geant4 container. Ownership stays with the container. 
+
+Definition at line 371 of file Geant4HitCollection.h.
+
+References getData(), and m\_\-hits.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a8faab9f1247e2d705da1c501c84197b5}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!getHitsUnchecked@{getHitsUnchecked}}
+\index{getHitsUnchecked@{getHitsUnchecked}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{getHitsUnchecked}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4HitCollection::getHitsUnchecked (std::vector$<$ void $\ast$ $>$ \& {\em result})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a8faab9f1247e2d705da1c501c84197b5}
+
+
+Release all hits from the Geant4 container. Ownership stays with the container. 
+
+Definition at line 171 of file Geant4HitCollection.cpp.
+
+References DD4hep::Simulation::Geant4HitWrapper::data(), and m\_\-hits.
+
+Referenced by DD4hep::Simulation::Geant4Output2ROOT::saveCollection().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a0d6716e5834a70694d942deb0a412c2d}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{GetSize}]{\setlength{\rightskip}{0pt plus 5cm}virtual size\_\-t DD4hep::Simulation::Geant4HitCollection::GetSize () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a0d6716e5834a70694d942deb0a412c2d}
+
+
+Access the collection size. 
+
+Definition at line 317 of file Geant4HitCollection.h.
+
+References m\_\-hits.
+
+Referenced by DD4hep::Simulation::TrackerWeighted::extractHit(), DD4hep::Simulation::moveEntries(), DD4hep::Simulation::Geant4ParticlePrint::printParticle(), and DD4hep::Simulation::Geant4Output2ROOT::saveCollection().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a50270ebfe8e744e54db874ec5d8ab075}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!hit@{hit}}
+\index{hit@{hit}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{hit}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Geant4HitWrapper}\& DD4hep::Simulation::Geant4HitCollection::hit (size\_\-t {\em which}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a50270ebfe8e744e54db874ec5d8ab075}
+
+
+Access the hit wrapper (CONST). 
+
+Definition at line 325 of file Geant4HitCollection.h.
+
+References m\_\-hits.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a6d42d1abdf6f052cc6606f0c55d55388}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!hit@{hit}}
+\index{hit@{hit}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{hit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4HitWrapper}\& DD4hep::Simulation::Geant4HitCollection::hit (size\_\-t {\em which})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a6d42d1abdf6f052cc6606f0c55d55388}
+
+
+Access the hit wrapper. 
+
+Definition at line 321 of file Geant4HitCollection.h.
+
+References m\_\-hits.
+
+Referenced by DD4hep::Simulation::moveEntries(), DD4hep::Simulation::Geant4ParticlePrint::printParticle(), and DD4hep::Simulation::Geant4Output2ROOT::saveCollection().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_abd59378fa4d12c151299841d340fd63e}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!newInstance@{newInstance}}
+\index{newInstance@{newInstance}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{newInstance}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4HitCollection::newInstance ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_abd59378fa4d12c151299841d340fd63e}
+
+
+Notification to increase the instance counter. 
+
+Definition at line 99 of file Geant4HitCollection.cpp.
+
+References DD4hep::InstanceCount::increment().
+
+Referenced by Geant4HitCollection().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a0bd80f5c59a487fef77a04020c9c24a2}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!releaseData@{releaseData}}
+\index{releaseData@{releaseData}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{releaseData}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4HitCollection::releaseData (const {\bf ComponentCast} \& {\em cast}, \/  std::vector$<$ void $\ast$ $>$ $\ast$ {\em result})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a0bd80f5c59a487fef77a04020c9c24a2}
+
+
+Release all hits from the Geant4 container and pass ownership to the caller. 
+
+Definition at line 135 of file Geant4HitCollection.cpp.
+
+References DD4hep::ComponentCast::apply\_\-downCast(), DD4hep::Simulation::Geant4HitWrapper::HitManipulator::cast, dd4hep::m, m\_\-hits, m\_\-keys, m\_\-lastHit, DD4hep::Simulation::Geant4HitWrapper::manip(), and DD4hep::Simulation::Geant4HitWrapper::release().
+
+Referenced by releaseHits().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a956b41eb42d71e0270e266d4776ee778}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!releaseHits@{releaseHits}}
+\index{releaseHits@{releaseHits}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{releaseHits}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE $>$ std::vector$<$TYPE$\ast$$>$ DD4hep::Simulation::Geant4HitCollection::releaseHits ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a956b41eb42d71e0270e266d4776ee778}
+
+
+Release all hits from the Geant4 container and pass ownership to the caller. 
+
+Definition at line 358 of file Geant4HitCollection.h.
+
+References m\_\-hits, m\_\-keys, m\_\-lastHit, and releaseData().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a38a222d3123281d7bb8f19f98027ec0b}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!releaseHitsUnchecked@{releaseHitsUnchecked}}
+\index{releaseHitsUnchecked@{releaseHitsUnchecked}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{releaseHitsUnchecked}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4HitCollection::releaseHitsUnchecked (std::vector$<$ void $\ast$ $>$ \& {\em result})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a38a222d3123281d7bb8f19f98027ec0b}
+
+
+Release all hits from the Geant4 container and pass ownership to the caller. 
+
+Definition at line 161 of file Geant4HitCollection.cpp.
+
+References m\_\-hits, m\_\-keys, m\_\-lastHit, and DD4hep::Simulation::Geant4HitWrapper::release().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_ad0913228818c6f091502597a00267725}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!sensitive@{sensitive}}
+\index{sensitive@{sensitive}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{sensitive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Sensitive}$\ast$ DD4hep::Simulation::Geant4HitCollection::sensitive () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_ad0913228818c6f091502597a00267725}
+
+
+Access the sensitive detector. 
+
+Definition at line 309 of file Geant4HitCollection.h.
+
+References m\_\-detector.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a163e9842ded780e1f39dbe6701c132d8}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!setOptimize@{setOptimize}}
+\index{setOptimize@{setOptimize}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{setOptimize}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Simulation::Geant4HitCollection::setOptimize (int {\em flag})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a163e9842ded780e1f39dbe6701c132d8}
+
+
+Set optimization flags. 
+
+Definition at line 301 of file Geant4HitCollection.h.
+
+References m\_\-flags, and DD4hep::Simulation::Geant4HitCollection::CollectionFlags::value.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a5d4547aa0f97d5ef2391986f634806d5}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!setSensitive@{setSensitive}}
+\index{setSensitive@{setSensitive}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{setSensitive}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Simulation::Geant4HitCollection::setSensitive ({\bf Geant4Sensitive} $\ast$ {\em detector})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a5d4547aa0f97d5ef2391986f634806d5}
+
+
+Set the sensitive detector. 
+
+Definition at line 305 of file Geant4HitCollection.h.
+
+References m\_\-detector.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a263640a2e743c7c59bc497c456fe735a}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!type@{type}}
+\index{type@{type}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf ComponentCast} \& Geant4HitCollection::type () const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a263640a2e743c7c59bc497c456fe735a}
+
+
+Type information of the object stored. 
+
+Definition at line 89 of file Geant4HitCollection.cpp.
+
+References DD4hep::Simulation::Geant4HitWrapper::HitManipulator::cast, and m\_\-manipulator.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a59732e13080bb3b440b3f6674743d80a}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!vector\_\-type@{vector\_\-type}}
+\index{vector\_\-type@{vector\_\-type}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{vector\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf ComponentCast} \& Geant4HitCollection::vector\_\-type () const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a59732e13080bb3b440b3f6674743d80a}
+
+
+Type information of the vector type for extracting data. 
+
+Definition at line 94 of file Geant4HitCollection.cpp.
+
+References m\_\-manipulator, and DD4hep::Simulation::Geant4HitWrapper::HitManipulator::vec\_\-type.
+
+Referenced by DD4hep::Simulation::Geant4Output2ROOT::saveCollection().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_aaf3c4ccd370663a99af26333af3486e7}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!m\_\-detector@{m\_\-detector}}
+\index{m\_\-detector@{m\_\-detector}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{m\_\-detector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Sensitive}$\ast$ {\bf DD4hep::Simulation::Geant4HitCollection::m\_\-detector}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_aaf3c4ccd370663a99af26333af3486e7}
+
+
+\hyperlink{class_d_d4hep_1_1_handle}{Handle} to the sensitive detector. 
+
+Definition at line 240 of file Geant4HitCollection.h.
+
+Referenced by sensitive(), and setSensitive().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a9c557501c37d783cbc1be1443aef03a9}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!m\_\-flags@{m\_\-flags}}
+\index{m\_\-flags@{m\_\-flags}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{m\_\-flags}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CollectionFlags} {\bf DD4hep::Simulation::Geant4HitCollection::m\_\-flags}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a9c557501c37d783cbc1be1443aef03a9}
+
+
+Optimization flags. 
+
+Definition at line 248 of file Geant4HitCollection.h.
+
+Referenced by findHit(), Geant4HitCollection(), and setOptimize().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a8a2e237f209928a1598ccf0b72cd3d44}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!m\_\-hits@{m\_\-hits}}
+\index{m\_\-hits@{m\_\-hits}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{m\_\-hits}]{\setlength{\rightskip}{0pt plus 5cm}{\bf WrappedHits} {\bf DD4hep::Simulation::Geant4HitCollection::m\_\-hits}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a8a2e237f209928a1598ccf0b72cd3d44}
+
+
+The collection of hit pointers in the wrapped format. 
+
+Definition at line 238 of file Geant4HitCollection.h.
+
+Referenced by add(), clear(), findByKey(), findHit(), findHitByKey(), Geant4HitCollection(), getData(), GetHit(), getHits(), getHitsUnchecked(), GetSize(), hit(), releaseData(), releaseHits(), releaseHitsUnchecked(), and $\sim$Geant4HitCollection().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a3d45d2544cef7139ad425c2abc66c45a}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!m\_\-keys@{m\_\-keys}}
+\index{m\_\-keys@{m\_\-keys}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{m\_\-keys}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Keys} {\bf DD4hep::Simulation::Geant4HitCollection::m\_\-keys}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a3d45d2544cef7139ad425c2abc66c45a}
+
+
+Hit key map for fast random lookup. 
+
+Definition at line 246 of file Geant4HitCollection.h.
+
+Referenced by add(), clear(), findByKey(), findHitByKey(), releaseData(), releaseHits(), releaseHitsUnchecked(), and $\sim$Geant4HitCollection().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a67cef40b22ad50d9c6a5fdd620e1786f}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!m\_\-lastHit@{m\_\-lastHit}}
+\index{m\_\-lastHit@{m\_\-lastHit}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{m\_\-lastHit}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t {\bf DD4hep::Simulation::Geant4HitCollection::m\_\-lastHit}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a67cef40b22ad50d9c6a5fdd620e1786f}
+
+
+Memorize for speedup the last searched hit. 
+
+Definition at line 244 of file Geant4HitCollection.h.
+
+Referenced by add(), clear(), findByKey(), findHit(), findHitByKey(), releaseData(), releaseHits(), and releaseHitsUnchecked().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_ab65b438cada304dbfe15f9be6a329001}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!m\_\-manipulator@{m\_\-manipulator}}
+\index{m\_\-manipulator@{m\_\-manipulator}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{m\_\-manipulator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Manip}$\ast$ {\bf DD4hep::Simulation::Geant4HitCollection::m\_\-manipulator}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_ab65b438cada304dbfe15f9be6a329001}
+
+
+The type of the objects in this collection. Set by the constructor. 
+
+Definition at line 242 of file Geant4HitCollection.h.
+
+Referenced by add(), type(), and vector\_\-type().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a7f71d7699e398712740081192f4dd846}{
+\index{DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}!OptimizationFlags@{OptimizationFlags}}
+\index{OptimizationFlags@{OptimizationFlags}!DD4hep::Simulation::Geant4HitCollection@{DD4hep::Simulation::Geant4HitCollection}}
+\subsubsection[{OptimizationFlags}]{\setlength{\rightskip}{0pt plus 5cm}enum \{ ... \}   {\bf DD4hep::Simulation::Geant4HitCollection::OptimizationFlags}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection_a7f71d7699e398712740081192f4dd846}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_hit_collection_8h}{Geant4HitCollection.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_hit_collection_8cpp}{Geant4HitCollection.cpp}\end{DoxyCompactItemize}

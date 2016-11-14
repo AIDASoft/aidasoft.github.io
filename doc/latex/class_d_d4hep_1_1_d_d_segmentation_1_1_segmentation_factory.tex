@@ -1,0 +1,178 @@
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory}{
+\section{DD4hep::DDSegmentation::SegmentationFactory Class Reference}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory}\index{DD4hep::DDSegmentation::SegmentationFactory@{DD4hep::DDSegmentation::SegmentationFactory}}
+}
+
+
+Factory for creating segmentation objects by type name.  
+
+
+{\ttfamily \#include $<$SegmentationFactory.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation}{Segmentation} $\ast$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_ad7f56347bdd4fd2e92df071166f29a40}{create} (const std::string \&name, const std::string \&identifier=\char`\"{}\char`\"{}) const 
+\begin{DoxyCompactList}\small\item\em Create a new segmentation object with the given type name. Returns NULL if type name is unknown. \item\end{DoxyCompactList}\item 
+std::vector$<$ std::string $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_ada61afcde940d71133c810dd4b4424e0}{registeredSegmentations} () const 
+\begin{DoxyCompactList}\small\item\em Access to the list of registered segmentations. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory}{SegmentationFactory} $\ast$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_a92954fdbd0bc642e5b594ef7f4ee3cfc}{instance} ()
+\begin{DoxyCompactList}\small\item\em Access to the global factory instance. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_af28879ad5d0b45254c69234ec4a90fe5}{SegmentationFactory} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_a6255e4a05ac17c8e9d14d602dbc9d925}{SegmentationFactory} (const \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory}{SegmentationFactory} \&)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_ad6a96f6c5e29ff089d4c0d4196133d07}{$\sim$SegmentationFactory} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_afb766eaf4c362ae719d29ca764e8cdeb}{registerSegmentation} (const std::string \&name, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_creator_base}{SegmentationCreatorBase} $\ast$creator)
+\begin{DoxyCompactList}\small\item\em Registers a new \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_creator}{SegmentationCreator} with the factory. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::map$<$ std::string, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_creator_base}{SegmentationCreatorBase} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_a11fdb394993e5ecbd8dcd67ce89a4552}{\_\-segmentations}
+\begin{DoxyCompactList}\small\item\em Map to store SegmentationCreators by name. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory}{SegmentationFactory} $\ast$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_a1feb10e4594795939255eb57b80a76dd}{\_\-instance} = 0
+\begin{DoxyCompactList}\small\item\em The global factory instance. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_ab25c2677f6e2445716078cc5c9e87009}{SegmentationCreatorBase}
+\begin{DoxyCompactList}\small\item\em Allow SegmentationCreators to register themselves with the factory. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Factory for creating segmentation objects by type name. 
+
+Definition at line 49 of file SegmentationFactory.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_af28879ad5d0b45254c69234ec4a90fe5}{
+\index{DD4hep::DDSegmentation::SegmentationFactory@{DD4hep::DDSegmentation::SegmentationFactory}!SegmentationFactory@{SegmentationFactory}}
+\index{SegmentationFactory@{SegmentationFactory}!DD4hep::DDSegmentation::SegmentationFactory@{DD4hep::DDSegmentation::SegmentationFactory}}
+\subsubsection[{SegmentationFactory}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDSegmentation::SegmentationFactory::SegmentationFactory ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_af28879ad5d0b45254c69234ec4a90fe5}
+
+
+Default constructor. 
+
+Definition at line 61 of file SegmentationFactory.h.
+
+Referenced by instance().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_a6255e4a05ac17c8e9d14d602dbc9d925}{
+\index{DD4hep::DDSegmentation::SegmentationFactory@{DD4hep::DDSegmentation::SegmentationFactory}!SegmentationFactory@{SegmentationFactory}}
+\index{SegmentationFactory@{SegmentationFactory}!DD4hep::DDSegmentation::SegmentationFactory@{DD4hep::DDSegmentation::SegmentationFactory}}
+\subsubsection[{SegmentationFactory}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDSegmentation::SegmentationFactory::SegmentationFactory (const {\bf SegmentationFactory} \&)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_a6255e4a05ac17c8e9d14d602dbc9d925}
+
+
+Copy constructor. 
+
+Definition at line 63 of file SegmentationFactory.h.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_ad6a96f6c5e29ff089d4c0d4196133d07}{
+\index{DD4hep::DDSegmentation::SegmentationFactory@{DD4hep::DDSegmentation::SegmentationFactory}!$\sim$SegmentationFactory@{$\sim$SegmentationFactory}}
+\index{$\sim$SegmentationFactory@{$\sim$SegmentationFactory}!DD4hep::DDSegmentation::SegmentationFactory@{DD4hep::DDSegmentation::SegmentationFactory}}
+\subsubsection[{$\sim$SegmentationFactory}]{\setlength{\rightskip}{0pt plus 5cm}virtual DD4hep::DDSegmentation::SegmentationFactory::$\sim$SegmentationFactory ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_ad6a96f6c5e29ff089d4c0d4196133d07}
+
+
+Destructor. 
+
+Definition at line 65 of file SegmentationFactory.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_ad7f56347bdd4fd2e92df071166f29a40}{
+\index{DD4hep::DDSegmentation::SegmentationFactory@{DD4hep::DDSegmentation::SegmentationFactory}!create@{create}}
+\index{create@{create}!DD4hep::DDSegmentation::SegmentationFactory@{DD4hep::DDSegmentation::SegmentationFactory}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Segmentation} $\ast$ DD4hep::DDSegmentation::SegmentationFactory::create (const std::string \& {\em name}, \/  const std::string \& {\em identifier} = {\ttfamily \char`\"{}\char`\"{}}) const}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_ad7f56347bdd4fd2e92df071166f29a40}
+
+
+Create a new segmentation object with the given type name. Returns NULL if type name is unknown. 
+
+Definition at line 33 of file SegmentationFactory.cpp.
+
+References \_\-segmentations.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_a92954fdbd0bc642e5b594ef7f4ee3cfc}{
+\index{DD4hep::DDSegmentation::SegmentationFactory@{DD4hep::DDSegmentation::SegmentationFactory}!instance@{instance}}
+\index{instance@{instance}!DD4hep::DDSegmentation::SegmentationFactory@{DD4hep::DDSegmentation::SegmentationFactory}}
+\subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SegmentationFactory} $\ast$ DD4hep::DDSegmentation::SegmentationFactory::instance ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_a92954fdbd0bc642e5b594ef7f4ee3cfc}
+
+
+Access to the global factory instance. 
+
+Definition at line 25 of file SegmentationFactory.cpp.
+
+References \_\-instance, and SegmentationFactory().
+
+Referenced by DD4hep::DDSegmentation::SegmentationCreatorBase::SegmentationCreatorBase().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_ada61afcde940d71133c810dd4b4424e0}{
+\index{DD4hep::DDSegmentation::SegmentationFactory@{DD4hep::DDSegmentation::SegmentationFactory}!registeredSegmentations@{registeredSegmentations}}
+\index{registeredSegmentations@{registeredSegmentations}!DD4hep::DDSegmentation::SegmentationFactory@{DD4hep::DDSegmentation::SegmentationFactory}}
+\subsubsection[{registeredSegmentations}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ std::string $>$ DD4hep::DDSegmentation::SegmentationFactory::registeredSegmentations () const}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_ada61afcde940d71133c810dd4b4424e0}
+
+
+Access to the list of registered segmentations. 
+
+Definition at line 43 of file SegmentationFactory.cpp.
+
+References \_\-segmentations.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_afb766eaf4c362ae719d29ca764e8cdeb}{
+\index{DD4hep::DDSegmentation::SegmentationFactory@{DD4hep::DDSegmentation::SegmentationFactory}!registerSegmentation@{registerSegmentation}}
+\index{registerSegmentation@{registerSegmentation}!DD4hep::DDSegmentation::SegmentationFactory@{DD4hep::DDSegmentation::SegmentationFactory}}
+\subsubsection[{registerSegmentation}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::SegmentationFactory::registerSegmentation (const std::string \& {\em name}, \/  {\bf SegmentationCreatorBase} $\ast$ {\em creator})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_afb766eaf4c362ae719d29ca764e8cdeb}
+
+
+Registers a new \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_creator}{SegmentationCreator} with the factory. 
+
+Definition at line 53 of file SegmentationFactory.cpp.
+
+References \_\-segmentations.
+
+Referenced by DD4hep::DDSegmentation::SegmentationCreatorBase::SegmentationCreatorBase().
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_ab25c2677f6e2445716078cc5c9e87009}{
+\index{DD4hep::DDSegmentation::SegmentationFactory@{DD4hep::DDSegmentation::SegmentationFactory}!SegmentationCreatorBase@{SegmentationCreatorBase}}
+\index{SegmentationCreatorBase@{SegmentationCreatorBase}!DD4hep::DDSegmentation::SegmentationFactory@{DD4hep::DDSegmentation::SegmentationFactory}}
+\subsubsection[{SegmentationCreatorBase}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf SegmentationCreatorBase}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_ab25c2677f6e2445716078cc5c9e87009}
+
+
+Allow SegmentationCreators to register themselves with the factory. 
+
+Definition at line 51 of file SegmentationFactory.h.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_a1feb10e4594795939255eb57b80a76dd}{
+\index{DD4hep::DDSegmentation::SegmentationFactory@{DD4hep::DDSegmentation::SegmentationFactory}!\_\-instance@{\_\-instance}}
+\index{\_\-instance@{\_\-instance}!DD4hep::DDSegmentation::SegmentationFactory@{DD4hep::DDSegmentation::SegmentationFactory}}
+\subsubsection[{\_\-instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SegmentationFactory} $\ast$ {\bf DD4hep::DDSegmentation::SegmentationFactory::\_\-instance} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_a1feb10e4594795939255eb57b80a76dd}
+
+
+The global factory instance. Initialize the global factory instance. 
+
+Definition at line 72 of file SegmentationFactory.h.
+
+Referenced by instance().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_a11fdb394993e5ecbd8dcd67ce89a4552}{
+\index{DD4hep::DDSegmentation::SegmentationFactory@{DD4hep::DDSegmentation::SegmentationFactory}!\_\-segmentations@{\_\-segmentations}}
+\index{\_\-segmentations@{\_\-segmentations}!DD4hep::DDSegmentation::SegmentationFactory@{DD4hep::DDSegmentation::SegmentationFactory}}
+\subsubsection[{\_\-segmentations}]{\setlength{\rightskip}{0pt plus 5cm}std::map$<$std::string, {\bf SegmentationCreatorBase}$\ast$$>$ {\bf DD4hep::DDSegmentation::SegmentationFactory::\_\-segmentations}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_factory_a11fdb394993e5ecbd8dcd67ce89a4552}
+
+
+Map to store SegmentationCreators by name. 
+
+Definition at line 69 of file SegmentationFactory.h.
+
+Referenced by create(), registeredSegmentations(), and registerSegmentation().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDSegmentation/include/DDSegmentation/\hyperlink{_segmentation_factory_8h}{SegmentationFactory.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDSegmentation/src/\hyperlink{_segmentation_factory_8cpp}{SegmentationFactory.cpp}\end{DoxyCompactItemize}

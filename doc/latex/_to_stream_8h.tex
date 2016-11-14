@@ -1,0 +1,100 @@
+\hypertarget{_to_stream_8h}{
+\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/ToStream.h File Reference}
+\label{_to_stream_8h}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/ToStream.h@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/ToStream.h}}
+}
+{\ttfamily \#include $<$iostream$>$}\par
+{\ttfamily \#include $<$iomanip$>$}\par
+{\ttfamily \#include $<$vector$>$}\par
+{\ttfamily \#include $<$map$>$}\par
+{\ttfamily \#include $<$set$>$}\par
+{\ttfamily \#include $<$list$>$}\par
+{\ttfamily \#include $<$deque$>$}\par
+{\ttfamily \#include $<$string$>$}\par
+{\ttfamily \#include $<$sstream$>$}\par
+{\ttfamily \#include \char`\"{}Math/Point3D.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}Math/Vector3D.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}Math/Vector4D.h\char`\"{}}\par
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_d_d4hep}{DD4hep}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the AIDA detector description toolkit. \item\end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_d_d4hep_1_1_utils}{DD4hep::Utils}
+
+
+\begin{DoxyCompactList}\small\item\em Utility namespace to support boost::spirit. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_to_stream_8h_a9f369ac4e441281f9a6189f18d17b1ab}{DD4HEPPROPERTYPARSERS\_\-PARSERVALUETOSTREAM\_\-H}~1
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class TYPE $>$ }\\std::ostream \& \hyperlink{namespace_d_d4hep_1_1_utils_a99350f29a14b86f5cd3022ee5d699d37}{DD4hep::Utils::toStream} (const TYPE \&obj, std::ostream \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s})
+\item 
+{\footnotesize template$<$class ITERATOR $>$ }\\std::ostream \& \hyperlink{namespace_d_d4hep_1_1_utils_a9e8a16588de4a1111974c06684574814}{DD4hep::Utils::toStream} (ITERATOR first, ITERATOR last, std::ostream \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s}, const std::string \&open, const std::string \&close, const std::string \&delim)
+\begin{DoxyCompactList}\small\item\em the helper function to print the sequence \item\end{DoxyCompactList}\item 
+std::ostream \& \hyperlink{namespace_d_d4hep_1_1_utils_aa018a120e53fa6edbb44f423a31baa21}{DD4hep::Utils::toStream} (const std::string \&obj, std::ostream \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s})
+\begin{DoxyCompactList}\small\item\em the printtout of the strings. \item\end{DoxyCompactList}\item 
+std::ostream \& \hyperlink{namespace_d_d4hep_1_1_utils_a4f1e298302e413af8ba3059d36f85336}{DD4hep::Utils::toStream} (const bool obj, std::ostream \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s})
+\begin{DoxyCompactList}\small\item\em the printout of boolean values \char`\"{}a'la Python\char`\"{} \item\end{DoxyCompactList}\item 
+std::ostream \& \hyperlink{namespace_d_d4hep_1_1_utils_af0a209fec5d19539ace63d69570c70b7}{DD4hep::Utils::toStream} (const float obj, std::ostream \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s}, const int prec=6)
+\begin{DoxyCompactList}\small\item\em the printout of float values with the reasonable precision \item\end{DoxyCompactList}\item 
+std::ostream \& \hyperlink{namespace_d_d4hep_1_1_utils_a63ebaf591a7f6deb9f4f5d9984e3b745}{DD4hep::Utils::toStream} (const double obj, std::ostream \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s}, const int prec=8)
+\begin{DoxyCompactList}\small\item\em the printout of double values with the reasonable precision \item\end{DoxyCompactList}\item 
+std::ostream \& \hyperlink{namespace_d_d4hep_1_1_utils_ac4881c1c93e7105a9f241b2664679409}{DD4hep::Utils::toStream} (const long double obj, std::ostream \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s}, const int prec=10)
+\begin{DoxyCompactList}\small\item\em the printout of long double values with the reasonable precision \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$class KTYPE , class VTYPE $>$ }\\std::ostream \& \hyperlink{namespace_d_d4hep_1_1_utils_aa662bd0ad73f64bb42253a7b5023c8a6}{DD4hep::Utils::toStream} (const std::pair$<$ KTYPE, VTYPE $>$ \&obj, std::ostream \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s})
+\item 
+{\footnotesize template$<$class TYPE , class ALLOCATOR $>$ }\\std::ostream \& \hyperlink{namespace_d_d4hep_1_1_utils_a630d3fee3bf5700b7a13b93ae0749a51}{DD4hep::Utils::toStream} (const std::vector$<$ TYPE, ALLOCATOR $>$ \&obj, std::ostream \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s})
+\item 
+{\footnotesize template$<$class TYPE , class ALLOCATOR $>$ }\\std::ostream \& \hyperlink{namespace_d_d4hep_1_1_utils_a5b757be84d0747306749e83ca9168dc7}{DD4hep::Utils::toStream} (const std::list$<$ TYPE, ALLOCATOR $>$ \&obj, std::ostream \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s})
+\item 
+{\footnotesize template$<$class TYPE , class ALLOCATOR $>$ }\\std::ostream \& \hyperlink{namespace_d_d4hep_1_1_utils_a679a69b91363e8a4e5c122fd9cb78d5f}{DD4hep::Utils::toStream} (const std::deque$<$ TYPE, ALLOCATOR $>$ \&obj, std::ostream \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s})
+\item 
+{\footnotesize template$<$class TYPE , class CMP , class ALLOCATOR $>$ }\\std::ostream \& \hyperlink{namespace_d_d4hep_1_1_utils_a31e3105c511f5f5e359d2bcc119a64a8}{DD4hep::Utils::toStream} (const std::set$<$ TYPE, CMP, ALLOCATOR $>$ \&obj, std::ostream \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s})
+\item 
+{\footnotesize template$<$class KTYPE , class VTYPE , class CMP , class ALLOCATOR $>$ }\\std::ostream \& \hyperlink{namespace_d_d4hep_1_1_utils_ab3abfe8b64637c8b7f60266886d8ab75}{DD4hep::Utils::toStream} (const std::map$<$ KTYPE, VTYPE, CMP, ALLOCATOR $>$ \&obj, std::ostream \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s})
+\item 
+{\footnotesize template$<$class TYPE , unsigned int N$>$ }\\std::ostream \& \hyperlink{namespace_d_d4hep_1_1_utils_a17b02e5ffc5536d55bdb8ff38a938543}{DD4hep::Utils::toStream} (TYPE(\&obj)\mbox{[}N\mbox{]}, std::ostream \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s})
+\item 
+{\footnotesize template$<$class TYPE , unsigned int N$>$ }\\std::ostream \& \hyperlink{namespace_d_d4hep_1_1_utils_a185388ab1fc3cea027102d8da59b4d06}{DD4hep::Utils::toStream} (const TYPE(\&obj)\mbox{[}N\mbox{]}, std::ostream \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s})
+\item 
+{\footnotesize template$<$unsigned int N$>$ }\\std::ostream \& \hyperlink{namespace_d_d4hep_1_1_utils_a89f3b379db439ae144994545375dbe7e}{DD4hep::Utils::toStream} (char(\&obj)\mbox{[}N\mbox{]}, std::ostream \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s})
+\item 
+{\footnotesize template$<$unsigned int N$>$ }\\std::ostream \& \hyperlink{namespace_d_d4hep_1_1_utils_aad9c223ff08f471324e0257468289c01}{DD4hep::Utils::toStream} (const char(\&obj)\mbox{[}N\mbox{]}, std::ostream \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s})
+\item 
+std::ostream \& \hyperlink{namespace_d_d4hep_1_1_utils_a0e52adf037edd29df048973406fc2554}{DD4hep::Utils::toStream} (const char $\ast$obj, std::ostream \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s})
+\item 
+{\footnotesize template$<$class TYPE $>$ }\\std::string \hyperlink{namespace_d_d4hep_1_1_utils_a30628e1cc5d4a214cc8a33f99b38d466}{DD4hep::Utils::toString} (const TYPE \&obj)
+\item 
+std::ostream \& \hyperlink{namespace_d_d4hep_1_1_utils_a2a135f6ca6327240ccb6a2f796c6fc49}{DD4hep::Utils::toStream} (const ROOT::Math::XYZPoint \&obj, std::ostream \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s})
+\begin{DoxyCompactList}\small\item\em print XYZ point \item\end{DoxyCompactList}\item 
+std::ostream \& \hyperlink{namespace_d_d4hep_1_1_utils_ad01ecddf10c1ce2ef7593b0a01516898}{DD4hep::Utils::toStream} (const ROOT::Math::XYZVector \&obj, std::ostream \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s})
+\item 
+std::ostream \& \hyperlink{namespace_d_d4hep_1_1_utils_aba37b7ad17a5c6c9f0db489d583ce2bc}{DD4hep::Utils::toStream} (const ROOT::Math::PxPyPzEVector \&obj, std::ostream \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s})
+\begin{DoxyCompactList}\small\item\em print Lorentz vector \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+implemenattiono fvarioud functions for streaming. this functionality is essenital for usag eof varuodu types as property for the various \hyperlink{namespace_d_d4hep}{DD4hep} components \begin{DoxyAttention}{Attention}
+the implemenation of the specific specializations must be done before the inclusion of this file 
+\end{DoxyAttention}
+\begin{Desc}
+\item[\hyperlink{todo__todo000001}{Todo}]\hyperlink{_to_stream_8h}{ToStream.h} : reimplement in terms of functors, to allow easier especializations \end{Desc}
+
+
+Definition in file \hyperlink{_to_stream_8h_source}{ToStream.h}.
+
+\subsection{Define Documentation}
+\hypertarget{_to_stream_8h_a9f369ac4e441281f9a6189f18d17b1ab}{
+\index{ToStream.h@{ToStream.h}!DD4HEPPROPERTYPARSERS\_\-PARSERVALUETOSTREAM\_\-H@{DD4HEPPROPERTYPARSERS\_\-PARSERVALUETOSTREAM\_\-H}}
+\index{DD4HEPPROPERTYPARSERS\_\-PARSERVALUETOSTREAM\_\-H@{DD4HEPPROPERTYPARSERS\_\-PARSERVALUETOSTREAM\_\-H}!ToStream.h@{ToStream.h}}
+\subsubsection[{DD4HEPPROPERTYPARSERS\_\-PARSERVALUETOSTREAM\_\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEPPROPERTYPARSERS\_\-PARSERVALUETOSTREAM\_\-H~1}}
+\label{_to_stream_8h_a9f369ac4e441281f9a6189f18d17b1ab}
+
+
+Definition at line 14 of file ToStream.h.

@@ -1,0 +1,71 @@
+\hypertarget{namespace_d_d4hep_1_1_alignments_1_1_alignment_tools}{
+\section{DD4hep::Alignments::AlignmentTools Namespace Reference}
+\label{namespace_d_d4hep_1_1_alignments_1_1_alignment_tools}\index{DD4hep::Alignments::AlignmentTools@{DD4hep::Alignments::AlignmentTools}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespace_d_d4hep_1_1_alignments_1_1_alignment_tools_a03e005e692b6427d78828d1785791a50}{copy} (\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} from, \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} to)
+\begin{DoxyCompactList}\small\item\em Copy alignment object from source object. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespace_d_d4hep_1_1_alignments_1_1_alignment_tools_a009dd48155bddca23afba151e2887124}{computeIdeal} (\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} alignment)
+\begin{DoxyCompactList}\small\item\em Compute the ideal/nominal to-\/world transformation from the detector element placement. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespace_d_d4hep_1_1_alignments_1_1_alignment_tools_a531f04a21638b77afa2f81378f5837cd}{computeIdeal} (\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} alignment, const \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_a83282984664b4e1117f46d8a8bc40cb7}{Alignment::NodeList} \&node\_\-list)
+\begin{DoxyCompactList}\small\item\em Compute the ideal/nominal to-\/world transformation from the detector element placement. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespace_d_d4hep_1_1_alignments_1_1_alignment_tools_af9a9447a5a7239e67ab41f0157931822}{computeSurvey} (\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} alignment)
+\begin{DoxyCompactList}\small\item\em Compute the survey to-\/world transformation. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespace_d_d4hep_1_1_alignments_1_1_alignment_tools_a531f04a21638b77afa2f81378f5837cd}{
+\index{DD4hep::Alignments::AlignmentTools@{DD4hep::Alignments::AlignmentTools}!computeIdeal@{computeIdeal}}
+\index{computeIdeal@{computeIdeal}!DD4hep::Alignments::AlignmentTools@{DD4hep::Alignments::AlignmentTools}}
+\subsubsection[{computeIdeal}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Alignments::AlignmentTools::computeIdeal ({\bf Alignment} {\em alignment}, \/  const Alignment::NodeList \& {\em node\_\-list})}}
+\label{namespace_d_d4hep_1_1_alignments_1_1_alignment_tools_a531f04a21638b77afa2f81378f5837cd}
+
+
+Compute the ideal/nominal to-\/world transformation from the detector element placement. Note: Detector information of the alignment data is filled by the caller! 
+
+Definition at line 75 of file AlignmentTools.cpp.
+
+References DD4hep::Geometry::\_\-transform(), DD4hep::Alignments::AlignmentData::detector, DD4hep::Alignments::AlignmentData::detectorTrafo, DD4hep::Alignments::AlignmentData::flag, DD4hep::Alignments::AlignmentData::IDEAL, dd4hep::m, DD4hep::Alignments::AlignmentData::nodes, DD4hep::Geometry::DetElementObject::placement, DD4hep::Alignments::AlignmentData::placement, DD4hep::Handle$<$ T $>$::ptr(), DD4hep::Alignments::AlignmentData::trToWorld, and DD4hep::Alignments::AlignmentData::worldTrafo.\hypertarget{namespace_d_d4hep_1_1_alignments_1_1_alignment_tools_a009dd48155bddca23afba151e2887124}{
+\index{DD4hep::Alignments::AlignmentTools@{DD4hep::Alignments::AlignmentTools}!computeIdeal@{computeIdeal}}
+\index{computeIdeal@{computeIdeal}!DD4hep::Alignments::AlignmentTools@{DD4hep::Alignments::AlignmentTools}}
+\subsubsection[{computeIdeal}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Alignments::AlignmentTools::computeIdeal ({\bf Alignment} {\em alignment})}}
+\label{namespace_d_d4hep_1_1_alignments_1_1_alignment_tools_a009dd48155bddca23afba151e2887124}
+
+
+Compute the ideal/nominal to-\/world transformation from the detector element placement. Note: Detector information of the alignment data is filled by the caller! 
+
+Definition at line 51 of file AlignmentTools.cpp.
+
+References DD4hep::Geometry::\_\-transform(), DD4hep::Alignments::AlignmentData::detector, DD4hep::Alignments::AlignmentData::detectorTrafo, DD4hep::Alignments::AlignmentData::flag, DD4hep::Alignments::AlignmentData::HAVE\_\-PARENT\_\-TRAFO, DD4hep::Alignments::AlignmentData::HAVE\_\-WORLD\_\-TRAFO, DD4hep::Alignments::AlignmentData::IDEAL, DD4hep::Alignments::AlignmentData::nodes, DD4hep::Alignments::AlignmentData::placement, DD4hep::Geometry::DetectorTools::placementPath(), DD4hep::Handle$<$ T $>$::ptr(), DD4hep::Alignments::AlignmentData::trToWorld, and DD4hep::Alignments::AlignmentData::worldTrafo.
+
+Referenced by DD4hep::Geometry::DetElement::nominal().\hypertarget{namespace_d_d4hep_1_1_alignments_1_1_alignment_tools_af9a9447a5a7239e67ab41f0157931822}{
+\index{DD4hep::Alignments::AlignmentTools@{DD4hep::Alignments::AlignmentTools}!computeSurvey@{computeSurvey}}
+\index{computeSurvey@{computeSurvey}!DD4hep::Alignments::AlignmentTools@{DD4hep::Alignments::AlignmentTools}}
+\subsubsection[{computeSurvey}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Alignments::AlignmentTools::computeSurvey ({\bf Alignment} {\em alignment})}}
+\label{namespace_d_d4hep_1_1_alignments_1_1_alignment_tools_af9a9447a5a7239e67ab41f0157931822}
+
+
+Compute the survey to-\/world transformation. Compute the survey to-\/world transformation from the detector element placement with respect to the survey constants.
+
+Compute the survey to-\/world transformation from the detector element placement with respect to the survey constants
+
+Note: Detector information of the alignment data is filled by the caller! 
+
+Definition at line 101 of file AlignmentTools.cpp.
+
+References DD4hep::Geometry::\_\-transform(), DD4hep::Alignments::AlignmentData::detector, DD4hep::Alignments::AlignmentData::detectorTrafo, DD4hep::Alignments::AlignmentData::flag, DD4hep::Alignments::AlignmentData::placement, DD4hep::Geometry::DetectorTools::placementPath(), DD4hep::Handle$<$ T $>$::ptr(), DD4hep::Alignments::AlignmentData::SURVEY, DD4hep::Alignments::AlignmentData::trToWorld, and DD4hep::Alignments::AlignmentData::worldTrafo.\hypertarget{namespace_d_d4hep_1_1_alignments_1_1_alignment_tools_a03e005e692b6427d78828d1785791a50}{
+\index{DD4hep::Alignments::AlignmentTools@{DD4hep::Alignments::AlignmentTools}!copy@{copy}}
+\index{copy@{copy}!DD4hep::Alignments::AlignmentTools@{DD4hep::Alignments::AlignmentTools}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Alignments::AlignmentTools::copy ({\bf Alignment} {\em from}, \/  {\bf Alignment} {\em to})}}
+\label{namespace_d_d4hep_1_1_alignments_1_1_alignment_tools_a03e005e692b6427d78828d1785791a50}
+
+
+Copy alignment object from source object. 
+
+Definition at line 34 of file AlignmentTools.cpp.
+
+References DD4hep::Alignments::AlignmentData::delta, DD4hep::Alignments::AlignmentData::detector, DD4hep::Alignments::AlignmentData::detectorTrafo, DD4hep::Alignments::AlignmentData::flag, DD4hep::Alignments::AlignmentData::magic, DD4hep::Alignments::AlignmentData::nodes, DD4hep::Alignments::AlignmentData::placement, DD4hep::Handle$<$ T $>$::ptr(), DD4hep::Alignments::AlignmentData::trToWorld, and DD4hep::Alignments::AlignmentData::worldTrafo.
+
+Referenced by DD4hep::Parsers::parse(), DD4hep::Geometry::DetElement::survey(), and DD4hep::DDRec::VolSurfaceList::VolSurfaceList().

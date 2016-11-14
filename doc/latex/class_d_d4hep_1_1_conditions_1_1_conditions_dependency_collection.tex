@@ -1,0 +1,328 @@
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection}{
+\section{DD4hep::Conditions::ConditionsDependencyCollection Class Reference}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection}\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+}
+
+
+Collection of condition dependencies.  
+
+
+{\ttfamily \#include $<$ConditionsDependencyCollection.h$>$}\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_1_1_functor}{Functor}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_1_1_functor}{Functor} base to create views. \item\end{DoxyCompactList}\item 
+struct \hyperlink{struct_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_1_1_holder}{Holder}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency}{ConditionDependency} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a87252585d3e17ae82813c039b1b47e8a}{Dependency}
+\begin{DoxyCompactList}\small\item\em Forward definition of the dependency type. \item\end{DoxyCompactList}\item 
+typedef std::map$<$ unsigned int, \hyperlink{struct_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_1_1_holder}{Holder} $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a7fb4072b6036f59389b929e312e2679c}{Dependencies}
+\begin{DoxyCompactList}\small\item\em Forward definition of the dependency container type. \item\end{DoxyCompactList}\item 
+typedef Dependencies::const\_\-iterator \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_ab5e9bcdc3330c3b694303f627799dc84}{const\_\-iterator}
+\item 
+typedef Dependencies::iterator \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a685a1a6841f2fa4d70ab9a9bfb7b0b6a}{iterator}
+\item 
+typedef Dependencies::key\_\-type \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a97fa0f42a622cd23c6eeb92e2b63efab}{key\_\-type}
+\item 
+typedef Dependencies::mapped\_\-type \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a406b7e79f4192c1d4ab1cdeb500d81f4}{mapped\_\-type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_af714a3d709ece6040aea1e4d65645015}{ConditionsDependencyCollection} ()
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a244d8717b93fb02a5899b00556a16da4}{ConditionsDependencyCollection} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection}{ConditionsDependencyCollection} \&copy)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_ad09c3071e28a0cae78a9bc8945331619}{$\sim$ConditionsDependencyCollection} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_ace3a46d90c1770071d31ae203dadf518}{clear} ()
+\begin{DoxyCompactList}\small\item\em Clear the dependency container. Destroys the contained stuff. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a0570fdbe73d69513617d65f905309ce4}{empty} () const 
+\begin{DoxyCompactList}\small\item\em Mini-\/container interface: emptyness check. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a49356f3bb237a65906d882d34b9ce295}{size} () const 
+\begin{DoxyCompactList}\small\item\em Mini-\/container interface: number of entries. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a685a1a6841f2fa4d70ab9a9bfb7b0b6a}{iterator} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a975ac1f54aa844d4ae3c3e15f70bfdaa}{begin} ()
+\begin{DoxyCompactList}\small\item\em Mini-\/container interface: begin of iteration. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_ab5e9bcdc3330c3b694303f627799dc84}{const\_\-iterator} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a3ba4904a588f3c7145ef4be4d91a39ba}{begin} () const 
+\begin{DoxyCompactList}\small\item\em Mini-\/container interface: begin of iteration (const). \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a685a1a6841f2fa4d70ab9a9bfb7b0b6a}{iterator} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a6c3a1c17490c6e6f1eece6b9fe3b0db9}{end} ()
+\begin{DoxyCompactList}\small\item\em Mini-\/container interface: end of iteration. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_ab5e9bcdc3330c3b694303f627799dc84}{const\_\-iterator} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_ac383d621dfe19531ec18d9e6139577e9}{end} () const 
+\begin{DoxyCompactList}\small\item\em Mini-\/container interface: end of iteration (const). \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a685a1a6841f2fa4d70ab9a9bfb7b0b6a}{iterator} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_aa1ab8e6418ce818e247ac52baf25bf5e}{find} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition::key\_\-type} key)
+\begin{DoxyCompactList}\small\item\em Mini-\/container interface: find element by key. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_ab5e9bcdc3330c3b694303f627799dc84}{const\_\-iterator} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a88c83a2c527d746502b8c0bf79142e8f}{find} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition::key\_\-type} key) const 
+\begin{DoxyCompactList}\small\item\em Mini-\/container interface: find element by key (const). \item\end{DoxyCompactList}\item 
+std::pair$<$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a685a1a6841f2fa4d70ab9a9bfb7b0b6a}{iterator}, bool $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a2135e9b1eb88d36301f88d9ef33a11a8}{insert} (const Dependencies::value\_\-type \&entry)
+\begin{DoxyCompactList}\small\item\em Mini-\/container interface: insert element by key. \item\end{DoxyCompactList}\item 
+std::pair$<$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a685a1a6841f2fa4d70ab9a9bfb7b0b6a}{iterator}, bool $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a2f8d2a2f72821fbf0c223f24b9b074af}{insert} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency}{Dependency} $\ast$dep)
+\begin{DoxyCompactList}\small\item\em Insert new element by key. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a3836e72b17bbaab6559f4f633e185ddd}{for\_\-each} (const \hyperlink{class_t}{T} \&function) const 
+\begin{DoxyCompactList}\small\item\em Create view by application of functor. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a7fb4072b6036f59389b929e312e2679c}{Dependencies} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_aec9ef437ecf9857dbbda3f494be276b9}{dependencies}
+\begin{DoxyCompactList}\small\item\em Dependency container. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Collection of condition dependencies. \begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 42 of file ConditionsDependencyCollection.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_ab5e9bcdc3330c3b694303f627799dc84}{
+\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}!const\_\-iterator@{const\_\-iterator}}
+\index{const\_\-iterator@{const\_\-iterator}!DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+\subsubsection[{const\_\-iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef Dependencies::const\_\-iterator {\bf DD4hep::Conditions::ConditionsDependencyCollection::const\_\-iterator}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_ab5e9bcdc3330c3b694303f627799dc84}
+
+
+Definition at line 60 of file ConditionsDependencyCollection.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a7fb4072b6036f59389b929e312e2679c}{
+\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}!Dependencies@{Dependencies}}
+\index{Dependencies@{Dependencies}!DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+\subsubsection[{Dependencies}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$unsigned int,{\bf Holder}$>$ {\bf DD4hep::Conditions::ConditionsDependencyCollection::Dependencies}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a7fb4072b6036f59389b929e312e2679c}
+
+
+Forward definition of the dependency container type. 
+
+Definition at line 59 of file ConditionsDependencyCollection.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a87252585d3e17ae82813c039b1b47e8a}{
+\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}!Dependency@{Dependency}}
+\index{Dependency@{Dependency}!DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+\subsubsection[{Dependency}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf ConditionDependency} {\bf DD4hep::Conditions::ConditionsDependencyCollection::Dependency}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a87252585d3e17ae82813c039b1b47e8a}
+
+
+Forward definition of the dependency type. 
+
+Definition at line 46 of file ConditionsDependencyCollection.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a685a1a6841f2fa4d70ab9a9bfb7b0b6a}{
+\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}!iterator@{iterator}}
+\index{iterator@{iterator}!DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef Dependencies::iterator {\bf DD4hep::Conditions::ConditionsDependencyCollection::iterator}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a685a1a6841f2fa4d70ab9a9bfb7b0b6a}
+
+
+Definition at line 61 of file ConditionsDependencyCollection.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a97fa0f42a622cd23c6eeb92e2b63efab}{
+\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}!key\_\-type@{key\_\-type}}
+\index{key\_\-type@{key\_\-type}!DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+\subsubsection[{key\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef Dependencies::key\_\-type {\bf DD4hep::Conditions::ConditionsDependencyCollection::key\_\-type}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a97fa0f42a622cd23c6eeb92e2b63efab}
+
+
+Definition at line 62 of file ConditionsDependencyCollection.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a406b7e79f4192c1d4ab1cdeb500d81f4}{
+\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}!mapped\_\-type@{mapped\_\-type}}
+\index{mapped\_\-type@{mapped\_\-type}!DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+\subsubsection[{mapped\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef Dependencies::mapped\_\-type {\bf DD4hep::Conditions::ConditionsDependencyCollection::mapped\_\-type}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a406b7e79f4192c1d4ab1cdeb500d81f4}
+
+
+Definition at line 63 of file ConditionsDependencyCollection.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_af714a3d709ece6040aea1e4d65645015}{
+\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}!ConditionsDependencyCollection@{ConditionsDependencyCollection}}
+\index{ConditionsDependencyCollection@{ConditionsDependencyCollection}!DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+\subsubsection[{ConditionsDependencyCollection}]{\setlength{\rightskip}{0pt plus 5cm}ConditionsDependencyCollection::ConditionsDependencyCollection ()}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_af714a3d709ece6040aea1e4d65645015}
+
+
+Initializing constructor. Default constructor. 
+
+Definition at line 24 of file ConditionsDependencyCollection.cpp.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a244d8717b93fb02a5899b00556a16da4}{
+\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}!ConditionsDependencyCollection@{ConditionsDependencyCollection}}
+\index{ConditionsDependencyCollection@{ConditionsDependencyCollection}!DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+\subsubsection[{ConditionsDependencyCollection}]{\setlength{\rightskip}{0pt plus 5cm}ConditionsDependencyCollection::ConditionsDependencyCollection (const {\bf ConditionsDependencyCollection} \& {\em copy})}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a244d8717b93fb02a5899b00556a16da4}
+
+
+Copy constructor. 
+
+Definition at line 29 of file ConditionsDependencyCollection.cpp.
+
+References dependencies.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_ad09c3071e28a0cae78a9bc8945331619}{
+\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}!$\sim$ConditionsDependencyCollection@{$\sim$ConditionsDependencyCollection}}
+\index{$\sim$ConditionsDependencyCollection@{$\sim$ConditionsDependencyCollection}!DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+\subsubsection[{$\sim$ConditionsDependencyCollection}]{\setlength{\rightskip}{0pt plus 5cm}ConditionsDependencyCollection::$\sim$ConditionsDependencyCollection ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_ad09c3071e28a0cae78a9bc8945331619}
+
+
+Default destructor. 
+
+Definition at line 37 of file ConditionsDependencyCollection.cpp.
+
+References dependencies, and DD4hep::releaseObjects().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a3ba4904a588f3c7145ef4be4d91a39ba}{
+\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}!begin@{begin}}
+\index{begin@{begin}!DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const\_\-iterator} DD4hep::Conditions::ConditionsDependencyCollection::begin () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a3ba4904a588f3c7145ef4be4d91a39ba}
+
+
+Mini-\/container interface: begin of iteration (const). 
+
+Definition at line 96 of file ConditionsDependencyCollection.h.
+
+References dependencies.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a975ac1f54aa844d4ae3c3e15f70bfdaa}{
+\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}!begin@{begin}}
+\index{begin@{begin}!DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf iterator} DD4hep::Conditions::ConditionsDependencyCollection::begin ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a975ac1f54aa844d4ae3c3e15f70bfdaa}
+
+
+Mini-\/container interface: begin of iteration. 
+
+Definition at line 94 of file ConditionsDependencyCollection.h.
+
+References dependencies.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_ace3a46d90c1770071d31ae203dadf518}{
+\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}!clear@{clear}}
+\index{clear@{clear}!DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void ConditionsDependencyCollection::clear ()}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_ace3a46d90c1770071d31ae203dadf518}
+
+
+Clear the dependency container. Destroys the contained stuff. 
+
+Definition at line 42 of file ConditionsDependencyCollection.cpp.
+
+References dependencies, and DD4hep::releaseObjects().
+
+Referenced by DD4hep::Alignments::AlignmentsManagerObject::$\sim$AlignmentsManagerObject().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a0570fdbe73d69513617d65f905309ce4}{
+\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}!empty@{empty}}
+\index{empty@{empty}!DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Conditions::ConditionsDependencyCollection::empty () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a0570fdbe73d69513617d65f905309ce4}
+
+
+Mini-\/container interface: emptyness check. 
+
+Definition at line 90 of file ConditionsDependencyCollection.h.
+
+References dependencies.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_ac383d621dfe19531ec18d9e6139577e9}{
+\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}!end@{end}}
+\index{end@{end}!DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const\_\-iterator} DD4hep::Conditions::ConditionsDependencyCollection::end () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_ac383d621dfe19531ec18d9e6139577e9}
+
+
+Mini-\/container interface: end of iteration (const). 
+
+Definition at line 100 of file ConditionsDependencyCollection.h.
+
+References dependencies.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a6c3a1c17490c6e6f1eece6b9fe3b0db9}{
+\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}!end@{end}}
+\index{end@{end}!DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}{\bf iterator} DD4hep::Conditions::ConditionsDependencyCollection::end ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a6c3a1c17490c6e6f1eece6b9fe3b0db9}
+
+
+Mini-\/container interface: end of iteration. 
+
+Definition at line 98 of file ConditionsDependencyCollection.h.
+
+References dependencies.
+
+Referenced by DD4hep::Conditions::ConditionsDependencyHandler::get().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a88c83a2c527d746502b8c0bf79142e8f}{
+\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}!find@{find}}
+\index{find@{find}!DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const\_\-iterator} DD4hep::Conditions::ConditionsDependencyCollection::find ({\bf Condition::key\_\-type} {\em key}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a88c83a2c527d746502b8c0bf79142e8f}
+
+
+Mini-\/container interface: find element by key (const). 
+
+Definition at line 105 of file ConditionsDependencyCollection.h.
+
+References dependencies.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_aa1ab8e6418ce818e247ac52baf25bf5e}{
+\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}!find@{find}}
+\index{find@{find}!DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}{\bf iterator} DD4hep::Conditions::ConditionsDependencyCollection::find ({\bf Condition::key\_\-type} {\em key})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_aa1ab8e6418ce818e247ac52baf25bf5e}
+
+
+Mini-\/container interface: find element by key. 
+
+Definition at line 102 of file ConditionsDependencyCollection.h.
+
+References dependencies.
+
+Referenced by DD4hep::Conditions::ConditionsDependencyHandler::get().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a3836e72b17bbaab6559f4f633e185ddd}{
+\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}!for\_\-each@{for\_\-each}}
+\index{for\_\-each@{for\_\-each}!DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+\subsubsection[{for\_\-each}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void DD4hep::Conditions::ConditionsDependencyCollection::for\_\-each (const {\bf T} \& {\em function}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a3836e72b17bbaab6559f4f633e185ddd}
+
+
+Create view by application of functor. 
+
+Definition at line 112 of file ConditionsDependencyCollection.h.
+
+References dependencies.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a2f8d2a2f72821fbf0c223f24b9b074af}{
+\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}!insert@{insert}}
+\index{insert@{insert}!DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}std::pair$<$ {\bf ConditionsDependencyCollection::iterator}, bool $>$ ConditionsDependencyCollection::insert ({\bf Dependency} $\ast$ {\em dep})}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a2f8d2a2f72821fbf0c223f24b9b074af}
+
+
+Insert new element by key. 
+
+Definition at line 55 of file ConditionsDependencyCollection.cpp.
+
+References DD4hep::Conditions::ConditionDependency::addRef(), dependencies, and DD4hep::Conditions::ConditionDependency::key().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a2135e9b1eb88d36301f88d9ef33a11a8}{
+\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}!insert@{insert}}
+\index{insert@{insert}!DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}std::pair$<$ {\bf ConditionsDependencyCollection::iterator}, bool $>$ ConditionsDependencyCollection::insert (const Dependencies::value\_\-type \& {\em entry})}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a2135e9b1eb88d36301f88d9ef33a11a8}
+
+
+Mini-\/container interface: insert element by key. 
+
+Definition at line 48 of file ConditionsDependencyCollection.cpp.
+
+References dependencies.
+
+Referenced by DD4hep::Alignments::AlignmentsManager::adoptDependency().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a49356f3bb237a65906d882d34b9ce295}{
+\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}!size@{size}}
+\index{size@{size}!DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t DD4hep::Conditions::ConditionsDependencyCollection::size () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_a49356f3bb237a65906d882d34b9ce295}
+
+
+Mini-\/container interface: number of entries. 
+
+Definition at line 92 of file ConditionsDependencyCollection.h.
+
+References dependencies.
+
+Referenced by DD4hep::Alignments::AlignmentsManagerObject::compute().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_aec9ef437ecf9857dbbda3f494be276b9}{
+\index{DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}!dependencies@{dependencies}}
+\index{dependencies@{dependencies}!DD4hep::Conditions::ConditionsDependencyCollection@{DD4hep::Conditions::ConditionsDependencyCollection}}
+\subsubsection[{dependencies}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dependencies} {\bf DD4hep::Conditions::ConditionsDependencyCollection::dependencies}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection_aec9ef437ecf9857dbbda3f494be276b9}
+
+
+Dependency container. 
+
+Definition at line 79 of file ConditionsDependencyCollection.h.
+
+Referenced by begin(), clear(), ConditionsDependencyCollection(), empty(), end(), find(), for\_\-each(), insert(), size(), and $\sim$ConditionsDependencyCollection().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCond/include/DDCond/\hyperlink{_conditions_dependency_collection_8h}{ConditionsDependencyCollection.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCond/src/\hyperlink{_conditions_dependency_collection_8cpp}{ConditionsDependencyCollection.cpp}\end{DoxyCompactItemize}

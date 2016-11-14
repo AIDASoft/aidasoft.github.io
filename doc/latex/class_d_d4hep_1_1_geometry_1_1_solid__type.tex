@@ -1,0 +1,204 @@
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_solid__type}{
+\section{DD4hep::Geometry::Solid\_\-type$<$ T $>$ Class Template Reference}
+\label{class_d_d4hep_1_1_geometry_1_1_solid__type}\index{DD4hep::Geometry::Solid\_\-type@{DD4hep::Geometry::Solid\_\-type}}
+}
+
+
+Base class for Solid (shape) objects.  
+
+
+{\ttfamily \#include $<$Shapes.h$>$}Inheritance diagram for DD4hep::Geometry::Solid\_\-type$<$ T $>$::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_geometry_1_1_solid__type}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a0a2d2c18f2e6934bbd93f26a13704020}{Solid\_\-type} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for uninitialized object. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_ac4062fddd8f1fb9971577c600e9f7995}{Solid\_\-type} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type}{Solid\_\-type} \&e)
+\begin{DoxyCompactList}\small\item\em Constructor to be used when passing an already created object. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2788d7317836c7fa98581c4b78d871a7}{Solid\_\-type} (\hyperlink{class_t}{T} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Direct assignment using the implementation pointer. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a153b1496923f3a094a13bfb57e73a81e}{Solid\_\-type} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_t}{T} $>$ \&e)
+\begin{DoxyCompactList}\small\item\em Constructor to be used when passing an already created object. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a618f7b1dd4b603b1c619918629d8ba98}{Solid\_\-type} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&e)
+\begin{DoxyCompactList}\small\item\em Constructor to be used when passing an already created object: need to check pointers. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type}{Solid\_\-type} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a39edebfe864cbb84ed34759519f0cb5a}{operator=} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type}{Solid\_\-type} \&copy)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \item\end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{name} () const 
+\begin{DoxyCompactList}\small\item\em Access to shape name. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a3b4a11b9fc161638f8d386e2a8c6a0fd}{operator T $\ast$} () const 
+\begin{DoxyCompactList}\small\item\em Auto conversion to underlying \hyperlink{namespace_r_o_o_t}{ROOT} object. \item\end{DoxyCompactList}\item 
+\hyperlink{class_t}{T} $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a5d2e4f5e2567ddb3c60bf78a25f5e0b4}{operator-\/$>$} () const 
+\begin{DoxyCompactList}\small\item\em Overloaded operator -\/$>$ to access underlying object. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_aee5f24edfb164e0443ed83af1f25a08e}{toString} (int precision=2) const 
+\begin{DoxyCompactList}\small\item\em Conversion to string for pretty print. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_t}{T} \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a660e91d2703f947ad759fe0cbef3bbc6}{Implementation}
+\begin{DoxyCompactList}\small\item\em Extern accessible definition of the contained element type. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_a1a3a86774632f79e32518a7c77ad1fe8}{\_\-setDimensions} (double $\ast$param)
+\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type_aada9040dac58ebc0dcd7562ff99ce600}{\_\-assign} (\hyperlink{class_t}{T} $\ast$n, const std::string \&nam, const std::string \&tit, bool cbbox)
+\begin{DoxyCompactList}\small\item\em Assign pointrs and register solid to geometry. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$ class DD4hep::Geometry::Solid\_\-type$<$ T $>$}
+
+Base class for Solid (shape) objects. Generic handle holding an object of base TGeoShape.
+
+For any further documentation please see the following \hyperlink{namespace_r_o_o_t}{ROOT} documentation: \begin{DoxySeeAlso}{See also}
+\href{http://root.cern.ch/root/html/TGeoShape.html}{\tt http://root.cern.ch/root/html/TGeoShape.html}
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 69 of file Shapes.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_solid__type_a660e91d2703f947ad759fe0cbef3bbc6}{
+\index{DD4hep::Geometry::Solid\_\-type@{DD4hep::Geometry::Solid\_\-type}!Implementation@{Implementation}}
+\index{Implementation@{Implementation}!DD4hep::Geometry::Solid_type@{DD4hep::Geometry::Solid\_\-type}}
+\subsubsection[{Implementation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ typedef {\bf T} {\bf DD4hep::Geometry::Solid\_\-type}$<$ {\bf T} $>$::{\bf Implementation}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_solid__type_a660e91d2703f947ad759fe0cbef3bbc6}
+
+
+Extern accessible definition of the contained element type. Type definitions and class specific abbreviations and forward declarations 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_handle_ad7ff728a25806079516b8965b9113f1a}{DD4hep::Handle$<$ T $>$}.
+
+Definition at line 71 of file Shapes.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_solid__type_a0a2d2c18f2e6934bbd93f26a13704020}{
+\index{DD4hep::Geometry::Solid\_\-type@{DD4hep::Geometry::Solid\_\-type}!Solid\_\-type@{Solid\_\-type}}
+\index{Solid\_\-type@{Solid\_\-type}!DD4hep::Geometry::Solid_type@{DD4hep::Geometry::Solid\_\-type}}
+\subsubsection[{Solid\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf DD4hep::Geometry::Solid\_\-type}$<$ {\bf T} $>$::{\bf Solid\_\-type} ()}}
+\label{class_d_d4hep_1_1_geometry_1_1_solid__type_a0a2d2c18f2e6934bbd93f26a13704020}
+
+
+Default constructor for uninitialized object. \hypertarget{class_d_d4hep_1_1_geometry_1_1_solid__type_ac4062fddd8f1fb9971577c600e9f7995}{
+\index{DD4hep::Geometry::Solid\_\-type@{DD4hep::Geometry::Solid\_\-type}!Solid\_\-type@{Solid\_\-type}}
+\index{Solid\_\-type@{Solid\_\-type}!DD4hep::Geometry::Solid_type@{DD4hep::Geometry::Solid\_\-type}}
+\subsubsection[{Solid\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf DD4hep::Geometry::Solid\_\-type}$<$ {\bf T} $>$::{\bf Solid\_\-type} (const {\bf Solid\_\-type}$<$ {\bf T} $>$ \& {\em e})}}
+\label{class_d_d4hep_1_1_geometry_1_1_solid__type_ac4062fddd8f1fb9971577c600e9f7995}
+
+
+Constructor to be used when passing an already created object. \hypertarget{class_d_d4hep_1_1_geometry_1_1_solid__type_a2788d7317836c7fa98581c4b78d871a7}{
+\index{DD4hep::Geometry::Solid\_\-type@{DD4hep::Geometry::Solid\_\-type}!Solid\_\-type@{Solid\_\-type}}
+\index{Solid\_\-type@{Solid\_\-type}!DD4hep::Geometry::Solid_type@{DD4hep::Geometry::Solid\_\-type}}
+\subsubsection[{Solid\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf DD4hep::Geometry::Solid\_\-type}$<$ {\bf T} $>$::{\bf Solid\_\-type} ({\bf T} $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_solid__type_a2788d7317836c7fa98581c4b78d871a7}
+
+
+Direct assignment using the implementation pointer. 
+
+Definition at line 83 of file Shapes.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_solid__type_a153b1496923f3a094a13bfb57e73a81e}{
+\index{DD4hep::Geometry::Solid\_\-type@{DD4hep::Geometry::Solid\_\-type}!Solid\_\-type@{Solid\_\-type}}
+\index{Solid\_\-type@{Solid\_\-type}!DD4hep::Geometry::Solid_type@{DD4hep::Geometry::Solid\_\-type}}
+\subsubsection[{Solid\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf DD4hep::Geometry::Solid\_\-type}$<$ {\bf T} $>$::{\bf Solid\_\-type} (const {\bf Handle}$<$ {\bf T} $>$ \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_solid__type_a153b1496923f3a094a13bfb57e73a81e}
+
+
+Constructor to be used when passing an already created object. 
+
+Definition at line 85 of file Shapes.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_solid__type_a618f7b1dd4b603b1c619918629d8ba98}{
+\index{DD4hep::Geometry::Solid\_\-type@{DD4hep::Geometry::Solid\_\-type}!Solid\_\-type@{Solid\_\-type}}
+\index{Solid\_\-type@{Solid\_\-type}!DD4hep::Geometry::Solid_type@{DD4hep::Geometry::Solid\_\-type}}
+\subsubsection[{Solid\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename Q $>$ {\bf DD4hep::Geometry::Solid\_\-type}$<$ {\bf T} $>$::{\bf Solid\_\-type} (const {\bf Handle}$<$ Q $>$ \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_solid__type_a618f7b1dd4b603b1c619918629d8ba98}
+
+
+Constructor to be used when passing an already created object: need to check pointers. 
+
+Definition at line 87 of file Shapes.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_solid__type_aada9040dac58ebc0dcd7562ff99ce600}{
+\index{DD4hep::Geometry::Solid\_\-type@{DD4hep::Geometry::Solid\_\-type}!\_\-assign@{\_\-assign}}
+\index{\_\-assign@{\_\-assign}!DD4hep::Geometry::Solid_type@{DD4hep::Geometry::Solid\_\-type}}
+\subsubsection[{\_\-assign}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf DD4hep::Geometry::Solid\_\-type}$<$ {\bf T} $>$::\_\-assign ({\bf T} $\ast$ {\em n}, \/  const std::string \& {\em nam}, \/  const std::string \& {\em tit}, \/  bool {\em cbbox})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_solid__type_aada9040dac58ebc0dcd7562ff99ce600}
+
+
+Assign pointrs and register solid to geometry. \hypertarget{class_d_d4hep_1_1_geometry_1_1_solid__type_a1a3a86774632f79e32518a7c77ad1fe8}{
+\index{DD4hep::Geometry::Solid\_\-type@{DD4hep::Geometry::Solid\_\-type}!\_\-setDimensions@{\_\-setDimensions}}
+\index{\_\-setDimensions@{\_\-setDimensions}!DD4hep::Geometry::Solid_type@{DD4hep::Geometry::Solid\_\-type}}
+\subsubsection[{\_\-setDimensions}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void Solid\_\-type::\_\-setDimensions (double $\ast$ {\em param})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_solid__type_a1a3a86774632f79e32518a7c77ad1fe8}
+
+
+Definition at line 158 of file Shapes.cpp.
+
+References DD4hep::Handle$<$ T $>$::ptr().\hypertarget{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}{
+\index{DD4hep::Geometry::Solid\_\-type@{DD4hep::Geometry::Solid\_\-type}!name@{name}}
+\index{name@{name}!DD4hep::Geometry::Solid_type@{DD4hep::Geometry::Solid\_\-type}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const char $\ast$ Solid\_\-type::name () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_solid__type_a2e1c12b2d84add0bc77ced60600339aa}
+
+
+Access to shape name. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_handle_a9c62b8d37e0f2354bae0093498dc15a1}{DD4hep::Handle$<$ T $>$}.
+
+Definition at line 172 of file Shapes.cpp.
+
+References DD4hep::Handle$<$ T $>$::ptr().\hypertarget{class_d_d4hep_1_1_geometry_1_1_solid__type_a3b4a11b9fc161638f8d386e2a8c6a0fd}{
+\index{DD4hep::Geometry::Solid\_\-type@{DD4hep::Geometry::Solid\_\-type}!operator T $\ast$@{operator T $\ast$}}
+\index{operator T $\ast$@{operator T $\ast$}!DD4hep::Geometry::Solid_type@{DD4hep::Geometry::Solid\_\-type}}
+\subsubsection[{operator T $\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf DD4hep::Geometry::Solid\_\-type}$<$ {\bf T} $>$::operator {\bf T} $\ast$ () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_solid__type_a3b4a11b9fc161638f8d386e2a8c6a0fd}
+
+
+Auto conversion to underlying \hyperlink{namespace_r_o_o_t}{ROOT} object. 
+
+Definition at line 94 of file Shapes.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_solid__type_a5d2e4f5e2567ddb3c60bf78a25f5e0b4}{
+\index{DD4hep::Geometry::Solid\_\-type@{DD4hep::Geometry::Solid\_\-type}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!DD4hep::Geometry::Solid_type@{DD4hep::Geometry::Solid\_\-type}}
+\subsubsection[{operator-\/$>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf T}$\ast$ {\bf DD4hep::Geometry::Solid\_\-type}$<$ {\bf T} $>$::operator-\/$>$ () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_solid__type_a5d2e4f5e2567ddb3c60bf78a25f5e0b4}
+
+
+Overloaded operator -\/$>$ to access underlying object. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_handle_afb3984a2a89e50232d519c535818d74b}{DD4hep::Handle$<$ T $>$}.
+
+Definition at line 98 of file Shapes.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_solid__type_a39edebfe864cbb84ed34759519f0cb5a}{
+\index{DD4hep::Geometry::Solid\_\-type@{DD4hep::Geometry::Solid\_\-type}!operator=@{operator=}}
+\index{operator=@{operator=}!DD4hep::Geometry::Solid_type@{DD4hep::Geometry::Solid\_\-type}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Solid\_\-type}\& {\bf DD4hep::Geometry::Solid\_\-type}$<$ {\bf T} $>$::operator= (const {\bf Solid\_\-type}$<$ {\bf T} $>$ \& {\em copy})}}
+\label{class_d_d4hep_1_1_geometry_1_1_solid__type_a39edebfe864cbb84ed34759519f0cb5a}
+
+
+Assignment operator. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_handle_a9bbf8f498df42e81ad26fb00233505a6}{DD4hep::Handle$<$ T $>$}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_solid__type_aee5f24edfb164e0443ed83af1f25a08e}{
+\index{DD4hep::Geometry::Solid\_\-type@{DD4hep::Geometry::Solid\_\-type}!toString@{toString}}
+\index{toString@{toString}!DD4hep::Geometry::Solid_type@{DD4hep::Geometry::Solid\_\-type}}
+\subsubsection[{toString}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ std::string {\bf DD4hep::Geometry::Solid\_\-type}$<$ {\bf T} $>$::toString (int {\em precision} = {\ttfamily 2}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_solid__type_aee5f24edfb164e0443ed83af1f25a08e}
+
+
+Conversion to string for pretty print. 
+
+Definition at line 102 of file Shapes.h.
+
+Referenced by DD4hep::SurfaceInstaller::install().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_shapes_8h}{Shapes.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_shapes_8cpp}{Shapes.cpp}\end{DoxyCompactItemize}

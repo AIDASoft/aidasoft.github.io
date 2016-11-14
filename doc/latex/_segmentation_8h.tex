@@ -1,0 +1,73 @@
+\hypertarget{_segmentation_8h}{
+\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDSegmentation/include/DDSegmentation/Segmentation.h File Reference}
+\label{_segmentation_8h}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDSegmentation/include/DDSegmentation/Segmentation.h@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDSegmentation/include/DDSegmentation/Segmentation.h}}
+}
+{\ttfamily \#include \char`\"{}DDSegmentation/BitField64.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DDSegmentation/SegmentationFactory.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DDSegmentation/SegmentationParameter.h\char`\"{}}\par
+{\ttfamily \#include $<$map$>$}\par
+{\ttfamily \#include $<$utility$>$}\par
+{\ttfamily \#include $<$set$>$}\par
+{\ttfamily \#include $<$string$>$}\par
+{\ttfamily \#include $<$vector$>$}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{DD4hep::DDSegmentation::Vector3D}
+\begin{DoxyCompactList}\small\item\em Simple container for a physics vector. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation}{DD4hep::DDSegmentation::Segmentation}
+\begin{DoxyCompactList}\small\item\em Base class for all segmentations. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_d_d4hep}{DD4hep}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the AIDA detector description toolkit. \item\end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation}{DD4hep::DDSegmentation}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for base segmentations. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_segmentation_8h_aa878ae3c3221319e12dd312c6281793c}{REGISTER\_\-SEGMENTATION}(classname)~static const SegmentationCreator$<$classname$>$ classname\#\#\_\-creator(\#classname);
+\begin{DoxyCompactList}\small\item\em Macro to instantiate a new SegmentationCreator by its type name. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef SegmentationParameter $\ast$ \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_af6c6bad2a745d807a0ed00506fb34ccf}{DD4hep::DDSegmentation::Parameter}
+\item 
+typedef std::vector$<$ Parameter $>$ \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_af38026430ca0e1ef64acdfc898f5dd3d}{DD4hep::DDSegmentation::Parameters}
+\item 
+typedef TypedSegmentationParameter$<$ int $>$ $\ast$ \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_a40b9037137fce6e98a4a1b3e74078679}{DD4hep::DDSegmentation::IntParameter}
+\item 
+typedef TypedSegmentationParameter$<$ float $>$ $\ast$ \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_a1f6134fdcd18b625bc940d064598090a}{DD4hep::DDSegmentation::FloatParameter}
+\item 
+typedef TypedSegmentationParameter$<$ double $>$ $\ast$ \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_a58fbf7ecc413a4ffb59ab7b49d1af947}{DD4hep::DDSegmentation::DoubleParameter}
+\item 
+typedef TypedSegmentationParameter$<$ std::string $>$ $\ast$ \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_a43a80cf70a60b3c858aca4fa463d8f7c}{DD4hep::DDSegmentation::StringParameter}
+\item 
+typedef TypedSegmentationParameter$<$ std::vector$<$ int $>$ $>$ $\ast$ \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_a999961b3c725feedb2456dd0f046f1e3}{DD4hep::DDSegmentation::IntVecParameter}
+\item 
+typedef TypedSegmentationParameter$<$ std::vector$<$ float $>$ $>$ $\ast$ \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ab7445ed6131fb76c39c0c2463062d95e}{DD4hep::DDSegmentation::FloatVecParameter}
+\item 
+typedef TypedSegmentationParameter$<$ std::vector$<$ double $>$ $>$ $\ast$ \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ae7964d33264473a9df6cfb5194cfb740}{DD4hep::DDSegmentation::DoubleVecParameter}
+\item 
+typedef TypedSegmentationParameter$<$ std::vector$<$ std::string $>$ $>$ $\ast$ \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_a6560c8ed740be64475f81e890aaa58b2}{DD4hep::DDSegmentation::StringVecParameter}
+\item 
+typedef SegmentationParameter::UnitType \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_a416c3e3ca0d578410085897700ab29dc}{DD4hep::DDSegmentation::UnitType}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_segmentation_8h_aa878ae3c3221319e12dd312c6281793c}{
+\index{Segmentation.h@{Segmentation.h}!REGISTER\_\-SEGMENTATION@{REGISTER\_\-SEGMENTATION}}
+\index{REGISTER\_\-SEGMENTATION@{REGISTER\_\-SEGMENTATION}!Segmentation.h@{Segmentation.h}}
+\subsubsection[{REGISTER\_\-SEGMENTATION}]{\setlength{\rightskip}{0pt plus 5cm}\#define REGISTER\_\-SEGMENTATION(classname)~static const SegmentationCreator$<$classname$>$ classname\#\#\_\-creator(\#classname);}}
+\label{_segmentation_8h_aa878ae3c3221319e12dd312c6281793c}
+
+
+Macro to instantiate a new SegmentationCreator by its type name. 
+
+Definition at line 170 of file Segmentation.h.

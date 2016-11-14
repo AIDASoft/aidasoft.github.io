@@ -1,0 +1,439 @@
+\hypertarget{class_xml_tools_1_1_evaluator}{
+\section{XmlTools::Evaluator Class Reference}
+\label{class_xml_tools_1_1_evaluator}\index{XmlTools::Evaluator@{XmlTools::Evaluator}}
+}
+
+
+\hyperlink{class_xml_tools_1_1_evaluator}{Evaluator} of arithmetic expressions with an extendable dictionary.  
+
+
+{\ttfamily \#include $<$Evaluator.h$>$}\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \par
+\hyperlink{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6ba22108999c735ca50a4990bb9044ca164}{OK}, 
+\hyperlink{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6badbd98a84392f1db7674537e1f46e82e6}{WARNING\_\-EXISTING\_\-VARIABLE}, 
+\hyperlink{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6ba767ec14ec0d51b108af00f443450e7c1}{WARNING\_\-EXISTING\_\-FUNCTION}, 
+\hyperlink{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6baa2b45925fd62e0af9c3261ddb2ee093e}{WARNING\_\-BLANK\_\-STRING}, 
+\par
+\hyperlink{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6ba621a09cd3a88b3d65599f643b37183e5}{ERROR\_\-NOT\_\-A\_\-NAME}, 
+\hyperlink{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6babfe81983da70c8317f20aefecec1e07a}{ERROR\_\-SYNTAX\_\-ERROR}, 
+\hyperlink{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6ba4862b32a9f8e62b35180c7b922b169d0}{ERROR\_\-UNPAIRED\_\-PARENTHESIS}, 
+\hyperlink{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6bac18e89dc11c21d9d4bf970630fa9b073}{ERROR\_\-UNEXPECTED\_\-SYMBOL}, 
+\par
+\hyperlink{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6baf55b8dd359ea08977cdb021be1895023}{ERROR\_\-UNKNOWN\_\-VARIABLE}, 
+\hyperlink{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6bac51246c5f76673dd1cb9bd5302403858}{ERROR\_\-UNKNOWN\_\-FUNCTION}, 
+\hyperlink{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6bad4291c0ebd5c6b036ec7ac842cda5b29}{ERROR\_\-EMPTY\_\-PARAMETER}, 
+\hyperlink{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6ba3414a1f123c2ee682d4700245c9b37e3}{ERROR\_\-CALCULATION\_\-ERROR}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_xml_tools_1_1_evaluator_adcce935da40868c8e9ee41a6cd7da30c}{Evaluator} ()
+\item 
+\hyperlink{class_xml_tools_1_1_evaluator_acf06d5359f233c9e5c5d9127eb065f25}{$\sim$Evaluator} ()
+\item 
+double \hyperlink{class_xml_tools_1_1_evaluator_a602611e00d06e6fa2b8c5a1b292c2747}{evaluate} (const char $\ast$expression)
+\item 
+int \hyperlink{class_xml_tools_1_1_evaluator_a2bb48b05d692c7b2f32d7ef8996ef835}{status} () const 
+\item 
+int \hyperlink{class_xml_tools_1_1_evaluator_af036858d3fe40671448306c572e0fd8f}{error\_\-position} () const 
+\item 
+void \hyperlink{class_xml_tools_1_1_evaluator_ad034901d9b832062c7413e698031214e}{print\_\-error} () const 
+\item 
+void \hyperlink{class_xml_tools_1_1_evaluator_a3329d0bef31237642ed7d5ca53d9d167}{setEnviron} (const char $\ast$name, const char $\ast$value)
+\item 
+const char $\ast$ \hyperlink{class_xml_tools_1_1_evaluator_a3b19ba699533cdb3517c3929f9c479ae}{getEnviron} (const char $\ast$name)
+\item 
+void \hyperlink{class_xml_tools_1_1_evaluator_a46b7fb4c5d1366cfa70a0b1faf1a8234}{setVariable} (const char $\ast$name, double value)
+\item 
+void \hyperlink{class_xml_tools_1_1_evaluator_aa585fa26afb0fbf64b60f9758a7de5f0}{setVariable} (const char $\ast$name, const char $\ast$expression)
+\item 
+void \hyperlink{class_xml_tools_1_1_evaluator_a54a432d7beccf23e2bebda5e449fffe0}{setFunction} (const char $\ast$name, double($\ast$fun)())
+\item 
+void \hyperlink{class_xml_tools_1_1_evaluator_a2183927ba22512c28f9933439d88d6c7}{setFunction} (const char $\ast$name, double($\ast$fun)(double))
+\item 
+void \hyperlink{class_xml_tools_1_1_evaluator_a831f5dc1635829ad2b09e79ada885771}{setFunction} (const char $\ast$name, double($\ast$fun)(double, double))
+\item 
+void \hyperlink{class_xml_tools_1_1_evaluator_a40b7b86078c23765a6ab09636fece140}{setFunction} (const char $\ast$name, double($\ast$fun)(double, double, double))
+\item 
+void \hyperlink{class_xml_tools_1_1_evaluator_a7e77831c7bca5fd7bb81d31b657844d1}{setFunction} (const char $\ast$name, double($\ast$fun)(double, double, double, double))
+\item 
+void \hyperlink{class_xml_tools_1_1_evaluator_ad4808f32cfac966a6ee400acaf7ff3ca}{setFunction} (const char $\ast$name, double($\ast$fun)(double, double, double, double, double))
+\item 
+bool \hyperlink{class_xml_tools_1_1_evaluator_afc296d1cfdcdb65b93e40b30cf2c2704}{findVariable} (const char $\ast$name) const 
+\item 
+bool \hyperlink{class_xml_tools_1_1_evaluator_ab2b36613d2c977346178abbd062ee354}{findFunction} (const char $\ast$name, int npar) const 
+\item 
+void \hyperlink{class_xml_tools_1_1_evaluator_a1fbc17d2bdbda88525e309098ba52563}{removeVariable} (const char $\ast$name)
+\item 
+void \hyperlink{class_xml_tools_1_1_evaluator_ac9c3b846be94d03ab2c06c68b4a86448}{removeFunction} (const char $\ast$name, int npar)
+\item 
+void \hyperlink{class_xml_tools_1_1_evaluator_ab54a35f068996b3c402c575f3aea242f}{clear} ()
+\item 
+void \hyperlink{class_xml_tools_1_1_evaluator_a5df1e3d20d6e6d9150378544d95e86b6}{setStdMath} ()
+\item 
+void \hyperlink{class_xml_tools_1_1_evaluator_a94fce6a14158fd1e9af0135268f0f68b}{setSystemOfUnits} (double meter=1.0, double kilogram=1.0, double second=1.0, double ampere=1.0, double kelvin=1.0, double mole=1.0, double candela=1.0, double radians=1.0)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_xml_tools_1_1_evaluator_a3b212d7fe6e68a9f398daebc2968ebfe}{Evaluator} (const \hyperlink{class_xml_tools_1_1_evaluator}{Evaluator} \&)
+\item 
+\hyperlink{class_xml_tools_1_1_evaluator}{Evaluator} \& \hyperlink{class_xml_tools_1_1_evaluator_a78e101bcb596a10ca44871fd3250b0ca}{operator=} (const \hyperlink{class_xml_tools_1_1_evaluator}{Evaluator} \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{class_xml_tools_1_1_evaluator_aa7c19df1b96202c09024f7b7f4942364}{p}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_xml_tools_1_1_evaluator}{Evaluator} of arithmetic expressions with an extendable dictionary. Taken from \hyperlink{namespace_c_l_h_e_p}{CLHEP} 1.9.2.1
+
+Example: 
+\begin{DoxyCode}
+   #include "XmlTools/Evaluator.h"
+   XmlTools::Evaluator eval;
+   eval.setStdMath();
+   double res = eval.evaluate("sin(30*degree)");
+   if (eval.status() != XmlTools::Evaluator::OK) eval.print_error();
+\end{DoxyCode}
+
+
+\begin{DoxyAuthor}{Author}
+Evgeni Chernyaev $<$\href{mailto:Evgueni.Tcherniaev@cern.ch}{\tt Evgueni.Tcherniaev@cern.ch}$>$ 
+\end{DoxyAuthor}
+
+
+Definition at line 38 of file Evaluator.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6b}{
+\subsubsection[{"@6}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6b}
+List of possible statuses. Status of the last operation can be obtained with \hyperlink{class_xml_tools_1_1_evaluator_a2bb48b05d692c7b2f32d7ef8996ef835}{status()}. In case if \hyperlink{class_xml_tools_1_1_evaluator_a2bb48b05d692c7b2f32d7ef8996ef835}{status()} is an ERROR the corresponding error message can be printed with \hyperlink{class_xml_tools_1_1_evaluator_ad034901d9b832062c7413e698031214e}{print\_\-error()}.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_xml_tools_1_1_evaluator_a2bb48b05d692c7b2f32d7ef8996ef835}{status} 
+
+\hyperlink{class_xml_tools_1_1_evaluator_af036858d3fe40671448306c572e0fd8f}{error\_\-position} 
+
+\hyperlink{class_xml_tools_1_1_evaluator_ad034901d9b832062c7413e698031214e}{print\_\-error} 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{OK@{OK}!XmlTools::Evaluator@{XmlTools::Evaluator}}\index{XmlTools::Evaluator@{XmlTools::Evaluator}!OK@{OK}}\item[{\em 
+\hypertarget{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6ba22108999c735ca50a4990bb9044ca164}{
+OK}
+\label{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6ba22108999c735ca50a4990bb9044ca164}
+}]Everything OK \index{WARNING\_\-EXISTING\_\-VARIABLE@{WARNING\_\-EXISTING\_\-VARIABLE}!XmlTools::Evaluator@{XmlTools::Evaluator}}\index{XmlTools::Evaluator@{XmlTools::Evaluator}!WARNING\_\-EXISTING\_\-VARIABLE@{WARNING\_\-EXISTING\_\-VARIABLE}}\item[{\em 
+\hypertarget{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6badbd98a84392f1db7674537e1f46e82e6}{
+WARNING\_\-EXISTING\_\-VARIABLE}
+\label{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6badbd98a84392f1db7674537e1f46e82e6}
+}]Redefinition of existing variable \index{WARNING\_\-EXISTING\_\-FUNCTION@{WARNING\_\-EXISTING\_\-FUNCTION}!XmlTools::Evaluator@{XmlTools::Evaluator}}\index{XmlTools::Evaluator@{XmlTools::Evaluator}!WARNING\_\-EXISTING\_\-FUNCTION@{WARNING\_\-EXISTING\_\-FUNCTION}}\item[{\em 
+\hypertarget{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6ba767ec14ec0d51b108af00f443450e7c1}{
+WARNING\_\-EXISTING\_\-FUNCTION}
+\label{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6ba767ec14ec0d51b108af00f443450e7c1}
+}]Redefinition of existing function \index{WARNING\_\-BLANK\_\-STRING@{WARNING\_\-BLANK\_\-STRING}!XmlTools::Evaluator@{XmlTools::Evaluator}}\index{XmlTools::Evaluator@{XmlTools::Evaluator}!WARNING\_\-BLANK\_\-STRING@{WARNING\_\-BLANK\_\-STRING}}\item[{\em 
+\hypertarget{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6baa2b45925fd62e0af9c3261ddb2ee093e}{
+WARNING\_\-BLANK\_\-STRING}
+\label{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6baa2b45925fd62e0af9c3261ddb2ee093e}
+}]Empty input string \index{ERROR\_\-NOT\_\-A\_\-NAME@{ERROR\_\-NOT\_\-A\_\-NAME}!XmlTools::Evaluator@{XmlTools::Evaluator}}\index{XmlTools::Evaluator@{XmlTools::Evaluator}!ERROR\_\-NOT\_\-A\_\-NAME@{ERROR\_\-NOT\_\-A\_\-NAME}}\item[{\em 
+\hypertarget{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6ba621a09cd3a88b3d65599f643b37183e5}{
+ERROR\_\-NOT\_\-A\_\-NAME}
+\label{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6ba621a09cd3a88b3d65599f643b37183e5}
+}]Not allowed sysmbol in the name of variable or function \index{ERROR\_\-SYNTAX\_\-ERROR@{ERROR\_\-SYNTAX\_\-ERROR}!XmlTools::Evaluator@{XmlTools::Evaluator}}\index{XmlTools::Evaluator@{XmlTools::Evaluator}!ERROR\_\-SYNTAX\_\-ERROR@{ERROR\_\-SYNTAX\_\-ERROR}}\item[{\em 
+\hypertarget{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6babfe81983da70c8317f20aefecec1e07a}{
+ERROR\_\-SYNTAX\_\-ERROR}
+\label{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6babfe81983da70c8317f20aefecec1e07a}
+}]Systax error \index{ERROR\_\-UNPAIRED\_\-PARENTHESIS@{ERROR\_\-UNPAIRED\_\-PARENTHESIS}!XmlTools::Evaluator@{XmlTools::Evaluator}}\index{XmlTools::Evaluator@{XmlTools::Evaluator}!ERROR\_\-UNPAIRED\_\-PARENTHESIS@{ERROR\_\-UNPAIRED\_\-PARENTHESIS}}\item[{\em 
+\hypertarget{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6ba4862b32a9f8e62b35180c7b922b169d0}{
+ERROR\_\-UNPAIRED\_\-PARENTHESIS}
+\label{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6ba4862b32a9f8e62b35180c7b922b169d0}
+}]Unpaired parenthesis \index{ERROR\_\-UNEXPECTED\_\-SYMBOL@{ERROR\_\-UNEXPECTED\_\-SYMBOL}!XmlTools::Evaluator@{XmlTools::Evaluator}}\index{XmlTools::Evaluator@{XmlTools::Evaluator}!ERROR\_\-UNEXPECTED\_\-SYMBOL@{ERROR\_\-UNEXPECTED\_\-SYMBOL}}\item[{\em 
+\hypertarget{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6bac18e89dc11c21d9d4bf970630fa9b073}{
+ERROR\_\-UNEXPECTED\_\-SYMBOL}
+\label{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6bac18e89dc11c21d9d4bf970630fa9b073}
+}]Unexpected sysbol \index{ERROR\_\-UNKNOWN\_\-VARIABLE@{ERROR\_\-UNKNOWN\_\-VARIABLE}!XmlTools::Evaluator@{XmlTools::Evaluator}}\index{XmlTools::Evaluator@{XmlTools::Evaluator}!ERROR\_\-UNKNOWN\_\-VARIABLE@{ERROR\_\-UNKNOWN\_\-VARIABLE}}\item[{\em 
+\hypertarget{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6baf55b8dd359ea08977cdb021be1895023}{
+ERROR\_\-UNKNOWN\_\-VARIABLE}
+\label{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6baf55b8dd359ea08977cdb021be1895023}
+}]Non-\/existing variable \index{ERROR\_\-UNKNOWN\_\-FUNCTION@{ERROR\_\-UNKNOWN\_\-FUNCTION}!XmlTools::Evaluator@{XmlTools::Evaluator}}\index{XmlTools::Evaluator@{XmlTools::Evaluator}!ERROR\_\-UNKNOWN\_\-FUNCTION@{ERROR\_\-UNKNOWN\_\-FUNCTION}}\item[{\em 
+\hypertarget{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6bac51246c5f76673dd1cb9bd5302403858}{
+ERROR\_\-UNKNOWN\_\-FUNCTION}
+\label{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6bac51246c5f76673dd1cb9bd5302403858}
+}]Non-\/existing function \index{ERROR\_\-EMPTY\_\-PARAMETER@{ERROR\_\-EMPTY\_\-PARAMETER}!XmlTools::Evaluator@{XmlTools::Evaluator}}\index{XmlTools::Evaluator@{XmlTools::Evaluator}!ERROR\_\-EMPTY\_\-PARAMETER@{ERROR\_\-EMPTY\_\-PARAMETER}}\item[{\em 
+\hypertarget{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6bad4291c0ebd5c6b036ec7ac842cda5b29}{
+ERROR\_\-EMPTY\_\-PARAMETER}
+\label{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6bad4291c0ebd5c6b036ec7ac842cda5b29}
+}]Function call has empty parameter \index{ERROR\_\-CALCULATION\_\-ERROR@{ERROR\_\-CALCULATION\_\-ERROR}!XmlTools::Evaluator@{XmlTools::Evaluator}}\index{XmlTools::Evaluator@{XmlTools::Evaluator}!ERROR\_\-CALCULATION\_\-ERROR@{ERROR\_\-CALCULATION\_\-ERROR}}\item[{\em 
+\hypertarget{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6ba3414a1f123c2ee682d4700245c9b37e3}{
+ERROR\_\-CALCULATION\_\-ERROR}
+\label{class_xml_tools_1_1_evaluator_a83556834c4fd68f4836782936cc29a6ba3414a1f123c2ee682d4700245c9b37e3}
+}]Error during calculation \end{description}
+\end{Desc}
+
+
+
+Definition at line 51 of file Evaluator.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_xml_tools_1_1_evaluator_adcce935da40868c8e9ee41a6cd7da30c}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!Evaluator@{Evaluator}}
+\index{Evaluator@{Evaluator}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{Evaluator}]{\setlength{\rightskip}{0pt plus 5cm}XmlTools::Evaluator::Evaluator ()}}
+\label{class_xml_tools_1_1_evaluator_adcce935da40868c8e9ee41a6cd7da30c}
+Constructor. \hypertarget{class_xml_tools_1_1_evaluator_acf06d5359f233c9e5c5d9127eb065f25}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!$\sim$Evaluator@{$\sim$Evaluator}}
+\index{$\sim$Evaluator@{$\sim$Evaluator}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{$\sim$Evaluator}]{\setlength{\rightskip}{0pt plus 5cm}XmlTools::Evaluator::$\sim$Evaluator ()}}
+\label{class_xml_tools_1_1_evaluator_acf06d5359f233c9e5c5d9127eb065f25}
+Destructor. \hypertarget{class_xml_tools_1_1_evaluator_a3b212d7fe6e68a9f398daebc2968ebfe}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!Evaluator@{Evaluator}}
+\index{Evaluator@{Evaluator}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{Evaluator}]{\setlength{\rightskip}{0pt plus 5cm}XmlTools::Evaluator::Evaluator (const {\bf Evaluator} \&)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_xml_tools_1_1_evaluator_a3b212d7fe6e68a9f398daebc2968ebfe}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_xml_tools_1_1_evaluator_ab54a35f068996b3c402c575f3aea242f}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!clear@{clear}}
+\index{clear@{clear}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void XmlTools::Evaluator::clear ()}}
+\label{class_xml_tools_1_1_evaluator_ab54a35f068996b3c402c575f3aea242f}
+Clear all settings. \hypertarget{class_xml_tools_1_1_evaluator_af036858d3fe40671448306c572e0fd8f}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!error\_\-position@{error\_\-position}}
+\index{error\_\-position@{error\_\-position}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{error\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}int XmlTools::Evaluator::error\_\-position () const}}
+\label{class_xml_tools_1_1_evaluator_af036858d3fe40671448306c572e0fd8f}
+Returns position in the input string where the problem occured. \hypertarget{class_xml_tools_1_1_evaluator_a602611e00d06e6fa2b8c5a1b292c2747}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{evaluate}]{\setlength{\rightskip}{0pt plus 5cm}double XmlTools::Evaluator::evaluate (const char $\ast$ {\em expression})}}
+\label{class_xml_tools_1_1_evaluator_a602611e00d06e6fa2b8c5a1b292c2747}
+Evaluates the arithmetic expression given as character string. The expression may consist of numbers, variables and functions separated by arithmetic (+, -\/ , /, $\ast$, $^\wedge$, $\ast$$\ast$) and logical operators (==, !=, $>$, $>$=, $<$, $<$=, \&\&, $|$$|$).
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em expression}]input expression. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result of the evaluation. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_xml_tools_1_1_evaluator_a2bb48b05d692c7b2f32d7ef8996ef835}{status} 
+
+\hyperlink{class_xml_tools_1_1_evaluator_af036858d3fe40671448306c572e0fd8f}{error\_\-position} 
+
+\hyperlink{class_xml_tools_1_1_evaluator_ad034901d9b832062c7413e698031214e}{print\_\-error} 
+\end{DoxySeeAlso}
+\hypertarget{class_xml_tools_1_1_evaluator_ab2b36613d2c977346178abbd062ee354}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!findFunction@{findFunction}}
+\index{findFunction@{findFunction}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{findFunction}]{\setlength{\rightskip}{0pt plus 5cm}bool XmlTools::Evaluator::findFunction (const char $\ast$ {\em name}, \/  int {\em npar}) const}}
+\label{class_xml_tools_1_1_evaluator_ab2b36613d2c977346178abbd062ee354}
+Finds the function in the dictionary.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em name}]name of the function to be unset. \item[{\em npar}]number of parameters of the function. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if such a function exists, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_xml_tools_1_1_evaluator_afc296d1cfdcdb65b93e40b30cf2c2704}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!findVariable@{findVariable}}
+\index{findVariable@{findVariable}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{findVariable}]{\setlength{\rightskip}{0pt plus 5cm}bool XmlTools::Evaluator::findVariable (const char $\ast$ {\em name}) const}}
+\label{class_xml_tools_1_1_evaluator_afc296d1cfdcdb65b93e40b30cf2c2704}
+Finds the variable in the dictionary.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em name}]name of the variable. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if such a variable exists, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_xml_tools_1_1_evaluator_a3b19ba699533cdb3517c3929f9c479ae}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!getEnviron@{getEnviron}}
+\index{getEnviron@{getEnviron}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{getEnviron}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ XmlTools::Evaluator::getEnviron (const char $\ast$ {\em name})}}
+\label{class_xml_tools_1_1_evaluator_a3b19ba699533cdb3517c3929f9c479ae}
+Lookup the dictionary for a string constant
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em name}]name of the variable. \end{DoxyParams}
+\hypertarget{class_xml_tools_1_1_evaluator_a78e101bcb596a10ca44871fd3250b0ca}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!operator=@{operator=}}
+\index{operator=@{operator=}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Evaluator}\& XmlTools::Evaluator::operator= (const {\bf Evaluator} \&)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_xml_tools_1_1_evaluator_a78e101bcb596a10ca44871fd3250b0ca}
+\hypertarget{class_xml_tools_1_1_evaluator_ad034901d9b832062c7413e698031214e}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!print\_\-error@{print\_\-error}}
+\index{print\_\-error@{print\_\-error}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{print\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}void XmlTools::Evaluator::print\_\-error () const}}
+\label{class_xml_tools_1_1_evaluator_ad034901d9b832062c7413e698031214e}
+Prints error message if \hyperlink{class_xml_tools_1_1_evaluator_a2bb48b05d692c7b2f32d7ef8996ef835}{status()} is an ERROR. \hypertarget{class_xml_tools_1_1_evaluator_ac9c3b846be94d03ab2c06c68b4a86448}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!removeFunction@{removeFunction}}
+\index{removeFunction@{removeFunction}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{removeFunction}]{\setlength{\rightskip}{0pt plus 5cm}void XmlTools::Evaluator::removeFunction (const char $\ast$ {\em name}, \/  int {\em npar})}}
+\label{class_xml_tools_1_1_evaluator_ac9c3b846be94d03ab2c06c68b4a86448}
+Removes the function from the dictionary.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em name}]name of the function to be unset. \item[{\em npar}]number of parameters of the function. \end{DoxyParams}
+\hypertarget{class_xml_tools_1_1_evaluator_a1fbc17d2bdbda88525e309098ba52563}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!removeVariable@{removeVariable}}
+\index{removeVariable@{removeVariable}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{removeVariable}]{\setlength{\rightskip}{0pt plus 5cm}void XmlTools::Evaluator::removeVariable (const char $\ast$ {\em name})}}
+\label{class_xml_tools_1_1_evaluator_a1fbc17d2bdbda88525e309098ba52563}
+Removes the variable from the dictionary.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em name}]name of the variable. \end{DoxyParams}
+\hypertarget{class_xml_tools_1_1_evaluator_a3329d0bef31237642ed7d5ca53d9d167}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!setEnviron@{setEnviron}}
+\index{setEnviron@{setEnviron}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{setEnviron}]{\setlength{\rightskip}{0pt plus 5cm}void XmlTools::Evaluator::setEnviron (const char $\ast$ {\em name}, \/  const char $\ast$ {\em value})}}
+\label{class_xml_tools_1_1_evaluator_a3329d0bef31237642ed7d5ca53d9d167}
+Adds to the dictionary a string constant
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em name}]name of the variable. \item[{\em value}]value assigned to the variable. \end{DoxyParams}
+\hypertarget{class_xml_tools_1_1_evaluator_ad4808f32cfac966a6ee400acaf7ff3ca}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!setFunction@{setFunction}}
+\index{setFunction@{setFunction}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{setFunction}]{\setlength{\rightskip}{0pt plus 5cm}void XmlTools::Evaluator::setFunction (const char $\ast$ {\em name}, \/  double($\ast$)(double, double, double, double, double) {\em fun})}}
+\label{class_xml_tools_1_1_evaluator_ad4808f32cfac966a6ee400acaf7ff3ca}
+Adds to the dictionary a function with five parameters. If such a function already exist in the dictionary, then status will be set to WARNING\_\-EXISTING\_\-FUNCTION.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em name}]function name. \item[{\em fun}]pointer to the real function in the user code. \end{DoxyParams}
+\hypertarget{class_xml_tools_1_1_evaluator_a7e77831c7bca5fd7bb81d31b657844d1}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!setFunction@{setFunction}}
+\index{setFunction@{setFunction}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{setFunction}]{\setlength{\rightskip}{0pt plus 5cm}void XmlTools::Evaluator::setFunction (const char $\ast$ {\em name}, \/  double($\ast$)(double, double, double, double) {\em fun})}}
+\label{class_xml_tools_1_1_evaluator_a7e77831c7bca5fd7bb81d31b657844d1}
+Adds to the dictionary a function with four parameters. If such a function already exist in the dictionary, then status will be set to WARNING\_\-EXISTING\_\-FUNCTION.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em name}]function name. \item[{\em fun}]pointer to the real function in the user code. \end{DoxyParams}
+\hypertarget{class_xml_tools_1_1_evaluator_a40b7b86078c23765a6ab09636fece140}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!setFunction@{setFunction}}
+\index{setFunction@{setFunction}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{setFunction}]{\setlength{\rightskip}{0pt plus 5cm}void XmlTools::Evaluator::setFunction (const char $\ast$ {\em name}, \/  double($\ast$)(double, double, double) {\em fun})}}
+\label{class_xml_tools_1_1_evaluator_a40b7b86078c23765a6ab09636fece140}
+Adds to the dictionary a function with three parameters. If such a function already exist in the dictionary, then status will be set to WARNING\_\-EXISTING\_\-FUNCTION.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em name}]function name. \item[{\em fun}]pointer to the real function in the user code. \end{DoxyParams}
+\hypertarget{class_xml_tools_1_1_evaluator_a831f5dc1635829ad2b09e79ada885771}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!setFunction@{setFunction}}
+\index{setFunction@{setFunction}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{setFunction}]{\setlength{\rightskip}{0pt plus 5cm}void XmlTools::Evaluator::setFunction (const char $\ast$ {\em name}, \/  double($\ast$)(double, double) {\em fun})}}
+\label{class_xml_tools_1_1_evaluator_a831f5dc1635829ad2b09e79ada885771}
+Adds to the dictionary a function with two parameters. If such a function already exist in the dictionary, then status will be set to WARNING\_\-EXISTING\_\-FUNCTION.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em name}]function name. \item[{\em fun}]pointer to the real function in the user code. \end{DoxyParams}
+\hypertarget{class_xml_tools_1_1_evaluator_a2183927ba22512c28f9933439d88d6c7}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!setFunction@{setFunction}}
+\index{setFunction@{setFunction}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{setFunction}]{\setlength{\rightskip}{0pt plus 5cm}void XmlTools::Evaluator::setFunction (const char $\ast$ {\em name}, \/  double($\ast$)(double) {\em fun})}}
+\label{class_xml_tools_1_1_evaluator_a2183927ba22512c28f9933439d88d6c7}
+Adds to the dictionary a function with one parameter. If such a function already exist in the dictionary, then status will be set to WARNING\_\-EXISTING\_\-FUNCTION.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em name}]function name. \item[{\em fun}]pointer to the real function in the user code. \end{DoxyParams}
+\hypertarget{class_xml_tools_1_1_evaluator_a54a432d7beccf23e2bebda5e449fffe0}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!setFunction@{setFunction}}
+\index{setFunction@{setFunction}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{setFunction}]{\setlength{\rightskip}{0pt plus 5cm}void XmlTools::Evaluator::setFunction (const char $\ast$ {\em name}, \/  double($\ast$)() {\em fun})}}
+\label{class_xml_tools_1_1_evaluator_a54a432d7beccf23e2bebda5e449fffe0}
+Adds to the dictionary a function without parameters. If such a function already exist in the dictionary, then status will be set to WARNING\_\-EXISTING\_\-FUNCTION.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em name}]function name. \item[{\em fun}]pointer to the real function in the user code. \end{DoxyParams}
+\hypertarget{class_xml_tools_1_1_evaluator_a5df1e3d20d6e6d9150378544d95e86b6}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!setStdMath@{setStdMath}}
+\index{setStdMath@{setStdMath}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{setStdMath}]{\setlength{\rightskip}{0pt plus 5cm}void XmlTools::Evaluator::setStdMath ()}}
+\label{class_xml_tools_1_1_evaluator_a5df1e3d20d6e6d9150378544d95e86b6}
+Sets standard mathematical functions and constants. \hypertarget{class_xml_tools_1_1_evaluator_a94fce6a14158fd1e9af0135268f0f68b}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!setSystemOfUnits@{setSystemOfUnits}}
+\index{setSystemOfUnits@{setSystemOfUnits}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{setSystemOfUnits}]{\setlength{\rightskip}{0pt plus 5cm}void XmlTools::Evaluator::setSystemOfUnits (double {\em meter} = {\ttfamily 1.0}, \/  double {\em kilogram} = {\ttfamily 1.0}, \/  double {\em second} = {\ttfamily 1.0}, \/  double {\em ampere} = {\ttfamily 1.0}, \/  double {\em kelvin} = {\ttfamily 1.0}, \/  double {\em mole} = {\ttfamily 1.0}, \/  double {\em candela} = {\ttfamily 1.0}, \/  double {\em radians} = {\ttfamily 1.0})}}
+\label{class_xml_tools_1_1_evaluator_a94fce6a14158fd1e9af0135268f0f68b}
+Sets system of units. Default is the SI system of units. To set the CGS (Centimeter-\/Gram-\/Second) system of units one should call: setSystemOfUnits(100., 1000., 1.0, 1.0, 1.0, 1.0, 1.0);
+
+To set system of units accepted in the GEANT4 simulation toolkit one should call: 
+\begin{DoxyCode}
+   setSystemOfUnits(1.e+3, 1./1.60217733e-25, 1.e+9, 1./1.60217733e-10,
+                    1.0, 1.0, 1.0);
+\end{DoxyCode}
+
+
+The basic units in GEANT4 are: 
+\begin{DoxyCode}
+   millimeter              (millimeter = 1.)
+   nanosecond              (nanosecond = 1.)
+   Mega electron Volt      (MeV        = 1.)
+   positron charge         (eplus      = 1.)
+   degree Kelvin           (kelvin     = 1.)
+   the amount of substance (mole       = 1.)
+   luminous intensity      (candela    = 1.)
+   radian                  (radian     = 1.)
+   steradian               (steradian  = 1.)
+\end{DoxyCode}
+ \hypertarget{class_xml_tools_1_1_evaluator_aa585fa26afb0fbf64b60f9758a7de5f0}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!setVariable@{setVariable}}
+\index{setVariable@{setVariable}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{setVariable}]{\setlength{\rightskip}{0pt plus 5cm}void XmlTools::Evaluator::setVariable (const char $\ast$ {\em name}, \/  const char $\ast$ {\em expression})}}
+\label{class_xml_tools_1_1_evaluator_aa585fa26afb0fbf64b60f9758a7de5f0}
+Adds to the dictionary a variable with an arithmetic expression assigned to it. If a variable with such a name already exist in the dictionary, then status will be set to WARNING\_\-EXISTING\_\-VARIABLE.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em name}]name of the variable. \item[{\em expression}]arithmetic expression. \end{DoxyParams}
+\hypertarget{class_xml_tools_1_1_evaluator_a46b7fb4c5d1366cfa70a0b1faf1a8234}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!setVariable@{setVariable}}
+\index{setVariable@{setVariable}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{setVariable}]{\setlength{\rightskip}{0pt plus 5cm}void XmlTools::Evaluator::setVariable (const char $\ast$ {\em name}, \/  double {\em value})}}
+\label{class_xml_tools_1_1_evaluator_a46b7fb4c5d1366cfa70a0b1faf1a8234}
+Adds to the dictionary a variable with given value. If a variable with such a name already exist in the dictionary, then status will be set to WARNING\_\-EXISTING\_\-VARIABLE.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em name}]name of the variable. \item[{\em value}]value assigned to the variable. \end{DoxyParams}
+\hypertarget{class_xml_tools_1_1_evaluator_a2bb48b05d692c7b2f32d7ef8996ef835}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!status@{status}}
+\index{status@{status}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{status}]{\setlength{\rightskip}{0pt plus 5cm}int XmlTools::Evaluator::status () const}}
+\label{class_xml_tools_1_1_evaluator_a2bb48b05d692c7b2f32d7ef8996ef835}
+Returns status of the last operation with the evaluator. 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_xml_tools_1_1_evaluator_aa7c19df1b96202c09024f7b7f4942364}{
+\index{XmlTools::Evaluator@{XmlTools::Evaluator}!p@{p}}
+\index{p@{p}!XmlTools::Evaluator@{XmlTools::Evaluator}}
+\subsubsection[{p}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ {\bf XmlTools::Evaluator::p}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_xml_tools_1_1_evaluator_aa7c19df1b96202c09024f7b7f4942364}
+
+
+Definition at line 271 of file Evaluator.h.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/XML/\hyperlink{_evaluator_8h}{Evaluator.h}\end{DoxyCompactItemize}

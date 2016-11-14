@@ -1,0 +1,202 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event}{
+\section{DD4hep::Simulation::Geant4PrimaryEvent Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event}\index{DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}}
+}
+
+
+Class modelling a complete primary event with multiple interactions.  
+
+
+{\ttfamily \#include $<$Geant4Primary.h$>$}\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_interaction}{Geant4PrimaryInteraction} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_afe42410b9331b521808a49120f402bd9}{Interaction}
+\item 
+typedef std::map$<$ int, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_interaction}{Interaction} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_adae96b166507159c2dd92b4e20352a52}{Interactions}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1dd4hep__ptr}{dd4hep\_\-ptr}$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_primary_extension}{PrimaryExtension} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_acfe0b3b7ad6f183fe75a6539b4470418}{ExtensionHandle}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_aa17acb393dfaa92967d7f3f7779807cf}{Geant4PrimaryEvent} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_ab4ddee2fb079f7b48eaabd24cbe8b021}{$\sim$Geant4PrimaryEvent} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_ae18431e26176abdd03ddbcd4b4097605}{add} (int id, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_interaction}{Geant4PrimaryInteraction} $\ast$interaction)
+\begin{DoxyCompactList}\small\item\em Add a new interaction object to the event. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_interaction}{Geant4PrimaryInteraction} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_a52c8d1a6663c926129ba5edf4e0fb401}{get} (int id) const 
+\begin{DoxyCompactList}\small\item\em Retrieve an interaction by it's ID. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_a10329326a00d8bc0cd0570677677538b}{size} () const 
+\begin{DoxyCompactList}\small\item\em Number of interaction contained in the primary event. \item\end{DoxyCompactList}\item 
+std::vector$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_interaction}{Geant4PrimaryInteraction} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_a332057fef57fcbec43b0c6c512e411ee}{interactions} () const 
+\begin{DoxyCompactList}\small\item\em Retrieve all interactions. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1dd4hep__ptr}{ExtensionHandle} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_a91db5fc340c2b13402f920b62ba45eb9}{extension}
+\begin{DoxyCompactList}\small\item\em User data extension if required. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_adae96b166507159c2dd92b4e20352a52}{Interactions} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_accff0a45f858135ce13050e2b1cdb706}{m\_\-interactions}
+\begin{DoxyCompactList}\small\item\em Set of primary interactions. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_ae55dce4a449fe6d48475fa3a785d7be4}{Geant4PrimaryEvent} (const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event}{Geant4PrimaryEvent} \&c)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event}{Geant4PrimaryEvent} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_af01ff35982390af71d52773488027179}{operator=} (const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event}{Geant4PrimaryEvent} \&c)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class modelling a complete primary event with multiple interactions. 
+
+Definition at line 144 of file Geant4Primary.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_acfe0b3b7ad6f183fe75a6539b4470418}{
+\index{DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}!ExtensionHandle@{ExtensionHandle}}
+\index{ExtensionHandle@{ExtensionHandle}!DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}}
+\subsubsection[{ExtensionHandle}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf dd4hep\_\-ptr}$<${\bf PrimaryExtension}$>$ {\bf DD4hep::Simulation::Geant4PrimaryEvent::ExtensionHandle}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_acfe0b3b7ad6f183fe75a6539b4470418}
+
+
+Definition at line 154 of file Geant4Primary.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_afe42410b9331b521808a49120f402bd9}{
+\index{DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}!Interaction@{Interaction}}
+\index{Interaction@{Interaction}!DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}}
+\subsubsection[{Interaction}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geant4PrimaryInteraction} {\bf DD4hep::Simulation::Geant4PrimaryEvent::Interaction}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_afe42410b9331b521808a49120f402bd9}
+
+
+Definition at line 152 of file Geant4Primary.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_adae96b166507159c2dd92b4e20352a52}{
+\index{DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}!Interactions@{Interactions}}
+\index{Interactions@{Interactions}!DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}}
+\subsubsection[{Interactions}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$int,{\bf Interaction}$\ast$$>$ {\bf DD4hep::Simulation::Geant4PrimaryEvent::Interactions}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_adae96b166507159c2dd92b4e20352a52}
+
+
+Definition at line 153 of file Geant4Primary.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_ae55dce4a449fe6d48475fa3a785d7be4}{
+\index{DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}!Geant4PrimaryEvent@{Geant4PrimaryEvent}}
+\index{Geant4PrimaryEvent@{Geant4PrimaryEvent}!DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}}
+\subsubsection[{Geant4PrimaryEvent}]{\setlength{\rightskip}{0pt plus 5cm}Geant4PrimaryEvent::Geant4PrimaryEvent (const {\bf Geant4PrimaryEvent} \& {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_ae55dce4a449fe6d48475fa3a785d7be4}
+
+
+Copy constructor. 
+
+Definition at line 111 of file Geant4Primary.cpp.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_aa17acb393dfaa92967d7f3f7779807cf}{
+\index{DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}!Geant4PrimaryEvent@{Geant4PrimaryEvent}}
+\index{Geant4PrimaryEvent@{Geant4PrimaryEvent}!DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}}
+\subsubsection[{Geant4PrimaryEvent}]{\setlength{\rightskip}{0pt plus 5cm}Geant4PrimaryEvent::Geant4PrimaryEvent ()}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_aa17acb393dfaa92967d7f3f7779807cf}
+
+
+Default constructor. 
+
+Definition at line 106 of file Geant4Primary.cpp.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_ab4ddee2fb079f7b48eaabd24cbe8b021}{
+\index{DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}!$\sim$Geant4PrimaryEvent@{$\sim$Geant4PrimaryEvent}}
+\index{$\sim$Geant4PrimaryEvent@{$\sim$Geant4PrimaryEvent}!DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}}
+\subsubsection[{$\sim$Geant4PrimaryEvent}]{\setlength{\rightskip}{0pt plus 5cm}Geant4PrimaryEvent::$\sim$Geant4PrimaryEvent ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_ab4ddee2fb079f7b48eaabd24cbe8b021}
+
+
+Default destructor. 
+
+Definition at line 122 of file Geant4Primary.cpp.
+
+References DD4hep::destroyObjects(), and m\_\-interactions.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_ae18431e26176abdd03ddbcd4b4097605}{
+\index{DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}!add@{add}}
+\index{add@{add}!DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4PrimaryEvent::add (int {\em id}, \/  {\bf Geant4PrimaryInteraction} $\ast$ {\em interaction})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_ae18431e26176abdd03ddbcd4b4097605}
+
+
+Add a new interaction object to the event. 
+
+Definition at line 127 of file Geant4Primary.cpp.
+
+References m\_\-interactions, and DD4hep::Simulation::Geant4PrimaryInteraction::mask.
+
+Referenced by DD4hep::Simulation::Geant4ParticleGenerator::operator()(), DD4hep::Simulation::Geant4InputAction::operator()(), and DD4hep::Simulation::Geant4GeneratorWrapper::operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_a52c8d1a6663c926129ba5edf4e0fb401}{
+\index{DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}!get@{get}}
+\index{get@{get}!DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4PrimaryEvent::Interaction} $\ast$ Geant4PrimaryEvent::get (int {\em id}) const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_a52c8d1a6663c926129ba5edf4e0fb401}
+
+
+Retrieve an interaction by it's ID. 
+
+Definition at line 144 of file Geant4Primary.cpp.
+
+References m\_\-interactions.
+
+Referenced by DD4hep::Simulation::Geant4InteractionVertexSmear::operator()(), DD4hep::Simulation::Geant4InteractionVertexBoost::operator()(), and DD4hep::Simulation::Geant4ParticleGenerator::printInteraction().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_a332057fef57fcbec43b0c6c512e411ee}{
+\index{DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}!interactions@{interactions}}
+\index{interactions@{interactions}!DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}}
+\subsubsection[{interactions}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$ {\bf Geant4PrimaryEvent::Interaction} $\ast$ $>$ Geant4PrimaryEvent::interactions () const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_a332057fef57fcbec43b0c6c512e411ee}
+
+
+Retrieve all interactions. Retrieve all intractions. 
+
+Definition at line 153 of file Geant4Primary.cpp.
+
+References m\_\-interactions, and v.
+
+Referenced by DD4hep::Simulation::mergeInteractions(), DD4hep::Simulation::Geant4InteractionVertexSmear::operator()(), DD4hep::Simulation::Geant4InteractionVertexBoost::operator()(), and DD4hep::Simulation::Geant4InteractionMerger::operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_af01ff35982390af71d52773488027179}{
+\index{DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}!operator=@{operator=}}
+\index{operator=@{operator=}!DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4PrimaryEvent} \& Geant4PrimaryEvent::operator= (const {\bf Geant4PrimaryEvent} \& {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_af01ff35982390af71d52773488027179}
+
+
+Assignment operator. 
+
+Definition at line 116 of file Geant4Primary.cpp.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_a10329326a00d8bc0cd0570677677538b}{
+\index{DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}!size@{size}}
+\index{size@{size}!DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t DD4hep::Simulation::Geant4PrimaryEvent::size () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_a10329326a00d8bc0cd0570677677538b}
+
+
+Number of interaction contained in the primary event. 
+
+Definition at line 174 of file Geant4Primary.h.
+
+References m\_\-interactions.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_a91db5fc340c2b13402f920b62ba45eb9}{
+\index{DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}!extension@{extension}}
+\index{extension@{extension}!DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}}
+\subsubsection[{extension}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ExtensionHandle} {\bf DD4hep::Simulation::Geant4PrimaryEvent::extension}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_a91db5fc340c2b13402f920b62ba45eb9}
+
+
+User data extension if required. 
+
+Definition at line 162 of file Geant4Primary.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_accff0a45f858135ce13050e2b1cdb706}{
+\index{DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}!m\_\-interactions@{m\_\-interactions}}
+\index{m\_\-interactions@{m\_\-interactions}!DD4hep::Simulation::Geant4PrimaryEvent@{DD4hep::Simulation::Geant4PrimaryEvent}}
+\subsubsection[{m\_\-interactions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interactions} {\bf DD4hep::Simulation::Geant4PrimaryEvent::m\_\-interactions}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_primary_event_accff0a45f858135ce13050e2b1cdb706}
+
+
+Set of primary interactions. 
+
+Definition at line 158 of file Geant4Primary.h.
+
+Referenced by add(), get(), interactions(), size(), and $\sim$Geant4PrimaryEvent().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_primary_8h}{Geant4Primary.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_primary_8cpp}{Geant4Primary.cpp}\end{DoxyCompactItemize}

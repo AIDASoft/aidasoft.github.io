@@ -1,0 +1,421 @@
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator}{
+\section{DD4hep::Alignments::AlignmentDecorator$<$ T $>$ Class Template Reference}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator}\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+}
+
+
+{\ttfamily \#include $<$AlignmentData.h$>$}Inheritance diagram for DD4hep::Alignments::AlignmentDecorator$<$ T $>$::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_alignments_1_1_alignment_decorator}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{AlignmentData::PlacedVolume} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a3dc9016a6686627ec2e6584aed9c8eeb}{PlacedVolume}
+\begin{DoxyCompactList}\small\item\em Forward definition of the geometry placement. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3a667fd798d7523d75accee832d64521}{AlignmentData::NodeList} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_aedab1bae256b0583734ed4325c58a7a7}{NodeList}
+\begin{DoxyCompactList}\small\item\em Forward definition of the nodelist leading to the world. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta}{AlignmentData::Delta} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_aafa729192cc27e7d36f6e9cfd3484289}{Delta}
+\begin{DoxyCompactList}\small\item\em Forward definition of the alignment delta data. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_af15dc8788db4b9f8ffdaa366b88bd85b}{AlignmentDecorator} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_ae0098f576f3cfd3f2356a2fef9af3245}{AlignmentDecorator} (const \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator}{AlignmentDecorator} \&c)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_ac557ab3bb22173fc50446f45eb9895a7}{AlignmentDecorator} (Q q)
+\begin{DoxyCompactList}\small\item\em Special constructors. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a4073c296e3287d0cbdb102b4d0f9f7ba}{$\sim$AlignmentDecorator} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data}{AlignmentData} \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_aaf883c9e154e4ffbf53272eb427e09ee}{data} () const 
+\begin{DoxyCompactList}\small\item\em Data accessor. \item\end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_a21dd977310ff183f61ca6ae14b59a989}{DetElement} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a3b5cdf201d75aa7a02755608e168918f}{detector} () const 
+\begin{DoxyCompactList}\small\item\em Access to the DetElement node. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a226538fa81c594913438a1507bff0af9}{placement} () const 
+\begin{DoxyCompactList}\small\item\em Access the placement of this node. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a3878365e8537a2f1052c9b34b187c4e7}{detectorPlacement} () const 
+\begin{DoxyCompactList}\small\item\em Access the placement of the DetElement node. \item\end{DoxyCompactList}\item 
+const Transform3D \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_af88b4832207460ad2bc610342ca5b35a}{localToWorld} () const 
+\begin{DoxyCompactList}\small\item\em Access the alignment/placement matrix with respect to the world. \item\end{DoxyCompactList}\item 
+const TGeoHMatrix \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a24ba22a61084c9247777db4ab9edf270}{worldTransformation} () const 
+\begin{DoxyCompactList}\small\item\em Create cached matrix to transform to world coordinates. \item\end{DoxyCompactList}\item 
+const TGeoHMatrix \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a729b16755c310d2a16a46bc5f9257341}{detectorTransformation} () const 
+\begin{DoxyCompactList}\small\item\em Create cached matrix to transform to detector coordinates. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_aaa330822ce6701a70f5b1b2c11b2ec63}{localToWorld} (const Position \&local, Position \&global) const 
+\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the world system. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_abd034c9893024823ceccda4994fdedac}{localToWorld} (const Double\_\-t local\mbox{[}3\mbox{]}, Double\_\-t global\mbox{[}3\mbox{]}) const 
+\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the world system. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a1be4d8fa4b9ce399e5e73e0d6bce00d6}{localToDetector} (const Position \&local, Position \&det) const 
+\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the detector system. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a70b8675b30dc74918eae23bd1d161d24}{localToDetector} (const Double\_\-t local\mbox{[}3\mbox{]}, Double\_\-t det\mbox{[}3\mbox{]}) const 
+\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the detector system. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_adc00acec193333d4ddbc4802c8ca72b8}{worldToLocal} (const Position \&global, Position \&local) const 
+\begin{DoxyCompactList}\small\item\em Transformation from world coordinates of the local placed volume coordinates. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a5942ce65c6e2de1dd5d04d297208810f}{worldToLocal} (const Double\_\-t global\mbox{[}3\mbox{]}, Double\_\-t local\mbox{[}3\mbox{]}) const 
+\begin{DoxyCompactList}\small\item\em Transformation from world coordinates of the local placed volume coordinates. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a11f53dac579af229135278a74abfd254}{detectorToLocal} (const Position \&det, Position \&local) const 
+\begin{DoxyCompactList}\small\item\em Transformation from world coordinates of the local placed volume coordinates. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a98b0305066eca807a95104ad11302e4b}{detectorToLocal} (const Double\_\-t det\mbox{[}3\mbox{]}, Double\_\-t local\mbox{[}3\mbox{]}) const 
+\begin{DoxyCompactList}\small\item\em Transformation from world coordinates of the local placed volume coordinates. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_ace3a885d09a36ac499b5261885fc6f9b}{nominal} () const 
+\begin{DoxyCompactList}\small\item\em Access the currently applied alignment/placement matrix (mother to daughter). \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta}{Delta} \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a605b90653ed0edd0bda77c8e63e93e53}{delta} () const 
+\begin{DoxyCompactList}\small\item\em Access the currently applied correction matrix (delta) (mother to daughter). \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a6eec8976056b3a07c214ad809f403b67}{setDelta} (const \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta}{Delta} \&del)
+\begin{DoxyCompactList}\small\item\em Set the delta alignment information. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a46ef14105fac953846eba7dc798f3357}{setDelta} (const Position \&translation)
+\begin{DoxyCompactList}\small\item\em Set the delta alignment if only a single translation. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a27ae7e7f8aba1fed3c76ab63f985a627}{setDelta} (const RotationZYX \&rotation)
+\begin{DoxyCompactList}\small\item\em Set the delta alignment if only a single rotation. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a123e789de1fa9b3c4cb0149d6831b287}{setDelta} (const Position \&translation, RotationZYX \&rotation)
+\begin{DoxyCompactList}\small\item\em Set the delta alignment as a composite of a translation and a rotation. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_aa162f47918e614d0c3c11e6b584d1a1b}{setDeltaPivot} (const Translation3D \&pivot, const RotationZYX \&rotation)
+\begin{DoxyCompactList}\small\item\em Set the delta alignment if only a single rotation around a pivot point. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a5b84d2b352ba02e27815b66a94888999}{setDeltaPivot} (const Position \&translation, const Translation3D \&pivot, const RotationZYX \&rotation)
+\begin{DoxyCompactList}\small\item\em Set the delta alignment if a translation and a rotation around pivot. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$ class DD4hep::Alignments::AlignmentDecorator$<$ T $>$}
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 228 of file AlignmentData.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_aafa729192cc27e7d36f6e9cfd3484289}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!Delta@{Delta}}
+\index{Delta@{Delta}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{Delta}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ typedef {\bf AlignmentData::Delta} {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::{\bf Delta}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_aafa729192cc27e7d36f6e9cfd3484289}
+
+
+Forward definition of the alignment delta data. 
+
+Definition at line 235 of file AlignmentData.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_aedab1bae256b0583734ed4325c58a7a7}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!NodeList@{NodeList}}
+\index{NodeList@{NodeList}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{NodeList}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ typedef {\bf AlignmentData::NodeList} {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::{\bf NodeList}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_aedab1bae256b0583734ed4325c58a7a7}
+
+
+Forward definition of the nodelist leading to the world. 
+
+Definition at line 233 of file AlignmentData.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a3dc9016a6686627ec2e6584aed9c8eeb}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!PlacedVolume@{PlacedVolume}}
+\index{PlacedVolume@{PlacedVolume}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{PlacedVolume}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ typedef {\bf AlignmentData::PlacedVolume} {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::{\bf PlacedVolume}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a3dc9016a6686627ec2e6584aed9c8eeb}
+
+
+Forward definition of the geometry placement. 
+
+Definition at line 231 of file AlignmentData.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_af15dc8788db4b9f8ffdaa366b88bd85b}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!AlignmentDecorator@{AlignmentDecorator}}
+\index{AlignmentDecorator@{AlignmentDecorator}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{AlignmentDecorator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::{\bf AlignmentDecorator} ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_af15dc8788db4b9f8ffdaa366b88bd85b}
+
+
+Default constructor. 
+
+Definition at line 350 of file AlignmentData.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_ae0098f576f3cfd3f2356a2fef9af3245}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!AlignmentDecorator@{AlignmentDecorator}}
+\index{AlignmentDecorator@{AlignmentDecorator}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{AlignmentDecorator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::{\bf AlignmentDecorator} (const {\bf AlignmentDecorator}$<$ {\bf T} $>$ \& {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_ae0098f576f3cfd3f2356a2fef9af3245}
+
+
+Copy constructor. 
+
+Definition at line 354 of file AlignmentData.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_ac557ab3bb22173fc50446f45eb9895a7}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!AlignmentDecorator@{AlignmentDecorator}}
+\index{AlignmentDecorator@{AlignmentDecorator}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{AlignmentDecorator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ template$<$typename Q $>$ {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::{\bf AlignmentDecorator} (Q {\em q})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_ac557ab3bb22173fc50446f45eb9895a7}
+
+
+Special constructors. 
+
+Definition at line 242 of file AlignmentData.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a4073c296e3287d0cbdb102b4d0f9f7ba}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!$\sim$AlignmentDecorator@{$\sim$AlignmentDecorator}}
+\index{$\sim$AlignmentDecorator@{$\sim$AlignmentDecorator}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{$\sim$AlignmentDecorator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::$\sim${\bf AlignmentDecorator} ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a4073c296e3287d0cbdb102b4d0f9f7ba}
+
+
+Default destructor. 
+
+Definition at line 244 of file AlignmentData.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_aaf883c9e154e4ffbf53272eb427e09ee}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!data@{data}}
+\index{data@{data}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const {\bf AlignmentData}\& {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::data () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_aaf883c9e154e4ffbf53272eb427e09ee}
+
+
+Data accessor. 
+
+Definition at line 247 of file AlignmentData.h.
+
+Referenced by DD4hep::Alignments::AlignmentDecorator$<$ T $>$::delta(), DD4hep::Alignments::AlignmentDecorator$<$ T $>$::detector(), DD4hep::Alignments::AlignmentDecorator$<$ T $>$::detectorPlacement(), DD4hep::Alignments::AlignmentDecorator$<$ T $>$::detectorToLocal(), DD4hep::Alignments::AlignmentDecorator$<$ T $>$::detectorTransformation(), DD4hep::Alignments::AlignmentDecorator$<$ T $>$::localToDetector(), DD4hep::Alignments::AlignmentDecorator$<$ T $>$::localToWorld(), DD4hep::Alignments::AlignmentDecorator$<$ T $>$::nominal(), DD4hep::Alignments::AlignmentDecorator$<$ T $>$::placement(), DD4hep::Alignments::AlignmentDecorator$<$ T $>$::setDelta(), DD4hep::Alignments::AlignmentDecorator$<$ T $>$::setDeltaPivot(), DD4hep::Alignments::AlignmentDecorator$<$ T $>$::worldToLocal(), and DD4hep::Alignments::AlignmentDecorator$<$ T $>$::worldTransformation().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a605b90653ed0edd0bda77c8e63e93e53}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!delta@{delta}}
+\index{delta@{delta}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{delta}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const {\bf Delta}\& {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::delta () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a605b90653ed0edd0bda77c8e63e93e53}
+
+
+Access the currently applied correction matrix (delta) (mother to daughter). 
+
+Definition at line 300 of file AlignmentData.h.
+
+References DD4hep::Alignments::AlignmentDecorator$<$ T $>$::data(), and DD4hep::Alignments::AlignmentData::delta.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a3b5cdf201d75aa7a02755608e168918f}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!detector@{detector}}
+\index{detector@{detector}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{detector}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf DetElement} {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::detector () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a3b5cdf201d75aa7a02755608e168918f}
+
+
+Access to the DetElement node. 
+
+Definition at line 249 of file AlignmentData.h.
+
+References DD4hep::Alignments::AlignmentDecorator$<$ T $>$::data(), and DD4hep::Alignments::AlignmentData::detector.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a3878365e8537a2f1052c9b34b187c4e7}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!detectorPlacement@{detectorPlacement}}
+\index{detectorPlacement@{detectorPlacement}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{detectorPlacement}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf PlacedVolume} {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::detectorPlacement () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a3878365e8537a2f1052c9b34b187c4e7}
+
+
+Access the placement of the DetElement node. 
+
+Definition at line 255 of file AlignmentData.h.
+
+References DD4hep::Alignments::AlignmentDecorator$<$ T $>$::data(), and DD4hep::Alignments::AlignmentData::detector.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a98b0305066eca807a95104ad11302e4b}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!detectorToLocal@{detectorToLocal}}
+\index{detectorToLocal@{detectorToLocal}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{detectorToLocal}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::detectorToLocal (const Double\_\-t {\em det}\mbox{[}3\mbox{]}, \/  Double\_\-t {\em local}\mbox{[}3\mbox{]}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a98b0305066eca807a95104ad11302e4b}
+
+
+Transformation from world coordinates of the local placed volume coordinates. 
+
+Definition at line 293 of file AlignmentData.h.
+
+References DD4hep::Alignments::AlignmentDecorator$<$ T $>$::data(), and DD4hep::Alignments::AlignmentData::detectorToLocal().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a11f53dac579af229135278a74abfd254}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!detectorToLocal@{detectorToLocal}}
+\index{detectorToLocal@{detectorToLocal}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{detectorToLocal}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::detectorToLocal (const Position \& {\em det}, \/  Position \& {\em local}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a11f53dac579af229135278a74abfd254}
+
+
+Transformation from world coordinates of the local placed volume coordinates. 
+
+Definition at line 290 of file AlignmentData.h.
+
+References DD4hep::Alignments::AlignmentDecorator$<$ T $>$::data(), and DD4hep::Alignments::AlignmentData::detectorToLocal().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a729b16755c310d2a16a46bc5f9257341}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!detectorTransformation@{detectorTransformation}}
+\index{detectorTransformation@{detectorTransformation}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{detectorTransformation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const TGeoHMatrix\& {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::detectorTransformation () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a729b16755c310d2a16a46bc5f9257341}
+
+
+Create cached matrix to transform to detector coordinates. 
+
+Definition at line 265 of file AlignmentData.h.
+
+References DD4hep::Alignments::AlignmentDecorator$<$ T $>$::data(), and DD4hep::Alignments::AlignmentData::detectorTransformation().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a70b8675b30dc74918eae23bd1d161d24}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!localToDetector@{localToDetector}}
+\index{localToDetector@{localToDetector}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{localToDetector}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::localToDetector (const Double\_\-t {\em local}\mbox{[}3\mbox{]}, \/  Double\_\-t {\em det}\mbox{[}3\mbox{]}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a70b8675b30dc74918eae23bd1d161d24}
+
+
+Transformation from local coordinates of the placed volume to the detector system. 
+
+Definition at line 279 of file AlignmentData.h.
+
+References DD4hep::Alignments::AlignmentDecorator$<$ T $>$::data(), and DD4hep::Alignments::AlignmentData::localToDetector().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a1be4d8fa4b9ce399e5e73e0d6bce00d6}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!localToDetector@{localToDetector}}
+\index{localToDetector@{localToDetector}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{localToDetector}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::localToDetector (const Position \& {\em local}, \/  Position \& {\em det}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a1be4d8fa4b9ce399e5e73e0d6bce00d6}
+
+
+Transformation from local coordinates of the placed volume to the detector system. 
+
+Definition at line 276 of file AlignmentData.h.
+
+References DD4hep::Alignments::AlignmentDecorator$<$ T $>$::data(), and DD4hep::Alignments::AlignmentData::localToDetector().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_abd034c9893024823ceccda4994fdedac}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!localToWorld@{localToWorld}}
+\index{localToWorld@{localToWorld}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{localToWorld}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::localToWorld (const Double\_\-t {\em local}\mbox{[}3\mbox{]}, \/  Double\_\-t {\em global}\mbox{[}3\mbox{]}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_abd034c9893024823ceccda4994fdedac}
+
+
+Transformation from local coordinates of the placed volume to the world system. 
+
+Definition at line 272 of file AlignmentData.h.
+
+References DD4hep::Alignments::AlignmentDecorator$<$ T $>$::data(), and DD4hep::Alignments::AlignmentData::localToWorld().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_aaa330822ce6701a70f5b1b2c11b2ec63}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!localToWorld@{localToWorld}}
+\index{localToWorld@{localToWorld}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{localToWorld}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::localToWorld (const Position \& {\em local}, \/  Position \& {\em global}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_aaa330822ce6701a70f5b1b2c11b2ec63}
+
+
+Transformation from local coordinates of the placed volume to the world system. 
+
+Definition at line 269 of file AlignmentData.h.
+
+References DD4hep::Alignments::AlignmentDecorator$<$ T $>$::data(), and DD4hep::Alignments::AlignmentData::localToWorld().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_af88b4832207460ad2bc610342ca5b35a}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!localToWorld@{localToWorld}}
+\index{localToWorld@{localToWorld}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{localToWorld}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const Transform3D\& {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::localToWorld () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_af88b4832207460ad2bc610342ca5b35a}
+
+
+Access the alignment/placement matrix with respect to the world. 
+
+Definition at line 259 of file AlignmentData.h.
+
+References DD4hep::Alignments::AlignmentDecorator$<$ T $>$::data(), and DD4hep::Alignments::AlignmentData::trToWorld.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_ace3a885d09a36ac499b5261885fc6f9b}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!nominal@{nominal}}
+\index{nominal@{nominal}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{nominal}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const {\bf Alignment}\& {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::nominal () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_ace3a885d09a36ac499b5261885fc6f9b}
+
+
+Access the currently applied alignment/placement matrix (mother to daughter). 
+
+Definition at line 297 of file AlignmentData.h.
+
+References DD4hep::Alignments::AlignmentDecorator$<$ T $>$::data(), and DD4hep::Alignments::AlignmentData::detector.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a226538fa81c594913438a1507bff0af9}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!placement@{placement}}
+\index{placement@{placement}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{placement}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf PlacedVolume} {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::placement () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a226538fa81c594913438a1507bff0af9}
+
+
+Access the placement of this node. 
+
+Definition at line 252 of file AlignmentData.h.
+
+References DD4hep::Alignments::AlignmentDecorator$<$ T $>$::data(), and DD4hep::Alignments::AlignmentData::placement.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a123e789de1fa9b3c4cb0149d6831b287}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!setDelta@{setDelta}}
+\index{setDelta@{setDelta}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{setDelta}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::setDelta (const Position \& {\em translation}, \/  RotationZYX \& {\em rotation})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a123e789de1fa9b3c4cb0149d6831b287}
+
+
+Set the delta alignment as a composite of a translation and a rotation. 
+
+Definition at line 321 of file AlignmentData.h.
+
+References DD4hep::Alignments::AlignmentDecorator$<$ T $>$::data(), DD4hep::Alignments::AlignmentData::delta, DD4hep::Alignments::Delta::flags, DD4hep::Alignments::Delta::HAVE\_\-ROTATION, DD4hep::Alignments::Delta::HAVE\_\-TRANSLATION, DD4hep::Alignments::Delta::rotation, and DD4hep::Alignments::Delta::translation.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a27ae7e7f8aba1fed3c76ab63f985a627}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!setDelta@{setDelta}}
+\index{setDelta@{setDelta}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{setDelta}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::setDelta (const RotationZYX \& {\em rotation})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a27ae7e7f8aba1fed3c76ab63f985a627}
+
+
+Set the delta alignment if only a single rotation. 
+
+Definition at line 315 of file AlignmentData.h.
+
+References DD4hep::Alignments::AlignmentDecorator$<$ T $>$::data(), DD4hep::Alignments::AlignmentData::delta, DD4hep::Alignments::Delta::flags, DD4hep::Alignments::Delta::HAVE\_\-ROTATION, and DD4hep::Alignments::Delta::rotation.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a46ef14105fac953846eba7dc798f3357}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!setDelta@{setDelta}}
+\index{setDelta@{setDelta}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{setDelta}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::setDelta (const Position \& {\em translation})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a46ef14105fac953846eba7dc798f3357}
+
+
+Set the delta alignment if only a single translation. 
+
+Definition at line 309 of file AlignmentData.h.
+
+References DD4hep::Alignments::AlignmentDecorator$<$ T $>$::data(), DD4hep::Alignments::AlignmentData::delta, DD4hep::Alignments::Delta::flags, DD4hep::Alignments::Delta::HAVE\_\-TRANSLATION, and DD4hep::Alignments::Delta::translation.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a6eec8976056b3a07c214ad809f403b67}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!setDelta@{setDelta}}
+\index{setDelta@{setDelta}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{setDelta}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::setDelta (const {\bf Delta} \& {\em del})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a6eec8976056b3a07c214ad809f403b67}
+
+
+Set the delta alignment information. 
+
+Definition at line 304 of file AlignmentData.h.
+
+References DD4hep::Alignments::AlignmentDecorator$<$ T $>$::data(), and DD4hep::Alignments::AlignmentData::delta.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a5b84d2b352ba02e27815b66a94888999}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!setDeltaPivot@{setDeltaPivot}}
+\index{setDeltaPivot@{setDeltaPivot}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{setDeltaPivot}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::setDeltaPivot (const Position \& {\em translation}, \/  const Translation3D \& {\em pivot}, \/  const RotationZYX \& {\em rotation})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a5b84d2b352ba02e27815b66a94888999}
+
+
+Set the delta alignment if a translation and a rotation around pivot. 
+
+Definition at line 337 of file AlignmentData.h.
+
+References DD4hep::Alignments::AlignmentDecorator$<$ T $>$::data(), DD4hep::Alignments::AlignmentData::delta, DD4hep::Alignments::Delta::flags, DD4hep::Alignments::Delta::HAVE\_\-PIVOT, DD4hep::Alignments::Delta::HAVE\_\-ROTATION, DD4hep::Alignments::Delta::HAVE\_\-TRANSLATION, DD4hep::Alignments::Delta::pivot, DD4hep::Alignments::Delta::rotation, and DD4hep::Alignments::Delta::translation.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_aa162f47918e614d0c3c11e6b584d1a1b}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!setDeltaPivot@{setDeltaPivot}}
+\index{setDeltaPivot@{setDeltaPivot}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{setDeltaPivot}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::setDeltaPivot (const Translation3D \& {\em pivot}, \/  const RotationZYX \& {\em rotation})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_aa162f47918e614d0c3c11e6b584d1a1b}
+
+
+Set the delta alignment if only a single rotation around a pivot point. 
+
+Definition at line 329 of file AlignmentData.h.
+
+References DD4hep::Alignments::AlignmentDecorator$<$ T $>$::data(), DD4hep::Alignments::AlignmentData::delta, DD4hep::Alignments::Delta::flags, DD4hep::Alignments::Delta::HAVE\_\-PIVOT, DD4hep::Alignments::Delta::HAVE\_\-ROTATION, DD4hep::Alignments::Delta::pivot, and DD4hep::Alignments::Delta::rotation.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a5942ce65c6e2de1dd5d04d297208810f}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!worldToLocal@{worldToLocal}}
+\index{worldToLocal@{worldToLocal}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{worldToLocal}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::worldToLocal (const Double\_\-t {\em global}\mbox{[}3\mbox{]}, \/  Double\_\-t {\em local}\mbox{[}3\mbox{]}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a5942ce65c6e2de1dd5d04d297208810f}
+
+
+Transformation from world coordinates of the local placed volume coordinates. 
+
+Definition at line 286 of file AlignmentData.h.
+
+References DD4hep::Alignments::AlignmentDecorator$<$ T $>$::data(), and DD4hep::Alignments::AlignmentData::worldToLocal().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_adc00acec193333d4ddbc4802c8ca72b8}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!worldToLocal@{worldToLocal}}
+\index{worldToLocal@{worldToLocal}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{worldToLocal}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::worldToLocal (const Position \& {\em global}, \/  Position \& {\em local}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_adc00acec193333d4ddbc4802c8ca72b8}
+
+
+Transformation from world coordinates of the local placed volume coordinates. 
+
+Definition at line 283 of file AlignmentData.h.
+
+References DD4hep::Alignments::AlignmentDecorator$<$ T $>$::data(), and DD4hep::Alignments::AlignmentData::worldToLocal().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a24ba22a61084c9247777db4ab9edf270}{
+\index{DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}!worldTransformation@{worldTransformation}}
+\index{worldTransformation@{worldTransformation}!DD4hep::Alignments::AlignmentDecorator@{DD4hep::Alignments::AlignmentDecorator}}
+\subsubsection[{worldTransformation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const TGeoHMatrix\& {\bf DD4hep::Alignments::AlignmentDecorator}$<$ {\bf T} $>$::worldTransformation () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_decorator_a24ba22a61084c9247777db4ab9edf270}
+
+
+Create cached matrix to transform to world coordinates. 
+
+Definition at line 262 of file AlignmentData.h.
+
+References DD4hep::Alignments::AlignmentDecorator$<$ T $>$::data(), and DD4hep::Alignments::AlignmentData::worldTransformation().
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_alignment_data_8h}{AlignmentData.h}\end{DoxyCompactItemize}

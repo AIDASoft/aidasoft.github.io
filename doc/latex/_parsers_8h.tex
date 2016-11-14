@@ -1,0 +1,171 @@
+\hypertarget{_parsers_8h}{
+\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/Parsers.h File Reference}
+\label{_parsers_8h}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/Parsers.h@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/Parsers.h}}
+}
+{\ttfamily \#include $<$string$>$}\par
+{\ttfamily \#include $<$vector$>$}\par
+{\ttfamily \#include $<$list$>$}\par
+{\ttfamily \#include $<$set$>$}\par
+{\ttfamily \#include $<$map$>$}\par
+{\ttfamily \#include $<$deque$>$}\par
+{\ttfamily \#include \char`\"{}Math/Point3D.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}Math/Vector3D.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}Math/Vector4D.h\char`\"{}}\par
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_d_d4hep}{DD4hep}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the AIDA detector description toolkit. \item\end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_d_d4hep_1_1_parsers}{DD4hep::Parsers}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the AIDA detector for utilities using boost::spirit parsers. \item\end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_r_o_o_t}{ROOT}
+
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{namespace_r_o_o_t}{ROOT} utility namespace. See \href{http://root.cern.ch/root/htmldoc/ClassIndex.html.}{\tt http://root.cern.ch/root/htmldoc/ClassIndex.html.} \item\end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_r_o_o_t_1_1_math}{ROOT::Math}
+
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{namespace_r_o_o_t}{ROOT} namespace for mathematical operations and corresponding classes. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_parsers_8h_ab9eb56f050aa20c0f6b954c77587bb09}{DD4HEP\_\-PARSERS\_\-H}~1
+\item 
+\#define \hyperlink{_parsers_8h_aaad5c3d9836c2d4f1dd6c2beb3b0ae15}{PARSERS\_\-DECL\_\-FOR\_\-SINGLE}(Type)~int parse(Type\& result, const std::string\& input);
+\item 
+\#define \hyperlink{_parsers_8h_ac61de44fff5326d23703542c2dc8275c}{PARSERS\_\-DECL\_\-FOR\_\-PAIR}(FirstType, SecondType)~int parse(std::pair$<$FirstType, SecondType $>$\& result,const std::string\& input);
+\item 
+\#define \hyperlink{_parsers_8h_ad77e87ad9e71918448bd8aa4f6aab716}{PARSERS\_\-DECL\_\-FOR\_\-LIST}(InnerType)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespace_d_d4hep_1_1_parsers_ad0d0bfb1ee52c6c6fe6000325562b1fa}{DD4hep::Parsers::parse} (std::vector$<$ std::pair$<$ double, double $>$ $>$ \&result, const std::string \&input)
+\begin{DoxyCompactList}\small\item\em parse the {\ttfamily bool} value \item\end{DoxyCompactList}\item 
+int \hyperlink{namespace_d_d4hep_1_1_parsers_a300ef2062786116541bef473b809ee22}{DD4hep::Parsers::parse} (std::vector$<$ std::pair$<$ int, int $>$ $>$ \&result, const std::string \&input)
+\begin{DoxyCompactList}\small\item\em parse the {\ttfamily \hyperlink{classstd_1_1vector}{std::vector}$<$\hyperlink{classstd_1_1pair}{std::pair}$<$int,int$>$ $>$} value \item\end{DoxyCompactList}\item 
+int \hyperlink{namespace_d_d4hep_1_1_parsers_afd6bbff0d1fc52ec885e45126f670506}{DD4hep::Parsers::parse} (std::vector$<$ std::vector$<$ std::string $>$ $>$ \&result, const std::string \&input)
+\begin{DoxyCompactList}\small\item\em parse the {\ttfamily \hyperlink{classstd_1_1vector}{std::vector}$<$\hyperlink{classstd_1_1vector}{std::vector}$<$\hyperlink{classstd_1_1string}{std::string}$>$ $>$} value \item\end{DoxyCompactList}\item 
+int \hyperlink{namespace_d_d4hep_1_1_parsers_aaec3e97d2c62b4ca583b113b7c55e44c}{DD4hep::Parsers::parse} (std::vector$<$ std::vector$<$ double $>$ $>$ \&result, const std::string \&input)
+\begin{DoxyCompactList}\small\item\em parse the {\ttfamily \hyperlink{classstd_1_1vector}{std::vector}$<$\hyperlink{classstd_1_1vector}{std::vector}$<$double$>$ $>$} value \item\end{DoxyCompactList}\item 
+int \hyperlink{namespace_d_d4hep_1_1_parsers_ac82777050fc05e43dcd2e5fa4648cfb5}{DD4hep::Parsers::parse} (std::map$<$ int, int $>$ \&result, const std::string \&input)
+\begin{DoxyCompactList}\small\item\em parse the {\ttfamily std::map$<$int , int$>$} value \item\end{DoxyCompactList}\item 
+int \hyperlink{namespace_d_d4hep_1_1_parsers_a948c73c7e48e93c657c717952295ce22}{DD4hep::Parsers::parse} (std::map$<$ int, double $>$ \&result, const std::string \&input)
+\begin{DoxyCompactList}\small\item\em parse the {\ttfamily std::map$<$int , double$>$} value \item\end{DoxyCompactList}\item 
+int \hyperlink{namespace_d_d4hep_1_1_parsers_a5c68b3129b287e0e4c0a8aa6c97224d2}{DD4hep::Parsers::parse} (std::map$<$ std::string, std::string $>$ \&result, const std::string \&input)
+\begin{DoxyCompactList}\small\item\em parse the {\ttfamily std::map$<$\hyperlink{classstd_1_1string}{std::string} , \hyperlink{classstd_1_1string}{std::string}$>$} value \item\end{DoxyCompactList}\item 
+int \hyperlink{namespace_d_d4hep_1_1_parsers_a0bb67dd0bd4f1932c18d9fdf190b0387}{DD4hep::Parsers::parse} (std::map$<$ std::string, int $>$ \&result, const std::string \&input)
+\begin{DoxyCompactList}\small\item\em parse the {\ttfamily std::map$<$\hyperlink{classstd_1_1string}{std::string} , int$>$} value \item\end{DoxyCompactList}\item 
+int \hyperlink{namespace_d_d4hep_1_1_parsers_a3bb4178f3175f409b144ff5629463c14}{DD4hep::Parsers::parse} (std::map$<$ std::string, double $>$ \&result, const std::string \&input)
+\begin{DoxyCompactList}\small\item\em parse the {\ttfamily std::map$<$\hyperlink{classstd_1_1string}{std::string} , double$>$} value \item\end{DoxyCompactList}\item 
+int \hyperlink{namespace_d_d4hep_1_1_parsers_a010112afc7cbf060b08876d5d4dee7d5}{DD4hep::Parsers::parse} (std::map$<$ std::string, std::vector$<$ std::string $>$ $>$ \&result, const std::string \&input)
+\begin{DoxyCompactList}\small\item\em parse the {\ttfamily std::map$<$\hyperlink{classstd_1_1string}{std::string} , \hyperlink{classstd_1_1vector}{std::vector}$<$\hyperlink{classstd_1_1string}{std::string}$>$ $>$} value \item\end{DoxyCompactList}\item 
+int \hyperlink{namespace_d_d4hep_1_1_parsers_a0da3b1bf74df4603de3860725652b1f7}{DD4hep::Parsers::parse} (std::map$<$ std::string, std::vector$<$ int $>$ $>$ \&result, const std::string \&input)
+\begin{DoxyCompactList}\small\item\em parse the {\ttfamily std::map$<$\hyperlink{classstd_1_1string}{std::string} , \hyperlink{classstd_1_1vector}{std::vector}$<$int$>$ $>$} value \item\end{DoxyCompactList}\item 
+int \hyperlink{namespace_d_d4hep_1_1_parsers_a117aacde08a7caa18db156f5871ad9cf}{DD4hep::Parsers::parse} (std::map$<$ std::string, std::vector$<$ double $>$ $>$ \&result, const std::string \&input)
+\begin{DoxyCompactList}\small\item\em parse the {\ttfamily std::map$<$\hyperlink{classstd_1_1string}{std::string} , \hyperlink{classstd_1_1vector}{std::vector}$<$double$>$ $>$} value \item\end{DoxyCompactList}\item 
+int \hyperlink{namespace_d_d4hep_1_1_parsers_a3d922ac85001241814312a94a6ccdbc3}{DD4hep::Parsers::parse} (std::map$<$ int, std::string $>$ \&result, const std::string \&input)
+\begin{DoxyCompactList}\small\item\em parse the {\ttfamily std::map$<$int,\hyperlink{classstd_1_1string}{std::string}$>$ $>$} objects \item\end{DoxyCompactList}\item 
+int \hyperlink{namespace_d_d4hep_1_1_parsers_a62f00a034a77a322187e7cd94418f696}{DD4hep::Parsers::parse} (std::string \&name, std::string \&value, const std::string \&input)
+\begin{DoxyCompactList}\small\item\em parse the {\ttfamily std::map$<$unsigned int,\hyperlink{classstd_1_1string}{std::string}$>$ $>$} objects \item\end{DoxyCompactList}\item 
+int \hyperlink{namespace_d_d4hep_1_1_parsers_a2af85c2e9ae2c5ec0e91d3e992d529c2}{DD4hep::Parsers::parse} (std::map$<$ std::string, std::pair$<$ double, double $>$ $>$ \&params, const std::string \&input)
+\begin{DoxyCompactList}\small\item\em helper function, needed for implementation of map of pairs \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , unsigned int N$>$ }\\int \hyperlink{namespace_d_d4hep_1_1_parsers_ae69a0a480d1612aabcd8a37624dc1c1b}{DD4hep::Parsers::parse} (\hyperlink{class_t}{T}(\&result)\mbox{[}N\mbox{]}, const std::string \&input)
+\begin{DoxyCompactList}\small\item\em parser function for C-\/arrays \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$unsigned int N$>$ }\\int \hyperlink{namespace_d_d4hep_1_1_parsers_ad2e179991b827ffa95098ca1549db981}{DD4hep::Parsers::parse} (char(\&result)\mbox{[}N\mbox{]}, const std::string \&input)
+\begin{DoxyCompactList}\small\item\em parser function for C-\/strings \item\end{DoxyCompactList}\item 
+bool \hyperlink{namespace_r_o_o_t_1_1_math_ae526386c3fc57d159a6b9f227c859521}{ROOT::Math::operator$<$} (const XYZPoint \&a, const XYZPoint \&b)
+\begin{DoxyCompactList}\small\item\em Allow point insertion of a point in maps. \item\end{DoxyCompactList}\item 
+bool \hyperlink{namespace_r_o_o_t_1_1_math_a3bf72adbd1dc8071ef0283f0e253974a}{ROOT::Math::operator$<$} (const XYZVector \&a, const XYZVector \&b)
+\begin{DoxyCompactList}\small\item\em Allow 3-\/vector insertion of a in maps. \item\end{DoxyCompactList}\item 
+bool \hyperlink{namespace_r_o_o_t_1_1_math_a1c3af6f88f23ab799472c3e6621364ea}{ROOT::Math::operator$<$} (const PxPyPzEVector \&a, const PxPyPzEVector \&b)
+\begin{DoxyCompactList}\small\item\em Allow 4-\/vector insertion of a in maps. \item\end{DoxyCompactList}\item 
+int \hyperlink{namespace_d_d4hep_1_1_parsers_a7d90cf46a4c38175eed16be4cbc97d20}{DD4hep::Parsers::parse} (ROOT::Math::XYZPoint \&result, const std::string \&input)
+\begin{DoxyCompactList}\small\item\em parse 3D-\/point \item\end{DoxyCompactList}\item 
+int \hyperlink{namespace_d_d4hep_1_1_parsers_a55f47fe0c36c09f779f5aeefe17e9bcb}{DD4hep::Parsers::parse} (ROOT::Math::XYZVector \&result, const std::string \&input)
+\begin{DoxyCompactList}\small\item\em parse 3D-\/vector \item\end{DoxyCompactList}\item 
+int \hyperlink{namespace_d_d4hep_1_1_parsers_aa49d5f1a00fb97ffdcac92a067fc14a2}{DD4hep::Parsers::parse} (ROOT::Math::PxPyPzEVector \&result, const std::string \&input)
+\begin{DoxyCompactList}\small\item\em parse PxPyPzEVector \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The declaration of major parsing functions used e.g for (re)implementation of new extended properties see class Property These function also could be used in a different, much wider contex. all of them have the semantic: {\ttfamily int parse ( TYPE\& result , const \hyperlink{classstd_1_1string}{std::string}\& input )} where {\ttfamily input} is the input string to be parsed, and {\ttfamily result} is the the result of parsing
+
+
+\begin{DoxyCode}
+  const std::string        input = ... ;
+  std::vector<std::string> result ;
+
+  // parse the input
+  int sc = parse ( result , input ) ;
+  if ( sc.isFailure() )
+  {
+    // error here ...
+  }
+  std::cout << "vector size " << result.size() << std::endl ;
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{namespace_d_d4hep_1_1_parsers_a49cf20eb52b8e48550d6e3f74b94069e}{DD4hep::Parsers::parse} 
+
+Property
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Alexander MAZUROV \href{mailto:Alexander.Mazurov@gmail.com}{\tt Alexander.Mazurov@gmail.com} 
+
+Vanya BELYAEV \href{mailto:ibelyaev@physics.syr.edu}{\tt ibelyaev@physics.syr.edu} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2006-\/05-\/12 
+\end{DoxyDate}
+
+
+Definition in file \hyperlink{_parsers_8h_source}{Parsers.h}.
+
+\subsection{Define Documentation}
+\hypertarget{_parsers_8h_ab9eb56f050aa20c0f6b954c77587bb09}{
+\index{Parsers.h@{Parsers.h}!DD4HEP\_\-PARSERS\_\-H@{DD4HEP\_\-PARSERS\_\-H}}
+\index{DD4HEP\_\-PARSERS\_\-H@{DD4HEP\_\-PARSERS\_\-H}!Parsers.h@{Parsers.h}}
+\subsubsection[{DD4HEP\_\-PARSERS\_\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-PARSERS\_\-H~1}}
+\label{_parsers_8h_ab9eb56f050aa20c0f6b954c77587bb09}
+
+
+Definition at line 14 of file Parsers.h.\hypertarget{_parsers_8h_ad77e87ad9e71918448bd8aa4f6aab716}{
+\index{Parsers.h@{Parsers.h}!PARSERS\_\-DECL\_\-FOR\_\-LIST@{PARSERS\_\-DECL\_\-FOR\_\-LIST}}
+\index{PARSERS\_\-DECL\_\-FOR\_\-LIST@{PARSERS\_\-DECL\_\-FOR\_\-LIST}!Parsers.h@{Parsers.h}}
+\subsubsection[{PARSERS\_\-DECL\_\-FOR\_\-LIST}]{\setlength{\rightskip}{0pt plus 5cm}\#define PARSERS\_\-DECL\_\-FOR\_\-LIST(InnerType)}}
+\label{_parsers_8h_ad77e87ad9e71918448bd8aa4f6aab716}
+{\bfseries Value:}
+\begin{DoxyCode}
+int parse(std::vector<InnerType >& result,const std::string& input);   \
+  int parse(std::list<InnerType >& result,const std::string& input);     \
+  int parse(std::set<InnerType >& result,const std::string& input);      \
+  int parse(std::map<std::string,InnerType >& result,const std::string& input); \
+      
+  int parse(std::map<int,InnerType >& result,const std::string& input);  \
+  int parse(std::pair<std::string,InnerType >& result,const std::string& input); 
+      \
+  int parse(std::pair<int,InnerType >& result,const std::string& input);
+\end{DoxyCode}
+
+
+Definition at line 49 of file Parsers.h.\hypertarget{_parsers_8h_ac61de44fff5326d23703542c2dc8275c}{
+\index{Parsers.h@{Parsers.h}!PARSERS\_\-DECL\_\-FOR\_\-PAIR@{PARSERS\_\-DECL\_\-FOR\_\-PAIR}}
+\index{PARSERS\_\-DECL\_\-FOR\_\-PAIR@{PARSERS\_\-DECL\_\-FOR\_\-PAIR}!Parsers.h@{Parsers.h}}
+\subsubsection[{PARSERS\_\-DECL\_\-FOR\_\-PAIR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PARSERS\_\-DECL\_\-FOR\_\-PAIR(FirstType, \/  SecondType)~int parse(std::pair$<$FirstType, SecondType $>$\& result,const std::string\& input);}}
+\label{_parsers_8h_ac61de44fff5326d23703542c2dc8275c}
+
+
+Definition at line 31 of file Parsers.h.\hypertarget{_parsers_8h_aaad5c3d9836c2d4f1dd6c2beb3b0ae15}{
+\index{Parsers.h@{Parsers.h}!PARSERS\_\-DECL\_\-FOR\_\-SINGLE@{PARSERS\_\-DECL\_\-FOR\_\-SINGLE}}
+\index{PARSERS\_\-DECL\_\-FOR\_\-SINGLE@{PARSERS\_\-DECL\_\-FOR\_\-SINGLE}!Parsers.h@{Parsers.h}}
+\subsubsection[{PARSERS\_\-DECL\_\-FOR\_\-SINGLE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PARSERS\_\-DECL\_\-FOR\_\-SINGLE(Type)~int parse(Type\& result, const std::string\& input);}}
+\label{_parsers_8h_aaad5c3d9836c2d4f1dd6c2beb3b0ae15}
+
+
+Definition at line 28 of file Parsers.h.

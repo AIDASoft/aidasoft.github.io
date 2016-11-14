@@ -1,0 +1,334 @@
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object}{
+\section{DD4hep::Conditions::Interna::ConditionObject Class Reference}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object}\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+}
+
+
+The data class behind a conditions handle.  
+
+
+{\ttfamily \#include $<$ConditionsInterna.h$>$}Inheritance diagram for DD4hep::Conditions::Interna::ConditionObject::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition::key\_\-type} \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a61a3251d047bd75dcdebb0e1c1409101}{key\_\-type}
+\begin{DoxyCompactList}\small\item\em Forward definition of the key type. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_i_o_v}{Condition::iov\_\-type} \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a6d54716450a73a1a439ca06445f56d24}{iov\_\-type}
+\begin{DoxyCompactList}\small\item\em Forward definition of the iov type. \item\end{DoxyCompactList}\item 
+typedef unsigned int \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a1a9ff63fe2e060b973e6c2994b0a1370}{mask\_\-type}
+\begin{DoxyCompactList}\small\item\em Forward definition of the object properties. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_reference_bit_mask}{ReferenceBitMask}$<$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a1a9ff63fe2e060b973e6c2994b0a1370}{mask\_\-type} $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a43dfd5df006474f17b7eba59b2f511fe}{MaskManip}
+\begin{DoxyCompactList}\small\item\em Forward definition of the object mask manipulator. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a13a35738bc2b0cdcb5b276d628e1bef6}{ConditionObject} (const std::string \&nam=\char`\"{}\char`\"{}, const std::string \&tit=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a37f67e8fcbbb726ba44d7f043ec5bcdf}{$\sim$ConditionObject} ()
+\begin{DoxyCompactList}\small\item\em Standard Destructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object}{ConditionObject} \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a2d944a3507299b38f69c5bd8b66494a5}{move} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object}{ConditionObject} \&from)
+\begin{DoxyCompactList}\small\item\em Move data content: 'from' will be reset to NULL. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_i_o_v}{iov\_\-type} $\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_ad46d00d120ed754bb26569c814b4b650}{iovData} () const 
+\begin{DoxyCompactList}\small\item\em Access safely the \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_i_o_v_type}{IOVType} $\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a4eef0b466f4cbc67041a29ba9b650fa1}{iovType} () const 
+\begin{DoxyCompactList}\small\item\em Access safely the IOV-\/type. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_ae6c15b126361d1aec9e5e90c774d76f4}{is\_\-bound} () const 
+\begin{DoxyCompactList}\small\item\em Check if object is already bound.... \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a511bc75333ecd5b0012dc4fddf8973c8}{is\_\-traced} () const 
+\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_ae060ad7c29aae54e9c6701db35408155}{setFlag} (int option)
+\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_ad0e2c621be69101fa71fd96aaff0c15d}{unFlag} (int option)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::string \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a0b82a44322c732c5f5b99123eef28f63}{value}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} value (in string form). \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a7f4bcc75be5d565396e3f09c91a23ede}{validity}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} validity (in string form). \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_ac30708fd16161d507f475cc81419be18}{address}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} address. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a4bd162e79c142737fd279493329bae42}{comment}
+\begin{DoxyCompactList}\small\item\em Comment string. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_opaque_data_block}{OpaqueDataBlock} \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a049350e2cf3f94aa39a04edd0a18a018}{data}
+\begin{DoxyCompactList}\small\item\em Data block. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_pool}{ConditionsPool} $\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a47997f68ec8b07ffe938d869726b6012}{pool}
+\begin{DoxyCompactList}\small\item\em Reference to conditions pool. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_i_o_v}{iov\_\-type} $\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_af04a3341b8791fbcf60fe5e5fff20166}{iov}
+\begin{DoxyCompactList}\small\item\em Interval of validity. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a61a3251d047bd75dcdebb0e1c1409101}{key\_\-type} \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a6333e2a00c29743a1d64a26356714024}{hash}
+\begin{DoxyCompactList}\small\item\em Hash value of the name. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a1a9ff63fe2e060b973e6c2994b0a1370}{mask\_\-type} \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_ad6e3e4fed5b13ddc85577d1fe5f3fcfd}{flags}
+\begin{DoxyCompactList}\small\item\em Flags. \item\end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a0a8d0c67b38ca524010ed5d6ccdd1961}{refCount}
+\begin{DoxyCompactList}\small\item\em Reference count. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The data class behind a conditions handle. See ConditionsInterna.cpp for the implementation.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 90 of file ConditionsInterna.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a6d54716450a73a1a439ca06445f56d24}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!iov\_\-type@{iov\_\-type}}
+\index{iov\_\-type@{iov\_\-type}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{iov\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Condition::iov\_\-type} {\bf DD4hep::Conditions::Interna::ConditionObject::iov\_\-type}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a6d54716450a73a1a439ca06445f56d24}
+
+
+Forward definition of the iov type. 
+
+Definition at line 95 of file ConditionsInterna.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a61a3251d047bd75dcdebb0e1c1409101}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!key\_\-type@{key\_\-type}}
+\index{key\_\-type@{key\_\-type}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{key\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Condition::key\_\-type} {\bf DD4hep::Conditions::Interna::ConditionObject::key\_\-type}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a61a3251d047bd75dcdebb0e1c1409101}
+
+
+Forward definition of the key type. 
+
+Definition at line 93 of file ConditionsInterna.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a1a9ff63fe2e060b973e6c2994b0a1370}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!mask\_\-type@{mask\_\-type}}
+\index{mask\_\-type@{mask\_\-type}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{mask\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf DD4hep::Conditions::Interna::ConditionObject::mask\_\-type}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a1a9ff63fe2e060b973e6c2994b0a1370}
+
+
+Forward definition of the object properties. 
+
+Definition at line 97 of file ConditionsInterna.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a43dfd5df006474f17b7eba59b2f511fe}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!MaskManip@{MaskManip}}
+\index{MaskManip@{MaskManip}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{MaskManip}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf ReferenceBitMask}$<${\bf mask\_\-type}$>$ {\bf DD4hep::Conditions::Interna::ConditionObject::MaskManip}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a43dfd5df006474f17b7eba59b2f511fe}
+
+
+Forward definition of the object mask manipulator. 
+
+Definition at line 99 of file ConditionsInterna.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a13a35738bc2b0cdcb5b276d628e1bef6}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!ConditionObject@{ConditionObject}}
+\index{ConditionObject@{ConditionObject}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{ConditionObject}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Conditions::Interna::ConditionObject::ConditionObject (const std::string \& {\em nam} = {\ttfamily \char`\"{}\char`\"{}}, \/  const std::string \& {\em tit} = {\ttfamily \char`\"{}\char`\"{}})}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a13a35738bc2b0cdcb5b276d628e1bef6}
+
+
+Standard constructor. \hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a37f67e8fcbbb726ba44d7f043ec5bcdf}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!$\sim$ConditionObject@{$\sim$ConditionObject}}
+\index{$\sim$ConditionObject@{$\sim$ConditionObject}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{$\sim$ConditionObject}]{\setlength{\rightskip}{0pt plus 5cm}Interna::ConditionObject::$\sim$ConditionObject ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a37f67e8fcbbb726ba44d7f043ec5bcdf}
+
+
+Standard Destructor. 
+
+Definition at line 39 of file ConditionsInterna.cpp.
+
+References DD4hep::InstanceCount::decrement().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_ad46d00d120ed754bb26569c814b4b650}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!iovData@{iovData}}
+\index{iovData@{iovData}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{iovData}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Condition::iov\_\-type} $\ast$ Interna::ConditionObject::iovData () const}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_ad46d00d120ed754bb26569c814b4b650}
+
+
+Access safely the \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. 
+
+Definition at line 49 of file ConditionsInterna.cpp.
+
+References iov.
+
+Referenced by DD4hep::Conditions::Condition::iov(), DD4hep::Alignments::AlignmentCondition::iov(), and DD4hep::Conditions::Condition::str().\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a4eef0b466f4cbc67041a29ba9b650fa1}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!iovType@{iovType}}
+\index{iovType@{iovType}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{iovType}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf DD4hep::IOVType} $\ast$ Interna::ConditionObject::iovType () const}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a4eef0b466f4cbc67041a29ba9b650fa1}
+
+
+Access safely the IOV-\/type. 
+
+Definition at line 56 of file ConditionsInterna.cpp.
+
+References iov, and DD4hep::IOV::iovType.
+
+Referenced by DD4hep::Conditions::Condition::iovType(), and DD4hep::Alignments::AlignmentCondition::iovType().\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_ae6c15b126361d1aec9e5e90c774d76f4}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!is\_\-bound@{is\_\-bound}}
+\index{is\_\-bound@{is\_\-bound}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{is\_\-bound}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Conditions::Interna::ConditionObject::is\_\-bound () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_ae6c15b126361d1aec9e5e90c774d76f4}
+
+
+Check if object is already bound.... 
+
+Definition at line 132 of file ConditionsInterna.h.
+
+References data, and DD4hep::OpaqueData::is\_\-bound().\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a511bc75333ecd5b0012dc4fddf8973c8}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!is\_\-traced@{is\_\-traced}}
+\index{is\_\-traced@{is\_\-traced}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{is\_\-traced}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Conditions::Interna::ConditionObject::is\_\-traced () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a511bc75333ecd5b0012dc4fddf8973c8}
+
+
+Definition at line 133 of file ConditionsInterna.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a2d944a3507299b38f69c5bd8b66494a5}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!move@{move}}
+\index{move@{move}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interna::ConditionObject} \& Interna::ConditionObject::move ({\bf ConditionObject} \& {\em from})}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a2d944a3507299b38f69c5bd8b66494a5}
+
+
+Move data content: 'from' will be reset to NULL. 
+
+Definition at line 44 of file ConditionsInterna.cpp.\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_ae060ad7c29aae54e9c6701db35408155}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!setFlag@{setFlag}}
+\index{setFlag@{setFlag}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{setFlag}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Conditions::Interna::ConditionObject::setFlag (int {\em option})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_ae060ad7c29aae54e9c6701db35408155}
+
+
+Definition at line 134 of file ConditionsInterna.h.
+
+References flags.\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_ad0e2c621be69101fa71fd96aaff0c15d}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!unFlag@{unFlag}}
+\index{unFlag@{unFlag}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{unFlag}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Conditions::Interna::ConditionObject::unFlag (int {\em option})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_ad0e2c621be69101fa71fd96aaff0c15d}
+
+
+Definition at line 135 of file ConditionsInterna.h.
+
+References flags.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_ac30708fd16161d507f475cc81419be18}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!address@{address}}
+\index{address@{address}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{address}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::Conditions::Interna::ConditionObject::address}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_ac30708fd16161d507f475cc81419be18}
+
+
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} address. 
+
+Definition at line 106 of file ConditionsInterna.h.
+
+Referenced by DD4hep::Conditions::ConditionsManagerObject::\_\-\_\-queue\_\-update(), DD4hep::Conditions::Condition::address(), and DD4hep::Conditions::Condition::str().\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a4bd162e79c142737fd279493329bae42}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!comment@{comment}}
+\index{comment@{comment}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{comment}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::Conditions::Interna::ConditionObject::comment}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a4bd162e79c142737fd279493329bae42}
+
+
+Comment string. 
+
+Definition at line 108 of file ConditionsInterna.h.
+
+Referenced by DD4hep::Conditions::ConditionsManagerObject::\_\-\_\-queue\_\-update(), DD4hep::Conditions::Condition::comment(), and DD4hep::Conditions::Condition::str().\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a049350e2cf3f94aa39a04edd0a18a018}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!data@{data}}
+\index{data@{data}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf OpaqueDataBlock} {\bf DD4hep::Conditions::Interna::ConditionObject::data}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a049350e2cf3f94aa39a04edd0a18a018}
+
+
+Data block. 
+
+Definition at line 110 of file ConditionsInterna.h.
+
+Referenced by DD4hep::Conditions::Condition::bind(), DD4hep::Conditions::Condition::data(), DD4hep::Conditions::Condition::dataType(), DD4hep::Conditions::Condition::descriptor(), DD4hep::Conditions::Condition::get(), DD4hep::Alignments::AlignmentCondition::is\_\-bound(), is\_\-bound(), DD4hep::Conditions::Condition::rebind(), and DD4hep::Conditions::Condition::str().\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_ad6e3e4fed5b13ddc85577d1fe5f3fcfd}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!flags@{flags}}
+\index{flags@{flags}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mask\_\-type} {\bf DD4hep::Conditions::Interna::ConditionObject::flags}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_ad6e3e4fed5b13ddc85577d1fe5f3fcfd}
+
+
+Flags. 
+
+Definition at line 118 of file ConditionsInterna.h.
+
+Referenced by DD4hep::Alignments::Interna::AlignmentConditionObject::clear(), DD4hep::Conditions::ActiveSelect$<$ collection\_\-type $>$::operator()(), setFlag(), and unFlag().\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a6333e2a00c29743a1d64a26356714024}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!hash@{hash}}
+\index{hash@{hash}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{hash}]{\setlength{\rightskip}{0pt plus 5cm}{\bf key\_\-type} {\bf DD4hep::Conditions::Interna::ConditionObject::hash}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a6333e2a00c29743a1d64a26356714024}
+
+
+Hash value of the name. 
+
+Definition at line 116 of file ConditionsInterna.h.
+
+Referenced by DD4hep::Conditions::ConditionsDependencyHandler::do\_\-callback(), DD4hep::Conditions::Condition::key(), DD4hep::Conditions::make\_\-key(), DD4hep::Conditions::HashConditionFind::operator()(), and DD4hep::Conditions::KeyedSelect$<$ collection\_\-type $>$::operator()().\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_af04a3341b8791fbcf60fe5e5fff20166}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!iov@{iov}}
+\index{iov@{iov}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{iov}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf iov\_\-type}$\ast$ {\bf DD4hep::Conditions::Interna::ConditionObject::iov}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_af04a3341b8791fbcf60fe5e5fff20166}
+
+
+Interval of validity. 
+
+Definition at line 114 of file ConditionsInterna.h.
+
+Referenced by DD4hep::Conditions::ConditionsManagerObject::\_\-\_\-queue\_\-update(), DD4hep::Conditions::ConditionsDependencyHandler::get(), iovData(), iovType(), and DD4hep::Conditions::Condition::rebind().\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a47997f68ec8b07ffe938d869726b6012}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!pool@{pool}}
+\index{pool@{pool}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{pool}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ConditionsPool}$\ast$ {\bf DD4hep::Conditions::Interna::ConditionObject::pool}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a47997f68ec8b07ffe938d869726b6012}
+
+
+Reference to conditions pool. 
+
+Definition at line 112 of file ConditionsInterna.h.
+
+Referenced by DD4hep::Conditions::ConditionsManagerObject::\_\-\_\-queue\_\-update().\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a0a8d0c67b38ca524010ed5d6ccdd1961}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!refCount@{refCount}}
+\index{refCount@{refCount}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{refCount}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::Conditions::Interna::ConditionObject::refCount}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a0a8d0c67b38ca524010ed5d6ccdd1961}
+
+
+Reference count. 
+
+Definition at line 120 of file ConditionsInterna.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a7f4bcc75be5d565396e3f09c91a23ede}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!validity@{validity}}
+\index{validity@{validity}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{validity}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::Conditions::Interna::ConditionObject::validity}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a7f4bcc75be5d565396e3f09c91a23ede}
+
+
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} validity (in string form). 
+
+Definition at line 104 of file ConditionsInterna.h.
+
+Referenced by DD4hep::Conditions::ConditionsManagerObject::\_\-\_\-queue\_\-update(), and DD4hep::Conditions::Condition::rebind().\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a0b82a44322c732c5f5b99123eef28f63}{
+\index{DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}!value@{value}}
+\index{value@{value}!DD4hep::Conditions::Interna::ConditionObject@{DD4hep::Conditions::Interna::ConditionObject}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::Conditions::Interna::ConditionObject::value}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object_a0b82a44322c732c5f5b99123eef28f63}
+
+
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} value (in string form). 
+
+Definition at line 102 of file ConditionsInterna.h.
+
+Referenced by DD4hep::Conditions::ConditionsManagerObject::\_\-\_\-queue\_\-update(), DD4hep::Conditions::Condition::bind(), DD4hep::Conditions::Condition::rebind(), and DD4hep::Conditions::Condition::value().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/objects/\hyperlink{_d_d_core_2include_2_d_d4hep_2objects_2_conditions_interna_8h}{ConditionsInterna.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_d_d_core_2src_2_conditions_interna_8cpp}{ConditionsInterna.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,326 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager}{
+\section{DD4hep::Simulation::Geant4VolumeManager Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager}\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+}
+
+
+The \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager}{Geant4VolumeManager} to facilitate optimized lookups of cell IDs from touchables.  
+
+
+{\ttfamily \#include $<$DDG4/Geant4VolumeManager.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4VolumeManager::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_handle}{Geometry::Handle}$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_geometry_info}{Geant4GeometryInfo} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a7c19ae032d35b5c68d35029f28fc1586}{Base}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Geometry::PlacedVolume} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a5303c9cd0941b91ab010074947517bd6}{PlacedVolume}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor}{Geometry::IDDescriptor} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_af539708bee7b18130b2052cb92da0822}{IDDescriptor}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a6c4700a96f3a202eedaa25e54d5695ff}{IDDescriptor::VolIDFields} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_ae80cafd25a138d7c91c24cda4bc350b1}{VolIDFields}
+\item 
+typedef std::pair$<$ VolumeID, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_ae80cafd25a138d7c91c24cda4bc350b1}{VolIDFields} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_aeedd11a516f671331ec2a46f5d39768d}{VolIDDescriptor}
+\item 
+typedef \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_geant4_geometry_maps_a8a325934adb143cb1cbc47dd030395ed}{Geant4GeometryMaps::Geant4PlacementPath} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a990d8577e764541c4914263db1c6b0ca}{PlacementPath}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_geometry_info}{Geant4GeometryInfo} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a0c6cb7e6e021022e0b22937e5fb6e009}{Object}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a4e434e1e81dec955ac925c4bb26cb420}{Geant4VolumeManager} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{Geometry::LCDD} \&lcdd, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_geometry_info}{Geant4GeometryInfo} $\ast$info)
+\begin{DoxyCompactList}\small\item\em Initializing constructor. The tree will automatically be built if possible. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_aaa373dec70850279290ca95c852d19db}{Geant4VolumeManager} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a7f1f31944a14314f82c3e82cc39e46ea}{Geant4VolumeManager} (const \hyperlink{class_d_d4hep_1_1_handle}{Base} \&e)
+\begin{DoxyCompactList}\small\item\em Constructor to be used when reading the already parsed object. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a8939c354de0d28fbf310fbac7c0c1f2b}{Geant4VolumeManager} (const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager}{Geant4VolumeManager} \&e)
+\begin{DoxyCompactList}\small\item\em Constructor to be used when reading the already parsed object. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a06b38722fe8d71c1ac3f58fb10c84081}{Geant4VolumeManager} (const \hyperlink{class_d_d4hep_1_1_handle}{Geometry::Handle}$<$ Q $>$ \&e)
+\begin{DoxyCompactList}\small\item\em Constructor to be used when reading the already parsed object. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager}{Geant4VolumeManager} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_abe365aa64b701feeb8ee60d4ca4fbb95}{operator=} (const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager}{Geant4VolumeManager} \&c)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a990d8577e764541c4914263db1c6b0ca}{PlacementPath} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a5ac0311138047aaf8633ba7e59a266d8}{placementPath} (const G4VTouchable $\ast$touchable, bool \hyperlink{classstd_1_1exception}{exception}=true) const 
+\begin{DoxyCompactList}\small\item\em Helper: Generate placement path from touchable object. \item\end{DoxyCompactList}\item 
+VolumeID \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a5d46621e24295850107f3c71891e685d}{volumeID} (const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a990d8577e764541c4914263db1c6b0ca}{PlacementPath} \&path) const 
+\begin{DoxyCompactList}\small\item\em Access CELLID by placement path. \item\end{DoxyCompactList}\item 
+VolumeID \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a7e0058f093af6e650c02d182818e6cbb}{volumeID} (const G4VTouchable $\ast$touchable) const 
+\begin{DoxyCompactList}\small\item\em Access CELLID by Geant4 touchable object. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a7c95acc49bf21e766f289e8a9ebe6887}{volumeDescriptor} (const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a990d8577e764541c4914263db1c6b0ca}{PlacementPath} \&path, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_aeedd11a516f671331ec2a46f5d39768d}{VolIDDescriptor} \&volume\_\-desc) const 
+\begin{DoxyCompactList}\small\item\em Accessfully decoded volume fields by placement path. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a4ca06c3888aa4309011774646e73e925}{volumeDescriptor} (const G4VTouchable $\ast$touchable, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_aeedd11a516f671331ec2a46f5d39768d}{VolIDDescriptor} \&volume\_\-desc) const 
+\begin{DoxyCompactList}\small\item\em Access fully decoded volume fields by Geant4 touchable object. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const VolumeID \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a7a52a387bf1165cc296e76eeda618e9c}{InvalidPath} = VolumeID(-\/1LL)
+\item 
+static const VolumeID \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a3cd1e1946cee2db0e8a5a8240c9095be}{Insensitive} = VolumeID(-\/2LL)
+\item 
+static const VolumeID \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a21aa25818681febe8658db66aa94b89c}{NonExisting} = 0ULL
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_aeaa8e42fc31052407236690c59029580}{checkValidity} () const 
+\begin{DoxyCompactList}\small\item\em Check the validity of the information before accessing it. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_abbc8ba6689ff382f2803382ccaf3d6d6}{m\_\-isValid}
+\begin{DoxyCompactList}\small\item\em Optimization flag to shortcut object checks. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager}{Geant4VolumeManager} to facilitate optimized lookups of cell IDs from touchables. \begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 42 of file Geant4VolumeManager.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a7c19ae032d35b5c68d35029f28fc1586}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!Base@{Base}}
+\index{Base@{Base}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{Base}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::Handle}$<${\bf Geant4GeometryInfo}$>$ {\bf DD4hep::Simulation::Geant4VolumeManager::Base}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a7c19ae032d35b5c68d35029f28fc1586}
+
+
+Definition at line 45 of file Geant4VolumeManager.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_af539708bee7b18130b2052cb92da0822}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!IDDescriptor@{IDDescriptor}}
+\index{IDDescriptor@{IDDescriptor}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{IDDescriptor}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::IDDescriptor} {\bf DD4hep::Simulation::Geant4VolumeManager::IDDescriptor}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_af539708bee7b18130b2052cb92da0822}
+
+
+Definition at line 47 of file Geant4VolumeManager.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a0c6cb7e6e021022e0b22937e5fb6e009}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!Object@{Object}}
+\index{Object@{Object}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{Object}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geant4GeometryInfo} {\bf DD4hep::Simulation::Geant4VolumeManager::Object}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a0c6cb7e6e021022e0b22937e5fb6e009}
+
+
+Definition at line 51 of file Geant4VolumeManager.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a5303c9cd0941b91ab010074947517bd6}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!PlacedVolume@{PlacedVolume}}
+\index{PlacedVolume@{PlacedVolume}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{PlacedVolume}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::PlacedVolume} {\bf DD4hep::Simulation::Geant4VolumeManager::PlacedVolume}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a5303c9cd0941b91ab010074947517bd6}
+
+
+Definition at line 46 of file Geant4VolumeManager.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a990d8577e764541c4914263db1c6b0ca}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!PlacementPath@{PlacementPath}}
+\index{PlacementPath@{PlacementPath}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{PlacementPath}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geant4GeometryMaps::Geant4PlacementPath} {\bf DD4hep::Simulation::Geant4VolumeManager::PlacementPath}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a990d8577e764541c4914263db1c6b0ca}
+
+
+Definition at line 50 of file Geant4VolumeManager.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_aeedd11a516f671331ec2a46f5d39768d}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!VolIDDescriptor@{VolIDDescriptor}}
+\index{VolIDDescriptor@{VolIDDescriptor}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{VolIDDescriptor}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::pair$<$VolumeID, {\bf VolIDFields}$>$ {\bf DD4hep::Simulation::Geant4VolumeManager::VolIDDescriptor}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_aeedd11a516f671331ec2a46f5d39768d}
+
+
+Definition at line 49 of file Geant4VolumeManager.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_ae80cafd25a138d7c91c24cda4bc350b1}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!VolIDFields@{VolIDFields}}
+\index{VolIDFields@{VolIDFields}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{VolIDFields}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf IDDescriptor::VolIDFields} {\bf DD4hep::Simulation::Geant4VolumeManager::VolIDFields}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_ae80cafd25a138d7c91c24cda4bc350b1}
+
+
+Definition at line 48 of file Geant4VolumeManager.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a4e434e1e81dec955ac925c4bb26cb420}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!Geant4VolumeManager@{Geant4VolumeManager}}
+\index{Geant4VolumeManager@{Geant4VolumeManager}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{Geant4VolumeManager}]{\setlength{\rightskip}{0pt plus 5cm}Geant4VolumeManager::Geant4VolumeManager ({\bf Geometry::LCDD} \& {\em lcdd}, \/  {\bf Geant4GeometryInfo} $\ast$ {\em info})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a4e434e1e81dec955ac925c4bb26cb420}
+
+
+Initializing constructor. The tree will automatically be built if possible. 
+
+Definition at line 191 of file Geant4VolumeManager.cpp.
+
+References DD4hep::format(), DD4hep::Simulation::Geant4GeometryInfo::g4Paths, DD4hep::Simulation::Geant4GeometryInfo::valid, and DD4hep::Geometry::LCDD::world().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_aaa373dec70850279290ca95c852d19db}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!Geant4VolumeManager@{Geant4VolumeManager}}
+\index{Geant4VolumeManager@{Geant4VolumeManager}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{Geant4VolumeManager}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4VolumeManager::Geant4VolumeManager ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_aaa373dec70850279290ca95c852d19db}
+
+
+Default constructor. 
+
+Definition at line 68 of file Geant4VolumeManager.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a7f1f31944a14314f82c3e82cc39e46ea}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!Geant4VolumeManager@{Geant4VolumeManager}}
+\index{Geant4VolumeManager@{Geant4VolumeManager}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{Geant4VolumeManager}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4VolumeManager::Geant4VolumeManager (const {\bf Base} \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a7f1f31944a14314f82c3e82cc39e46ea}
+
+
+Constructor to be used when reading the already parsed object. 
+
+Definition at line 72 of file Geant4VolumeManager.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a8939c354de0d28fbf310fbac7c0c1f2b}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!Geant4VolumeManager@{Geant4VolumeManager}}
+\index{Geant4VolumeManager@{Geant4VolumeManager}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{Geant4VolumeManager}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4VolumeManager::Geant4VolumeManager (const {\bf Geant4VolumeManager} \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a8939c354de0d28fbf310fbac7c0c1f2b}
+
+
+Constructor to be used when reading the already parsed object. 
+
+Definition at line 76 of file Geant4VolumeManager.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a06b38722fe8d71c1ac3f58fb10c84081}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!Geant4VolumeManager@{Geant4VolumeManager}}
+\index{Geant4VolumeManager@{Geant4VolumeManager}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{Geant4VolumeManager}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q $>$ DD4hep::Simulation::Geant4VolumeManager::Geant4VolumeManager (const {\bf Geometry::Handle}$<$ Q $>$ \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a06b38722fe8d71c1ac3f58fb10c84081}
+
+
+Constructor to be used when reading the already parsed object. 
+
+Definition at line 80 of file Geant4VolumeManager.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_aeaa8e42fc31052407236690c59029580}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!checkValidity@{checkValidity}}
+\index{checkValidity@{checkValidity}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{checkValidity}]{\setlength{\rightskip}{0pt plus 5cm}bool Geant4VolumeManager::checkValidity () const\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_aeaa8e42fc31052407236690c59029580}
+
+
+Check the validity of the information before accessing it. 
+
+Definition at line 208 of file Geant4VolumeManager.cpp.
+
+References DD4hep::format(), DD4hep::Handle$<$ T $>$::isValid(), m\_\-isValid, and DD4hep::Handle$<$ T $>$::ptr().
+
+Referenced by volumeDescriptor(), and volumeID().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_abe365aa64b701feeb8ee60d4ca4fbb95}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!operator=@{operator=}}
+\index{operator=@{operator=}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4VolumeManager}\& DD4hep::Simulation::Geant4VolumeManager::operator= (const {\bf Geant4VolumeManager} \& {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_abe365aa64b701feeb8ee60d4ca4fbb95}
+
+
+Assignment operator. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_handle_a9bbf8f498df42e81ad26fb00233505a6}{DD4hep::Handle$<$ T $>$}.
+
+Definition at line 84 of file Geant4VolumeManager.h.
+
+References DD4hep::Handle$<$ T $>$::m\_\-element, and m\_\-isValid.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a5ac0311138047aaf8633ba7e59a266d8}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!placementPath@{placementPath}}
+\index{placementPath@{placementPath}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{placementPath}]{\setlength{\rightskip}{0pt plus 5cm}Geant4PlacementPath Geant4VolumeManager::placementPath (const G4VTouchable $\ast$ {\em touchable}, \/  bool {\em exception} = {\ttfamily true}) const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a5ac0311138047aaf8633ba7e59a266d8}
+
+
+Helper: Generate placement path from touchable object. 
+
+Definition at line 202 of file Geant4VolumeManager.cpp.
+
+References DD4hep::Simulation::Geant4TouchableHandler::placementPath().
+
+Referenced by volumeDescriptor().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a4ca06c3888aa4309011774646e73e925}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!volumeDescriptor@{volumeDescriptor}}
+\index{volumeDescriptor@{volumeDescriptor}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{volumeDescriptor}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4VolumeManager::volumeDescriptor (const G4VTouchable $\ast$ {\em touchable}, \/  {\bf VolIDDescriptor} \& {\em volume\_\-desc}) const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a4ca06c3888aa4309011774646e73e925}
+
+
+Access fully decoded volume fields by Geant4 touchable object. 
+
+Definition at line 282 of file Geant4VolumeManager.cpp.
+
+References placementPath(), and volumeDescriptor().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a7c95acc49bf21e766f289e8a9ebe6887}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!volumeDescriptor@{volumeDescriptor}}
+\index{volumeDescriptor@{volumeDescriptor}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{volumeDescriptor}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4VolumeManager::volumeDescriptor (const {\bf PlacementPath} \& {\em path}, \/  {\bf VolIDDescriptor} \& {\em volume\_\-desc}) const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a7c95acc49bf21e766f289e8a9ebe6887}
+
+
+Accessfully decoded volume fields by placement path. 
+
+Definition at line 246 of file Geant4VolumeManager.cpp.
+
+References checkValidity(), DD4hep::Geometry::IDDescriptor::decodeFields(), DD4hep::Geometry::Readout::idSpec(), Insensitive, InvalidPath, dd4hep::m, NonExisting, DD4hep::Handle$<$ T $>$::ptr(), DD4hep::Geometry::SensitiveDetector::readout(), DD4hep::Geometry::Volume::sensitiveDetector(), and DD4hep::Geometry::PlacedVolume::volume().
+
+Referenced by DD4hep::Simulation::Geant4SensitiveDetector::getVolumeID(), and volumeDescriptor().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a7e0058f093af6e650c02d182818e6cbb}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!volumeID@{volumeID}}
+\index{volumeID@{volumeID}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{volumeID}]{\setlength{\rightskip}{0pt plus 5cm}VolumeID Geant4VolumeManager::volumeID (const G4VTouchable $\ast$ {\em touchable}) const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a7e0058f093af6e650c02d182818e6cbb}
+
+
+Access CELLID by Geant4 touchable object. 
+
+Definition at line 240 of file Geant4VolumeManager.cpp.
+
+References DD4hep::Simulation::Geant4TouchableHandler::placementPath(), and volumeID().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a5d46621e24295850107f3c71891e685d}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!volumeID@{volumeID}}
+\index{volumeID@{volumeID}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{volumeID}]{\setlength{\rightskip}{0pt plus 5cm}VolumeID Geant4VolumeManager::volumeID (const {\bf PlacementPath} \& {\em path}) const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a5d46621e24295850107f3c71891e685d}
+
+
+Access CELLID by placement path. 
+
+Definition at line 223 of file Geant4VolumeManager.cpp.
+
+References checkValidity(), DD4hep::INFO, Insensitive, InvalidPath, dd4hep::m, NonExisting, DD4hep::Simulation::Geant4GeometryMaps::placementPath(), DD4hep::printout(), and DD4hep::Handle$<$ T $>$::ptr().
+
+Referenced by DD4hep::Simulation::Geant4Sensitive::cellID(), DD4hep::Simulation::Geant4SensitiveDetector::getCellID(), DD4hep::Simulation::Geant4SensitiveDetector::getVolumeID(), DD4hep::Simulation::Geant4ReadoutVolumeFilter::operator()(), volumeID(), and DD4hep::Simulation::Geant4Sensitive::volumeID().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a3cd1e1946cee2db0e8a5a8240c9095be}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!Insensitive@{Insensitive}}
+\index{Insensitive@{Insensitive}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{Insensitive}]{\setlength{\rightskip}{0pt plus 5cm}const VolumeID {\bf DD4hep::Simulation::Geant4VolumeManager::Insensitive} = VolumeID(-\/2LL)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a3cd1e1946cee2db0e8a5a8240c9095be}
+
+
+Definition at line 62 of file Geant4VolumeManager.h.
+
+Referenced by DD4hep::Simulation::Geant4SensitiveDetector::getVolumeID(), volumeDescriptor(), and volumeID().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a7a52a387bf1165cc296e76eeda618e9c}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!InvalidPath@{InvalidPath}}
+\index{InvalidPath@{InvalidPath}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{InvalidPath}]{\setlength{\rightskip}{0pt plus 5cm}const VolumeID {\bf DD4hep::Simulation::Geant4VolumeManager::InvalidPath} = VolumeID(-\/1LL)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a7a52a387bf1165cc296e76eeda618e9c}
+
+
+Definition at line 61 of file Geant4VolumeManager.h.
+
+Referenced by DD4hep::Simulation::Geant4SensitiveDetector::getVolumeID(), volumeDescriptor(), and volumeID().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_abbc8ba6689ff382f2803382ccaf3d6d6}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!m\_\-isValid@{m\_\-isValid}}
+\index{m\_\-isValid@{m\_\-isValid}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{m\_\-isValid}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf DD4hep::Simulation::Geant4VolumeManager::m\_\-isValid}\hspace{0.3cm}{\ttfamily  \mbox{[}mutable, protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_abbc8ba6689ff382f2803382ccaf3d6d6}
+
+
+Optimization flag to shortcut object checks. 
+
+Definition at line 55 of file Geant4VolumeManager.h.
+
+Referenced by checkValidity(), and operator=().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a21aa25818681febe8658db66aa94b89c}{
+\index{DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}!NonExisting@{NonExisting}}
+\index{NonExisting@{NonExisting}!DD4hep::Simulation::Geant4VolumeManager@{DD4hep::Simulation::Geant4VolumeManager}}
+\subsubsection[{NonExisting}]{\setlength{\rightskip}{0pt plus 5cm}const VolumeID {\bf DD4hep::Simulation::Geant4VolumeManager::NonExisting} = 0ULL\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_volume_manager_a21aa25818681febe8658db66aa94b89c}
+
+
+Definition at line 63 of file Geant4VolumeManager.h.
+
+Referenced by DD4hep::Simulation::Geant4SensitiveDetector::getVolumeID(), volumeDescriptor(), and volumeID().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_volume_manager_8h}{Geant4VolumeManager.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_volume_manager_8cpp}{Geant4VolumeManager.cpp}\end{DoxyCompactItemize}

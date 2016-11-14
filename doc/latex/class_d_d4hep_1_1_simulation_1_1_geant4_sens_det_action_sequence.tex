@@ -1,0 +1,556 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence}{
+\section{DD4hep::Simulation::Geant4SensDetActionSequence Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence}\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+}
+
+
+The sequencer to host Geant4 sensitive actions called if particles interact with sensitive elements.  
+
+
+{\ttfamily \#include $<$Geant4SensDetAction.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4SensDetActionSequence::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_sensitive_detector}{Geometry::SensitiveDetector} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a9d428afdc7b9189bce5dab4f16db17fb}{SensitiveDetector}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection}{Geant4HitCollection} $\ast$($\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a81e56326a5a51cf3df62bfe60014b291}{create\_\-t} )(const std::string \&, const std::string \&, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive}{Geant4Sensitive} $\ast$)
+\item 
+typedef std::pair$<$ std::string, std::pair$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive}{Geant4Sensitive} $\ast$, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a81e56326a5a51cf3df62bfe60014b291}{create\_\-t} $>$ $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_ac2b994581eab7aad3b5473ac416f65fd}{HitCollection}
+\item 
+typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_hit_collection}{HitCollection} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_aabeb325e4b6af156cbae3578b00301b3}{HitCollections}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a6930930d7fb224b53979dd6decc4907b}{Geant4SensDetActionSequence} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$context, const std::string \&name)
+\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a0e8473bdb136ab4eae734fd3305b4f05}{$\sim$Geant4SensDetActionSequence} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+virtual const std::string \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a6532bc350702a2c13bd15e6450e525c5}{sensitiveType} () const 
+\begin{DoxyCompactList}\small\item\em Access to the sensitive type of the detector. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a5878271f8da03d02bf4b3b8145246775}{updateContext} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$ctxt)
+\begin{DoxyCompactList}\small\item\em Set or update client context. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a6b123f2232b47f787478fd744898ab0e}{defineCollections} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_s_d}{Geant4ActionSD} $\ast$sens\_\-det)
+\begin{DoxyCompactList}\small\item\em Called at construction time of the sensitive detector to declare all hit collections. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_af610d10bd4b9a699b7d8b4179b0de946}{defineCollection} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive}{Geant4Sensitive} $\ast$owner, const std::string \&name, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a81e56326a5a51cf3df62bfe60014b291}{create\_\-t} func)
+\begin{DoxyCompactList}\small\item\em Initialize the usage of a hit collection. Returns the collection identifier. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE $>$ }\\size\_\-t \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_af695ff3e1e2eee1b7a79a5d1c2a58cd5}{defineCollection} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive}{Geant4Sensitive} $\ast$owner, const std::string \&coll\_\-name)
+\begin{DoxyCompactList}\small\item\em Define a named collection containing hist of a specified type. \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a6f9bd0c50d2373f56032da383468ea87}{hitCollectionName} (size\_\-t which) const 
+\begin{DoxyCompactList}\small\item\em Access HitCollection container names. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection}{Geant4HitCollection} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_af50bd4353281e47a0fdf09bee888b092}{collection} (size\_\-t which) const 
+\begin{DoxyCompactList}\small\item\em Retrieve the hits collection associated with this detector by its serial number. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection}{Geant4HitCollection} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_af724af407cc2823ba81803760500462c}{collectionByID} (size\_\-t id) const 
+\begin{DoxyCompactList}\small\item\em Retrieve the hits collection associated with this detector by its collection identifier. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a7905b361bff7168ed4aaf91743f287f2}{callAtBegin} (\hyperlink{class_t}{T} $\ast$p, void(T::$\ast$f)(G4HCofThisEvent $\ast$))
+\begin{DoxyCompactList}\small\item\em Register begin-\/of-\/event callback. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_ade99ad7b09ea4aca99de6af0ecba4149}{callAtEnd} (\hyperlink{class_t}{T} $\ast$p, void(T::$\ast$f)(G4HCofThisEvent $\ast$))
+\begin{DoxyCompactList}\small\item\em Register end-\/of-\/event callback. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a89a1ba859a0048eeab83244e9d4bc9b3}{callAtProcess} (\hyperlink{class_t}{T} $\ast$p, void(T::$\ast$f)(G4Step $\ast$, G4TouchableHistory $\ast$))
+\begin{DoxyCompactList}\small\item\em Register process-\/hit callback. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a5c9a64cfbcc0b52ee1c18c0432705bfb}{callAtClear} (\hyperlink{class_t}{T} $\ast$p, void(T::$\ast$f)(G4HCofThisEvent $\ast$))
+\begin{DoxyCompactList}\small\item\em Register clear callback. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a01437840682e0edbee69d11c99f73b5f}{adopt} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive}{Geant4Sensitive} $\ast$sensitive)
+\begin{DoxyCompactList}\small\item\em Add an actor responding to all callbacks. Sequence takes ownership. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a89fcbc8c65a95890ea349087ac4834ec}{adopt} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_filter}{Geant4Filter} $\ast$filter)
+\begin{DoxyCompactList}\small\item\em Add an actor responding to all callbacks. Sequence takes ownership. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_ae387c8632412ef9eec6ed9767d3ea01b}{adoptFilter} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} $\ast$filter)
+\begin{DoxyCompactList}\small\item\em Add an actor responding to all callbacks. Sequence takes ownership. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a91a3ce22bc0e78c28496e77113596829}{accept} (const G4Step $\ast$step) const 
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} before hit processing starts. Invoke all filters. \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a452bc5bf7c03c8b546d3459ba7bf7e36}{process} (G4Step $\ast$step, G4TouchableHistory $\ast$hist)
+\begin{DoxyCompactList}\small\item\em Function to process hits. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a59c1e52c811f9385da294c0b18704ab1}{begin} (G4HCofThisEvent $\ast$hce)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_g4_v_sensitive_detector}{G4VSensitiveDetector} interface: Method invoked at the begining of each event. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a2b7944c785413b2a479f4ba4ad2e1515}{end} (G4HCofThisEvent $\ast$hce)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_g4_v_sensitive_detector}{G4VSensitiveDetector} interface: Method invoked at the end of each event. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_ab2bab9282950af33d3e14e3f0d5864fd}{clear} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_g4_v_sensitive_detector}{G4VSensitiveDetector} interface: Method invoked if the event was aborted. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename TYPE $>$ }\\static \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection}{Geant4HitCollection} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a1620735a4aa22fb041c0a8b31893bfe1}{\_\-create} (const std::string \&det, const std::string \&coll, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive}{Geant4Sensitive} $\ast$sd)
+\begin{DoxyCompactList}\small\item\em Create a new typed hit collection. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G4HCofThisEvent $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a7a64aa4c2cd4c410962f951bd47d2116}{m\_\-hce}
+\begin{DoxyCompactList}\small\item\em Geant4 hit collection context. \item\end{DoxyCompactList}\item 
+\hyperlink{struct_d_d4hep_1_1_callback_sequence}{CallbackSequence} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a8feceb005db2ea028c4a778dd600b00b}{m\_\-begin}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence for event initialization action. \item\end{DoxyCompactList}\item 
+\hyperlink{struct_d_d4hep_1_1_callback_sequence}{CallbackSequence} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a15a09899c6ec50b8d14f4543362d9c91}{m\_\-end}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence for event finalization action. \item\end{DoxyCompactList}\item 
+\hyperlink{struct_d_d4hep_1_1_callback_sequence}{CallbackSequence} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a2ebfed15148432bab44c58ce3c7a0a95}{m\_\-process}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence for step processing. \item\end{DoxyCompactList}\item 
+\hyperlink{struct_d_d4hep_1_1_callback_sequence}{CallbackSequence} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a5d720697074ed4775143ebdae2073a16}{m\_\-clear}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence to invoke the event deletion. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_1_1_actors}{Actors}$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive}{Geant4Sensitive} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_aa383f58ddce351dc9df9451bee3feb0f}{m\_\-actors}
+\begin{DoxyCompactList}\small\item\em The list of sensitive detector objects. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_1_1_actors}{Actors}$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_filter}{Geant4Filter} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a67b12a0e51d5249be593f874182155ab}{m\_\-filters}
+\begin{DoxyCompactList}\small\item\em The list of sensitive detector filter objects. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_aabeb325e4b6af156cbae3578b00301b3}{HitCollections} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a58c74511f9bef97e83b5a7e54b4917ca}{m\_\-collections}
+\begin{DoxyCompactList}\small\item\em Hit collection creators. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_sensitive_detector}{SensitiveDetector} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a480029ca979ac872688986da731930b8}{m\_\-sensitive}
+\begin{DoxyCompactList}\small\item\em Reference to the sensitive detector element. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_s_d}{Geant4ActionSD} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a4c35959bba4b7d3f05a8aa48970be68a}{m\_\-detector}
+\begin{DoxyCompactList}\small\item\em Reference to G4 sensitive detector. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a51bf2c5186ea7905ae655b44d6aea06f}{m\_\-sensitiveType}
+\begin{DoxyCompactList}\small\item\em The true sensitive type of the detector. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The sequencer to host Geant4 sensitive actions called if particles interact with sensitive elements. Concrete implementation of the sensitive detector action sequence
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 282 of file Geant4SensDetAction.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a81e56326a5a51cf3df62bfe60014b291}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!create\_\-t@{create\_\-t}}
+\index{create\_\-t@{create\_\-t}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{create\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geant4HitCollection}$\ast$($\ast$ {\bf DD4hep::Simulation::Geant4SensDetActionSequence::create\_\-t})(const std::string \&, const std::string \&, {\bf Geant4Sensitive} $\ast$)}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a81e56326a5a51cf3df62bfe60014b291}
+
+
+Definition at line 286 of file Geant4SensDetAction.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_ac2b994581eab7aad3b5473ac416f65fd}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!HitCollection@{HitCollection}}
+\index{HitCollection@{HitCollection}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{HitCollection}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::pair$<$std::string, std::pair$<${\bf Geant4Sensitive}$\ast$,{\bf create\_\-t}$>$ $>$ {\bf DD4hep::Simulation::Geant4SensDetActionSequence::HitCollection}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_ac2b994581eab7aad3b5473ac416f65fd}
+
+
+Definition at line 287 of file Geant4SensDetAction.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_aabeb325e4b6af156cbae3578b00301b3}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!HitCollections@{HitCollections}}
+\index{HitCollections@{HitCollections}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{HitCollections}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf HitCollection}$>$ {\bf DD4hep::Simulation::Geant4SensDetActionSequence::HitCollections}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_aabeb325e4b6af156cbae3578b00301b3}
+
+
+Definition at line 288 of file Geant4SensDetAction.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a9d428afdc7b9189bce5dab4f16db17fb}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!SensitiveDetector@{SensitiveDetector}}
+\index{SensitiveDetector@{SensitiveDetector}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{SensitiveDetector}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::SensitiveDetector} {\bf DD4hep::Simulation::Geant4SensDetActionSequence::SensitiveDetector}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a9d428afdc7b9189bce5dab4f16db17fb}
+
+
+Definition at line 285 of file Geant4SensDetAction.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a6930930d7fb224b53979dd6decc4907b}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!Geant4SensDetActionSequence@{Geant4SensDetActionSequence}}
+\index{Geant4SensDetActionSequence@{Geant4SensDetActionSequence}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{Geant4SensDetActionSequence}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4SensDetActionSequence::Geant4SensDetActionSequence ({\bf Geant4Context} $\ast$ {\em context}, \/  const std::string \& {\em name})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a6930930d7fb224b53979dd6decc4907b}
+
+
+Standard constructor. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a0e8473bdb136ab4eae734fd3305b4f05}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!$\sim$Geant4SensDetActionSequence@{$\sim$Geant4SensDetActionSequence}}
+\index{$\sim$Geant4SensDetActionSequence@{$\sim$Geant4SensDetActionSequence}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{$\sim$Geant4SensDetActionSequence}]{\setlength{\rightskip}{0pt plus 5cm}Geant4SensDetActionSequence::$\sim$Geant4SensDetActionSequence ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a0e8473bdb136ab4eae734fd3305b4f05}
+
+
+Default destructor. 
+
+Definition at line 255 of file Geant4SensDetAction.cpp.
+
+References DD4hep::InstanceCount::decrement(), m\_\-actors, m\_\-filters, and DD4hep::Simulation::Geant4Action::release().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a1620735a4aa22fb041c0a8b31893bfe1}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!\_\-create@{\_\-create}}
+\index{\_\-create@{\_\-create}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE $>$ static {\bf Geant4HitCollection}$\ast$ DD4hep::Simulation::Geant4SensDetActionSequence::\_\-create (const std::string \& {\em det}, \/  const std::string \& {\em coll}, \/  {\bf Geant4Sensitive} $\ast$ {\em sd})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a1620735a4aa22fb041c0a8b31893bfe1}
+
+
+Create a new typed hit collection. 
+
+Definition at line 316 of file Geant4SensDetAction.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a91a3ce22bc0e78c28496e77113596829}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!accept@{accept}}
+\index{accept@{accept}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{accept}]{\setlength{\rightskip}{0pt plus 5cm}bool Geant4SensDetActionSequence::accept (const G4Step $\ast$ {\em step}) const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a91a3ce22bc0e78c28496e77113596829}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} before hit processing starts. Invoke all filters. Return fals if any filter returns false 
+
+Definition at line 348 of file Geant4SensDetAction.cpp.
+
+References m\_\-filters.
+
+Referenced by DD4hep::Simulation::Geant4SensDet::Accept().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a89fcbc8c65a95890ea349087ac4834ec}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!adopt@{adopt}}
+\index{adopt@{adopt}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{adopt}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SensDetActionSequence::adopt ({\bf Geant4Filter} $\ast$ {\em filter})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a89fcbc8c65a95890ea349087ac4834ec}
+
+
+Add an actor responding to all callbacks. Sequence takes ownership. 
+
+Definition at line 287 of file Geant4SensDetAction.cpp.
+
+References DD4hep::Simulation::Geant4Action::addRef(), and m\_\-filters.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a01437840682e0edbee69d11c99f73b5f}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!adopt@{adopt}}
+\index{adopt@{adopt}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{adopt}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SensDetActionSequence::adopt ({\bf Geant4Sensitive} $\ast$ {\em sensitive})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a01437840682e0edbee69d11c99f73b5f}
+
+
+Add an actor responding to all callbacks. Sequence takes ownership. Add an actor responding to all callbacks. 
+
+Definition at line 277 of file Geant4SensDetAction.cpp.
+
+References DD4hep::Simulation::Geant4Action::addRef(), and m\_\-actors.
+
+Referenced by adoptFilter().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_ae387c8632412ef9eec6ed9767d3ea01b}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!adoptFilter@{adoptFilter}}
+\index{adoptFilter@{adoptFilter}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{adoptFilter}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SensDetActionSequence::adoptFilter ({\bf Geant4Action} $\ast$ {\em filter})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_ae387c8632412ef9eec6ed9767d3ea01b}
+
+
+Add an actor responding to all callbacks. Sequence takes ownership. 
+
+Definition at line 271 of file Geant4SensDetAction.cpp.
+
+References adopt().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a59c1e52c811f9385da294c0b18704ab1}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!begin@{begin}}
+\index{begin@{begin}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SensDetActionSequence::begin (G4HCofThisEvent $\ast$ {\em hce})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a59c1e52c811f9385da294c0b18704ab1}
+
+
+\hyperlink{class_g4_v_sensitive_detector}{G4VSensitiveDetector} interface: Method invoked at the begining of each event. The hits collection(s) created by this sensitive detector must be set to the G4HCofThisEvent object at one of these two methods.
+
+\hyperlink{class_g4_v_sensitive_detector}{G4VSensitiveDetector} interface: Method invoked at the begining of each event. The hits collection(s) created by this sensitive detector must be set to the G4HCofThisEvent object at one of these two methods. 
+
+Definition at line 369 of file Geant4SensDetAction.cpp.
+
+References DD4hep::Simulation::Geant4Sensitive::begin(), DD4hep::Simulation::Geant4ActionSD::GetCollectionID(), m\_\-actors, m\_\-begin, m\_\-collections, m\_\-detector, m\_\-hce, and DD4hep::Simulation::Geant4Action::name().
+
+Referenced by DD4hep::Simulation::Geant4SensDet::Initialize().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a7905b361bff7168ed4aaf91743f287f2}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!callAtBegin@{callAtBegin}}
+\index{callAtBegin@{callAtBegin}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{callAtBegin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void DD4hep::Simulation::Geant4SensDetActionSequence::callAtBegin ({\bf T} $\ast$ {\em p}, \/  void(T::$\ast$)(G4HCofThisEvent $\ast$) {\em f})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a7905b361bff7168ed4aaf91743f287f2}
+
+
+Register begin-\/of-\/event callback. 
+
+Definition at line 353 of file Geant4SensDetAction.h.
+
+References DD4hep::CallbackSequence::add(), and m\_\-begin.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a5c9a64cfbcc0b52ee1c18c0432705bfb}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!callAtClear@{callAtClear}}
+\index{callAtClear@{callAtClear}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{callAtClear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void DD4hep::Simulation::Geant4SensDetActionSequence::callAtClear ({\bf T} $\ast$ {\em p}, \/  void(T::$\ast$)(G4HCofThisEvent $\ast$) {\em f})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a5c9a64cfbcc0b52ee1c18c0432705bfb}
+
+
+Register clear callback. 
+
+Definition at line 368 of file Geant4SensDetAction.h.
+
+References DD4hep::CallbackSequence::add(), and m\_\-clear.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_ade99ad7b09ea4aca99de6af0ecba4149}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!callAtEnd@{callAtEnd}}
+\index{callAtEnd@{callAtEnd}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{callAtEnd}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void DD4hep::Simulation::Geant4SensDetActionSequence::callAtEnd ({\bf T} $\ast$ {\em p}, \/  void(T::$\ast$)(G4HCofThisEvent $\ast$) {\em f})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_ade99ad7b09ea4aca99de6af0ecba4149}
+
+
+Register end-\/of-\/event callback. 
+
+Definition at line 358 of file Geant4SensDetAction.h.
+
+References DD4hep::CallbackSequence::add(), and m\_\-end.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a89a1ba859a0048eeab83244e9d4bc9b3}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!callAtProcess@{callAtProcess}}
+\index{callAtProcess@{callAtProcess}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{callAtProcess}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void DD4hep::Simulation::Geant4SensDetActionSequence::callAtProcess ({\bf T} $\ast$ {\em p}, \/  void(T::$\ast$)(G4Step $\ast$, G4TouchableHistory $\ast$) {\em f})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a89a1ba859a0048eeab83244e9d4bc9b3}
+
+
+Register process-\/hit callback. 
+
+Definition at line 363 of file Geant4SensDetAction.h.
+
+References DD4hep::CallbackSequence::add(), and m\_\-process.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_ab2bab9282950af33d3e14e3f0d5864fd}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!clear@{clear}}
+\index{clear@{clear}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SensDetActionSequence::clear ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_ab2bab9282950af33d3e14e3f0d5864fd}
+
+
+\hyperlink{class_g4_v_sensitive_detector}{G4VSensitiveDetector} interface: Method invoked if the event was aborted. Hits collections created but not beibg set to G4HCofThisEvent at the event should be deleted. Collection(s) which have already set to G4HCofThisEvent will be deleted automatically.
+
+Hits collections created but not being set to G4HCofThisEvent at the event should be deleted. Collection(s) which have already set to G4HCofThisEvent will be deleted automatically. 
+
+Definition at line 394 of file Geant4SensDetAction.cpp.
+
+References DD4hep::Simulation::Geant4Sensitive::clear(), m\_\-actors, m\_\-clear, and m\_\-hce.
+
+Referenced by DD4hep::Simulation::Geant4SensDet::clear().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_af50bd4353281e47a0fdf09bee888b092}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!collection@{collection}}
+\index{collection@{collection}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{collection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4HitCollection} $\ast$ Geant4SensDetActionSequence::collection (size\_\-t {\em which}) const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_af50bd4353281e47a0fdf09bee888b092}
+
+
+Retrieve the hits collection associated with this detector by its serial number. 
+
+Definition at line 326 of file Geant4SensDetAction.cpp.
+
+References DD4hep::Simulation::Geant4Action::c\_\-name(), DD4hep::Simulation::Geant4Action::except(), DD4hep::Simulation::Geant4ActionSD::GetCollectionID(), m\_\-collections, m\_\-detector, and m\_\-hce.
+
+Referenced by DD4hep::Simulation::Geant4Sensitive::collection().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_af724af407cc2823ba81803760500462c}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!collectionByID@{collectionByID}}
+\index{collectionByID@{collectionByID}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{collectionByID}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4HitCollection} $\ast$ Geant4SensDetActionSequence::collectionByID (size\_\-t {\em id}) const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_af724af407cc2823ba81803760500462c}
+
+
+Retrieve the hits collection associated with this detector by its collection identifier. 
+
+Definition at line 339 of file Geant4SensDetAction.cpp.
+
+References DD4hep::Simulation::Geant4Action::c\_\-name(), DD4hep::Simulation::Geant4Action::except(), and m\_\-hce.
+
+Referenced by DD4hep::Simulation::Geant4Sensitive::collectionByID().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_af695ff3e1e2eee1b7a79a5d1c2a58cd5}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!defineCollection@{defineCollection}}
+\index{defineCollection@{defineCollection}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{defineCollection}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE $>$ size\_\-t DD4hep::Simulation::Geant4SensDetActionSequence::defineCollection ({\bf Geant4Sensitive} $\ast$ {\em owner}, \/  const std::string \& {\em coll\_\-name})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_af695ff3e1e2eee1b7a79a5d1c2a58cd5}
+
+
+Define a named collection containing hist of a specified type. 
+
+Definition at line 342 of file Geant4SensDetAction.h.
+
+References defineCollection().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_af610d10bd4b9a699b7d8b4179b0de946}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!defineCollection@{defineCollection}}
+\index{defineCollection@{defineCollection}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{defineCollection}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t Geant4SensDetActionSequence::defineCollection ({\bf Geant4Sensitive} $\ast$ {\em owner}, \/  const std::string \& {\em name}, \/  {\bf create\_\-t} {\em func})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_af610d10bd4b9a699b7d8b4179b0de946}
+
+
+Initialize the usage of a hit collection. Returns the collection identifier. 
+
+Definition at line 297 of file Geant4SensDetAction.cpp.
+
+References m\_\-collections.
+
+Referenced by DD4hep::Simulation::Geant4Sensitive::defineCollection(), and defineCollection().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a6b123f2232b47f787478fd744898ab0e}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!defineCollections@{defineCollections}}
+\index{defineCollections@{defineCollections}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{defineCollections}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t DD4hep::Simulation::Geant4SensDetActionSequence::defineCollections ({\bf Geant4ActionSD} $\ast$ {\em sens\_\-det})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a6b123f2232b47f787478fd744898ab0e}
+
+
+Called at construction time of the sensitive detector to declare all hit collections. 
+
+Referenced by DD4hep::Simulation::Geant4SensDet::Geant4SensDet().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a2b7944c785413b2a479f4ba4ad2e1515}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!end@{end}}
+\index{end@{end}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SensDetActionSequence::end (G4HCofThisEvent $\ast$ {\em hce})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a2b7944c785413b2a479f4ba4ad2e1515}
+
+
+\hyperlink{class_g4_v_sensitive_detector}{G4VSensitiveDetector} interface: Method invoked at the end of each event. 
+
+Definition at line 382 of file Geant4SensDetAction.cpp.
+
+References DD4hep::Simulation::Geant4Sensitive::end(), m\_\-actors, and m\_\-end.
+
+Referenced by DD4hep::Simulation::Geant4SensDet::EndOfEvent().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a6f9bd0c50d2373f56032da383468ea87}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!hitCollectionName@{hitCollectionName}}
+\index{hitCollectionName@{hitCollectionName}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{hitCollectionName}]{\setlength{\rightskip}{0pt plus 5cm}const std::string \& Geant4SensDetActionSequence::hitCollectionName (size\_\-t {\em which}) const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a6f9bd0c50d2373f56032da383468ea87}
+
+
+Access HitCollection container names. 
+
+Definition at line 316 of file Geant4SensDetAction.cpp.
+
+References DD4hep::Simulation::Geant4Action::c\_\-name(), DD4hep::Simulation::Geant4Action::except(), and m\_\-collections.
+
+Referenced by DD4hep::Simulation::Geant4Sensitive::hitCollectionName().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a452bc5bf7c03c8b546d3459ba7bf7e36}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!process@{process}}
+\index{process@{process}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{process}]{\setlength{\rightskip}{0pt plus 5cm}bool Geant4SensDetActionSequence::process (G4Step $\ast$ {\em step}, \/  G4TouchableHistory $\ast$ {\em hist})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a452bc5bf7c03c8b546d3459ba7bf7e36}
+
+
+Function to process hits. 
+
+Definition at line 354 of file Geant4SensDetAction.cpp.
+
+References DD4hep::Simulation::Geant4Sensitive::accept(), m\_\-actors, m\_\-process, DD4hep::Simulation::Geant4Sensitive::process(), and s.
+
+Referenced by DD4hep::Simulation::Geant4SensDet::ProcessHits().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a6532bc350702a2c13bd15e6450e525c5}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!sensitiveType@{sensitiveType}}
+\index{sensitiveType@{sensitiveType}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{sensitiveType}]{\setlength{\rightskip}{0pt plus 5cm}virtual const std::string\& DD4hep::Simulation::Geant4SensDetActionSequence::sensitiveType () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a6532bc350702a2c13bd15e6450e525c5}
+
+
+Access to the sensitive type of the detector. 
+
+Definition at line 328 of file Geant4SensDetAction.h.
+
+References m\_\-sensitiveType.
+
+Referenced by DD4hep::Simulation::Geant4SensDet::sensitiveType().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a5878271f8da03d02bf4b3b8145246775}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!updateContext@{updateContext}}
+\index{updateContext@{updateContext}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{updateContext}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SensDetActionSequence::updateContext ({\bf Geant4Context} $\ast$ {\em ctxt})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a5878271f8da03d02bf4b3b8145246775}
+
+
+Set or update client context. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae3b9daf2af881df956c46568c0743313}{DD4hep::Simulation::Geant4Action}.
+
+Definition at line 264 of file Geant4SensDetAction.cpp.
+
+References m\_\-actors, DD4hep::Simulation::Geant4Action::m\_\-context, and m\_\-filters.
+
+Referenced by DD4hep::Simulation::Geant4SensDet::Geant4SensDet().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_aa383f58ddce351dc9df9451bee3feb0f}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!m\_\-actors@{m\_\-actors}}
+\index{m\_\-actors@{m\_\-actors}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{m\_\-actors}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Actors}$<${\bf Geant4Sensitive}$>$ {\bf DD4hep::Simulation::Geant4SensDetActionSequence::m\_\-actors}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_aa383f58ddce351dc9df9451bee3feb0f}
+
+
+The list of sensitive detector objects. 
+
+Definition at line 302 of file Geant4SensDetAction.h.
+
+Referenced by adopt(), begin(), clear(), end(), process(), updateContext(), and $\sim$Geant4SensDetActionSequence().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a8feceb005db2ea028c4a778dd600b00b}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!m\_\-begin@{m\_\-begin}}
+\index{m\_\-begin@{m\_\-begin}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{m\_\-begin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CallbackSequence} {\bf DD4hep::Simulation::Geant4SensDetActionSequence::m\_\-begin}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a8feceb005db2ea028c4a778dd600b00b}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence for event initialization action. 
+
+Definition at line 294 of file Geant4SensDetAction.h.
+
+Referenced by begin(), and callAtBegin().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a5d720697074ed4775143ebdae2073a16}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!m\_\-clear@{m\_\-clear}}
+\index{m\_\-clear@{m\_\-clear}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{m\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CallbackSequence} {\bf DD4hep::Simulation::Geant4SensDetActionSequence::m\_\-clear}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a5d720697074ed4775143ebdae2073a16}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence to invoke the event deletion. 
+
+Definition at line 300 of file Geant4SensDetAction.h.
+
+Referenced by callAtClear(), and clear().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a58c74511f9bef97e83b5a7e54b4917ca}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!m\_\-collections@{m\_\-collections}}
+\index{m\_\-collections@{m\_\-collections}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{m\_\-collections}]{\setlength{\rightskip}{0pt plus 5cm}{\bf HitCollections} {\bf DD4hep::Simulation::Geant4SensDetActionSequence::m\_\-collections}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a58c74511f9bef97e83b5a7e54b4917ca}
+
+
+Hit collection creators. 
+
+Definition at line 307 of file Geant4SensDetAction.h.
+
+Referenced by begin(), collection(), defineCollection(), and hitCollectionName().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a4c35959bba4b7d3f05a8aa48970be68a}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!m\_\-detector@{m\_\-detector}}
+\index{m\_\-detector@{m\_\-detector}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{m\_\-detector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4ActionSD}$\ast$ {\bf DD4hep::Simulation::Geant4SensDetActionSequence::m\_\-detector}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a4c35959bba4b7d3f05a8aa48970be68a}
+
+
+Reference to G4 sensitive detector. 
+
+Definition at line 311 of file Geant4SensDetAction.h.
+
+Referenced by begin(), and collection().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a15a09899c6ec50b8d14f4543362d9c91}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!m\_\-end@{m\_\-end}}
+\index{m\_\-end@{m\_\-end}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{m\_\-end}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CallbackSequence} {\bf DD4hep::Simulation::Geant4SensDetActionSequence::m\_\-end}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a15a09899c6ec50b8d14f4543362d9c91}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence for event finalization action. 
+
+Definition at line 296 of file Geant4SensDetAction.h.
+
+Referenced by callAtEnd(), and end().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a67b12a0e51d5249be593f874182155ab}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!m\_\-filters@{m\_\-filters}}
+\index{m\_\-filters@{m\_\-filters}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{m\_\-filters}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Actors}$<${\bf Geant4Filter}$>$ {\bf DD4hep::Simulation::Geant4SensDetActionSequence::m\_\-filters}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a67b12a0e51d5249be593f874182155ab}
+
+
+The list of sensitive detector filter objects. 
+
+Definition at line 304 of file Geant4SensDetAction.h.
+
+Referenced by accept(), adopt(), updateContext(), and $\sim$Geant4SensDetActionSequence().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a7a64aa4c2cd4c410962f951bd47d2116}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!m\_\-hce@{m\_\-hce}}
+\index{m\_\-hce@{m\_\-hce}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{m\_\-hce}]{\setlength{\rightskip}{0pt plus 5cm}G4HCofThisEvent$\ast$ {\bf DD4hep::Simulation::Geant4SensDetActionSequence::m\_\-hce}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a7a64aa4c2cd4c410962f951bd47d2116}
+
+
+Geant4 hit collection context. 
+
+Definition at line 292 of file Geant4SensDetAction.h.
+
+Referenced by begin(), clear(), collection(), and collectionByID().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a2ebfed15148432bab44c58ce3c7a0a95}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!m\_\-process@{m\_\-process}}
+\index{m\_\-process@{m\_\-process}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{m\_\-process}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CallbackSequence} {\bf DD4hep::Simulation::Geant4SensDetActionSequence::m\_\-process}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a2ebfed15148432bab44c58ce3c7a0a95}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence for step processing. 
+
+Definition at line 298 of file Geant4SensDetAction.h.
+
+Referenced by callAtProcess(), and process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a480029ca979ac872688986da731930b8}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!m\_\-sensitive@{m\_\-sensitive}}
+\index{m\_\-sensitive@{m\_\-sensitive}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{m\_\-sensitive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SensitiveDetector} {\bf DD4hep::Simulation::Geant4SensDetActionSequence::m\_\-sensitive}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a480029ca979ac872688986da731930b8}
+
+
+Reference to the sensitive detector element. 
+
+Definition at line 309 of file Geant4SensDetAction.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a51bf2c5186ea7905ae655b44d6aea06f}{
+\index{DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}!m\_\-sensitiveType@{m\_\-sensitiveType}}
+\index{m\_\-sensitiveType@{m\_\-sensitiveType}!DD4hep::Simulation::Geant4SensDetActionSequence@{DD4hep::Simulation::Geant4SensDetActionSequence}}
+\subsubsection[{m\_\-sensitiveType}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::Simulation::Geant4SensDetActionSequence::m\_\-sensitiveType}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a51bf2c5186ea7905ae655b44d6aea06f}
+
+
+The true sensitive type of the detector. 
+
+Definition at line 313 of file Geant4SensDetAction.h.
+
+Referenced by sensitiveType().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_sens_det_action_8h}{Geant4SensDetAction.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_sens_det_action_8cpp}{Geant4SensDetAction.cpp}\end{DoxyCompactItemize}

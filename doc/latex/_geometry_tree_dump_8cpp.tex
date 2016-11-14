@@ -1,0 +1,74 @@
+\hypertarget{_geometry_tree_dump_8cpp}{
+\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/GeometryTreeDump.cpp File Reference}
+\label{_geometry_tree_dump_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/GeometryTreeDump.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/GeometryTreeDump.cpp}}
+}
+{\ttfamily \#include \char`\"{}DD4hep/LCDD.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}GeometryTreeDump.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TROOT.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TColor.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoShape.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoCone.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoParaboloid.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoPcon.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoPgon.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoSphere.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoTorus.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoTube.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoTrd1.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoTrd2.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoArb8.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoMatrix.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoBoolNode.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoCompositeShape.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TClass.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoManager.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TMath.h\char`\"{}}\par
+{\ttfamily \#include $<$iostream$>$}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{_geometry_tree_dump_8cpp_a00b79b7f20b6ff125e104012b5ba1fa4}{dumpStructure} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} pv, int level)
+\item 
+static void \hyperlink{_geometry_tree_dump_8cpp_a3512c5638276ffa037cc6a99911f266d}{dumpDetectors} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} parent, int level)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classstd_1_1string}{string} \hyperlink{_geometry_tree_dump_8cpp_a301dbb9913055444022b6d007e61871d}{\_\-path} = \char`\"{}\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_geometry_tree_dump_8cpp_a3512c5638276ffa037cc6a99911f266d}{
+\index{GeometryTreeDump.cpp@{GeometryTreeDump.cpp}!dumpDetectors@{dumpDetectors}}
+\index{dumpDetectors@{dumpDetectors}!GeometryTreeDump.cpp@{GeometryTreeDump.cpp}}
+\subsubsection[{dumpDetectors}]{\setlength{\rightskip}{0pt plus 5cm}static void dumpDetectors ({\bf DetElement} {\em parent}, \/  int {\em level})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{_geometry_tree_dump_8cpp_a3512c5638276ffa037cc6a99911f266d}
+
+
+Definition at line 275 of file GeometryTreeDump.cpp.
+
+References DD4hep::Geometry::DetElement::children(), DD4hep::Handle$<$ T $>$::isValid(), DD4hep::Handle$<$ T $>$::name(), DD4hep::Geometry::DetElement::placement(), and DD4hep::Geometry::DetElement::placementPath().
+
+Referenced by DD4hep::Geometry::GeometryTreeDump::create().\hypertarget{_geometry_tree_dump_8cpp_a00b79b7f20b6ff125e104012b5ba1fa4}{
+\index{GeometryTreeDump.cpp@{GeometryTreeDump.cpp}!dumpStructure@{dumpStructure}}
+\index{dumpStructure@{dumpStructure}!GeometryTreeDump.cpp@{GeometryTreeDump.cpp}}
+\subsubsection[{dumpStructure}]{\setlength{\rightskip}{0pt plus 5cm}static void dumpStructure ({\bf PlacedVolume} {\em pv}, \/  int {\em level})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{_geometry_tree_dump_8cpp_a00b79b7f20b6ff125e104012b5ba1fa4}
+
+
+Definition at line 253 of file GeometryTreeDump.cpp.
+
+References DD4hep::Handle$<$ T $>$::ptr().
+
+Referenced by DD4hep::Geometry::GeometryTreeDump::create().
+
+\subsection{Variable Documentation}
+\hypertarget{_geometry_tree_dump_8cpp_a301dbb9913055444022b6d007e61871d}{
+\index{GeometryTreeDump.cpp@{GeometryTreeDump.cpp}!\_\-path@{\_\-path}}
+\index{\_\-path@{\_\-path}!GeometryTreeDump.cpp@{GeometryTreeDump.cpp}}
+\subsubsection[{\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf string} {\bf \_\-path} = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{_geometry_tree_dump_8cpp_a301dbb9913055444022b6d007e61871d}
+
+
+Definition at line 252 of file GeometryTreeDump.cpp.

@@ -1,0 +1,475 @@
+\hypertarget{class_d_d4hep_1_1_callback}{
+\section{DD4hep::Callback Class Reference}
+\label{class_d_d4hep_1_1_callback}\index{DD4hep::Callback@{DD4hep::Callback}}
+}
+
+
+Definition of the generic callback structure for member functions.  
+
+
+{\ttfamily \#include $<$Callback.h$>$}\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_d_d4hep_1_1_callback_1_1mfunc__t}{mfunc\_\-t}
+\begin{DoxyCompactList}\small\item\em Structure definition to store callback related data. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_callback_1_1_wrapper}{Wrapper}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback_1_1_wrapper}{Wrapper} around a C++ member function pointer. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned long($\ast$ \hyperlink{class_d_d4hep_1_1_callback_a3b7cb36fa166495663680601ba5d7fe0}{func\_\-t} )(void $\ast$obj, const void $\ast$fun, const void $\ast$args\mbox{[}$\,$\mbox{]})
+\item 
+typedef unsigned long \hyperlink{class_d_d4hep_1_1_callback_ac676aa0685e2ba51bac69c33f8066431}{ulong}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_callback_af29b371d4eb53f3e27df8c3250899950}{Callback} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_callback_a11bd26d9c2634ea669f13d30d1462f8e}{Callback} (void $\ast$p)
+\begin{DoxyCompactList}\small\item\em Constructor with object initialization. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_callback_ad9377008515da7c31829f8f1c77c0be8}{Callback} (void $\ast$p, void $\ast$mf, \hyperlink{class_d_d4hep_1_1_callback_a3b7cb36fa166495663680601ba5d7fe0}{func\_\-t} c)
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_callback_ad09cdf0e5d4dfe2a0f9a2f924ae5b930}{operator bool} () const 
+\begin{DoxyCompactList}\small\item\em Check validity of the callback object. \item\end{DoxyCompactList}\item 
+unsigned long \hyperlink{class_d_d4hep_1_1_callback_aa2f121c71eaba5c384fe57aade6ebda9}{execute} (const void $\ast$user\_\-param\mbox{[}$\,$\mbox{]}) const 
+\begin{DoxyCompactList}\small\item\em Execute the callback with the required number of user parameters. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\const \hyperlink{class_d_d4hep_1_1_callback}{Callback} \& \hyperlink{class_d_d4hep_1_1_callback_af46adbf158456243c857aadf77295387}{\_\-make} (\hyperlink{class_d_d4hep_1_1_callback_ac676aa0685e2ba51bac69c33f8066431}{ulong}($\ast$fptr)(void $\ast$o, const void $\ast$f, const void $\ast$u\mbox{[}$\,$\mbox{]}), \hyperlink{class_t}{T} pmf)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with member functions taking no arguments. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename R , typename T $>$ }\\const \hyperlink{class_d_d4hep_1_1_callback}{Callback} \& \hyperlink{class_d_d4hep_1_1_callback_a3d90b335e05a60b5e27e53dadc68c40b}{make} (R(T::$\ast$pmf)())
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with member functions with explicit return type taking no arguments. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename R , typename T $>$ }\\const \hyperlink{class_d_d4hep_1_1_callback}{Callback} \& \hyperlink{class_d_d4hep_1_1_callback_a707ddd54e7fed776ae0db179178a5e65}{make} (R(T::$\ast$pmf)() const)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with const member functions with explicit return type taking no arguments. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\const \hyperlink{class_d_d4hep_1_1_callback}{Callback} \& \hyperlink{class_d_d4hep_1_1_callback_a87a6d5252f2275f57c7803f9f493e20e}{make} (void(T::$\ast$pmf)())
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with void member functions taking no arguments. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\const \hyperlink{class_d_d4hep_1_1_callback}{Callback} \& \hyperlink{class_d_d4hep_1_1_callback_aea1f37de334b82531ae96e582c957c6c}{make} (void(T::$\ast$pmf)() const)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with const void member functions taking no arguments. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename R , typename T , typename A $>$ }\\const \hyperlink{class_d_d4hep_1_1_callback}{Callback} \& \hyperlink{class_d_d4hep_1_1_callback_a04e19b0d13aa0fe1728326d79d204620}{make} (R(T::$\ast$pmf)(A))
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with member functions with explicit return type taking 1 argument. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename R , typename T , typename A $>$ }\\const \hyperlink{class_d_d4hep_1_1_callback}{Callback} \& \hyperlink{class_d_d4hep_1_1_callback_a128131dc329fa90dd9c4c73652050023}{make} (R(T::$\ast$pmf)(A) const)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with const member functions with explicit return type taking 1 argument. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\const \hyperlink{class_d_d4hep_1_1_callback}{Callback} \& \hyperlink{class_d_d4hep_1_1_callback_ab277609e7c80369b36be7ab82531cf7f}{make} (void(T::$\ast$pmf)(A))
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with void member functions taking 1 argument. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\const \hyperlink{class_d_d4hep_1_1_callback}{Callback} \& \hyperlink{class_d_d4hep_1_1_callback_a48205c95d6aa007ce23b157d7977c704}{make} (void(T::$\ast$pmf)(A) const)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with const void member functions taking 1 argument. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename R , typename T , typename A0 , typename A1 $>$ }\\const \hyperlink{class_d_d4hep_1_1_callback}{Callback} \& \hyperlink{class_d_d4hep_1_1_callback_ab9493ba45378fdb3ed3d9a906b7e3d73}{make} (R(T::$\ast$pmf)(A0, A1))
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with member functions with explicit return type taking 2 arguments. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename R , typename T , typename A0 , typename A1 $>$ }\\const \hyperlink{class_d_d4hep_1_1_callback}{Callback} \& \hyperlink{class_d_d4hep_1_1_callback_abc72652496b83fa106b141b86fffca6c}{make} (R(T::$\ast$pmf)(A0, A1) const)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with const member functions with explicit return type taking 2 arguments. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename A0 , typename A1 $>$ }\\const \hyperlink{class_d_d4hep_1_1_callback}{Callback} \& \hyperlink{class_d_d4hep_1_1_callback_aa18a59952eb491c6fcfd8f8fc2c9bf04}{make} (void(T::$\ast$pmf)(A0, A1))
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with const void member functions taking 2 arguments. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename A0 , typename A1 $>$ }\\const \hyperlink{class_d_d4hep_1_1_callback}{Callback} \& \hyperlink{class_d_d4hep_1_1_callback_a65524e85eac0683d3339c6548ff35449}{make} (void(T::$\ast$pmf)(A0, A1) const)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with const void member functions taking 2 arguments. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename R , typename T , typename A0 , typename A1 , typename A2 $>$ }\\const \hyperlink{class_d_d4hep_1_1_callback}{Callback} \& \hyperlink{class_d_d4hep_1_1_callback_a98ec440d07e402f58036a5699dfc2458}{make} (R(T::$\ast$pmf)(A0, A1, A2))
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with member functions with explicit return type taking 3 arguments. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename R , typename T , typename A0 , typename A1 , typename A2 $>$ }\\const \hyperlink{class_d_d4hep_1_1_callback}{Callback} \& \hyperlink{class_d_d4hep_1_1_callback_a747cb5a1ca93ae7b878dfc7e018d0e9b}{make} (R(T::$\ast$pmf)(A0, A1, A2) const)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with const member functions with explicit return type taking 3 arguments. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename A0 , typename A1 , typename A2 $>$ }\\const \hyperlink{class_d_d4hep_1_1_callback}{Callback} \& \hyperlink{class_d_d4hep_1_1_callback_aa25f82768896694845261606a1ce386b}{make} (void(T::$\ast$pmf)(A0, A1, A2))
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with const void member functions taking 3 arguments. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename A0 , typename A1 , typename A2 $>$ }\\const \hyperlink{class_d_d4hep_1_1_callback}{Callback} \& \hyperlink{class_d_d4hep_1_1_callback_a351fc7781de507710ea9a7d1449a6029}{make} (void(T::$\ast$pmf)(A0, A1, A2) const)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with const void member functions taking 3 arguments. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \hyperlink{class_t}{T} $\ast$ \hyperlink{class_d_d4hep_1_1_callback_a069516d5f7974c49d2cef9f8f5d3a3a8}{cast} (void $\ast$p)
+\begin{DoxyCompactList}\small\item\em Template cast function used internally by the wrapper for type conversion to the object's type. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static const \hyperlink{class_t}{T} $\ast$ \hyperlink{class_d_d4hep_1_1_callback_a6fdb65785fe0baceaa35ba72697ec20f}{c\_\-cast} (const void $\ast$p)
+\begin{DoxyCompactList}\small\item\em Template const cast function used internally by the wrapper for type conversion to the object's type. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static \hyperlink{class_d_d4hep_1_1_callback}{Callback} \hyperlink{class_d_d4hep_1_1_callback_a548711851bb34b150960188fe4702646}{make} (void $\ast$p, \hyperlink{class_t}{T} pmf)
+\item 
+{\footnotesize template$<$typename P , typename R , typename T $>$ }\\static \hyperlink{class_t}{T} $\ast$ \hyperlink{class_d_d4hep_1_1_callback_a61b19a8cda5da3a772b6dde5eaae4b85}{dyn\_\-cast} (P $\ast$p, R(T::$\ast$)())
+\item 
+{\footnotesize template$<$typename P , typename R , typename T $>$ }\\static const \hyperlink{class_t}{T} $\ast$ \hyperlink{class_d_d4hep_1_1_callback_a4497e9974d33b6c7263108bcf81b7b27}{dyn\_\-cast} (const P $\ast$p, R(T::$\ast$)() const)
+\item 
+{\footnotesize template$<$typename P , typename R , typename T , typename A $>$ }\\static \hyperlink{class_t}{T} $\ast$ \hyperlink{class_d_d4hep_1_1_callback_aae546798486b2d6a31d0cfc8aee92b9c}{dyn\_\-cast} (P $\ast$p, R(T::$\ast$)(A))
+\item 
+{\footnotesize template$<$typename P , typename R , typename T , typename A $>$ }\\static const \hyperlink{class_t}{T} $\ast$ \hyperlink{class_d_d4hep_1_1_callback_a21c30142836304bb1442482199485133}{dyn\_\-cast} (const P $\ast$p, R(T::$\ast$)(A) const)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{class_d_d4hep_1_1_callback_a0a6ca86dc357627c3c8e9f6233444733}{par}
+\item 
+\hyperlink{class_d_d4hep_1_1_callback_a3b7cb36fa166495663680601ba5d7fe0}{func\_\-t} \hyperlink{class_d_d4hep_1_1_callback_af278c88d3680465912b88ad74b0d4cff}{call}
+\item 
+\hyperlink{struct_d_d4hep_1_1_callback_1_1mfunc__t}{mfunc\_\-t} \hyperlink{class_d_d4hep_1_1_callback_a9998721dd74f6377d4c5e71629411426}{func}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definition of the generic callback structure for member functions. The callback structure allows to wrap any member function with up to 3 arguments into an abstract objects, which could later be called using the argument list. The pointer to the hosting objects is stored in the callback object. The callback objects in this sense behaves very similar to a static function.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+01/03/2013 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 38 of file Callback.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_callback_a3b7cb36fa166495663680601ba5d7fe0}{
+\index{DD4hep::Callback@{DD4hep::Callback}!func\_\-t@{func\_\-t}}
+\index{func\_\-t@{func\_\-t}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{func\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned long($\ast$ {\bf DD4hep::Callback::func\_\-t})(void $\ast$obj, const void $\ast$fun, const void $\ast$args\mbox{[}$\,$\mbox{]})}}
+\label{class_d_d4hep_1_1_callback_a3b7cb36fa166495663680601ba5d7fe0}
+
+
+Definition at line 40 of file Callback.h.\hypertarget{class_d_d4hep_1_1_callback_ac676aa0685e2ba51bac69c33f8066431}{
+\index{DD4hep::Callback@{DD4hep::Callback}!ulong@{ulong}}
+\index{ulong@{ulong}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{ulong}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned long {\bf DD4hep::Callback::ulong}}}
+\label{class_d_d4hep_1_1_callback_ac676aa0685e2ba51bac69c33f8066431}
+
+
+Definition at line 45 of file Callback.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_callback_af29b371d4eb53f3e27df8c3250899950}{
+\index{DD4hep::Callback@{DD4hep::Callback}!Callback@{Callback}}
+\index{Callback@{Callback}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{Callback}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Callback::Callback ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_af29b371d4eb53f3e27df8c3250899950}
+
+
+Default constructor. 
+
+Definition at line 52 of file Callback.h.
+
+References DD4hep::Callback::mfunc\_\-t::first, func, and DD4hep::Callback::mfunc\_\-t::second.
+
+Referenced by make().\hypertarget{class_d_d4hep_1_1_callback_a11bd26d9c2634ea669f13d30d1462f8e}{
+\index{DD4hep::Callback@{DD4hep::Callback}!Callback@{Callback}}
+\index{Callback@{Callback}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{Callback}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Callback::Callback (void $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_a11bd26d9c2634ea669f13d30d1462f8e}
+
+
+Constructor with object initialization. 
+
+Definition at line 57 of file Callback.h.
+
+References DD4hep::Callback::mfunc\_\-t::first, func, and DD4hep::Callback::mfunc\_\-t::second.\hypertarget{class_d_d4hep_1_1_callback_ad9377008515da7c31829f8f1c77c0be8}{
+\index{DD4hep::Callback@{DD4hep::Callback}!Callback@{Callback}}
+\index{Callback@{Callback}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{Callback}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Callback::Callback (void $\ast$ {\em p}, \/  void $\ast$ {\em mf}, \/  {\bf func\_\-t} {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_ad9377008515da7c31829f8f1c77c0be8}
+
+
+Initializing constructor. 
+
+Definition at line 62 of file Callback.h.
+
+References func.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_callback_af46adbf158456243c857aadf77295387}{
+\index{DD4hep::Callback@{DD4hep::Callback}!\_\-make@{\_\-make}}
+\index{\_\-make@{\_\-make}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{\_\-make}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const {\bf Callback}\& DD4hep::Callback::\_\-make ({\bf ulong}($\ast$)(void $\ast$o, const void $\ast$f, const void $\ast$u\mbox{[}$\,$\mbox{]}) {\em fptr}, \/  {\bf T} {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_af46adbf158456243c857aadf77295387}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with member functions taking no arguments. \hyperlink{class_d_d4hep_1_1_callback}{Callback} setup with no arguments 
+
+Definition at line 114 of file Callback.h.
+
+References call, func, and DD4hep::Callback::Wrapper$<$ T $>$::Functor::ptr.
+
+Referenced by make().\hypertarget{class_d_d4hep_1_1_callback_a6fdb65785fe0baceaa35ba72697ec20f}{
+\index{DD4hep::Callback@{DD4hep::Callback}!c\_\-cast@{c\_\-cast}}
+\index{c\_\-cast@{c\_\-cast}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{c\_\-cast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ static const {\bf T}$\ast$ DD4hep::Callback::c\_\-cast (const void $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_a6fdb65785fe0baceaa35ba72697ec20f}
+
+
+Template const cast function used internally by the wrapper for type conversion to the object's type. 
+
+Definition at line 79 of file Callback.h.\hypertarget{class_d_d4hep_1_1_callback_a069516d5f7974c49d2cef9f8f5d3a3a8}{
+\index{DD4hep::Callback@{DD4hep::Callback}!cast@{cast}}
+\index{cast@{cast}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{cast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ static {\bf T}$\ast$ DD4hep::Callback::cast (void $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_a069516d5f7974c49d2cef9f8f5d3a3a8}
+
+
+Template cast function used internally by the wrapper for type conversion to the object's type. 
+
+Definition at line 75 of file Callback.h.\hypertarget{class_d_d4hep_1_1_callback_a21c30142836304bb1442482199485133}{
+\index{DD4hep::Callback@{DD4hep::Callback}!dyn\_\-cast@{dyn\_\-cast}}
+\index{dyn\_\-cast@{dyn\_\-cast}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{dyn\_\-cast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename P , typename R , typename T , typename A $>$ static const {\bf T}$\ast$ DD4hep::Callback::dyn\_\-cast (const P $\ast$ {\em p}, \/  R(T::$\ast$)(A) {\em const})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_a21c30142836304bb1442482199485133}
+
+
+Definition at line 319 of file Callback.h.\hypertarget{class_d_d4hep_1_1_callback_aae546798486b2d6a31d0cfc8aee92b9c}{
+\index{DD4hep::Callback@{DD4hep::Callback}!dyn\_\-cast@{dyn\_\-cast}}
+\index{dyn\_\-cast@{dyn\_\-cast}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{dyn\_\-cast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename P , typename R , typename T , typename A $>$ static {\bf T}$\ast$ DD4hep::Callback::dyn\_\-cast (P $\ast$ {\em p}, \/  R(T::$\ast$)(A))\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_aae546798486b2d6a31d0cfc8aee92b9c}
+
+
+Definition at line 316 of file Callback.h.\hypertarget{class_d_d4hep_1_1_callback_a4497e9974d33b6c7263108bcf81b7b27}{
+\index{DD4hep::Callback@{DD4hep::Callback}!dyn\_\-cast@{dyn\_\-cast}}
+\index{dyn\_\-cast@{dyn\_\-cast}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{dyn\_\-cast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename P , typename R , typename T $>$ static const {\bf T}$\ast$ DD4hep::Callback::dyn\_\-cast (const P $\ast$ {\em p}, \/  R(T::$\ast$)() {\em const})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_a4497e9974d33b6c7263108bcf81b7b27}
+
+
+Definition at line 312 of file Callback.h.\hypertarget{class_d_d4hep_1_1_callback_a61b19a8cda5da3a772b6dde5eaae4b85}{
+\index{DD4hep::Callback@{DD4hep::Callback}!dyn\_\-cast@{dyn\_\-cast}}
+\index{dyn\_\-cast@{dyn\_\-cast}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{dyn\_\-cast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename P , typename R , typename T $>$ static {\bf T}$\ast$ DD4hep::Callback::dyn\_\-cast (P $\ast$ {\em p}, \/  R(T::$\ast$)())\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_a61b19a8cda5da3a772b6dde5eaae4b85}
+
+
+Definition at line 309 of file Callback.h.\hypertarget{class_d_d4hep_1_1_callback_aa2f121c71eaba5c384fe57aade6ebda9}{
+\index{DD4hep::Callback@{DD4hep::Callback}!execute@{execute}}
+\index{execute@{execute}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long DD4hep::Callback::execute (const void $\ast$ {\em user\_\-param}\mbox{[}$\,$\mbox{]}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_aa2f121c71eaba5c384fe57aade6ebda9}
+
+
+Execute the callback with the required number of user parameters. 
+
+Definition at line 71 of file Callback.h.
+
+References call, func, and par.
+
+Referenced by DD4hep::ContextMenuHandler::Context().\hypertarget{class_d_d4hep_1_1_callback_a548711851bb34b150960188fe4702646}{
+\index{DD4hep::Callback@{DD4hep::Callback}!make@{make}}
+\index{make@{make}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{make}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ static {\bf Callback} DD4hep::Callback::make (void $\ast$ {\em p}, \/  {\bf T} {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_a548711851bb34b150960188fe4702646}
+
+
+Definition at line 305 of file Callback.h.
+
+References Callback().\hypertarget{class_d_d4hep_1_1_callback_a351fc7781de507710ea9a7d1449a6029}{
+\index{DD4hep::Callback@{DD4hep::Callback}!make@{make}}
+\index{make@{make}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{make}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename A0 , typename A1 , typename A2 $>$ const {\bf Callback}\& DD4hep::Callback::make (void(T::$\ast$)(A0, A1, A2) const  {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_a351fc7781de507710ea9a7d1449a6029}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with const void member functions taking 3 arguments. 
+
+Definition at line 293 of file Callback.h.
+
+References \_\-make(), and call.\hypertarget{class_d_d4hep_1_1_callback_aa25f82768896694845261606a1ce386b}{
+\index{DD4hep::Callback@{DD4hep::Callback}!make@{make}}
+\index{make@{make}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{make}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename A0 , typename A1 , typename A2 $>$ const {\bf Callback}\& DD4hep::Callback::make (void(T::$\ast$)(A0, A1, A2) {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_aa25f82768896694845261606a1ce386b}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with const void member functions taking 3 arguments. 
+
+Definition at line 281 of file Callback.h.
+
+References \_\-make(), and call.\hypertarget{class_d_d4hep_1_1_callback_a747cb5a1ca93ae7b878dfc7e018d0e9b}{
+\index{DD4hep::Callback@{DD4hep::Callback}!make@{make}}
+\index{make@{make}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{make}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename R , typename T , typename A0 , typename A1 , typename A2 $>$ const {\bf Callback}\& DD4hep::Callback::make (R(T::$\ast$)(A0, A1, A2) const  {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_a747cb5a1ca93ae7b878dfc7e018d0e9b}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with const member functions with explicit return type taking 3 arguments. 
+
+Definition at line 270 of file Callback.h.
+
+References \_\-make(), and call.\hypertarget{class_d_d4hep_1_1_callback_a98ec440d07e402f58036a5699dfc2458}{
+\index{DD4hep::Callback@{DD4hep::Callback}!make@{make}}
+\index{make@{make}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{make}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename R , typename T , typename A0 , typename A1 , typename A2 $>$ const {\bf Callback}\& DD4hep::Callback::make (R(T::$\ast$)(A0, A1, A2) {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_a98ec440d07e402f58036a5699dfc2458}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with member functions with explicit return type taking 3 arguments. \hyperlink{class_d_d4hep_1_1_callback}{Callback} setup for callbacks with 3 arguments 
+
+Definition at line 259 of file Callback.h.
+
+References \_\-make(), and call.\hypertarget{class_d_d4hep_1_1_callback_a65524e85eac0683d3339c6548ff35449}{
+\index{DD4hep::Callback@{DD4hep::Callback}!make@{make}}
+\index{make@{make}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{make}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename A0 , typename A1 $>$ const {\bf Callback}\& DD4hep::Callback::make (void(T::$\ast$)(A0, A1) const  {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_a65524e85eac0683d3339c6548ff35449}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with const void member functions taking 2 arguments. 
+
+Definition at line 244 of file Callback.h.
+
+References \_\-make(), and call.\hypertarget{class_d_d4hep_1_1_callback_aa18a59952eb491c6fcfd8f8fc2c9bf04}{
+\index{DD4hep::Callback@{DD4hep::Callback}!make@{make}}
+\index{make@{make}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{make}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename A0 , typename A1 $>$ const {\bf Callback}\& DD4hep::Callback::make (void(T::$\ast$)(A0, A1) {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_aa18a59952eb491c6fcfd8f8fc2c9bf04}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with const void member functions taking 2 arguments. 
+
+Definition at line 232 of file Callback.h.
+
+References \_\-make(), and call.\hypertarget{class_d_d4hep_1_1_callback_abc72652496b83fa106b141b86fffca6c}{
+\index{DD4hep::Callback@{DD4hep::Callback}!make@{make}}
+\index{make@{make}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{make}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename R , typename T , typename A0 , typename A1 $>$ const {\bf Callback}\& DD4hep::Callback::make (R(T::$\ast$)(A0, A1) const  {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_abc72652496b83fa106b141b86fffca6c}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with const member functions with explicit return type taking 2 arguments. 
+
+Definition at line 221 of file Callback.h.
+
+References \_\-make(), and call.\hypertarget{class_d_d4hep_1_1_callback_ab9493ba45378fdb3ed3d9a906b7e3d73}{
+\index{DD4hep::Callback@{DD4hep::Callback}!make@{make}}
+\index{make@{make}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{make}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename R , typename T , typename A0 , typename A1 $>$ const {\bf Callback}\& DD4hep::Callback::make (R(T::$\ast$)(A0, A1) {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_ab9493ba45378fdb3ed3d9a906b7e3d73}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with member functions with explicit return type taking 2 arguments. \hyperlink{class_d_d4hep_1_1_callback}{Callback} with 2 arguments 
+
+Definition at line 210 of file Callback.h.
+
+References \_\-make(), and call.\hypertarget{class_d_d4hep_1_1_callback_a48205c95d6aa007ce23b157d7977c704}{
+\index{DD4hep::Callback@{DD4hep::Callback}!make@{make}}
+\index{make@{make}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{make}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename A $>$ const {\bf Callback}\& DD4hep::Callback::make (void(T::$\ast$)(A) const  {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_a48205c95d6aa007ce23b157d7977c704}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with const void member functions taking 1 argument. 
+
+Definition at line 196 of file Callback.h.
+
+References \_\-make(), and call.\hypertarget{class_d_d4hep_1_1_callback_ab277609e7c80369b36be7ab82531cf7f}{
+\index{DD4hep::Callback@{DD4hep::Callback}!make@{make}}
+\index{make@{make}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{make}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename A $>$ const {\bf Callback}\& DD4hep::Callback::make (void(T::$\ast$)(A) {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_ab277609e7c80369b36be7ab82531cf7f}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with void member functions taking 1 argument. 
+
+Definition at line 185 of file Callback.h.
+
+References \_\-make(), and call.\hypertarget{class_d_d4hep_1_1_callback_a128131dc329fa90dd9c4c73652050023}{
+\index{DD4hep::Callback@{DD4hep::Callback}!make@{make}}
+\index{make@{make}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{make}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename R , typename T , typename A $>$ const {\bf Callback}\& DD4hep::Callback::make (R(T::$\ast$)(A) const  {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_a128131dc329fa90dd9c4c73652050023}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with const member functions with explicit return type taking 1 argument. 
+
+Definition at line 175 of file Callback.h.
+
+References \_\-make(), and call.\hypertarget{class_d_d4hep_1_1_callback_a04e19b0d13aa0fe1728326d79d204620}{
+\index{DD4hep::Callback@{DD4hep::Callback}!make@{make}}
+\index{make@{make}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{make}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename R , typename T , typename A $>$ const {\bf Callback}\& DD4hep::Callback::make (R(T::$\ast$)(A) {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_a04e19b0d13aa0fe1728326d79d204620}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with member functions with explicit return type taking 1 argument. Callbacks with 1 argument 
+
+Definition at line 165 of file Callback.h.
+
+References \_\-make(), and call.\hypertarget{class_d_d4hep_1_1_callback_aea1f37de334b82531ae96e582c957c6c}{
+\index{DD4hep::Callback@{DD4hep::Callback}!make@{make}}
+\index{make@{make}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{make}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const {\bf Callback}\& DD4hep::Callback::make (void(T::$\ast$)() const  {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_aea1f37de334b82531ae96e582c957c6c}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with const void member functions taking no arguments. 
+
+Definition at line 152 of file Callback.h.
+
+References \_\-make(), and call.\hypertarget{class_d_d4hep_1_1_callback_a87a6d5252f2275f57c7803f9f493e20e}{
+\index{DD4hep::Callback@{DD4hep::Callback}!make@{make}}
+\index{make@{make}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{make}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const {\bf Callback}\& DD4hep::Callback::make (void(T::$\ast$)() {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_a87a6d5252f2275f57c7803f9f493e20e}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with void member functions taking no arguments. 
+
+Definition at line 141 of file Callback.h.
+
+References \_\-make(), and call.\hypertarget{class_d_d4hep_1_1_callback_a707ddd54e7fed776ae0db179178a5e65}{
+\index{DD4hep::Callback@{DD4hep::Callback}!make@{make}}
+\index{make@{make}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{make}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename R , typename T $>$ const {\bf Callback}\& DD4hep::Callback::make (R(T::$\ast$)() const  {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_a707ddd54e7fed776ae0db179178a5e65}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with const member functions with explicit return type taking no arguments. 
+
+Definition at line 131 of file Callback.h.
+
+References \_\-make(), and call.\hypertarget{class_d_d4hep_1_1_callback_a3d90b335e05a60b5e27e53dadc68c40b}{
+\index{DD4hep::Callback@{DD4hep::Callback}!make@{make}}
+\index{make@{make}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{make}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename R , typename T $>$ const {\bf Callback}\& DD4hep::Callback::make (R(T::$\ast$)() {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_a3d90b335e05a60b5e27e53dadc68c40b}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} setup function for Callbacks with member functions with explicit return type taking no arguments. 
+
+Definition at line 121 of file Callback.h.
+
+References \_\-make(), and call.
+
+Referenced by DD4hep::Simulation::Geant4PhaseAction::callback(), and DD4hep::Simulation::Geant4ActionPhase::remove().\hypertarget{class_d_d4hep_1_1_callback_ad09cdf0e5d4dfe2a0f9a2f924ae5b930}{
+\index{DD4hep::Callback@{DD4hep::Callback}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{operator bool}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Callback::operator bool () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_callback_ad09cdf0e5d4dfe2a0f9a2f924ae5b930}
+
+
+Check validity of the callback object. 
+
+Definition at line 67 of file Callback.h.
+
+References call, DD4hep::Callback::mfunc\_\-t::first, func, and par.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_callback_af278c88d3680465912b88ad74b0d4cff}{
+\index{DD4hep::Callback@{DD4hep::Callback}!call@{call}}
+\index{call@{call}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{call}]{\setlength{\rightskip}{0pt plus 5cm}{\bf func\_\-t} {\bf DD4hep::Callback::call}}}
+\label{class_d_d4hep_1_1_callback_af278c88d3680465912b88ad74b0d4cff}
+
+
+Definition at line 48 of file Callback.h.
+
+Referenced by \_\-make(), execute(), make(), and operator bool().\hypertarget{class_d_d4hep_1_1_callback_a9998721dd74f6377d4c5e71629411426}{
+\index{DD4hep::Callback@{DD4hep::Callback}!func@{func}}
+\index{func@{func}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{func}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mfunc\_\-t} {\bf DD4hep::Callback::func}}}
+\label{class_d_d4hep_1_1_callback_a9998721dd74f6377d4c5e71629411426}
+
+
+Definition at line 49 of file Callback.h.
+
+Referenced by \_\-make(), Callback(), execute(), operator bool(), DD4hep::Callback::Wrapper$<$ T $>$::pmf(), and DD4hep::Simulation::Geant4ActionPhase::remove().\hypertarget{class_d_d4hep_1_1_callback_a0a6ca86dc357627c3c8e9f6233444733}{
+\index{DD4hep::Callback@{DD4hep::Callback}!par@{par}}
+\index{par@{par}!DD4hep::Callback@{DD4hep::Callback}}
+\subsubsection[{par}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ {\bf DD4hep::Callback::par}}}
+\label{class_d_d4hep_1_1_callback_a0a6ca86dc357627c3c8e9f6233444733}
+
+
+Definition at line 47 of file Callback.h.
+
+Referenced by execute(), operator bool(), and DD4hep::Simulation::Geant4ActionPhase::remove().
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_callback_8h}{Callback.h}\end{DoxyCompactItemize}

@@ -1,0 +1,210 @@
+\hypertarget{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl}{
+\section{DD4hep::DDRec::VolConeImpl Class Reference}
+\label{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl}\index{DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}}
+}
+
+
+{\ttfamily \#include $<$Surface.h$>$}Inheritance diagram for DD4hep::DDRec::VolConeImpl::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_a53aac2e0c112ae12be098853a5b93d64}{VolConeImpl} ()
+\begin{DoxyCompactList}\small\item\em default c'tor \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_acdcb9ac446fc79054df650fa90a0d381}{VolConeImpl} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Geometry::Volume} vol, \hyperlink{class_d_d_surfaces_1_1_surface_type}{SurfaceType} type, double thickness\_\-inner, double thickness\_\-outer, \hyperlink{class_d_d_surfaces_1_1_vector3_d}{Vector3D} v, \hyperlink{class_d_d_surfaces_1_1_vector3_d}{Vector3D} origin)
+\item 
+virtual \hyperlink{class_d_d_surfaces_1_1_vector3_d}{Vector3D} \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_ae3f99967ddeb67c1ad76414cea068395}{u} (const \hyperlink{class_d_d_surfaces_1_1_vector3_d}{Vector3D} \&point=\hyperlink{class_d_d_surfaces_1_1_vector3_d}{Vector3D}()) const 
+\item 
+virtual \hyperlink{class_d_d_surfaces_1_1_vector3_d}{Vector3D} \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_a305c9b455b4e958dbb511f9136ecaf8b}{v} (const \hyperlink{class_d_d_surfaces_1_1_vector3_d}{Vector3D} \&point=\hyperlink{class_d_d_surfaces_1_1_vector3_d}{Vector3D}()) const 
+\item 
+virtual \hyperlink{class_d_d_surfaces_1_1_vector3_d}{Vector3D} \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_aea04fc521c39ffc8e97ae3f700533e7a}{normal} (const \hyperlink{class_d_d_surfaces_1_1_vector3_d}{Vector3D} \&point=\hyperlink{class_d_d_surfaces_1_1_vector3_d}{Vector3D}()) const 
+\item 
+virtual double \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_a28c958945f374cc59491e7ac4850bbde}{distance} (const \hyperlink{class_d_d_surfaces_1_1_vector3_d}{Vector3D} \&point) const 
+\item 
+virtual \hyperlink{class_d_d_surfaces_1_1_vector2_d}{Vector2D} \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_a427ac9a8bccf658a2161b21d6ae1267f}{globalToLocal} (const \hyperlink{class_d_d_surfaces_1_1_vector3_d}{Vector3D} \&point) const 
+\item 
+virtual \hyperlink{class_d_d_surfaces_1_1_vector3_d}{Vector3D} \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_a1428d72f28ed90522cdaa6bb4d855dce}{localToGlobal} (const \hyperlink{class_d_d_surfaces_1_1_vector2_d}{Vector2D} \&point) const 
+\item 
+virtual std::vector$<$ std::pair$<$ \hyperlink{class_d_d_surfaces_1_1_vector3_d}{DDSurfaces::Vector3D}, \hyperlink{class_d_d_surfaces_1_1_vector3_d}{DDSurfaces::Vector3D} $>$ $>$ \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_ae644bf91eb0b033f16ac4d89d00dd080}{getLines} (unsigned nMax=100)
+\begin{DoxyCompactList}\small\item\em create outer bounding lines for the given symmetry of the polyhedron \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_ae42d0cc1db6c972c012f3177cdeb935b}{\_\-ztip}
+\item 
+double \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_ad204cc67411301eaa8f135430392a55c}{\_\-zt0}
+\item 
+double \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_aa9466fe65e7238bf90ec604132ea1825}{\_\-zt1}
+\item 
+double \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_a5f020df8481dcc088af7a02632f03ae2}{\_\-tanTheta}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of conical surface attached to a volume \begin{DoxyAuthor}{Author}
+F.Gaede, DESY 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Nov, 6 2015 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+\$Id\$ 
+\end{DoxyVersion}
+
+
+Definition at line 414 of file Surface.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_a53aac2e0c112ae12be098853a5b93d64}{
+\index{DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}!VolConeImpl@{VolConeImpl}}
+\index{VolConeImpl@{VolConeImpl}!DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}}
+\subsubsection[{VolConeImpl}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDRec::VolConeImpl::VolConeImpl ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_a53aac2e0c112ae12be098853a5b93d64}
+
+
+default c'tor 
+
+Definition at line 425 of file Surface.h.\hypertarget{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_acdcb9ac446fc79054df650fa90a0d381}{
+\index{DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}!VolConeImpl@{VolConeImpl}}
+\index{VolConeImpl@{VolConeImpl}!DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}}
+\subsubsection[{VolConeImpl}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDRec::VolConeImpl::VolConeImpl ({\bf Geometry::Volume} {\em vol}, \/  {\bf SurfaceType} {\em type}, \/  double {\em thickness\_\-inner}, \/  double {\em thickness\_\-outer}, \/  {\bf Vector3D} {\em v}, \/  {\bf Vector3D} {\em origin})}}
+\label{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_acdcb9ac446fc79054df650fa90a0d381}
+The standard constructor. The origin vector points to the origin of the coordinate system on the cone, its rho defining the mean radius of the cone (z-\/component of the origin is ignored !). The measurement direction v defines the opening angle of the cone, the normal is chosen to be orthogonal to v. NB: the cone is always parallel to the local z axis. 
+
+Definition at line 321 of file Surface.cpp.
+
+References \_\-tanTheta, DD4hep::DDRec::VolSurfaceBase::\_\-type, \_\-zt0, \_\-zt1, \_\-ztip, DDSurfaces::Vector3D::array(), DDSurfaces::SurfaceType::Cone, DDSurfaces::Vector3D::const\_\-array(), DDSurfaces::Vector3D::cross(), DDSurfaces::SurfaceType::Cylinder, M\_\-PI, DDSurfaces::SurfaceType::OrthogonalToZ, DDSurfaces::SurfaceType::ParallelToZ, DDSurfaces::Vector3D::phi(), DDSurfaces::SurfaceType::Plane, DDSurfaces::Vector3D::rho(), DD4hep::DDRec::VolSurfaceBase::setNormal(), DD4hep::DDRec::VolSurfaceBase::setOrigin(), DDSurfaces::SurfaceType::setProperty(), DD4hep::DDRec::VolSurfaceBase::setU(), DDSurfaces::Vector3D::spherical(), DDSurfaces::Vector3D::theta(), DDSurfaces::Vector3D::x(), DDSurfaces::Vector3D::y(), and DDSurfaces::Vector3D::z().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_a28c958945f374cc59491e7ac4850bbde}{
+\index{DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}!distance@{distance}}
+\index{distance@{distance}!DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}}
+\subsubsection[{distance}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::DDRec::VolConeImpl::distance (const {\bf Vector3D} \& {\em point}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_a28c958945f374cc59491e7ac4850bbde}
+Distance to surface 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_vol_surface_base_afb85bf6e8e6b87fb52e67e26609b1048}{DD4hep::DDRec::VolSurfaceBase}.
+
+Definition at line 422 of file Surface.cpp.
+
+References \_\-tanTheta, DD4hep::DDRec::VolSurfaceBase::\_\-v, \_\-ztip, DDSurfaces::Vector3D::rho(), DDSurfaces::Vector3D::theta(), and DDSurfaces::Vector3D::z().\hypertarget{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_ae644bf91eb0b033f16ac4d89d00dd080}{
+\index{DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}!getLines@{getLines}}
+\index{getLines@{getLines}!DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}}
+\subsubsection[{getLines}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$ std::pair$<$ {\bf DDSurfaces::Vector3D}, {\bf DDSurfaces::Vector3D} $>$ $>$ DD4hep::DDRec::VolConeImpl::getLines (unsigned {\em nMax} = {\ttfamily 100})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_ae644bf91eb0b033f16ac4d89d00dd080}
+
+
+create outer bounding lines for the given symmetry of the polyhedron 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_vol_surface_base_ad0863cf8ceb6a443a048fe89cdc79f26}{DD4hep::DDRec::VolSurfaceBase}.
+
+Definition at line 447 of file Surface.cpp.
+
+References DD4hep::DDRec::VolSurfaceBase::length\_\-along\_\-v(), DD4hep::DDRec::VolSurfaceBase::origin(), DDSurfaces::Vector3D::rho(), DDSurfaces::Vector3D::theta(), and v().\hypertarget{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_a427ac9a8bccf658a2161b21d6ae1267f}{
+\index{DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}!globalToLocal@{globalToLocal}}
+\index{globalToLocal@{globalToLocal}!DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}}
+\subsubsection[{globalToLocal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector2D} DD4hep::DDRec::VolConeImpl::globalToLocal (const {\bf Vector3D} \& {\em point}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_a427ac9a8bccf658a2161b21d6ae1267f}
+Convert the global position to the local position (u,v) on the surface -\/ v runs along the axis of the cone, u is r$\ast$phi 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_vol_surface_base_aa5a6ee5edfdab58a13282beaef1331d4}{DD4hep::DDRec::VolSurfaceBase}.
+
+Definition at line 391 of file Surface.cpp.
+
+References \_\-tanTheta, DD4hep::DDRec::VolSurfaceBase::\_\-v, \_\-ztip, M\_\-PI, DD4hep::DDRec::VolSurfaceBase::origin(), DDSurfaces::Vector3D::phi(), DDSurfaces::Vector3D::theta(), and DDSurfaces::Vector3D::z().\hypertarget{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_a1428d72f28ed90522cdaa6bb4d855dce}{
+\index{DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}!localToGlobal@{localToGlobal}}
+\index{localToGlobal@{localToGlobal}!DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}}
+\subsubsection[{localToGlobal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector3D} DD4hep::DDRec::VolConeImpl::localToGlobal (const {\bf Vector2D} \& {\em point}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_a1428d72f28ed90522cdaa6bb4d855dce}
+Convert the local position (u,v) on the surface to the global position -\/ v runs along the axis of the cone, u is r$\ast$phi 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_vol_surface_base_a62f5625f6f620535765193e97990fb1d}{DD4hep::DDRec::VolSurfaceBase}.
+
+Definition at line 406 of file Surface.cpp.
+
+References \_\-tanTheta, DD4hep::DDRec::VolSurfaceBase::\_\-v, \_\-ztip, DDSurfaces::Vector3D::cylindrical(), M\_\-PI, DD4hep::DDRec::VolSurfaceBase::origin(), DDSurfaces::Vector3D::phi(), DDSurfaces::Vector3D::theta(), DDSurfaces::Vector2D::u(), DDSurfaces::Vector2D::v(), and DDSurfaces::Vector3D::z().\hypertarget{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_aea04fc521c39ffc8e97ae3f700533e7a}{
+\index{DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}!normal@{normal}}
+\index{normal@{normal}!DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}}
+\subsubsection[{normal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector3D} DD4hep::DDRec::VolConeImpl::normal (const {\bf Vector3D} \& {\em point} = {\ttfamily {\bf Vector3D}()}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_aea04fc521c39ffc8e97ae3f700533e7a}
+The normal direction at the given point, projected onto the cone. No check is done whether the point actually is on the cone surface 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_vol_surface_base_a0689bccd5a024798609f3ce1b39c7d61}{DD4hep::DDRec::VolSurfaceBase}.
+
+Definition at line 385 of file Surface.cpp.
+
+References DD4hep::DDRec::VolSurfaceBase::\_\-n, DDSurfaces::Vector3D::phi(), DDSurfaces::Vector3D::spherical(), and DDSurfaces::Vector3D::theta().
+
+Referenced by u().\hypertarget{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_ae3f99967ddeb67c1ad76414cea068395}{
+\index{DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}!u@{u}}
+\index{u@{u}!DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}}
+\subsubsection[{u}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector3D} DD4hep::DDRec::VolConeImpl::u (const {\bf Vector3D} \& {\em point} = {\ttfamily {\bf Vector3D}()}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_ae3f99967ddeb67c1ad76414cea068395}
+First direction of measurement U -\/ rotated to point projected onto the cone. No check is done whether the point actually is on the cone surface 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_vol_surface_base_a6b72381e54cf0c94ab56db4bdbc8b4a4}{DD4hep::DDRec::VolSurfaceBase}.
+
+Definition at line 378 of file Surface.cpp.
+
+References DDSurfaces::Vector3D::cross(), normal(), and v().\hypertarget{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_a305c9b455b4e958dbb511f9136ecaf8b}{
+\index{DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}!v@{v}}
+\index{v@{v}!DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}}
+\subsubsection[{v}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector3D} DD4hep::DDRec::VolConeImpl::v (const {\bf Vector3D} \& {\em point} = {\ttfamily {\bf Vector3D}()}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_a305c9b455b4e958dbb511f9136ecaf8b}
+Second direction of measurement V -\/ rotated to point projected onto the cone. No check is done whether the point actually is on the cone surface 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_vol_surface_base_a0dd53eec9381d83d0632329223d0b24b}{DD4hep::DDRec::VolSurfaceBase}.
+
+Definition at line 372 of file Surface.cpp.
+
+References DD4hep::DDRec::VolSurfaceBase::\_\-v, DDSurfaces::Vector3D::phi(), DDSurfaces::Vector3D::spherical(), and DDSurfaces::Vector3D::theta().
+
+Referenced by getLines(), and u().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_a5f020df8481dcc088af7a02632f03ae2}{
+\index{DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}!\_\-tanTheta@{\_\-tanTheta}}
+\index{\_\-tanTheta@{\_\-tanTheta}!DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}}
+\subsubsection[{\_\-tanTheta}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::DDRec::VolConeImpl::\_\-tanTheta}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_a5f020df8481dcc088af7a02632f03ae2}
+
+
+Definition at line 420 of file Surface.h.
+
+Referenced by distance(), globalToLocal(), localToGlobal(), and VolConeImpl().\hypertarget{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_ad204cc67411301eaa8f135430392a55c}{
+\index{DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}!\_\-zt0@{\_\-zt0}}
+\index{\_\-zt0@{\_\-zt0}!DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}}
+\subsubsection[{\_\-zt0}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::DDRec::VolConeImpl::\_\-zt0}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_ad204cc67411301eaa8f135430392a55c}
+
+
+Definition at line 418 of file Surface.h.
+
+Referenced by VolConeImpl().\hypertarget{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_aa9466fe65e7238bf90ec604132ea1825}{
+\index{DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}!\_\-zt1@{\_\-zt1}}
+\index{\_\-zt1@{\_\-zt1}!DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}}
+\subsubsection[{\_\-zt1}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::DDRec::VolConeImpl::\_\-zt1}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_aa9466fe65e7238bf90ec604132ea1825}
+
+
+Definition at line 419 of file Surface.h.
+
+Referenced by VolConeImpl().\hypertarget{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_ae42d0cc1db6c972c012f3177cdeb935b}{
+\index{DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}!\_\-ztip@{\_\-ztip}}
+\index{\_\-ztip@{\_\-ztip}!DD4hep::DDRec::VolConeImpl@{DD4hep::DDRec::VolConeImpl}}
+\subsubsection[{\_\-ztip}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::DDRec::VolConeImpl::\_\-ztip}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_rec_1_1_vol_cone_impl_ae42d0cc1db6c972c012f3177cdeb935b}
+
+
+Definition at line 417 of file Surface.h.
+
+Referenced by distance(), globalToLocal(), localToGlobal(), and VolConeImpl().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDRec/include/DDRec/\hyperlink{_surface_8h}{Surface.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDRec/src/\hyperlink{_surface_8cpp}{Surface.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,69 @@
+\hypertarget{_geant4_x_m_l_setup_8cpp}{
+\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/plugins/Geant4XMLSetup.cpp File Reference}
+\label{_geant4_x_m_l_setup_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/plugins/Geant4XMLSetup.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/plugins/Geant4XMLSetup.cpp}}
+}
+{\ttfamily \#include \char`\"{}DD4hep/LCDD.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/Printout.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/DetFactoryHelper.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}XML/Conversions.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DDG4/Geant4Config.h\char`\"{}}\par
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_d_d4hep}{DD4hep}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the AIDA detector description toolkit. \item\end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_d_d4hep_1_1_simulation}{DD4hep::Simulation}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the Geant4 based simulation part of the AIDA detector description toolkit. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{DD4hep::Geometry::LCDD} \hyperlink{namespace_d_d4hep_a9d7154801ec259f2a1d2fe015d140518}{DD4hep::lcdd\_\-t}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DD4hep::Geometry::DetElement} \hyperlink{namespace_d_d4hep_a21dd977310ff183f61ca6ae14b59a989}{DD4hep::DetElement}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_sensitive_detector}{DD4hep::Geometry::SensitiveDetector} \hyperlink{namespace_d_d4hep_ae77e9f3818be8d649b030c537e235efe}{DD4hep::SensitiveDetector}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{namespace_d_d4hep_1_1_simulation_a7044a2f84ec3bb994bc7c463af616413ad801f9ee058c72ec83f38391123a439d}{DD4hep::Simulation::SENSITIVE}, 
+\hyperlink{namespace_d_d4hep_1_1_simulation_a7044a2f84ec3bb994bc7c463af616413a6a26b32a879462c9c6abfc1755107d9e}{DD4hep::Simulation::ACTION}, 
+\hyperlink{namespace_d_d4hep_1_1_simulation_a7044a2f84ec3bb994bc7c463af616413ac514087387793eecff0f2013972e265b}{DD4hep::Simulation::FILTER}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename TYPE , typename PTR $>$ }\\TYPE $\ast$ \hyperlink{namespace_d_d4hep_1_1_simulation_a48f76eb1067558c924d3417d40fbb060}{DD4hep::Simulation::\_\-action} (PTR $\ast$in)
+\begin{DoxyCompactList}\small\item\em Action cast. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static void \hyperlink{namespace_d_d4hep_1_1_simulation_a5ab8883ec8f501df46dbeb15623d1366}{DD4hep::Simulation::installMessenger} (const \hyperlink{class_t}{T} \&handle)
+\begin{DoxyCompactList}\small\item\em Install Geant4 mesenger to action objects. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static void \hyperlink{namespace_d_d4hep_1_1_simulation_a4648602c0b9b77f5aae1a35a5c086e39}{DD4hep::Simulation::\_\-setAttributes} (const \hyperlink{class_t}{T} \&handle, \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_handle__t}{xml\_\-h} \&e)
+\begin{DoxyCompactList}\small\item\em Set the properties of a Geant4 Action object from \hyperlink{namespace_d_d4hep_1_1_x_m_l}{XML} object attributes. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static void \hyperlink{namespace_d_d4hep_1_1_simulation_acd230c573ec36269957f6c861ac27b50}{DD4hep::Simulation::\_\-setProperties} (const \hyperlink{class_t}{T} \&handle, \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_handle__t}{xml\_\-h} \&e)
+\begin{DoxyCompactList}\small\item\em Set the properties of a Geant4 Action object from $<$properties/$>$ \hyperlink{namespace_d_d4hep_1_1_x_m_l}{XML} subsection. \item\end{DoxyCompactList}\item 
+static Action \hyperlink{namespace_d_d4hep_1_1_simulation_ad1e0a4ddeeaccc10df73eaae26c7706b}{DD4hep::Simulation::\_\-convertSensitive} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{lcdd\_\-t} \&lcdd, \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_handle__t}{xml\_\-h} e, const string \&detector)
+\begin{DoxyCompactList}\small\item\em Create/Configure Geant4 sensitive action object from \hyperlink{namespace_d_d4hep_1_1_x_m_l}{XML}. \item\end{DoxyCompactList}\item 
+static Action \hyperlink{namespace_d_d4hep_1_1_simulation_a4a3e1d80b410fdc413e130d69c311891}{DD4hep::Simulation::\_\-convertAction} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{lcdd\_\-t} \&lcdd, \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_handle__t}{xml\_\-h} e)
+\begin{DoxyCompactList}\small\item\em Create/Configure Action object from \hyperlink{namespace_d_d4hep_1_1_x_m_l}{XML}. \item\end{DoxyCompactList}\item 
+Action \hyperlink{namespace_d_d4hep_1_1_simulation_a21f9fcaa27a71abd2beeabcba2600bda}{DD4hep::Simulation::\_\-createAction} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{lcdd\_\-t} \&lcdd, \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_handle__t}{xml\_\-h} a, const string \&seqType, int what)
+\begin{DoxyCompactList}\small\item\em Create/Configure Action object from \hyperlink{namespace_d_d4hep_1_1_x_m_l}{XML}. \item\end{DoxyCompactList}\item 
+static long \hyperlink{_geant4_x_m_l_setup_8cpp_aaaf4599f367c9df75f39b38df728ad5d}{setup\_\-Geant4} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{lcdd\_\-t} \&lcdd, const \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_handle__t}{xml\_\-h} \&element)
+\begin{DoxyCompactList}\small\item\em Factory method. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_geant4_x_m_l_setup_8cpp_aaaf4599f367c9df75f39b38df728ad5d}{
+\index{Geant4XMLSetup.cpp@{Geant4XMLSetup.cpp}!setup\_\-Geant4@{setup\_\-Geant4}}
+\index{setup\_\-Geant4@{setup\_\-Geant4}!Geant4XMLSetup.cpp@{Geant4XMLSetup.cpp}}
+\subsubsection[{setup\_\-Geant4}]{\setlength{\rightskip}{0pt plus 5cm}static long setup\_\-Geant4 ({\bf lcdd\_\-t} \& {\em lcdd}, \/  const {\bf xml\_\-h} \& {\em element})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{_geant4_x_m_l_setup_8cpp_aaaf4599f367c9df75f39b38df728ad5d}
+
+
+Factory method. 
+
+Definition at line 496 of file Geant4XMLSetup.cpp.

@@ -1,0 +1,212 @@
+\hypertarget{_x_m_l_elements_8cpp}{
+\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/XML/XMLElements.cpp File Reference}
+\label{_x_m_l_elements_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/XML/XMLElements.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/XML/XMLElements.cpp}}
+}
+{\ttfamily \#include \char`\"{}DD4hep/Printout.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}XML/Evaluator.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}XML/XMLElements.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}XML/XMLTags.h\char`\"{}}\par
+{\ttfamily \#include $<$iostream$>$}\par
+{\ttfamily \#include $<$stdexcept$>$}\par
+{\ttfamily \#include $<$cstdio$>$}\par
+{\ttfamily \#include $<$map$>$}\par
+{\ttfamily \#include \char`\"{}xercesc/util/XMLString.hpp\char`\"{}}\par
+{\ttfamily \#include \char`\"{}xercesc/dom/DOMElement.hpp\char`\"{}}\par
+{\ttfamily \#include \char`\"{}xercesc/dom/DOMDocument.hpp\char`\"{}}\par
+{\ttfamily \#include \char`\"{}xercesc/dom/DOMNodeList.hpp\char`\"{}}\par
+{\ttfamily \#include \char`\"{}xercesc/dom/DOM.hpp\char`\"{}}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{union_xml}{Xml}
+\begin{DoxyCompactList}\small\item\em Union to ease castless object access when using XercesC. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_d_d4hep}{DD4hep}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the AIDA detector description toolkit. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_x_m_l_elements_8cpp_aeabcf9fa78b36f72cdafc2fdbab61482}{\_\-D}(x)~\hyperlink{union_xml}{Xml}(x).d
+\item 
+\#define \hyperlink{_x_m_l_elements_8cpp_aadc18c9ee01d55f84c6bcd5841d0e4fd}{\_\-E}(x)~\hyperlink{union_xml}{Xml}(x).e
+\item 
+\#define \hyperlink{_x_m_l_elements_8cpp_a0fb7d99a5757389b76ca7d5957321d5f}{\_\-N}(x)~\hyperlink{union_xml}{Xml}(x).n
+\item 
+\#define \hyperlink{_x_m_l_elements_8cpp_a8b08a24569840250e78cb8d510f1324a}{\_\-L}(x)~\hyperlink{union_xml}{Xml}(x).l
+\item 
+\#define \hyperlink{_x_m_l_elements_8cpp_a8d4642858a65be389cb08c1cc5a54a5e}{\_\-XE}(x)~\hyperlink{union_xml}{Xml}(x).xe
+\item 
+\#define \hyperlink{_x_m_l_elements_8cpp_a36314e7c95c74ab48e68f2c751e50141}{ELEMENT\_\-NODE\_\-TYPE}~xercesc::DOMNode::ELEMENT\_\-NODE
+\item 
+\#define \hyperlink{_x_m_l_elements_8cpp_a465ff70ce96dfc2e84b0e87548b4ecb4}{DO1}(buf, i)~\{s1 +=(unsigned char)buf\mbox{[}i\mbox{]}; s2 += s1;\}
+\item 
+\#define \hyperlink{_x_m_l_elements_8cpp_a3d7044f8ea7e75164fe5108048fd87eb}{DO2}(buf, i)~DO1(buf,i); DO1(buf,i+1);
+\item 
+\#define \hyperlink{_x_m_l_elements_8cpp_aef9bafc8b3d89e98b6e26320f99b9e31}{DO4}(buf, i)~DO2(buf,i); DO2(buf,i+2);
+\item 
+\#define \hyperlink{_x_m_l_elements_8cpp_a9aafc447614bf5c4dc0d484aba9edb89}{DO8}(buf, i)~DO4(buf,i); DO4(buf,i+4);
+\item 
+\#define \hyperlink{_x_m_l_elements_8cpp_a6912c3e78e2b797f42f214d1b508aa0c}{DO16}(buf)~DO8(buf,0); DO8(buf,8);
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned int( \hyperlink{_x_m_l_elements_8cpp_abf29e80f8a7f77455b6191c2d7fbaab8}{fcn\_\-t} )(unsigned int, const XmlChar $\ast$, size\_\-t)
+\begin{DoxyCompactList}\small\item\em Checksum (sub-\/)tree of a xml document/tree. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_xml_tools_1_1_evaluator}{XmlTools::Evaluator} \& \hyperlink{namespace_d_d4hep_a5a6983dcc5d95a8aad6910ad842f0b6e}{DD4hep::evaluator} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \hyperlink{classstd_1_1string}{string} \hyperlink{_x_m_l_elements_8cpp_a53a0b19768c70cba31ff4df2ceba9850}{\_\-\_\-to\_\-string} (\hyperlink{class_t}{T} value, const char $\ast$fmt)
+\item 
+{\footnotesize template$<$typename B $>$ }\\static \hyperlink{classstd_1_1string}{string} \hyperlink{_x_m_l_elements_8cpp_a338dd24e49ca5226b3968d097cbf0f26}{i\_\-add} (const \hyperlink{classstd_1_1string}{string} \&a, B b)
+\item 
+static unsigned int \hyperlink{_x_m_l_elements_8cpp_a880a7876bf739e9543f948db59d5c6c1}{adler32} (unsigned int adler, const XmlChar $\ast$xml\_\-buff, size\_\-t len)
+\begin{DoxyCompactList}\small\item\em Checksum (sub-\/)tree of a xml document/tree. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const size\_\-t \hyperlink{_x_m_l_elements_8cpp_a3b2b44ee9aa32f69647a1dbfae5ac6e0}{INVALID\_\-NODE} = $\sim$0U
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_x_m_l_elements_8cpp_aeabcf9fa78b36f72cdafc2fdbab61482}{
+\index{XMLElements.cpp@{XMLElements.cpp}!\_\-D@{\_\-D}}
+\index{\_\-D@{\_\-D}!XMLElements.cpp@{XMLElements.cpp}}
+\subsubsection[{\_\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-D(x)~{\bf Xml}(x).d}}
+\label{_x_m_l_elements_8cpp_aeabcf9fa78b36f72cdafc2fdbab61482}
+
+
+Definition at line 45 of file XMLElements.cpp.
+
+Referenced by DD4hep::XML::Element::addComment(), DD4hep::XML::DocumentHolder::assign(), DD4hep::XML::Document::clone(), DD4hep::XML::Handle\_\-t::clone(), DD4hep::XML::Document::createElt(), DD4hep::XML::Document::root(), and DD4hep::XML::Document::uri().\hypertarget{_x_m_l_elements_8cpp_aadc18c9ee01d55f84c6bcd5841d0e4fd}{
+\index{XMLElements.cpp@{XMLElements.cpp}!\_\-E@{\_\-E}}
+\index{\_\-E@{\_\-E}!XMLElements.cpp@{XMLElements.cpp}}
+\subsubsection[{\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-E(x)~{\bf Xml}(x).e}}
+\label{_x_m_l_elements_8cpp_aadc18c9ee01d55f84c6bcd5841d0e4fd}
+
+
+Definition at line 46 of file XMLElements.cpp.
+
+Referenced by DD4hep::XML::Handle\_\-t::attributes(), DD4hep::XML::Document::clone(), DD4hep::XML::Handle\_\-t::clone(), DD4hep::Conditions::Operators::collectAllConditions(), DD4hep::Conditions::Test::TestEnv::dump\_\-conditions\_\-pools(), DD4hep::XML::Handle\_\-t::hasAttr(), DD4hep::XML::NodeList::next(), DD4hep::XML::NodeList::previous(), DD4hep::Conditions::ConditionsManagerObject::pushUpdates(), DD4hep::XML::Handle\_\-t::rawTag(), DD4hep::XML::Handle\_\-t::rawText(), DD4hep::XML::Handle\_\-t::removeAttrs(), DD4hep::XML::Handle\_\-t::removeChildren(), DD4hep::XML::Handle\_\-t::setAttr(), and DD4hep::XML::Handle\_\-t::setAttrs().\hypertarget{_x_m_l_elements_8cpp_a8b08a24569840250e78cb8d510f1324a}{
+\index{XMLElements.cpp@{XMLElements.cpp}!\_\-L@{\_\-L}}
+\index{\_\-L@{\_\-L}!XMLElements.cpp@{XMLElements.cpp}}
+\subsubsection[{\_\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-L(x)~{\bf Xml}(x).l}}
+\label{_x_m_l_elements_8cpp_a8b08a24569840250e78cb8d510f1324a}
+
+
+Definition at line 48 of file XMLElements.cpp.\hypertarget{_x_m_l_elements_8cpp_a0fb7d99a5757389b76ca7d5957321d5f}{
+\index{XMLElements.cpp@{XMLElements.cpp}!\_\-N@{\_\-N}}
+\index{\_\-N@{\_\-N}!XMLElements.cpp@{XMLElements.cpp}}
+\subsubsection[{\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-N(x)~{\bf Xml}(x).n}}
+\label{_x_m_l_elements_8cpp_a0fb7d99a5757389b76ca7d5957321d5f}
+
+
+Definition at line 47 of file XMLElements.cpp.
+
+Referenced by DD4hep::XML::Element::addComment(), DD4hep::XML::Handle\_\-t::append(), DD4hep::XML::Handle\_\-t::clone(), DD4hep::XML::Element::document(), DD4hep::XML::Collection\_\-t::operator++(), DD4hep::XML::Collection\_\-t::operator-\/-\/(), DD4hep::XML::Handle\_\-t::parent(), DD4hep::XML::Element::parentElement(), DD4hep::XML::Handle\_\-t::rawValue(), DD4hep::XML::Handle\_\-t::remove(), DD4hep::XML::Handle\_\-t::setText(), and DD4hep::XML::Handle\_\-t::setValue().\hypertarget{_x_m_l_elements_8cpp_a8d4642858a65be389cb08c1cc5a54a5e}{
+\index{XMLElements.cpp@{XMLElements.cpp}!\_\-XE@{\_\-XE}}
+\index{\_\-XE@{\_\-XE}!XMLElements.cpp@{XMLElements.cpp}}
+\subsubsection[{\_\-XE}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-XE(x)~{\bf Xml}(x).xe}}
+\label{_x_m_l_elements_8cpp_a8d4642858a65be389cb08c1cc5a54a5e}
+
+
+Definition at line 49 of file XMLElements.cpp.
+
+Referenced by DD4hep::XML::Document::clone(), DD4hep::XML::Handle\_\-t::clone(), DD4hep::XML::Document::createElt(), DD4hep::XML::NodeList::next(), DD4hep::XML::NodeList::previous(), and DD4hep::XML::Document::root().\hypertarget{_x_m_l_elements_8cpp_a465ff70ce96dfc2e84b0e87548b4ecb4}{
+\index{XMLElements.cpp@{XMLElements.cpp}!DO1@{DO1}}
+\index{DO1@{DO1}!XMLElements.cpp@{XMLElements.cpp}}
+\subsubsection[{DO1}]{\setlength{\rightskip}{0pt plus 5cm}\#define DO1(buf, \/  i)~\{s1 +=(unsigned char)buf\mbox{[}i\mbox{]}; s2 += s1;\}}}
+\label{_x_m_l_elements_8cpp_a465ff70ce96dfc2e84b0e87548b4ecb4}
+\hypertarget{_x_m_l_elements_8cpp_a6912c3e78e2b797f42f214d1b508aa0c}{
+\index{XMLElements.cpp@{XMLElements.cpp}!DO16@{DO16}}
+\index{DO16@{DO16}!XMLElements.cpp@{XMLElements.cpp}}
+\subsubsection[{DO16}]{\setlength{\rightskip}{0pt plus 5cm}\#define DO16(buf)~DO8(buf,0); DO8(buf,8);}}
+\label{_x_m_l_elements_8cpp_a6912c3e78e2b797f42f214d1b508aa0c}
+
+
+Referenced by adler32().\hypertarget{_x_m_l_elements_8cpp_a3d7044f8ea7e75164fe5108048fd87eb}{
+\index{XMLElements.cpp@{XMLElements.cpp}!DO2@{DO2}}
+\index{DO2@{DO2}!XMLElements.cpp@{XMLElements.cpp}}
+\subsubsection[{DO2}]{\setlength{\rightskip}{0pt plus 5cm}\#define DO2(buf, \/  i)~DO1(buf,i); DO1(buf,i+1);}}
+\label{_x_m_l_elements_8cpp_a3d7044f8ea7e75164fe5108048fd87eb}
+\hypertarget{_x_m_l_elements_8cpp_aef9bafc8b3d89e98b6e26320f99b9e31}{
+\index{XMLElements.cpp@{XMLElements.cpp}!DO4@{DO4}}
+\index{DO4@{DO4}!XMLElements.cpp@{XMLElements.cpp}}
+\subsubsection[{DO4}]{\setlength{\rightskip}{0pt plus 5cm}\#define DO4(buf, \/  i)~DO2(buf,i); DO2(buf,i+2);}}
+\label{_x_m_l_elements_8cpp_aef9bafc8b3d89e98b6e26320f99b9e31}
+\hypertarget{_x_m_l_elements_8cpp_a9aafc447614bf5c4dc0d484aba9edb89}{
+\index{XMLElements.cpp@{XMLElements.cpp}!DO8@{DO8}}
+\index{DO8@{DO8}!XMLElements.cpp@{XMLElements.cpp}}
+\subsubsection[{DO8}]{\setlength{\rightskip}{0pt plus 5cm}\#define DO8(buf, \/  i)~DO4(buf,i); DO4(buf,i+4);}}
+\label{_x_m_l_elements_8cpp_a9aafc447614bf5c4dc0d484aba9edb89}
+\hypertarget{_x_m_l_elements_8cpp_a36314e7c95c74ab48e68f2c751e50141}{
+\index{XMLElements.cpp@{XMLElements.cpp}!ELEMENT\_\-NODE\_\-TYPE@{ELEMENT\_\-NODE\_\-TYPE}}
+\index{ELEMENT\_\-NODE\_\-TYPE@{ELEMENT\_\-NODE\_\-TYPE}!XMLElements.cpp@{XMLElements.cpp}}
+\subsubsection[{ELEMENT\_\-NODE\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}\#define ELEMENT\_\-NODE\_\-TYPE~xercesc::DOMNode::ELEMENT\_\-NODE}}
+\label{_x_m_l_elements_8cpp_a36314e7c95c74ab48e68f2c751e50141}
+
+
+Definition at line 112 of file XMLElements.cpp.
+
+Referenced by DD4hep::XML::Handle\_\-t::clone(), DD4hep::XML::Collection\_\-t::operator++(), DD4hep::XML::Collection\_\-t::operator-\/-\/(), and DD4hep::XML::Element::parentElement().
+
+\subsection{Typedef Documentation}
+\hypertarget{_x_m_l_elements_8cpp_abf29e80f8a7f77455b6191c2d7fbaab8}{
+\index{XMLElements.cpp@{XMLElements.cpp}!fcn\_\-t@{fcn\_\-t}}
+\index{fcn\_\-t@{fcn\_\-t}!XMLElements.cpp@{XMLElements.cpp}}
+\subsubsection[{fcn\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int( {\bf fcn\_\-t})(unsigned int, const XmlChar $\ast$, size\_\-t)}}
+\label{_x_m_l_elements_8cpp_abf29e80f8a7f77455b6191c2d7fbaab8}
+
+
+Checksum (sub-\/)tree of a xml document/tree. 
+
+Definition at line 981 of file XMLElements.cpp.
+
+\subsection{Function Documentation}
+\hypertarget{_x_m_l_elements_8cpp_a53a0b19768c70cba31ff4df2ceba9850}{
+\index{XMLElements.cpp@{XMLElements.cpp}!\_\-\_\-to\_\-string@{\_\-\_\-to\_\-string}}
+\index{\_\-\_\-to\_\-string@{\_\-\_\-to\_\-string}!XMLElements.cpp@{XMLElements.cpp}}
+\subsubsection[{\_\-\_\-to\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ static {\bf string} \_\-\_\-to\_\-string ({\bf T} {\em value}, \/  const char $\ast$ {\em fmt})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{_x_m_l_elements_8cpp_a53a0b19768c70cba31ff4df2ceba9850}
+
+
+Definition at line 215 of file XMLElements.cpp.
+
+Referenced by DD4hep::XML::\_\-ptrToString(), and DD4hep::XML::\_\-toString().\hypertarget{_x_m_l_elements_8cpp_a880a7876bf739e9543f948db59d5c6c1}{
+\index{XMLElements.cpp@{XMLElements.cpp}!adler32@{adler32}}
+\index{adler32@{adler32}!XMLElements.cpp@{XMLElements.cpp}}
+\subsubsection[{adler32}]{\setlength{\rightskip}{0pt plus 5cm}static unsigned int adler32 (unsigned int {\em adler}, \/  const XmlChar $\ast$ {\em xml\_\-buff}, \/  size\_\-t {\em len})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{_x_m_l_elements_8cpp_a880a7876bf739e9543f948db59d5c6c1}
+
+
+Checksum (sub-\/)tree of a xml document/tree. 
+
+Definition at line 943 of file XMLElements.cpp.
+
+References DO16.\hypertarget{_x_m_l_elements_8cpp_a338dd24e49ca5226b3968d097cbf0f26}{
+\index{XMLElements.cpp@{XMLElements.cpp}!i\_\-add@{i\_\-add}}
+\index{i\_\-add@{i\_\-add}!XMLElements.cpp@{XMLElements.cpp}}
+\subsubsection[{i\_\-add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename B $>$ static {\bf string} i\_\-add (const {\bf string} \& {\em a}, \/  B {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{_x_m_l_elements_8cpp_a338dd24e49ca5226b3968d097cbf0f26}
+
+
+Definition at line 407 of file XMLElements.cpp.
+
+\subsection{Variable Documentation}
+\hypertarget{_x_m_l_elements_8cpp_a3b2b44ee9aa32f69647a1dbfae5ac6e0}{
+\index{XMLElements.cpp@{XMLElements.cpp}!INVALID\_\-NODE@{INVALID\_\-NODE}}
+\index{INVALID\_\-NODE@{INVALID\_\-NODE}!XMLElements.cpp@{XMLElements.cpp}}
+\subsubsection[{INVALID\_\-NODE}]{\setlength{\rightskip}{0pt plus 5cm}const size\_\-t {\bf INVALID\_\-NODE} = $\sim$0U\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{_x_m_l_elements_8cpp_a3b2b44ee9aa32f69647a1dbfae5ac6e0}
+
+
+Definition at line 29 of file XMLElements.cpp.
+
+Referenced by DD4hep::XML::Handle\_\-t::numChildren().

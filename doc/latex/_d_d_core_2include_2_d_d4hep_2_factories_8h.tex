@@ -1,0 +1,319 @@
+\hypertarget{_d_d_core_2include_2_d_d4hep_2_factories_8h}{
+\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/Factories.h File Reference}
+\label{_d_d_core_2include_2_d_d4hep_2_factories_8h}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/Factories.h@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/Factories.h}}
+}
+{\ttfamily \#include \char`\"{}DD4hep/Plugins.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/Detector.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/NamedObject.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}XML/XMLElements.h\char`\"{}}\par
+{\ttfamily \#include $<$cstdarg$>$}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_d_d4hep_1_1_construction_factory}{DD4hep::ConstructionFactory$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Template class with a generic constructor signature. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_l_c_d_d_construction_factory}{DD4hep::LCDDConstructionFactory$<$ T $>$}
+\item 
+class \hyperlink{class_d_d4hep_1_1_segmentation_factory}{DD4hep::SegmentationFactory$<$ T $>$}
+\item 
+class \hyperlink{class_d_d4hep_1_1_apply_factory}{DD4hep::ApplyFactory$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Template class with a generic signature to apply LCDD plugins. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_translation_factory}{DD4hep::TranslationFactory$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Specialized factory to translate objects, which can be retrieved from LCDD. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_x_m_l_element_factory}{DD4hep::XMLElementFactory$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Create an arbitrary object from it's \hyperlink{namespace_d_d4hep_1_1_x_m_l}{XML} representation. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_x_m_l_document_reader_factory}{DD4hep::XMLDocumentReaderFactory$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Read an arbitrary \hyperlink{namespace_d_d4hep_1_1_x_m_l}{XML} document and analyze it's content. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_x_m_l_conversion_factory}{DD4hep::XMLConversionFactory$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Read an arbitrary \hyperlink{namespace_d_d4hep_1_1_x_m_l}{XML} document and analyze it's content. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_det_element_factory}{DD4hep::DetElementFactory$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Standard factory to create Detector elements from the compact \hyperlink{namespace_d_d4hep_1_1_x_m_l}{XML} representation. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_d_d4hep}{DD4hep}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the AIDA detector description toolkit. \item\end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_d_d4hep_1_1_x_m_l}{DD4hep::XML}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace containing utilities to parse \hyperlink{namespace_d_d4hep_1_1_x_m_l}{XML} files using XercesC or TinyXML. \item\end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation}{DD4hep::DDSegmentation}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for base segmentations. \item\end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_d_d4hep_1_1_geometry}{DD4hep::Geometry}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the geometry part of the AIDA detector description toolkit. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2_factories_8h_a4883e3d7a159f1104128db873b662d37}{DECLARE\_\-DETELEMENT\_\-FACTORY}(x)
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2_factories_8h_aaef476f41622e068225d311b2f675b94}{DECLARE\_\-NAMESPACE\_\-DETELEMENT\_\-FACTORY}(n, x)
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2_factories_8h_a42403a1c9b75def1ad6ef3fa6fc60880}{DECLARE\_\-NAMED\_\-APPLY\_\-FACTORY}(n, x)
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2_factories_8h_ac1221db9b81f61d83b5541bd944d56bb}{DECLARE\_\-NAMED\_\-TRANSLATION\_\-FACTORY}(n, x)
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2_factories_8h_a799f2f6e2239548c948a1a9184978b1f}{DECLARE\_\-NAMED\_\-XMLELEMENT\_\-FACTORY}(n, x)
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2_factories_8h_a921e26a796cb7062784c822381b4524d}{DECLARE\_\-NAMED\_\-DETELEMENT\_\-FACTORY}(n, x)
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2_factories_8h_ab3eda81b541fe327f5d354bf0bf90e3a}{DECLARE\_\-SEGMENTATION}(name, func)
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2_factories_8h_a86629a39e692852a6179831885330413}{DECLARE\_\-APPLY}(name, func)
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2_factories_8h_a9e05a578534ccda5e646406cbdfbe30d}{DECLARE\_\-CONSTRUCTOR}(name, func)
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2_factories_8h_ab845c0940f3b1e4aa554d5e2aa0d3157}{DECLARE\_\-LCDD\_\-CONSTRUCTOR}(name, func)
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2_factories_8h_ac0e310b643825b88132ffb66de2006af}{DECLARE\_\-TRANSLATION}(name, func)
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2_factories_8h_a9672277bc76a8555d58f91255098b8ca}{DECLARE\_\-XMLELEMENT}(name, func)
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2_factories_8h_a01eaf216b63db397e82bd7dcf9b899bf}{DECLARE\_\-XML\_\-DOC\_\-READER}(name, func)
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2_factories_8h_ab427245af72731af3a3a02de21f7e75d}{DECLARE\_\-XML\_\-PROCESSOR\_\-BASIC}(name, func, deprecated)
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2_factories_8h_a405d1847803b1af1228b5659d736aa6d}{DECLARE\_\-XML\_\-PROCESSOR}(name, func)~DECLARE\_\-XML\_\-PROCESSOR\_\-BASIC(name,func,0)
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2_factories_8h_aa83d436ba2a188efec5cd9cbfc78dece}{DECLARE\_\-SUBDETECTOR}(name, func)~DECLARE\_\-XML\_\-PROCESSOR\_\-BASIC(name,func,0)
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2_factories_8h_ab4878f7f574a3fbef4724a0d915daf50}{DECLARE\_\-DETELEMENT}(name, func)~DECLARE\_\-XML\_\-PROCESSOR\_\-BASIC(name,func,0)
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2_factories_8h_a091b7a5ecd0fd0e1b0f31a483c5dc808}{DECLARE\_\-DEPRECATED\_\-DETELEMENT}(name, func)~DECLARE\_\-XML\_\-PROCESSOR\_\-BASIC(name,func,1)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_d_d_core_2include_2_d_d4hep_2_factories_8h_a86629a39e692852a6179831885330413}{
+\index{DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}!DECLARE\_\-APPLY@{DECLARE\_\-APPLY}}
+\index{DECLARE\_\-APPLY@{DECLARE\_\-APPLY}!DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}}
+\subsubsection[{DECLARE\_\-APPLY}]{\setlength{\rightskip}{0pt plus 5cm}\#define DECLARE\_\-APPLY(name, \/  func)}}
+\label{_d_d_core_2include_2_d_d4hep_2_factories_8h_a86629a39e692852a6179831885330413}
+{\bfseries Value:}
+\begin{DoxyCode}
+DD4HEP_OPEN_PLUGIN(DD4hep,name)   { \
+    template <> long ApplyFactory<name>::create(Geometry::LCDD& l,int n,char** a)
+       {return func(l,n,a);} \
+    DD4HEP_PLUGINSVC_FACTORY(name,name,long(Geometry::LCDD*,int,char**),__LINE__)
+      }
+\end{DoxyCode}
+
+
+Definition at line 211 of file Factories.h.\hypertarget{_d_d_core_2include_2_d_d4hep_2_factories_8h_a9e05a578534ccda5e646406cbdfbe30d}{
+\index{DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}!DECLARE\_\-CONSTRUCTOR@{DECLARE\_\-CONSTRUCTOR}}
+\index{DECLARE\_\-CONSTRUCTOR@{DECLARE\_\-CONSTRUCTOR}!DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}}
+\subsubsection[{DECLARE\_\-CONSTRUCTOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DECLARE\_\-CONSTRUCTOR(name, \/  func)}}
+\label{_d_d_core_2include_2_d_d4hep_2_factories_8h_a9e05a578534ccda5e646406cbdfbe30d}
+{\bfseries Value:}
+\begin{DoxyCode}
+DD4HEP_OPEN_PLUGIN(DD4hep,name) { \
+    template <> void* ConstructionFactory<name>::create(const char* n) { return f
+      unc(n);} \
+    DD4HEP_PLUGINSVC_FACTORY(name,name,void*(const char*),__LINE__) }
+\end{DoxyCode}
+
+
+Definition at line 216 of file Factories.h.\hypertarget{_d_d_core_2include_2_d_d4hep_2_factories_8h_a091b7a5ecd0fd0e1b0f31a483c5dc808}{
+\index{DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}!DECLARE\_\-DEPRECATED\_\-DETELEMENT@{DECLARE\_\-DEPRECATED\_\-DETELEMENT}}
+\index{DECLARE\_\-DEPRECATED\_\-DETELEMENT@{DECLARE\_\-DEPRECATED\_\-DETELEMENT}!DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}}
+\subsubsection[{DECLARE\_\-DEPRECATED\_\-DETELEMENT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DECLARE\_\-DEPRECATED\_\-DETELEMENT(name, \/  func)~DECLARE\_\-XML\_\-PROCESSOR\_\-BASIC(name,func,1)}}
+\label{_d_d_core_2include_2_d_d4hep_2_factories_8h_a091b7a5ecd0fd0e1b0f31a483c5dc808}
+
+
+Definition at line 249 of file Factories.h.\hypertarget{_d_d_core_2include_2_d_d4hep_2_factories_8h_ab4878f7f574a3fbef4724a0d915daf50}{
+\index{DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}!DECLARE\_\-DETELEMENT@{DECLARE\_\-DETELEMENT}}
+\index{DECLARE\_\-DETELEMENT@{DECLARE\_\-DETELEMENT}!DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}}
+\subsubsection[{DECLARE\_\-DETELEMENT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DECLARE\_\-DETELEMENT(name, \/  func)~DECLARE\_\-XML\_\-PROCESSOR\_\-BASIC(name,func,0)}}
+\label{_d_d_core_2include_2_d_d4hep_2_factories_8h_ab4878f7f574a3fbef4724a0d915daf50}
+
+
+Definition at line 248 of file Factories.h.\hypertarget{_d_d_core_2include_2_d_d4hep_2_factories_8h_a4883e3d7a159f1104128db873b662d37}{
+\index{DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}!DECLARE\_\-DETELEMENT\_\-FACTORY@{DECLARE\_\-DETELEMENT\_\-FACTORY}}
+\index{DECLARE\_\-DETELEMENT\_\-FACTORY@{DECLARE\_\-DETELEMENT\_\-FACTORY}!DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}}
+\subsubsection[{DECLARE\_\-DETELEMENT\_\-FACTORY}]{\setlength{\rightskip}{0pt plus 5cm}\#define DECLARE\_\-DETELEMENT\_\-FACTORY(x)}}
+\label{_d_d_core_2include_2_d_d4hep_2_factories_8h_a4883e3d7a159f1104128db873b662d37}
+{\bfseries Value:}
+\begin{DoxyCode}
+namespace DD4hep    \
+  { DD4HEP_PLUGINSVC_FACTORY(x,x,DD4hep::NamedObject*(Geometry::LCDD*,XML::Handle
+      _t*,Geometry::Ref_t*),__LINE__) }
+\end{DoxyCode}
+
+
+Definition at line 190 of file Factories.h.\hypertarget{_d_d_core_2include_2_d_d4hep_2_factories_8h_ab845c0940f3b1e4aa554d5e2aa0d3157}{
+\index{DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}!DECLARE\_\-LCDD\_\-CONSTRUCTOR@{DECLARE\_\-LCDD\_\-CONSTRUCTOR}}
+\index{DECLARE\_\-LCDD\_\-CONSTRUCTOR@{DECLARE\_\-LCDD\_\-CONSTRUCTOR}!DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}}
+\subsubsection[{DECLARE\_\-LCDD\_\-CONSTRUCTOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DECLARE\_\-LCDD\_\-CONSTRUCTOR(name, \/  func)}}
+\label{_d_d_core_2include_2_d_d4hep_2_factories_8h_ab845c0940f3b1e4aa554d5e2aa0d3157}
+{\bfseries Value:}
+\begin{DoxyCode}
+DD4HEP_OPEN_PLUGIN(DD4hep,name) { \
+    template <> void* LCDDConstructionFactory<name>::create(Geometry::LCDD& l, in
+      t n,char** a) { return func(l,n,a);} \
+    DD4HEP_PLUGINSVC_FACTORY(name,name,void*(Geometry::LCDD*,int,char**),__LINE__
+      ) }
+\end{DoxyCode}
+
+
+Definition at line 221 of file Factories.h.\hypertarget{_d_d_core_2include_2_d_d4hep_2_factories_8h_a42403a1c9b75def1ad6ef3fa6fc60880}{
+\index{DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}!DECLARE\_\-NAMED\_\-APPLY\_\-FACTORY@{DECLARE\_\-NAMED\_\-APPLY\_\-FACTORY}}
+\index{DECLARE\_\-NAMED\_\-APPLY\_\-FACTORY@{DECLARE\_\-NAMED\_\-APPLY\_\-FACTORY}!DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}}
+\subsubsection[{DECLARE\_\-NAMED\_\-APPLY\_\-FACTORY}]{\setlength{\rightskip}{0pt plus 5cm}\#define DECLARE\_\-NAMED\_\-APPLY\_\-FACTORY(n, \/  x)}}
+\label{_d_d_core_2include_2_d_d4hep_2_factories_8h_a42403a1c9b75def1ad6ef3fa6fc60880}
+{\bfseries Value:}
+\begin{DoxyCode}
+namespace DD4hep    \
+  { DD4HEP_PLUGINSVC_FACTORY(n::x,x,long(Geometry::LCDD*,int, char**),__LINE__) }
+      
+\end{DoxyCode}
+
+
+Definition at line 194 of file Factories.h.\hypertarget{_d_d_core_2include_2_d_d4hep_2_factories_8h_a921e26a796cb7062784c822381b4524d}{
+\index{DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}!DECLARE\_\-NAMED\_\-DETELEMENT\_\-FACTORY@{DECLARE\_\-NAMED\_\-DETELEMENT\_\-FACTORY}}
+\index{DECLARE\_\-NAMED\_\-DETELEMENT\_\-FACTORY@{DECLARE\_\-NAMED\_\-DETELEMENT\_\-FACTORY}!DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}}
+\subsubsection[{DECLARE\_\-NAMED\_\-DETELEMENT\_\-FACTORY}]{\setlength{\rightskip}{0pt plus 5cm}\#define DECLARE\_\-NAMED\_\-DETELEMENT\_\-FACTORY(n, \/  x)}}
+\label{_d_d_core_2include_2_d_d4hep_2_factories_8h_a921e26a796cb7062784c822381b4524d}
+{\bfseries Value:}
+\begin{DoxyCode}
+namespace DD4hep    \
+  { DD4HEP_PLUGINSVC_FACTORY(n::x,x,DD4hep::*(),__LINE__) }
+\end{DoxyCode}
+
+
+Definition at line 200 of file Factories.h.\hypertarget{_d_d_core_2include_2_d_d4hep_2_factories_8h_ac1221db9b81f61d83b5541bd944d56bb}{
+\index{DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}!DECLARE\_\-NAMED\_\-TRANSLATION\_\-FACTORY@{DECLARE\_\-NAMED\_\-TRANSLATION\_\-FACTORY}}
+\index{DECLARE\_\-NAMED\_\-TRANSLATION\_\-FACTORY@{DECLARE\_\-NAMED\_\-TRANSLATION\_\-FACTORY}!DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}}
+\subsubsection[{DECLARE\_\-NAMED\_\-TRANSLATION\_\-FACTORY}]{\setlength{\rightskip}{0pt plus 5cm}\#define DECLARE\_\-NAMED\_\-TRANSLATION\_\-FACTORY(n, \/  x)}}
+\label{_d_d_core_2include_2_d_d4hep_2_factories_8h_ac1221db9b81f61d83b5541bd944d56bb}
+{\bfseries Value:}
+\begin{DoxyCode}
+namespace DD4hep    \
+  { DD4HEP_PLUGINSVC_FACTORY(n::x,x,DD4hep::NamedObject*(Geometry::LCDD*),__LINE_
+      _) }
+\end{DoxyCode}
+
+
+Definition at line 196 of file Factories.h.\hypertarget{_d_d_core_2include_2_d_d4hep_2_factories_8h_a799f2f6e2239548c948a1a9184978b1f}{
+\index{DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}!DECLARE\_\-NAMED\_\-XMLELEMENT\_\-FACTORY@{DECLARE\_\-NAMED\_\-XMLELEMENT\_\-FACTORY}}
+\index{DECLARE\_\-NAMED\_\-XMLELEMENT\_\-FACTORY@{DECLARE\_\-NAMED\_\-XMLELEMENT\_\-FACTORY}!DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}}
+\subsubsection[{DECLARE\_\-NAMED\_\-XMLELEMENT\_\-FACTORY}]{\setlength{\rightskip}{0pt plus 5cm}\#define DECLARE\_\-NAMED\_\-XMLELEMENT\_\-FACTORY(n, \/  x)}}
+\label{_d_d_core_2include_2_d_d4hep_2_factories_8h_a799f2f6e2239548c948a1a9184978b1f}
+{\bfseries Value:}
+\begin{DoxyCode}
+namespace DD4hep    \
+  { DD4HEP_PLUGINSVC_FACTORY(n::x,x,DD4hep::NamedObject*(Geometry::LCDD*,XML::Han
+      dle_t*),__LINE__) }
+\end{DoxyCode}
+
+
+Definition at line 198 of file Factories.h.\hypertarget{_d_d_core_2include_2_d_d4hep_2_factories_8h_aaef476f41622e068225d311b2f675b94}{
+\index{DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}!DECLARE\_\-NAMESPACE\_\-DETELEMENT\_\-FACTORY@{DECLARE\_\-NAMESPACE\_\-DETELEMENT\_\-FACTORY}}
+\index{DECLARE\_\-NAMESPACE\_\-DETELEMENT\_\-FACTORY@{DECLARE\_\-NAMESPACE\_\-DETELEMENT\_\-FACTORY}!DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}}
+\subsubsection[{DECLARE\_\-NAMESPACE\_\-DETELEMENT\_\-FACTORY}]{\setlength{\rightskip}{0pt plus 5cm}\#define DECLARE\_\-NAMESPACE\_\-DETELEMENT\_\-FACTORY(n, \/  x)}}
+\label{_d_d_core_2include_2_d_d4hep_2_factories_8h_aaef476f41622e068225d311b2f675b94}
+{\bfseries Value:}
+\begin{DoxyCode}
+namespace DD4hep    \
+  { DD4HEP_PLUGINSVC_FACTORY(n::x,x,NamedObject*(Geometry::LCDD*,XML::Handle_t*,
+      Geometry::Ref_t*),__LINE__)      }
+\end{DoxyCode}
+
+
+Definition at line 192 of file Factories.h.\hypertarget{_d_d_core_2include_2_d_d4hep_2_factories_8h_ab3eda81b541fe327f5d354bf0bf90e3a}{
+\index{DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}!DECLARE\_\-SEGMENTATION@{DECLARE\_\-SEGMENTATION}}
+\index{DECLARE\_\-SEGMENTATION@{DECLARE\_\-SEGMENTATION}!DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}}
+\subsubsection[{DECLARE\_\-SEGMENTATION}]{\setlength{\rightskip}{0pt plus 5cm}\#define DECLARE\_\-SEGMENTATION(name, \/  func)}}
+\label{_d_d_core_2include_2_d_d4hep_2_factories_8h_ab3eda81b541fe327f5d354bf0bf90e3a}
+{\bfseries Value:}
+\begin{DoxyCode}
+DD4HEP_OPEN_PLUGIN(DD4hep,name)   { \
+    template <> Geometry::SegmentationObject*                           \
+      SegmentationFactory<name>::create(DDSegmentation::BitField64* d) { return f
+      unc(d); } \
+    DD4HEP_PLUGINSVC_FACTORY(name,segmentation_constructor__##name,     \
+                             Geometry::SegmentationObject*(DDSegmentation::BitFie
+      ld64*),__LINE__)}
+\end{DoxyCode}
+
+
+Definition at line 204 of file Factories.h.\hypertarget{_d_d_core_2include_2_d_d4hep_2_factories_8h_aa83d436ba2a188efec5cd9cbfc78dece}{
+\index{DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}!DECLARE\_\-SUBDETECTOR@{DECLARE\_\-SUBDETECTOR}}
+\index{DECLARE\_\-SUBDETECTOR@{DECLARE\_\-SUBDETECTOR}!DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}}
+\subsubsection[{DECLARE\_\-SUBDETECTOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DECLARE\_\-SUBDETECTOR(name, \/  func)~DECLARE\_\-XML\_\-PROCESSOR\_\-BASIC(name,func,0)}}
+\label{_d_d_core_2include_2_d_d4hep_2_factories_8h_aa83d436ba2a188efec5cd9cbfc78dece}
+
+
+Definition at line 247 of file Factories.h.\hypertarget{_d_d_core_2include_2_d_d4hep_2_factories_8h_ac0e310b643825b88132ffb66de2006af}{
+\index{DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}!DECLARE\_\-TRANSLATION@{DECLARE\_\-TRANSLATION}}
+\index{DECLARE\_\-TRANSLATION@{DECLARE\_\-TRANSLATION}!DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}}
+\subsubsection[{DECLARE\_\-TRANSLATION}]{\setlength{\rightskip}{0pt plus 5cm}\#define DECLARE\_\-TRANSLATION(name, \/  func)}}
+\label{_d_d_core_2include_2_d_d4hep_2_factories_8h_ac0e310b643825b88132ffb66de2006af}
+{\bfseries Value:}
+\begin{DoxyCode}
+DD4HEP_OPEN_PLUGIN(DD4hep,name)  { \
+    template <> Geometry::Ref_t TranslationFactory<name>::create(Geometry::LCDD& 
+      l) {return func(l);} \
+    DECLARE_NAMED_TRANSLATION_FACTORY(Geometry,name)  }
+\end{DoxyCode}
+
+
+Definition at line 226 of file Factories.h.\hypertarget{_d_d_core_2include_2_d_d4hep_2_factories_8h_a01eaf216b63db397e82bd7dcf9b899bf}{
+\index{DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}!DECLARE\_\-XML\_\-DOC\_\-READER@{DECLARE\_\-XML\_\-DOC\_\-READER}}
+\index{DECLARE\_\-XML\_\-DOC\_\-READER@{DECLARE\_\-XML\_\-DOC\_\-READER}!DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}}
+\subsubsection[{DECLARE\_\-XML\_\-DOC\_\-READER}]{\setlength{\rightskip}{0pt plus 5cm}\#define DECLARE\_\-XML\_\-DOC\_\-READER(name, \/  func)}}
+\label{_d_d_core_2include_2_d_d4hep_2_factories_8h_a01eaf216b63db397e82bd7dcf9b899bf}
+{\bfseries Value:}
+\begin{DoxyCode}
+DD4HEP_OPEN_PLUGIN(DD4hep,xml_document_##name)  { \
+    template <> long XMLDocumentReaderFactory<xml_document_##name>::create(Geomet
+      ry::LCDD& l,xml_h e) {return func(l,e);} \
+    DD4HEP_PLUGINSVC_FACTORY(xml_document_##name,name##_XML_reader,long(Geometry:
+      :LCDD*,XML::Handle_t*),__LINE__)  }
+\end{DoxyCode}
+
+
+Definition at line 236 of file Factories.h.\hypertarget{_d_d_core_2include_2_d_d4hep_2_factories_8h_a405d1847803b1af1228b5659d736aa6d}{
+\index{DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}!DECLARE\_\-XML\_\-PROCESSOR@{DECLARE\_\-XML\_\-PROCESSOR}}
+\index{DECLARE\_\-XML\_\-PROCESSOR@{DECLARE\_\-XML\_\-PROCESSOR}!DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}}
+\subsubsection[{DECLARE\_\-XML\_\-PROCESSOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DECLARE\_\-XML\_\-PROCESSOR(name, \/  func)~DECLARE\_\-XML\_\-PROCESSOR\_\-BASIC(name,func,0)}}
+\label{_d_d_core_2include_2_d_d4hep_2_factories_8h_a405d1847803b1af1228b5659d736aa6d}
+
+
+Definition at line 246 of file Factories.h.\hypertarget{_d_d_core_2include_2_d_d4hep_2_factories_8h_ab427245af72731af3a3a02de21f7e75d}{
+\index{DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}!DECLARE\_\-XML\_\-PROCESSOR\_\-BASIC@{DECLARE\_\-XML\_\-PROCESSOR\_\-BASIC}}
+\index{DECLARE\_\-XML\_\-PROCESSOR\_\-BASIC@{DECLARE\_\-XML\_\-PROCESSOR\_\-BASIC}!DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}}
+\subsubsection[{DECLARE\_\-XML\_\-PROCESSOR\_\-BASIC}]{\setlength{\rightskip}{0pt plus 5cm}\#define DECLARE\_\-XML\_\-PROCESSOR\_\-BASIC(name, \/  func, \/  deprecated)}}
+\label{_d_d_core_2include_2_d_d4hep_2_factories_8h_ab427245af72731af3a3a02de21f7e75d}
+{\bfseries Value:}
+\begin{DoxyCode}
+DD4HEP_OPEN_PLUGIN(DD4hep,det_element_##name) {\
+    template <> Geometry::Ref_t DetElementFactory< det_element_##name >::create(G
+      eometry::LCDD& l,xml_h e,ref_t h) \
+    { if (deprecated) warning_deprecated_xml_factory(#name); return func(l,e,h);}
+       \
+    DD4HEP_PLUGINSVC_FACTORY(det_element_##name,name,NamedObject*(Geometry::LCDD*
+      ,XML::Handle_t*,Geometry::Ref_t*),__LINE__)  }
+\end{DoxyCode}
+
+
+Definition at line 241 of file Factories.h.\hypertarget{_d_d_core_2include_2_d_d4hep_2_factories_8h_a9672277bc76a8555d58f91255098b8ca}{
+\index{DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}!DECLARE\_\-XMLELEMENT@{DECLARE\_\-XMLELEMENT}}
+\index{DECLARE\_\-XMLELEMENT@{DECLARE\_\-XMLELEMENT}!DDCore/include/DD4hep/Factories.h@{DDCore/include/DD4hep/Factories.h}}
+\subsubsection[{DECLARE\_\-XMLELEMENT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DECLARE\_\-XMLELEMENT(name, \/  func)}}
+\label{_d_d_core_2include_2_d_d4hep_2_factories_8h_a9672277bc76a8555d58f91255098b8ca}
+{\bfseries Value:}
+\begin{DoxyCode}
+DD4HEP_OPEN_PLUGIN(DD4hep,xml_element_##name)  {\
+    template <> Geometry::Ref_t XMLElementFactory<xml_element_##name>::create(Geo
+      metry::LCDD& l,xml_h e) {return func(l,e);} \
+    DD4HEP_PLUGINSVC_FACTORY(xml_element_##name,name,NamedObject*(Geometry::LCDD*
+      ,XML::Handle_t*),__LINE__)  }
+\end{DoxyCode}
+
+
+Definition at line 231 of file Factories.h.

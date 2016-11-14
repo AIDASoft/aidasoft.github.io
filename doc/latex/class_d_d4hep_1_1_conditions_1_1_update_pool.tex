@@ -1,0 +1,107 @@
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_update_pool}{
+\section{DD4hep::Conditions::UpdatePool Class Reference}
+\label{class_d_d4hep_1_1_conditions_1_1_update_pool}\index{DD4hep::Conditions::UpdatePool@{DD4hep::Conditions::UpdatePool}}
+}
+
+
+Interface for conditions pool optimized to host conditions updates.  
+
+
+{\ttfamily \#include $<$ConditionsPool.h$>$}Inheritance diagram for DD4hep::Conditions::UpdatePool::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{class_d_d4hep_1_1_conditions_1_1_update_pool}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_update_pool_ad6bcf36ae0a7dee0a08e1045d8612c6e}{ConditionEntries}
+\item 
+typedef std::map$<$ const \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} $\ast$, \hyperlink{class_d_d4hep_1_1_conditions_1_1_update_pool_ad6bcf36ae0a7dee0a08e1045d8612c6e}{ConditionEntries} $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_update_pool_a1a578a7a025ded412da474be106dc780}{UpdateEntries}
+\begin{DoxyCompactList}\small\item\em Update container specification. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_update_pool_a906a53034c9d5f71194f1f0e0e0a82d2}{UpdatePool} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager}{ConditionsManager} mgr)
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_conditions_1_1_update_pool_a6f6e54abf8c2d19be9166686fcd51215}{$\sim$UpdatePool} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_conditions_1_1_update_pool_aeb7494e79ae47538aa4f6ca2cb7c4b4d}{popEntries} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_update_pool_a1a578a7a025ded412da474be106dc780}{UpdateEntries} \&entries)=0
+\begin{DoxyCompactList}\small\item\em Adopt all entries sorted by \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. Entries will be removed from the pool. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_conditions_1_1_update_pool_a3cd5432ff682a8da5c9402814a1bd995}{select\_\-range} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition::key\_\-type} key, const \hyperlink{class_d_d4hep_1_1_i_o_v}{Condition::iov\_\-type} \&req\_\-validity, \hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{RangeConditions} \&result)=0
+\begin{DoxyCompactList}\small\item\em Select the conditions matching the key. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for conditions pool optimized to host conditions updates. \begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 108 of file ConditionsPool.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_update_pool_ad6bcf36ae0a7dee0a08e1045d8612c6e}{
+\index{DD4hep::Conditions::UpdatePool@{DD4hep::Conditions::UpdatePool}!ConditionEntries@{ConditionEntries}}
+\index{ConditionEntries@{ConditionEntries}!DD4hep::Conditions::UpdatePool@{DD4hep::Conditions::UpdatePool}}
+\subsubsection[{ConditionEntries}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf Condition}$>$ {\bf DD4hep::Conditions::UpdatePool::ConditionEntries}}}
+\label{class_d_d4hep_1_1_conditions_1_1_update_pool_ad6bcf36ae0a7dee0a08e1045d8612c6e}
+
+
+Definition at line 111 of file ConditionsPool.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_update_pool_a1a578a7a025ded412da474be106dc780}{
+\index{DD4hep::Conditions::UpdatePool@{DD4hep::Conditions::UpdatePool}!UpdateEntries@{UpdateEntries}}
+\index{UpdateEntries@{UpdateEntries}!DD4hep::Conditions::UpdatePool@{DD4hep::Conditions::UpdatePool}}
+\subsubsection[{UpdateEntries}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$const {\bf IOV}$\ast$, {\bf ConditionEntries}$>$ {\bf DD4hep::Conditions::UpdatePool::UpdateEntries}}}
+\label{class_d_d4hep_1_1_conditions_1_1_update_pool_a1a578a7a025ded412da474be106dc780}
+
+
+Update container specification. 
+
+Definition at line 113 of file ConditionsPool.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_update_pool_a906a53034c9d5f71194f1f0e0e0a82d2}{
+\index{DD4hep::Conditions::UpdatePool@{DD4hep::Conditions::UpdatePool}!UpdatePool@{UpdatePool}}
+\index{UpdatePool@{UpdatePool}!DD4hep::Conditions::UpdatePool@{DD4hep::Conditions::UpdatePool}}
+\subsubsection[{UpdatePool}]{\setlength{\rightskip}{0pt plus 5cm}UpdatePool::UpdatePool ({\bf ConditionsManager} {\em mgr})}}
+\label{class_d_d4hep_1_1_conditions_1_1_update_pool_a906a53034c9d5f71194f1f0e0e0a82d2}
+
+
+Default constructor. 
+
+Definition at line 58 of file ConditionsPool.cpp.\hypertarget{class_d_d4hep_1_1_conditions_1_1_update_pool_a6f6e54abf8c2d19be9166686fcd51215}{
+\index{DD4hep::Conditions::UpdatePool@{DD4hep::Conditions::UpdatePool}!$\sim$UpdatePool@{$\sim$UpdatePool}}
+\index{$\sim$UpdatePool@{$\sim$UpdatePool}!DD4hep::Conditions::UpdatePool@{DD4hep::Conditions::UpdatePool}}
+\subsubsection[{$\sim$UpdatePool}]{\setlength{\rightskip}{0pt plus 5cm}UpdatePool::$\sim$UpdatePool ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_update_pool_a6f6e54abf8c2d19be9166686fcd51215}
+
+
+Default destructor. 
+
+Definition at line 63 of file ConditionsPool.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_update_pool_aeb7494e79ae47538aa4f6ca2cb7c4b4d}{
+\index{DD4hep::Conditions::UpdatePool@{DD4hep::Conditions::UpdatePool}!popEntries@{popEntries}}
+\index{popEntries@{popEntries}!DD4hep::Conditions::UpdatePool@{DD4hep::Conditions::UpdatePool}}
+\subsubsection[{popEntries}]{\setlength{\rightskip}{0pt plus 5cm}virtual void DD4hep::Conditions::UpdatePool::popEntries ({\bf UpdateEntries} \& {\em entries})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_update_pool_aeb7494e79ae47538aa4f6ca2cb7c4b4d}
+
+
+Adopt all entries sorted by \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. Entries will be removed from the pool. \hypertarget{class_d_d4hep_1_1_conditions_1_1_update_pool_a3cd5432ff682a8da5c9402814a1bd995}{
+\index{DD4hep::Conditions::UpdatePool@{DD4hep::Conditions::UpdatePool}!select\_\-range@{select\_\-range}}
+\index{select\_\-range@{select\_\-range}!DD4hep::Conditions::UpdatePool@{DD4hep::Conditions::UpdatePool}}
+\subsubsection[{select\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}virtual void DD4hep::Conditions::UpdatePool::select\_\-range ({\bf Condition::key\_\-type} {\em key}, \/  const {\bf Condition::iov\_\-type} \& {\em req\_\-validity}, \/  {\bf RangeConditions} \& {\em result})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_update_pool_a3cd5432ff682a8da5c9402814a1bd995}
+
+
+Select the conditions matching the key. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCond/include/DDCond/\hyperlink{_conditions_pool_8h}{ConditionsPool.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCond/src/\hyperlink{_conditions_pool_8cpp}{ConditionsPool.cpp}\end{DoxyCompactItemize}

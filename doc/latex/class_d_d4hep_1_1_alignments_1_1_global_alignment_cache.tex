@@ -1,0 +1,383 @@
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache}{
+\section{DD4hep::Alignments::GlobalAlignmentCache Class Reference}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache}\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+}
+
+
+Class caching all known alignment operations for one LCDD instance.  
+
+
+{\ttfamily \#include $<$GlobalAlignmentCache.h$>$}\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack}{AlignmentStack} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a789078b02081705b1f31774ae040523e}{Stack}
+\item 
+typedef \hyperlink{struct_d_d4hep_1_1_alignments_1_1_alignment_stack_1_1_stack_entry}{AlignmentStack::StackEntry} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a57c878d71fabf28ccab5c04f45f48fb1}{Entry}
+\item 
+typedef std::map$<$ unsigned int, TGeoPhysicalNode $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a51cc6e8b7d9d85cfc296e8db7f360604}{Cache}
+\item 
+typedef std::map$<$ std::string, \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache}{GlobalAlignmentCache} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_abedb85cf969b8fb161695f5eca9717bc}{SubdetectorAlignments}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a51e8931621f844f3f81517f221b5fe98}{addRef} ()
+\begin{DoxyCompactList}\small\item\em Add reference count. \item\end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a7de701232e1c2da3ca981de290805060}{release} ()
+\begin{DoxyCompactList}\small\item\em Release object. If reference count goes to NULL, automatic deletion is triggered. \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a33fb44cff7b649a8bad98ec5589a31f7}{name} () const 
+\begin{DoxyCompactList}\small\item\em Access the section name. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a883c1f7d0e7687caab250c4de0ed59af}{commit} (\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack}{AlignmentStack} \&stack)
+\begin{DoxyCompactList}\small\item\em Close existing transaction stack and apply all alignments. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache}{GlobalAlignmentCache} $\ast$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a792d4a08dcae4d185fa9a3ab2099aaef}{section} (const std::string \&path\_\-name) const 
+\begin{DoxyCompactList}\small\item\em Retrieve the cache section corresponding to the path of an entry. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{GlobalAlignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a0247dfc6d79fe30bdf7d133c72fe7149}{get} (const std::string \&path) const 
+\begin{DoxyCompactList}\small\item\em Retrieve an alignment entry by its lacement path. \item\end{DoxyCompactList}\item 
+std::vector$<$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{GlobalAlignment} $>$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_ace5ffe38851f6f6828f3bcd629406495}{matches} (const std::string \&path\_\-match, bool exclude\_\-exact=false) const 
+\begin{DoxyCompactList}\small\item\em Return all entries matching a given path. Careful: Expensive operaton! \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache}{GlobalAlignmentCache} $\ast$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a3ab52f93597d2c6facf29a0ecea5c7a2}{install} (LCDD \&lcdd)
+\begin{DoxyCompactList}\small\item\em Create and install a new instance tree. \item\end{DoxyCompactList}\item 
+static void \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a8522b477a1db233bc330cc3c546dd9e7}{uninstall} (LCDD \&lcdd)
+\begin{DoxyCompactList}\small\item\em Unregister and delete a tree instance. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_aab3ed850c3c2d49c4a19a26ab7fc0e07}{GlobalAlignmentCache} (LCDD \&lcdd, const std::string \&sdPath, bool top)
+\begin{DoxyCompactList}\small\item\em Default constructor initializing variables. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a130666c02ddc1ffee8ae3d0da29dea49}{$\sim$GlobalAlignmentCache} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache}{GlobalAlignmentCache} $\ast$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_ac38294d179431c5078d6ec42f54893be}{subdetectorAlignments} (const std::string \&name)
+\begin{DoxyCompactList}\small\item\em Retrieve branch cache by name. If not present it will be created. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a9f2812b2517bb488f3d99068fc6f4318}{apply} (\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack}{AlignmentStack} \&stack)
+\begin{DoxyCompactList}\small\item\em Population entry: Apply a complete stack of ordered alignments to the geometry structure. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_ac8287bc1293ffc982e0c1c0a76761945}{apply} (const std::vector$<$ \hyperlink{struct_d_d4hep_1_1_alignments_1_1_alignment_stack_1_1_stack_entry}{Entry} $\ast$ $>$ \&changes)
+\begin{DoxyCompactList}\small\item\em Apply a vector of SD entries of ordered alignments to the geometry structure. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a023ee1b04bc17e8be3a8225f79316daf}{insert} (\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{GlobalAlignment} alignment)
+\begin{DoxyCompactList}\small\item\em Add a new entry to the cache. The key is the placement path. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+LCDD \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_af1d0806e8ffced7c5d0f1438f58a6133}{m\_\-lcdd}
+\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_abedb85cf969b8fb161695f5eca9717bc}{SubdetectorAlignments} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_abf497ee00ee5dbe22b05c75041c0e2c8}{m\_\-detectors}
+\begin{DoxyCompactList}\small\item\em Cache of subdetectors. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a51cc6e8b7d9d85cfc296e8db7f360604}{Cache} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a00b2ed5078af798d881bf59d8a30bed3}{m\_\-cache}
+\begin{DoxyCompactList}\small\item\em The subdetector specific map of alignments caches. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a24050f584cfe000084802279065b8ee9}{m\_\-sdPath}
+\item 
+size\_\-t \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a8adea69d0bd2c58caa97638937cafabf}{m\_\-sdPathLen}
+\begin{DoxyCompactList}\small\item\em The length of the branch name to optimize lookups.... \item\end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_ac6889cb128e532b71a56ce2a2fdd305f}{m\_\-refCount}
+\begin{DoxyCompactList}\small\item\em Reference count. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_ad8ec69133c554aee9f43b7952d29c65e}{m\_\-top}
+\begin{DoxyCompactList}\small\item\em Flag to indicate the top instance. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a7e41b5a9f3843a7e39b0a2f9d618ae4a}{LCDD}
+\item 
+class \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a0123c592b59946302df6795784a503e4}{AlignmentOperator}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class caching all known alignment operations for one LCDD instance. Internally the instances are fragmented to subdetectors defined by the next-\/to-\/top level detector elements.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 41 of file GlobalAlignmentCache.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a51cc6e8b7d9d85cfc296e8db7f360604}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!Cache@{Cache}}
+\index{Cache@{Cache}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{Cache}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$unsigned int, TGeoPhysicalNode$\ast$$>$ {\bf DD4hep::Alignments::GlobalAlignmentCache::Cache}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a51cc6e8b7d9d85cfc296e8db7f360604}
+
+
+Definition at line 48 of file GlobalAlignmentCache.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a57c878d71fabf28ccab5c04f45f48fb1}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!Entry@{Entry}}
+\index{Entry@{Entry}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{Entry}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf AlignmentStack::StackEntry} {\bf DD4hep::Alignments::GlobalAlignmentCache::Entry}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a57c878d71fabf28ccab5c04f45f48fb1}
+
+
+Definition at line 47 of file GlobalAlignmentCache.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a789078b02081705b1f31774ae040523e}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!Stack@{Stack}}
+\index{Stack@{Stack}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{Stack}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf AlignmentStack} {\bf DD4hep::Alignments::GlobalAlignmentCache::Stack}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a789078b02081705b1f31774ae040523e}
+
+
+Definition at line 46 of file GlobalAlignmentCache.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_abedb85cf969b8fb161695f5eca9717bc}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!SubdetectorAlignments@{SubdetectorAlignments}}
+\index{SubdetectorAlignments@{SubdetectorAlignments}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{SubdetectorAlignments}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$std::string,{\bf GlobalAlignmentCache}$\ast$$>$ {\bf DD4hep::Alignments::GlobalAlignmentCache::SubdetectorAlignments}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_abedb85cf969b8fb161695f5eca9717bc}
+
+
+Definition at line 49 of file GlobalAlignmentCache.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_aab3ed850c3c2d49c4a19a26ab7fc0e07}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!GlobalAlignmentCache@{GlobalAlignmentCache}}
+\index{GlobalAlignmentCache@{GlobalAlignmentCache}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{GlobalAlignmentCache}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Alignments::GlobalAlignmentCache::GlobalAlignmentCache (LCDD \& {\em lcdd}, \/  const std::string \& {\em sdPath}, \/  bool {\em top})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_aab3ed850c3c2d49c4a19a26ab7fc0e07}
+
+
+Default constructor initializing variables. 
+
+Referenced by install().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a130666c02ddc1ffee8ae3d0da29dea49}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!$\sim$GlobalAlignmentCache@{$\sim$GlobalAlignmentCache}}
+\index{$\sim$GlobalAlignmentCache@{$\sim$GlobalAlignmentCache}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{$\sim$GlobalAlignmentCache}]{\setlength{\rightskip}{0pt plus 5cm}GlobalAlignmentCache::$\sim$GlobalAlignmentCache ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a130666c02ddc1ffee8ae3d0da29dea49}
+
+
+Default destructor. 
+
+Definition at line 50 of file GlobalAlignmentCache.cpp.
+
+References DD4hep::INFO, m\_\-cache, m\_\-detectors, m\_\-sdPath, DD4hep::printout(), and DD4hep::releaseObjects().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a51e8931621f844f3f81517f221b5fe98}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!addRef@{addRef}}
+\index{addRef@{addRef}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{addRef}]{\setlength{\rightskip}{0pt plus 5cm}int GlobalAlignmentCache::addRef ()}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a51e8931621f844f3f81517f221b5fe98}
+
+
+Add reference count. 
+
+Definition at line 61 of file GlobalAlignmentCache.cpp.
+
+References m\_\-refCount.
+
+Referenced by DD4hep::Alignments::GlobalAlignmentWriter::GlobalAlignmentWriter().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_ac8287bc1293ffc982e0c1c0a76761945}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!apply@{apply}}
+\index{apply@{apply}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{apply}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Alignments::GlobalAlignmentCache::apply (const std::vector$<$ {\bf Entry} $\ast$ $>$ \& {\em changes})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_ac8287bc1293ffc982e0c1c0a76761945}
+
+
+Apply a vector of SD entries of ordered alignments to the geometry structure. \hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a9f2812b2517bb488f3d99068fc6f4318}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!apply@{apply}}
+\index{apply@{apply}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{apply}]{\setlength{\rightskip}{0pt plus 5cm}void GlobalAlignmentCache::apply ({\bf AlignmentStack} \& {\em stack})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a9f2812b2517bb488f3d99068fc6f4318}
+
+
+Population entry: Apply a complete stack of ordered alignments to the geometry structure. Apply a complete stack of ordered alignments to the geometry structure. 
+
+Definition at line 186 of file GlobalAlignmentCache.cpp.
+
+References \_\-detector(), apply(), DD4hep::DEBUG, DD4hep::Alignments::AlignmentStack::StackEntry::detector, DD4hep::Alignments::AlignmentStack::StackEntry::hasMatrix(), DD4hep::INFO, m\_\-lcdd, DD4hep::Alignments::AlignmentStack::StackEntry::needsReset(), DD4hep::Geometry::DetElement::PLACEMENT\_\-CHANGED, DD4hep::Geometry::DetElement::PLACEMENT\_\-DETECTOR, DD4hep::Geometry::DetElement::PLACEMENT\_\-ELEMENT, DD4hep::Geometry::DetElement::PLACEMENT\_\-HIGHEST, DD4hep::Alignments::AlignmentStack::pop(), DD4hep::printout(), DD4hep::Alignments::AlignmentStack::StackEntry::resetChildren(), DD4hep::Alignments::AlignmentStack::size(), and subdetectorAlignments().
+
+Referenced by apply(), and commit().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a883c1f7d0e7687caab250c4de0ed59af}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!commit@{commit}}
+\index{commit@{commit}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{commit}]{\setlength{\rightskip}{0pt plus 5cm}void GlobalAlignmentCache::commit ({\bf AlignmentStack} \& {\em stack})}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a883c1f7d0e7687caab250c4de0ed59af}
+
+
+Close existing transaction stack and apply all alignments. 
+
+Definition at line 167 of file GlobalAlignmentCache.cpp.
+
+References apply(), and m\_\-lcdd.\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a0247dfc6d79fe30bdf7d133c72fe7149}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!get@{get}}
+\index{get@{get}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignment} DD4hep::Alignments::GlobalAlignmentCache::get (const std::string \& {\em path}) const}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a0247dfc6d79fe30bdf7d133c72fe7149}
+
+
+Retrieve an alignment entry by its lacement path. \hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a023ee1b04bc17e8be3a8225f79316daf}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!insert@{insert}}
+\index{insert@{insert}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}bool GlobalAlignmentCache::insert ({\bf GlobalAlignment} {\em alignment})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a023ee1b04bc17e8be3a8225f79316daf}
+
+
+Add a new entry to the cache. The key is the placement path. 
+
+Definition at line 91 of file GlobalAlignmentCache.cpp.
+
+References DD4hep::ALWAYS, DD4hep::hash32(), m\_\-cache, m\_\-sdPathLen, name(), DD4hep::printout(), and DD4hep::Handle$<$ T $>$::ptr().
+
+Referenced by DD4hep::Alignments::AlignmentOperator::insert().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a3ab52f93597d2c6facf29a0ecea5c7a2}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!install@{install}}
+\index{install@{install}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{install}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignmentCache} $\ast$ GlobalAlignmentCache::install (LCDD \& {\em lcdd})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a3ab52f93597d2c6facf29a0ecea5c7a2}
+
+
+Create and install a new instance tree. 
+
+Definition at line 75 of file GlobalAlignmentCache.cpp.
+
+References GlobalAlignmentCache().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_ace5ffe38851f6f6828f3bcd629406495}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!matches@{matches}}
+\index{matches@{matches}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{matches}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<${\bf GlobalAlignment}$>$ DD4hep::Alignments::GlobalAlignmentCache::matches (const std::string \& {\em path\_\-match}, \/  bool {\em exclude\_\-exact} = {\ttfamily false}) const}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_ace5ffe38851f6f6828f3bcd629406495}
+
+
+Return all entries matching a given path. Careful: Expensive operaton! \hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a33fb44cff7b649a8bad98ec5589a31f7}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!name@{name}}
+\index{name@{name}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}const std::string\& DD4hep::Alignments::GlobalAlignmentCache::name () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a33fb44cff7b649a8bad98ec5589a31f7}
+
+
+Access the section name. 
+
+Definition at line 93 of file GlobalAlignmentCache.h.
+
+References m\_\-sdPath.
+
+Referenced by insert().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a7de701232e1c2da3ca981de290805060}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!release@{release}}
+\index{release@{release}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}int GlobalAlignmentCache::release ()}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a7de701232e1c2da3ca981de290805060}
+
+
+Release object. If reference count goes to NULL, automatic deletion is triggered. 
+
+Definition at line 66 of file GlobalAlignmentCache.cpp.
+
+References m\_\-refCount.
+
+Referenced by DD4hep::Alignments::GlobalAlignmentWriter::$\sim$GlobalAlignmentWriter().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a792d4a08dcae4d185fa9a3ab2099aaef}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!section@{section}}
+\index{section@{section}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{section}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignmentCache}$\ast$ DD4hep::Alignments::GlobalAlignmentCache::section (const std::string \& {\em path\_\-name}) const}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a792d4a08dcae4d185fa9a3ab2099aaef}
+
+
+Retrieve the cache section corresponding to the path of an entry. \hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_ac38294d179431c5078d6ec42f54893be}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!subdetectorAlignments@{subdetectorAlignments}}
+\index{subdetectorAlignments@{subdetectorAlignments}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{subdetectorAlignments}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignmentCache}$\ast$ DD4hep::Alignments::GlobalAlignmentCache::subdetectorAlignments (const std::string \& {\em name})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_ac38294d179431c5078d6ec42f54893be}
+
+
+Retrieve branch cache by name. If not present it will be created. 
+
+Referenced by apply().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a8522b477a1db233bc330cc3c546dd9e7}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!uninstall@{uninstall}}
+\index{uninstall@{uninstall}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{uninstall}]{\setlength{\rightskip}{0pt plus 5cm}void GlobalAlignmentCache::uninstall (LCDD \& {\em lcdd})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a8522b477a1db233bc330cc3c546dd9e7}
+
+
+Unregister and delete a tree instance. 
+
+Definition at line 84 of file GlobalAlignmentCache.cpp.
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a0123c592b59946302df6795784a503e4}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!AlignmentOperator@{AlignmentOperator}}
+\index{AlignmentOperator@{AlignmentOperator}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{AlignmentOperator}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf AlignmentOperator}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a0123c592b59946302df6795784a503e4}
+
+
+Definition at line 43 of file GlobalAlignmentCache.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a7e41b5a9f3843a7e39b0a2f9d618ae4a}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!LCDD@{LCDD}}
+\index{LCDD@{LCDD}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{LCDD}]{\setlength{\rightskip}{0pt plus 5cm}friend class LCDD\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a7e41b5a9f3843a7e39b0a2f9d618ae4a}
+
+
+Definition at line 42 of file GlobalAlignmentCache.h.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a00b2ed5078af798d881bf59d8a30bed3}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!m\_\-cache@{m\_\-cache}}
+\index{m\_\-cache@{m\_\-cache}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{m\_\-cache}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cache} {\bf DD4hep::Alignments::GlobalAlignmentCache::m\_\-cache}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a00b2ed5078af798d881bf59d8a30bed3}
+
+
+The subdetector specific map of alignments caches. 
+
+Definition at line 56 of file GlobalAlignmentCache.h.
+
+Referenced by insert(), and $\sim$GlobalAlignmentCache().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_abf497ee00ee5dbe22b05c75041c0e2c8}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!m\_\-detectors@{m\_\-detectors}}
+\index{m\_\-detectors@{m\_\-detectors}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{m\_\-detectors}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SubdetectorAlignments} {\bf DD4hep::Alignments::GlobalAlignmentCache::m\_\-detectors}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_abf497ee00ee5dbe22b05c75041c0e2c8}
+
+
+Cache of subdetectors. 
+
+Definition at line 54 of file GlobalAlignmentCache.h.
+
+Referenced by $\sim$GlobalAlignmentCache().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_af1d0806e8ffced7c5d0f1438f58a6133}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!m\_\-lcdd@{m\_\-lcdd}}
+\index{m\_\-lcdd@{m\_\-lcdd}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{m\_\-lcdd}]{\setlength{\rightskip}{0pt plus 5cm}LCDD\& {\bf DD4hep::Alignments::GlobalAlignmentCache::m\_\-lcdd}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_af1d0806e8ffced7c5d0f1438f58a6133}
+
+
+Definition at line 52 of file GlobalAlignmentCache.h.
+
+Referenced by apply(), and commit().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_ac6889cb128e532b71a56ce2a2fdd305f}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!m\_\-refCount@{m\_\-refCount}}
+\index{m\_\-refCount@{m\_\-refCount}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{m\_\-refCount}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::Alignments::GlobalAlignmentCache::m\_\-refCount}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_ac6889cb128e532b71a56ce2a2fdd305f}
+
+
+Reference count. 
+
+Definition at line 63 of file GlobalAlignmentCache.h.
+
+Referenced by addRef(), and release().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a24050f584cfe000084802279065b8ee9}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!m\_\-sdPath@{m\_\-sdPath}}
+\index{m\_\-sdPath@{m\_\-sdPath}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{m\_\-sdPath}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::Alignments::GlobalAlignmentCache::m\_\-sdPath}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a24050f584cfe000084802279065b8ee9}
+Branchg name: If it is not the main tree instance, the name of the subdetector 
+
+Definition at line 59 of file GlobalAlignmentCache.h.
+
+Referenced by name(), and $\sim$GlobalAlignmentCache().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a8adea69d0bd2c58caa97638937cafabf}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!m\_\-sdPathLen@{m\_\-sdPathLen}}
+\index{m\_\-sdPathLen@{m\_\-sdPathLen}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{m\_\-sdPathLen}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t {\bf DD4hep::Alignments::GlobalAlignmentCache::m\_\-sdPathLen}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_a8adea69d0bd2c58caa97638937cafabf}
+
+
+The length of the branch name to optimize lookups.... 
+
+Definition at line 61 of file GlobalAlignmentCache.h.
+
+Referenced by insert().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_ad8ec69133c554aee9f43b7952d29c65e}{
+\index{DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}!m\_\-top@{m\_\-top}}
+\index{m\_\-top@{m\_\-top}!DD4hep::Alignments::GlobalAlignmentCache@{DD4hep::Alignments::GlobalAlignmentCache}}
+\subsubsection[{m\_\-top}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf DD4hep::Alignments::GlobalAlignmentCache::m\_\-top}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_cache_ad8ec69133c554aee9f43b7952d29c65e}
+
+
+Flag to indicate the top instance. 
+
+Definition at line 65 of file GlobalAlignmentCache.h.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDAlign/include/DDAlign/\hyperlink{_global_alignment_cache_8h}{GlobalAlignmentCache.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDAlign/src/\hyperlink{_global_alignment_cache_8cpp}{GlobalAlignmentCache.cpp}\end{DoxyCompactItemize}

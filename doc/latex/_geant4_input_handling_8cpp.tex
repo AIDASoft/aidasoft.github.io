@@ -1,0 +1,135 @@
+\hypertarget{_geant4_input_handling_8cpp}{
+\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/Geant4InputHandling.cpp File Reference}
+\label{_geant4_input_handling_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/Geant4InputHandling.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/Geant4InputHandling.cpp}}
+}
+{\ttfamily \#include \char`\"{}DDG4/Geant4InputHandling.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DDG4/Geant4Primary.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DDG4/Geant4Context.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DDG4/Geant4Action.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}CLHEP/Units/SystemOfUnits.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}CLHEP/Units/PhysicalConstants.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4ParticleDefinition.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4Event.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4PrimaryVertex.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4PrimaryParticle.hh\char`\"{}}\par
+{\ttfamily \#include $<$stdexcept$>$}\par
+{\ttfamily \#include $<$cmath$>$}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_geant4_input_handling_8cpp_aa7866fa5e4e0ee9b034e9dab6599a9cc}{SQR}(x)~(x$\ast$x)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_reference_bit_mask}{ReferenceBitMask}$<$ int $>$ \hyperlink{_geant4_input_handling_8cpp_a5230e4e487f6a330d09a89c3eb7ada6b}{PropertyMask}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{_geant4_input_handling_8cpp_a74be4a0c227aed723e3a3950cf64805b}{collectPrimaries} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_map}{Geant4PrimaryMap} $\ast$pm, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_interaction}{Geant4PrimaryInteraction} $\ast$interaction, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_vertex}{Geant4Vertex} $\ast$particle\_\-origine, G4PrimaryParticle $\ast$gp)
+\begin{DoxyCompactList}\small\item\em Helper to recursively build a DDG4 interaction from an existing G4 interaction (primary vertex). \item\end{DoxyCompactList}\item 
+static void \hyperlink{_geant4_input_handling_8cpp_a962d52ff757d40461a61a6a649181118}{appendInteraction} (const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} $\ast$caller, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_interaction}{Geant4PrimaryInteraction} $\ast$output, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_interaction}{Geant4PrimaryInteraction} $\ast$input)
+\begin{DoxyCompactList}\small\item\em Append input interaction to global output. \item\end{DoxyCompactList}\item 
+static void \hyperlink{_geant4_input_handling_8cpp_ad72275c53e6d7fd82f2679b3da0793ab}{rebaseParticles} (Geant4PrimaryInteraction::ParticleMap \&particles, int \&offset)
+\item 
+static void \hyperlink{_geant4_input_handling_8cpp_a24ec352dd579358abec2e3c008dbf773}{rebaseVertices} (Geant4PrimaryInteraction::VertexMap \&vertices, int part\_\-offset)
+\item 
+static G4PrimaryParticle $\ast$ \hyperlink{_geant4_input_handling_8cpp_a216fdc8fcc45739e42b9caee841af178}{createG4Primary} (const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_handle}{Geant4ParticleHandle} p)
+\item 
+static vector$<$ \hyperlink{classstd_1_1pair}{pair}$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle}{Geant4Particle} $\ast$, G4PrimaryParticle $\ast$ $>$ $>$ \hyperlink{_geant4_input_handling_8cpp_a0222bdb195b3b5e0b2a3033fe06c04d0}{getRelevant} (\hyperlink{classstd_1_1set}{set}$<$ int $>$ \&visited, map$<$ int, G4PrimaryParticle $\ast$ $>$ \&prim, Geant4PrimaryInteraction::ParticleMap \&pm, const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_handle}{Geant4ParticleHandle} p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_geant4_input_handling_8cpp_aa7866fa5e4e0ee9b034e9dab6599a9cc}{
+\index{Geant4InputHandling.cpp@{Geant4InputHandling.cpp}!SQR@{SQR}}
+\index{SQR@{SQR}!Geant4InputHandling.cpp@{Geant4InputHandling.cpp}}
+\subsubsection[{SQR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SQR(x)~(x$\ast$x)}}
+\label{_geant4_input_handling_8cpp_aa7866fa5e4e0ee9b034e9dab6599a9cc}
+
+
+Referenced by DD4hep::Simulation::boostInteraction().
+
+\subsection{Typedef Documentation}
+\hypertarget{_geant4_input_handling_8cpp_a5230e4e487f6a330d09a89c3eb7ada6b}{
+\index{Geant4InputHandling.cpp@{Geant4InputHandling.cpp}!PropertyMask@{PropertyMask}}
+\index{PropertyMask@{PropertyMask}!Geant4InputHandling.cpp@{Geant4InputHandling.cpp}}
+\subsubsection[{PropertyMask}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf ReferenceBitMask}$<$int$>$ {\bf PropertyMask}}}
+\label{_geant4_input_handling_8cpp_a5230e4e487f6a330d09a89c3eb7ada6b}
+
+
+Definition at line 37 of file Geant4InputHandling.cpp.
+
+\subsection{Function Documentation}
+\hypertarget{_geant4_input_handling_8cpp_a962d52ff757d40461a61a6a649181118}{
+\index{Geant4InputHandling.cpp@{Geant4InputHandling.cpp}!appendInteraction@{appendInteraction}}
+\index{appendInteraction@{appendInteraction}!Geant4InputHandling.cpp@{Geant4InputHandling.cpp}}
+\subsubsection[{appendInteraction}]{\setlength{\rightskip}{0pt plus 5cm}static void appendInteraction (const {\bf Geant4Action} $\ast$ {\em caller}, \/  {\bf Geant4PrimaryInteraction} $\ast$ {\em output}, \/  {\bf Geant4PrimaryInteraction} $\ast$ {\em input})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{_geant4_input_handling_8cpp_a962d52ff757d40461a61a6a649181118}
+
+
+Append input interaction to global output. 
+
+Definition at line 169 of file Geant4InputHandling.cpp.
+
+References DD4hep::Simulation::Geant4Action::abortRun(), DD4hep::Simulation::Geant4Particle::addRef(), DD4hep::Simulation::Geant4Particle::id, DD4hep::Simulation::Geant4PrimaryInteraction::particles, and DD4hep::Simulation::Geant4PrimaryInteraction::vertices.
+
+Referenced by DD4hep::Simulation::mergeInteractions().\hypertarget{_geant4_input_handling_8cpp_a74be4a0c227aed723e3a3950cf64805b}{
+\index{Geant4InputHandling.cpp@{Geant4InputHandling.cpp}!collectPrimaries@{collectPrimaries}}
+\index{collectPrimaries@{collectPrimaries}!Geant4InputHandling.cpp@{Geant4InputHandling.cpp}}
+\subsubsection[{collectPrimaries}]{\setlength{\rightskip}{0pt plus 5cm}static void collectPrimaries ({\bf Geant4PrimaryMap} $\ast$ {\em pm}, \/  {\bf Geant4PrimaryInteraction} $\ast$ {\em interaction}, \/  {\bf Geant4Vertex} $\ast$ {\em particle\_\-origine}, \/  G4PrimaryParticle $\ast$ {\em gp})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{_geant4_input_handling_8cpp_a74be4a0c227aed723e3a3950cf64805b}
+
+
+Helper to recursively build a DDG4 interaction from an existing G4 interaction (primary vertex). 
+
+Definition at line 86 of file Geant4InputHandling.cpp.
+
+References DD4hep::Simulation::createPrimary(), DD4hep::Simulation::G4PARTICLE\_\-HAS\_\-SECONDARIES, DD4hep::Simulation::G4PARTICLE\_\-PRIMARY, DD4hep::Simulation::Geant4Vertex::in, DD4hep::Simulation::Geant4PrimaryMap::insert(), DD4hep::Simulation::Geant4Vertex::mask, DD4hep::Simulation::Geant4PrimaryInteraction::mask, DD4hep::Simulation::Geant4Vertex::out, DD4hep::Simulation::Geant4PrimaryInteraction::particles, DD4hep::ReferenceBitMask$<$ T $>$::set(), and DD4hep::Simulation::Geant4PrimaryInteraction::vertices.
+
+Referenced by DD4hep::Simulation::createPrimary().\hypertarget{_geant4_input_handling_8cpp_a216fdc8fcc45739e42b9caee841af178}{
+\index{Geant4InputHandling.cpp@{Geant4InputHandling.cpp}!createG4Primary@{createG4Primary}}
+\index{createG4Primary@{createG4Primary}!Geant4InputHandling.cpp@{Geant4InputHandling.cpp}}
+\subsubsection[{createG4Primary}]{\setlength{\rightskip}{0pt plus 5cm}static G4PrimaryParticle$\ast$ createG4Primary (const {\bf Geant4ParticleHandle} {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{_geant4_input_handling_8cpp_a216fdc8fcc45739e42b9caee841af178}
+
+
+Definition at line 339 of file Geant4InputHandling.cpp.
+
+References DD4hep::Simulation::Geant4ParticleHandle::charge(), DD4hep::Simulation::Geant4ParticleHandle::definition(), and DD4hep::Simulation::Geant4ParticleHandle::mass().
+
+Referenced by getRelevant().\hypertarget{_geant4_input_handling_8cpp_a0222bdb195b3b5e0b2a3033fe06c04d0}{
+\index{Geant4InputHandling.cpp@{Geant4InputHandling.cpp}!getRelevant@{getRelevant}}
+\index{getRelevant@{getRelevant}!Geant4InputHandling.cpp@{Geant4InputHandling.cpp}}
+\subsubsection[{getRelevant}]{\setlength{\rightskip}{0pt plus 5cm}static vector$<$ {\bf pair}$<${\bf Geant4Particle}$\ast$,G4PrimaryParticle$\ast$$>$ $>$ getRelevant ({\bf set}$<$ int $>$ \& {\em visited}, \/  map$<$ int, G4PrimaryParticle $\ast$ $>$ \& {\em prim}, \/  Geant4PrimaryInteraction::ParticleMap \& {\em pm}, \/  const {\bf Geant4ParticleHandle} {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{_geant4_input_handling_8cpp_a0222bdb195b3b5e0b2a3033fe06c04d0}
+
+
+Definition at line 354 of file Geant4InputHandling.cpp.
+
+References createG4Primary(), DD4hep::Simulation::Geant4ParticleHandle::energy(), DD4hep::Simulation::G4PARTICLE\_\-GEN\_\-STABLE, DD4hep::ReferenceBitMask$<$ T $>$::isSet(), DD4hep::Simulation::Geant4ParticleHandle::mass(), and DD4hep::Simulation::Geant4ParticleHandle::time().
+
+Referenced by DD4hep::Simulation::generatePrimaries().\hypertarget{_geant4_input_handling_8cpp_ad72275c53e6d7fd82f2679b3da0793ab}{
+\index{Geant4InputHandling.cpp@{Geant4InputHandling.cpp}!rebaseParticles@{rebaseParticles}}
+\index{rebaseParticles@{rebaseParticles}!Geant4InputHandling.cpp@{Geant4InputHandling.cpp}}
+\subsubsection[{rebaseParticles}]{\setlength{\rightskip}{0pt plus 5cm}static void rebaseParticles (Geant4PrimaryInteraction::ParticleMap \& {\em particles}, \/  int \& {\em offset})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{_geant4_input_handling_8cpp_ad72275c53e6d7fd82f2679b3da0793ab}
+
+
+Definition at line 189 of file Geant4InputHandling.cpp.
+
+References DD4hep::Simulation::Geant4ParticleHandle::offset().
+
+Referenced by DD4hep::Simulation::mergeInteractions().\hypertarget{_geant4_input_handling_8cpp_a24ec352dd579358abec2e3c008dbf773}{
+\index{Geant4InputHandling.cpp@{Geant4InputHandling.cpp}!rebaseVertices@{rebaseVertices}}
+\index{rebaseVertices@{rebaseVertices}!Geant4InputHandling.cpp@{Geant4InputHandling.cpp}}
+\subsubsection[{rebaseVertices}]{\setlength{\rightskip}{0pt plus 5cm}static void rebaseVertices (Geant4PrimaryInteraction::VertexMap \& {\em vertices}, \/  int {\em part\_\-offset})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{_geant4_input_handling_8cpp_a24ec352dd579358abec2e3c008dbf773}
+
+
+Definition at line 201 of file Geant4InputHandling.cpp.
+
+References DD4hep::Simulation::Geant4Vertex::in, DD4hep::Simulation::Geant4Vertex::out, and v.
+
+Referenced by DD4hep::Simulation::mergeInteractions().

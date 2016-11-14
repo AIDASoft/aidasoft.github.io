@@ -1,0 +1,265 @@
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_det_align}{
+\section{DD4hep::Alignments::DetAlign Class Reference}
+\label{class_d_d4hep_1_1_alignments_1_1_det_align}\index{DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}}
+}
+
+
+\hyperlink{class_d_d4hep_1_1_handle}{Handle} class describing the access to DetElement dependent alignments.  
+
+
+{\ttfamily \#include $<$DetAlign.h$>$}Inheritance diagram for DD4hep::Alignments::DetAlign::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_alignments_1_1_det_align}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_object}{Geometry::DetElementObject} \hyperlink{class_d_d4hep_1_1_alignments_1_1_det_align_ae49c039feb46ce85c64fecb6cf669f45}{Object}
+\begin{DoxyCompactList}\small\item\em Internal object type. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_object}{Object} $>$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_det_align_aefb28d8de174c8d7efe86b45829701ff}{RefObject}
+\begin{DoxyCompactList}\small\item\em Definition of the base handle type. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool}{Conditions::UserPool} \hyperlink{class_d_d4hep_1_1_alignments_1_1_det_align_a0595e4c0ee7f454cf5e9c5d32b718aca}{UserPool}
+\begin{DoxyCompactList}\small\item\em Pool definition. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_det_align_a32f656225a62fa9b6b789464bfea22b3}{DetAlign} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_det_align_a8b7b85c54d99bcc7e3f0535a4833780e}{DetAlign} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_object}{Object} $\ast$object\_\-ptr)
+\begin{DoxyCompactList}\small\item\em Constructor to hold handled object. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_alignments_1_1_det_align_ae706f406dd358f2d1a717852f87cdcc1}{DetAlign} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&e)
+\begin{DoxyCompactList}\small\item\em Templated constructor for handle conversions. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_det_align_ac322b60733704c92ed78a405f4c2b997}{DetAlign} (const \hyperlink{class_d_d4hep_1_1_alignments_1_1_det_align}{DetAlign} \&e)
+\begin{DoxyCompactList}\small\item\em Constructor to copy handle. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_det_align_acb573b6c89a9e18bc272e8b1f2db3ea3}{DetAlign} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Geometry::DetElement} \&e)
+\begin{DoxyCompactList}\small\item\em Constructor to copy handle. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_object}{Object} \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_det_align_ad21cb4ae966882e2b2b3ec268475b82a}{\_\-data} () const 
+\begin{DoxyCompactList}\small\item\em Additional data accessor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_det_align}{DetAlign} \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_det_align_a9672376d598c4e583163a1f46f7817d0}{operator=} (const \hyperlink{class_d_d4hep_1_1_alignments_1_1_det_align}{DetAlign} \&e)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_det_align_a32509c66001a245a250aea41ab717cb2}{nominal} () const 
+\begin{DoxyCompactList}\small\item\em Access to the constant nominal alignment information. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_det_align_adbf0dea0867ee6179de59e58c36d300d}{survey} () const 
+\begin{DoxyCompactList}\small\item\em Access to the constant survey alignment information. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_alignments_1_1_det_align_a2a82c5cc1e3a35618b6e5fb74d93cffd}{hasAlignments} () const 
+\begin{DoxyCompactList}\small\item\em Check if alignments are at all present. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_container}{Container} \hyperlink{class_d_d4hep_1_1_alignments_1_1_det_align_ad2d4b23bcf8c7bd32ac279c35538c29f}{alignments} () const 
+\begin{DoxyCompactList}\small\item\em Access to the alignments information. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_det_align_a1487afd0d23a2ce523b29c7e502bf0bd}{get} (const std::string \&key, const \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool}{UserPool} \&pool)
+\begin{DoxyCompactList}\small\item\em Access to alignment objects from a given pool. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_det_align_a25f066eaf3999061359f7a46fbd4cfe1}{get} (\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_ab824a65f935a0c79b9ea1a7a85014b88}{Alignment::key\_\-type} key, const \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool}{UserPool} \&pool)
+\begin{DoxyCompactList}\small\item\em Access to alignment objects from a given pool. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_det_align_aa009f405b4f76dadc3d6e8efae1f338d}{get} (const std::string \&key, const \hyperlink{class_d_d4hep_1_1_i_o_v}{Alignment::iov\_\-type} \&iov)
+\begin{DoxyCompactList}\small\item\em Access to alignment objects. Only alignments in the pool are accessed. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_det_align_af0a58378d82a0076222f0b9b7327f524}{get} (\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_ab824a65f935a0c79b9ea1a7a85014b88}{Alignment::key\_\-type} key, const \hyperlink{class_d_d4hep_1_1_i_o_v}{Alignment::iov\_\-type} \&iov)
+\begin{DoxyCompactList}\small\item\em Access to alignment objects. Only alignments in the pool are accessed. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_d_d4hep_1_1_handle}{Handle} class describing the access to DetElement dependent alignments. \begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 42 of file DetAlign.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_det_align_ae49c039feb46ce85c64fecb6cf669f45}{
+\index{DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}!Object@{Object}}
+\index{Object@{Object}!DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}}
+\subsubsection[{Object}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::DetElementObject} {\bf DD4hep::Alignments::DetAlign::Object}}}
+\label{class_d_d4hep_1_1_alignments_1_1_det_align_ae49c039feb46ce85c64fecb6cf669f45}
+
+
+Internal object type. 
+
+Definition at line 45 of file DetAlign.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_det_align_aefb28d8de174c8d7efe86b45829701ff}{
+\index{DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}!RefObject@{RefObject}}
+\index{RefObject@{RefObject}!DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}}
+\subsubsection[{RefObject}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Handle}$<${\bf Object}$>$ {\bf DD4hep::Alignments::DetAlign::RefObject}}}
+\label{class_d_d4hep_1_1_alignments_1_1_det_align_aefb28d8de174c8d7efe86b45829701ff}
+
+
+Definition of the base handle type. 
+
+Definition at line 47 of file DetAlign.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_det_align_a0595e4c0ee7f454cf5e9c5d32b718aca}{
+\index{DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}!UserPool@{UserPool}}
+\index{UserPool@{UserPool}!DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}}
+\subsubsection[{UserPool}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Conditions::UserPool} {\bf DD4hep::Alignments::DetAlign::UserPool}}}
+\label{class_d_d4hep_1_1_alignments_1_1_det_align_a0595e4c0ee7f454cf5e9c5d32b718aca}
+
+
+Pool definition. 
+
+Definition at line 49 of file DetAlign.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_det_align_a32f656225a62fa9b6b789464bfea22b3}{
+\index{DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}!DetAlign@{DetAlign}}
+\index{DetAlign@{DetAlign}!DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}}
+\subsubsection[{DetAlign}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Alignments::DetAlign::DetAlign ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_det_align_a32f656225a62fa9b6b789464bfea22b3}
+
+
+Default constructor. 
+
+Definition at line 54 of file DetAlign.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_det_align_a8b7b85c54d99bcc7e3f0535a4833780e}{
+\index{DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}!DetAlign@{DetAlign}}
+\index{DetAlign@{DetAlign}!DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}}
+\subsubsection[{DetAlign}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Alignments::DetAlign::DetAlign ({\bf Object} $\ast$ {\em object\_\-ptr})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_det_align_a8b7b85c54d99bcc7e3f0535a4833780e}
+
+
+Constructor to hold handled object. 
+
+Definition at line 57 of file DetAlign.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_det_align_ae706f406dd358f2d1a717852f87cdcc1}{
+\index{DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}!DetAlign@{DetAlign}}
+\index{DetAlign@{DetAlign}!DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}}
+\subsubsection[{DetAlign}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q $>$ DD4hep::Alignments::DetAlign::DetAlign (const {\bf Handle}$<$ Q $>$ \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_det_align_ae706f406dd358f2d1a717852f87cdcc1}
+
+
+Templated constructor for handle conversions. 
+
+Definition at line 60 of file DetAlign.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_det_align_ac322b60733704c92ed78a405f4c2b997}{
+\index{DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}!DetAlign@{DetAlign}}
+\index{DetAlign@{DetAlign}!DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}}
+\subsubsection[{DetAlign}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Alignments::DetAlign::DetAlign (const {\bf DetAlign} \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_det_align_ac322b60733704c92ed78a405f4c2b997}
+
+
+Constructor to copy handle. 
+
+Definition at line 63 of file DetAlign.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_det_align_acb573b6c89a9e18bc272e8b1f2db3ea3}{
+\index{DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}!DetAlign@{DetAlign}}
+\index{DetAlign@{DetAlign}!DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}}
+\subsubsection[{DetAlign}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Alignments::DetAlign::DetAlign (const {\bf Geometry::DetElement} \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_det_align_acb573b6c89a9e18bc272e8b1f2db3ea3}
+
+
+Constructor to copy handle. 
+
+Definition at line 66 of file DetAlign.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_det_align_ad21cb4ae966882e2b2b3ec268475b82a}{
+\index{DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}!\_\-data@{\_\-data}}
+\index{\_\-data@{\_\-data}!DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}}
+\subsubsection[{\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}\& DD4hep::Alignments::DetAlign::\_\-data () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_det_align_ad21cb4ae966882e2b2b3ec268475b82a}
+
+
+Additional data accessor. 
+
+Definition at line 75 of file DetAlign.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_det_align_ad2d4b23bcf8c7bd32ac279c35538c29f}{
+\index{DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}!alignments@{alignments}}
+\index{alignments@{alignments}!DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}}
+\subsubsection[{alignments}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Container} DetAlign::alignments () const}}
+\label{class_d_d4hep_1_1_alignments_1_1_det_align_ad2d4b23bcf8c7bd32ac279c35538c29f}
+
+
+Access to the alignments information. 
+
+Definition at line 45 of file DetAlign.cpp.
+
+References DD4hep::Handle$<$ Geometry::DetElementObject $>$::access(), and DD4hep::Geometry::DetElementObject::alignments.
+
+Referenced by get().\hypertarget{class_d_d4hep_1_1_alignments_1_1_det_align_af0a58378d82a0076222f0b9b7327f524}{
+\index{DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}!get@{get}}
+\index{get@{get}!DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignment} DetAlign::get ({\bf Alignment::key\_\-type} {\em key}, \/  const {\bf Alignment::iov\_\-type} \& {\em iov})}}
+\label{class_d_d4hep_1_1_alignments_1_1_det_align_af0a58378d82a0076222f0b9b7327f524}
+
+
+Access to alignment objects. Only alignments in the pool are accessed. Access to alignment objects. 
+
+Definition at line 58 of file DetAlign.cpp.
+
+References alignments(), and DD4hep::Alignments::Container::get().\hypertarget{class_d_d4hep_1_1_alignments_1_1_det_align_aa009f405b4f76dadc3d6e8efae1f338d}{
+\index{DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}!get@{get}}
+\index{get@{get}!DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignment} DetAlign::get (const std::string \& {\em key}, \/  const {\bf Alignment::iov\_\-type} \& {\em iov})}}
+\label{class_d_d4hep_1_1_alignments_1_1_det_align_aa009f405b4f76dadc3d6e8efae1f338d}
+
+
+Access to alignment objects. Only alignments in the pool are accessed. Access to alignment objects. 
+
+Definition at line 53 of file DetAlign.cpp.
+
+References alignments(), and DD4hep::Alignments::Container::get().\hypertarget{class_d_d4hep_1_1_alignments_1_1_det_align_a25f066eaf3999061359f7a46fbd4cfe1}{
+\index{DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}!get@{get}}
+\index{get@{get}!DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignment} DetAlign::get ({\bf Alignment::key\_\-type} {\em key}, \/  const {\bf UserPool} \& {\em pool})}}
+\label{class_d_d4hep_1_1_alignments_1_1_det_align_a25f066eaf3999061359f7a46fbd4cfe1}
+
+
+Access to alignment objects from a given pool. Access to alignment objects from a given pool. Only alignments in the pool are accessed. 
+
+Definition at line 68 of file DetAlign.cpp.
+
+References alignments(), and DD4hep::Alignments::Container::get().\hypertarget{class_d_d4hep_1_1_alignments_1_1_det_align_a1487afd0d23a2ce523b29c7e502bf0bd}{
+\index{DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}!get@{get}}
+\index{get@{get}!DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignment} DetAlign::get (const std::string \& {\em key}, \/  const {\bf UserPool} \& {\em pool})}}
+\label{class_d_d4hep_1_1_alignments_1_1_det_align_a1487afd0d23a2ce523b29c7e502bf0bd}
+
+
+Access to alignment objects from a given pool. Access to alignment objects from a given pool. Only alignments in the pool are accessed. 
+
+Definition at line 63 of file DetAlign.cpp.
+
+References alignments(), and DD4hep::Alignments::Container::get().\hypertarget{class_d_d4hep_1_1_alignments_1_1_det_align_a2a82c5cc1e3a35618b6e5fb74d93cffd}{
+\index{DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}!hasAlignments@{hasAlignments}}
+\index{hasAlignments@{hasAlignments}!DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}}
+\subsubsection[{hasAlignments}]{\setlength{\rightskip}{0pt plus 5cm}bool DetAlign::hasAlignments () const}}
+\label{class_d_d4hep_1_1_alignments_1_1_det_align_a2a82c5cc1e3a35618b6e5fb74d93cffd}
+
+
+Check if alignments are at all present. 
+
+Definition at line 37 of file DetAlign.cpp.
+
+References DD4hep::Handle$<$ Geometry::DetElementObject $>$::access(), and DD4hep::Geometry::DetElementObject::alignments.\hypertarget{class_d_d4hep_1_1_alignments_1_1_det_align_a32509c66001a245a250aea41ab717cb2}{
+\index{DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}!nominal@{nominal}}
+\index{nominal@{nominal}!DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}}
+\subsubsection[{nominal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignment} DetAlign::nominal () const}}
+\label{class_d_d4hep_1_1_alignments_1_1_det_align_a32509c66001a245a250aea41ab717cb2}
+
+
+Access to the constant nominal alignment information. Access to the alignment information. 
+
+Definition at line 27 of file DetAlign.cpp.
+
+References DD4hep::Handle$<$ Geometry::DetElementObject $>$::access(), and DD4hep::Geometry::DetElementObject::nominal.\hypertarget{class_d_d4hep_1_1_alignments_1_1_det_align_a9672376d598c4e583163a1f46f7817d0}{
+\index{DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}!operator=@{operator=}}
+\index{operator=@{operator=}!DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetAlign}\& DD4hep::Alignments::DetAlign::operator= (const {\bf DetAlign} \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_det_align_a9672376d598c4e583163a1f46f7817d0}
+
+
+Assignment operator. 
+
+Definition at line 79 of file DetAlign.h.
+
+References DD4hep::Handle$<$ T $>$::m\_\-element.\hypertarget{class_d_d4hep_1_1_alignments_1_1_det_align_adbf0dea0867ee6179de59e58c36d300d}{
+\index{DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}!survey@{survey}}
+\index{survey@{survey}!DD4hep::Alignments::DetAlign@{DD4hep::Alignments::DetAlign}}
+\subsubsection[{survey}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignment} DetAlign::survey () const}}
+\label{class_d_d4hep_1_1_alignments_1_1_det_align_adbf0dea0867ee6179de59e58c36d300d}
+
+
+Access to the constant survey alignment information. Access to the survey alignment information. 
+
+Definition at line 32 of file DetAlign.cpp.
+
+References DD4hep::Handle$<$ Geometry::DetElementObject $>$::access(), and DD4hep::Geometry::DetElementObject::survey.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_det_align_8h}{DetAlign.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_det_align_8cpp}{DetAlign.cpp}\end{DoxyCompactItemize}

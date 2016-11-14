@@ -1,0 +1,96 @@
+\hypertarget{namespace_d_d4hep_1_1_utilities}{
+\section{DD4hep::Utilities Namespace Reference}
+\label{namespace_d_d4hep_1_1_utilities}\index{DD4hep::Utilities@{DD4hep::Utilities}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespace_d_d4hep_1_1_utilities_a61171c4258ed951d93ba11763da066fc}{findNodeWithMatrix} (TGeoNode $\ast$p, TGeoNode $\ast$n, TGeoHMatrix $\ast$mat, std::string $\ast$sub\_\-path=0)
+\item 
+std::pair$<$ bool, TEveElement $\ast$ $>$ \hyperlink{namespace_d_d4hep_1_1_utilities_aa469540c9b22f32d6ac947c4fbe7a7dc}{createEveShape} (int level, int max\_\-level, TEveElement $\ast$p, TGeoNode $\ast$n, TGeoHMatrix mat, const std::string \&node\_\-name)
+\item 
+std::pair$<$ bool, TEveElement $\ast$ $>$ \hyperlink{namespace_d_d4hep_1_1_utilities_a8f334a7b469c25f5315745d8dceb0fa7}{LoadDetElement} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Geometry::DetElement} element, int levels, TEveElement $\ast$parent)
+\item 
+void \hyperlink{namespace_d_d4hep_1_1_utilities_a93a4f08ad1e94bdda79153a858ab809b}{MakeNodesVisible} (TEveElement $\ast$e, bool visible, int level)
+\begin{DoxyCompactList}\small\item\em Make a set of nodes starting from a top element (in-\/)visible with a given depth. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespace_d_d4hep_1_1_utilities_a39b86ff9be41d39a9569a9a45c9484c2}{SetRnrChildren} (\hyperlink{class_t_eve_element_list}{TEveElementList} $\ast$l, bool b)
+\begin{DoxyCompactList}\small\item\em Set the rendering flags for the object and the next level children. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespace_d_d4hep_1_1_utilities_a92896bc98df5b92fe16f7cfc74716442}{SetRnrAll} (\hyperlink{class_t_eve_element_list}{TEveElementList} $\ast$l, bool b)
+\begin{DoxyCompactList}\small\item\em Recursively set the rendering flags for the object ans its children. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\const char $\ast$ \hyperlink{namespace_d_d4hep_1_1_utilities_a966a7057d7655c50273dc41d229ae315}{GetName} (\hyperlink{class_t}{T} $\ast$p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespace_d_d4hep_1_1_utilities_aa469540c9b22f32d6ac947c4fbe7a7dc}{
+\index{DD4hep::Utilities@{DD4hep::Utilities}!createEveShape@{createEveShape}}
+\index{createEveShape@{createEveShape}!DD4hep::Utilities@{DD4hep::Utilities}}
+\subsubsection[{createEveShape}]{\setlength{\rightskip}{0pt plus 5cm}std::pair$<$ bool, TEveElement $\ast$ $>$ DD4hep::Utilities::createEveShape (int {\em level}, \/  int {\em max\_\-level}, \/  TEveElement $\ast$ {\em p}, \/  TGeoNode $\ast$ {\em n}, \/  TGeoHMatrix {\em mat}, \/  const std::string \& {\em node\_\-name})}}
+\label{namespace_d_d4hep_1_1_utilities_aa469540c9b22f32d6ac947c4fbe7a7dc}
+
+
+Definition at line 77 of file Utilities.cpp.
+
+References dd4hep::g, DD4hep::INFO, DD4hep::Handle$<$ T $>$::isValid(), DD4hep::printout(), and DD4hep::Geometry::VisAttr::rgb().
+
+Referenced by LoadDetElement(), and DD4hep::Display::LoadGeoChildren().\hypertarget{namespace_d_d4hep_1_1_utilities_a61171c4258ed951d93ba11763da066fc}{
+\index{DD4hep::Utilities@{DD4hep::Utilities}!findNodeWithMatrix@{findNodeWithMatrix}}
+\index{findNodeWithMatrix@{findNodeWithMatrix}!DD4hep::Utilities@{DD4hep::Utilities}}
+\subsubsection[{findNodeWithMatrix}]{\setlength{\rightskip}{0pt plus 5cm}int DD4hep::Utilities::findNodeWithMatrix (TGeoNode $\ast$ {\em p}, \/  TGeoNode $\ast$ {\em n}, \/  TGeoHMatrix $\ast$ {\em mat}, \/  std::string $\ast$ {\em sub\_\-path} = {\ttfamily 0})}}
+\label{namespace_d_d4hep_1_1_utilities_a61171c4258ed951d93ba11763da066fc}
+
+
+Referenced by DD4hep::Display::LoadGeoChildren().\hypertarget{namespace_d_d4hep_1_1_utilities_a966a7057d7655c50273dc41d229ae315}{
+\index{DD4hep::Utilities@{DD4hep::Utilities}!GetName@{GetName}}
+\index{GetName@{GetName}!DD4hep::Utilities@{DD4hep::Utilities}}
+\subsubsection[{GetName}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const char$\ast$ DD4hep::Utilities::GetName ({\bf T} $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{namespace_d_d4hep_1_1_utilities_a966a7057d7655c50273dc41d229ae315}
+
+
+Definition at line 45 of file Utilities.h.
+
+Referenced by DD4hep::Simulation::Geant4HitCollection::add(), DD4hep::Projection::ImportElement(), DD4hep::View::ImportEventElement(), DD4hep::Display::LoadGeoChildren(), DD4hep::Display::MakeNodesVisible(), and DD4hep::Simulation::Geant4SensitiveDetector::name().\hypertarget{namespace_d_d4hep_1_1_utilities_a8f334a7b469c25f5315745d8dceb0fa7}{
+\index{DD4hep::Utilities@{DD4hep::Utilities}!LoadDetElement@{LoadDetElement}}
+\index{LoadDetElement@{LoadDetElement}!DD4hep::Utilities@{DD4hep::Utilities}}
+\subsubsection[{LoadDetElement}]{\setlength{\rightskip}{0pt plus 5cm}std::pair$<$ bool, TEveElement $\ast$ $>$ DD4hep::Utilities::LoadDetElement (Geometry::DetElement {\em element}, \/  int {\em levels}, \/  TEveElement $\ast$ {\em parent})}}
+\label{namespace_d_d4hep_1_1_utilities_a8f334a7b469c25f5315745d8dceb0fa7}
+
+
+Definition at line 189 of file Utilities.cpp.
+
+References createEveShape(), DD4hep::Handle$<$ T $>$::isValid(), DD4hep::Handle$<$ T $>$::name(), DD4hep::Geometry::DetElement::placement(), and DD4hep::Handle$<$ T $>$::ptr().
+
+Referenced by DD4hep::View::CreateGeometry(), and DD4hep::Display::LoadGeoChildren().\hypertarget{namespace_d_d4hep_1_1_utilities_a93a4f08ad1e94bdda79153a858ab809b}{
+\index{DD4hep::Utilities@{DD4hep::Utilities}!MakeNodesVisible@{MakeNodesVisible}}
+\index{MakeNodesVisible@{MakeNodesVisible}!DD4hep::Utilities@{DD4hep::Utilities}}
+\subsubsection[{MakeNodesVisible}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Utilities::MakeNodesVisible (TEveElement $\ast$ {\em e}, \/  bool {\em visible}, \/  int {\em level})}}
+\label{namespace_d_d4hep_1_1_utilities_a93a4f08ad1e94bdda79153a858ab809b}
+
+
+Make a set of nodes starting from a top element (in-\/)visible with a given depth. 
+
+Definition at line 58 of file Utilities.cpp.
+
+References s, SetRnrAll(), and SetRnrChildren().\hypertarget{namespace_d_d4hep_1_1_utilities_a92896bc98df5b92fe16f7cfc74716442}{
+\index{DD4hep::Utilities@{DD4hep::Utilities}!SetRnrAll@{SetRnrAll}}
+\index{SetRnrAll@{SetRnrAll}!DD4hep::Utilities@{DD4hep::Utilities}}
+\subsubsection[{SetRnrAll}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Utilities::SetRnrAll ({\bf TEveElementList} $\ast$ {\em l}, \/  bool {\em b})}}
+\label{namespace_d_d4hep_1_1_utilities_a92896bc98df5b92fe16f7cfc74716442}
+
+
+Recursively set the rendering flags for the object ans its children. 
+
+Definition at line 47 of file Utilities.cpp.
+
+Referenced by MakeNodesVisible().\hypertarget{namespace_d_d4hep_1_1_utilities_a39b86ff9be41d39a9569a9a45c9484c2}{
+\index{DD4hep::Utilities@{DD4hep::Utilities}!SetRnrChildren@{SetRnrChildren}}
+\index{SetRnrChildren@{SetRnrChildren}!DD4hep::Utilities@{DD4hep::Utilities}}
+\subsubsection[{SetRnrChildren}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Utilities::SetRnrChildren ({\bf TEveElementList} $\ast$ {\em l}, \/  bool {\em b})}}
+\label{namespace_d_d4hep_1_1_utilities_a39b86ff9be41d39a9569a9a45c9484c2}
+
+
+Set the rendering flags for the object and the next level children. 
+
+Definition at line 39 of file Utilities.cpp.
+
+Referenced by MakeNodesVisible().

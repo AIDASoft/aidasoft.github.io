@@ -1,0 +1,197 @@
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_context}{
+\section{DD4hep::Geometry::VolumeManagerContext Class Reference}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_context}\index{DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}}
+}
+
+
+This structure describes the cached data for one placement held by the volume manager.  
+
+
+{\ttfamily \#include $<$VolumeManagerInterna.h$>$}\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std::vector$<$ TGeoNode $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a7873b42c6ad25a77d4d7e240286a934c}{Path}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume_extension_1_1_vol_i_ds_a9328d0964ef092fd108679b2ecafd5b7}{PlacedVolume::VolIDs::Base} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_aedf28d4a226428cfc6ebaabaee0b4c9e}{VolIDs}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a7fabfa335945589f35053fa3bc3dcfc7}{VolumeManagerContext} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_aa150cfab1e19826e9e6fddd194b2390a}{$\sim$VolumeManagerContext} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+VolumeID \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a22e82a0219d1d0249ea2d1b034ef7264}{identifier}
+\begin{DoxyCompactList}\small\item\em Placement identifier. \item\end{DoxyCompactList}\item 
+VolumeID \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a052bc7df447cef84eabe15a5751e772b}{mask}
+\begin{DoxyCompactList}\small\item\em Ignore mask of the placement identifier. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_aa6c87ac47a16aa5094ca87d5991ab91f}{placement}
+\begin{DoxyCompactList}\small\item\em The placement. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a4b637a36900149ff3490731f62ca1d52}{detector}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_handle}{Handle} to the subdetector element handle. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a57c697291054cc0fa221f047dd32938f}{element}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_handle}{Handle} to the closest Detector element. \item\end{DoxyCompactList}\item 
+TGeoHMatrix \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a0978a0bffd0e0669f14d0ddea43ea6bb}{toDetector}
+\begin{DoxyCompactList}\small\item\em The transformation of space-\/points to the corrdinate system of the closests detector element. \item\end{DoxyCompactList}\item 
+TGeoHMatrix \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a724f7f6ffc6fc9e91dca0f07d5f14d1d}{toWorld}
+\begin{DoxyCompactList}\small\item\em The transformation of space-\/points to the world corrdinate system. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_aedf28d4a226428cfc6ebaabaee0b4c9e}{VolIDs} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a3982d4e94fc483caa54382e719eb568c}{volID}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} IDS corresponding to this element. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_path}{Path} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_aa29bc3744ae4aff1e6a504c2b758a37c}{path}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_path}{Path} of placements to this sensitive volume. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This structure describes the cached data for one placement held by the volume manager. \begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 52 of file VolumeManagerInterna.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a7873b42c6ad25a77d4d7e240286a934c}{
+\index{DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}!Path@{Path}}
+\index{Path@{Path}!DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}}
+\subsubsection[{Path}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<$TGeoNode$\ast$$>$ {\bf DD4hep::Geometry::VolumeManagerContext::Path}}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a7873b42c6ad25a77d4d7e240286a934c}
+
+
+Definition at line 54 of file VolumeManagerInterna.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_aedf28d4a226428cfc6ebaabaee0b4c9e}{
+\index{DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}!VolIDs@{VolIDs}}
+\index{VolIDs@{VolIDs}!DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}}
+\subsubsection[{VolIDs}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf PlacedVolume::VolIDs::Base} {\bf DD4hep::Geometry::VolumeManagerContext::VolIDs}}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_aedf28d4a226428cfc6ebaabaee0b4c9e}
+
+
+Definition at line 55 of file VolumeManagerInterna.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a7fabfa335945589f35053fa3bc3dcfc7}{
+\index{DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}!VolumeManagerContext@{VolumeManagerContext}}
+\index{VolumeManagerContext@{VolumeManagerContext}!DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}}
+\subsubsection[{VolumeManagerContext}]{\setlength{\rightskip}{0pt plus 5cm}VolumeManagerContext::VolumeManagerContext ()}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a7fabfa335945589f35053fa3bc3dcfc7}
+
+
+Default constructor. 
+
+Definition at line 26 of file VolumeManagerInterna.cpp.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_aa150cfab1e19826e9e6fddd194b2390a}{
+\index{DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}!$\sim$VolumeManagerContext@{$\sim$VolumeManagerContext}}
+\index{$\sim$VolumeManagerContext@{$\sim$VolumeManagerContext}!DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}}
+\subsubsection[{$\sim$VolumeManagerContext}]{\setlength{\rightskip}{0pt plus 5cm}VolumeManagerContext::$\sim$VolumeManagerContext ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_aa150cfab1e19826e9e6fddd194b2390a}
+
+
+Default destructor. 
+
+Definition at line 31 of file VolumeManagerInterna.cpp.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a4b637a36900149ff3490731f62ca1d52}{
+\index{DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}!detector@{detector}}
+\index{detector@{detector}!DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}}
+\subsubsection[{detector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} {\bf DD4hep::Geometry::VolumeManagerContext::detector}}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a4b637a36900149ff3490731f62ca1d52}
+
+
+\hyperlink{class_d_d4hep_1_1_handle}{Handle} to the subdetector element handle. 
+
+Definition at line 64 of file VolumeManagerInterna.h.
+
+Referenced by DD4hep::Geometry::VolumeManager::lookupDetector().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a57c697291054cc0fa221f047dd32938f}{
+\index{DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}!element@{element}}
+\index{element@{element}!DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}}
+\subsubsection[{element}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} {\bf DD4hep::Geometry::VolumeManagerContext::element}}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a57c697291054cc0fa221f047dd32938f}
+
+
+\hyperlink{class_d_d4hep_1_1_handle}{Handle} to the closest Detector element. 
+
+Definition at line 66 of file VolumeManagerInterna.h.
+
+Referenced by DD4hep::Geometry::VolumeManager::lookupDetElement().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a22e82a0219d1d0249ea2d1b034ef7264}{
+\index{DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}!identifier@{identifier}}
+\index{identifier@{identifier}!DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}}
+\subsubsection[{identifier}]{\setlength{\rightskip}{0pt plus 5cm}VolumeID {\bf DD4hep::Geometry::VolumeManagerContext::identifier}}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a22e82a0219d1d0249ea2d1b034ef7264}
+
+
+Placement identifier. 
+
+Definition at line 58 of file VolumeManagerInterna.h.
+
+Referenced by DD4hep::Geometry::VolumeManager::adoptPlacement(), and DD4hep::Geometry::operator$<$$<$().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a052bc7df447cef84eabe15a5751e772b}{
+\index{DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}!mask@{mask}}
+\index{mask@{mask}!DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}}
+\subsubsection[{mask}]{\setlength{\rightskip}{0pt plus 5cm}VolumeID {\bf DD4hep::Geometry::VolumeManagerContext::mask}}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a052bc7df447cef84eabe15a5751e772b}
+
+
+Ignore mask of the placement identifier. 
+
+Definition at line 60 of file VolumeManagerInterna.h.
+
+Referenced by DD4hep::Geometry::VolumeManager::adoptPlacement(), and DD4hep::Geometry::operator$<$$<$().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_aa29bc3744ae4aff1e6a504c2b758a37c}{
+\index{DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}!path@{path}}
+\index{path@{path}!DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}}
+\subsubsection[{path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Path} {\bf DD4hep::Geometry::VolumeManagerContext::path}}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_aa29bc3744ae4aff1e6a504c2b758a37c}
+
+
+\hyperlink{class_d_d4hep_1_1_path}{Path} of placements to this sensitive volume. 
+
+Definition at line 74 of file VolumeManagerInterna.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_aa6c87ac47a16aa5094ca87d5991ab91f}{
+\index{DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}!placement@{placement}}
+\index{placement@{placement}!DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}}
+\subsubsection[{placement}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PlacedVolume} {\bf DD4hep::Geometry::VolumeManagerContext::placement}}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_aa6c87ac47a16aa5094ca87d5991ab91f}
+
+
+The placement. 
+
+Definition at line 62 of file VolumeManagerInterna.h.
+
+Referenced by DD4hep::Geometry::VolumeManager::adoptPlacement(), DD4hep::Geometry::VolumeManager::lookupPlacement(), DD4hep::Geometry::operator$<$$<$(), and DD4hep::Geometry::VolumeManagerObject::update().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a0978a0bffd0e0669f14d0ddea43ea6bb}{
+\index{DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}!toDetector@{toDetector}}
+\index{toDetector@{toDetector}!DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}}
+\subsubsection[{toDetector}]{\setlength{\rightskip}{0pt plus 5cm}TGeoHMatrix {\bf DD4hep::Geometry::VolumeManagerContext::toDetector}}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a0978a0bffd0e0669f14d0ddea43ea6bb}
+
+
+The transformation of space-\/points to the corrdinate system of the closests detector element. 
+
+Definition at line 68 of file VolumeManagerInterna.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a724f7f6ffc6fc9e91dca0f07d5f14d1d}{
+\index{DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}!toWorld@{toWorld}}
+\index{toWorld@{toWorld}!DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}}
+\subsubsection[{toWorld}]{\setlength{\rightskip}{0pt plus 5cm}TGeoHMatrix {\bf DD4hep::Geometry::VolumeManagerContext::toWorld}}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a724f7f6ffc6fc9e91dca0f07d5f14d1d}
+
+
+The transformation of space-\/points to the world corrdinate system. 
+
+Definition at line 70 of file VolumeManagerInterna.h.
+
+Referenced by DD4hep::Geometry::VolumeManager::worldTransformation().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a3982d4e94fc483caa54382e719eb568c}{
+\index{DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}!volID@{volID}}
+\index{volID@{volID}!DD4hep::Geometry::VolumeManagerContext@{DD4hep::Geometry::VolumeManagerContext}}
+\subsubsection[{volID}]{\setlength{\rightskip}{0pt plus 5cm}{\bf VolIDs} {\bf DD4hep::Geometry::VolumeManagerContext::volID}}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_context_a3982d4e94fc483caa54382e719eb568c}
+
+
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} IDS corresponding to this element. 
+
+Definition at line 72 of file VolumeManagerInterna.h.
+
+Referenced by DD4hep::Geometry::VolumeManager::adoptPlacement().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/objects/\hyperlink{_volume_manager_interna_8h}{VolumeManagerInterna.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_volume_manager_interna_8cpp}{VolumeManagerInterna.cpp}\end{DoxyCompactItemize}

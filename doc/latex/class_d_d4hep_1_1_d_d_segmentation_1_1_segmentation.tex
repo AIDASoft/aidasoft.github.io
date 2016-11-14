@@ -1,0 +1,507 @@
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation}{
+\section{DD4hep::DDSegmentation::Segmentation Class Reference}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation}\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+}
+
+
+Base class for all segmentations.  
+
+
+{\ttfamily \#include $<$Segmentation.h$>$}Inheritance diagram for DD4hep::DDSegmentation::Segmentation::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.43214cm]{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a2865f0e68cb2ecfb5717584e67be4228}{$\sim$Segmentation} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a881469fb51d55c2119e0a94672cb62da}{addSubsegmentation} (long key\_\-min, long key\_\-max, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation}{Segmentation} $\ast$entry)
+\begin{DoxyCompactList}\small\item\em Add subsegmentation. Call only valid for Multi-\/segmentations. Default implementation throws an exception. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a594fe6d78667415855858d083b64acad}{position} (const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{CellID} \&cellID) const =0
+\begin{DoxyCompactList}\small\item\em Determine the local position based on the cell ID. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{CellID} \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ad5a60953d96d409850d8192f64f8ce3c}{cellID} (const \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \&localPosition, const \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \&globalPosition, const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_a61a6833a18d1800bdef176595f83e3ba}{VolumeID} \&volumeID) const =0
+\begin{DoxyCompactList}\small\item\em Determine the cell ID based on the position. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_a61a6833a18d1800bdef176595f83e3ba}{VolumeID} \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a00b309f8094c1831dcd32317959d5071}{volumeID} (const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{CellID} \&cellID) const 
+\begin{DoxyCompactList}\small\item\em Determine the volume ID from the full cell ID by removing all local fields. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_af91b751e26aed9cf2a2e80d2b74c0544}{neighbours} (const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{CellID} \&cellID, std::set$<$ \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{CellID} $>$ \&neighbours) const 
+\begin{DoxyCompactList}\small\item\em Calculates the neighbours of the given cell ID and adds them to the list of neighbours. \item\end{DoxyCompactList}\item 
+virtual std::string \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ad22779a42ab1bacc7464c191322cb5d2}{fieldDescription} () const 
+\begin{DoxyCompactList}\small\item\em Access the encoding string. \item\end{DoxyCompactList}\item 
+virtual const std::string \& \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a66085df678437a2cd3baeeded8580086}{name} () const 
+\begin{DoxyCompactList}\small\item\em Access the segmentation name. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a9bfa16e70ac68d6013c49be45b3438c3}{setName} (const std::string \&value)
+\begin{DoxyCompactList}\small\item\em Set the segmentation name. \item\end{DoxyCompactList}\item 
+virtual const std::string \& \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ad975bb46927b2da459d91295f95571df}{type} () const 
+\begin{DoxyCompactList}\small\item\em Access the segmentation type. \item\end{DoxyCompactList}\item 
+virtual const std::string \& \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a27f02f639e514a43d5c90f22bbaa57df}{description} () const 
+\begin{DoxyCompactList}\small\item\em Access the description of the segmentation. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field64}{BitField64} $\ast$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a2e41ad4d215c115b00686e4ffd935851}{decoder} () const 
+\begin{DoxyCompactList}\small\item\em Access the underlying decoder. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ab5973bc06538d13b1991f55e40635fa0}{setDecoder} (\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field64}{BitField64} $\ast$decoder)
+\begin{DoxyCompactList}\small\item\em Set the underlying decoder. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_parameter}{Parameter} \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a9de5d953004c571b739827f5f201f34d}{parameter} (const std::string \&parameterName) const 
+\begin{DoxyCompactList}\small\item\em Access to parameter by name. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_af38026430ca0e1ef64acdfc898f5dd3d}{Parameters} \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_afd9f22b31cc261bfe3fd20e79be79dd5}{parameters} () const 
+\begin{DoxyCompactList}\small\item\em Access to all parameters. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_af02e320c944cc14b394f1014a8538cfa}{setParameters} (const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_af38026430ca0e1ef64acdfc898f5dd3d}{Parameters} \&parameters)
+\begin{DoxyCompactList}\small\item\em Set all parameters from an existing set of parameters. \item\end{DoxyCompactList}\item 
+virtual std::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a9710f4942d7f6b52ae5342652e17c88d}{cellDimensions} (const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{CellID} \&cellID) const 
+\begin{DoxyCompactList}\small\item\em Returns a vector$<$double$>$ of the cellDimensions of the given cell ID in natural order of dimensions, e.g., dx/dy/dz, or dr/r$\ast$dPhi. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a52364d20f9930e867d682ad453900e65}{Segmentation} (const std::string \&cellEncoding=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Default constructor used by derived classes passing the encoding string. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a2c565cf9552a24845ed91c686fc63f40}{Segmentation} (\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field64}{BitField64} $\ast$decoder)
+\begin{DoxyCompactList}\small\item\em Default constructor used by derived classes passing an existing decoder. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE $>$ }\\void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a7f7f6557bb76cf4726b09a4199922f97}{registerParameter} (const std::string \&nam, const std::string \&desc, TYPE \&param, const TYPE \&defaultVal, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_parameter_a36f5f8b8d812b2a2b81363377565d8d4}{UnitType} unitTyp=SegmentationParameter::NoUnit, bool isOpt=false)
+\begin{DoxyCompactList}\small\item\em Add a parameter to this segmentation. Used by derived classes to define their parameters. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ab513ba2af3efb21c7ca2e17c6829aeca}{registerIdentifier} (const std::string \&nam, const std::string \&desc, std::string \&ident, const std::string \&defaultVal)
+\begin{DoxyCompactList}\small\item\em Add a cell identifier to this segmentation. Used by derived classes to define their required identifiers. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a550acc9cdf597965091b4d76ce1578cb}{binToPosition} (\hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{CellID} bin, double cellSize, double offset=0.)
+\begin{DoxyCompactList}\small\item\em Helper method to convert a bin number to a 1D position. \item\end{DoxyCompactList}\item 
+static int \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ac4b0fad36827310fd144843d77e39d71}{positionToBin} (double position, double cellSize, double offset=0.)
+\begin{DoxyCompactList}\small\item\em Helper method to convert a 1D position to a cell ID. \item\end{DoxyCompactList}\item 
+static double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_aeb5bfa97c90cefa129ad0c5d2dcb94fc}{binToPosition} (\hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{CellID} bin, std::vector$<$ double $>$ const \&cellBoundaries, double offset=0.)
+\begin{DoxyCompactList}\small\item\em Helper method to convert a bin number to a 1D position given a vector of binBoundaries. \item\end{DoxyCompactList}\item 
+static int \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a9357e76769306a1bf6f92c8a5d8eb6b4}{positionToBin} (double position, std::vector$<$ double $>$ const \&cellBoundaries, double offset=0.)
+\begin{DoxyCompactList}\small\item\em Helper method to convert a 1D position to a cell ID given a vector of binBoundaries. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::string \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_aa129e659e465d9a0a60c7160d29de483}{\_\-name}
+\begin{DoxyCompactList}\small\item\em The segmentation name. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a3dab8fc421e90851cc45b20b90754271}{\_\-type}
+\begin{DoxyCompactList}\small\item\em The segmentation type. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a1e9aa1272b32dc4999584154baa72a14}{\_\-description}
+\begin{DoxyCompactList}\small\item\em The description of the segmentation. \item\end{DoxyCompactList}\item 
+std::map$<$ std::string, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_parameter}{Parameter} $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a7ede8a80772ee04c5997696734f0c200}{\_\-parameters}
+\begin{DoxyCompactList}\small\item\em The parameters for this segmentation. \item\end{DoxyCompactList}\item 
+std::map$<$ std::string, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_typed_segmentation_parameter}{StringParameter} $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a55ce2740cffa420bb5ac2b7646e55d98}{\_\-indexIdentifiers}
+\begin{DoxyCompactList}\small\item\em The indices used for the encoding. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field64}{BitField64} $\ast$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a48d782572ff008ea0f05c869526735f4}{\_\-decoder}
+\begin{DoxyCompactList}\small\item\em The cell ID encoder and decoder. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a0e9e3e6639a67335971b827cf045cd4f}{\_\-ownsDecoder}
+\begin{DoxyCompactList}\small\item\em Keeps track of the decoder ownership. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_aba1d0cb4ca5528c499ecde5f6000ae01}{Segmentation} (const \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation}{Segmentation} \&)
+\begin{DoxyCompactList}\small\item\em No copy constructor allowed. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for all segmentations. 
+
+Definition at line 68 of file Segmentation.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a2865f0e68cb2ecfb5717584e67be4228}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!$\sim$Segmentation@{$\sim$Segmentation}}
+\index{$\sim$Segmentation@{$\sim$Segmentation}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{$\sim$Segmentation}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDSegmentation::Segmentation::$\sim$Segmentation ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a2865f0e68cb2ecfb5717584e67be4228}
+
+
+Destructor. 
+
+Definition at line 39 of file Segmentation.cpp.
+
+References \_\-decoder, \_\-ownsDecoder, and \_\-parameters.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a52364d20f9930e867d682ad453900e65}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!Segmentation@{Segmentation}}
+\index{Segmentation@{Segmentation}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{Segmentation}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDSegmentation::Segmentation::Segmentation (const std::string \& {\em cellEncoding} = {\ttfamily \char`\"{}\char`\"{}})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a52364d20f9930e867d682ad453900e65}
+
+
+Default constructor used by derived classes passing the encoding string. 
+
+Definition at line 28 of file Segmentation.cpp.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a2c565cf9552a24845ed91c686fc63f40}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!Segmentation@{Segmentation}}
+\index{Segmentation@{Segmentation}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{Segmentation}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDSegmentation::Segmentation::Segmentation ({\bf BitField64} $\ast$ {\em decoder})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a2c565cf9552a24845ed91c686fc63f40}
+
+
+Default constructor used by derived classes passing an existing decoder. 
+
+Definition at line 34 of file Segmentation.cpp.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_aba1d0cb4ca5528c499ecde5f6000ae01}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!Segmentation@{Segmentation}}
+\index{Segmentation@{Segmentation}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{Segmentation}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDSegmentation::Segmentation::Segmentation (const {\bf Segmentation} \&)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_aba1d0cb4ca5528c499ecde5f6000ae01}
+
+
+No copy constructor allowed. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a881469fb51d55c2119e0a94672cb62da}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!addSubsegmentation@{addSubsegmentation}}
+\index{addSubsegmentation@{addSubsegmentation}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{addSubsegmentation}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::Segmentation::addSubsegmentation (long {\em key\_\-min}, \/  long {\em key\_\-max}, \/  {\bf Segmentation} $\ast$ {\em entry})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a881469fb51d55c2119e0a94672cb62da}
+
+
+Add subsegmentation. Call only valid for Multi-\/segmentations. Default implementation throws an exception. 
+
+Definition at line 54 of file Segmentation.cpp.
+
+References \_\-type.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_aeb5bfa97c90cefa129ad0c5d2dcb94fc}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!binToPosition@{binToPosition}}
+\index{binToPosition@{binToPosition}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{binToPosition}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::DDSegmentation::Segmentation::binToPosition ({\bf CellID} {\em bin}, \/  std::vector$<$ double $>$ const \& {\em cellBoundaries}, \/  double {\em offset} = {\ttfamily 0.})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_aeb5bfa97c90cefa129ad0c5d2dcb94fc}
+
+
+Helper method to convert a bin number to a 1D position given a vector of binBoundaries. 
+
+Definition at line 157 of file Segmentation.cpp.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a550acc9cdf597965091b4d76ce1578cb}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!binToPosition@{binToPosition}}
+\index{binToPosition@{binToPosition}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{binToPosition}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::DDSegmentation::Segmentation::binToPosition ({\bf CellID} {\em bin}, \/  double {\em cellSize}, \/  double {\em offset} = {\ttfamily 0.})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a550acc9cdf597965091b4d76ce1578cb}
+
+
+Helper method to convert a bin number to a 1D position. 
+
+Definition at line 144 of file Segmentation.cpp.
+
+Referenced by DD4hep::DDSegmentation::PolarGridRPhi2::cellDimensions(), DD4hep::DDSegmentation::PolarGridRPhi::cellDimensions(), DD4hep::DDSegmentation::TiledLayerSegmentation::position(), DD4hep::DDSegmentation::TiledLayerGridXY::position(), DD4hep::DDSegmentation::WaferGridXY::position(), DD4hep::DDSegmentation::PolarGridRPhi2::position(), DD4hep::DDSegmentation::PolarGridRPhi::position(), DD4hep::DDSegmentation::CartesianGridYZ::position(), DD4hep::DDSegmentation::CartesianGridXZ::position(), DD4hep::DDSegmentation::CartesianGridXYZ::position(), and DD4hep::DDSegmentation::CartesianGridXY::position().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a9710f4942d7f6b52ae5342652e17c88d}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!cellDimensions@{cellDimensions}}
+\index{cellDimensions@{cellDimensions}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{cellDimensions}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$ double $>$ DD4hep::DDSegmentation::Segmentation::cellDimensions (const {\bf CellID} \& {\em cellID}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a9710f4942d7f6b52ae5342652e17c88d}
+
+
+Returns a vector$<$double$>$ of the cellDimensions of the given cell ID in natural order of dimensions, e.g., dx/dy/dz, or dr/r$\ast$dPhi. 
+\begin{DoxyParams}{Parameters}
+\item[{\em cellID}]cellID of the cell for which parameters are returned \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$double$>$ in natural order of dimensions, e.g., dx/dy/dz, or dr/r$\ast$dPhi 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_cartesian_grid_x_y_a34189fa472ffda38fc7d865df8412ba0}{DD4hep::DDSegmentation::CartesianGridXY}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_cartesian_grid_x_y_z_a6a1df52f930ef7fea680bfd532d0b6cb}{DD4hep::DDSegmentation::CartesianGridXYZ}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_cartesian_grid_x_z_a83908aef5a6fff44c188ce6515a88856}{DD4hep::DDSegmentation::CartesianGridXZ}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_cartesian_grid_y_z_a8422ef9feccf16729b9c3b2e63a284a7}{DD4hep::DDSegmentation::CartesianGridYZ}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_megatile_layer_grid_x_y_a43b169f4cb6546098e427c6d43db66cf}{DD4hep::DDSegmentation::MegatileLayerGridXY}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a2762cc8dd45fdfcab8aa8dfaea47e7fd}{DD4hep::DDSegmentation::MultiSegmentation}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi_a4f443aab6b49eb7bb6a831fd9fd908ee}{DD4hep::DDSegmentation::PolarGridRPhi}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a15d4dfe8784e9ec12a6d801231925b12}{DD4hep::DDSegmentation::PolarGridRPhi2}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a5304d34d8b7bb2eb0a187a595796de31}{DD4hep::DDSegmentation::TiledLayerGridXY}, and \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_wafer_grid_x_y_ae063a2a9a60e5965a12cc3c18b851dab}{DD4hep::DDSegmentation::WaferGridXY}.
+
+Definition at line 197 of file Segmentation.cpp.
+
+References \_\-type.
+
+Referenced by DD4hep::Geometry::Segmentation::cellDimensions(), and DD4hep::DDSegmentation::MultiSegmentation::cellDimensions().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ad5a60953d96d409850d8192f64f8ce3c}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!cellID@{cellID}}
+\index{cellID@{cellID}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{cellID}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf CellID} DD4hep::DDSegmentation::Segmentation::cellID (const {\bf Vector3D} \& {\em localPosition}, \/  const {\bf Vector3D} \& {\em globalPosition}, \/  const {\bf VolumeID} \& {\em volumeID}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ad5a60953d96d409850d8192f64f8ce3c}
+
+
+Determine the cell ID based on the position. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_cartesian_grid_x_y_ac7de84f02aa18034f60f6319982ac4e3}{DD4hep::DDSegmentation::CartesianGridXY}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_cartesian_grid_x_y_z_a50e24896d0efee32af5349b3c69d4866}{DD4hep::DDSegmentation::CartesianGridXYZ}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_cartesian_grid_x_z_a6db94d0b7df8a5ad6bb3a708281ddd4e}{DD4hep::DDSegmentation::CartesianGridXZ}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_cartesian_grid_y_z_a96102e475a228e43a48f75fe2e98f191}{DD4hep::DDSegmentation::CartesianGridYZ}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_megatile_layer_grid_x_y_abb23df6fd5f38a8324dd3711f0e452bf}{DD4hep::DDSegmentation::MegatileLayerGridXY}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_aefbdc896e43100b7781e07dafc9a9fec}{DD4hep::DDSegmentation::MultiSegmentation}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi_adb32acd7b9fda25d500d4f89c5ac0e6c}{DD4hep::DDSegmentation::PolarGridRPhi}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_ae1cd15b95add489ababb51f9103de6b4}{DD4hep::DDSegmentation::PolarGridRPhi2}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_projective_cylinder_a5aaa84e94618e058c743cf5bd44db446}{DD4hep::DDSegmentation::ProjectiveCylinder}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a7b37dc7981a6f36fdc67bd2759af7bdb}{DD4hep::DDSegmentation::TiledLayerGridXY}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a481dd2415b1b931234efbca27617f1dd}{DD4hep::DDSegmentation::TiledLayerSegmentation}, and \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_wafer_grid_x_y_a9212a3077b9a25425612aa52d121bac9}{DD4hep::DDSegmentation::WaferGridXY}.
+
+Referenced by DD4hep::Geometry::SegmentationObject::cellID(), DD4hep::Geometry::Segmentation::cellID(), and DD4hep::DDSegmentation::MultiSegmentation::cellID().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a2e41ad4d215c115b00686e4ffd935851}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!decoder@{decoder}}
+\index{decoder@{decoder}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{decoder}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf BitField64}$\ast$ DD4hep::DDSegmentation::Segmentation::decoder () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a2e41ad4d215c115b00686e4ffd935851}
+
+
+Access the underlying decoder. 
+
+Definition at line 105 of file Segmentation.h.
+
+References \_\-decoder.
+
+Referenced by DD4hep::Geometry::SegmentationObject::decoder(), and DD4hep::Geometry::Segmentation::decoder().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a27f02f639e514a43d5c90f22bbaa57df}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!description@{description}}
+\index{description@{description}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{description}]{\setlength{\rightskip}{0pt plus 5cm}virtual const std::string\& DD4hep::DDSegmentation::Segmentation::description () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a27f02f639e514a43d5c90f22bbaa57df}
+
+
+Access the description of the segmentation. 
+
+Definition at line 101 of file Segmentation.h.
+
+References \_\-description.
+
+Referenced by DD4hep::Geometry::SegmentationObject::description().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ad22779a42ab1bacc7464c191322cb5d2}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!fieldDescription@{fieldDescription}}
+\index{fieldDescription@{fieldDescription}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{fieldDescription}]{\setlength{\rightskip}{0pt plus 5cm}virtual std::string DD4hep::DDSegmentation::Segmentation::fieldDescription () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ad22779a42ab1bacc7464c191322cb5d2}
+
+
+Access the encoding string. 
+
+Definition at line 85 of file Segmentation.h.
+
+References \_\-decoder, and DD4hep::DDSegmentation::BitField64::fieldDescription().
+
+Referenced by DD4hep::Geometry::SegmentationObject::fieldDescription().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a66085df678437a2cd3baeeded8580086}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!name@{name}}
+\index{name@{name}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}virtual const std::string\& DD4hep::DDSegmentation::Segmentation::name () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a66085df678437a2cd3baeeded8580086}
+
+
+Access the segmentation name. 
+
+Definition at line 89 of file Segmentation.h.
+
+References \_\-name.
+
+Referenced by DD4hep::Geometry::SegmentationObject::name(), and DD4hep::DDSegmentation::MultiSegmentation::subsegmentation().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_af91b751e26aed9cf2a2e80d2b74c0544}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!neighbours@{neighbours}}
+\index{neighbours@{neighbours}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{neighbours}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::Segmentation::neighbours (const {\bf CellID} \& {\em cellID}, \/  std::set$<$ {\bf CellID} $>$ \& {\em neighbours}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_af91b751e26aed9cf2a2e80d2b74c0544}
+
+
+Calculates the neighbours of the given cell ID and adds them to the list of neighbours. 
+
+Definition at line 70 of file Segmentation.cpp.
+
+References \_\-decoder, \_\-indexIdentifiers, DD4hep::DDSegmentation::BitField64::getValue(), and DD4hep::DDSegmentation::BitField64::setValue().
+
+Referenced by DD4hep::Geometry::Segmentation::neighbours().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a9de5d953004c571b739827f5f201f34d}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!parameter@{parameter}}
+\index{parameter@{parameter}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{parameter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parameter} DD4hep::DDSegmentation::Segmentation::parameter (const std::string \& {\em parameterName}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a9de5d953004c571b739827f5f201f34d}
+
+
+Access to parameter by name. 
+
+Definition at line 103 of file Segmentation.cpp.
+
+References \_\-parameters, \_\-type, and s.
+
+Referenced by setParameters().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_afd9f22b31cc261bfe3fd20e79be79dd5}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!parameters@{parameters}}
+\index{parameters@{parameters}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{parameters}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parameters} DD4hep::DDSegmentation::Segmentation::parameters () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_afd9f22b31cc261bfe3fd20e79be79dd5}
+
+
+Access to all parameters. 
+
+Definition at line 115 of file Segmentation.cpp.
+
+References \_\-parameters.
+
+Referenced by DD4hep::Geometry::SegmentationObject::parameters(), and DD4hep::DDSegmentation::MultiSegmentation::subsegmentation().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a594fe6d78667415855858d083b64acad}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!position@{position}}
+\index{position@{position}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Vector3D} DD4hep::DDSegmentation::Segmentation::position (const {\bf CellID} \& {\em cellID}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a594fe6d78667415855858d083b64acad}
+
+
+Determine the local position based on the cell ID. 
+
+Implemented in \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_cartesian_grid_x_y_a2a7d50d0a59d37116654b0f6a691f945}{DD4hep::DDSegmentation::CartesianGridXY}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_cartesian_grid_x_y_z_a029a72904042397250b67948270884ac}{DD4hep::DDSegmentation::CartesianGridXYZ}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_cartesian_grid_x_z_a44fb20b19214cb7a56e1d17e3edf3c5f}{DD4hep::DDSegmentation::CartesianGridXZ}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_cartesian_grid_y_z_aaad4f014c52e680a4954971d75d13357}{DD4hep::DDSegmentation::CartesianGridYZ}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_megatile_layer_grid_x_y_ab7f4500bd543bd2a837810f130b47539}{DD4hep::DDSegmentation::MegatileLayerGridXY}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_abbcc00c36274bb97c5ff3d01d64e45b6}{DD4hep::DDSegmentation::MultiSegmentation}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi_a91f53cd5367a3b7472713e2bd214bf57}{DD4hep::DDSegmentation::PolarGridRPhi}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a5a61e856d814397d2be8046585266863}{DD4hep::DDSegmentation::PolarGridRPhi2}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_projective_cylinder_a4108a130ccc4573d4204318e975ad8bf}{DD4hep::DDSegmentation::ProjectiveCylinder}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a1cf88ec570ea925ca8b324efae04ce04}{DD4hep::DDSegmentation::TiledLayerGridXY}, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a4e29a7791d15e076601c3edd0e350fd0}{DD4hep::DDSegmentation::TiledLayerSegmentation}, and \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_wafer_grid_x_y_a1f72c4a0bc0cfbabe6395612518a4d34}{DD4hep::DDSegmentation::WaferGridXY}.
+
+Referenced by DD4hep::Geometry::SegmentationObject::position(), DD4hep::Geometry::Segmentation::position(), and DD4hep::DDSegmentation::MultiSegmentation::position().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a9357e76769306a1bf6f92c8a5d8eb6b4}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!positionToBin@{positionToBin}}
+\index{positionToBin@{positionToBin}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{positionToBin}]{\setlength{\rightskip}{0pt plus 5cm}int DD4hep::DDSegmentation::Segmentation::positionToBin (double {\em position}, \/  std::vector$<$ double $>$ const \& {\em cellBoundaries}, \/  double {\em offset} = {\ttfamily 0.})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a9357e76769306a1bf6f92c8a5d8eb6b4}
+
+
+Helper method to convert a 1D position to a cell ID given a vector of binBoundaries. 
+
+Definition at line 161 of file Segmentation.cpp.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ac4b0fad36827310fd144843d77e39d71}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!positionToBin@{positionToBin}}
+\index{positionToBin@{positionToBin}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{positionToBin}]{\setlength{\rightskip}{0pt plus 5cm}int DD4hep::DDSegmentation::Segmentation::positionToBin (double {\em position}, \/  double {\em cellSize}, \/  double {\em offset} = {\ttfamily 0.})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ac4b0fad36827310fd144843d77e39d71}
+
+
+Helper method to convert a 1D position to a cell ID. 
+
+Definition at line 149 of file Segmentation.cpp.
+
+Referenced by DD4hep::DDSegmentation::TiledLayerSegmentation::cellID(), DD4hep::DDSegmentation::TiledLayerGridXY::cellID(), DD4hep::DDSegmentation::ProjectiveCylinder::cellID(), DD4hep::DDSegmentation::WaferGridXY::cellID(), DD4hep::DDSegmentation::PolarGridRPhi2::cellID(), DD4hep::DDSegmentation::PolarGridRPhi::cellID(), DD4hep::DDSegmentation::CartesianGridYZ::cellID(), DD4hep::DDSegmentation::CartesianGridXZ::cellID(), DD4hep::DDSegmentation::CartesianGridXYZ::cellID(), and DD4hep::DDSegmentation::CartesianGridXY::cellID().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ab513ba2af3efb21c7ca2e17c6829aeca}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!registerIdentifier@{registerIdentifier}}
+\index{registerIdentifier@{registerIdentifier}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{registerIdentifier}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::Segmentation::registerIdentifier (const std::string \& {\em nam}, \/  const std::string \& {\em desc}, \/  std::string \& {\em ident}, \/  const std::string \& {\em defaultVal})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ab513ba2af3efb21c7ca2e17c6829aeca}
+
+
+Add a cell identifier to this segmentation. Used by derived classes to define their required identifiers. 
+
+Definition at line 134 of file Segmentation.cpp.
+
+References \_\-indexIdentifiers, \_\-parameters, and DD4hep::DDSegmentation::SegmentationParameter::NoUnit.
+
+Referenced by DD4hep::DDSegmentation::CartesianGridXY::CartesianGridXY(), DD4hep::DDSegmentation::CartesianGridXYZ::CartesianGridXYZ(), DD4hep::DDSegmentation::CartesianGridXZ::CartesianGridXZ(), DD4hep::DDSegmentation::CartesianGridYZ::CartesianGridYZ(), DD4hep::DDSegmentation::MegatileLayerGridXY::MegatileLayerGridXY(), DD4hep::DDSegmentation::PolarGridRPhi::PolarGridRPhi(), DD4hep::DDSegmentation::PolarGridRPhi2::PolarGridRPhi2(), DD4hep::DDSegmentation::ProjectiveCylinder::ProjectiveCylinder(), DD4hep::DDSegmentation::TiledLayerGridXY::TiledLayerGridXY(), DD4hep::DDSegmentation::TiledLayerSegmentation::TiledLayerSegmentation(), and DD4hep::DDSegmentation::WaferGridXY::WaferGridXY().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a7f7f6557bb76cf4726b09a4199922f97}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!registerParameter@{registerParameter}}
+\index{registerParameter@{registerParameter}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{registerParameter}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE $>$ void DD4hep::DDSegmentation::Segmentation::registerParameter (const std::string \& {\em nam}, \/  const std::string \& {\em desc}, \/  TYPE \& {\em param}, \/  const TYPE \& {\em defaultVal}, \/  {\bf UnitType} {\em unitTyp} = {\ttfamily SegmentationParameter::NoUnit}, \/  bool {\em isOpt} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a7f7f6557bb76cf4726b09a4199922f97}
+
+
+Add a parameter to this segmentation. Used by derived classes to define their parameters. 
+
+Definition at line 131 of file Segmentation.h.
+
+References \_\-parameters.
+
+Referenced by DD4hep::DDSegmentation::CartesianGridXY::CartesianGridXY(), DD4hep::DDSegmentation::CartesianGridXYZ::CartesianGridXYZ(), DD4hep::DDSegmentation::CartesianGridXZ::CartesianGridXZ(), DD4hep::DDSegmentation::CartesianGridYZ::CartesianGridYZ(), DD4hep::DDSegmentation::MegatileLayerGridXY::MegatileLayerGridXY(), DD4hep::DDSegmentation::PolarGridRPhi::PolarGridRPhi(), DD4hep::DDSegmentation::PolarGridRPhi2::PolarGridRPhi2(), DD4hep::DDSegmentation::ProjectiveCylinder::ProjectiveCylinder(), DD4hep::DDSegmentation::TiledLayerGridXY::TiledLayerGridXY(), DD4hep::DDSegmentation::TiledLayerSegmentation::TiledLayerSegmentation(), and DD4hep::DDSegmentation::WaferGridXY::WaferGridXY().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ab5973bc06538d13b1991f55e40635fa0}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!setDecoder@{setDecoder}}
+\index{setDecoder@{setDecoder}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{setDecoder}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::Segmentation::setDecoder ({\bf BitField64} $\ast$ {\em decoder})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ab5973bc06538d13b1991f55e40635fa0}
+
+
+Set the underlying decoder. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a21a046717c1aae25d103dddeb2829cb9}{DD4hep::DDSegmentation::MultiSegmentation}.
+
+Definition at line 93 of file Segmentation.cpp.
+
+References \_\-decoder, and \_\-ownsDecoder.
+
+Referenced by DD4hep::Geometry::SegmentationObject::setDecoder(), and DD4hep::Geometry::Segmentation::setDecoder().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a9bfa16e70ac68d6013c49be45b3438c3}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!setName@{setName}}
+\index{setName@{setName}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{setName}]{\setlength{\rightskip}{0pt plus 5cm}virtual void DD4hep::DDSegmentation::Segmentation::setName (const std::string \& {\em value})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a9bfa16e70ac68d6013c49be45b3438c3}
+
+
+Set the segmentation name. 
+
+Definition at line 93 of file Segmentation.h.
+
+References \_\-name.
+
+Referenced by DD4hep::Handle$<$ T $>$::assign().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_af02e320c944cc14b394f1014a8538cfa}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!setParameters@{setParameters}}
+\index{setParameters@{setParameters}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{setParameters}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::Segmentation::setParameters (const {\bf Parameters} \& {\em parameters})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_af02e320c944cc14b394f1014a8538cfa}
+
+
+Set all parameters from an existing set of parameters. 
+
+Definition at line 125 of file Segmentation.cpp.
+
+References DD4hep::DDSegmentation::SegmentationParameter::name(), parameter(), and DD4hep::DDSegmentation::SegmentationParameter::value().
+
+Referenced by DD4hep::Geometry::SegmentationObject::setParameters().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ad975bb46927b2da459d91295f95571df}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!type@{type}}
+\index{type@{type}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}virtual const std::string\& DD4hep::DDSegmentation::Segmentation::type () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ad975bb46927b2da459d91295f95571df}
+
+
+Access the segmentation type. 
+
+Definition at line 97 of file Segmentation.h.
+
+References \_\-type.
+
+Referenced by DD4hep::Geometry::SegmentationObject::type().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a00b309f8094c1831dcd32317959d5071}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!volumeID@{volumeID}}
+\index{volumeID@{volumeID}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{volumeID}]{\setlength{\rightskip}{0pt plus 5cm}{\bf VolumeID} DD4hep::DDSegmentation::Segmentation::volumeID (const {\bf CellID} \& {\em cellID}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a00b309f8094c1831dcd32317959d5071}
+
+
+Determine the volume ID from the full cell ID by removing all local fields. 
+
+Definition at line 59 of file Segmentation.cpp.
+
+References \_\-decoder, \_\-indexIdentifiers, DD4hep::DDSegmentation::BitField64::getValue(), and DD4hep::DDSegmentation::BitField64::setValue().
+
+Referenced by DD4hep::Geometry::SegmentationObject::volumeID(), and DD4hep::Geometry::Segmentation::volumeID().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a48d782572ff008ea0f05c869526735f4}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!\_\-decoder@{\_\-decoder}}
+\index{\_\-decoder@{\_\-decoder}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{\_\-decoder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BitField64}$\ast$ {\bf DD4hep::DDSegmentation::Segmentation::\_\-decoder}\hspace{0.3cm}{\ttfamily  \mbox{[}mutable, protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a48d782572ff008ea0f05c869526735f4}
+
+
+The cell ID encoder and decoder. 
+
+Definition at line 161 of file Segmentation.h.
+
+Referenced by DD4hep::DDSegmentation::MegatileLayerGridXY::cellDimensions(), DD4hep::DDSegmentation::PolarGridRPhi2::cellDimensions(), DD4hep::DDSegmentation::PolarGridRPhi::cellDimensions(), DD4hep::DDSegmentation::TiledLayerSegmentation::cellID(), DD4hep::DDSegmentation::TiledLayerGridXY::cellID(), DD4hep::DDSegmentation::ProjectiveCylinder::cellID(), DD4hep::DDSegmentation::MegatileLayerGridXY::cellID(), DD4hep::DDSegmentation::WaferGridXY::cellID(), DD4hep::DDSegmentation::PolarGridRPhi2::cellID(), DD4hep::DDSegmentation::PolarGridRPhi::cellID(), DD4hep::DDSegmentation::CartesianGridYZ::cellID(), DD4hep::DDSegmentation::CartesianGridXZ::cellID(), DD4hep::DDSegmentation::CartesianGridXYZ::cellID(), DD4hep::DDSegmentation::CartesianGridXY::cellID(), decoder(), fieldDescription(), neighbours(), DD4hep::DDSegmentation::ProjectiveCylinder::phi(), DD4hep::DDSegmentation::TiledLayerSegmentation::position(), DD4hep::DDSegmentation::TiledLayerGridXY::position(), DD4hep::DDSegmentation::ProjectiveCylinder::position(), DD4hep::DDSegmentation::MegatileLayerGridXY::position(), DD4hep::DDSegmentation::WaferGridXY::position(), DD4hep::DDSegmentation::PolarGridRPhi2::position(), DD4hep::DDSegmentation::PolarGridRPhi::position(), DD4hep::DDSegmentation::CartesianGridYZ::position(), DD4hep::DDSegmentation::CartesianGridXZ::position(), DD4hep::DDSegmentation::CartesianGridXYZ::position(), DD4hep::DDSegmentation::CartesianGridXY::position(), setDecoder(), DD4hep::DDSegmentation::ProjectiveCylinder::theta(), volumeID(), and $\sim$Segmentation().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a1e9aa1272b32dc4999584154baa72a14}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!\_\-description@{\_\-description}}
+\index{\_\-description@{\_\-description}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{\_\-description}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::DDSegmentation::Segmentation::\_\-description}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a1e9aa1272b32dc4999584154baa72a14}
+
+
+The description of the segmentation. 
+
+Definition at line 155 of file Segmentation.h.
+
+Referenced by DD4hep::DDSegmentation::CartesianGridXY::CartesianGridXY(), DD4hep::DDSegmentation::CartesianGridXYZ::CartesianGridXYZ(), DD4hep::DDSegmentation::CartesianGridXZ::CartesianGridXZ(), DD4hep::DDSegmentation::CartesianGridYZ::CartesianGridYZ(), description(), DD4hep::DDSegmentation::MegatileLayerGridXY::MegatileLayerGridXY(), DD4hep::DDSegmentation::MultiSegmentation::MultiSegmentation(), DD4hep::DDSegmentation::PolarGridRPhi::PolarGridRPhi(), DD4hep::DDSegmentation::PolarGridRPhi2::PolarGridRPhi2(), DD4hep::DDSegmentation::ProjectiveCylinder::ProjectiveCylinder(), DD4hep::DDSegmentation::TiledLayerGridXY::TiledLayerGridXY(), DD4hep::DDSegmentation::TiledLayerSegmentation::TiledLayerSegmentation(), and DD4hep::DDSegmentation::WaferGridXY::WaferGridXY().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a55ce2740cffa420bb5ac2b7646e55d98}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!\_\-indexIdentifiers@{\_\-indexIdentifiers}}
+\index{\_\-indexIdentifiers@{\_\-indexIdentifiers}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{\_\-indexIdentifiers}]{\setlength{\rightskip}{0pt plus 5cm}std::map$<$std::string, {\bf StringParameter}$>$ {\bf DD4hep::DDSegmentation::Segmentation::\_\-indexIdentifiers}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a55ce2740cffa420bb5ac2b7646e55d98}
+
+
+The indices used for the encoding. 
+
+Definition at line 159 of file Segmentation.h.
+
+Referenced by neighbours(), registerIdentifier(), and volumeID().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_aa129e659e465d9a0a60c7160d29de483}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!\_\-name@{\_\-name}}
+\index{\_\-name@{\_\-name}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::DDSegmentation::Segmentation::\_\-name}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_aa129e659e465d9a0a60c7160d29de483}
+
+
+The segmentation name. 
+
+Definition at line 151 of file Segmentation.h.
+
+Referenced by name(), and setName().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a0e9e3e6639a67335971b827cf045cd4f}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!\_\-ownsDecoder@{\_\-ownsDecoder}}
+\index{\_\-ownsDecoder@{\_\-ownsDecoder}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{\_\-ownsDecoder}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf DD4hep::DDSegmentation::Segmentation::\_\-ownsDecoder}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a0e9e3e6639a67335971b827cf045cd4f}
+
+
+Keeps track of the decoder ownership. 
+
+Definition at line 163 of file Segmentation.h.
+
+Referenced by setDecoder(), and $\sim$Segmentation().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a7ede8a80772ee04c5997696734f0c200}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!\_\-parameters@{\_\-parameters}}
+\index{\_\-parameters@{\_\-parameters}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{\_\-parameters}]{\setlength{\rightskip}{0pt plus 5cm}std::map$<$std::string, {\bf Parameter}$>$ {\bf DD4hep::DDSegmentation::Segmentation::\_\-parameters}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a7ede8a80772ee04c5997696734f0c200}
+
+
+The parameters for this segmentation. 
+
+Definition at line 157 of file Segmentation.h.
+
+Referenced by parameter(), parameters(), registerIdentifier(), registerParameter(), and $\sim$Segmentation().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a3dab8fc421e90851cc45b20b90754271}{
+\index{DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}!\_\-type@{\_\-type}}
+\index{\_\-type@{\_\-type}!DD4hep::DDSegmentation::Segmentation@{DD4hep::DDSegmentation::Segmentation}}
+\subsubsection[{\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::DDSegmentation::Segmentation::\_\-type}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a3dab8fc421e90851cc45b20b90754271}
+
+
+The segmentation type. 
+
+Definition at line 153 of file Segmentation.h.
+
+Referenced by addSubsegmentation(), DD4hep::DDSegmentation::CartesianGridXY::CartesianGridXY(), DD4hep::DDSegmentation::CartesianGridXYZ::CartesianGridXYZ(), DD4hep::DDSegmentation::CartesianGridXZ::CartesianGridXZ(), DD4hep::DDSegmentation::CartesianGridYZ::CartesianGridYZ(), cellDimensions(), DD4hep::DDSegmentation::MegatileLayerGridXY::MegatileLayerGridXY(), DD4hep::DDSegmentation::MultiSegmentation::MultiSegmentation(), parameter(), DD4hep::DDSegmentation::PolarGridRPhi::PolarGridRPhi(), DD4hep::DDSegmentation::PolarGridRPhi2::PolarGridRPhi2(), DD4hep::DDSegmentation::ProjectiveCylinder::ProjectiveCylinder(), DD4hep::DDSegmentation::TiledLayerGridXY::TiledLayerGridXY(), DD4hep::DDSegmentation::TiledLayerSegmentation::TiledLayerSegmentation(), type(), and DD4hep::DDSegmentation::WaferGridXY::WaferGridXY().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDSegmentation/include/DDSegmentation/\hyperlink{_segmentation_8h}{Segmentation.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDSegmentation/src/\hyperlink{_segmentation_8cpp}{Segmentation.cpp}\end{DoxyCompactItemize}

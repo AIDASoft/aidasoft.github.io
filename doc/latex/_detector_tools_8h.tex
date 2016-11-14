@@ -1,0 +1,62 @@
+\hypertarget{_detector_tools_8h}{
+\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/DetectorTools.h File Reference}
+\label{_detector_tools_8h}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/DetectorTools.h@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/DetectorTools.h}}
+}
+{\ttfamily \#include \char`\"{}DD4hep/Detector.h\char`\"{}}\par
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_d_d4hep}{DD4hep}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the AIDA detector description toolkit. \item\end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_d_d4hep_1_1_geometry}{DD4hep::Geometry}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the geometry part of the AIDA detector description toolkit. \item\end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools}{DD4hep::Geometry::DetectorTools}
+
+
+\begin{DoxyCompactList}\small\item\em Helper namespace used to answer detector element specific questons. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std::vector$<$ DetElement $>$ \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57c8f37a975258fd84676a69e74c56ab}{DD4hep::Geometry::DetectorTools::ElementPath}
+\item 
+typedef std::vector$<$ PlacedVolume $>$ \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{DD4hep::Geometry::DetectorTools::PlacementPath}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_aa2a3cf3ac7fbdabef840f02eb0d60d91}{DD4hep::Geometry::DetectorTools::topElement} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} child)
+\begin{DoxyCompactList}\small\item\em Determine top level element (=world) for any element walking up the detector element tree. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_aa236d3ca69ed2eb4d7777db7c080216b}{DD4hep::Geometry::DetectorTools::elementPath} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} element)
+\begin{DoxyCompactList}\small\item\em Assemble the path of a particular detector element. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a67f5a1f1c0ed6ca5698a3323fc660379}{DD4hep::Geometry::DetectorTools::elementPath} (const \hyperlink{_detector_interna_8cpp_a8d9eaa9b0f41299659b3aeb365ea8f47}{ElementPath} \&nodes, bool reverse=true)
+\begin{DoxyCompactList}\small\item\em Assemble the path of the \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} selection. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a10418f7d98665f48f0dcb14a02919fea}{DD4hep::Geometry::DetectorTools::elementPath} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} elt, \hyperlink{_detector_interna_8cpp_a8d9eaa9b0f41299659b3aeb365ea8f47}{ElementPath} \&detectors)
+\begin{DoxyCompactList}\small\item\em Collect detector elements to the top detector element (world). \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a142393e7b88829aee063f35a8e7cb984}{DD4hep::Geometry::DetectorTools::findDaughterElement} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} parent, const std::string \&subpath)
+\begin{DoxyCompactList}\small\item\em Find \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} as child of a parent by it's relative or absolute path. \item\end{DoxyCompactList}\item 
+bool \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a9e02ef062540b4e9c0d284f50106f203}{DD4hep::Geometry::DetectorTools::isParentElement} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} parent, \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} child)
+\begin{DoxyCompactList}\small\item\em Find path between the child element and the parent element. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a1ca0d88ab941b6dde4776c6b3b893fb6}{DD4hep::Geometry::DetectorTools::placementPath} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} element)
+\begin{DoxyCompactList}\small\item\em Assemble the placement path from a given detector element to the world volume. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a792502fe2b1afaa030b9697151824452}{DD4hep::Geometry::DetectorTools::placementPath} (const \hyperlink{_detector_interna_8cpp_a3cbbf9c2993eea2563e163134c7ccfad}{PlacementPath} \&nodes, bool reverse=true)
+\begin{DoxyCompactList}\small\item\em Assemble the path of the \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} selection. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_ad25502414dd3799806729e2d72f9a34a}{DD4hep::Geometry::DetectorTools::placementPath} (const std::vector$<$ const TGeoNode $\ast$ $>$ \&nodes, bool reverse=true)
+\begin{DoxyCompactList}\small\item\em Assemble the path of the \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} selection. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a4643e9605448f9652b2c95e6ef5619c3}{DD4hep::Geometry::DetectorTools::placementPath} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} elt, \hyperlink{_detector_interna_8cpp_a3cbbf9c2993eea2563e163134c7ccfad}{PlacementPath} \&nodes)
+\begin{DoxyCompactList}\small\item\em Collect detector elements placements to the top detector element (world) \mbox{[}no holes!\mbox{]}. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_ae4ebaffda73014e393cf33ea3bfe0870}{DD4hep::Geometry::DetectorTools::placementPath} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} parent, \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} child, \hyperlink{_detector_interna_8cpp_a3cbbf9c2993eea2563e163134c7ccfad}{PlacementPath} \&nodes)
+\begin{DoxyCompactList}\small\item\em Collect detector elements placements to the parent detector element \mbox{[}no holes!\mbox{]}. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a82d2f181b2755d1fbd749c30b7dd21c1}{DD4hep::Geometry::DetectorTools::findNode} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} top\_\-place, const std::string \&place)
+\begin{DoxyCompactList}\small\item\em Find a given node in the hierarchy starting from the top node (absolute placement!). \item\end{DoxyCompactList}\item 
+void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a08fe6233324d561934a33569d4548435}{DD4hep::Geometry::DetectorTools::placementTrafo} (const \hyperlink{_detector_interna_8cpp_a3cbbf9c2993eea2563e163134c7ccfad}{PlacementPath} \&nodes, bool inverse, TGeoHMatrix $\ast$\&mat)
+\begin{DoxyCompactList}\small\item\em Update cached matrix to transform to positions to an upper level Placement. \item\end{DoxyCompactList}\item 
+void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a33a0bf01d4cc18da281b63e2e865c97a}{DD4hep::Geometry::DetectorTools::placementTrafo} (const \hyperlink{_detector_interna_8cpp_a3cbbf9c2993eea2563e163134c7ccfad}{PlacementPath} \&nodes, bool inverse, TGeoHMatrix \&mat)
+\begin{DoxyCompactList}\small\item\em Update cached matrix to transform to positions to an upper level Placement. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_accc8aeaf883652cfb64beae7479b9f11}{DD4hep::Geometry::DetectorTools::toString} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume_extension_1_1_vol_i_ds}{PlacedVolume::VolIDs} \&ids)
+\begin{DoxyCompactList}\small\item\em Convert VolumeID to string. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_ae5de1f83490fd1476f7663078ffc08c7}{DD4hep::Geometry::DetectorTools::toString} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor}{IDDescriptor} \&dsc, const \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume_extension_1_1_vol_i_ds}{PlacedVolume::VolIDs} \&ids, VolumeID code)
+\begin{DoxyCompactList}\small\item\em Convert VolumeID to string. \item\end{DoxyCompactList}\end{DoxyCompactItemize}

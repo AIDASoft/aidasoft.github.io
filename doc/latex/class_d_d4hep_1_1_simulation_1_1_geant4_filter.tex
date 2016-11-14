@@ -1,0 +1,80 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_filter}{
+\section{DD4hep::Simulation::Geant4Filter Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_filter}\index{DD4hep::Simulation::Geant4Filter@{DD4hep::Simulation::Geant4Filter}}
+}
+
+
+Base class to construct filters for Geant4 sensitive detectors.  
+
+
+{\ttfamily \#include $<$Geant4SensDetAction.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4Filter::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.91781cm]{class_d_d4hep_1_1_simulation_1_1_geant4_filter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_filter_a9473fedf4d296dd044a9310a9da57bb4}{Geant4Filter} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$context, const std::string \&name)
+\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_filter_a2fdb09d7018165b25034b37fa8eb9930}{$\sim$Geant4Filter} ()
+\begin{DoxyCompactList}\small\item\em Standard destructor. \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_filter_afff6fafea1b7c0c7d61834ae0a51a23f}{operator()} (const G4Step $\ast$step) const 
+\begin{DoxyCompactList}\small\item\em Filter action. Return true if hits should be processed. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class to construct filters for Geant4 sensitive detectors. \begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 94 of file Geant4SensDetAction.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_filter_a9473fedf4d296dd044a9310a9da57bb4}{
+\index{DD4hep::Simulation::Geant4Filter@{DD4hep::Simulation::Geant4Filter}!Geant4Filter@{Geant4Filter}}
+\index{Geant4Filter@{Geant4Filter}!DD4hep::Simulation::Geant4Filter@{DD4hep::Simulation::Geant4Filter}}
+\subsubsection[{Geant4Filter}]{\setlength{\rightskip}{0pt plus 5cm}Geant4Filter::Geant4Filter ({\bf Geant4Context} $\ast$ {\em context}, \/  const std::string \& {\em name})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_filter_a9473fedf4d296dd044a9310a9da57bb4}
+
+
+Standard constructor. 
+
+Definition at line 73 of file Geant4SensDetAction.cpp.
+
+References DD4hep::InstanceCount::increment().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_filter_a2fdb09d7018165b25034b37fa8eb9930}{
+\index{DD4hep::Simulation::Geant4Filter@{DD4hep::Simulation::Geant4Filter}!$\sim$Geant4Filter@{$\sim$Geant4Filter}}
+\index{$\sim$Geant4Filter@{$\sim$Geant4Filter}!DD4hep::Simulation::Geant4Filter@{DD4hep::Simulation::Geant4Filter}}
+\subsubsection[{$\sim$Geant4Filter}]{\setlength{\rightskip}{0pt plus 5cm}Geant4Filter::$\sim$Geant4Filter ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_filter_a2fdb09d7018165b25034b37fa8eb9930}
+
+
+Standard destructor. 
+
+Definition at line 79 of file Geant4SensDetAction.cpp.
+
+References DD4hep::InstanceCount::decrement().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_filter_afff6fafea1b7c0c7d61834ae0a51a23f}{
+\index{DD4hep::Simulation::Geant4Filter@{DD4hep::Simulation::Geant4Filter}!operator()@{operator()}}
+\index{operator()@{operator()}!DD4hep::Simulation::Geant4Filter@{DD4hep::Simulation::Geant4Filter}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}bool Geant4Filter::operator() (const G4Step $\ast$ {\em step}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_filter_afff6fafea1b7c0c7d61834ae0a51a23f}
+
+
+Filter action. Return true if hits should be processed. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_readout_volume_filter_a95a43710204f164feed508114dffb548}{DD4hep::Simulation::Geant4ReadoutVolumeFilter}, \hyperlink{struct_d_d4hep_1_1_simulation_1_1_particle_reject_filter_a4fee0c9944f21ec58360f415427b601f}{DD4hep::Simulation::ParticleRejectFilter}, \hyperlink{struct_d_d4hep_1_1_simulation_1_1_particle_select_filter_a4d0d7fb1f0c8f552f5d8940405a3bbe2}{DD4hep::Simulation::ParticleSelectFilter}, \hyperlink{struct_d_d4hep_1_1_simulation_1_1_geantino_reject_filter_aa8d8f1469357f1ed18be0ed4ab7348b9}{DD4hep::Simulation::GeantinoRejectFilter}, and \hyperlink{struct_d_d4hep_1_1_simulation_1_1_energy_deposit_minimum_cut_a1ab9fdb187f848cbf70d15871188fe94}{DD4hep::Simulation::EnergyDepositMinimumCut}.
+
+Definition at line 84 of file Geant4SensDetAction.cpp.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_sens_det_action_8h}{Geant4SensDetAction.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_sens_det_action_8cpp}{Geant4SensDetAction.cpp}\end{DoxyCompactItemize}

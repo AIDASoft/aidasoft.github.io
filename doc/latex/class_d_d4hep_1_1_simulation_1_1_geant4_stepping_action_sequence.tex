@@ -1,0 +1,181 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence}{
+\section{DD4hep::Simulation::Geant4SteppingActionSequence Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence}\index{DD4hep::Simulation::Geant4SteppingActionSequence@{DD4hep::Simulation::Geant4SteppingActionSequence}}
+}
+
+
+Concrete implementation of the Geant4 stepping action sequence.  
+
+
+{\ttfamily \#include $<$Geant4SteppingAction.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4SteppingActionSequence::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_ad87447c0f76a0e4fb5f294c1c4117432}{Geant4SteppingActionSequence} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$context, const std::string \&name)
+\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_a7b7b346f45f9194e6aec6eafdde18448}{$\sim$Geant4SteppingActionSequence} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_aababd8e6f650101a6ade162f82a29f61}{updateContext} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$ctxt)
+\begin{DoxyCompactList}\small\item\em Set or update client context. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_ad5680d2d225421b9cf2cd6b530d3ab5f}{configureFiber} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$thread\_\-context)
+\begin{DoxyCompactList}\small\item\em Set or update client for the use in a new thread fiber. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action}{Geant4SteppingAction} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_a4295188144ad3820c331056a143af5d1}{get} (const std::string \&name) const 
+\begin{DoxyCompactList}\small\item\em Get an action by name. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q , typename T $>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_a80706eac8c225ea3773259f024d76e5e}{call} (Q $\ast$p, void(T::$\ast$f)(const G4Step $\ast$, G4SteppingManager $\ast$))
+\begin{DoxyCompactList}\small\item\em Register stepping action callback. Types Q and \hyperlink{class_t}{T} must be polymorph! \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_a39d7f26d436a3f512c2b467bad9d4beb}{adopt} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action}{Geant4SteppingAction} $\ast$action)
+\begin{DoxyCompactList}\small\item\em Add an actor responding to all callbacks. Sequence takes ownership. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_a51e1c2c59da560ac9bc6fc0d249e06dc}{operator()} (const G4Step $\ast$step, G4SteppingManager $\ast$mgr)
+\begin{DoxyCompactList}\small\item\em User stepping callback. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_d_d4hep_1_1_callback_sequence}{CallbackSequence} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_a336da2773a5c1c830f1b338a32a0aa7e}{m\_\-calls}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence for user stepping action calls. \item\end{DoxyCompactList}\item 
+Actors$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action}{Geant4SteppingAction} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_a09eb0634934bffe70733ba62589456c2}{m\_\-actors}
+\begin{DoxyCompactList}\small\item\em The list of action objects to be called. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Concrete implementation of the Geant4 stepping action sequence. The sequence dispatches the callbacks for each stepping action to all registered \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action}{Geant4SteppingAction} members and all registered callbacks.
+
+Note Multi-\/Threading issue: Neither callbacks not the action list is protected against multiple threads calling the Geant4 callbacks! These must be protected in the user actions themselves.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 98 of file Geant4SteppingAction.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_ad87447c0f76a0e4fb5f294c1c4117432}{
+\index{DD4hep::Simulation::Geant4SteppingActionSequence@{DD4hep::Simulation::Geant4SteppingActionSequence}!Geant4SteppingActionSequence@{Geant4SteppingActionSequence}}
+\index{Geant4SteppingActionSequence@{Geant4SteppingActionSequence}!DD4hep::Simulation::Geant4SteppingActionSequence@{DD4hep::Simulation::Geant4SteppingActionSequence}}
+\subsubsection[{Geant4SteppingActionSequence}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4SteppingActionSequence::Geant4SteppingActionSequence ({\bf Geant4Context} $\ast$ {\em context}, \/  const std::string \& {\em name})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_ad87447c0f76a0e4fb5f294c1c4117432}
+
+
+Standard constructor. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_a7b7b346f45f9194e6aec6eafdde18448}{
+\index{DD4hep::Simulation::Geant4SteppingActionSequence@{DD4hep::Simulation::Geant4SteppingActionSequence}!$\sim$Geant4SteppingActionSequence@{$\sim$Geant4SteppingActionSequence}}
+\index{$\sim$Geant4SteppingActionSequence@{$\sim$Geant4SteppingActionSequence}!DD4hep::Simulation::Geant4SteppingActionSequence@{DD4hep::Simulation::Geant4SteppingActionSequence}}
+\subsubsection[{$\sim$Geant4SteppingActionSequence}]{\setlength{\rightskip}{0pt plus 5cm}Geant4SteppingActionSequence::$\sim$Geant4SteppingActionSequence ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_a7b7b346f45f9194e6aec6eafdde18448}
+
+
+Default destructor. 
+
+Definition at line 92 of file Geant4SteppingAction.cpp.
+
+References DD4hep::CallbackSequence::clear(), DD4hep::InstanceCount::decrement(), m\_\-actors, m\_\-calls, and DD4hep::Simulation::Geant4Action::release().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_a39d7f26d436a3f512c2b467bad9d4beb}{
+\index{DD4hep::Simulation::Geant4SteppingActionSequence@{DD4hep::Simulation::Geant4SteppingActionSequence}!adopt@{adopt}}
+\index{adopt@{adopt}!DD4hep::Simulation::Geant4SteppingActionSequence@{DD4hep::Simulation::Geant4SteppingActionSequence}}
+\subsubsection[{adopt}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SteppingActionSequence::adopt ({\bf Geant4SteppingAction} $\ast$ {\em action})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_a39d7f26d436a3f512c2b467bad9d4beb}
+
+
+Add an actor responding to all callbacks. Sequence takes ownership. 
+
+Definition at line 122 of file Geant4SteppingAction.cpp.
+
+References DD4hep::Simulation::Geant4Action::addRef(), and m\_\-actors.
+
+Referenced by DD4hep::Converter$<$ T, ARG $>$::operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_a80706eac8c225ea3773259f024d76e5e}{
+\index{DD4hep::Simulation::Geant4SteppingActionSequence@{DD4hep::Simulation::Geant4SteppingActionSequence}!call@{call}}
+\index{call@{call}!DD4hep::Simulation::Geant4SteppingActionSequence@{DD4hep::Simulation::Geant4SteppingActionSequence}}
+\subsubsection[{call}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q , typename T $>$ void DD4hep::Simulation::Geant4SteppingActionSequence::call (Q $\ast$ {\em p}, \/  void(T::$\ast$)(const G4Step $\ast$, G4SteppingManager $\ast$) {\em f})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_a80706eac8c225ea3773259f024d76e5e}
+
+
+Register stepping action callback. Types Q and \hyperlink{class_t}{T} must be polymorph! 
+
+Definition at line 118 of file Geant4SteppingAction.h.
+
+References DD4hep::CallbackSequence::add(), and m\_\-calls.
+
+Referenced by DD4hep::Converter$<$ T, ARG $>$::operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_ad5680d2d225421b9cf2cd6b530d3ab5f}{
+\index{DD4hep::Simulation::Geant4SteppingActionSequence@{DD4hep::Simulation::Geant4SteppingActionSequence}!configureFiber@{configureFiber}}
+\index{configureFiber@{configureFiber}!DD4hep::Simulation::Geant4SteppingActionSequence@{DD4hep::Simulation::Geant4SteppingActionSequence}}
+\subsubsection[{configureFiber}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SteppingActionSequence::configureFiber ({\bf Geant4Context} $\ast$ {\em thread\_\-context})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_ad5680d2d225421b9cf2cd6b530d3ab5f}
+
+
+Set or update client for the use in a new thread fiber. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a6adc7138508303e4e417cb48a737ab19}{DD4hep::Simulation::Geant4Action}.
+
+Definition at line 100 of file Geant4SteppingAction.cpp.
+
+References DD4hep::Simulation::Geant4Action::configureFiber(), and m\_\-actors.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_a4295188144ad3820c331056a143af5d1}{
+\index{DD4hep::Simulation::Geant4SteppingActionSequence@{DD4hep::Simulation::Geant4SteppingActionSequence}!get@{get}}
+\index{get@{get}!DD4hep::Simulation::Geant4SteppingActionSequence@{DD4hep::Simulation::Geant4SteppingActionSequence}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4SteppingAction}$\ast$ DD4hep::Simulation::Geant4SteppingActionSequence::get (const std::string \& {\em name}) const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_a4295188144ad3820c331056a143af5d1}
+
+
+Get an action by name. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_a51e1c2c59da560ac9bc6fc0d249e06dc}{
+\index{DD4hep::Simulation::Geant4SteppingActionSequence@{DD4hep::Simulation::Geant4SteppingActionSequence}!operator()@{operator()}}
+\index{operator()@{operator()}!DD4hep::Simulation::Geant4SteppingActionSequence@{DD4hep::Simulation::Geant4SteppingActionSequence}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SteppingActionSequence::operator() (const G4Step $\ast$ {\em step}, \/  G4SteppingManager $\ast$ {\em mgr})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_a51e1c2c59da560ac9bc6fc0d249e06dc}
+
+
+User stepping callback. Pre-\/track action callback. 
+
+Definition at line 116 of file Geant4SteppingAction.cpp.
+
+References m\_\-actors, and m\_\-calls.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_aababd8e6f650101a6ade162f82a29f61}{
+\index{DD4hep::Simulation::Geant4SteppingActionSequence@{DD4hep::Simulation::Geant4SteppingActionSequence}!updateContext@{updateContext}}
+\index{updateContext@{updateContext}!DD4hep::Simulation::Geant4SteppingActionSequence@{DD4hep::Simulation::Geant4SteppingActionSequence}}
+\subsubsection[{updateContext}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SteppingActionSequence::updateContext ({\bf Geant4Context} $\ast$ {\em ctxt})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_aababd8e6f650101a6ade162f82a29f61}
+
+
+Set or update client context. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae3b9daf2af881df956c46568c0743313}{DD4hep::Simulation::Geant4Action}.
+
+Definition at line 105 of file Geant4SteppingAction.cpp.
+
+References m\_\-actors, and DD4hep::Simulation::Geant4Action::m\_\-context.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_a09eb0634934bffe70733ba62589456c2}{
+\index{DD4hep::Simulation::Geant4SteppingActionSequence@{DD4hep::Simulation::Geant4SteppingActionSequence}!m\_\-actors@{m\_\-actors}}
+\index{m\_\-actors@{m\_\-actors}!DD4hep::Simulation::Geant4SteppingActionSequence@{DD4hep::Simulation::Geant4SteppingActionSequence}}
+\subsubsection[{m\_\-actors}]{\setlength{\rightskip}{0pt plus 5cm}Actors$<${\bf Geant4SteppingAction}$>$ {\bf DD4hep::Simulation::Geant4SteppingActionSequence::m\_\-actors}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_a09eb0634934bffe70733ba62589456c2}
+
+
+The list of action objects to be called. 
+
+Definition at line 103 of file Geant4SteppingAction.h.
+
+Referenced by adopt(), configureFiber(), operator()(), updateContext(), and $\sim$Geant4SteppingActionSequence().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_a336da2773a5c1c830f1b338a32a0aa7e}{
+\index{DD4hep::Simulation::Geant4SteppingActionSequence@{DD4hep::Simulation::Geant4SteppingActionSequence}!m\_\-calls@{m\_\-calls}}
+\index{m\_\-calls@{m\_\-calls}!DD4hep::Simulation::Geant4SteppingActionSequence@{DD4hep::Simulation::Geant4SteppingActionSequence}}
+\subsubsection[{m\_\-calls}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CallbackSequence} {\bf DD4hep::Simulation::Geant4SteppingActionSequence::m\_\-calls}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_a336da2773a5c1c830f1b338a32a0aa7e}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence for user stepping action calls. 
+
+Definition at line 101 of file Geant4SteppingAction.h.
+
+Referenced by call(), operator()(), and $\sim$Geant4SteppingActionSequence().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_stepping_action_8h}{Geant4SteppingAction.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_stepping_action_8cpp}{Geant4SteppingAction.cpp}\end{DoxyCompactItemize}

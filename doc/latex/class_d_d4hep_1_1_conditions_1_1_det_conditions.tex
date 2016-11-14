@@ -1,0 +1,228 @@
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_det_conditions}{
+\section{DD4hep::Conditions::DetConditions Class Reference}
+\label{class_d_d4hep_1_1_conditions_1_1_det_conditions}\index{DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}}
+}
+
+
+\hyperlink{class_d_d4hep_1_1_handle}{Handle} class describing the access to DetElement dependent conditions.  
+
+
+{\ttfamily \#include $<$DetConditions.h$>$}Inheritance diagram for DD4hep::Conditions::DetConditions::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_conditions_1_1_det_conditions}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_object}{Geometry::DetElementObject} \hyperlink{class_d_d4hep_1_1_conditions_1_1_det_conditions_a4c0ad456b1967b5b724894f23ef63dec}{Object}
+\begin{DoxyCompactList}\small\item\em Internal object type. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_object}{Object} $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_det_conditions_ab958ffc02b500f3404f001bec0eca780}{RefObject}
+\begin{DoxyCompactList}\small\item\em Definition of the base handle type. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_det_conditions_a9a4cde83aa738c3970fd1cfe2e77f3b0}{DetConditions} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_det_conditions_a54b5cab9b9fca16db159c7f2cf5a4023}{DetConditions} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_object}{Object} $\ast$object\_\-ptr)
+\begin{DoxyCompactList}\small\item\em Constructor to hold handled object. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_conditions_1_1_det_conditions_ae5a6ac2c8afa92d6f34a8f2a66138728}{DetConditions} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&e)
+\begin{DoxyCompactList}\small\item\em Templated constructor for handle conversions. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_det_conditions_a5b72efafc068b87b3ec6eba550353afe}{DetConditions} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_det_conditions}{DetConditions} \&e)
+\begin{DoxyCompactList}\small\item\em Constructor to copy handle. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_det_conditions_a48f5f45b8d7896721e3875f0b02e0f9a}{DetConditions} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Geometry::DetElement} \&e)
+\begin{DoxyCompactList}\small\item\em Constructor to copy handle. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_object}{Object} \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_det_conditions_a07ac5ff6cc7113eed2568952951bc8df}{\_\-data} () const 
+\begin{DoxyCompactList}\small\item\em Additional data accessor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_det_conditions}{DetConditions} \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_det_conditions_aea710da17ca864a0528a7b3503c16d2d}{operator=} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_det_conditions}{DetConditions} \&e)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_conditions_1_1_det_conditions_a1e7e83b427b3e91aac8218f6cea503ed}{hasConditions} () const 
+\begin{DoxyCompactList}\small\item\em Check if conditions are at all present. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_container}{Container} \hyperlink{class_d_d4hep_1_1_conditions_1_1_det_conditions_a647bd874d691721d29a739b912e8c02e}{conditions} () const 
+\begin{DoxyCompactList}\small\item\em Access to the conditions information. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \hyperlink{class_d_d4hep_1_1_conditions_1_1_det_conditions_aae12a60c145a9aee9dc098db5fd8eb7b}{get} (const std::string \&key, const \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool}{UserPool} \&pool)
+\begin{DoxyCompactList}\small\item\em Access to condition objects from a given pool. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \hyperlink{class_d_d4hep_1_1_conditions_1_1_det_conditions_a4c19cc72b89329e39cd0123229cba3d0}{get} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition::key\_\-type} key, const \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool}{UserPool} \&pool)
+\begin{DoxyCompactList}\small\item\em Access to condition objects from a given pool. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \hyperlink{class_d_d4hep_1_1_conditions_1_1_det_conditions_a0bb1e77e051b8fc167a54dadbed90ca1}{get} (const std::string \&key, const \hyperlink{class_d_d4hep_1_1_i_o_v}{Condition::iov\_\-type} \&iov)
+\begin{DoxyCompactList}\small\item\em Access to condition objects. Only conditions in the pool are accessed. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \hyperlink{class_d_d4hep_1_1_conditions_1_1_det_conditions_a27faa309035740b80ff2053fff6f30ba}{get} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition::key\_\-type} key, const \hyperlink{class_d_d4hep_1_1_i_o_v}{Condition::iov\_\-type} \&iov)
+\begin{DoxyCompactList}\small\item\em Access to condition objects. Only conditions in the pool are accessed. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_d_d4hep_1_1_handle}{Handle} class describing the access to DetElement dependent conditions. \begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 43 of file DetConditions.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_det_conditions_a4c0ad456b1967b5b724894f23ef63dec}{
+\index{DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}!Object@{Object}}
+\index{Object@{Object}!DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}}
+\subsubsection[{Object}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::DetElementObject} {\bf DD4hep::Conditions::DetConditions::Object}}}
+\label{class_d_d4hep_1_1_conditions_1_1_det_conditions_a4c0ad456b1967b5b724894f23ef63dec}
+
+
+Internal object type. 
+
+Definition at line 46 of file DetConditions.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_det_conditions_ab958ffc02b500f3404f001bec0eca780}{
+\index{DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}!RefObject@{RefObject}}
+\index{RefObject@{RefObject}!DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}}
+\subsubsection[{RefObject}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Handle}$<${\bf Object}$>$ {\bf DD4hep::Conditions::DetConditions::RefObject}}}
+\label{class_d_d4hep_1_1_conditions_1_1_det_conditions_ab958ffc02b500f3404f001bec0eca780}
+
+
+Definition of the base handle type. 
+
+Definition at line 48 of file DetConditions.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_det_conditions_a9a4cde83aa738c3970fd1cfe2e77f3b0}{
+\index{DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}!DetConditions@{DetConditions}}
+\index{DetConditions@{DetConditions}!DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}}
+\subsubsection[{DetConditions}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Conditions::DetConditions::DetConditions ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_det_conditions_a9a4cde83aa738c3970fd1cfe2e77f3b0}
+
+
+Default constructor. 
+
+Definition at line 53 of file DetConditions.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_det_conditions_a54b5cab9b9fca16db159c7f2cf5a4023}{
+\index{DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}!DetConditions@{DetConditions}}
+\index{DetConditions@{DetConditions}!DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}}
+\subsubsection[{DetConditions}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Conditions::DetConditions::DetConditions ({\bf Object} $\ast$ {\em object\_\-ptr})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_det_conditions_a54b5cab9b9fca16db159c7f2cf5a4023}
+
+
+Constructor to hold handled object. 
+
+Definition at line 56 of file DetConditions.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_det_conditions_ae5a6ac2c8afa92d6f34a8f2a66138728}{
+\index{DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}!DetConditions@{DetConditions}}
+\index{DetConditions@{DetConditions}!DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}}
+\subsubsection[{DetConditions}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q $>$ DD4hep::Conditions::DetConditions::DetConditions (const {\bf Handle}$<$ Q $>$ \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_det_conditions_ae5a6ac2c8afa92d6f34a8f2a66138728}
+
+
+Templated constructor for handle conversions. 
+
+Definition at line 59 of file DetConditions.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_det_conditions_a5b72efafc068b87b3ec6eba550353afe}{
+\index{DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}!DetConditions@{DetConditions}}
+\index{DetConditions@{DetConditions}!DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}}
+\subsubsection[{DetConditions}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Conditions::DetConditions::DetConditions (const {\bf DetConditions} \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_det_conditions_a5b72efafc068b87b3ec6eba550353afe}
+
+
+Constructor to copy handle. 
+
+Definition at line 62 of file DetConditions.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_det_conditions_a48f5f45b8d7896721e3875f0b02e0f9a}{
+\index{DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}!DetConditions@{DetConditions}}
+\index{DetConditions@{DetConditions}!DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}}
+\subsubsection[{DetConditions}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Conditions::DetConditions::DetConditions (const {\bf Geometry::DetElement} \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_det_conditions_a48f5f45b8d7896721e3875f0b02e0f9a}
+
+
+Constructor to copy handle. 
+
+Definition at line 65 of file DetConditions.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_det_conditions_a07ac5ff6cc7113eed2568952951bc8df}{
+\index{DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}!\_\-data@{\_\-data}}
+\index{\_\-data@{\_\-data}!DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}}
+\subsubsection[{\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}\& DD4hep::Conditions::DetConditions::\_\-data () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_det_conditions_a07ac5ff6cc7113eed2568952951bc8df}
+
+
+Additional data accessor. 
+
+Definition at line 74 of file DetConditions.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_det_conditions_a647bd874d691721d29a739b912e8c02e}{
+\index{DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}!conditions@{conditions}}
+\index{conditions@{conditions}!DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}}
+\subsubsection[{conditions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Container} DetConditions::conditions () const}}
+\label{class_d_d4hep_1_1_conditions_1_1_det_conditions_a647bd874d691721d29a739b912e8c02e}
+
+
+Access to the conditions information. 
+
+Definition at line 35 of file DetConditions.cpp.
+
+References DD4hep::Handle$<$ Geometry::DetElementObject $>$::access(), DD4hep::Geometry::DetElementObject::assign\_\-conditions(), and DD4hep::Geometry::DetElementObject::conditions.
+
+Referenced by DD4hep::Conditions::Test::TestEnv::dump\_\-detector\_\-element(), and get().\hypertarget{class_d_d4hep_1_1_conditions_1_1_det_conditions_a27faa309035740b80ff2053fff6f30ba}{
+\index{DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}!get@{get}}
+\index{get@{get}!DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Condition} DetConditions::get ({\bf Condition::key\_\-type} {\em key}, \/  const {\bf Condition::iov\_\-type} \& {\em iov})}}
+\label{class_d_d4hep_1_1_conditions_1_1_det_conditions_a27faa309035740b80ff2053fff6f30ba}
+
+
+Access to condition objects. Only conditions in the pool are accessed. Access to condition objects. 
+
+Definition at line 48 of file DetConditions.cpp.
+
+References conditions(), and DD4hep::Conditions::Container::get().\hypertarget{class_d_d4hep_1_1_conditions_1_1_det_conditions_a0bb1e77e051b8fc167a54dadbed90ca1}{
+\index{DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}!get@{get}}
+\index{get@{get}!DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Condition} DetConditions::get (const std::string \& {\em key}, \/  const {\bf Condition::iov\_\-type} \& {\em iov})}}
+\label{class_d_d4hep_1_1_conditions_1_1_det_conditions_a0bb1e77e051b8fc167a54dadbed90ca1}
+
+
+Access to condition objects. Only conditions in the pool are accessed. Access to condition objects. 
+
+Definition at line 43 of file DetConditions.cpp.
+
+References conditions(), and DD4hep::Conditions::Container::get().\hypertarget{class_d_d4hep_1_1_conditions_1_1_det_conditions_a4c19cc72b89329e39cd0123229cba3d0}{
+\index{DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}!get@{get}}
+\index{get@{get}!DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Condition} DetConditions::get ({\bf Condition::key\_\-type} {\em key}, \/  const {\bf UserPool} \& {\em pool})}}
+\label{class_d_d4hep_1_1_conditions_1_1_det_conditions_a4c19cc72b89329e39cd0123229cba3d0}
+
+
+Access to condition objects from a given pool. Access to condition objects from a given pool. Only conditions in the pool are accessed. 
+
+Definition at line 58 of file DetConditions.cpp.
+
+References conditions(), and DD4hep::Conditions::Container::get().\hypertarget{class_d_d4hep_1_1_conditions_1_1_det_conditions_aae12a60c145a9aee9dc098db5fd8eb7b}{
+\index{DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}!get@{get}}
+\index{get@{get}!DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Condition} DetConditions::get (const std::string \& {\em key}, \/  const {\bf UserPool} \& {\em pool})}}
+\label{class_d_d4hep_1_1_conditions_1_1_det_conditions_aae12a60c145a9aee9dc098db5fd8eb7b}
+
+
+Access to condition objects from a given pool. Access to condition objects from a given pool. Only conditions in the pool are accessed. 
+
+Definition at line 53 of file DetConditions.cpp.
+
+References conditions(), and DD4hep::Conditions::Container::get().\hypertarget{class_d_d4hep_1_1_conditions_1_1_det_conditions_a1e7e83b427b3e91aac8218f6cea503ed}{
+\index{DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}!hasConditions@{hasConditions}}
+\index{hasConditions@{hasConditions}!DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}}
+\subsubsection[{hasConditions}]{\setlength{\rightskip}{0pt plus 5cm}bool DetConditions::hasConditions () const}}
+\label{class_d_d4hep_1_1_conditions_1_1_det_conditions_a1e7e83b427b3e91aac8218f6cea503ed}
+
+
+Check if conditions are at all present. 
+
+Definition at line 27 of file DetConditions.cpp.
+
+References DD4hep::Handle$<$ Geometry::DetElementObject $>$::access(), and DD4hep::Geometry::DetElementObject::conditions.\hypertarget{class_d_d4hep_1_1_conditions_1_1_det_conditions_aea710da17ca864a0528a7b3503c16d2d}{
+\index{DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}!operator=@{operator=}}
+\index{operator=@{operator=}!DD4hep::Conditions::DetConditions@{DD4hep::Conditions::DetConditions}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetConditions}\& DD4hep::Conditions::DetConditions::operator= (const {\bf DetConditions} \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_det_conditions_aea710da17ca864a0528a7b3503c16d2d}
+
+
+Assignment operator. 
+
+Definition at line 78 of file DetConditions.h.
+
+References DD4hep::Handle$<$ T $>$::m\_\-element.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_det_conditions_8h}{DetConditions.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_det_conditions_8cpp}{DetConditions.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,274 @@
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_condition}{
+\section{DD4hep::Alignments::AlignmentCondition Class Reference}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_condition}\index{DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}}
+}
+
+
+Main handle class to hold an alignment conditions object.  
+
+
+{\ttfamily \#include $<$Alignments.h$>$}Inheritance diagram for DD4hep::Alignments::AlignmentCondition::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_alignments_1_1_alignment_condition}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_condition_object}{Interna::AlignmentConditionObject} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_condition_aad9d743ab04b8eb38063249c6a9e16c0}{Object}
+\begin{DoxyCompactList}\small\item\em Forward definition of the base data object containing alignment data. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data}{AlignmentData} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a6fcd9bd0e9ac67afcf43270cbd9e9983}{Data}
+\begin{DoxyCompactList}\small\item\em Forward definition of the base data object containing alignment data. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Geometry::PlacedVolume} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a4d73434f31bcdf1c29d271c14b9122cb}{PlacedVolume}
+\begin{DoxyCompactList}\small\item\em Forward definition of the geometry placement. \item\end{DoxyCompactList}\item 
+typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} $>$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_condition_ae1ff696352ce5e8726973ea89cf80d8a}{NodeList}
+\begin{DoxyCompactList}\small\item\em Forward definition of the nodelist leading to the world. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta}{Alignments::Delta} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a7a0f38a79212c07c444c8c8cd512bbd6}{Delta}
+\begin{DoxyCompactList}\small\item\em Forward definition of the alignment delta data. \item\end{DoxyCompactList}\item 
+typedef unsigned int \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a6ae3e6421b162cdd440b60d5a4e1ed92}{key\_\-type}
+\begin{DoxyCompactList}\small\item\em Forward definition of the key type. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a95e1d25777aca1542555e477c8233968}{iov\_\-type}
+\begin{DoxyCompactList}\small\item\em Forward definition of the iov type. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a47e83eec8de8934ae9787ecd328ce08e}{AlignmentCondition} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a39dcb2c2af405eef6cdf0c35bd159823}{AlignmentCondition} (\hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_condition_object}{Object} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a5bd168115013833363882f86fe7b8259}{AlignmentCondition} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object}{Conditions::Interna::ConditionObject} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Assignment constructor from condition object. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_condition_ab68255f67f7240febe0074888d428ee5}{AlignmentCondition} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&e)
+\begin{DoxyCompactList}\small\item\em Constructor to be used when reading the already parsed object. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_condition_aac47c637a8b0c6f621e6c486244b21a2}{AlignmentCondition} (const std::string \&name)
+\begin{DoxyCompactList}\small\item\em Object constructor for pure alignment objects. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_i_o_v_type}{IOVType} \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a499330052ed8d30261c66bcd91984c17}{iovType} () const 
+\begin{DoxyCompactList}\small\item\em Access the \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} type. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_i_o_v}{iov\_\-type} \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_condition_afdf431da7cfd5de1c2335376b8efe93f}{iov} () const 
+\begin{DoxyCompactList}\small\item\em Access the \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} block. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data}{Data} \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a29cd43941dc85481f8b63ee037041006}{data} ()
+\begin{DoxyCompactList}\small\item\em Data accessor for the use of decorators. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data}{Data} \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a3425870f9b961eef0be9c68cb3117614}{data} () const 
+\begin{DoxyCompactList}\small\item\em Data accessor for the use of decorators. \item\end{DoxyCompactList}\item 
+const TGeoHMatrix \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a4e254e214e4b3b6d60b0db9268d63b3b}{worldTransformation} () const 
+\begin{DoxyCompactList}\small\item\em Create cached matrix to transform to world coordinates. \item\end{DoxyCompactList}\item 
+const TGeoHMatrix \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_condition_ad0c399c6f6a8aefe831e1e373d4e01ef}{detectorTransformation} () const 
+\begin{DoxyCompactList}\small\item\em Access the alignment/placement matrix with respect to the world. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_condition_af3a63d0ab5e82de20ccf9550b81d4473}{is\_\-bound} () const 
+\begin{DoxyCompactList}\small\item\em Check if object is already bound.... \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main handle class to hold an alignment conditions object. \begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 123 of file Alignments.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a6fcd9bd0e9ac67afcf43270cbd9e9983}{
+\index{DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}!Data@{Data}}
+\index{Data@{Data}!DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}}
+\subsubsection[{Data}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf AlignmentData} {\bf DD4hep::Alignments::AlignmentCondition::Data}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a6fcd9bd0e9ac67afcf43270cbd9e9983}
+
+
+Forward definition of the base data object containing alignment data. 
+
+Definition at line 128 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a7a0f38a79212c07c444c8c8cd512bbd6}{
+\index{DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}!Delta@{Delta}}
+\index{Delta@{Delta}!DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}}
+\subsubsection[{Delta}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Alignments::Delta} {\bf DD4hep::Alignments::AlignmentCondition::Delta}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a7a0f38a79212c07c444c8c8cd512bbd6}
+
+
+Forward definition of the alignment delta data. 
+
+Definition at line 134 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a95e1d25777aca1542555e477c8233968}{
+\index{DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}!iov\_\-type@{iov\_\-type}}
+\index{iov\_\-type@{iov\_\-type}!DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}}
+\subsubsection[{iov\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf IOV} {\bf DD4hep::Alignments::AlignmentCondition::iov\_\-type}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a95e1d25777aca1542555e477c8233968}
+
+
+Forward definition of the iov type. 
+
+Definition at line 138 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a6ae3e6421b162cdd440b60d5a4e1ed92}{
+\index{DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}!key\_\-type@{key\_\-type}}
+\index{key\_\-type@{key\_\-type}!DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}}
+\subsubsection[{key\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf DD4hep::Alignments::AlignmentCondition::key\_\-type}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a6ae3e6421b162cdd440b60d5a4e1ed92}
+
+
+Forward definition of the key type. 
+
+Definition at line 136 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_condition_ae1ff696352ce5e8726973ea89cf80d8a}{
+\index{DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}!NodeList@{NodeList}}
+\index{NodeList@{NodeList}!DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}}
+\subsubsection[{NodeList}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf PlacedVolume}$>$ {\bf DD4hep::Alignments::AlignmentCondition::NodeList}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_condition_ae1ff696352ce5e8726973ea89cf80d8a}
+
+
+Forward definition of the nodelist leading to the world. 
+
+Definition at line 132 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_condition_aad9d743ab04b8eb38063249c6a9e16c0}{
+\index{DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}!Object@{Object}}
+\index{Object@{Object}!DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}}
+\subsubsection[{Object}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Interna::AlignmentConditionObject} {\bf DD4hep::Alignments::AlignmentCondition::Object}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_condition_aad9d743ab04b8eb38063249c6a9e16c0}
+
+
+Forward definition of the base data object containing alignment data. 
+
+Definition at line 126 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a4d73434f31bcdf1c29d271c14b9122cb}{
+\index{DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}!PlacedVolume@{PlacedVolume}}
+\index{PlacedVolume@{PlacedVolume}!DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}}
+\subsubsection[{PlacedVolume}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::PlacedVolume} {\bf DD4hep::Alignments::AlignmentCondition::PlacedVolume}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a4d73434f31bcdf1c29d271c14b9122cb}
+
+
+Forward definition of the geometry placement. 
+
+Definition at line 130 of file Alignments.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a47e83eec8de8934ae9787ecd328ce08e}{
+\index{DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}!AlignmentCondition@{AlignmentCondition}}
+\index{AlignmentCondition@{AlignmentCondition}!DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}}
+\subsubsection[{AlignmentCondition}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Alignments::AlignmentCondition::AlignmentCondition ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a47e83eec8de8934ae9787ecd328ce08e}
+
+
+Default constructor. 
+
+Definition at line 142 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a39dcb2c2af405eef6cdf0c35bd159823}{
+\index{DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}!AlignmentCondition@{AlignmentCondition}}
+\index{AlignmentCondition@{AlignmentCondition}!DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}}
+\subsubsection[{AlignmentCondition}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Alignments::AlignmentCondition::AlignmentCondition ({\bf Object} $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a39dcb2c2af405eef6cdf0c35bd159823}
+
+
+Default constructor. 
+
+Definition at line 144 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a5bd168115013833363882f86fe7b8259}{
+\index{DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}!AlignmentCondition@{AlignmentCondition}}
+\index{AlignmentCondition@{AlignmentCondition}!DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}}
+\subsubsection[{AlignmentCondition}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Alignments::AlignmentCondition::AlignmentCondition ({\bf Conditions::Interna::ConditionObject} $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a5bd168115013833363882f86fe7b8259}
+
+
+Assignment constructor from condition object. 
+
+Definition at line 146 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_condition_ab68255f67f7240febe0074888d428ee5}{
+\index{DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}!AlignmentCondition@{AlignmentCondition}}
+\index{AlignmentCondition@{AlignmentCondition}!DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}}
+\subsubsection[{AlignmentCondition}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q $>$ DD4hep::Alignments::AlignmentCondition::AlignmentCondition (const {\bf Handle}$<$ Q $>$ \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_condition_ab68255f67f7240febe0074888d428ee5}
+
+
+Constructor to be used when reading the already parsed object. 
+
+Definition at line 148 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_condition_aac47c637a8b0c6f621e6c486244b21a2}{
+\index{DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}!AlignmentCondition@{AlignmentCondition}}
+\index{AlignmentCondition@{AlignmentCondition}!DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}}
+\subsubsection[{AlignmentCondition}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Alignments::AlignmentCondition::AlignmentCondition (const std::string \& {\em name})}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_condition_aac47c637a8b0c6f621e6c486244b21a2}
+
+
+Object constructor for pure alignment objects. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a3425870f9b961eef0be9c68cb3117614}{
+\index{DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}!data@{data}}
+\index{data@{data}!DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf AlignmentCondition::Data} \& AlignmentCondition::data () const}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a3425870f9b961eef0be9c68cb3117614}
+
+
+Data accessor for the use of decorators. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_handle_a821fe41f46aa5ce97cfb04a6a60e5cd5}{DD4hep::Handle$<$ Interna::AlignmentConditionObject $>$}.
+
+Definition at line 93 of file Alignments.cpp.
+
+References DD4hep::Handle$<$ Interna::AlignmentConditionObject $>$::access(), DD4hep::Alignments::Interna::AlignmentConditionObject::alignment\_\-data, DD4hep::Conditions::Condition::bind(), DD4hep::Alignments::AlignmentData::condition, DD4hep::Conditions::Condition::get(), and DD4hep::Conditions::Condition::is\_\-bound().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a29cd43941dc85481f8b63ee037041006}{
+\index{DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}!data@{data}}
+\index{data@{data}!DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf AlignmentCondition::Data} \& AlignmentCondition::data ()}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a29cd43941dc85481f8b63ee037041006}
+
+
+Data accessor for the use of decorators. Data block (bound type) 
+
+Definition at line 82 of file Alignments.cpp.
+
+References DD4hep::Handle$<$ Interna::AlignmentConditionObject $>$::access(), DD4hep::Alignments::Interna::AlignmentConditionObject::alignment\_\-data, DD4hep::Conditions::Condition::bind(), DD4hep::Alignments::AlignmentData::condition, DD4hep::Conditions::Condition::get(), and DD4hep::Conditions::Condition::is\_\-bound().
+
+Referenced by DD4hep::Alignments::Interna::AlignmentConditionObject::clear(), DD4hep::Alignments::AlignmentsManagerObject::compute(), computeDelta(), detectorTransformation(), DD4hep::Conditions::AlignmentsLoaderImp::get(), DD4hep::Alignments::AlignmentUpdateCall::handle(), DD4hep::Alignments::AlignmentsManagerObject::to\_\-world(), and worldTransformation().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_condition_ad0c399c6f6a8aefe831e1e373d4e01ef}{
+\index{DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}!detectorTransformation@{detectorTransformation}}
+\index{detectorTransformation@{detectorTransformation}!DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}}
+\subsubsection[{detectorTransformation}]{\setlength{\rightskip}{0pt plus 5cm}const TGeoHMatrix \& AlignmentCondition::detectorTransformation () const}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_condition_ad0c399c6f6a8aefe831e1e373d4e01ef}
+
+
+Access the alignment/placement matrix with respect to the world. 
+
+Definition at line 114 of file Alignments.cpp.
+
+References data(), and DD4hep::Alignments::AlignmentData::detectorTransformation().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_condition_afdf431da7cfd5de1c2335376b8efe93f}{
+\index{DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}!iov@{iov}}
+\index{iov@{iov}!DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}}
+\subsubsection[{iov}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf DD4hep::IOV} \& AlignmentCondition::iov () const}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_condition_afdf431da7cfd5de1c2335376b8efe93f}
+
+
+Access the \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} block. 
+
+Definition at line 77 of file Alignments.cpp.
+
+References DD4hep::Handle$<$ Interna::AlignmentConditionObject $>$::access(), and DD4hep::Conditions::Interna::ConditionObject::iovData().
+
+Referenced by DD4hep::Alignments::AlignmentsManagerObject::compute().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a499330052ed8d30261c66bcd91984c17}{
+\index{DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}!iovType@{iovType}}
+\index{iovType@{iovType}!DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}}
+\subsubsection[{iovType}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf DD4hep::IOVType} \& AlignmentCondition::iovType () const}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a499330052ed8d30261c66bcd91984c17}
+
+
+Access the \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} type. Interval of validity 
+
+Definition at line 72 of file Alignments.cpp.
+
+References DD4hep::Handle$<$ Interna::AlignmentConditionObject $>$::access(), and DD4hep::Conditions::Interna::ConditionObject::iovType().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_condition_af3a63d0ab5e82de20ccf9550b81d4473}{
+\index{DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}!is\_\-bound@{is\_\-bound}}
+\index{is\_\-bound@{is\_\-bound}!DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}}
+\subsubsection[{is\_\-bound}]{\setlength{\rightskip}{0pt plus 5cm}bool AlignmentCondition::is\_\-bound () const}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_condition_af3a63d0ab5e82de20ccf9550b81d4473}
+
+
+Check if object is already bound.... 
+
+Definition at line 104 of file Alignments.cpp.
+
+References DD4hep::Conditions::Interna::ConditionObject::data, DD4hep::OpaqueData::is\_\-bound(), DD4hep::Handle$<$ Interna::AlignmentConditionObject $>$::isValid(), and DD4hep::Handle$<$ Interna::AlignmentConditionObject $>$::ptr().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a4e254e214e4b3b6d60b0db9268d63b3b}{
+\index{DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}!worldTransformation@{worldTransformation}}
+\index{worldTransformation@{worldTransformation}!DD4hep::Alignments::AlignmentCondition@{DD4hep::Alignments::AlignmentCondition}}
+\subsubsection[{worldTransformation}]{\setlength{\rightskip}{0pt plus 5cm}const TGeoHMatrix \& AlignmentCondition::worldTransformation () const}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_condition_a4e254e214e4b3b6d60b0db9268d63b3b}
+
+
+Create cached matrix to transform to world coordinates. 
+
+Definition at line 109 of file Alignments.cpp.
+
+References data(), and DD4hep::Alignments::AlignmentData::worldTransformation().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_alignments_8h}{Alignments.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_alignments_8cpp}{Alignments.cpp}\end{DoxyCompactItemize}

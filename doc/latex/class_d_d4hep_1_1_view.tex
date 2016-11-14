@@ -1,0 +1,700 @@
+\hypertarget{class_d_d4hep_1_1_view}{
+\section{DD4hep::View Class Reference}
+\label{class_d_d4hep_1_1_view}\index{DD4hep::View@{DD4hep::View}}
+}
+
+
+class \hyperlink{class_d_d4hep_1_1_view}{View} \hyperlink{_view_8h}{View.h} \hyperlink{_view_8h}{DDEve/View.h}  
+
+
+{\ttfamily \#include $<$View.h$>$}Inheritance diagram for DD4hep::View::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.96491cm]{class_d_d4hep_1_1_view}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{Geometry::LCDD} \hyperlink{class_d_d4hep_1_1_view_ac08032a73da302ae36cd3c7b07b83864}{LCDD}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Geometry::DetElement} \hyperlink{class_d_d4hep_1_1_view_a59eafc8150df21b918b964850ac6c462}{DetElement}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_sensitive_detector}{Geometry::SensitiveDetector} \hyperlink{class_d_d4hep_1_1_view_ad8426310f6488c879c008001eb20289e}{SensitiveDetector}
+\item 
+typedef std::map$<$ std::string, \hyperlink{class_t_eve_element_list}{TEveElementList} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_view_aac8510a8567e5e9128020fd81d8f57de}{Topics}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual TEveElement $\ast$ \hyperlink{class_d_d4hep_1_1_view_adc25ba7ece97c2f7c69f8fa6e0c13088}{ImportGeoElement} (TEveElement $\ast$element, \hyperlink{class_t_eve_element_list}{TEveElementList} $\ast$\hyperlink{classstd_1_1list}{list})
+\begin{DoxyCompactList}\small\item\em Call an element to a geometry element list. \item\end{DoxyCompactList}\item 
+virtual TEveElement $\ast$ \hyperlink{class_d_d4hep_1_1_view_a413a1148e0fb6d3007c971e9f1266629}{ImportGeoTopic} (TEveElement $\ast$element, \hyperlink{class_t_eve_element_list}{TEveElementList} $\ast$\hyperlink{classstd_1_1list}{list})
+\begin{DoxyCompactList}\small\item\em Call an element to a geometry element list. \item\end{DoxyCompactList}\item 
+virtual TEveElement $\ast$ \hyperlink{class_d_d4hep_1_1_view_acd696f9f50bda0d632cec822ab1f4672}{ImportEventElement} (TEveElement $\ast$element, \hyperlink{class_t_eve_element_list}{TEveElementList} $\ast$\hyperlink{classstd_1_1list}{list})
+\begin{DoxyCompactList}\small\item\em Call an element to a event element list. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_view_a4272d52c420ccef43e18da8915451bcd}{View} (\hyperlink{class_d_d4hep_1_1_display}{Display} $\ast$eve, const std::string \&name)
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_view_ad0dc854db9aabbea98a334dec89f785c}{$\sim$View} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_view_ae5195f3caf77a0e4a7f750a3d69a9089}{name} () const 
+\begin{DoxyCompactList}\small\item\em Access to the view name/title. \item\end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_d_d4hep_1_1_view_a381c6164fc014a19978c325a848d9a5e}{c\_\-name} () const 
+\item 
+TEveViewer $\ast$ \hyperlink{class_d_d4hep_1_1_view_aeb1961cc6b9bbe466a81dc6f61833029}{viewer} () const 
+\begin{DoxyCompactList}\small\item\em Access to the Eve viewer. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_view_a957244259051281c5bdb7e0a2cf264a4}{showGlobal} () const 
+\begin{DoxyCompactList}\small\item\em Show global directory. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_view_a76019e28799e7a10d7678a251edb198d}{setShowGlobal} (bool value)
+\begin{DoxyCompactList}\small\item\em Set show globals. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_view}{View} \& \hyperlink{class_d_d4hep_1_1_view_ab4e12874a9cb6a599f268b027443c6ce}{Build} (TEveWindow $\ast$slot)
+\begin{DoxyCompactList}\small\item\em Build the view view and map it to the given slot. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_view_a7a968707a03a2fb140df5f4264708a20}{Initialize} ()
+\begin{DoxyCompactList}\small\item\em Initialize the view port. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_view}{View} \& \hyperlink{class_d_d4hep_1_1_view_a570467ad2be3126bca9aa3563338bcd2}{Map} (TEveWindow $\ast$slot)
+\begin{DoxyCompactList}\small\item\em Map the view view to the slot. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_view}{View} \& \hyperlink{class_d_d4hep_1_1_view_a6c2c1c89a0ad7c6a75379103f8523fdc}{CreateScenes} ()
+\begin{DoxyCompactList}\small\item\em Create the geometry and the event scene. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_t_eve_element_list}{TEveElementList} $\ast$ \hyperlink{class_d_d4hep_1_1_view_afd4a5a254c13a5cec6a4157cacfaabe3}{AddToGlobalItems} (const std::string \&nam)
+\begin{DoxyCompactList}\small\item\em Add the view to the global list of eve objects. \item\end{DoxyCompactList}\item 
+TEveScene $\ast$ \hyperlink{class_d_d4hep_1_1_view_ab95a0aba3fabd1d16496e000ee95a64e}{geoScene} () const 
+\begin{DoxyCompactList}\small\item\em Access to the Eve geometry scene. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_view}{View} \& \hyperlink{class_d_d4hep_1_1_view_a8738a88e61d962553fe86472b294028b}{CreateGeoScene} ()
+\begin{DoxyCompactList}\small\item\em Create the geometry scene. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_view_af573f4aceff18a93fd91b2678de0ae8e}{ConfigureGeometryFromInfo} ()
+\begin{DoxyCompactList}\small\item\em Configure a view with geo info. Used configuration if present. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_view_a2bf3fea77f89710cbccb03dbf8398501}{ConfigureGeometryFromGlobal} ()
+\begin{DoxyCompactList}\small\item\em Configure a single geometry view by default from the global geometry scene with all subdetectors. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_view_adefb4cb817819ec62803d34b89bf0988}{ConfigureGeometry} (const \hyperlink{class_d_d4hep_1_1_display_configuration_1_1_view_config}{DisplayConfiguration::ViewConfig} \&config)
+\begin{DoxyCompactList}\small\item\em Configure a single geometry view. \item\end{DoxyCompactList}\item 
+virtual std::pair$<$ bool, TEveElement $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_view_aa2325d2c428a2d2523bfb82cd31b7a28}{CreateGeometry} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} de, const \hyperlink{class_d_d4hep_1_1_display_configuration_1_1_config}{DisplayConfiguration::Config} \&cfg)
+\begin{DoxyCompactList}\small\item\em Create a new instance of the geometry of a sub-\/detector. \item\end{DoxyCompactList}\item 
+virtual std::pair$<$ bool, TEveElement $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_view_aeb658c5dde010976060874d2ad48107f}{GetGlobalGeometry} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} de, const \hyperlink{class_d_d4hep_1_1_display_configuration_1_1_config}{DisplayConfiguration::Config} \&cfg)
+\begin{DoxyCompactList}\small\item\em Access the global instance of the subdetector geometry. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_view_acd52a375e0d79ab3421a8026b7a14652}{ImportGeo} (const std::string \&topic, TEveElement $\ast$element)
+\begin{DoxyCompactList}\small\item\em Call to import geometry elements into topics. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_view_a84117a020048c8574aa7186d31f0a0ba}{ImportGeo} (\hyperlink{class_t_eve_element_list}{TEveElementList} \&topic, TEveElement $\ast$element)
+\begin{DoxyCompactList}\small\item\em Call to import geometry elements into topics. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_view_aa316fb1bb5375d1e57ba534a510919a7}{ImportGeo} (TEveElement $\ast$element)
+\begin{DoxyCompactList}\small\item\em Call to import geometry elements into the main geometry scene menu. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_view_a2e3e96341bb654afd42e0ae144cecafb}{ImportGeoTopics} (const std::string \&title)
+\begin{DoxyCompactList}\small\item\em Call to import geometry topics. If title is empty, do not add to global item list. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_t_eve_element_list}{TEveElementList} \& \hyperlink{class_d_d4hep_1_1_view_a17ec5ded122ee85a4231ca4976f5b9bd}{GetGeoTopic} (const std::string \&name)
+\begin{DoxyCompactList}\small\item\em Access/Create an geometry topic by name. \item\end{DoxyCompactList}\item 
+TEveScene $\ast$ \hyperlink{class_d_d4hep_1_1_view_af3bd0cda0c964b1662af9cb24cb26fff}{eveScene} () const 
+\begin{DoxyCompactList}\small\item\em Access to the Eve event scene. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_view}{View} \& \hyperlink{class_d_d4hep_1_1_view_a405104d10cef9018701601ae5346d89d}{CreateEventScene} ()
+\begin{DoxyCompactList}\small\item\em Create the event scene. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_view_a1c4ddbce48cb4e389a8d515a4644773b}{ConfigureEventFromInfo} ()
+\begin{DoxyCompactList}\small\item\em Configure a view with event info. Used configuration if present. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_view_a70d3dfc35cf31c58c5d6e1d1385d1b56}{ConfigureEventFromGlobal} ()
+\begin{DoxyCompactList}\small\item\em Configure an event view by default from the global event scene. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_view_a655dc004a93ab9caa56ee5a501bf492f}{ConfigureEvent} (const \hyperlink{class_d_d4hep_1_1_display_configuration_1_1_view_config}{DisplayConfiguration::ViewConfig} \&config)
+\begin{DoxyCompactList}\small\item\em Configure a single event scene view. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_view_a3fcf261f808c5ed9687f864286309123}{ImportEvent} (TEveElement $\ast$element)
+\begin{DoxyCompactList}\small\item\em Call to import event elements into the main event scene. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_view_a825772febdb79469f13b40dd0acbe03c}{ImportEventTopics} ()
+\begin{DoxyCompactList}\small\item\em Import event typics after creation. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_view_a35dcb8a29c90f0adeba81ad4215be551}{ClassDef} (\hyperlink{class_d_d4hep_1_1_view}{View}, 0)
+\begin{DoxyCompactList}\small\item\em Root implementation macro. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_display}{Display} $\ast$ \hyperlink{class_d_d4hep_1_1_view_a3ec453c7124cf0d8347acd0b0d2febb5}{m\_\-eve}
+\item 
+TEveViewer $\ast$ \hyperlink{class_d_d4hep_1_1_view_a6792e4acf7d115519d5390959e7c0306}{m\_\-view}
+\begin{DoxyCompactList}\small\item\em Reference to the view. \item\end{DoxyCompactList}\item 
+TEveScene $\ast$ \hyperlink{class_d_d4hep_1_1_view_a26d377786acafb43d0fccf8752d2bd79}{m\_\-geoScene}
+\begin{DoxyCompactList}\small\item\em Reference to the geometry scene. \item\end{DoxyCompactList}\item 
+TEveScene $\ast$ \hyperlink{class_d_d4hep_1_1_view_ae1010f3e7f65ecc82f47cb160a8839c0}{m\_\-eveScene}
+\begin{DoxyCompactList}\small\item\em Reference to the event scene. \item\end{DoxyCompactList}\item 
+\hyperlink{class_t_eve_element_list}{TEveElementList} $\ast$ \hyperlink{class_d_d4hep_1_1_view_a6faa3880d28177952c6aad166327397a}{m\_\-global}
+\begin{DoxyCompactList}\small\item\em Reference to the global item (if added. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_display_configuration_1_1_view_config}{DisplayConfiguration::ViewConfig} $\ast$ \hyperlink{class_d_d4hep_1_1_view_aa661c16c213fd41f49039a8c0e0a96c9}{m\_\-config}
+\item 
+std::string \hyperlink{class_d_d4hep_1_1_view_ac43b9e8f976a9731ff808cd6f7fc1ce7}{m\_\-name}
+\begin{DoxyCompactList}\small\item\em The name of the view. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_view_aac8510a8567e5e9128020fd81d8f57de}{Topics} \hyperlink{class_d_d4hep_1_1_view_a43c344306103039f764355833cee51c7}{m\_\-geoTopics}
+\item 
+\hyperlink{class_d_d4hep_1_1_view_aac8510a8567e5e9128020fd81d8f57de}{Topics} \hyperlink{class_d_d4hep_1_1_view_a6d3c5e7719c79fc50b50f575924b5bf5}{m\_\-eveTopics}
+\item 
+bool \hyperlink{class_d_d4hep_1_1_view_ab3ae217421de575d8db2a4eed72b8629}{m\_\-showGlobal}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \hyperlink{class_d_d4hep_1_1_view}{View} \hyperlink{_view_8h}{View.h} \hyperlink{_view_8h}{DDEve/View.h} 
+
+Definition at line 46 of file View.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_view_a59eafc8150df21b918b964850ac6c462}{
+\index{DD4hep::View@{DD4hep::View}!DetElement@{DetElement}}
+\index{DetElement@{DetElement}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{DetElement}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::DetElement} {\bf DD4hep::View::DetElement}}}
+\label{class_d_d4hep_1_1_view_a59eafc8150df21b918b964850ac6c462}
+
+
+Definition at line 49 of file View.h.\hypertarget{class_d_d4hep_1_1_view_ac08032a73da302ae36cd3c7b07b83864}{
+\index{DD4hep::View@{DD4hep::View}!LCDD@{LCDD}}
+\index{LCDD@{LCDD}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{LCDD}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::LCDD} {\bf DD4hep::View::LCDD}}}
+\label{class_d_d4hep_1_1_view_ac08032a73da302ae36cd3c7b07b83864}
+
+
+Definition at line 48 of file View.h.\hypertarget{class_d_d4hep_1_1_view_ad8426310f6488c879c008001eb20289e}{
+\index{DD4hep::View@{DD4hep::View}!SensitiveDetector@{SensitiveDetector}}
+\index{SensitiveDetector@{SensitiveDetector}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{SensitiveDetector}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::SensitiveDetector} {\bf DD4hep::View::SensitiveDetector}}}
+\label{class_d_d4hep_1_1_view_ad8426310f6488c879c008001eb20289e}
+
+
+Definition at line 50 of file View.h.\hypertarget{class_d_d4hep_1_1_view_aac8510a8567e5e9128020fd81d8f57de}{
+\index{DD4hep::View@{DD4hep::View}!Topics@{Topics}}
+\index{Topics@{Topics}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{Topics}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$std::string, {\bf TEveElementList}$\ast$$>$ {\bf DD4hep::View::Topics}}}
+\label{class_d_d4hep_1_1_view_aac8510a8567e5e9128020fd81d8f57de}
+
+
+Definition at line 51 of file View.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_view_a4272d52c420ccef43e18da8915451bcd}{
+\index{DD4hep::View@{DD4hep::View}!View@{View}}
+\index{View@{View}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{View}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::View::View ({\bf Display} $\ast$ {\em eve}, \/  const std::string \& {\em name})}}
+\label{class_d_d4hep_1_1_view_a4272d52c420ccef43e18da8915451bcd}
+
+
+Initializing constructor. \hypertarget{class_d_d4hep_1_1_view_ad0dc854db9aabbea98a334dec89f785c}{
+\index{DD4hep::View@{DD4hep::View}!$\sim$View@{$\sim$View}}
+\index{$\sim$View@{$\sim$View}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{$\sim$View}]{\setlength{\rightskip}{0pt plus 5cm}View::$\sim$View ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_ad0dc854db9aabbea98a334dec89f785c}
+
+
+Default destructor. 
+
+Definition at line 49 of file View.cpp.
+
+References DD4hep::InstanceCount::decrement(), m\_\-eve, m\_\-eveScene, m\_\-geoScene, m\_\-geoTopics, m\_\-global, and DD4hep::Display::UnregisterEvents().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_view_afd4a5a254c13a5cec6a4157cacfaabe3}{
+\index{DD4hep::View@{DD4hep::View}!AddToGlobalItems@{AddToGlobalItems}}
+\index{AddToGlobalItems@{AddToGlobalItems}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{AddToGlobalItems}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf TEveElementList}$\ast$ DD4hep::View::AddToGlobalItems (const std::string \& {\em nam})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_afd4a5a254c13a5cec6a4157cacfaabe3}
+
+
+Add the view to the global list of eve objects. 
+
+Referenced by DD4hep::CaloLego::Build(), DD4hep::Calo3DProjection::Build(), DD4hep::Calo2DProjection::Build(), DD4hep::Projection::CreateRhoPhiProjection(), and DD4hep::Projection::CreateRhoZProjection().\hypertarget{class_d_d4hep_1_1_view_ab4e12874a9cb6a599f268b027443c6ce}{
+\index{DD4hep::View@{DD4hep::View}!Build@{Build}}
+\index{Build@{Build}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{Build}]{\setlength{\rightskip}{0pt plus 5cm}{\bf View} \& View::Build (TEveWindow $\ast$ {\em slot})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_ab4e12874a9cb6a599f268b027443c6ce}
+
+
+Build the view view and map it to the given slot. Build the projection view and map it to the given slot. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_calo2_d_projection_a4ac47f2293dd1af3b2dc1b6311edb170}{DD4hep::Calo2DProjection}, \hyperlink{class_d_d4hep_1_1_calo3_d_projection_a2f0865f08b8eedfc84323b8a280d1216}{DD4hep::Calo3DProjection}, \hyperlink{class_d_d4hep_1_1_calo_lego_ab1ef28e69a78dbe27e6a33b1d22cc713}{DD4hep::CaloLego}, \hyperlink{class_d_d4hep_1_1_multi_view_a979d39b6332fa3a647a12d982a4f74fb}{DD4hep::MultiView}, \hyperlink{class_d_d4hep_1_1_rho_phi_projection_a6a8d8e5c6a15d559da719c23eb8d7b8c}{DD4hep::RhoPhiProjection}, \hyperlink{class_d_d4hep_1_1_rho_z_projection_adc2e30a682bc645b5433d055774930ef}{DD4hep::RhoZProjection}, and \hyperlink{class_d_d4hep_1_1_view3_d_a8067ea1bbbbcf503e271acd7dcace79f}{DD4hep::View3D}.
+
+Definition at line 60 of file View.cpp.
+
+Referenced by DD4hep::ViewMenu::BuildView().\hypertarget{class_d_d4hep_1_1_view_a381c6164fc014a19978c325a848d9a5e}{
+\index{DD4hep::View@{DD4hep::View}!c\_\-name@{c\_\-name}}
+\index{c\_\-name@{c\_\-name}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{c\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ DD4hep::View::c\_\-name () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a381c6164fc014a19978c325a848d9a5e}
+
+
+Definition at line 86 of file View.h.
+
+References m\_\-name.
+
+Referenced by ConfigureEventFromInfo(), ConfigureGeometry(), and ConfigureGeometryFromInfo().\hypertarget{class_d_d4hep_1_1_view_a35dcb8a29c90f0adeba81ad4215be551}{
+\index{DD4hep::View@{DD4hep::View}!ClassDef@{ClassDef}}
+\index{ClassDef@{ClassDef}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{ClassDef}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::View::ClassDef ({\bf View}, \/  0)}}
+\label{class_d_d4hep_1_1_view_a35dcb8a29c90f0adeba81ad4215be551}
+
+
+Root implementation macro. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_calo2_d_projection_a27b84375acec854d3c3fedba3519b7f4}{DD4hep::Calo2DProjection}, \hyperlink{class_d_d4hep_1_1_calo3_d_projection_a4696a6c764ceaf1307e6459c24cd7d1f}{DD4hep::Calo3DProjection}, \hyperlink{class_d_d4hep_1_1_calo_lego_a1a4c9c092acfa08adb65b7fe594fa7fd}{DD4hep::CaloLego}, \hyperlink{class_d_d4hep_1_1_multi_view_ae1b4bd4c3527dfe174acada259e6514c}{DD4hep::MultiView}, \hyperlink{class_d_d4hep_1_1_projection_a32d78dc00500fcb000ce25052c96fd62}{DD4hep::Projection}, \hyperlink{class_d_d4hep_1_1_rho_phi_projection_a33fb99400480c317f4e4d9fabf48836c}{DD4hep::RhoPhiProjection}, \hyperlink{class_d_d4hep_1_1_rho_z_projection_aef14a29e5037f6ac2df7eb09a8fa6c84}{DD4hep::RhoZProjection}, and \hyperlink{class_d_d4hep_1_1_view3_d_af7a20e27b1a1a86cd76af61d17167172}{DD4hep::View3D}.\hypertarget{class_d_d4hep_1_1_view_a655dc004a93ab9caa56ee5a501bf492f}{
+\index{DD4hep::View@{DD4hep::View}!ConfigureEvent@{ConfigureEvent}}
+\index{ConfigureEvent@{ConfigureEvent}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{ConfigureEvent}]{\setlength{\rightskip}{0pt plus 5cm}void View::ConfigureEvent (const {\bf DisplayConfiguration::ViewConfig} \& {\em config})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a655dc004a93ab9caa56ee5a501bf492f}
+
+
+Configure a single event scene view. Configure a single view. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_calo2_d_projection_ab49fa4071160750bd2c82e68b2f6d524}{DD4hep::Calo2DProjection}, and \hyperlink{class_d_d4hep_1_1_calo_lego_a997e3fea32d37374ef4c6c95e087af9c}{DD4hep::CaloLego}.
+
+Definition at line 245 of file View.cpp.
+
+References DD4hep::DisplayConfiguration::CALODATA, DD4hep::Geometry::DetElement::children(), DD4hep::DisplayConfiguration::COLLECTION, DD4hep::DisplayConfiguration::Config::data, DD4hep::DisplayConfiguration::Config::Values::defaults, DD4hep::DisplayConfiguration::DETELEMENT, ImportEvent(), DD4hep::INFO, DD4hep::Handle$<$ T $>$::isValid(), DD4hep::Display::lcdd(), m\_\-eve, m\_\-eveScene, DD4hep::Display::manager(), DD4hep::Handle$<$ T $>$::name(), DD4hep::DisplayConfiguration::Config::name, DD4hep::printout(), DD4hep::Geometry::SensitiveDetector::readout(), DD4hep::Geometry::LCDD::sensitiveDetector(), DD4hep::DisplayConfiguration::ViewConfig::subdetectors, DD4hep::DisplayConfiguration::Config::type, and DD4hep::Geometry::LCDD::world().
+
+Referenced by ConfigureEventFromInfo().\hypertarget{class_d_d4hep_1_1_view_a70d3dfc35cf31c58c5d6e1d1385d1b56}{
+\index{DD4hep::View@{DD4hep::View}!ConfigureEventFromGlobal@{ConfigureEventFromGlobal}}
+\index{ConfigureEventFromGlobal@{ConfigureEventFromGlobal}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{ConfigureEventFromGlobal}]{\setlength{\rightskip}{0pt plus 5cm}void View::ConfigureEventFromGlobal ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a70d3dfc35cf31c58c5d6e1d1385d1b56}
+
+
+Configure an event view by default from the global event scene. 
+
+Definition at line 238 of file View.cpp.
+
+References ImportEvent(), m\_\-eve, and DD4hep::Display::manager().
+
+Referenced by ConfigureEventFromInfo().\hypertarget{class_d_d4hep_1_1_view_a1c4ddbce48cb4e389a8d515a4644773b}{
+\index{DD4hep::View@{DD4hep::View}!ConfigureEventFromInfo@{ConfigureEventFromInfo}}
+\index{ConfigureEventFromInfo@{ConfigureEventFromInfo}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{ConfigureEventFromInfo}]{\setlength{\rightskip}{0pt plus 5cm}void View::ConfigureEventFromInfo ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a1c4ddbce48cb4e389a8d515a4644773b}
+
+
+Configure a view with event info. Used configuration if present. Configure the adding of event data. 
+
+Definition at line 231 of file View.cpp.
+
+References c\_\-name(), ConfigureEvent(), ConfigureEventFromGlobal(), ImportEventTopics(), DD4hep::INFO, m\_\-config, and DD4hep::printout().
+
+Referenced by DD4hep::ViewMenu::BuildView().\hypertarget{class_d_d4hep_1_1_view_adefb4cb817819ec62803d34b89bf0988}{
+\index{DD4hep::View@{DD4hep::View}!ConfigureGeometry@{ConfigureGeometry}}
+\index{ConfigureGeometry@{ConfigureGeometry}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{ConfigureGeometry}]{\setlength{\rightskip}{0pt plus 5cm}void View::ConfigureGeometry (const {\bf DisplayConfiguration::ViewConfig} \& {\em config})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_adefb4cb817819ec62803d34b89bf0988}
+
+
+Configure a single geometry view. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_calo2_d_projection_aabf1a03b64b1baad596aaa9349e3cbea}{DD4hep::Calo2DProjection}, and \hyperlink{class_d_d4hep_1_1_calo_lego_aca92ae6d2fe4e24a928fa23dbe755d19}{DD4hep::CaloLego}.
+
+Definition at line 160 of file View.cpp.
+
+References c\_\-name(), DD4hep::Display::CalodataContext::calo3D, DD4hep::DisplayConfiguration::CALODATA, DD4hep::Geometry::DetElement::children(), DD4hep::Display::CalodataContext::config, CreateGeometry(), DD4hep::DisplayConfiguration::Config::data, DD4hep::Annotation::DefaultMargin(), DD4hep::DisplayConfiguration::Config::Values::defaults, DD4hep::Annotation::DefaultTextSize(), DD4hep::DisplayConfiguration::DETELEMENT, DD4hep::Display::GetCaloHistogram(), GetGeoTopic(), GetGlobalGeometry(), ImportGeo(), DD4hep::INFO, DD4hep::Handle$<$ T $>$::isValid(), DD4hep::Display::lcdd(), m\_\-eve, m\_\-view, DD4hep::Display::manager(), name(), DD4hep::DisplayConfiguration::Config::name, DD4hep::printout(), DD4hep::Geometry::LCDD::sensitiveDetector(), DD4hep::Display::CalodataContext::slice, DD4hep::DisplayConfiguration::ViewConfig::subdetectors, DD4hep::DisplayConfiguration::Config::type, DD4hep::DisplayConfiguration::Config::use, viewer(), and DD4hep::Geometry::LCDD::world().
+
+Referenced by ConfigureGeometryFromInfo().\hypertarget{class_d_d4hep_1_1_view_a2bf3fea77f89710cbccb03dbf8398501}{
+\index{DD4hep::View@{DD4hep::View}!ConfigureGeometryFromGlobal@{ConfigureGeometryFromGlobal}}
+\index{ConfigureGeometryFromGlobal@{ConfigureGeometryFromGlobal}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{ConfigureGeometryFromGlobal}]{\setlength{\rightskip}{0pt plus 5cm}void View::ConfigureGeometryFromGlobal ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a2bf3fea77f89710cbccb03dbf8398501}
+
+
+Configure a single geometry view by default from the global geometry scene with all subdetectors. Configure a single geometry view by default from the global geometry scene. 
+
+Definition at line 147 of file View.cpp.
+
+References GetGeoTopic(), DD4hep::Display::GetGeoTopic(), ImportGeo(), and m\_\-eve.
+
+Referenced by ConfigureGeometryFromInfo().\hypertarget{class_d_d4hep_1_1_view_af573f4aceff18a93fd91b2678de0ae8e}{
+\index{DD4hep::View@{DD4hep::View}!ConfigureGeometryFromInfo@{ConfigureGeometryFromInfo}}
+\index{ConfigureGeometryFromInfo@{ConfigureGeometryFromInfo}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{ConfigureGeometryFromInfo}]{\setlength{\rightskip}{0pt plus 5cm}void View::ConfigureGeometryFromInfo ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_af573f4aceff18a93fd91b2678de0ae8e}
+
+
+Configure a view with geo info. Used configuration if present. Configure a view using the view's name and a proper ViewConfiguration if present. 
+
+Definition at line 140 of file View.cpp.
+
+References c\_\-name(), ConfigureGeometry(), ConfigureGeometryFromGlobal(), ImportGeoTopics(), DD4hep::INFO, m\_\-config, name(), and DD4hep::printout().
+
+Referenced by DD4hep::ViewMenu::BuildView().\hypertarget{class_d_d4hep_1_1_view_a405104d10cef9018701601ae5346d89d}{
+\index{DD4hep::View@{DD4hep::View}!CreateEventScene@{CreateEventScene}}
+\index{CreateEventScene@{CreateEventScene}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{CreateEventScene}]{\setlength{\rightskip}{0pt plus 5cm}{\bf View} \& View::CreateEventScene ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a405104d10cef9018701601ae5346d89d}
+
+
+Create the event scene. 
+
+Definition at line 315 of file View.cpp.
+
+References m\_\-eve, m\_\-eveScene, m\_\-name, and DD4hep::Display::manager().
+
+Referenced by DD4hep::Calo2DProjection::Build(), and CreateScenes().\hypertarget{class_d_d4hep_1_1_view_aa2325d2c428a2d2523bfb82cd31b7a28}{
+\index{DD4hep::View@{DD4hep::View}!CreateGeometry@{CreateGeometry}}
+\index{CreateGeometry@{CreateGeometry}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{CreateGeometry}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pair}$<$ bool, TEveElement $\ast$ $>$ View::CreateGeometry ({\bf DetElement} {\em de}, \/  const {\bf DisplayConfiguration::Config} \& {\em cfg})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_aa2325d2c428a2d2523bfb82cd31b7a28}
+
+
+Create a new instance of the geometry of a sub-\/detector. 
+
+Definition at line 133 of file View.cpp.
+
+References DD4hep::DisplayConfiguration::Config::data, DD4hep::DisplayConfiguration::Config::Values::defaults, GetGeoTopic(), DD4hep::Handle$<$ T $>$::isValid(), DD4hep::Display::lcdd(), DD4hep::Utilities::LoadDetElement(), m\_\-eve, DD4hep::Handle$<$ T $>$::name(), and DD4hep::Geometry::LCDD::sensitiveDetector().
+
+Referenced by ConfigureGeometry().\hypertarget{class_d_d4hep_1_1_view_a8738a88e61d962553fe86472b294028b}{
+\index{DD4hep::View@{DD4hep::View}!CreateGeoScene@{CreateGeoScene}}
+\index{CreateGeoScene@{CreateGeoScene}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{CreateGeoScene}]{\setlength{\rightskip}{0pt plus 5cm}{\bf View} \& View::CreateGeoScene ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a8738a88e61d962553fe86472b294028b}
+
+
+Create the geometry scene. 
+
+Definition at line 325 of file View.cpp.
+
+References m\_\-eve, m\_\-geoScene, m\_\-name, and DD4hep::Display::manager().
+
+Referenced by DD4hep::CaloLego::Build(), DD4hep::Calo2DProjection::Build(), and CreateScenes().\hypertarget{class_d_d4hep_1_1_view_a6c2c1c89a0ad7c6a75379103f8523fdc}{
+\index{DD4hep::View@{DD4hep::View}!CreateScenes@{CreateScenes}}
+\index{CreateScenes@{CreateScenes}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{CreateScenes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf View} \& View::CreateScenes ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a6c2c1c89a0ad7c6a75379103f8523fdc}
+
+
+Create the geometry and the event scene. 
+
+Definition at line 307 of file View.cpp.
+
+References CreateEventScene(), and CreateGeoScene().
+
+Referenced by DD4hep::View3D::Build(), DD4hep::RhoZProjection::Build(), DD4hep::RhoPhiProjection::Build(), and DD4hep::Calo3DProjection::Build().\hypertarget{class_d_d4hep_1_1_view_af3bd0cda0c964b1662af9cb24cb26fff}{
+\index{DD4hep::View@{DD4hep::View}!eveScene@{eveScene}}
+\index{eveScene@{eveScene}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{eveScene}]{\setlength{\rightskip}{0pt plus 5cm}TEveScene$\ast$ DD4hep::View::eveScene () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_af3bd0cda0c964b1662af9cb24cb26fff}
+
+
+Access to the Eve event scene. Manipulation of the event scene 
+
+Definition at line 142 of file View.h.
+
+References m\_\-eveScene.
+
+Referenced by Initialize().\hypertarget{class_d_d4hep_1_1_view_ab95a0aba3fabd1d16496e000ee95a64e}{
+\index{DD4hep::View@{DD4hep::View}!geoScene@{geoScene}}
+\index{geoScene@{geoScene}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{geoScene}]{\setlength{\rightskip}{0pt plus 5cm}TEveScene$\ast$ DD4hep::View::geoScene () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_ab95a0aba3fabd1d16496e000ee95a64e}
+
+
+Access to the Eve geometry scene. Manipulation of the geometry scene 
+
+Definition at line 108 of file View.h.
+
+References m\_\-geoScene.
+
+Referenced by Initialize().\hypertarget{class_d_d4hep_1_1_view_a17ec5ded122ee85a4231ca4976f5b9bd}{
+\index{DD4hep::View@{DD4hep::View}!GetGeoTopic@{GetGeoTopic}}
+\index{GetGeoTopic@{GetGeoTopic}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{GetGeoTopic}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf TEveElementList}\& DD4hep::View::GetGeoTopic (const std::string \& {\em name})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a17ec5ded122ee85a4231ca4976f5b9bd}
+
+
+Access/Create an geometry topic by name. 
+
+Referenced by ConfigureGeometry(), ConfigureGeometryFromGlobal(), CreateGeometry(), and DD4hep::Projection::ImportElement().\hypertarget{class_d_d4hep_1_1_view_aeb658c5dde010976060874d2ad48107f}{
+\index{DD4hep::View@{DD4hep::View}!GetGlobalGeometry@{GetGlobalGeometry}}
+\index{GetGlobalGeometry@{GetGlobalGeometry}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{GetGlobalGeometry}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pair}$<$ bool, TEveElement $\ast$ $>$ View::GetGlobalGeometry ({\bf DetElement} {\em de}, \/  const {\bf DisplayConfiguration::Config} \& {\em cfg})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_aeb658c5dde010976060874d2ad48107f}
+
+
+Access the global instance of the subdetector geometry. 
+
+Definition at line 124 of file View.cpp.
+
+References DD4hep::Display::GetGeoTopic(), DD4hep::Handle$<$ T $>$::isValid(), DD4hep::Display::lcdd(), m\_\-eve, DD4hep::Handle$<$ T $>$::name(), and DD4hep::Geometry::LCDD::sensitiveDetector().
+
+Referenced by ConfigureGeometry().\hypertarget{class_d_d4hep_1_1_view_a3fcf261f808c5ed9687f864286309123}{
+\index{DD4hep::View@{DD4hep::View}!ImportEvent@{ImportEvent}}
+\index{ImportEvent@{ImportEvent}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{ImportEvent}]{\setlength{\rightskip}{0pt plus 5cm}void View::ImportEvent (TEveElement $\ast$ {\em element})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a3fcf261f808c5ed9687f864286309123}
+
+
+Call to import event elements into the main event scene. 
+
+Definition at line 289 of file View.cpp.
+
+References ImportEventElement(), and m\_\-eveScene.
+
+Referenced by ConfigureEvent(), and ConfigureEventFromGlobal().\hypertarget{class_d_d4hep_1_1_view_acd696f9f50bda0d632cec822ab1f4672}{
+\index{DD4hep::View@{DD4hep::View}!ImportEventElement@{ImportEventElement}}
+\index{ImportEventElement@{ImportEventElement}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{ImportEventElement}]{\setlength{\rightskip}{0pt plus 5cm}TEveElement $\ast$ View::ImportEventElement (TEveElement $\ast$ {\em element}, \/  {\bf TEveElementList} $\ast$ {\em list})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_acd696f9f50bda0d632cec822ab1f4672}
+
+
+Call an element to a event element list. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_projection_a63d20236b4b67710dcfb9904848465aa}{DD4hep::Projection}.
+
+Definition at line 109 of file View.cpp.
+
+References DD4hep::Utilities::GetName(), DD4hep::INFO, DD4hep::printout(), and s.
+
+Referenced by ImportEvent().\hypertarget{class_d_d4hep_1_1_view_a825772febdb79469f13b40dd0acbe03c}{
+\index{DD4hep::View@{DD4hep::View}!ImportEventTopics@{ImportEventTopics}}
+\index{ImportEventTopics@{ImportEventTopics}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{ImportEventTopics}]{\setlength{\rightskip}{0pt plus 5cm}void View::ImportEventTopics ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a825772febdb79469f13b40dd0acbe03c}
+
+
+Import event typics after creation. 
+
+Definition at line 285 of file View.cpp.
+
+Referenced by ConfigureEventFromInfo().\hypertarget{class_d_d4hep_1_1_view_aa316fb1bb5375d1e57ba534a510919a7}{
+\index{DD4hep::View@{DD4hep::View}!ImportGeo@{ImportGeo}}
+\index{ImportGeo@{ImportGeo}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{ImportGeo}]{\setlength{\rightskip}{0pt plus 5cm}void View::ImportGeo (TEveElement $\ast$ {\em element})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_aa316fb1bb5375d1e57ba534a510919a7}
+
+
+Call to import geometry elements into the main geometry scene menu. Call to import geometry elements. 
+
+Definition at line 226 of file View.cpp.
+
+References ImportGeoElement(), and m\_\-geoScene.\hypertarget{class_d_d4hep_1_1_view_a84117a020048c8574aa7186d31f0a0ba}{
+\index{DD4hep::View@{DD4hep::View}!ImportGeo@{ImportGeo}}
+\index{ImportGeo@{ImportGeo}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{ImportGeo}]{\setlength{\rightskip}{0pt plus 5cm}void View::ImportGeo ({\bf TEveElementList} \& {\em topic}, \/  TEveElement $\ast$ {\em element})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a84117a020048c8574aa7186d31f0a0ba}
+
+
+Call to import geometry elements into topics. 
+
+Definition at line 221 of file View.cpp.
+
+References ImportGeoElement().\hypertarget{class_d_d4hep_1_1_view_acd52a375e0d79ab3421a8026b7a14652}{
+\index{DD4hep::View@{DD4hep::View}!ImportGeo@{ImportGeo}}
+\index{ImportGeo@{ImportGeo}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{ImportGeo}]{\setlength{\rightskip}{0pt plus 5cm}virtual void DD4hep::View::ImportGeo (const std::string \& {\em topic}, \/  TEveElement $\ast$ {\em element})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_acd52a375e0d79ab3421a8026b7a14652}
+
+
+Call to import geometry elements into topics. 
+
+Referenced by ConfigureGeometry(), DD4hep::CaloLego::ConfigureGeometry(), and ConfigureGeometryFromGlobal().\hypertarget{class_d_d4hep_1_1_view_adc25ba7ece97c2f7c69f8fa6e0c13088}{
+\index{DD4hep::View@{DD4hep::View}!ImportGeoElement@{ImportGeoElement}}
+\index{ImportGeoElement@{ImportGeoElement}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{ImportGeoElement}]{\setlength{\rightskip}{0pt plus 5cm}TEveElement $\ast$ View::ImportGeoElement (TEveElement $\ast$ {\em element}, \/  {\bf TEveElementList} $\ast$ {\em list})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_adc25ba7ece97c2f7c69f8fa6e0c13088}
+
+
+Call an element to a geometry element list. Call an element to a event element list. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_projection_a05c32084a42c00a366077acec5a55a82}{DD4hep::Projection}.
+
+Definition at line 94 of file View.cpp.
+
+References s.
+
+Referenced by ImportGeo(), and ImportGeoTopic().\hypertarget{class_d_d4hep_1_1_view_a413a1148e0fb6d3007c971e9f1266629}{
+\index{DD4hep::View@{DD4hep::View}!ImportGeoTopic@{ImportGeoTopic}}
+\index{ImportGeoTopic@{ImportGeoTopic}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{ImportGeoTopic}]{\setlength{\rightskip}{0pt plus 5cm}TEveElement $\ast$ View::ImportGeoTopic (TEveElement $\ast$ {\em element}, \/  {\bf TEveElementList} $\ast$ {\em list})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a413a1148e0fb6d3007c971e9f1266629}
+
+
+Call an element to a geometry element list. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_projection_a97415addc63b3253bbccc3bcd0414c26}{DD4hep::Projection}.
+
+Definition at line 104 of file View.cpp.
+
+References ImportGeoElement().\hypertarget{class_d_d4hep_1_1_view_a2e3e96341bb654afd42e0ae144cecafb}{
+\index{DD4hep::View@{DD4hep::View}!ImportGeoTopics@{ImportGeoTopics}}
+\index{ImportGeoTopics@{ImportGeoTopics}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{ImportGeoTopics}]{\setlength{\rightskip}{0pt plus 5cm}virtual void DD4hep::View::ImportGeoTopics (const std::string \& {\em title})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a2e3e96341bb654afd42e0ae144cecafb}
+
+
+Call to import geometry topics. If title is empty, do not add to global item list. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_calo2_d_projection_ae4b76bf31fd029d99cece5e9f2df8937}{DD4hep::Calo2DProjection}, and \hyperlink{class_d_d4hep_1_1_calo_lego_ac70c1949f20282374d052be75356ad2e}{DD4hep::CaloLego}.
+
+Referenced by ConfigureGeometryFromInfo().\hypertarget{class_d_d4hep_1_1_view_a7a968707a03a2fb140df5f4264708a20}{
+\index{DD4hep::View@{DD4hep::View}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void View::Initialize ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a7a968707a03a2fb140df5f4264708a20}
+
+
+Initialize the view port. 
+
+Update color set 
+
+Definition at line 65 of file View.cpp.
+
+References eveScene(), geoScene(), m\_\-eve, DD4hep::Display::manager(), and viewer().
+
+Referenced by DD4hep::ViewMenu::BuildView().\hypertarget{class_d_d4hep_1_1_view_a570467ad2be3126bca9aa3563338bcd2}{
+\index{DD4hep::View@{DD4hep::View}!Map@{Map}}
+\index{Map@{Map}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{Map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf View} \& View::Map (TEveWindow $\ast$ {\em slot})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a570467ad2be3126bca9aa3563338bcd2}
+
+
+Map the view view to the slot. Map the projection view to the slot. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_projection_a68380e96afb21b0c4fd52e986032df80}{DD4hep::Projection}.
+
+Definition at line 335 of file View.cpp.
+
+References m\_\-eve, m\_\-eveScene, m\_\-geoScene, m\_\-name, m\_\-view, and DD4hep::Display::manager().
+
+Referenced by DD4hep::View3D::Build(), DD4hep::CaloLego::Build(), and DD4hep::Calo3DProjection::Build().\hypertarget{class_d_d4hep_1_1_view_ae5195f3caf77a0e4a7f750a3d69a9089}{
+\index{DD4hep::View@{DD4hep::View}!name@{name}}
+\index{name@{name}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}const std::string\& DD4hep::View::name () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_ae5195f3caf77a0e4a7f750a3d69a9089}
+
+
+Access to the view name/title. 
+
+Definition at line 85 of file View.h.
+
+References m\_\-name.
+
+Referenced by DD4hep::CaloLego::Build(), DD4hep::Calo3DProjection::Build(), DD4hep::Calo2DProjection::Build(), DD4hep::CaloLego::ConfigureEvent(), ConfigureGeometry(), DD4hep::Calo2DProjection::ConfigureGeometry(), ConfigureGeometryFromInfo(), DD4hep::Projection::CreateRhoPhiProjection(), and DD4hep::Projection::CreateRhoZProjection().\hypertarget{class_d_d4hep_1_1_view_a76019e28799e7a10d7678a251edb198d}{
+\index{DD4hep::View@{DD4hep::View}!setShowGlobal@{setShowGlobal}}
+\index{setShowGlobal@{setShowGlobal}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{setShowGlobal}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::View::setShowGlobal (bool {\em value})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a76019e28799e7a10d7678a251edb198d}
+
+
+Set show globals. 
+
+Definition at line 92 of file View.h.
+
+References m\_\-showGlobal.\hypertarget{class_d_d4hep_1_1_view_a957244259051281c5bdb7e0a2cf264a4}{
+\index{DD4hep::View@{DD4hep::View}!showGlobal@{showGlobal}}
+\index{showGlobal@{showGlobal}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{showGlobal}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::View::showGlobal () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a957244259051281c5bdb7e0a2cf264a4}
+
+
+Show global directory. 
+
+Definition at line 90 of file View.h.
+
+References m\_\-showGlobal.\hypertarget{class_d_d4hep_1_1_view_aeb1961cc6b9bbe466a81dc6f61833029}{
+\index{DD4hep::View@{DD4hep::View}!viewer@{viewer}}
+\index{viewer@{viewer}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{viewer}]{\setlength{\rightskip}{0pt plus 5cm}TEveViewer$\ast$ DD4hep::View::viewer () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_aeb1961cc6b9bbe466a81dc6f61833029}
+
+
+Access to the Eve viewer. 
+
+Definition at line 88 of file View.h.
+
+References m\_\-view.
+
+Referenced by ConfigureGeometry(), DD4hep::CaloLego::ConfigureGeometry(), DD4hep::Calo2DProjection::ConfigureGeometry(), and Initialize().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_view_aa661c16c213fd41f49039a8c0e0a96c9}{
+\index{DD4hep::View@{DD4hep::View}!m\_\-config@{m\_\-config}}
+\index{m\_\-config@{m\_\-config}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{m\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf DisplayConfiguration::ViewConfig}$\ast$ {\bf DD4hep::View::m\_\-config}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_aa661c16c213fd41f49039a8c0e0a96c9}
+
+
+Definition at line 62 of file View.h.
+
+Referenced by ConfigureEventFromInfo(), and ConfigureGeometryFromInfo().\hypertarget{class_d_d4hep_1_1_view_a3ec453c7124cf0d8347acd0b0d2febb5}{
+\index{DD4hep::View@{DD4hep::View}!m\_\-eve@{m\_\-eve}}
+\index{m\_\-eve@{m\_\-eve}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{m\_\-eve}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Display}$\ast$ {\bf DD4hep::View::m\_\-eve}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a3ec453c7124cf0d8347acd0b0d2febb5}
+
+
+Definition at line 53 of file View.h.
+
+Referenced by ConfigureEvent(), DD4hep::CaloLego::ConfigureEvent(), ConfigureEventFromGlobal(), ConfigureGeometry(), DD4hep::CaloLego::ConfigureGeometry(), DD4hep::Calo2DProjection::ConfigureGeometry(), ConfigureGeometryFromGlobal(), CreateEventScene(), CreateGeometry(), CreateGeoScene(), GetGlobalGeometry(), Initialize(), Map(), and $\sim$View().\hypertarget{class_d_d4hep_1_1_view_ae1010f3e7f65ecc82f47cb160a8839c0}{
+\index{DD4hep::View@{DD4hep::View}!m\_\-eveScene@{m\_\-eveScene}}
+\index{m\_\-eveScene@{m\_\-eveScene}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{m\_\-eveScene}]{\setlength{\rightskip}{0pt plus 5cm}TEveScene$\ast$ {\bf DD4hep::View::m\_\-eveScene}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_ae1010f3e7f65ecc82f47cb160a8839c0}
+
+
+Reference to the event scene. 
+
+Definition at line 59 of file View.h.
+
+Referenced by ConfigureEvent(), CreateEventScene(), eveScene(), DD4hep::Projection::ImportElement(), ImportEvent(), Map(), and $\sim$View().\hypertarget{class_d_d4hep_1_1_view_a6d3c5e7719c79fc50b50f575924b5bf5}{
+\index{DD4hep::View@{DD4hep::View}!m\_\-eveTopics@{m\_\-eveTopics}}
+\index{m\_\-eveTopics@{m\_\-eveTopics}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{m\_\-eveTopics}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Topics} {\bf DD4hep::View::m\_\-eveTopics}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a6d3c5e7719c79fc50b50f575924b5bf5}
+
+
+Definition at line 68 of file View.h.\hypertarget{class_d_d4hep_1_1_view_a26d377786acafb43d0fccf8752d2bd79}{
+\index{DD4hep::View@{DD4hep::View}!m\_\-geoScene@{m\_\-geoScene}}
+\index{m\_\-geoScene@{m\_\-geoScene}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{m\_\-geoScene}]{\setlength{\rightskip}{0pt plus 5cm}TEveScene$\ast$ {\bf DD4hep::View::m\_\-geoScene}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a26d377786acafb43d0fccf8752d2bd79}
+
+
+Reference to the geometry scene. 
+
+Definition at line 57 of file View.h.
+
+Referenced by DD4hep::Projection::AddAxis(), DD4hep::Calo2DProjection::ConfigureGeometry(), CreateGeoScene(), geoScene(), DD4hep::Projection::ImportElement(), ImportGeo(), Map(), and $\sim$View().\hypertarget{class_d_d4hep_1_1_view_a43c344306103039f764355833cee51c7}{
+\index{DD4hep::View@{DD4hep::View}!m\_\-geoTopics@{m\_\-geoTopics}}
+\index{m\_\-geoTopics@{m\_\-geoTopics}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{m\_\-geoTopics}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Topics} {\bf DD4hep::View::m\_\-geoTopics}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a43c344306103039f764355833cee51c7}
+
+
+Definition at line 67 of file View.h.
+
+Referenced by DD4hep::Projection::ImportElement(), and $\sim$View().\hypertarget{class_d_d4hep_1_1_view_a6faa3880d28177952c6aad166327397a}{
+\index{DD4hep::View@{DD4hep::View}!m\_\-global@{m\_\-global}}
+\index{m\_\-global@{m\_\-global}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{m\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}{\bf TEveElementList}$\ast$ {\bf DD4hep::View::m\_\-global}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a6faa3880d28177952c6aad166327397a}
+
+
+Reference to the global item (if added. 
+
+Definition at line 61 of file View.h.
+
+Referenced by $\sim$View().\hypertarget{class_d_d4hep_1_1_view_ac43b9e8f976a9731ff808cd6f7fc1ce7}{
+\index{DD4hep::View@{DD4hep::View}!m\_\-name@{m\_\-name}}
+\index{m\_\-name@{m\_\-name}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{m\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::View::m\_\-name}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_ac43b9e8f976a9731ff808cd6f7fc1ce7}
+
+
+The name of the view. 
+
+Definition at line 65 of file View.h.
+
+Referenced by c\_\-name(), CreateEventScene(), CreateGeoScene(), Map(), and name().\hypertarget{class_d_d4hep_1_1_view_ab3ae217421de575d8db2a4eed72b8629}{
+\index{DD4hep::View@{DD4hep::View}!m\_\-showGlobal@{m\_\-showGlobal}}
+\index{m\_\-showGlobal@{m\_\-showGlobal}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{m\_\-showGlobal}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf DD4hep::View::m\_\-showGlobal}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_ab3ae217421de575d8db2a4eed72b8629}
+
+
+Definition at line 69 of file View.h.
+
+Referenced by setShowGlobal(), and showGlobal().\hypertarget{class_d_d4hep_1_1_view_a6792e4acf7d115519d5390959e7c0306}{
+\index{DD4hep::View@{DD4hep::View}!m\_\-view@{m\_\-view}}
+\index{m\_\-view@{m\_\-view}!DD4hep::View@{DD4hep::View}}
+\subsubsection[{m\_\-view}]{\setlength{\rightskip}{0pt plus 5cm}TEveViewer$\ast$ {\bf DD4hep::View::m\_\-view}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_view_a6792e4acf7d115519d5390959e7c0306}
+
+
+Reference to the view. 
+
+Definition at line 55 of file View.h.
+
+Referenced by ConfigureGeometry(), Map(), DD4hep::Projection::Map(), and viewer().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDEve/include/DDEve/\hyperlink{_view_8h}{View.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDEve/src/\hyperlink{_view_8cpp}{View.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,249 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator}{
+\section{DD4hep::Simulation::Geant4ParticleGenerator Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator}\index{DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}}
+}
+
+
+Generate particles isotrop in space around origine (0,0,0).  
+
+
+{\ttfamily \#include $<$Geant4ParticleGenerator.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4ParticleGenerator::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5cm]{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a2342c285b4e25be8f39c4759a3ad5b29}{Geant4ParticleGenerator} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$context, const std::string \&name)
+\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a4fdb46f784ede918c2970e260e2fe218}{$\sim$Geant4ParticleGenerator} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a4b7c8fdbc6fdc0c79efdf112c8ede315}{operator()} (G4Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} to generate primary particles. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a11e2509ffa4cbdb3abceaf71706d7093}{getParticleMultiplicity} (int \&multiplicity) const 
+\begin{DoxyCompactList}\small\item\em Particle modification. Caller presets defaults to: (multiplicity=m\_\-multiplicity). \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a45b2aea5eeb5e76e14b01f297198dcd6}{getVertexPosition} (ROOT::Math::XYZVector \&position) const 
+\begin{DoxyCompactList}\small\item\em Particle's vertex modification. Caller presets defaults to: (multiplicity=m\_\-multiplicity). \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_ac1bc512eb2de940c32c177a2c342d129}{getParticleDirection} (int num, ROOT::Math::XYZVector \&direction, double \&momentum) const 
+\begin{DoxyCompactList}\small\item\em Particle modification. Caller presets defaults to: ( direction = m\_\-direction, momentum = m\_\-energy). \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_abc90654fbbdfdb5ecf04726d7db97197}{printInteraction} (int mask) const 
+\begin{DoxyCompactList}\small\item\em Print single particle interaction identified by its mask. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a7102042cb54dda778799821f35a3594e}{printInteraction} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_interaction}{Geant4PrimaryInteraction} $\ast$inter) const 
+\begin{DoxyCompactList}\small\item\em Print single particle interaction identified by it's reference. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ROOT::Math::XYZVector \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a2e9c3184ff8999d4e55e3158e3b43727}{m\_\-direction}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: Shooting direction of the gun. \item\end{DoxyCompactList}\item 
+ROOT::Math::XYZVector \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a6ee07c5b63244214bb70499dd66eb26a}{m\_\-position}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: Position of the gun in space. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_ae7181a20c8374bee76cd7d29ea0e7dc7}{m\_\-particleName}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: Particle name. \item\end{DoxyCompactList}\item 
+G4ParticleDefinition $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a9f974a1df5025bb1ff4f65d6ed73bbd1}{m\_\-particle}
+\begin{DoxyCompactList}\small\item\em Pointer to geant4 particle definition. \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a0177e67af8736780fa0e401d598a792f}{m\_\-energy}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: Particle energy. \item\end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a366bf41f1de7a3e605ec7f2ecc220b39}{m\_\-multiplicity}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: Desired multiplicity of the particles to be shot. \item\end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a725064da51fefbd1410e0d0e5292d6c8}{m\_\-mask}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: User mask passed to all particles in the generated interaction. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generate particles isotrop in space around origine (0,0,0). \begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 39 of file Geant4ParticleGenerator.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a2342c285b4e25be8f39c4759a3ad5b29}{
+\index{DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}!Geant4ParticleGenerator@{Geant4ParticleGenerator}}
+\index{Geant4ParticleGenerator@{Geant4ParticleGenerator}!DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}}
+\subsubsection[{Geant4ParticleGenerator}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4ParticleGenerator::Geant4ParticleGenerator ({\bf Geant4Context} $\ast$ {\em context}, \/  const std::string \& {\em name})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a2342c285b4e25be8f39c4759a3ad5b29}
+
+
+Standard constructor. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a4fdb46f784ede918c2970e260e2fe218}{
+\index{DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}!$\sim$Geant4ParticleGenerator@{$\sim$Geant4ParticleGenerator}}
+\index{$\sim$Geant4ParticleGenerator@{$\sim$Geant4ParticleGenerator}!DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}}
+\subsubsection[{$\sim$Geant4ParticleGenerator}]{\setlength{\rightskip}{0pt plus 5cm}Geant4ParticleGenerator::$\sim$Geant4ParticleGenerator ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a4fdb46f784ede918c2970e260e2fe218}
+
+
+Default destructor. 
+
+Definition at line 46 of file Geant4ParticleGenerator.cpp.
+
+References DD4hep::InstanceCount::decrement().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_ac1bc512eb2de940c32c177a2c342d129}{
+\index{DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}!getParticleDirection@{getParticleDirection}}
+\index{getParticleDirection@{getParticleDirection}!DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}}
+\subsubsection[{getParticleDirection}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4ParticleGenerator::getParticleDirection (int {\em num}, \/  ROOT::Math::XYZVector \& {\em direction}, \/  double \& {\em momentum}) const\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_ac1bc512eb2de940c32c177a2c342d129}
+
+
+Particle modification. Caller presets defaults to: ( direction = m\_\-direction, momentum = m\_\-energy). Use this function to implement isotrop guns, multiple guns etc. User must return a UNIT vector, which gets scaled with momentum. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_isotrope_generator_af4fcebcc7a5e4c13a458200d03b07f33}{DD4hep::Simulation::Geant4IsotropeGenerator}, and \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_gun_a38c98b33bbe2f7064bce8c9f4345f262}{DD4hep::Simulation::Geant4ParticleGun}.
+
+Definition at line 51 of file Geant4ParticleGenerator.cpp.
+
+Referenced by operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a11e2509ffa4cbdb3abceaf71706d7093}{
+\index{DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}!getParticleMultiplicity@{getParticleMultiplicity}}
+\index{getParticleMultiplicity@{getParticleMultiplicity}!DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}}
+\subsubsection[{getParticleMultiplicity}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4ParticleGenerator::getParticleMultiplicity (int \& {\em multiplicity}) const\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a11e2509ffa4cbdb3abceaf71706d7093}
+
+
+Particle modification. Caller presets defaults to: (multiplicity=m\_\-multiplicity). 
+
+Definition at line 55 of file Geant4ParticleGenerator.cpp.
+
+Referenced by operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a45b2aea5eeb5e76e14b01f297198dcd6}{
+\index{DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}!getVertexPosition@{getVertexPosition}}
+\index{getVertexPosition@{getVertexPosition}!DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}}
+\subsubsection[{getVertexPosition}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4ParticleGenerator::getVertexPosition (ROOT::Math::XYZVector \& {\em position}) const\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a45b2aea5eeb5e76e14b01f297198dcd6}
+
+
+Particle's vertex modification. Caller presets defaults to: (multiplicity=m\_\-multiplicity). Particle modification. Caller presets defaults to: (multiplicity=m\_\-multiplicity). 
+
+Definition at line 59 of file Geant4ParticleGenerator.cpp.
+
+Referenced by operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a4b7c8fdbc6fdc0c79efdf112c8ede315}{
+\index{DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}!operator()@{operator()}}
+\index{operator()@{operator()}!DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4ParticleGenerator::operator() (G4Event $\ast$ {\em event})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a4b7c8fdbc6fdc0c79efdf112c8ede315}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} to generate primary particles. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_ac5a1d2335a19e3f9d555081199e01801}{DD4hep::Simulation::Geant4GeneratorAction}.
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_gun_a4e68905424d21f2386d24d3cbaf795f1}{DD4hep::Simulation::Geant4ParticleGun}.
+
+Definition at line 99 of file Geant4ParticleGenerator.cpp.
+
+References DD4hep::Simulation::Geant4PrimaryEvent::add(), DD4hep::Simulation::Geant4Action::context(), DD4hep::Simulation::Geant4Context::event(), DD4hep::Simulation::Geant4Event::extension(), DD4hep::Simulation::G4PARTICLE\_\-GEN\_\-STABLE, getParticleDirection(), getParticleMultiplicity(), getVertexPosition(), dd4hep::GeV, DD4hep::INFO, m\_\-direction, m\_\-energy, m\_\-mask, m\_\-multiplicity, m\_\-particle, m\_\-particleName, m\_\-position, DD4hep::Simulation::Geant4Vertex::mask, DD4hep::Simulation::Geant4Action::name(), DD4hep::Simulation::Geant4Vertex::out, DD4hep::printout(), DD4hep::Simulation::Geant4Vertex::x, DD4hep::Simulation::Geant4Vertex::y, and DD4hep::Simulation::Geant4Vertex::z.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a7102042cb54dda778799821f35a3594e}{
+\index{DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}!printInteraction@{printInteraction}}
+\index{printInteraction@{printInteraction}!DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}}
+\subsubsection[{printInteraction}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4ParticleGenerator::printInteraction ({\bf Geant4PrimaryInteraction} $\ast$ {\em inter}) const\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a7102042cb54dda778799821f35a3594e}
+
+
+Print single particle interaction identified by it's reference. 
+
+Definition at line 78 of file Geant4ParticleGenerator.cpp.
+
+References DD4hep::Simulation::Geant4ParticleHandle::dumpWithVertex(), dd4hep::GeV, m\_\-energy, m\_\-particleName, dd4hep::mm, DD4hep::Simulation::Geant4Action::name(), DD4hep::Simulation::Geant4Vertex::out, DD4hep::Simulation::Geant4Action::outputLevel(), DD4hep::Simulation::Geant4PrimaryInteraction::particles, DD4hep::Simulation::Geant4Action::print(), v, DD4hep::Simulation::Geant4PrimaryInteraction::vertices, DD4hep::Simulation::Geant4Action::warning(), DD4hep::Simulation::Geant4Vertex::x, DD4hep::Simulation::Geant4Vertex::y, and DD4hep::Simulation::Geant4Vertex::z.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_abc90654fbbdfdb5ecf04726d7db97197}{
+\index{DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}!printInteraction@{printInteraction}}
+\index{printInteraction@{printInteraction}!DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}}
+\subsubsection[{printInteraction}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4ParticleGenerator::printInteraction (int {\em mask}) const\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_abc90654fbbdfdb5ecf04726d7db97197}
+
+
+Print single particle interaction identified by its mask. Print single particle interaction identified by it's mask. 
+
+Definition at line 63 of file Geant4ParticleGenerator.cpp.
+
+References DD4hep::Simulation::Geant4Action::context(), DD4hep::Simulation::Geant4Context::event(), DD4hep::Simulation::Geant4Event::extension(), DD4hep::Simulation::Geant4PrimaryEvent::get(), and DD4hep::Simulation::Geant4Action::warning().
+
+Referenced by DD4hep::Simulation::Geant4ParticleGun::operator()().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a2e9c3184ff8999d4e55e3158e3b43727}{
+\index{DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}!m\_\-direction@{m\_\-direction}}
+\index{m\_\-direction@{m\_\-direction}!DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}}
+\subsubsection[{m\_\-direction}]{\setlength{\rightskip}{0pt plus 5cm}ROOT::Math::XYZVector {\bf DD4hep::Simulation::Geant4ParticleGenerator::m\_\-direction}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a2e9c3184ff8999d4e55e3158e3b43727}
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}: Shooting direction of the gun. 
+
+Definition at line 43 of file Geant4ParticleGenerator.h.
+
+Referenced by DD4hep::Simulation::Geant4ParticleGun::getParticleDirection(), DD4hep::Simulation::Geant4ParticleGun::operator()(), and operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a0177e67af8736780fa0e401d598a792f}{
+\index{DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}!m\_\-energy@{m\_\-energy}}
+\index{m\_\-energy@{m\_\-energy}!DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}}
+\subsubsection[{m\_\-energy}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::Simulation::Geant4ParticleGenerator::m\_\-energy}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a0177e67af8736780fa0e401d598a792f}
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}: Particle energy. 
+
+Definition at line 51 of file Geant4ParticleGenerator.h.
+
+Referenced by DD4hep::Simulation::Geant4ParticleGun::getParticleDirection(), DD4hep::Simulation::Geant4ParticleGun::operator()(), operator()(), and printInteraction().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a725064da51fefbd1410e0d0e5292d6c8}{
+\index{DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}!m\_\-mask@{m\_\-mask}}
+\index{m\_\-mask@{m\_\-mask}!DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}}
+\subsubsection[{m\_\-mask}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::Simulation::Geant4ParticleGenerator::m\_\-mask}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a725064da51fefbd1410e0d0e5292d6c8}
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}: User mask passed to all particles in the generated interaction. 
+
+Definition at line 55 of file Geant4ParticleGenerator.h.
+
+Referenced by DD4hep::Simulation::Geant4ParticleGun::operator()(), and operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a366bf41f1de7a3e605ec7f2ecc220b39}{
+\index{DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}!m\_\-multiplicity@{m\_\-multiplicity}}
+\index{m\_\-multiplicity@{m\_\-multiplicity}!DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}}
+\subsubsection[{m\_\-multiplicity}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::Simulation::Geant4ParticleGenerator::m\_\-multiplicity}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a366bf41f1de7a3e605ec7f2ecc220b39}
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}: Desired multiplicity of the particles to be shot. 
+
+Definition at line 53 of file Geant4ParticleGenerator.h.
+
+Referenced by operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a9f974a1df5025bb1ff4f65d6ed73bbd1}{
+\index{DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}!m\_\-particle@{m\_\-particle}}
+\index{m\_\-particle@{m\_\-particle}!DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}}
+\subsubsection[{m\_\-particle}]{\setlength{\rightskip}{0pt plus 5cm}G4ParticleDefinition$\ast$ {\bf DD4hep::Simulation::Geant4ParticleGenerator::m\_\-particle}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a9f974a1df5025bb1ff4f65d6ed73bbd1}
+
+
+Pointer to geant4 particle definition. 
+
+Definition at line 49 of file Geant4ParticleGenerator.h.
+
+Referenced by operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_ae7181a20c8374bee76cd7d29ea0e7dc7}{
+\index{DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}!m\_\-particleName@{m\_\-particleName}}
+\index{m\_\-particleName@{m\_\-particleName}!DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}}
+\subsubsection[{m\_\-particleName}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::Simulation::Geant4ParticleGenerator::m\_\-particleName}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_ae7181a20c8374bee76cd7d29ea0e7dc7}
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}: Particle name. 
+
+Definition at line 47 of file Geant4ParticleGenerator.h.
+
+Referenced by DD4hep::Simulation::Geant4ParticleGun::operator()(), operator()(), and printInteraction().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a6ee07c5b63244214bb70499dd66eb26a}{
+\index{DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}!m\_\-position@{m\_\-position}}
+\index{m\_\-position@{m\_\-position}!DD4hep::Simulation::Geant4ParticleGenerator@{DD4hep::Simulation::Geant4ParticleGenerator}}
+\subsubsection[{m\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}ROOT::Math::XYZVector {\bf DD4hep::Simulation::Geant4ParticleGenerator::m\_\-position}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a6ee07c5b63244214bb70499dd66eb26a}
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}: Position of the gun in space. 
+
+Definition at line 45 of file Geant4ParticleGenerator.h.
+
+Referenced by DD4hep::Simulation::Geant4ParticleGun::operator()(), and operator()().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_particle_generator_8h}{Geant4ParticleGenerator.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_particle_generator_8cpp}{Geant4ParticleGenerator.cpp}\end{DoxyCompactItemize}

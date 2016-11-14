@@ -1,0 +1,223 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler}{
+\section{DD4hep::Simulation::Geant4UserParticleHandler Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler}\index{DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}}
+}
+
+
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_handler}{Geant4ParticleHandler} user extension action called by the particle handler.  
+
+
+{\ttfamily \#include $<$Geant4UserParticleHandler.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4UserParticleHandler::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle}{Geant4Particle} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_a0222f326d539ff27c6c446a7a30e8e26}{Particle}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_aed274ebbaf0e9c9a1b336298cdbab183}{Geant4UserParticleHandler} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$context, const std::string \&nam)
+\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_a0e3bc88e6d3a625600006182d5cdd8c0}{$\sim$Geant4UserParticleHandler} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_abd7d1f82639f33dd16563c4beb936c9e}{generate} (G4Event $\ast$event, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_handler}{Geant4ParticleHandler} $\ast$handler)
+\begin{DoxyCompactList}\small\item\em Event generation action callback. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_ad63271464e7ae89e8e7ec0149bc92b93}{begin} (const G4Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Pre-\/event action callback. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_a44c00d22c0fba91cf4a32db049728805}{end} (const G4Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Post-\/event action callback. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_ac6a981e18ee2fa776907fda60aa54bb6}{step} (const G4Step $\ast$step, G4SteppingManager $\ast$mgr, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle}{Particle} \&particle)
+\begin{DoxyCompactList}\small\item\em User stepping callback. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_a1a26c0a3a16679a1378cfcdfbc5800e2}{begin} (const G4Track $\ast$track, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle}{Particle} \&particle)
+\begin{DoxyCompactList}\small\item\em Pre-\/track action callback. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_a327d267d834a00157ebd0b1e99e1685c}{end} (const G4Track $\ast$track, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle}{Particle} \&particle)
+\begin{DoxyCompactList}\small\item\em Post-\/track action callback. \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_a34cc6206492754adfea2f007313512dc}{keepParticle} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle}{Particle} \&particle)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} to be answered if the particle MUST be kept during recombination step. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_a8951aad04c7aaeb0ba39ef9e32d372cd}{combine} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle}{Particle} \&to\_\-be\_\-deleted, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle}{Particle} \&remaining\_\-parent)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} when parent should be combined. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_aaa82abebed535571499c3fa436f86a1b}{m\_\-kinEnergyCut}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: Energy cut below which particles are not collected, but assigned to the parent. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_handler}{Geant4ParticleHandler} user extension action called by the particle handler. Collect optional MC particle information and attach it to the particle object Clients may inherit from this class and override the approriate methods to add additional information in form of a \hyperlink{class_d_d4hep_1_1_simulation_1_1_data_extension}{DataExtension} object to the Particle.
+
+The default implementation is always empty!
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 49 of file Geant4UserParticleHandler.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_a0222f326d539ff27c6c446a7a30e8e26}{
+\index{DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}!Particle@{Particle}}
+\index{Particle@{Particle}!DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}}
+\subsubsection[{Particle}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geant4Particle} {\bf DD4hep::Simulation::Geant4UserParticleHandler::Particle}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_a0222f326d539ff27c6c446a7a30e8e26}
+
+
+Definition at line 51 of file Geant4UserParticleHandler.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_aed274ebbaf0e9c9a1b336298cdbab183}{
+\index{DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}!Geant4UserParticleHandler@{Geant4UserParticleHandler}}
+\index{Geant4UserParticleHandler@{Geant4UserParticleHandler}!DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}}
+\subsubsection[{Geant4UserParticleHandler}]{\setlength{\rightskip}{0pt plus 5cm}Geant4UserParticleHandler::Geant4UserParticleHandler ({\bf Geant4Context} $\ast$ {\em context}, \/  const std::string \& {\em nam})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_aed274ebbaf0e9c9a1b336298cdbab183}
+
+
+Standard constructor. 
+
+Definition at line 25 of file Geant4UserParticleHandler.cpp.
+
+References DD4hep::Simulation::Geant4Action::declareProperty(), DD4hep::InstanceCount::increment(), m\_\-kinEnergyCut, DD4hep::Simulation::Geant4Action::m\_\-needsControl, and dd4hep::MeV.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_a0e3bc88e6d3a625600006182d5cdd8c0}{
+\index{DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}!$\sim$Geant4UserParticleHandler@{$\sim$Geant4UserParticleHandler}}
+\index{$\sim$Geant4UserParticleHandler@{$\sim$Geant4UserParticleHandler}!DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}}
+\subsubsection[{$\sim$Geant4UserParticleHandler}]{\setlength{\rightskip}{0pt plus 5cm}Geant4UserParticleHandler::$\sim$Geant4UserParticleHandler ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_a0e3bc88e6d3a625600006182d5cdd8c0}
+
+
+Default destructor. 
+
+Definition at line 34 of file Geant4UserParticleHandler.cpp.
+
+References DD4hep::InstanceCount::decrement().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_a1a26c0a3a16679a1378cfcdfbc5800e2}{
+\index{DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}!begin@{begin}}
+\index{begin@{begin}!DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4UserParticleHandler::begin (const G4Track $\ast$ {\em track}, \/  {\bf Particle} \& {\em particle})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_a1a26c0a3a16679a1378cfcdfbc5800e2}
+
+
+Pre-\/track action callback. Allow the user to intercept particle handling in the pre track action. e.g. attach relevant user information. The default implementation is empty.
+
+Note: The particle passed is a temporary and will be copied if kept. 
+
+Definition at line 57 of file Geant4UserParticleHandler.cpp.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_ad63271464e7ae89e8e7ec0149bc92b93}{
+\index{DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}!begin@{begin}}
+\index{begin@{begin}!DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4UserParticleHandler::begin (const G4Event $\ast$ {\em event})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_ad63271464e7ae89e8e7ec0149bc92b93}
+
+
+Pre-\/event action callback. 
+
+Definition at line 44 of file Geant4UserParticleHandler.cpp.
+
+Referenced by DD4hep::Simulation::Geant4ParticleHandler::begin(), and DD4hep::Simulation::Geant4ParticleHandler::beginEvent().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_a8951aad04c7aaeb0ba39ef9e32d372cd}{
+\index{DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}!combine@{combine}}
+\index{combine@{combine}!DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}}
+\subsubsection[{combine}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4UserParticleHandler::combine ({\bf Particle} \& {\em to\_\-be\_\-deleted}, \/  {\bf Particle} \& {\em remaining\_\-parent})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_a8951aad04c7aaeb0ba39ef9e32d372cd}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} when parent should be combined. Called before a particle is removed from the final record. Relevant particle properties of the parent may be updated. The default implementation is empty. 
+
+Definition at line 65 of file Geant4UserParticleHandler.cpp.
+
+Referenced by DD4hep::Simulation::Geant4ParticleHandler::recombineParents().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_a327d267d834a00157ebd0b1e99e1685c}{
+\index{DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}!end@{end}}
+\index{end@{end}!DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4UserParticleHandler::end (const G4Track $\ast$ {\em track}, \/  {\bf Particle} \& {\em particle})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_a327d267d834a00157ebd0b1e99e1685c}
+
+
+Post-\/track action callback. Allow the user to force the particle handling in the post track action set the reason mask to NULL in order to drop the particle. The parent's reasoning mask will be or'ed with the particle's mask to preserve the MC truth for the hit creation. The default implementation is empty.
+
+Note: The particle passed is a temporary and will be copied if kept. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_t_c_user_particle_handler_a1578be1e99f7f70c9d332cffb1ad2504}{DD4hep::Simulation::Geant4TCUserParticleHandler}.
+
+Definition at line 61 of file Geant4UserParticleHandler.cpp.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_a44c00d22c0fba91cf4a32db049728805}{
+\index{DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}!end@{end}}
+\index{end@{end}!DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4UserParticleHandler::end (const G4Event $\ast$ {\em event})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_a44c00d22c0fba91cf4a32db049728805}
+
+
+Post-\/event action callback. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_t_c_user_particle_handler_ac51009a6e712d2b52d2470a5a1a7a03d}{DD4hep::Simulation::Geant4TCUserParticleHandler}.
+
+Definition at line 48 of file Geant4UserParticleHandler.cpp.
+
+Referenced by DD4hep::Simulation::Geant4ParticleHandler::end(), and DD4hep::Simulation::Geant4ParticleHandler::endEvent().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_abd7d1f82639f33dd16563c4beb936c9e}{
+\index{DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}!generate@{generate}}
+\index{generate@{generate}!DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}}
+\subsubsection[{generate}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4UserParticleHandler::generate (G4Event $\ast$ {\em event}, \/  {\bf Geant4ParticleHandler} $\ast$ {\em handler})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_abd7d1f82639f33dd16563c4beb936c9e}
+
+
+Event generation action callback. 
+
+Definition at line 39 of file Geant4UserParticleHandler.cpp.
+
+Referenced by DD4hep::Simulation::Geant4ParticleHandler::operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_a34cc6206492754adfea2f007313512dc}{
+\index{DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}!keepParticle@{keepParticle}}
+\index{keepParticle@{keepParticle}!DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}}
+\subsubsection[{keepParticle}]{\setlength{\rightskip}{0pt plus 5cm}bool Geant4UserParticleHandler::keepParticle ({\bf Particle} \& {\em particle})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_a34cc6206492754adfea2f007313512dc}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} to be answered if the particle MUST be kept during recombination step. Allow the user to force the particle handling either by or the reason mask with G4PARTICLE\_\-KEEP\_\-USER or to set the reason mask to NULL in order to drop it. The default implementation is empty.
+
+If the reason mask entry is set to G4PARTICLE\_\-FORCE\_\-KILL or is set to NULL, the particle is ALWAYS removed
+
+The default implementation calls Geant4ParticleHandler::defaultKeepParticle(particle) Please have a look therein if it suffices your needs!
+
+Note: This may override all other decisions! Default implementation is empty. 
+
+Definition at line 69 of file Geant4UserParticleHandler.cpp.
+
+References DD4hep::Simulation::Geant4ParticleHandler::defaultKeepParticle().
+
+Referenced by DD4hep::Simulation::Geant4ParticleHandler::recombineParents().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_ac6a981e18ee2fa776907fda60aa54bb6}{
+\index{DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}!step@{step}}
+\index{step@{step}!DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}}
+\subsubsection[{step}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4UserParticleHandler::step (const G4Step $\ast$ {\em step}, \/  G4SteppingManager $\ast$ {\em mgr}, \/  {\bf Particle} \& {\em particle})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_ac6a981e18ee2fa776907fda60aa54bb6}
+
+
+User stepping callback. Allow the user to intercept particle handling in the pre track action. The default implementation is empty.
+
+Note: The particle passed is a temporary and will be copied if kept. 
+
+Definition at line 53 of file Geant4UserParticleHandler.cpp.
+
+Referenced by DD4hep::Simulation::Geant4ParticleHandler::step().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_aaa82abebed535571499c3fa436f86a1b}{
+\index{DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}!m\_\-kinEnergyCut@{m\_\-kinEnergyCut}}
+\index{m\_\-kinEnergyCut@{m\_\-kinEnergyCut}!DD4hep::Simulation::Geant4UserParticleHandler@{DD4hep::Simulation::Geant4UserParticleHandler}}
+\subsubsection[{m\_\-kinEnergyCut}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::Simulation::Geant4UserParticleHandler::m\_\-kinEnergyCut}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_user_particle_handler_aaa82abebed535571499c3fa436f86a1b}
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}: Energy cut below which particles are not collected, but assigned to the parent. 
+
+Definition at line 55 of file Geant4UserParticleHandler.h.
+
+Referenced by Geant4UserParticleHandler().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_user_particle_handler_8h}{Geant4UserParticleHandler.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_user_particle_handler_8cpp}{Geant4UserParticleHandler.cpp}\end{DoxyCompactItemize}

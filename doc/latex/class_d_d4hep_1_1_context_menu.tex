@@ -1,0 +1,183 @@
+\hypertarget{class_d_d4hep_1_1_context_menu}{
+\section{DD4hep::ContextMenu Class Reference}
+\label{class_d_d4hep_1_1_context_menu}\index{DD4hep::ContextMenu@{DD4hep::ContextMenu}}
+}
+
+
+{\ttfamily \#include $<$DDEve/ContextMenu.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_context_menu}{ContextMenu} \& \hyperlink{class_d_d4hep_1_1_context_menu_a6696f7477fe601dda441f5b8f409d97d}{Clear} ()
+\begin{DoxyCompactList}\small\item\em Clear all existing items. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_context_menu}{ContextMenu} \& \hyperlink{class_d_d4hep_1_1_context_menu_a4f500b58c95613e4b6a05a1b31d03a99}{AddSeparator} ()
+\begin{DoxyCompactList}\small\item\em Add a separator. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q , typename T $>$ }\\\hyperlink{class_d_d4hep_1_1_context_menu}{ContextMenu} \& \hyperlink{class_d_d4hep_1_1_context_menu_a7f3cd5ff904b8af781d686ff7de8219d}{Add} (const std::string \&title, Q $\ast$ptr, void(T::$\ast$pmf)(\hyperlink{class_t_object}{TObject} $\ast$, void $\ast$ud), void $\ast$ud=0)
+\begin{DoxyCompactList}\small\item\em Add a user item to the menu. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_context_menu_a2f6ab4ffe0c386047b6922c267e0fba7}{ClassDef} (\hyperlink{class_d_d4hep_1_1_context_menu}{ContextMenu}, 0)
+\begin{DoxyCompactList}\small\item\em Root implementation macro. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_d_d4hep_1_1_context_menu}{ContextMenu} \& \hyperlink{class_d_d4hep_1_1_context_menu_a2078c5a59a73ba9d83e6d22f1fa52e6a}{instance} (TClass $\ast$cl)
+\begin{DoxyCompactList}\small\item\em Instantiator. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_context_menu_handler}{ContextMenuHandler} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_context_menu_adafcfb2730659701df2a5364333ed386}{Handlers}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_context_menu_aef60e3701d390f8a172be3de9c5a59ba}{ContextMenu} (TClass $\ast$cl)
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_context_menu_a0ddd00b5e23fb9d89ad3cabae38aecf9}{$\sim$ContextMenu} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_context_menu}{ContextMenu} \& \hyperlink{class_d_d4hep_1_1_context_menu_a5bfaad4484aed94a2d1298048426e5c1}{Add} (const std::string \&title, \hyperlink{class_d_d4hep_1_1_callback}{Callback} cb, void $\ast$ud)
+\begin{DoxyCompactList}\small\item\em Add user callback. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_context_menu_adafcfb2730659701df2a5364333ed386}{Handlers} \hyperlink{class_d_d4hep_1_1_context_menu_a4434fe38593c7eb73a8543cf1f8258ed}{m\_\-calls}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} map. \item\end{DoxyCompactList}\item 
+TClass $\ast$ \hyperlink{class_d_d4hep_1_1_context_menu_ad9be22966c34ce07b6e83b2195bddad1}{m\_\-class}
+\begin{DoxyCompactList}\small\item\em List of menu entries. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 61 of file ContextMenu.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_context_menu_adafcfb2730659701df2a5364333ed386}{
+\index{DD4hep::ContextMenu@{DD4hep::ContextMenu}!Handlers@{Handlers}}
+\index{Handlers@{Handlers}!DD4hep::ContextMenu@{DD4hep::ContextMenu}}
+\subsubsection[{Handlers}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf ContextMenuHandler}$\ast$$>$ {\bf DD4hep::ContextMenu::Handlers}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_context_menu_adafcfb2730659701df2a5364333ed386}
+
+
+Definition at line 62 of file ContextMenu.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_context_menu_aef60e3701d390f8a172be3de9c5a59ba}{
+\index{DD4hep::ContextMenu@{DD4hep::ContextMenu}!ContextMenu@{ContextMenu}}
+\index{ContextMenu@{ContextMenu}!DD4hep::ContextMenu@{DD4hep::ContextMenu}}
+\subsubsection[{ContextMenu}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::ContextMenu::ContextMenu (TClass $\ast$ {\em cl})\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_context_menu_aef60e3701d390f8a172be3de9c5a59ba}
+
+
+Initializing constructor. 
+
+Referenced by instance().\hypertarget{class_d_d4hep_1_1_context_menu_a0ddd00b5e23fb9d89ad3cabae38aecf9}{
+\index{DD4hep::ContextMenu@{DD4hep::ContextMenu}!$\sim$ContextMenu@{$\sim$ContextMenu}}
+\index{$\sim$ContextMenu@{$\sim$ContextMenu}!DD4hep::ContextMenu@{DD4hep::ContextMenu}}
+\subsubsection[{$\sim$ContextMenu}]{\setlength{\rightskip}{0pt plus 5cm}ContextMenu::$\sim$ContextMenu ()\hspace{0.3cm}{\ttfamily  \mbox{[}private, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_context_menu_a0ddd00b5e23fb9d89ad3cabae38aecf9}
+
+
+Default destructor. 
+
+Definition at line 64 of file ContextMenu.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_context_menu_a7f3cd5ff904b8af781d686ff7de8219d}{
+\index{DD4hep::ContextMenu@{DD4hep::ContextMenu}!Add@{Add}}
+\index{Add@{Add}!DD4hep::ContextMenu@{DD4hep::ContextMenu}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q , typename T $>$ {\bf ContextMenu}\& DD4hep::ContextMenu::Add (const std::string \& {\em title}, \/  Q $\ast$ {\em ptr}, \/  void(T::$\ast$)({\bf TObject} $\ast$, void $\ast$ud) {\em pmf}, \/  void $\ast$ {\em ud} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_context_menu_a7f3cd5ff904b8af781d686ff7de8219d}
+
+
+Add a user item to the menu. 
+
+Definition at line 83 of file ContextMenu.h.
+
+References Add().\hypertarget{class_d_d4hep_1_1_context_menu_a5bfaad4484aed94a2d1298048426e5c1}{
+\index{DD4hep::ContextMenu@{DD4hep::ContextMenu}!Add@{Add}}
+\index{Add@{Add}!DD4hep::ContextMenu@{DD4hep::ContextMenu}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ContextMenu}\& DD4hep::ContextMenu::Add (const std::string \& {\em title}, \/  {\bf Callback} {\em cb}, \/  void $\ast$ {\em ud})\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_context_menu_a5bfaad4484aed94a2d1298048426e5c1}
+
+
+Add user callback. 
+
+Referenced by Add(), and DD4hep::EveUserContextMenu::InstallGeometryContextMenu().\hypertarget{class_d_d4hep_1_1_context_menu_a4f500b58c95613e4b6a05a1b31d03a99}{
+\index{DD4hep::ContextMenu@{DD4hep::ContextMenu}!AddSeparator@{AddSeparator}}
+\index{AddSeparator@{AddSeparator}!DD4hep::ContextMenu@{DD4hep::ContextMenu}}
+\subsubsection[{AddSeparator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ContextMenu} \& ContextMenu::AddSeparator ()}}
+\label{class_d_d4hep_1_1_context_menu_a4f500b58c95613e4b6a05a1b31d03a99}
+
+
+Add a separator. 
+
+Definition at line 85 of file ContextMenu.cpp.
+
+References m\_\-class.
+
+Referenced by DD4hep::EveUserContextMenu::InstallGeometryContextMenu().\hypertarget{class_d_d4hep_1_1_context_menu_a2f6ab4ffe0c386047b6922c267e0fba7}{
+\index{DD4hep::ContextMenu@{DD4hep::ContextMenu}!ClassDef@{ClassDef}}
+\index{ClassDef@{ClassDef}!DD4hep::ContextMenu@{DD4hep::ContextMenu}}
+\subsubsection[{ClassDef}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::ContextMenu::ClassDef ({\bf ContextMenu}, \/  0)}}
+\label{class_d_d4hep_1_1_context_menu_a2f6ab4ffe0c386047b6922c267e0fba7}
+
+
+Root implementation macro. \hypertarget{class_d_d4hep_1_1_context_menu_a6696f7477fe601dda441f5b8f409d97d}{
+\index{DD4hep::ContextMenu@{DD4hep::ContextMenu}!Clear@{Clear}}
+\index{Clear@{Clear}!DD4hep::ContextMenu@{DD4hep::ContextMenu}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ContextMenu} \& ContextMenu::Clear ()}}
+\label{class_d_d4hep_1_1_context_menu_a6696f7477fe601dda441f5b8f409d97d}
+
+
+Clear all existing items. 
+
+Definition at line 77 of file ContextMenu.cpp.
+
+References m\_\-class.
+
+Referenced by DD4hep::EveUserContextMenu::InstallGeometryContextMenu().\hypertarget{class_d_d4hep_1_1_context_menu_a2078c5a59a73ba9d83e6d22f1fa52e6a}{
+\index{DD4hep::ContextMenu@{DD4hep::ContextMenu}!instance@{instance}}
+\index{instance@{instance}!DD4hep::ContextMenu@{DD4hep::ContextMenu}}
+\subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ContextMenu} \& ContextMenu::instance (TClass $\ast$ {\em cl})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_context_menu_a2078c5a59a73ba9d83e6d22f1fa52e6a}
+
+
+Instantiator. 
+
+Definition at line 68 of file ContextMenu.cpp.
+
+References ContextMenu(), dd4hep::m, and mapped\_\-entries().
+
+Referenced by DD4hep::EveUserContextMenu::InstallGeometryContextMenu().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_context_menu_a4434fe38593c7eb73a8543cf1f8258ed}{
+\index{DD4hep::ContextMenu@{DD4hep::ContextMenu}!m\_\-calls@{m\_\-calls}}
+\index{m\_\-calls@{m\_\-calls}!DD4hep::ContextMenu@{DD4hep::ContextMenu}}
+\subsubsection[{m\_\-calls}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Handlers} {\bf DD4hep::ContextMenu::m\_\-calls}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_context_menu_a4434fe38593c7eb73a8543cf1f8258ed}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} map. 
+
+Definition at line 64 of file ContextMenu.h.\hypertarget{class_d_d4hep_1_1_context_menu_ad9be22966c34ce07b6e83b2195bddad1}{
+\index{DD4hep::ContextMenu@{DD4hep::ContextMenu}!m\_\-class@{m\_\-class}}
+\index{m\_\-class@{m\_\-class}!DD4hep::ContextMenu@{DD4hep::ContextMenu}}
+\subsubsection[{m\_\-class}]{\setlength{\rightskip}{0pt plus 5cm}TClass$\ast$ {\bf DD4hep::ContextMenu::m\_\-class}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_context_menu_ad9be22966c34ce07b6e83b2195bddad1}
+
+
+List of menu entries. 
+
+Definition at line 66 of file ContextMenu.h.
+
+Referenced by AddSeparator(), and Clear().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDEve/include/DDEve/\hyperlink{_context_menu_8h}{ContextMenu.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDEve/src/\hyperlink{_context_menu_8cpp}{ContextMenu.cpp}\end{DoxyCompactItemize}

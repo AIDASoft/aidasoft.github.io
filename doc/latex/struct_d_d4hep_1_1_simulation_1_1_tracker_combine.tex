@@ -1,0 +1,259 @@
+\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_combine}{
+\section{DD4hep::Simulation::TrackerCombine Struct Reference}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_combine}\index{DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}}
+}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection}{Geant4HitCollection} \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_ae776b8d22a42d425b4d9b6344ed430e1}{HitCollection}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a60747607cdefc8283d864c6f5313a392}{TrackerCombine} ()
+\item 
+void \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a104188fb9a41662e03eacc2d34e4bced}{start} (G4Step $\ast$step, G4StepPoint $\ast$point)
+\begin{DoxyCompactList}\small\item\em Start a new hit. \item\end{DoxyCompactList}\item 
+void \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a3bd30148dcc0b7fa917b000c9946e77f}{update} (G4Step $\ast$step)
+\begin{DoxyCompactList}\small\item\em Update energy and track information during hit info accumulation. \item\end{DoxyCompactList}\item 
+void \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a7b178cd57d961437d3cfabb65d9c2d09}{clear} ()
+\begin{DoxyCompactList}\small\item\em Clear collected information and restart for new hit. \item\end{DoxyCompactList}\item 
+bool \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a063b82a781184cc0fbf21c0876a6acd6}{mustSaveTrack} (const G4Track $\ast$tr) const 
+\begin{DoxyCompactList}\small\item\em Helper function to decide if the hit has to be extracted and saved in the collection. \item\end{DoxyCompactList}\item 
+void \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a75803adf3212ecca99d2b6fbcd53899f}{extractHit} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_collection}{Geant4HitCollection} $\ast$collection)
+\begin{DoxyCompactList}\small\item\em Extract hit information and add the created hit to the collection. \item\end{DoxyCompactList}\item 
+G4bool \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a8d3a583a2f70cb49bcc3d6eda5363a85}{process} (G4Step $\ast$step, G4TouchableHistory $\ast$)
+\begin{DoxyCompactList}\small\item\em Method for generating hit(s) using the information of G4Step object. \item\end{DoxyCompactList}\item 
+void \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a03b50811a7b164514baebc2f252fba62}{endEvent} (const G4Event $\ast$)
+\begin{DoxyCompactList}\small\item\em Post-\/event action callback. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_tracker_1_1_hit}{Geant4Tracker::Hit} \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a05e41bf826c42ad8e4ddefb914a9e079}{pre}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_tracker_1_1_hit}{Geant4Tracker::Hit} \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a04a629d7ed0ac04fd945466a40bb7e48}{post}
+\item 
+\hyperlink{namespace_d_d4hep_1_1_simulation_ad6fd94b3439e31d1ba4b2e640d578558}{Position} \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a66a9636b7e0e4712718366da7db0ddf6}{mean\_\-pos}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive}{Geant4Sensitive} $\ast$ \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_afa91afc4a7df2a80a889ab1a1ba4d4b6}{sensitive}
+\item 
+double \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a88f539f333235ec8d8746fe11fd70e12}{mean\_\-time}
+\item 
+double \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_acd9b60d0c1b8cee45c1745a4ae167d24}{e\_\-cut}
+\item 
+int \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_aa8bb9faf2d8ce6bac98f969e5bb9943c}{current}
+\item 
+int \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a09c500ccd4bca917b081930ae9e2c5ce}{combined}
+\item 
+long long int \hyperlink{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a93f684a7d6865b0f92a82560b3558d0d}{cell}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 318 of file Geant4SDActions.cpp.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_ae776b8d22a42d425b4d9b6344ed430e1}{
+\index{DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}!HitCollection@{HitCollection}}
+\index{HitCollection@{HitCollection}!DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}}
+\subsubsection[{HitCollection}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geant4HitCollection} {\bf DD4hep::Simulation::TrackerCombine::HitCollection}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_ae776b8d22a42d425b4d9b6344ed430e1}
+
+
+Definition at line 319 of file Geant4SDActions.cpp.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a60747607cdefc8283d864c6f5313a392}{
+\index{DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}!TrackerCombine@{TrackerCombine}}
+\index{TrackerCombine@{TrackerCombine}!DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}}
+\subsubsection[{TrackerCombine}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::TrackerCombine::TrackerCombine ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a60747607cdefc8283d864c6f5313a392}
+
+
+Definition at line 329 of file Geant4SDActions.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a7b178cd57d961437d3cfabb65d9c2d09}{
+\index{DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}!clear@{clear}}
+\index{clear@{clear}!DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Simulation::TrackerCombine::clear ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a7b178cd57d961437d3cfabb65d9c2d09}
+
+
+Clear collected information and restart for new hit. 
+
+Definition at line 366 of file Geant4SDActions.cpp.
+
+References cell, DD4hep::Simulation::Geant4Tracker::Hit::clear(), combined, current, mean\_\-pos, mean\_\-time, post, and pre.
+
+Referenced by extractHit().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a03b50811a7b164514baebc2f252fba62}{
+\index{DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}!endEvent@{endEvent}}
+\index{endEvent@{endEvent}!DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}}
+\subsubsection[{endEvent}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Simulation::TrackerCombine::endEvent (const G4Event $\ast$)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a03b50811a7b164514baebc2f252fba62}
+
+
+Post-\/event action callback. 
+
+Definition at line 445 of file Geant4SDActions.cpp.
+
+References DD4hep::Simulation::Geant4Sensitive::collection(), current, extractHit(), and sensitive.
+
+Referenced by DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::initialize().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a75803adf3212ecca99d2b6fbcd53899f}{
+\index{DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}!extractHit@{extractHit}}
+\index{extractHit@{extractHit}!DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}}
+\subsubsection[{extractHit}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Simulation::TrackerCombine::extractHit ({\bf Geant4HitCollection} $\ast$ {\em collection})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a75803adf3212ecca99d2b6fbcd53899f}
+
+
+Extract hit information and add the created hit to the collection. 
+
+Definition at line 382 of file Geant4SDActions.cpp.
+
+References DD4hep::Simulation::Geant4HitCollection::add(), DD4hep::Simulation::Geant4Action::c\_\-name(), cell, DD4hep::Simulation::Geant4HitData::cellID, clear(), combined, current, DD4hep::Simulation::Geant4Tracker::Hit::length, mean\_\-pos, mean\_\-time, dd4hep::MeV, dd4hep::mm, DD4hep::Simulation::Geant4Tracker::Hit::momentum, DD4hep::Simulation::Geant4Tracker::Hit::position, post, pre, DD4hep::Simulation::Geant4Action::printM2(), sensitive, and DD4hep::Simulation::Geant4Tracker::Hit::truth.
+
+Referenced by endEvent(), and process().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a063b82a781184cc0fbf21c0876a6acd6}{
+\index{DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}!mustSaveTrack@{mustSaveTrack}}
+\index{mustSaveTrack@{mustSaveTrack}!DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}}
+\subsubsection[{mustSaveTrack}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Simulation::TrackerCombine::mustSaveTrack (const G4Track $\ast$ {\em tr}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a063b82a781184cc0fbf21c0876a6acd6}
+
+
+Helper function to decide if the hit has to be extracted and saved in the collection. 
+
+Definition at line 377 of file Geant4SDActions.cpp.
+
+References current.
+
+Referenced by process().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a8d3a583a2f70cb49bcc3d6eda5363a85}{
+\index{DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}!process@{process}}
+\index{process@{process}!DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}}
+\subsubsection[{process}]{\setlength{\rightskip}{0pt plus 5cm}G4bool DD4hep::Simulation::TrackerCombine::process (G4Step $\ast$ {\em step}, \/  G4TouchableHistory $\ast$)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a8d3a583a2f70cb49bcc3d6eda5363a85}
+
+
+Method for generating hit(s) using the information of G4Step object. 
+
+If we are handling a new track, then store the content of the previous one.
+
+Initialize the deposits of the next hit.
+
+....update ..... 
+
+Definition at line 408 of file Geant4SDActions.cpp.
+
+References DD4hep::Simulation::Geant4Sensitive::collection(), current, extractHit(), mustSaveTrack(), DD4hep::Simulation::Geant4StepHandler::post, DD4hep::Simulation::Geant4StepHandler::pre, DD4hep::Simulation::Geant4StepHandler::sd(), sensitive, start(), DD4hep::Simulation::Geant4StepHandler::track, update(), and DD4hep::Simulation::Geant4StepHandler::volume().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a104188fb9a41662e03eacc2d34e4bced}{
+\index{DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}!start@{start}}
+\index{start@{start}!DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Simulation::TrackerCombine::start (G4Step $\ast$ {\em step}, \/  G4StepPoint $\ast$ {\em point})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a104188fb9a41662e03eacc2d34e4bced}
+
+
+Start a new hit. 
+
+Definition at line 335 of file Geant4SDActions.cpp.
+
+References cell, combined, current, DD4hep::Simulation::Geant4Sensitive::mark(), mean\_\-pos, mean\_\-time, post, pre, sensitive, DD4hep::Simulation::Geant4Tracker::Hit::storePoint(), and DD4hep::Simulation::Geant4Tracker::Hit::truth.
+
+Referenced by process().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a3bd30148dcc0b7fa917b000c9946e77f}{
+\index{DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}!update@{update}}
+\index{update@{update}!DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Simulation::TrackerCombine::update (G4Step $\ast$ {\em step})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a3bd30148dcc0b7fa917b000c9946e77f}
+
+
+Update energy and track information during hit info accumulation. 
+
+Definition at line 348 of file Geant4SDActions.cpp.
+
+References cell, DD4hep::Simulation::Geant4Sensitive::cellID(), combined, DD4hep::Simulation::Geant4Action::except(), mean\_\-pos, mean\_\-time, DD4hep::Simulation::Geant4Tracker::Hit::position, post, pre, sensitive, DD4hep::Simulation::Geant4Tracker::Hit::storePoint(), DD4hep::Simulation::Geant4Tracker::Hit::truth, and DD4hep::Simulation::Geant4Sensitive::volumeID().
+
+Referenced by process().
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a93f684a7d6865b0f92a82560b3558d0d}{
+\index{DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}!cell@{cell}}
+\index{cell@{cell}!DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}}
+\subsubsection[{cell}]{\setlength{\rightskip}{0pt plus 5cm}long long int {\bf DD4hep::Simulation::TrackerCombine::cell}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a93f684a7d6865b0f92a82560b3558d0d}
+
+
+Definition at line 327 of file Geant4SDActions.cpp.
+
+Referenced by clear(), extractHit(), start(), and update().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a09c500ccd4bca917b081930ae9e2c5ce}{
+\index{DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}!combined@{combined}}
+\index{combined@{combined}!DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}}
+\subsubsection[{combined}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::Simulation::TrackerCombine::combined}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a09c500ccd4bca917b081930ae9e2c5ce}
+
+
+Definition at line 326 of file Geant4SDActions.cpp.
+
+Referenced by clear(), extractHit(), start(), and update().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_aa8bb9faf2d8ce6bac98f969e5bb9943c}{
+\index{DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}!current@{current}}
+\index{current@{current}!DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}}
+\subsubsection[{current}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::Simulation::TrackerCombine::current}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_aa8bb9faf2d8ce6bac98f969e5bb9943c}
+
+
+Definition at line 325 of file Geant4SDActions.cpp.
+
+Referenced by clear(), endEvent(), extractHit(), mustSaveTrack(), process(), and start().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_acd9b60d0c1b8cee45c1745a4ae167d24}{
+\index{DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}!e\_\-cut@{e\_\-cut}}
+\index{e\_\-cut@{e\_\-cut}!DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}}
+\subsubsection[{e\_\-cut}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::Simulation::TrackerCombine::e\_\-cut}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_acd9b60d0c1b8cee45c1745a4ae167d24}
+
+
+Definition at line 324 of file Geant4SDActions.cpp.\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a66a9636b7e0e4712718366da7db0ddf6}{
+\index{DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}!mean\_\-pos@{mean\_\-pos}}
+\index{mean\_\-pos@{mean\_\-pos}!DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}}
+\subsubsection[{mean\_\-pos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} {\bf DD4hep::Simulation::TrackerCombine::mean\_\-pos}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a66a9636b7e0e4712718366da7db0ddf6}
+
+
+Definition at line 321 of file Geant4SDActions.cpp.
+
+Referenced by clear(), extractHit(), start(), and update().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a88f539f333235ec8d8746fe11fd70e12}{
+\index{DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}!mean\_\-time@{mean\_\-time}}
+\index{mean\_\-time@{mean\_\-time}!DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}}
+\subsubsection[{mean\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::Simulation::TrackerCombine::mean\_\-time}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a88f539f333235ec8d8746fe11fd70e12}
+
+
+Definition at line 323 of file Geant4SDActions.cpp.
+
+Referenced by clear(), extractHit(), start(), and update().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a04a629d7ed0ac04fd945466a40bb7e48}{
+\index{DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}!post@{post}}
+\index{post@{post}!DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}}
+\subsubsection[{post}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Tracker::Hit} {\bf DD4hep::Simulation::TrackerCombine::post}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a04a629d7ed0ac04fd945466a40bb7e48}
+
+
+Definition at line 320 of file Geant4SDActions.cpp.
+
+Referenced by clear(), extractHit(), start(), and update().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a05e41bf826c42ad8e4ddefb914a9e079}{
+\index{DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}!pre@{pre}}
+\index{pre@{pre}!DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}}
+\subsubsection[{pre}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Tracker::Hit} {\bf DD4hep::Simulation::TrackerCombine::pre}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_a05e41bf826c42ad8e4ddefb914a9e079}
+
+
+Definition at line 320 of file Geant4SDActions.cpp.
+
+Referenced by clear(), extractHit(), start(), and update().\hypertarget{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_afa91afc4a7df2a80a889ab1a1ba4d4b6}{
+\index{DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}!sensitive@{sensitive}}
+\index{sensitive@{sensitive}!DD4hep::Simulation::TrackerCombine@{DD4hep::Simulation::TrackerCombine}}
+\subsubsection[{sensitive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Sensitive}$\ast$ {\bf DD4hep::Simulation::TrackerCombine::sensitive}}}
+\label{struct_d_d4hep_1_1_simulation_1_1_tracker_combine_afa91afc4a7df2a80a889ab1a1ba4d4b6}
+
+
+Definition at line 322 of file Geant4SDActions.cpp.
+
+Referenced by endEvent(), extractHit(), process(), start(), and update().
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/plugins/\hyperlink{_geant4_s_d_actions_8cpp}{Geant4SDActions.cpp}\end{DoxyCompactItemize}

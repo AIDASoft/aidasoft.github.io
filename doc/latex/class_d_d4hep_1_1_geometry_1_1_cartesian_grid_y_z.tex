@@ -1,0 +1,339 @@
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z}{
+\section{DD4hep::Geometry::CartesianGridYZ Class Reference}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z}\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+}
+
+
+Implementation class for the grid YZ segmentation.  
+
+
+{\ttfamily \#include $<$CartesianGridYZ.h$>$}Inheritance diagram for DD4hep::Geometry::CartesianGridYZ::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_t}{CartesianGridYZHandle::Implementation} \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_ad5db30e8623d30e9f23f0c4f8e0b546e}{Object}
+\begin{DoxyCompactList}\small\item\em Defintiion of the basic handled object. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_aed939b9098470846e32794f3d865ff7b}{CartesianGridYZ} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a137cf0fec563952ae183d5ce5675dbe2}{CartesianGridYZ} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z}{CartesianGridYZ} \&e)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_ae3f9ea2435ad2c614ef57d1acd4bef8d}{CartesianGridYZ} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation}{Segmentation} \&e)
+\begin{DoxyCompactList}\small\item\em Copy Constructor from segmentation base object. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_ab68e61e001c4eea7d4e6aa57dc7f99e4}{CartesianGridYZ} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_t}{Object} $>$ \&e)
+\begin{DoxyCompactList}\small\item\em Copy constructor from handle. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a5b249688197afc0b14a2ec083d0a9b1f}{CartesianGridYZ} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&e)
+\begin{DoxyCompactList}\small\item\em Copy constructor from other polymorph/equivalent handle. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z}{CartesianGridYZ} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a5b597a85e6916bf6f4a61123d6bfada3}{operator=} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z}{CartesianGridYZ} \&seg)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a31f625c0056287ae2d993317ed3c661e}{operator==} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z}{CartesianGridYZ} \&seg) const 
+\begin{DoxyCompactList}\small\item\em Equality operator. \item\end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_ab29bceeb4c0988d679a615f1d7c4fb6c}{position} (const CellID \&cellID) const 
+\begin{DoxyCompactList}\small\item\em determine the position based on the cell ID \item\end{DoxyCompactList}\item 
+CellID \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a8b1add0a770a1822d31a7bec12748cf5}{cellID} (const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&local, const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&global, const VolumeID \&volID) const 
+\begin{DoxyCompactList}\small\item\em determine the cell ID based on the position \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_aa682499731e5b3c658a3c0b363040eac}{gridSizeY} () const 
+\begin{DoxyCompactList}\small\item\em access the grid size in Y \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a7ffe124c102475ce9c98fa0b01d330d9}{gridSizeZ} () const 
+\begin{DoxyCompactList}\small\item\em access the grid size in Z \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a72e8d223d58503b05885bf1c8ca6f13b}{setGridSizeY} (double cellSize) const 
+\begin{DoxyCompactList}\small\item\em set the grid size in Y \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a1812722ba2ebf57c0e08f40fa1740dae}{setGridSizeZ} (double cellSize) const 
+\begin{DoxyCompactList}\small\item\em set the grid size in Z \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a00b47c15cf9fd27761e2a7c3e1b4b7db}{offsetY} () const 
+\begin{DoxyCompactList}\small\item\em access the coordinate offset in Y \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_aa7bdd306e50ec2ff182cb51f3ce4704f}{offsetZ} () const 
+\begin{DoxyCompactList}\small\item\em access the coordinate offset in Z \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a7399a2d921fb91e013cedacb0571394b}{setOffsetY} (double offset) const 
+\begin{DoxyCompactList}\small\item\em set the coordinate offset in Y \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_ab079e1c43643989e382a47e3b8459f99}{setOffsetZ} (double offset) const 
+\begin{DoxyCompactList}\small\item\em set the coordinate offset in Z \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_abf3ec171bf18377a98c042be1b84cfa6}{fieldNameX} () const 
+\begin{DoxyCompactList}\small\item\em access the field name used for X \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_aa54f02a42ce3caf3fee0fffdb7105bc2}{fieldNameY} () const 
+\begin{DoxyCompactList}\small\item\em access the field name used for Y \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a51881162bbb8a8102601d5d8a42ddd18}{fieldNameZ} () const 
+\begin{DoxyCompactList}\small\item\em access the field name used for Z \item\end{DoxyCompactList}\item 
+std::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_ad977bcb19f482630f8bb3081fc4e6656}{cellDimensions} (const CellID \&cellID) const 
+\begin{DoxyCompactList}\small\item\em Returns a vector$<$double$>$ of the cellDimensions of the given cell ID in natural order of dimensions, e.g., dx/dy/dz, or dr/r$\ast$dPhi. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation class for the grid YZ segmentation. Concrete user handle to serve specific needs of client code which requires access to the base functionality not served by the super-\/class \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation}{Segmentation}.
+
+Note: We only check the validity of the underlying handle. If for whatever reason the implementation object is not valid This is not checked. In principle this CANNOT happen unless some brain-\/dead has fiddled with the handled object directly.....
+
+Note: The handle base corrsponding to this object in for conveniance reasons instantiated in DD4hep/src/Segmentations.cpp.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 58 of file CartesianGridYZ.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_ad5db30e8623d30e9f23f0c4f8e0b546e}{
+\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}!Object@{Object}}
+\index{Object@{Object}!DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+\subsubsection[{Object}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf CartesianGridYZHandle::Implementation} {\bf DD4hep::Geometry::CartesianGridYZ::Object}}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_ad5db30e8623d30e9f23f0c4f8e0b546e}
+
+
+Defintiion of the basic handled object. 
+
+Definition at line 61 of file CartesianGridYZ.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_aed939b9098470846e32794f3d865ff7b}{
+\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}!CartesianGridYZ@{CartesianGridYZ}}
+\index{CartesianGridYZ@{CartesianGridYZ}!DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+\subsubsection[{CartesianGridYZ}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::CartesianGridYZ::CartesianGridYZ ()}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_aed939b9098470846e32794f3d865ff7b}
+
+
+Default constructor. \hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a137cf0fec563952ae183d5ce5675dbe2}{
+\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}!CartesianGridYZ@{CartesianGridYZ}}
+\index{CartesianGridYZ@{CartesianGridYZ}!DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+\subsubsection[{CartesianGridYZ}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::CartesianGridYZ::CartesianGridYZ (const {\bf CartesianGridYZ} \& {\em e})}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a137cf0fec563952ae183d5ce5675dbe2}
+
+
+Copy constructor. \hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_ae3f9ea2435ad2c614ef57d1acd4bef8d}{
+\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}!CartesianGridYZ@{CartesianGridYZ}}
+\index{CartesianGridYZ@{CartesianGridYZ}!DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+\subsubsection[{CartesianGridYZ}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::CartesianGridYZ::CartesianGridYZ (const {\bf Segmentation} \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_ae3f9ea2435ad2c614ef57d1acd4bef8d}
+
+
+Copy Constructor from segmentation base object. 
+
+Definition at line 69 of file CartesianGridYZ.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_ab68e61e001c4eea7d4e6aa57dc7f99e4}{
+\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}!CartesianGridYZ@{CartesianGridYZ}}
+\index{CartesianGridYZ@{CartesianGridYZ}!DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+\subsubsection[{CartesianGridYZ}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::CartesianGridYZ::CartesianGridYZ (const {\bf Handle}$<$ {\bf Object} $>$ \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_ab68e61e001c4eea7d4e6aa57dc7f99e4}
+
+
+Copy constructor from handle. 
+
+Definition at line 71 of file CartesianGridYZ.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a5b249688197afc0b14a2ec083d0a9b1f}{
+\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}!CartesianGridYZ@{CartesianGridYZ}}
+\index{CartesianGridYZ@{CartesianGridYZ}!DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+\subsubsection[{CartesianGridYZ}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q $>$ DD4hep::Geometry::CartesianGridYZ::CartesianGridYZ (const {\bf Handle}$<$ Q $>$ \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a5b249688197afc0b14a2ec083d0a9b1f}
+
+
+Copy constructor from other polymorph/equivalent handle. 
+
+Definition at line 74 of file CartesianGridYZ.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_ad977bcb19f482630f8bb3081fc4e6656}{
+\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}!cellDimensions@{cellDimensions}}
+\index{cellDimensions@{cellDimensions}!DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+\subsubsection[{cellDimensions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vector}$<$ double $>$ CartesianGridYZ::cellDimensions (const CellID \& {\em id}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_ad977bcb19f482630f8bb3081fc4e6656}
+
+
+Returns a vector$<$double$>$ of the cellDimensions of the given cell ID in natural order of dimensions, e.g., dx/dy/dz, or dr/r$\ast$dPhi. Returns a vector of the cellDimensions of the given cell ID 
+\begin{DoxyParams}{Parameters}
+\item[{\em cellID}]is ignored as all cells have the same dimension \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std::vector$<$double$>$ size 2:
+\begin{DoxyEnumerate}
+\item size in y
+\item size in z
+\end{DoxyEnumerate}
+\end{DoxyReturn}
+Returns a vector of the cellDimensions of the given cell ID 
+\begin{DoxyParams}{Parameters}
+\item[{\em cellID}]is ignored as all cells have the same dimension \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$double$>$ size 2:
+\begin{DoxyEnumerate}
+\item size in y
+\item size in z 
+\end{DoxyEnumerate}
+\end{DoxyReturn}
+
+
+Definition at line 96 of file CartesianGridYZ.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a8b1add0a770a1822d31a7bec12748cf5}{
+\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}!cellID@{cellID}}
+\index{cellID@{cellID}!DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+\subsubsection[{cellID}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::CellID CartesianGridYZ::cellID (const {\bf Position} \& {\em local}, \/  const {\bf Position} \& {\em global}, \/  const VolumeID \& {\em volID}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a8b1add0a770a1822d31a7bec12748cf5}
+
+
+determine the cell ID based on the position 
+
+Definition at line 30 of file CartesianGridYZ.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_abf3ec171bf18377a98c042be1b84cfa6}{
+\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}!fieldNameX@{fieldNameX}}
+\index{fieldNameX@{fieldNameX}!DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+\subsubsection[{fieldNameX}]{\setlength{\rightskip}{0pt plus 5cm}const std::string\& DD4hep::Geometry::CartesianGridYZ::fieldNameX () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_abf3ec171bf18377a98c042be1b84cfa6}
+
+
+access the field name used for X \hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_aa54f02a42ce3caf3fee0fffdb7105bc2}{
+\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}!fieldNameY@{fieldNameY}}
+\index{fieldNameY@{fieldNameY}!DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+\subsubsection[{fieldNameY}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf string} \& CartesianGridYZ::fieldNameY () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_aa54f02a42ce3caf3fee0fffdb7105bc2}
+
+
+access the field name used for Y 
+
+Definition at line 78 of file CartesianGridYZ.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a51881162bbb8a8102601d5d8a42ddd18}{
+\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}!fieldNameZ@{fieldNameZ}}
+\index{fieldNameZ@{fieldNameZ}!DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+\subsubsection[{fieldNameZ}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf string} \& CartesianGridYZ::fieldNameZ () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a51881162bbb8a8102601d5d8a42ddd18}
+
+
+access the field name used for Z 
+
+Definition at line 83 of file CartesianGridYZ.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_aa682499731e5b3c658a3c0b363040eac}{
+\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}!gridSizeY@{gridSizeY}}
+\index{gridSizeY@{gridSizeY}!DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+\subsubsection[{gridSizeY}]{\setlength{\rightskip}{0pt plus 5cm}double CartesianGridYZ::gridSizeY () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_aa682499731e5b3c658a3c0b363040eac}
+
+
+access the grid size in Y 
+
+Definition at line 38 of file CartesianGridYZ.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a7ffe124c102475ce9c98fa0b01d330d9}{
+\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}!gridSizeZ@{gridSizeZ}}
+\index{gridSizeZ@{gridSizeZ}!DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+\subsubsection[{gridSizeZ}]{\setlength{\rightskip}{0pt plus 5cm}double CartesianGridYZ::gridSizeZ () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a7ffe124c102475ce9c98fa0b01d330d9}
+
+
+access the grid size in Z 
+
+Definition at line 43 of file CartesianGridYZ.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a00b47c15cf9fd27761e2a7c3e1b4b7db}{
+\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}!offsetY@{offsetY}}
+\index{offsetY@{offsetY}!DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+\subsubsection[{offsetY}]{\setlength{\rightskip}{0pt plus 5cm}double CartesianGridYZ::offsetY () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a00b47c15cf9fd27761e2a7c3e1b4b7db}
+
+
+access the coordinate offset in Y 
+
+Definition at line 58 of file CartesianGridYZ.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_aa7bdd306e50ec2ff182cb51f3ce4704f}{
+\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}!offsetZ@{offsetZ}}
+\index{offsetZ@{offsetZ}!DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+\subsubsection[{offsetZ}]{\setlength{\rightskip}{0pt plus 5cm}double CartesianGridYZ::offsetZ () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_aa7bdd306e50ec2ff182cb51f3ce4704f}
+
+
+access the coordinate offset in Z 
+
+Definition at line 63 of file CartesianGridYZ.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a5b597a85e6916bf6f4a61123d6bfada3}{
+\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}!operator=@{operator=}}
+\index{operator=@{operator=}!DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CartesianGridYZ}\& DD4hep::Geometry::CartesianGridYZ::operator= (const {\bf CartesianGridYZ} \& {\em seg})}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a5b597a85e6916bf6f4a61123d6bfada3}
+
+
+Assignment operator. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_handle_a9bbf8f498df42e81ad26fb00233505a6}{DD4hep::Handle$<$ T $>$}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a31f625c0056287ae2d993317ed3c661e}{
+\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}!operator==@{operator==}}
+\index{operator==@{operator==}!DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Geometry::CartesianGridYZ::operator== (const {\bf CartesianGridYZ} \& {\em seg}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a31f625c0056287ae2d993317ed3c661e}
+
+
+Equality operator. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_handle_a618470283b3a2cc5ed0545fec90dc759}{DD4hep::Handle$<$ T $>$}.
+
+Definition at line 78 of file CartesianGridYZ.h.
+
+References DD4hep::Handle$<$ T $>$::m\_\-element.\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_ab29bceeb4c0988d679a615f1d7c4fb6c}{
+\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}!position@{position}}
+\index{position@{position}!DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} CartesianGridYZ::position (const CellID \& {\em cellID}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_ab29bceeb4c0988d679a615f1d7c4fb6c}
+
+
+determine the position based on the cell ID 
+
+Definition at line 25 of file CartesianGridYZ.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a72e8d223d58503b05885bf1c8ca6f13b}{
+\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}!setGridSizeY@{setGridSizeY}}
+\index{setGridSizeY@{setGridSizeY}!DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+\subsubsection[{setGridSizeY}]{\setlength{\rightskip}{0pt plus 5cm}void CartesianGridYZ::setGridSizeY (double {\em cellSize}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a72e8d223d58503b05885bf1c8ca6f13b}
+
+
+set the grid size in Y 
+
+Definition at line 48 of file CartesianGridYZ.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a1812722ba2ebf57c0e08f40fa1740dae}{
+\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}!setGridSizeZ@{setGridSizeZ}}
+\index{setGridSizeZ@{setGridSizeZ}!DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+\subsubsection[{setGridSizeZ}]{\setlength{\rightskip}{0pt plus 5cm}void CartesianGridYZ::setGridSizeZ (double {\em cellSize}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a1812722ba2ebf57c0e08f40fa1740dae}
+
+
+set the grid size in Z 
+
+Definition at line 53 of file CartesianGridYZ.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a7399a2d921fb91e013cedacb0571394b}{
+\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}!setOffsetY@{setOffsetY}}
+\index{setOffsetY@{setOffsetY}!DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+\subsubsection[{setOffsetY}]{\setlength{\rightskip}{0pt plus 5cm}void CartesianGridYZ::setOffsetY (double {\em offset}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_a7399a2d921fb91e013cedacb0571394b}
+
+
+set the coordinate offset in Y 
+
+Definition at line 68 of file CartesianGridYZ.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_ab079e1c43643989e382a47e3b8459f99}{
+\index{DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}!setOffsetZ@{setOffsetZ}}
+\index{setOffsetZ@{setOffsetZ}!DD4hep::Geometry::CartesianGridYZ@{DD4hep::Geometry::CartesianGridYZ}}
+\subsubsection[{setOffsetZ}]{\setlength{\rightskip}{0pt plus 5cm}void CartesianGridYZ::setOffsetZ (double {\em offset}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_grid_y_z_ab079e1c43643989e382a47e3b8459f99}
+
+
+set the coordinate offset in Z 
+
+Definition at line 73 of file CartesianGridYZ.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_d_d_core_2include_2_d_d4hep_2_cartesian_grid_y_z_8h}{CartesianGridYZ.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_d_d_core_2src_2_cartesian_grid_y_z_8cpp}{CartesianGridYZ.cpp}\end{DoxyCompactItemize}

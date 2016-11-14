@@ -1,0 +1,355 @@
+\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler}{
+\section{DD4hep::DDG4EventHandler Class Reference}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler}\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+}
+
+
+{\ttfamily \#include $<$DDG4EventHandler.h$>$}Inheritance diagram for DD4hep::DDG4EventHandler::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_d_d_g4_event_handler}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std::map$<$ std::string, std::pair$<$ TBranch $\ast$, void $\ast$ $>$ $>$ \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_accd112cdbf8673e3a80d97e2d5c98241}{Branches}
+\item 
+typedef void $\ast$($\ast$ \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a5d1ac46722967ffdd5e1a15147d3c6bb}{ParticleAccessor\_\-t} )(void $\ast$, \hyperlink{class_d_d4hep_1_1_d_d_eve_particle}{DDEveParticle} $\ast$)
+\item 
+typedef void $\ast$($\ast$ \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a2f34a2e7c2b1a6cb2c9fc1b7270d707e}{HitAccessor\_\-t} )(void $\ast$, \hyperlink{class_d_d4hep_1_1_d_d_eve_hit}{DDEveHit} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_af3bf78e2d9ae9789b6e9a0ff8c332a07}{DDG4EventHandler} ()
+\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a149942eb56e028c4f5ea9f814e6dbd3b}{$\sim$DDG4EventHandler} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+virtual const \hyperlink{class_d_d4hep_1_1_event_handler_a4d441ff8a824b1e2f278e8b7a6391af3}{TypedEventCollections} \& \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a066893cdf431bef4b398b58624aab22c}{data} () const 
+\begin{DoxyCompactList}\small\item\em Access the map of simulation data collections. \item\end{DoxyCompactList}\item 
+virtual long \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a0c0858e77b1bb47621738694c31d5ed6}{numEvents} () const 
+\begin{DoxyCompactList}\small\item\em Access the number of events on the current input data source (-\/1 if no data source connected). \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_ab5f21b250f691a4dae9b1a1deca61440}{datasourceName} () const 
+\begin{DoxyCompactList}\small\item\em Access the data source name. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254}{CollectionType} \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a598b723bc7b7783532343403d6b91ff2}{collectionType} (const std::string \&collection) const 
+\begin{DoxyCompactList}\small\item\em Access to the collection type by name. \item\end{DoxyCompactList}\item 
+virtual size\_\-t \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a65645df58f694dea050f7d57d353dff4}{collectionLoop} (const std::string \&collection, \hyperlink{struct_d_d4hep_1_1_d_d_eve_hit_actor}{DDEveHitActor} \&actor)
+\begin{DoxyCompactList}\small\item\em Call functor on hit collection. \item\end{DoxyCompactList}\item 
+virtual size\_\-t \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a9f45863ae9406f8d5ec1d309321c50d6}{collectionLoop} (const std::string \&collection, \hyperlink{struct_d_d4hep_1_1_d_d_eve_particle_actor}{DDEveParticleActor} \&actor)
+\begin{DoxyCompactList}\small\item\em Loop over collection and extract particle data. \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a110e487b2813985f56058382357f0754}{Open} (const std::string \&type, const std::string \&file\_\-name)
+\begin{DoxyCompactList}\small\item\em Open new data file. \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a02ecd0dfced58988ab84242cb9fdfd44}{NextEvent} ()
+\begin{DoxyCompactList}\small\item\em User overloadable function: Load the next event. \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a20cafa8eac655886d4a3d69338e7e947}{PreviousEvent} ()
+\begin{DoxyCompactList}\small\item\em User overloadable function: Load the previous event. \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a3af4cf3191fabf450e81812e93d2502a}{GotoEvent} (long event\_\-number)
+\begin{DoxyCompactList}\small\item\em Goto a specified event in the file. \item\end{DoxyCompactList}\item 
+Int\_\-t \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_ad89bd74bf6a00c80055a0332a66ddee5}{ReadEvent} (Long64\_\-t n)
+\begin{DoxyCompactList}\small\item\em Load the specified event. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a0b89e00baf1f1e9a95f4f31517635e34}{ClassDef} (\hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler}{DDG4EventHandler}, 0)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::pair$<$ TFile $\ast$, TTree $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a0b53d1d20cca9b02b9f119c99832b503}{m\_\-file}
+\begin{DoxyCompactList}\small\item\em Reference to data file. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_accd112cdbf8673e3a80d97e2d5c98241}{Branches} \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a33ae5f13b50b604cf914ba4d86aa3c35}{m\_\-branches}
+\begin{DoxyCompactList}\small\item\em Branch map. \item\end{DoxyCompactList}\item 
+Long64\_\-t \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_ab28e33c8789d149c104fea42e39ba060}{m\_\-entry}
+\begin{DoxyCompactList}\small\item\em File entry number. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a2f34a2e7c2b1a6cb2c9fc1b7270d707e}{HitAccessor\_\-t} \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a608844b86789ef2ccc8b7d088bdb7fe6}{m\_\-simhitConverter}
+\begin{DoxyCompactList}\small\item\em Function pointer to interprete hits. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a5d1ac46722967ffdd5e1a15147d3c6bb}{ParticleAccessor\_\-t} \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_abf82ae01b8dc3e3cfc84de48f42d4ce2}{m\_\-particleConverter}
+\begin{DoxyCompactList}\small\item\em Function pointer to interprete particles. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_event_handler_a4d441ff8a824b1e2f278e8b7a6391af3}{TypedEventCollections} \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a11dcb61378ef3044f34723cc25aec8b7}{m\_\-data}
+\begin{DoxyCompactList}\small\item\em Data collection map. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Event I/O handler class for the \hyperlink{namespace_d_d4hep}{DD4hep} event display
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 38 of file DDG4EventHandler.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_accd112cdbf8673e3a80d97e2d5c98241}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!Branches@{Branches}}
+\index{Branches@{Branches}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{Branches}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$std::string,std::pair$<$TBranch$\ast$,void$\ast$$>$ $>$ {\bf DD4hep::DDG4EventHandler::Branches}}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_accd112cdbf8673e3a80d97e2d5c98241}
+
+
+Definition at line 40 of file DDG4EventHandler.h.\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_a2f34a2e7c2b1a6cb2c9fc1b7270d707e}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!HitAccessor\_\-t@{HitAccessor\_\-t}}
+\index{HitAccessor\_\-t@{HitAccessor\_\-t}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{HitAccessor\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$($\ast$ {\bf DD4hep::DDG4EventHandler::HitAccessor\_\-t})(void $\ast$, {\bf DDEveHit} $\ast$)}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_a2f34a2e7c2b1a6cb2c9fc1b7270d707e}
+
+
+Definition at line 42 of file DDG4EventHandler.h.\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_a5d1ac46722967ffdd5e1a15147d3c6bb}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!ParticleAccessor\_\-t@{ParticleAccessor\_\-t}}
+\index{ParticleAccessor\_\-t@{ParticleAccessor\_\-t}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{ParticleAccessor\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$($\ast$ {\bf DD4hep::DDG4EventHandler::ParticleAccessor\_\-t})(void $\ast$, {\bf DDEveParticle} $\ast$)}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_a5d1ac46722967ffdd5e1a15147d3c6bb}
+
+
+Definition at line 41 of file DDG4EventHandler.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_af3bf78e2d9ae9789b6e9a0ff8c332a07}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!DDG4EventHandler@{DDG4EventHandler}}
+\index{DDG4EventHandler@{DDG4EventHandler}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{DDG4EventHandler}]{\setlength{\rightskip}{0pt plus 5cm}DDG4EventHandler::DDG4EventHandler ()}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_af3bf78e2d9ae9789b6e9a0ff8c332a07}
+
+
+Standard constructor. 
+
+Definition at line 49 of file DDG4EventHandler.cpp.\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_a149942eb56e028c4f5ea9f814e6dbd3b}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!$\sim$DDG4EventHandler@{$\sim$DDG4EventHandler}}
+\index{$\sim$DDG4EventHandler@{$\sim$DDG4EventHandler}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{$\sim$DDG4EventHandler}]{\setlength{\rightskip}{0pt plus 5cm}DDG4EventHandler::$\sim$DDG4EventHandler ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_a149942eb56e028c4f5ea9f814e6dbd3b}
+
+
+Default destructor. 
+
+Definition at line 63 of file DDG4EventHandler.cpp.
+
+References m\_\-file.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_a0b89e00baf1f1e9a95f4f31517635e34}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!ClassDef@{ClassDef}}
+\index{ClassDef@{ClassDef}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{ClassDef}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDG4EventHandler::ClassDef ({\bf DDG4EventHandler}, \/  0)}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_a0b89e00baf1f1e9a95f4f31517635e34}
+
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_event_handler_a44c310a4296693f09e62adbac3fbe2c6}{DD4hep::EventHandler}.\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_a9f45863ae9406f8d5ec1d309321c50d6}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!collectionLoop@{collectionLoop}}
+\index{collectionLoop@{collectionLoop}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{collectionLoop}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t DDG4EventHandler::collectionLoop (const std::string \& {\em collection}, \/  {\bf DDEveParticleActor} \& {\em actor})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_a9f45863ae9406f8d5ec1d309321c50d6}
+
+
+Loop over collection and extract particle data. 
+
+Implements \hyperlink{class_d_d4hep_1_1_event_handler_ae43595c2760736a7ca628183a2c91ec2}{DD4hep::EventHandler}.
+
+Definition at line 140 of file DDG4EventHandler.cpp.
+
+References m\_\-branches, m\_\-particleConverter, and DD4hep::DDEveParticleActor::setSize().\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_a65645df58f694dea050f7d57d353dff4}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!collectionLoop@{collectionLoop}}
+\index{collectionLoop@{collectionLoop}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{collectionLoop}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t DDG4EventHandler::collectionLoop (const std::string \& {\em collection}, \/  {\bf DDEveHitActor} \& {\em actor})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_a65645df58f694dea050f7d57d353dff4}
+
+
+Call functor on hit collection. 
+
+Implements \hyperlink{class_d_d4hep_1_1_event_handler_a454baeb81b675f3ebd8bb4293064b787}{DD4hep::EventHandler}.
+
+Definition at line 120 of file DDG4EventHandler.cpp.
+
+References m\_\-branches, m\_\-simhitConverter, and DD4hep::DDEveHitActor::setSize().\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_a598b723bc7b7783532343403d6b91ff2}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!collectionType@{collectionType}}
+\index{collectionType@{collectionType}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{collectionType}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EventHandler::CollectionType} DDG4EventHandler::collectionType (const std::string \& {\em collection}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_a598b723bc7b7783532343403d6b91ff2}
+
+
+Access to the collection type by name. 
+
+Implements \hyperlink{class_d_d4hep_1_1_event_handler_a8424ffc2056b0e23d69c81ab2496cd51}{DD4hep::EventHandler}.
+
+Definition at line 104 of file DDG4EventHandler.cpp.
+
+References DD4hep::EventHandler::CALO\_\-HIT\_\-COLLECTION, m\_\-branches, DD4hep::EventHandler::NO\_\-COLLECTION, DD4hep::EventHandler::PARTICLE\_\-COLLECTION, and DD4hep::EventHandler::TRACKER\_\-HIT\_\-COLLECTION.\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_a066893cdf431bef4b398b58624aab22c}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!data@{data}}
+\index{data@{data}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf TypedEventCollections}\& DD4hep::DDG4EventHandler::data () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_a066893cdf431bef4b398b58624aab22c}
+
+
+Access the map of simulation data collections. 
+
+Implements \hyperlink{class_d_d4hep_1_1_event_handler_a263d136331d72994bcbf537d4aa16d4f}{DD4hep::EventHandler}.
+
+Definition at line 63 of file DDG4EventHandler.h.
+
+References m\_\-data.\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_ab5f21b250f691a4dae9b1a1deca61440}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!datasourceName@{datasourceName}}
+\index{datasourceName@{datasourceName}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{datasourceName}]{\setlength{\rightskip}{0pt plus 5cm}std::string DDG4EventHandler::datasourceName () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_ab5f21b250f691a4dae9b1a1deca61440}
+
+
+Access the data source name. 
+
+Implements \hyperlink{class_d_d4hep_1_1_event_handler_a5fa231363a787ba7edf520b5a99f294e}{DD4hep::EventHandler}.
+
+Definition at line 96 of file DDG4EventHandler.cpp.
+
+References DD4hep::EventHandler::hasFile(), and m\_\-file.\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_a3af4cf3191fabf450e81812e93d2502a}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!GotoEvent@{GotoEvent}}
+\index{GotoEvent@{GotoEvent}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{GotoEvent}]{\setlength{\rightskip}{0pt plus 5cm}bool DDG4EventHandler::GotoEvent (long {\em event\_\-number})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_a3af4cf3191fabf450e81812e93d2502a}
+
+
+Goto a specified event in the file. 
+
+Implements \hyperlink{class_d_d4hep_1_1_event_handler_a09c40b0b753455c1e3df7c561ff6b069}{DD4hep::EventHandler}.
+
+Definition at line 83 of file DDG4EventHandler.cpp.
+
+References m\_\-entry, and ReadEvent().\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_a02ecd0dfced58988ab84242cb9fdfd44}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!NextEvent@{NextEvent}}
+\index{NextEvent@{NextEvent}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{NextEvent}]{\setlength{\rightskip}{0pt plus 5cm}bool DDG4EventHandler::NextEvent ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_a02ecd0dfced58988ab84242cb9fdfd44}
+
+
+User overloadable function: Load the next event. Load the next event. 
+
+Implements \hyperlink{class_d_d4hep_1_1_event_handler_ac2360791d3a44f4cef0987f9a7ec51ce}{DD4hep::EventHandler}.
+
+Definition at line 73 of file DDG4EventHandler.cpp.
+
+References m\_\-entry, and ReadEvent().\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_a0c0858e77b1bb47621738694c31d5ed6}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!numEvents@{numEvents}}
+\index{numEvents@{numEvents}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{numEvents}]{\setlength{\rightskip}{0pt plus 5cm}long DDG4EventHandler::numEvents () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_a0c0858e77b1bb47621738694c31d5ed6}
+
+
+Access the number of events on the current input data source (-\/1 if no data source connected). 
+
+Implements \hyperlink{class_d_d4hep_1_1_event_handler_a005436bba029439b513645485e3c0ff5}{DD4hep::EventHandler}.
+
+Definition at line 88 of file DDG4EventHandler.cpp.
+
+References DD4hep::EventHandler::hasFile(), and m\_\-file.\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_a110e487b2813985f56058382357f0754}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!Open@{Open}}
+\index{Open@{Open}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{Open}]{\setlength{\rightskip}{0pt plus 5cm}bool DDG4EventHandler::Open (const std::string \& {\em type}, \/  const std::string \& {\em file\_\-name})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_a110e487b2813985f56058382357f0754}
+
+
+Open new data file. 
+
+Implements \hyperlink{class_d_d4hep_1_1_event_handler_a90995d3b610beee9d9f7fafcc060626b}{DD4hep::EventHandler}.
+
+Definition at line 191 of file DDG4EventHandler.cpp.
+
+References DD4hep::INFO, m\_\-branches, m\_\-entry, m\_\-file, DD4hep::EventHandler::m\_\-hasEvent, DD4hep::EventHandler::m\_\-hasFile, and DD4hep::printout().\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_a20cafa8eac655886d4a3d69338e7e947}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!PreviousEvent@{PreviousEvent}}
+\index{PreviousEvent@{PreviousEvent}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{PreviousEvent}]{\setlength{\rightskip}{0pt plus 5cm}bool DDG4EventHandler::PreviousEvent ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_a20cafa8eac655886d4a3d69338e7e947}
+
+
+User overloadable function: Load the previous event. Load the previous event. 
+
+Implements \hyperlink{class_d_d4hep_1_1_event_handler_a0942608bebbdd107c9dedbdc7311791f}{DD4hep::EventHandler}.
+
+Definition at line 78 of file DDG4EventHandler.cpp.
+
+References m\_\-entry, and ReadEvent().\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_ad89bd74bf6a00c80055a0332a66ddee5}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!ReadEvent@{ReadEvent}}
+\index{ReadEvent@{ReadEvent}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{ReadEvent}]{\setlength{\rightskip}{0pt plus 5cm}Int\_\-t DDG4EventHandler::ReadEvent (Long64\_\-t {\em n})}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_ad89bd74bf6a00c80055a0332a66ddee5}
+
+
+Load the specified event. 
+
+Definition at line 160 of file DDG4EventHandler.cpp.
+
+References DD4hep::ERROR, DD4hep::EventHandler::hasFile(), m\_\-branches, m\_\-data, m\_\-file, DD4hep::EventHandler::m\_\-hasEvent, and DD4hep::printout().
+
+Referenced by GotoEvent(), NextEvent(), and PreviousEvent().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_a33ae5f13b50b604cf914ba4d86aa3c35}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!m\_\-branches@{m\_\-branches}}
+\index{m\_\-branches@{m\_\-branches}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{m\_\-branches}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Branches} {\bf DD4hep::DDG4EventHandler::m\_\-branches}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_a33ae5f13b50b604cf914ba4d86aa3c35}
+
+
+Branch map. 
+
+Definition at line 47 of file DDG4EventHandler.h.
+
+Referenced by collectionLoop(), collectionType(), Open(), and ReadEvent().\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_a11dcb61378ef3044f34723cc25aec8b7}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!m\_\-data@{m\_\-data}}
+\index{m\_\-data@{m\_\-data}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{m\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf TypedEventCollections} {\bf DD4hep::DDG4EventHandler::m\_\-data}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_a11dcb61378ef3044f34723cc25aec8b7}
+
+
+Data collection map. 
+
+Definition at line 55 of file DDG4EventHandler.h.
+
+Referenced by data(), and ReadEvent().\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_ab28e33c8789d149c104fea42e39ba060}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!m\_\-entry@{m\_\-entry}}
+\index{m\_\-entry@{m\_\-entry}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{m\_\-entry}]{\setlength{\rightskip}{0pt plus 5cm}Long64\_\-t {\bf DD4hep::DDG4EventHandler::m\_\-entry}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_ab28e33c8789d149c104fea42e39ba060}
+
+
+File entry number. 
+
+Definition at line 49 of file DDG4EventHandler.h.
+
+Referenced by GotoEvent(), NextEvent(), Open(), and PreviousEvent().\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_a0b53d1d20cca9b02b9f119c99832b503}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!m\_\-file@{m\_\-file}}
+\index{m\_\-file@{m\_\-file}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{m\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}std::pair$<$TFile$\ast$,TTree$\ast$$>$ {\bf DD4hep::DDG4EventHandler::m\_\-file}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_a0b53d1d20cca9b02b9f119c99832b503}
+
+
+Reference to data file. 
+
+Definition at line 45 of file DDG4EventHandler.h.
+
+Referenced by datasourceName(), numEvents(), Open(), ReadEvent(), and $\sim$DDG4EventHandler().\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_abf82ae01b8dc3e3cfc84de48f42d4ce2}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!m\_\-particleConverter@{m\_\-particleConverter}}
+\index{m\_\-particleConverter@{m\_\-particleConverter}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{m\_\-particleConverter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ParticleAccessor\_\-t} {\bf DD4hep::DDG4EventHandler::m\_\-particleConverter}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_abf82ae01b8dc3e3cfc84de48f42d4ce2}
+
+
+Function pointer to interprete particles. 
+
+Definition at line 53 of file DDG4EventHandler.h.
+
+Referenced by collectionLoop().\hypertarget{class_d_d4hep_1_1_d_d_g4_event_handler_a608844b86789ef2ccc8b7d088bdb7fe6}{
+\index{DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}!m\_\-simhitConverter@{m\_\-simhitConverter}}
+\index{m\_\-simhitConverter@{m\_\-simhitConverter}!DD4hep::DDG4EventHandler@{DD4hep::DDG4EventHandler}}
+\subsubsection[{m\_\-simhitConverter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf HitAccessor\_\-t} {\bf DD4hep::DDG4EventHandler::m\_\-simhitConverter}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_g4_event_handler_a608844b86789ef2ccc8b7d088bdb7fe6}
+
+
+Function pointer to interprete hits. 
+
+Definition at line 51 of file DDG4EventHandler.h.
+
+Referenced by collectionLoop().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDEve/include/DDEve/\hyperlink{_d_d_g4_event_handler_8h}{DDG4EventHandler.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDEve/src/\hyperlink{_d_d_g4_event_handler_8cpp}{DDG4EventHandler.cpp}\end{DoxyCompactItemize}

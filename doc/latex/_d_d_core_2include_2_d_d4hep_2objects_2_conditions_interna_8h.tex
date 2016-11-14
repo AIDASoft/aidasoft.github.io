@@ -1,0 +1,117 @@
+\hypertarget{_d_d_core_2include_2_d_d4hep_2objects_2_conditions_interna_8h}{
+\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/objects/ConditionsInterna.h File Reference}
+\label{_d_d_core_2include_2_d_d4hep_2objects_2_conditions_interna_8h}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/objects/ConditionsInterna.h@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/objects/ConditionsInterna.h}}
+}
+{\ttfamily \#include \char`\"{}DD4hep/Detector.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/Conditions.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/BasicGrammar.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/NamedObject.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/objects/OpaqueData\_\-inl.h\char`\"{}}\par
+{\ttfamily \#include $<$map$>$}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_loader}{DD4hep::Conditions::ConditionsLoader}
+\begin{DoxyCompactList}\small\item\em The data class behind a conditions container handle. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object}{DD4hep::Conditions::Interna::ConditionObject}
+\begin{DoxyCompactList}\small\item\em The data class behind a conditions handle. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container}{DD4hep::Conditions::Interna::ConditionContainer}
+\begin{DoxyCompactList}\small\item\em The data class behind a conditions container handle. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_d_d4hep}{DD4hep}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the AIDA detector description toolkit. \item\end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_d_d4hep_1_1_conditions}{DD4hep::Conditions}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the conditions part of the AIDA detector description toolkit. \item\end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_d_d4hep_1_1_conditions_1_1_interna}{DD4hep::Conditions::Interna}
+
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{namespace_d_d4hep_1_1_conditions}{Conditions} internal namespace. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2objects_2_conditions_interna_8h_abc4af1ce5ff9dd3fff50c8d2df82412b}{DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-TYPE}(x)
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2objects_2_conditions_interna_8h_ae078e9504af816209796e95c38edbd8a}{DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-TYPE\_\-DUMMY}(x)
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2objects_2_conditions_interna_8h_a6b71c9b922264df38927db0308b794aa}{DD4HEP\_\-DEFINE\_\-EXTERNAL\_\-CONDITIONS\_\-TYPE}(x)
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2objects_2_conditions_interna_8h_a5f7a09fb8cb0cad6202ac9780fe52a53}{DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-CONT}(x)
+\item 
+\#define \hyperlink{_d_d_core_2include_2_d_d4hep_2objects_2_conditions_interna_8h_ae478e354336a31e5600204b3d8e163e1}{DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-U\_\-CONT}(x)~DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-CONT(x)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_d_d_core_2include_2_d_d4hep_2objects_2_conditions_interna_8h_a5f7a09fb8cb0cad6202ac9780fe52a53}{
+\index{DDCore/include/DD4hep/objects/ConditionsInterna.h@{DDCore/include/DD4hep/objects/ConditionsInterna.h}!DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-CONT@{DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-CONT}}
+\index{DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-CONT@{DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-CONT}!DDCore/include/DD4hep/objects/ConditionsInterna.h@{DDCore/include/DD4hep/objects/ConditionsInterna.h}}
+\subsubsection[{DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-CONT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-CONT(x)}}
+\label{_d_d_core_2include_2_d_d4hep_2objects_2_conditions_interna_8h_a5f7a09fb8cb0cad6202ac9780fe52a53}
+{\bfseries Value:}
+\begin{DoxyCode}
+DD4HEP_DEFINE_CONDITIONS_TYPE(x)                                  \
+  DD4HEP_DEFINE_CONDITIONS_TYPE(std::vector<x>)                     \
+  DD4HEP_DEFINE_CONDITIONS_TYPE(std::list<x>)                       \
+  DD4HEP_DEFINE_CONDITIONS_TYPE(std::set<x>)                        \
+  DD4HEP_DEFINE_CONDITIONS_TYPE(DD4hep::Primitive<x>::int_map_t)    \
+  DD4HEP_DEFINE_CONDITIONS_TYPE(DD4hep::Primitive<x>::string_map_t)
+\end{DoxyCode}
+
+
+Definition at line 245 of file ConditionsInterna.h.\hypertarget{_d_d_core_2include_2_d_d4hep_2objects_2_conditions_interna_8h_abc4af1ce5ff9dd3fff50c8d2df82412b}{
+\index{DDCore/include/DD4hep/objects/ConditionsInterna.h@{DDCore/include/DD4hep/objects/ConditionsInterna.h}!DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-TYPE@{DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-TYPE}}
+\index{DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-TYPE@{DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-TYPE}!DDCore/include/DD4hep/objects/ConditionsInterna.h@{DDCore/include/DD4hep/objects/ConditionsInterna.h}}
+\subsubsection[{DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-TYPE(x)}}
+\label{_d_d_core_2include_2_d_d4hep_2objects_2_conditions_interna_8h_abc4af1ce5ff9dd3fff50c8d2df82412b}
+{\bfseries Value:}
+\begin{DoxyCode}
+namespace DD4hep { namespace Conditions  {        \
+      template x& Condition::bind<x>();             \
+      template x& Condition::get<x>();              \
+      template const x& Condition::get<x>() const;  \
+    }}
+\end{DoxyCode}
+
+
+Definition at line 210 of file ConditionsInterna.h.\hypertarget{_d_d_core_2include_2_d_d4hep_2objects_2_conditions_interna_8h_ae078e9504af816209796e95c38edbd8a}{
+\index{DDCore/include/DD4hep/objects/ConditionsInterna.h@{DDCore/include/DD4hep/objects/ConditionsInterna.h}!DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-TYPE\_\-DUMMY@{DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-TYPE\_\-DUMMY}}
+\index{DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-TYPE\_\-DUMMY@{DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-TYPE\_\-DUMMY}!DDCore/include/DD4hep/objects/ConditionsInterna.h@{DDCore/include/DD4hep/objects/ConditionsInterna.h}}
+\subsubsection[{DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-TYPE\_\-DUMMY}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-TYPE\_\-DUMMY(x)}}
+\label{_d_d_core_2include_2_d_d4hep_2objects_2_conditions_interna_8h_ae078e9504af816209796e95c38edbd8a}
+{\bfseries Value:}
+\begin{DoxyCode}
+namespace DD4hep{namespace Parsers{int parse(x&, const std::string&){return 1;}}}
+       \
+  DD4HEP_DEFINE_CONDITIONS_TYPE(x)
+\end{DoxyCode}
+
+
+Definition at line 217 of file ConditionsInterna.h.\hypertarget{_d_d_core_2include_2_d_d4hep_2objects_2_conditions_interna_8h_ae478e354336a31e5600204b3d8e163e1}{
+\index{DDCore/include/DD4hep/objects/ConditionsInterna.h@{DDCore/include/DD4hep/objects/ConditionsInterna.h}!DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-U\_\-CONT@{DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-U\_\-CONT}}
+\index{DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-U\_\-CONT@{DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-U\_\-CONT}!DDCore/include/DD4hep/objects/ConditionsInterna.h@{DDCore/include/DD4hep/objects/ConditionsInterna.h}}
+\subsubsection[{DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-U\_\-CONT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-U\_\-CONT(x)~DD4HEP\_\-DEFINE\_\-CONDITIONS\_\-CONT(x)}}
+\label{_d_d_core_2include_2_d_d4hep_2objects_2_conditions_interna_8h_ae478e354336a31e5600204b3d8e163e1}
+
+
+Definition at line 253 of file ConditionsInterna.h.\hypertarget{_d_d_core_2include_2_d_d4hep_2objects_2_conditions_interna_8h_a6b71c9b922264df38927db0308b794aa}{
+\index{DDCore/include/DD4hep/objects/ConditionsInterna.h@{DDCore/include/DD4hep/objects/ConditionsInterna.h}!DD4HEP\_\-DEFINE\_\-EXTERNAL\_\-CONDITIONS\_\-TYPE@{DD4HEP\_\-DEFINE\_\-EXTERNAL\_\-CONDITIONS\_\-TYPE}}
+\index{DD4HEP\_\-DEFINE\_\-EXTERNAL\_\-CONDITIONS\_\-TYPE@{DD4HEP\_\-DEFINE\_\-EXTERNAL\_\-CONDITIONS\_\-TYPE}!DDCore/include/DD4hep/objects/ConditionsInterna.h@{DDCore/include/DD4hep/objects/ConditionsInterna.h}}
+\subsubsection[{DD4HEP\_\-DEFINE\_\-EXTERNAL\_\-CONDITIONS\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-DEFINE\_\-EXTERNAL\_\-CONDITIONS\_\-TYPE(x)}}
+\label{_d_d_core_2include_2_d_d4hep_2objects_2_conditions_interna_8h_a6b71c9b922264df38927db0308b794aa}
+{\bfseries Value:}
+\begin{DoxyCode}
+namespace DD4hep { namespace Conditions  {          \
+      template <> x& Condition::bind<x>();            \
+      template <> x& Condition::get<x>();             \
+      template <> const x& Condition::get<x>() const; \
+    }}
+\end{DoxyCode}
+
+
+Definition at line 221 of file ConditionsInterna.h.

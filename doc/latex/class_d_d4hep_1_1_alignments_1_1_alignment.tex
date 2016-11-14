@@ -1,0 +1,251 @@
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment}{
+\section{DD4hep::Alignments::Alignment Class Reference}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment}\index{DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}}
+}
+
+
+Main handle class to hold an alignment object.  
+
+
+{\ttfamily \#include $<$Alignments.h$>$}Inheritance diagram for DD4hep::Alignments::Alignment::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_alignments_1_1_alignment}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data}{AlignmentData} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_a3ed6fd0370cb7b8015d772df7ff005fc}{Object}
+\begin{DoxyCompactList}\small\item\em Forward definition of the base data object containing alignment data. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data}{AlignmentData} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_a5ff6a2c0b838274552fbac2f52b9a652}{Data}
+\begin{DoxyCompactList}\small\item\em Forward definition of the base data object containing alignment data. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Geometry::PlacedVolume} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_a69b234d416cfa4ace8a75322f2c58b66}{PlacedVolume}
+\begin{DoxyCompactList}\small\item\em Forward definition of the geometry placement. \item\end{DoxyCompactList}\item 
+typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} $>$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_a83282984664b4e1117f46d8a8bc40cb7}{NodeList}
+\begin{DoxyCompactList}\small\item\em Forward definition of the nodelist leading to the world. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta}{Alignments::Delta} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_a49bf0c4249a3b792bf6a016b1d067f64}{Delta}
+\begin{DoxyCompactList}\small\item\em Forward definition of the alignment delta data. \item\end{DoxyCompactList}\item 
+typedef unsigned int \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_ab824a65f935a0c79b9ea1a7a85014b88}{key\_\-type}
+\begin{DoxyCompactList}\small\item\em Forward definition of the key type. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_afd988c803da5a514d8fa255784f29462}{iov\_\-type}
+\begin{DoxyCompactList}\small\item\em Forward definition of the iov type. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_a3b4f4e5289181ce34cf88d4d59d40ad3}{Alignment} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_afb90531c93e16959b04cfe00ede8e9a1}{Alignment} (\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data}{Object} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_aea881ba23fa6887672dc5ff0b2bb7025}{Alignment} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&e)
+\begin{DoxyCompactList}\small\item\em Constructor to be used when reading the already parsed object. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_afe496862cf06bb5ba006b6c20362e2b1}{Alignment} (const std::string \&name)
+\begin{DoxyCompactList}\small\item\em Object constructor for pure alignment objects. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data}{Data} \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_a98f34faa8c45525335ebfae7f2506e8c}{data} ()
+\begin{DoxyCompactList}\small\item\em Data accessor for the use of decorators. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data}{Data} \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_a4e3a6f62b476f5fac4a097ae55be8f62}{data} () const 
+\begin{DoxyCompactList}\small\item\em Data accessor for the use of decorators. \item\end{DoxyCompactList}\item 
+const TGeoHMatrix \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_a0b069295a059a0f5f235f8e183972b8f}{worldTransformation} () const 
+\begin{DoxyCompactList}\small\item\em Create cached matrix to transform to world coordinates. \item\end{DoxyCompactList}\item 
+const TGeoHMatrix \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_a0ea856e451cf788ed524fc9a523769c2}{detectorTransformation} () const 
+\begin{DoxyCompactList}\small\item\em Access the alignment/placement matrix with respect to the world. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_ab824a65f935a0c79b9ea1a7a85014b88}{key\_\-type} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_a18d349855ba9d9d8ae27949f9fbc020f}{hashCode} (const char $\ast$value)
+\begin{DoxyCompactList}\small\item\em Hash code generation from input string. \item\end{DoxyCompactList}\item 
+static \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_ab824a65f935a0c79b9ea1a7a85014b88}{key\_\-type} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_af5a53c031ebc0778ce96097696b4055c}{hashCode} (const std::string \&value)
+\begin{DoxyCompactList}\small\item\em Hash code generation from input string. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main handle class to hold an alignment object. \begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 64 of file Alignments.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_a5ff6a2c0b838274552fbac2f52b9a652}{
+\index{DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}!Data@{Data}}
+\index{Data@{Data}!DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}}
+\subsubsection[{Data}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf AlignmentData} {\bf DD4hep::Alignments::Alignment::Data}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_a5ff6a2c0b838274552fbac2f52b9a652}
+
+
+Forward definition of the base data object containing alignment data. 
+
+Definition at line 69 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_a49bf0c4249a3b792bf6a016b1d067f64}{
+\index{DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}!Delta@{Delta}}
+\index{Delta@{Delta}!DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}}
+\subsubsection[{Delta}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Alignments::Delta} {\bf DD4hep::Alignments::Alignment::Delta}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_a49bf0c4249a3b792bf6a016b1d067f64}
+
+
+Forward definition of the alignment delta data. 
+
+Definition at line 75 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_afd988c803da5a514d8fa255784f29462}{
+\index{DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}!iov\_\-type@{iov\_\-type}}
+\index{iov\_\-type@{iov\_\-type}!DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}}
+\subsubsection[{iov\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf IOV} {\bf DD4hep::Alignments::Alignment::iov\_\-type}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_afd988c803da5a514d8fa255784f29462}
+
+
+Forward definition of the iov type. 
+
+Definition at line 79 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_ab824a65f935a0c79b9ea1a7a85014b88}{
+\index{DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}!key\_\-type@{key\_\-type}}
+\index{key\_\-type@{key\_\-type}!DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}}
+\subsubsection[{key\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf DD4hep::Alignments::Alignment::key\_\-type}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_ab824a65f935a0c79b9ea1a7a85014b88}
+
+
+Forward definition of the key type. 
+
+Definition at line 77 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_a83282984664b4e1117f46d8a8bc40cb7}{
+\index{DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}!NodeList@{NodeList}}
+\index{NodeList@{NodeList}!DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}}
+\subsubsection[{NodeList}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf PlacedVolume}$>$ {\bf DD4hep::Alignments::Alignment::NodeList}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_a83282984664b4e1117f46d8a8bc40cb7}
+
+
+Forward definition of the nodelist leading to the world. 
+
+Definition at line 73 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_a3ed6fd0370cb7b8015d772df7ff005fc}{
+\index{DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}!Object@{Object}}
+\index{Object@{Object}!DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}}
+\subsubsection[{Object}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf AlignmentData} {\bf DD4hep::Alignments::Alignment::Object}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_a3ed6fd0370cb7b8015d772df7ff005fc}
+
+
+Forward definition of the base data object containing alignment data. 
+
+Definition at line 67 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_a69b234d416cfa4ace8a75322f2c58b66}{
+\index{DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}!PlacedVolume@{PlacedVolume}}
+\index{PlacedVolume@{PlacedVolume}!DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}}
+\subsubsection[{PlacedVolume}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::PlacedVolume} {\bf DD4hep::Alignments::Alignment::PlacedVolume}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_a69b234d416cfa4ace8a75322f2c58b66}
+
+
+Forward definition of the geometry placement. 
+
+Definition at line 71 of file Alignments.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_a3b4f4e5289181ce34cf88d4d59d40ad3}{
+\index{DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}!Alignment@{Alignment}}
+\index{Alignment@{Alignment}!DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}}
+\subsubsection[{Alignment}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Alignments::Alignment::Alignment ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_a3b4f4e5289181ce34cf88d4d59d40ad3}
+
+
+Default constructor. 
+
+Definition at line 83 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_afb90531c93e16959b04cfe00ede8e9a1}{
+\index{DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}!Alignment@{Alignment}}
+\index{Alignment@{Alignment}!DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}}
+\subsubsection[{Alignment}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Alignments::Alignment::Alignment ({\bf Object} $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_afb90531c93e16959b04cfe00ede8e9a1}
+
+
+Default constructor. 
+
+Definition at line 85 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_aea881ba23fa6887672dc5ff0b2bb7025}{
+\index{DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}!Alignment@{Alignment}}
+\index{Alignment@{Alignment}!DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}}
+\subsubsection[{Alignment}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q $>$ DD4hep::Alignments::Alignment::Alignment (const {\bf Handle}$<$ Q $>$ \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_aea881ba23fa6887672dc5ff0b2bb7025}
+
+
+Constructor to be used when reading the already parsed object. 
+
+Definition at line 87 of file Alignments.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_afe496862cf06bb5ba006b6c20362e2b1}{
+\index{DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}!Alignment@{Alignment}}
+\index{Alignment@{Alignment}!DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}}
+\subsubsection[{Alignment}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Alignments::Alignment::Alignment (const std::string \& {\em name})}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_afe496862cf06bb5ba006b6c20362e2b1}
+
+
+Object constructor for pure alignment objects. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_a4e3a6f62b476f5fac4a097ae55be8f62}{
+\index{DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}!data@{data}}
+\index{data@{data}!DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Data}\& DD4hep::Alignments::Alignment::data () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_a4e3a6f62b476f5fac4a097ae55be8f62}
+
+
+Data accessor for the use of decorators. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_handle_a821fe41f46aa5ce97cfb04a6a60e5cd5}{DD4hep::Handle$<$ AlignmentData $>$}.
+
+Definition at line 100 of file Alignments.h.
+
+References DD4hep::Handle$<$ AlignmentData $>$::access().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_a98f34faa8c45525335ebfae7f2506e8c}{
+\index{DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}!data@{data}}
+\index{data@{data}!DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Data}\& DD4hep::Alignments::Alignment::data ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_a98f34faa8c45525335ebfae7f2506e8c}
+
+
+Data accessor for the use of decorators. 
+
+Definition at line 98 of file Alignments.h.
+
+References DD4hep::Handle$<$ AlignmentData $>$::access().
+
+Referenced by detectorTransformation(), and worldTransformation().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_a0ea856e451cf788ed524fc9a523769c2}{
+\index{DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}!detectorTransformation@{detectorTransformation}}
+\index{detectorTransformation@{detectorTransformation}!DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}}
+\subsubsection[{detectorTransformation}]{\setlength{\rightskip}{0pt plus 5cm}const TGeoHMatrix \& Alignment::detectorTransformation () const}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_a0ea856e451cf788ed524fc9a523769c2}
+
+
+Access the alignment/placement matrix with respect to the world. 
+
+Definition at line 67 of file Alignments.cpp.
+
+References data(), and DD4hep::Alignments::AlignmentData::detectorTransformation().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_af5a53c031ebc0778ce96097696b4055c}{
+\index{DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}!hashCode@{hashCode}}
+\index{hashCode@{hashCode}!DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}}
+\subsubsection[{hashCode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignment::key\_\-type} DD4hep::Alignments::Alignment::hashCode (const std::string \& {\em value})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_af5a53c031ebc0778ce96097696b4055c}
+
+
+Hash code generation from input string. 
+
+Definition at line 112 of file Alignments.h.
+
+References DD4hep::hash32().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_a18d349855ba9d9d8ae27949f9fbc020f}{
+\index{DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}!hashCode@{hashCode}}
+\index{hashCode@{hashCode}!DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}}
+\subsubsection[{hashCode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignment::key\_\-type} DD4hep::Alignments::Alignment::hashCode (const char $\ast$ {\em value})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_a18d349855ba9d9d8ae27949f9fbc020f}
+
+
+Hash code generation from input string. 
+
+Definition at line 108 of file Alignments.h.
+
+References DD4hep::hash32().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_a0b069295a059a0f5f235f8e183972b8f}{
+\index{DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}!worldTransformation@{worldTransformation}}
+\index{worldTransformation@{worldTransformation}!DD4hep::Alignments::Alignment@{DD4hep::Alignments::Alignment}}
+\subsubsection[{worldTransformation}]{\setlength{\rightskip}{0pt plus 5cm}const TGeoHMatrix \& Alignment::worldTransformation () const}}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_a0b069295a059a0f5f235f8e183972b8f}
+
+
+Create cached matrix to transform to world coordinates. 
+
+Definition at line 62 of file Alignments.cpp.
+
+References data(), and DD4hep::Alignments::AlignmentData::worldTransformation().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_alignments_8h}{Alignments.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_alignments_8cpp}{Alignments.cpp}\end{DoxyCompactItemize}

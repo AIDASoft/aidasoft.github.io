@@ -1,0 +1,35 @@
+\hypertarget{namespace_d_d4hep___generic_surface_installer_plugin}{
+\section{DD4hep\_\-GenericSurfaceInstallerPlugin Namespace Reference}
+\label{namespace_d_d4hep___generic_surface_installer_plugin}\index{DD4hep\_\-GenericSurfaceInstallerPlugin@{DD4hep\_\-GenericSurfaceInstallerPlugin}}
+}
+
+
+Plugin to install measurement surfaces on a generic sliced detector.  
+
+
+\subsection{Detailed Description}
+Plugin to install measurement surfaces on a generic sliced detector. Takes up to 13 arguments:
+\begin{DoxyItemize}
+\item {\ttfamily dimension:} A property of the surface that determines whether the resulting measurement is 1-\/D, e.g. strips ({\ttfamily dimension=1}) or 2-\/D, e.g. pixels ({\ttfamily dimension=2}).
+\item {\ttfamily u\_\-x}, {\ttfamily u\_\-y}, and {\ttfamily u\_\-z:} The x, y, and z components of the u vector, usually associated with the \char`\"{}good\char`\"{} (i.e. best resolution) measurement direction.
+\item {\ttfamily v\_\-x}, {\ttfamily v\_\-y}, and {\ttfamily v\_\-z:} The x, y, and z components of the v vector, usually associated with the \char`\"{}bad\char`\"{} (i.e. worst resolution) measurement direction.
+\item {\ttfamily n\_\-x}, {\ttfamily n\_\-y}, and {\ttfamily n\_\-z:} The x, y, and z components of the vector perpendicular to the surface plane and usually pointing outwards of the detector.
+\item {\ttfamily o\_\-x}, {\ttfamily o\_\-y}, and {\ttfamily o\_\-z:} The x, y, and z components of the origin vector, used to shift the origin of the surface from where it is placed within the volume (usually in the center of a sensitive volume.
+\end{DoxyItemize}
+
+All the arguments are conveniently initialized to zero by default, therefore only the non-\/zero components need to be provided. For example, to use this plugin for the VertexEndcap detector, put this snippet in the relevant compact file: \begin{DoxyVerb}
+<plugins>
+      <plugin name="DD4hep_GenericSurfaceInstallerPlugin">
+          <argument value="VertexEndcap"/>
+          <argument value="dimension=2"/>
+          <argument value="u_x=-1."/>
+          <argument value="v_z=1."/>
+          <argument value="n_y=1."/>
+      </plugin>
+</plugins>
+\end{DoxyVerb}
+ The plugin assumes boxes are stacked along one of the primary axes, x,y or z The normal vector (n) must be along one of the axes (i.e. only one non-\/zero component). The inner/outer thicknesses are calculated according to n.
+
+Note: Assumes module and component volumes are boxes. For Trapezoids, a fitting box is built around the trapezoid which means dx1=dx2=dx1 and dy1=dy2=dy. This is in principle fine, since we only access the thicknesses (DY in the TrackerEncapSurfacePlugin example) which is supposed to be the same.
+
+For more information, please consult with \hyperlink{_generic_surface_installer_8cpp}{GenericSurfaceInstaller.cpp} 

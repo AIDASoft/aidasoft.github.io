@@ -1,0 +1,159 @@
+\hypertarget{class_d_d4hep_1_1_layer}{
+\section{DD4hep::Layer Class Reference}
+\label{class_d_d4hep_1_1_layer}\index{DD4hep::Layer@{DD4hep::Layer}}
+}
+
+
+Class to describe one layer in a layering stack.  
+
+
+{\ttfamily \#include $<$Layering.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_layer_a23e603ff080b2c6e9a9016b401fdac20}{Layer} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_layer_ad051c4b9774da0a2196045ef138d59b4}{Layer} (const \hyperlink{class_d_d4hep_1_1_layer}{Layer} \&c)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_layer}{Layer} \& \hyperlink{class_d_d4hep_1_1_layer_adc08802cc74ff34cb73d593b79181394}{operator=} (const \hyperlink{class_d_d4hep_1_1_layer}{Layer} \&c)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_layer_a7353fc97976976a6d739e37af18954de}{compute} ()
+\item 
+double \hyperlink{class_d_d4hep_1_1_layer_a6dbbae6999664e05a6e0217622c4f099}{thickness} () const 
+\item 
+double \hyperlink{class_d_d4hep_1_1_layer_a65c459b750a25cff5e86b8bcc1048b02}{thicknessWithPreOffset} () const 
+\item 
+void \hyperlink{class_d_d4hep_1_1_layer_a0e2f64de27f1eae32c830a83df7793ed}{add} (const \hyperlink{class_d_d4hep_1_1_layer_slice}{LayerSlice} \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_d_d4hep_1_1_layer_afe2f78c9d1a66a6956deded6c4f7a7e1}{\_\-thickness}
+\item 
+double \hyperlink{class_d_d4hep_1_1_layer_a1160c69a0ac9822a0cc9c0c0c7ceac73}{\_\-preOffset}
+\item 
+std::vector$<$ \hyperlink{class_d_d4hep_1_1_layer_slice}{LayerSlice} $>$ \hyperlink{class_d_d4hep_1_1_layer_a45011afeb7fafcefe3de7275a50e5aaf}{\_\-slices}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to describe one layer in a layering stack. \begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 61 of file Layering.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_layer_a23e603ff080b2c6e9a9016b401fdac20}{
+\index{DD4hep::Layer@{DD4hep::Layer}!Layer@{Layer}}
+\index{Layer@{Layer}!DD4hep::Layer@{DD4hep::Layer}}
+\subsubsection[{Layer}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Layer::Layer ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_layer_a23e603ff080b2c6e9a9016b401fdac20}
+
+
+Default constructor. 
+
+Definition at line 87 of file Layering.h.\hypertarget{class_d_d4hep_1_1_layer_ad051c4b9774da0a2196045ef138d59b4}{
+\index{DD4hep::Layer@{DD4hep::Layer}!Layer@{Layer}}
+\index{Layer@{Layer}!DD4hep::Layer@{DD4hep::Layer}}
+\subsubsection[{Layer}]{\setlength{\rightskip}{0pt plus 5cm}Layer::Layer (const {\bf Layer} \& {\em c})}}
+\label{class_d_d4hep_1_1_layer_ad051c4b9774da0a2196045ef138d59b4}
+
+
+Copy constructor. 
+
+Definition at line 39 of file Layering.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_layer_a0e2f64de27f1eae32c830a83df7793ed}{
+\index{DD4hep::Layer@{DD4hep::Layer}!add@{add}}
+\index{add@{add}!DD4hep::Layer@{DD4hep::Layer}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Layer::add (const {\bf LayerSlice} \& {\em s})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_layer_a0e2f64de27f1eae32c830a83df7793ed}
+
+
+Definition at line 81 of file Layering.h.
+
+References \_\-slices.
+
+Referenced by DD4hep::XML::LayeringCnv::fromCompact().\hypertarget{class_d_d4hep_1_1_layer_a7353fc97976976a6d739e37af18954de}{
+\index{DD4hep::Layer@{DD4hep::Layer}!compute@{compute}}
+\index{compute@{compute}!DD4hep::Layer@{DD4hep::Layer}}
+\subsubsection[{compute}]{\setlength{\rightskip}{0pt plus 5cm}void Layer::compute ()}}
+\label{class_d_d4hep_1_1_layer_a7353fc97976976a6d739e37af18954de}
+
+
+Definition at line 52 of file Layering.cpp.
+
+References \_\-slices, and \_\-thickness.
+
+Referenced by DD4hep::XML::LayeringCnv::fromCompact().\hypertarget{class_d_d4hep_1_1_layer_adc08802cc74ff34cb73d593b79181394}{
+\index{DD4hep::Layer@{DD4hep::Layer}!operator=@{operator=}}
+\index{operator=@{operator=}!DD4hep::Layer@{DD4hep::Layer}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Layer} \& Layer::operator= (const {\bf Layer} \& {\em c})}}
+\label{class_d_d4hep_1_1_layer_adc08802cc74ff34cb73d593b79181394}
+
+
+Assignment operator. 
+
+Definition at line 43 of file Layering.cpp.
+
+References \_\-preOffset, \_\-slices, and \_\-thickness.\hypertarget{class_d_d4hep_1_1_layer_a6dbbae6999664e05a6e0217622c4f099}{
+\index{DD4hep::Layer@{DD4hep::Layer}!thickness@{thickness}}
+\index{thickness@{thickness}!DD4hep::Layer@{DD4hep::Layer}}
+\subsubsection[{thickness}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::Layer::thickness () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_layer_a6dbbae6999664e05a6e0217622c4f099}
+
+
+Definition at line 75 of file Layering.h.
+
+References \_\-thickness.
+
+Referenced by create\_\-detector().\hypertarget{class_d_d4hep_1_1_layer_a65c459b750a25cff5e86b8bcc1048b02}{
+\index{DD4hep::Layer@{DD4hep::Layer}!thicknessWithPreOffset@{thicknessWithPreOffset}}
+\index{thicknessWithPreOffset@{thicknessWithPreOffset}!DD4hep::Layer@{DD4hep::Layer}}
+\subsubsection[{thicknessWithPreOffset}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::Layer::thicknessWithPreOffset () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_layer_a65c459b750a25cff5e86b8bcc1048b02}
+
+
+Definition at line 78 of file Layering.h.
+
+References \_\-preOffset, and \_\-thickness.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_layer_a1160c69a0ac9822a0cc9c0c0c7ceac73}{
+\index{DD4hep::Layer@{DD4hep::Layer}!\_\-preOffset@{\_\-preOffset}}
+\index{\_\-preOffset@{\_\-preOffset}!DD4hep::Layer@{DD4hep::Layer}}
+\subsubsection[{\_\-preOffset}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::Layer::\_\-preOffset}}}
+\label{class_d_d4hep_1_1_layer_a1160c69a0ac9822a0cc9c0c0c7ceac73}
+
+
+Definition at line 64 of file Layering.h.
+
+Referenced by operator=(), and thicknessWithPreOffset().\hypertarget{class_d_d4hep_1_1_layer_a45011afeb7fafcefe3de7275a50e5aaf}{
+\index{DD4hep::Layer@{DD4hep::Layer}!\_\-slices@{\_\-slices}}
+\index{\_\-slices@{\_\-slices}!DD4hep::Layer@{DD4hep::Layer}}
+\subsubsection[{\_\-slices}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<${\bf LayerSlice}$>$ {\bf DD4hep::Layer::\_\-slices}}}
+\label{class_d_d4hep_1_1_layer_a45011afeb7fafcefe3de7275a50e5aaf}
+
+
+Definition at line 65 of file Layering.h.
+
+Referenced by add(), compute(), and operator=().\hypertarget{class_d_d4hep_1_1_layer_afe2f78c9d1a66a6956deded6c4f7a7e1}{
+\index{DD4hep::Layer@{DD4hep::Layer}!\_\-thickness@{\_\-thickness}}
+\index{\_\-thickness@{\_\-thickness}!DD4hep::Layer@{DD4hep::Layer}}
+\subsubsection[{\_\-thickness}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::Layer::\_\-thickness}}}
+\label{class_d_d4hep_1_1_layer_afe2f78c9d1a66a6956deded6c4f7a7e1}
+
+
+Definition at line 63 of file Layering.h.
+
+Referenced by compute(), operator=(), thickness(), and thicknessWithPreOffset().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/XML/\hyperlink{_layering_8h}{Layering.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/XML/\hyperlink{_layering_8cpp}{Layering.cpp}\end{DoxyCompactItemize}

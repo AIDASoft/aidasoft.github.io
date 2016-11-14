@@ -1,0 +1,977 @@
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element}{
+\section{DD4hep::Geometry::DetElement Class Reference}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element}\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+}
+
+
+\hyperlink{class_d_d4hep_1_1_handle}{Handle} class describing a detector element.  
+
+
+{\ttfamily \#include $<$Detector.h$>$}Inheritance diagram for DD4hep::Geometry::DetElement::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.37288cm]{class_d_d4hep_1_1_geometry_1_1_det_element}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a7a6c7f35568ec9e910ec981fa866362e}{CopyParameters} \{ \par
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a7a6c7f35568ec9e910ec981fa866362ea186eaef57988a0161b2ef29172e221fd}{COPY\_\-NONE} =  0, 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a7a6c7f35568ec9e910ec981fa866362eaa97821b23390f67fe4c7ecd2c7a1938c}{COPY\_\-PLACEMENT} =  1 $<$$<$ 0, 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a7a6c7f35568ec9e910ec981fa866362ea5805992dab0f8bbf04d1faa44a18c96e}{COPY\_\-PARENT} =  1 $<$$<$ 1, 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a7a6c7f35568ec9e910ec981fa866362ea1a104f9924d46326682a148492a624e4}{COPY\_\-ALIGNMENT} =  1 $<$$<$ 2, 
+\par
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a7a6c7f35568ec9e910ec981fa866362ea7fc9910904c8a8bd97d629062cf26f10}{LAST}
+ \}
+\item 
+enum \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69}{UpdateParam} \{ \par
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69aff915aaa2392fde6743b3cd67006f477}{CONDITIONS\_\-CHANGED} =  1$<$$<$0, 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69af94cf7a25d0c98c0856da29dd82f834b}{PLACEMENT\_\-CHANGED} =  1$<$$<$1, 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69a37416e883976836632461d29a655a225}{SOMETHING\_\-CHANGED} =  1$<$$<$2, 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69aabafc5d0a7346e57dffa947c6bcdd4b0}{PLACEMENT\_\-ELEMENT} =  1$<$$<$20, 
+\par
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69abd6b81d065541b64c942a5658c6746ea}{PLACEMENT\_\-HIGHEST} =  1$<$$<$21, 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69add54445dc4bb92129794313761212d3a}{PLACEMENT\_\-DETECTOR} =  1$<$$<$22, 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69afe1ef8503c8783d26267e8ae74151bbb}{PLACEMENT\_\-NONE}
+ \}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_object}{DetElementObject} \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a4e44e860d6e5827d9f42a4aea3a4f288}{Object}
+\begin{DoxyCompactList}\small\item\em Internal object type. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_object}{DetElementObject} $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ae30cafd63395b1a95d161a51984db927}{RefObject}
+\begin{DoxyCompactList}\small\item\em Definition of the base handle type. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a31b56fd96597b66282406749b27263d1}{Parent}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignments::Alignment} \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a5e5bddb6f1ba24c21af381b9bfeb3dba}{Alignment}
+\item 
+typedef void $\ast$($\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ad7efc067c799c81da218e8e153fb9fc9}{copy\_\-t} )(const void $\ast$, \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement})
+\begin{DoxyCompactList}\small\item\em Extensions copy constructor type. \item\end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_abeb83026451009f114bf84c285aec3c7}{destruct\_\-t} )(void $\ast$)
+\begin{DoxyCompactList}\small\item\em Extensions destructor type. \item\end{DoxyCompactList}\item 
+typedef std::map$<$ std::string, \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_afc41f63ac2a467f5077d1cca1292d580}{Children}
+\item 
+typedef std::map$<$ const std::type\_\-info $\ast$, void $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_aa3651ed4a11789675607a06d2f6846ff}{Extensions}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a918c9ab5a3c4ba94c2b7ad97de67e5de}{check} (bool condition, const std::string \&msg) const 
+\begin{DoxyCompactList}\small\item\em Internal assert function to check conditions. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a005be4fc3aa34d82ee55af3f9bb78e47}{DetElement} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a8f0fb6554c6b1589e6e44d879735e269}{DetElement} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_object}{Object} $\ast$object\_\-ptr)
+\begin{DoxyCompactList}\small\item\em Constructor to hold handled object. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ac7ddea123648d4b336e63c7e0ae7106c}{DetElement} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_object}{Object} $\ast$data, const std::string \&name, const std::string \&type)
+\begin{DoxyCompactList}\small\item\em Clone constructor. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a1083c73c02ad2cf66857c01ccaee507d}{DetElement} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&e)
+\begin{DoxyCompactList}\small\item\em Templated constructor for handle conversions. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a450f902a54685339175b04504da0c0fb}{DetElement} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \&e)
+\begin{DoxyCompactList}\small\item\em Constructor to copy handle. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a0181dbc9668e34c3e3cd2da2ef24d878}{DetElement} (const std::string \&name, const std::string \&type, int id)
+\begin{DoxyCompactList}\small\item\em Constructor for a new subdetector element. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ad41b5493b8bd215e6b9124f4c6112f7d}{DetElement} (const std::string \&name, int id)
+\begin{DoxyCompactList}\small\item\em Constructor for a new subdetector element. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a892a3c4f3429f6ee45aeece59bc538c6}{DetElement} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} parent, const std::string \&name, int id)
+\begin{DoxyCompactList}\small\item\em Constructor for a new subdetector element. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_object}{Object} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ae8dbb28c9b63b2500ca650c9fec0605b}{\_\-data} () const 
+\begin{DoxyCompactList}\small\item\em Additional data accessor. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ac8e12307da748f91b989f010b06594bd}{operator$<$} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} e) const 
+\begin{DoxyCompactList}\small\item\em Operator less to insert into a map. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_aa1fa06d9532161b9dc14a124d7902edd}{operator==} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} e) const 
+\begin{DoxyCompactList}\small\item\em Equality operator. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a22ca67f5376d3d1c641fa02eada16c33}{operator=} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \&e)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a60dd867e5753b97a8d6df6c96846b11f}{clone} (const std::string \&new\_\-name) const 
+\begin{DoxyCompactList}\small\item\em Clone (Deep copy) the \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} structure with a new name. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a9e21f6b6f70dd9898d41141a83689c8b}{clone} (const std::string \&new\_\-name, int new\_\-id) const 
+\begin{DoxyCompactList}\small\item\em Clone (Deep copy) the \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} structure with a new name and new identifier. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename IFACE , typename CONCRETE $>$ }\\IFACE $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a0ef6d28c7c6778cf0f42b77a71212699}{addExtension} (CONCRETE $\ast$c) const 
+\begin{DoxyCompactList}\small\item\em Extend the detector element with an arbitrary structure accessible by the type. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename IFACE $>$ }\\IFACE $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a5d801350ab0e5f8918785f3a95e0fb30}{extension} () const 
+\begin{DoxyCompactList}\small\item\em Access extension element by the type. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q , typename T $>$ }\\void \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a0b5ccd59de30369496419134f803855c}{callAtUpdate} (unsigned int typ, Q $\ast$pointer, void(T::$\ast$pmf)(unsigned long typ, \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \&det, void $\ast$opt\_\-par)) const 
+\begin{DoxyCompactList}\small\item\em Extend the detector element with an arbitrary callback. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_acb4a6a5c092ea6e4c4d9bfa781a7eea8}{removeAtUpdate} (unsigned int type, void $\ast$pointer) const 
+\begin{DoxyCompactList}\small\item\em Remove callback from object. \item\end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ab792b1e02d95042fd94897283df9f8fa}{id} () const 
+\begin{DoxyCompactList}\small\item\em Get the detector identifier. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a3b5dbbb87e8e1ddb64fc94e98cd5a70b}{setCombineHits} (bool value, \hyperlink{class_d_d4hep_1_1_geometry_1_1_sensitive_detector}{SensitiveDetector} \&sens)
+\begin{DoxyCompactList}\small\item\em Setter: Combine hits attribute. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a64ef93ecc75518cc2d78a6ca0b64d48d}{combineHits} () const 
+\begin{DoxyCompactList}\small\item\em Getter: Combine hits attribute. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ac3f1002c4b640a796ebd1854507496ac}{type} () const 
+\begin{DoxyCompactList}\small\item\em Access detector type (structure, tracker, calorimeter, etc.). \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a28c2c203dfcb6cd893bbe1bec4101392}{setType} (const std::string \&typ)
+\begin{DoxyCompactList}\small\item\em Set detector type (structure, tracker, calorimeter, etc.). \item\end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a7c6acb468c40a967e9e50a8efc2a620d}{typeFlag} () const 
+\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a5a03e88dd7e1e3f215116f44dfca1dce}{setTypeFlag} (unsigned int types)
+\begin{DoxyCompactList}\small\item\em Set the flag word encoding detector types ( ideally use \hyperlink{class_d_d4hep_1_1_det_type}{DD4hep::DetType} for encoding ). \item\end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ad3a90491007d6e3d4656b33d09466b07}{key} () const 
+\begin{DoxyCompactList}\small\item\em Access hash key of this detector element (Only valid once geometry is closed!). \item\end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a240671f969600e1f707085d01fd62ec9}{level} () const 
+\begin{DoxyCompactList}\small\item\em Access the hierarchical level of the detector element (Only valid once geometry is closed!). \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a6b70a5084294e7adb2f0bd0018e3aed2}{path} () const 
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_path}{Path} of the detector element (not necessarily identical to placement path!). \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a0616a56e3d6ac4039041361d533de8ee}{placementPath} () const 
+\begin{DoxyCompactList}\small\item\em Access to the full path to the placed object. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a08aef0534eb91ede146a6b17ac4f0fa8}{setAttributes} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \&lcdd, const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \&volume, const std::string \&region, const std::string \&limits, const std::string \&vis)
+\begin{DoxyCompactList}\small\item\em Set all attributes in one go. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_acdd370a4a20bc97cc7d9534f5e1fe91b}{setVisAttributes} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \&lcdd, const std::string \&name, const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \&volume)
+\begin{DoxyCompactList}\small\item\em Set Visualization attributes to the detector element. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a428b67df7bca888c0b08e49a0de0eb37}{setRegion} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \&lcdd, const std::string \&name, const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \&volume)
+\begin{DoxyCompactList}\small\item\em Set the regional attributes to the detector element. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a3d49a91bfb52e81ce87f891ea5394c98}{setLimitSet} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \&lcdd, const std::string \&name, const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \&volume)
+\begin{DoxyCompactList}\small\item\em Set the limits to the detector element. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a32d26062edede5aad146b6dbe3eef5be}{volume} () const 
+\begin{DoxyCompactList}\small\item\em Access to the logical volume of the detector element's placement. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a32a39fbab7eeb59dd4ad2fc807e0b66d}{placement} () const 
+\begin{DoxyCompactList}\small\item\em Access to the physical volume of this detector element. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a18640f84168adced73afd4eb2b84a798}{setPlacement} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} \&volume)
+\begin{DoxyCompactList}\small\item\em Set the physical volumes of the detector element. \item\end{DoxyCompactList}\item 
+VolumeID \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a003e38a1be1b10caa917dd457637d104}{volumeID} () const 
+\begin{DoxyCompactList}\small\item\em The cached VolumeID of this subdetector element. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a336e54ac88a2f3493f82138699899517}{add} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} sub\_\-element)
+\begin{DoxyCompactList}\small\item\em Add new child to the detector structure. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_afc41f63ac2a467f5077d1cca1292d580}{Children} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a2c8a811c999fafb4021d5e342fbdee50}{children} () const 
+\begin{DoxyCompactList}\small\item\em Access to the list of children. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ab00408422c16bff12f36bbaff9b404a1}{child} (const std::string \&name) const 
+\begin{DoxyCompactList}\small\item\em Access to individual children by name. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a6a7a665630b1b3af6dd172d9166b8b8d}{parent} () const 
+\begin{DoxyCompactList}\small\item\em Access to the detector elements's parent. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a6ffabad2792a7190089d4a042d5440b8}{world} () const 
+\begin{DoxyCompactList}\small\item\em Access to the world object. Only possible once the geometry is closed. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a2b0f3bf39905f9476b6f3add70eacf19}{hasConditions} () const 
+\begin{DoxyCompactList}\small\item\em Check if this \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} has time dependent \hyperlink{namespace_d_d4hep_1_1_conditions}{Conditions} attached. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ab07f17438062035309f2ef52cfe22872}{hasAlignments} () const 
+\begin{DoxyCompactList}\small\item\em Check if this \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} has time dependent \hyperlink{namespace_d_d4hep_1_1_alignments}{Alignments} attached. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_af5c8d93fa7327838eee4911721f7fe2e}{nominal} () const 
+\begin{DoxyCompactList}\small\item\em Access to the constant ideal (nominal) alignment information. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a7656d819ab427f168ece0940353055f9}{survey} () const 
+\begin{DoxyCompactList}\small\item\em Access to the constant survey alignment information. \item\end{DoxyCompactList}\item 
+const TGeoHMatrix \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a60e3c04d0c0487207e62b98512a8f08c}{worldTransformation} () const 
+\begin{DoxyCompactList}\small\item\em Set detector element for reference transformations. Will delete existing reference trafo. \item\end{DoxyCompactList}\item 
+const TGeoHMatrix \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a643a213d09ad852e20ec05cedeff78c3}{parentTransformation} () const 
+\begin{DoxyCompactList}\small\item\em Create cached matrix to transform to parent coordinates. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_abb53b2600f4c47e3b1b8b0d7e8c25028}{localToWorld} (const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&local, \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&global) const 
+\begin{DoxyCompactList}\small\item\em Create cached matrix to transform to reference coordinates. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a9f2bba52865005abe8be8ccb3f19cb63}{localToParent} (const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&local, \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&parent) const 
+\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the parent system. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_af753b374a6f6d98934f00522dd1efcf9}{worldToLocal} (const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&global, \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&local) const 
+\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to arbitrary parent system set as reference. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ab9b7683dd7471ffb6195570d5c618a28}{parentToLocal} (const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&parent, \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&local) const 
+\begin{DoxyCompactList}\small\item\em Transformation from world coordinates of the local placed volume coordinates. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a5efc4a0c2d1b0cf6e7d68406d795723f}{i\_\-addExtension} (void $\ast$ptr, const std::type\_\-info \&info, \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ad7efc067c799c81da218e8e153fb9fc9}{copy\_\-t} ctor, \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_abeb83026451009f114bf84c285aec3c7}{destruct\_\-t} dtor) const 
+\begin{DoxyCompactList}\small\item\em Add an extension object to the detector element. \item\end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_a45f86dc46aa21a9466c2b1270029bfd2}{i\_\-extension} (const std::type\_\-info \&info) const 
+\begin{DoxyCompactList}\small\item\em Access an existing extension object from the detector element. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_adc63245333efeee5af537619b0cb8dec}{i\_\-addUpdateCall} (unsigned int callback\_\-type, const \hyperlink{class_d_d4hep_1_1_callback}{Callback} \&callback) const 
+\begin{DoxyCompactList}\small\item\em Internal call to extend the detector element with an arbitrary structure accessible by the type. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static void \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ab665e62a12e41f53be9193dda76e5e3a}{\_\-delete} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Templated destructor function. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static void $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_ae801dc42d4da36cac2d1ad0f37ecd97b}{\_\-copy} (const void $\ast$ptr, \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} elt)
+\begin{DoxyCompactList}\small\item\em Templated copy constructor. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_d_d4hep_1_1_handle}{Handle} class describing a detector element. Detector elements (class \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} are entities which represent subdetectors or sizable parts of a subdetector. A \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} instance has the means to provide to clients information about
+
+
+\begin{DoxyItemize}
+\item the detector hierarchy by exposing its children.
+\item its placement within the overall experiment if it represents an entire subdetector or its placement with respect to its parent if the {\itshape \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement}\/} represents a part of a subdetector.
+\item information about the {\itshape \hyperlink{class_d_d4hep_1_1_geometry_1_1_readout}{Readout}\/} structure if the object is instrumented and read-\/out. Otherwise this link is empty.
+\item information about the environmental conditions etc. {\itshape conditons\/}. The access to conditions is exposed via the DetConditions interface. See \hyperlink{_det_conditions_8h}{DD4hep/DetConditions.h} for further details.
+\item alignment information.
+\end{DoxyItemize}\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 172 of file Detector.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a5e5bddb6f1ba24c21af381b9bfeb3dba}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!Alignment@{Alignment}}
+\index{Alignment@{Alignment}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{Alignment}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Alignments::Alignment} {\bf DD4hep::Geometry::DetElement::Alignment}}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a5e5bddb6f1ba24c21af381b9bfeb3dba}
+
+
+Definition at line 179 of file Detector.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_afc41f63ac2a467f5077d1cca1292d580}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!Children@{Children}}
+\index{Children@{Children}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{Children}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$std::string, {\bf DetElement}$>$ {\bf DD4hep::Geometry::DetElement::Children}}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_afc41f63ac2a467f5077d1cca1292d580}
+
+
+Definition at line 186 of file Detector.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_ad7efc067c799c81da218e8e153fb9fc9}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!copy\_\-t@{copy\_\-t}}
+\index{copy\_\-t@{copy\_\-t}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{copy\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$($\ast$ {\bf DD4hep::Geometry::DetElement::copy\_\-t})(const void $\ast$, {\bf DetElement})}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_ad7efc067c799c81da218e8e153fb9fc9}
+
+
+Extensions copy constructor type. 
+
+Definition at line 182 of file Detector.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_abeb83026451009f114bf84c285aec3c7}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!destruct\_\-t@{destruct\_\-t}}
+\index{destruct\_\-t@{destruct\_\-t}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{destruct\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ {\bf DD4hep::Geometry::DetElement::destruct\_\-t})(void $\ast$)}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_abeb83026451009f114bf84c285aec3c7}
+
+
+Extensions destructor type. 
+
+Definition at line 184 of file Detector.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_aa3651ed4a11789675607a06d2f6846ff}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!Extensions@{Extensions}}
+\index{Extensions@{Extensions}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{Extensions}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$const std::type\_\-info$\ast$, void$\ast$$>$ {\bf DD4hep::Geometry::DetElement::Extensions}}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_aa3651ed4a11789675607a06d2f6846ff}
+
+
+Definition at line 187 of file Detector.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a4e44e860d6e5827d9f42a4aea3a4f288}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!Object@{Object}}
+\index{Object@{Object}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{Object}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf DetElementObject} {\bf DD4hep::Geometry::DetElement::Object}}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a4e44e860d6e5827d9f42a4aea3a4f288}
+
+
+Internal object type. 
+
+Definition at line 175 of file Detector.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a31b56fd96597b66282406749b27263d1}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!Parent@{Parent}}
+\index{Parent@{Parent}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{Parent}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf DetElement} {\bf DD4hep::Geometry::DetElement::Parent}}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a31b56fd96597b66282406749b27263d1}
+
+
+Definition at line 178 of file Detector.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_ae30cafd63395b1a95d161a51984db927}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!RefObject@{RefObject}}
+\index{RefObject@{RefObject}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{RefObject}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Handle}$<${\bf DetElementObject}$>$ {\bf DD4hep::Geometry::DetElement::RefObject}}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_ae30cafd63395b1a95d161a51984db927}
+
+
+Definition of the base handle type. 
+
+Definition at line 177 of file Detector.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a7a6c7f35568ec9e910ec981fa866362e}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!CopyParameters@{CopyParameters}}
+\index{CopyParameters@{CopyParameters}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{CopyParameters}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DD4hep::Geometry::DetElement::CopyParameters}}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a7a6c7f35568ec9e910ec981fa866362e}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{COPY\_\-NONE@{COPY\_\-NONE}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!COPY\_\-NONE@{COPY\_\-NONE}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a7a6c7f35568ec9e910ec981fa866362ea186eaef57988a0161b2ef29172e221fd}{
+COPY\_\-NONE}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a7a6c7f35568ec9e910ec981fa866362ea186eaef57988a0161b2ef29172e221fd}
+}]\index{COPY\_\-PLACEMENT@{COPY\_\-PLACEMENT}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!COPY\_\-PLACEMENT@{COPY\_\-PLACEMENT}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a7a6c7f35568ec9e910ec981fa866362eaa97821b23390f67fe4c7ecd2c7a1938c}{
+COPY\_\-PLACEMENT}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a7a6c7f35568ec9e910ec981fa866362eaa97821b23390f67fe4c7ecd2c7a1938c}
+}]\index{COPY\_\-PARENT@{COPY\_\-PARENT}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!COPY\_\-PARENT@{COPY\_\-PARENT}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a7a6c7f35568ec9e910ec981fa866362ea5805992dab0f8bbf04d1faa44a18c96e}{
+COPY\_\-PARENT}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a7a6c7f35568ec9e910ec981fa866362ea5805992dab0f8bbf04d1faa44a18c96e}
+}]\index{COPY\_\-ALIGNMENT@{COPY\_\-ALIGNMENT}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!COPY\_\-ALIGNMENT@{COPY\_\-ALIGNMENT}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a7a6c7f35568ec9e910ec981fa866362ea1a104f9924d46326682a148492a624e4}{
+COPY\_\-ALIGNMENT}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a7a6c7f35568ec9e910ec981fa866362ea1a104f9924d46326682a148492a624e4}
+}]\index{LAST@{LAST}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!LAST@{LAST}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a7a6c7f35568ec9e910ec981fa866362ea7fc9910904c8a8bd97d629062cf26f10}{
+LAST}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a7a6c7f35568ec9e910ec981fa866362ea7fc9910904c8a8bd97d629062cf26f10}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 189 of file Detector.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!UpdateParam@{UpdateParam}}
+\index{UpdateParam@{UpdateParam}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{UpdateParam}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DD4hep::Geometry::DetElement::UpdateParam}}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{CONDITIONS\_\-CHANGED@{CONDITIONS\_\-CHANGED}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!CONDITIONS\_\-CHANGED@{CONDITIONS\_\-CHANGED}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69aff915aaa2392fde6743b3cd67006f477}{
+CONDITIONS\_\-CHANGED}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69aff915aaa2392fde6743b3cd67006f477}
+}]\index{PLACEMENT\_\-CHANGED@{PLACEMENT\_\-CHANGED}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!PLACEMENT\_\-CHANGED@{PLACEMENT\_\-CHANGED}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69af94cf7a25d0c98c0856da29dd82f834b}{
+PLACEMENT\_\-CHANGED}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69af94cf7a25d0c98c0856da29dd82f834b}
+}]\index{SOMETHING\_\-CHANGED@{SOMETHING\_\-CHANGED}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!SOMETHING\_\-CHANGED@{SOMETHING\_\-CHANGED}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69a37416e883976836632461d29a655a225}{
+SOMETHING\_\-CHANGED}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69a37416e883976836632461d29a655a225}
+}]\index{PLACEMENT\_\-ELEMENT@{PLACEMENT\_\-ELEMENT}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!PLACEMENT\_\-ELEMENT@{PLACEMENT\_\-ELEMENT}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69aabafc5d0a7346e57dffa947c6bcdd4b0}{
+PLACEMENT\_\-ELEMENT}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69aabafc5d0a7346e57dffa947c6bcdd4b0}
+}]\index{PLACEMENT\_\-HIGHEST@{PLACEMENT\_\-HIGHEST}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!PLACEMENT\_\-HIGHEST@{PLACEMENT\_\-HIGHEST}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69abd6b81d065541b64c942a5658c6746ea}{
+PLACEMENT\_\-HIGHEST}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69abd6b81d065541b64c942a5658c6746ea}
+}]\index{PLACEMENT\_\-DETECTOR@{PLACEMENT\_\-DETECTOR}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!PLACEMENT\_\-DETECTOR@{PLACEMENT\_\-DETECTOR}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69add54445dc4bb92129794313761212d3a}{
+PLACEMENT\_\-DETECTOR}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69add54445dc4bb92129794313761212d3a}
+}]\index{PLACEMENT\_\-NONE@{PLACEMENT\_\-NONE}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!PLACEMENT\_\-NONE@{PLACEMENT\_\-NONE}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69afe1ef8503c8783d26267e8ae74151bbb}{
+PLACEMENT\_\-NONE}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_ab63626b08146a254e1b0d4935a0a6f69afe1ef8503c8783d26267e8ae74151bbb}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 193 of file Detector.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a005be4fc3aa34d82ee55af3f9bb78e47}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!DetElement@{DetElement}}
+\index{DetElement@{DetElement}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{DetElement}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::DetElement::DetElement ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a005be4fc3aa34d82ee55af3f9bb78e47}
+
+
+Default constructor. 
+
+Definition at line 227 of file Detector.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a8f0fb6554c6b1589e6e44d879735e269}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!DetElement@{DetElement}}
+\index{DetElement@{DetElement}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{DetElement}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::DetElement::DetElement ({\bf Object} $\ast$ {\em object\_\-ptr})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a8f0fb6554c6b1589e6e44d879735e269}
+
+
+Constructor to hold handled object. 
+
+Definition at line 230 of file Detector.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_ac7ddea123648d4b336e63c7e0ae7106c}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!DetElement@{DetElement}}
+\index{DetElement@{DetElement}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{DetElement}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::DetElement::DetElement ({\bf Object} $\ast$ {\em data}, \/  const std::string \& {\em name}, \/  const std::string \& {\em type})}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_ac7ddea123648d4b336e63c7e0ae7106c}
+
+
+Clone constructor. \hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a1083c73c02ad2cf66857c01ccaee507d}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!DetElement@{DetElement}}
+\index{DetElement@{DetElement}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{DetElement}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q $>$ DD4hep::Geometry::DetElement::DetElement (const {\bf Handle}$<$ Q $>$ \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a1083c73c02ad2cf66857c01ccaee507d}
+
+
+Templated constructor for handle conversions. 
+
+Definition at line 236 of file Detector.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a450f902a54685339175b04504da0c0fb}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!DetElement@{DetElement}}
+\index{DetElement@{DetElement}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{DetElement}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::DetElement::DetElement (const {\bf DetElement} \& {\em e})}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a450f902a54685339175b04504da0c0fb}
+
+
+Constructor to copy handle. \hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a0181dbc9668e34c3e3cd2da2ef24d878}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!DetElement@{DetElement}}
+\index{DetElement@{DetElement}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{DetElement}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::DetElement::DetElement (const std::string \& {\em name}, \/  const std::string \& {\em type}, \/  int {\em id})}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a0181dbc9668e34c3e3cd2da2ef24d878}
+
+
+Constructor for a new subdetector element. \hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_ad41b5493b8bd215e6b9124f4c6112f7d}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!DetElement@{DetElement}}
+\index{DetElement@{DetElement}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{DetElement}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::DetElement::DetElement (const std::string \& {\em name}, \/  int {\em id})}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_ad41b5493b8bd215e6b9124f4c6112f7d}
+
+
+Constructor for a new subdetector element. \hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a892a3c4f3429f6ee45aeece59bc538c6}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!DetElement@{DetElement}}
+\index{DetElement@{DetElement}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{DetElement}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::DetElement::DetElement ({\bf DetElement} {\em parent}, \/  const std::string \& {\em name}, \/  int {\em id})}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a892a3c4f3429f6ee45aeece59bc538c6}
+
+
+Constructor for a new subdetector element. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_ae801dc42d4da36cac2d1ad0f37ecd97b}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!\_\-copy@{\_\-copy}}
+\index{\_\-copy@{\_\-copy}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{\_\-copy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ static void$\ast$ DD4hep::Geometry::DetElement::\_\-copy (const void $\ast$ {\em ptr}, \/  {\bf DetElement} {\em elt})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_ae801dc42d4da36cac2d1ad0f37ecd97b}
+
+
+Templated copy constructor. 
+
+Definition at line 213 of file Detector.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_ae8dbb28c9b63b2500ca650c9fec0605b}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!\_\-data@{\_\-data}}
+\index{\_\-data@{\_\-data}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}\& DD4hep::Geometry::DetElement::\_\-data () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_ae8dbb28c9b63b2500ca650c9fec0605b}
+
+
+Additional data accessor. 
+
+Definition at line 257 of file Detector.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_ab665e62a12e41f53be9193dda76e5e3a}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!\_\-delete@{\_\-delete}}
+\index{\_\-delete@{\_\-delete}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ static void DD4hep::Geometry::DetElement::\_\-delete (void $\ast$ {\em ptr})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_ab665e62a12e41f53be9193dda76e5e3a}
+
+
+Templated destructor function. 
+
+Definition at line 209 of file Detector.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a336e54ac88a2f3493f82138699899517}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!add@{add}}
+\index{add@{add}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} \& DetElement::add ({\bf DetElement} {\em sub\_\-element})}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a336e54ac88a2f3493f82138699899517}
+
+
+Add new child to the detector structure. 
+
+Definition at line 247 of file Detector.cpp.
+
+References DD4hep::Handle$<$ T $>$::access(), children(), DD4hep::Handle$<$ T $>$::isValid(), DD4hep::Handle$<$ T $>$::name(), and path().
+
+Referenced by DD4hep::Geometry::LCDDImp::addDetector(), create\_\-detector(), DD4hep::Geometry::LCDDImp::init(), and placeStaves().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a0ef6d28c7c6778cf0f42b77a71212699}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!addExtension@{addExtension}}
+\index{addExtension@{addExtension}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{addExtension}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename IFACE , typename CONCRETE $>$ IFACE$\ast$ DD4hep::Geometry::DetElement::addExtension (CONCRETE $\ast$ {\em c}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a0ef6d28c7c6778cf0f42b77a71212699}
+
+
+Extend the detector element with an arbitrary structure accessible by the type. 
+
+Definition at line 281 of file Detector.h.
+
+References DD4hep::CallbackSequence::checkTypes(), and i\_\-addExtension().
+
+Referenced by DD4hep::DDRec::createGearForCLIC(), DD4hep::DDRec::createGearForILD(), and DD4hep::DDRec::DetectorSurfaces::initialize().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a0b5ccd59de30369496419134f803855c}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!callAtUpdate@{callAtUpdate}}
+\index{callAtUpdate@{callAtUpdate}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{callAtUpdate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q , typename T $>$ void DD4hep::Geometry::DetElement::callAtUpdate (unsigned int {\em typ}, \/  Q $\ast$ {\em pointer}, \/  void(T::$\ast$)(unsigned long typ, {\bf DetElement} \&det, void $\ast$opt\_\-par) {\em pmf}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a0b5ccd59de30369496419134f803855c}
+
+
+Extend the detector element with an arbitrary callback. 
+
+Definition at line 291 of file Detector.h.
+
+References DD4hep::CallbackSequence::checkTypes(), and i\_\-addUpdateCall().
+
+Referenced by DD4hep::Geometry::VolumeManager::addSubdetector().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a918c9ab5a3c4ba94c2b7ad97de67e5de}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!check@{check}}
+\index{check@{check}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Geometry::DetElement::check (bool {\em condition}, \/  const std::string \& {\em msg}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a918c9ab5a3c4ba94c2b7ad97de67e5de}
+
+
+Internal assert function to check conditions. 
+
+Referenced by create\_\-detector().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_ab00408422c16bff12f36bbaff9b404a1}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!child@{child}}
+\index{child@{child}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{child}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} DD4hep::Geometry::DetElement::child (const std::string \& {\em name}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_ab00408422c16bff12f36bbaff9b404a1}
+
+
+Access to individual children by name. 
+
+Referenced by DD4hep::Geometry::DetectorTools::findDaughterElement().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a2c8a811c999fafb4021d5e342fbdee50}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!children@{children}}
+\index{children@{children}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{children}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf DetElement::Children} \& DetElement::children () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a2c8a811c999fafb4021d5e342fbdee50}
+
+
+Access to the list of children. 
+
+Definition at line 199 of file Detector.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().
+
+Referenced by add(), DD4hep::DDRec::LayeringExtensionImpl::LayerAttributes::addElement(), DD4hep::View::ConfigureEvent(), DD4hep::View::ConfigureGeometry(), dumpDetectors(), DD4hep::DDRec::IDDecoder::findReadout(), DD4hep::DDRec::IDDecoder::getClosestDaughter(), DD4hep::DDRec::SurfaceHelper::initialize(), DD4hep::Display::LoadGeoChildren(), and DD4hep::SurfaceInstaller::scan().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a9e21f6b6f70dd9898d41141a83689c8b}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!clone@{clone}}
+\index{clone@{clone}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} DD4hep::Geometry::DetElement::clone (const std::string \& {\em new\_\-name}, \/  int {\em new\_\-id}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a9e21f6b6f70dd9898d41141a83689c8b}
+
+
+Clone (Deep copy) the \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} structure with a new name and new identifier. \hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a60dd867e5753b97a8d6df6c96846b11f}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!clone@{clone}}
+\index{clone@{clone}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} DD4hep::Geometry::DetElement::clone (const std::string \& {\em new\_\-name}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a60dd867e5753b97a8d6df6c96846b11f}
+
+
+Clone (Deep copy) the \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} structure with a new name. 
+
+Referenced by create\_\-detector(), and placeStaves().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a64ef93ecc75518cc2d78a6ca0b64d48d}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!combineHits@{combineHits}}
+\index{combineHits@{combineHits}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{combineHits}]{\setlength{\rightskip}{0pt plus 5cm}bool DetElement::combineHits () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a64ef93ecc75518cc2d78a6ca0b64d48d}
+
+
+Getter: Combine hits attribute. 
+
+Definition at line 167 of file Detector.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a5d801350ab0e5f8918785f3a95e0fb30}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!extension@{extension}}
+\index{extension@{extension}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{extension}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename IFACE $>$ IFACE$\ast$ DD4hep::Geometry::DetElement::extension () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a5d801350ab0e5f8918785f3a95e0fb30}
+
+
+Access extension element by the type. 
+
+Definition at line 286 of file Detector.h.
+
+References i\_\-extension().
+
+Referenced by DD4hep::DDRec::createGearForCLIC(), DD4hep::DDRec::createGearForILD(), and DD4hep::DDRec::DetectorSurfaces::initialize().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_ab07f17438062035309f2ef52cfe22872}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!hasAlignments@{hasAlignments}}
+\index{hasAlignments@{hasAlignments}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{hasAlignments}]{\setlength{\rightskip}{0pt plus 5cm}bool DetElement::hasAlignments () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_ab07f17438062035309f2ef52cfe22872}
+
+
+Check if this \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} has time dependent \hyperlink{namespace_d_d4hep_1_1_alignments}{Alignments} attached. Check if alignments are at all present. 
+
+Definition at line 234 of file Detector.cpp.
+
+References DD4hep::Handle$<$ T $>$::access(), and DD4hep::Geometry::DetElementObject::alignments.\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a2b0f3bf39905f9476b6f3add70eacf19}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!hasConditions@{hasConditions}}
+\index{hasConditions@{hasConditions}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{hasConditions}]{\setlength{\rightskip}{0pt plus 5cm}bool DetElement::hasConditions () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a2b0f3bf39905f9476b6f3add70eacf19}
+
+
+Check if this \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} has time dependent \hyperlink{namespace_d_d4hep_1_1_conditions}{Conditions} attached. Check if conditions are at all present. 
+
+Definition at line 226 of file Detector.cpp.
+
+References DD4hep::Handle$<$ T $>$::access(), and DD4hep::Geometry::DetElementObject::conditions.\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a5efc4a0c2d1b0cf6e7d68406d795723f}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!i\_\-addExtension@{i\_\-addExtension}}
+\index{i\_\-addExtension@{i\_\-addExtension}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{i\_\-addExtension}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ DD4hep::Geometry::DetElement::i\_\-addExtension (void $\ast$ {\em ptr}, \/  const std::type\_\-info \& {\em info}, \/  {\bf copy\_\-t} {\em ctor}, \/  {\bf destruct\_\-t} {\em dtor}) const\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a5efc4a0c2d1b0cf6e7d68406d795723f}
+
+
+Add an extension object to the detector element. 
+
+Referenced by addExtension().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_adc63245333efeee5af537619b0cb8dec}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!i\_\-addUpdateCall@{i\_\-addUpdateCall}}
+\index{i\_\-addUpdateCall@{i\_\-addUpdateCall}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{i\_\-addUpdateCall}]{\setlength{\rightskip}{0pt plus 5cm}void DetElement::i\_\-addUpdateCall (unsigned int {\em callback\_\-type}, \/  const {\bf Callback} \& {\em callback}) const\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_adc63245333efeee5af537619b0cb8dec}
+
+
+Internal call to extend the detector element with an arbitrary structure accessible by the type. 
+
+Definition at line 68 of file Detector.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().
+
+Referenced by callAtUpdate().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a45f86dc46aa21a9466c2b1270029bfd2}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!i\_\-extension@{i\_\-extension}}
+\index{i\_\-extension@{i\_\-extension}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{i\_\-extension}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ DD4hep::Geometry::DetElement::i\_\-extension (const std::type\_\-info \& {\em info}) const\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a45f86dc46aa21a9466c2b1270029bfd2}
+
+
+Access an existing extension object from the detector element. 
+
+Referenced by extension().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_ab792b1e02d95042fd94897283df9f8fa}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!id@{id}}
+\index{id@{id}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}int DetElement::id () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_ab792b1e02d95042fd94897283df9f8fa}
+
+
+Get the detector identifier. 
+
+Definition at line 163 of file Detector.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().
+
+Referenced by DD4hep::Geometry::LCDDImp::addDetector(), create\_\-detector(), DD4hep::XML::createPlacedEnvelope(), and DD4hep::Geometry::LCDDHelper::detectorByID().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_ad3a90491007d6e3d4656b33d09466b07}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!key@{key}}
+\index{key@{key}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int DetElement::key () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_ad3a90491007d6e3d4656b33d09466b07}
+
+
+Access hash key of this detector element (Only valid once geometry is closed!). 
+
+Definition at line 128 of file Detector.cpp.
+
+References DD4hep::Geometry::DetElementObject::key, and DD4hep::Handle$<$ T $>$::ptr().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a240671f969600e1f707085d01fd62ec9}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!level@{level}}
+\index{level@{level}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{level}]{\setlength{\rightskip}{0pt plus 5cm}int DetElement::level () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a240671f969600e1f707085d01fd62ec9}
+
+
+Access the hierarchical level of the detector element (Only valid once geometry is closed!). Access the hierarchical level of the detector element. 
+
+Definition at line 140 of file Detector.cpp.
+
+References DD4hep::Geometry::DetElementObject::level, and DD4hep::Handle$<$ T $>$::ptr().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a9f2bba52865005abe8be8ccb3f19cb63}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!localToParent@{localToParent}}
+\index{localToParent@{localToParent}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{localToParent}]{\setlength{\rightskip}{0pt plus 5cm}bool DetElement::localToParent (const {\bf Position} \& {\em local}, \/  {\bf Position} \& {\em parent}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a9f2bba52865005abe8be8ccb3f19cb63}
+
+
+Transformation from local coordinates of the placed volume to the parent system. 
+
+Definition at line 386 of file Detector.cpp.
+
+References parentTransformation().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_abb53b2600f4c47e3b1b8b0d7e8c25028}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!localToWorld@{localToWorld}}
+\index{localToWorld@{localToWorld}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{localToWorld}]{\setlength{\rightskip}{0pt plus 5cm}bool DetElement::localToWorld (const {\bf Position} \& {\em local}, \/  {\bf Position} \& {\em global}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_abb53b2600f4c47e3b1b8b0d7e8c25028}
+
+
+Create cached matrix to transform to reference coordinates. Transformation from local coordinates of the placed volume to the world system.
+
+Transformation from local coordinates of the placed volume to the world system 
+
+Definition at line 377 of file Detector.cpp.
+
+References worldTransformation().
+
+Referenced by DD4hep::DDRec::SubdetectorExtensionImpl::getZMax(), and DD4hep::DDRec::SubdetectorExtensionImpl::getZMin().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_af5c8d93fa7327838eee4911721f7fe2e}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!nominal@{nominal}}
+\index{nominal@{nominal}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{nominal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignment} DetElement::nominal () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_af5c8d93fa7327838eee4911721f7fe2e}
+
+
+Access to the constant ideal (nominal) alignment information. Access to the alignment information. 
+
+Definition at line 179 of file Detector.cpp.
+
+References DD4hep::Handle$<$ T $>$::access(), DD4hep::Alignments::AlignmentTools::computeIdeal(), DD4hep::Handle$<$ T $>$::isValid(), and DD4hep::Geometry::DetElementObject::nominal.
+
+Referenced by survey().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_ac8e12307da748f91b989f010b06594bd}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Geometry::DetElement::operator$<$ (const {\bf DetElement} {\em e}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_ac8e12307da748f91b989f010b06594bd}
+
+
+Operator less to insert into a map. 
+
+Definition at line 262 of file Detector.h.
+
+References DD4hep::Handle$<$ T $>$::ptr().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a22ca67f5376d3d1c641fa02eada16c33}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!operator=@{operator=}}
+\index{operator=@{operator=}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement}\& DD4hep::Geometry::DetElement::operator= (const {\bf DetElement} \& {\em e})}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a22ca67f5376d3d1c641fa02eada16c33}
+
+
+Assignment operator. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_handle_a9bbf8f498df42e81ad26fb00233505a6}{DD4hep::Handle$<$ T $>$}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_aa1fa06d9532161b9dc14a124d7902edd}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!operator==@{operator==}}
+\index{operator==@{operator==}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Geometry::DetElement::operator== (const {\bf DetElement} {\em e}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_aa1fa06d9532161b9dc14a124d7902edd}
+
+
+Equality operator. 
+
+Definition at line 267 of file Detector.h.
+
+References DD4hep::Handle$<$ T $>$::ptr().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a6a7a665630b1b3af6dd172d9166b8b8d}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!parent@{parent}}
+\index{parent@{parent}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} DetElement::parent () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a6a7a665630b1b3af6dd172d9166b8b8d}
+
+
+Access to the detector elements's parent. 
+
+Definition at line 214 of file Detector.cpp.
+
+References DD4hep::Geometry::DetElementObject::parent, and DD4hep::Handle$<$ T $>$::ptr().
+
+Referenced by \_\-detector(), DD4hep::Geometry::LCDDImp::detectors(), DD4hep::Geometry::DetectorSelector::detectors(), DD4hep::Geometry::LCDDImp::mapDetectorTypes(), DD4hep::SurfaceInstaller::parentVolume(), DD4hep::Geometry::DetElementObject::revalidate(), DD4hep::Alignments::AlignmentsManagerObject::to\_\-world(), DD4hep::Geometry::DetectorTools::topElement(), and DD4hep::Geometry::DetElementObject::update().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_ab9b7683dd7471ffb6195570d5c618a28}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!parentToLocal@{parentToLocal}}
+\index{parentToLocal@{parentToLocal}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{parentToLocal}]{\setlength{\rightskip}{0pt plus 5cm}bool DetElement::parentToLocal (const {\bf Position} \& {\em parent}, \/  {\bf Position} \& {\em local}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_ab9b7683dd7471ffb6195570d5c618a28}
+
+
+Transformation from world coordinates of the local placed volume coordinates. Transformation from parent coordinates of the local placed volume coordinates. 
+
+Definition at line 404 of file Detector.cpp.
+
+References parentTransformation().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a643a213d09ad852e20ec05cedeff78c3}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!parentTransformation@{parentTransformation}}
+\index{parentTransformation@{parentTransformation}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{parentTransformation}]{\setlength{\rightskip}{0pt plus 5cm}const TGeoHMatrix \& DetElement::parentTransformation () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a643a213d09ad852e20ec05cedeff78c3}
+
+
+Create cached matrix to transform to parent coordinates. 
+
+Definition at line 372 of file Detector.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().
+
+Referenced by localToParent(), and parentToLocal().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a6b70a5084294e7adb2f0bd0018e3aed2}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!path@{path}}
+\index{path@{path}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{path}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf string} \& DetElement::path () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a6b70a5084294e7adb2f0bd0018e3aed2}
+
+
+\hyperlink{class_d_d4hep_1_1_path}{Path} of the detector element (not necessarily identical to placement path!). Access the full path of the detector element. 
+
+Definition at line 152 of file Detector.cpp.
+
+References DD4hep::Geometry::DetElementObject::path, and DD4hep::Handle$<$ T $>$::ptr().
+
+Referenced by DD4hep::Conditions::ConditionsManagerObject::\_\-\_\-queue\_\-update(), add(), DD4hep::Geometry::DetectorTools::findDaughterElement(), DD4hep::Geometry::DetElementObject::revalidate(), DD4hep::Geometry::VolumeManagerObject::update(), and DD4hep::Geometry::DetElementObject::update().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a32a39fbab7eeb59dd4ad2fc807e0b66d}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!placement@{placement}}
+\index{placement@{placement}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{placement}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PlacedVolume} DetElement::placement () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a32a39fbab7eeb59dd4ad2fc807e0b66d}
+
+
+Access to the physical volume of this detector element. 
+
+Definition at line 271 of file Detector.cpp.
+
+References DD4hep::Handle$<$ T $>$::isValid(), and DD4hep::Geometry::DetElementObject::placement.
+
+Referenced by DD4hep::Geometry::LCDDImp::addDetector(), DD4hep::Geometry::VolumeManager::addSubdetector(), DD4hep::Geometry::GeoHandler::collect(), DD4hep::Simulation::Geant4Converter::create(), DD4hep::Geometry::GeometryTreeDump::create(), dumpDetectors(), DD4hep::DDRec::Surface::initialize(), DD4hep::Utilities::LoadDetElement(), DD4hep::Display::LoadGeoChildren(), DD4hep::SurfaceInstaller::parentVolume(), DD4hep::SurfaceInstaller::placementTranslation(), and DD4hep::SurfaceInstaller::scan().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a0616a56e3d6ac4039041361d533de8ee}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!placementPath@{placementPath}}
+\index{placementPath@{placementPath}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{placementPath}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf string} \& DetElement::placementPath () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a0616a56e3d6ac4039041361d533de8ee}
+
+
+Access to the full path to the placed object. 
+
+Definition at line 78 of file Detector.cpp.
+
+References DD4hep::Geometry::DetElementObject::placementPath, and DD4hep::Handle$<$ T $>$::ptr().
+
+Referenced by dumpDetectors(), and DD4hep::Geometry::DetElementObject::revalidate().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_acb4a6a5c092ea6e4c4d9bfa781a7eea8}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!removeAtUpdate@{removeAtUpdate}}
+\index{removeAtUpdate@{removeAtUpdate}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{removeAtUpdate}]{\setlength{\rightskip}{0pt plus 5cm}void DetElement::removeAtUpdate (unsigned int {\em type}, \/  void $\ast$ {\em pointer}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_acb4a6a5c092ea6e4c4d9bfa781a7eea8}
+
+
+Remove callback from object. 
+
+Definition at line 73 of file Detector.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a08aef0534eb91ede146a6b17ac4f0fa8}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!setAttributes@{setAttributes}}
+\index{setAttributes@{setAttributes}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{setAttributes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement}\& DD4hep::Geometry::DetElement::setAttributes (const {\bf LCDD} \& {\em lcdd}, \/  const {\bf Volume} \& {\em volume}, \/  const std::string \& {\em region}, \/  const std::string \& {\em limits}, \/  const std::string \& {\em vis})}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a08aef0534eb91ede146a6b17ac4f0fa8}
+
+
+Set all attributes in one go. 
+
+Referenced by create\_\-detector().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a3b5dbbb87e8e1ddb64fc94e98cd5a70b}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!setCombineHits@{setCombineHits}}
+\index{setCombineHits@{setCombineHits}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{setCombineHits}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} \& DetElement::setCombineHits (bool {\em value}, \/  {\bf SensitiveDetector} \& {\em sens})}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a3b5dbbb87e8e1ddb64fc94e98cd5a70b}
+
+
+Setter: Combine hits attribute. 
+
+Definition at line 171 of file Detector.cpp.
+
+References DD4hep::Handle$<$ T $>$::access(), DD4hep::Handle$<$ T $>$::isValid(), and DD4hep::Geometry::SensitiveDetector::setCombineHits().
+
+Referenced by create\_\-detector().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a3d49a91bfb52e81ce87f891ea5394c98}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!setLimitSet@{setLimitSet}}
+\index{setLimitSet@{setLimitSet}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{setLimitSet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement}\& DD4hep::Geometry::DetElement::setLimitSet (const {\bf LCDD} \& {\em lcdd}, \/  const std::string \& {\em name}, \/  const {\bf Volume} \& {\em volume})}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a3d49a91bfb52e81ce87f891ea5394c98}
+
+
+Set the limits to the detector element. \hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a18640f84168adced73afd4eb2b84a798}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!setPlacement@{setPlacement}}
+\index{setPlacement@{setPlacement}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{setPlacement}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} \& DetElement::setPlacement (const {\bf PlacedVolume} \& {\em volume})}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a18640f84168adced73afd4eb2b84a798}
+
+
+Set the physical volumes of the detector element. 
+
+Definition at line 282 of file Detector.cpp.
+
+References DD4hep::Handle$<$ T $>$::access(), DD4hep::Geometry::DetElementObject::idealPlace, DD4hep::Handle$<$ T $>$::isValid(), and DD4hep::Geometry::DetElementObject::placement.
+
+Referenced by create\_\-detector(), DD4hep::XML::createPlacedEnvelope(), DD4hep::Geometry::LCDDImp::init(), and placeStaves().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a428b67df7bca888c0b08e49a0de0eb37}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!setRegion@{setRegion}}
+\index{setRegion@{setRegion}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{setRegion}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement}\& DD4hep::Geometry::DetElement::setRegion (const {\bf LCDD} \& {\em lcdd}, \/  const std::string \& {\em name}, \/  const {\bf Volume} \& {\em volume})}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a428b67df7bca888c0b08e49a0de0eb37}
+
+
+Set the regional attributes to the detector element. \hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a28c2c203dfcb6cd893bbe1bec4101392}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!setType@{setType}}
+\index{setType@{setType}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{setType}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement}\& DD4hep::Geometry::DetElement::setType (const std::string \& {\em typ})}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a28c2c203dfcb6cd893bbe1bec4101392}
+
+
+Set detector type (structure, tracker, calorimeter, etc.). \hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a5a03e88dd7e1e3f215116f44dfca1dce}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!setTypeFlag@{setTypeFlag}}
+\index{setTypeFlag@{setTypeFlag}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{setTypeFlag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} \& DetElement::setTypeFlag (unsigned int {\em types})}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a5a03e88dd7e1e3f215116f44dfca1dce}
+
+
+Set the flag word encoding detector types ( ideally use \hyperlink{class_d_d4hep_1_1_det_type}{DD4hep::DetType} for encoding ). Set the type of the sensitive detector. 
+
+Definition at line 106 of file Detector.cpp.
+
+References DD4hep::Handle$<$ T $>$::access(), and DD4hep::Geometry::DetElementObject::typeFlag.
+
+Referenced by DD4hep::XML::setDetectorTypeFlag().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_acdd370a4a20bc97cc7d9534f5e1fe91b}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!setVisAttributes@{setVisAttributes}}
+\index{setVisAttributes@{setVisAttributes}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{setVisAttributes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement}\& DD4hep::Geometry::DetElement::setVisAttributes (const {\bf LCDD} \& {\em lcdd}, \/  const std::string \& {\em name}, \/  const {\bf Volume} \& {\em volume})}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_acdd370a4a20bc97cc7d9534f5e1fe91b}
+
+
+Set Visualization attributes to the detector element. 
+
+Referenced by create\_\-detector().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a7656d819ab427f168ece0940353055f9}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!survey@{survey}}
+\index{survey@{survey}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{survey}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignment} DetElement::survey () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a7656d819ab427f168ece0940353055f9}
+
+
+Access to the constant survey alignment information. Access to the survey alignment information. 
+
+Definition at line 190 of file Detector.cpp.
+
+References DD4hep::Handle$<$ T $>$::access(), DD4hep::Alignments::AlignmentTools::copy(), DD4hep::Handle$<$ T $>$::isValid(), nominal(), and DD4hep::Geometry::DetElementObject::survey.\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_ac3f1002c4b640a796ebd1854507496ac}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!type@{type}}
+\index{type@{type}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf string} DetElement::type () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_ac3f1002c4b640a796ebd1854507496ac}
+
+
+Access detector type (structure, tracker, calorimeter, etc.). Access detector type (structure, tracker, calorimeter, etc.). Required for determination of G4 sensitive detector. 
+
+Definition at line 90 of file Detector.cpp.
+
+References DD4hep::Handle$<$ T $>$::m\_\-element.
+
+Referenced by DD4hep::SurfaceInstaller::invalidInstaller(), and DD4hep::Geometry::LCDDImp::mapDetectorTypes().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a7c6acb468c40a967e9e50a8efc2a620d}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!typeFlag@{typeFlag}}
+\index{typeFlag@{typeFlag}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{typeFlag}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int DetElement::typeFlag () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a7c6acb468c40a967e9e50a8efc2a620d}
+
+
+Definition at line 101 of file Detector.cpp.
+
+References DD4hep::Handle$<$ T $>$::m\_\-element.
+
+Referenced by DD4hep::Geometry::LCDDImp::detectors(), and DD4hep::Geometry::DetectorSelector::detectors().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a32d26062edede5aad146b6dbe3eef5be}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!volume@{volume}}
+\index{volume@{volume}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{volume}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Volume} DetElement::volume () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a32d26062edede5aad146b6dbe3eef5be}
+
+
+Access to the logical volume of the detector element's placement. Access to the logical volume of the placements (all daughters have the same!). 
+
+Definition at line 303 of file Detector.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().
+
+Referenced by DD4hep::DDRec::LayeringExtensionImpl::LayerAttributes::addElement(), DD4hep::DDRec::createGearForCLIC(), DD4hep::DDRec::createGearForILD(), DD4hep::DDRec::IDDecoder::findReadout(), DD4hep::DDRec::IDDecoder::getClosestDaughter(), DD4hep::DDRec::SubdetectorExtensionImpl::getNSides(), DD4hep::DDRec::SubdetectorExtensionImpl::getRMax(), DD4hep::DDRec::SubdetectorExtensionImpl::getRMin(), DD4hep::DDRec::SubdetectorExtensionImpl::getZMax(), DD4hep::DDRec::SubdetectorExtensionImpl::getZMin(), DD4hep::DDRec::IDDecoder::IDDecoder(), DD4hep::DDRec::LayeringExtensionImpl::LayerAttributes::LayerAttributes(), and DD4hep::DDRec::MaterialManager::MaterialManager().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a003e38a1be1b10caa917dd457637d104}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!volumeID@{volumeID}}
+\index{volumeID@{volumeID}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{volumeID}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::VolumeID DetElement::volumeID () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a003e38a1be1b10caa917dd457637d104}
+
+
+The cached VolumeID of this subdetector element. 
+
+Definition at line 295 of file Detector.cpp.
+
+References DD4hep::Handle$<$ T $>$::isValid().
+
+Referenced by DD4hep::DDRec::Surface::initialize(), DD4hep::DDRec::SubdetectorExtensionImpl::isBarrel(), DD4hep::DDRec::SubdetectorExtensionImpl::isEndcap(), and DD4hep::DDRec::IDDecoder::volumeID().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a6ffabad2792a7190089d4a042d5440b8}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!world@{world}}
+\index{world@{world}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{world}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} DetElement::world () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a6ffabad2792a7190089d4a042d5440b8}
+
+
+Access to the world object. Only possible once the geometry is closed. 
+
+Definition at line 220 of file Detector.cpp.
+
+References DD4hep::Handle$<$ T $>$::ptr(), and DD4hep::Geometry::DetElementObject::world().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_af753b374a6f6d98934f00522dd1efcf9}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!worldToLocal@{worldToLocal}}
+\index{worldToLocal@{worldToLocal}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{worldToLocal}]{\setlength{\rightskip}{0pt plus 5cm}bool DetElement::worldToLocal (const {\bf Position} \& {\em global}, \/  {\bf Position} \& {\em local}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_af753b374a6f6d98934f00522dd1efcf9}
+
+
+Transformation from local coordinates of the placed volume to arbitrary parent system set as reference. Transformation from world coordinates of the local placed volume coordinates.
+
+Transformation from world coordinates of the local placed volume coordinates 
+
+Definition at line 395 of file Detector.cpp.
+
+References worldTransformation().\hypertarget{class_d_d4hep_1_1_geometry_1_1_det_element_a60e3c04d0c0487207e62b98512a8f08c}{
+\index{DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}!worldTransformation@{worldTransformation}}
+\index{worldTransformation@{worldTransformation}!DD4hep::Geometry::DetElement@{DD4hep::Geometry::DetElement}}
+\subsubsection[{worldTransformation}]{\setlength{\rightskip}{0pt plus 5cm}const TGeoHMatrix \& DetElement::worldTransformation () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_det_element_a60e3c04d0c0487207e62b98512a8f08c}
+
+
+Set detector element for reference transformations. Will delete existing reference trafo. Create cached matrix to transform to world coordinates.
+
+Create cached matrix to transform to world coordinates 
+
+Definition at line 367 of file Detector.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().
+
+Referenced by DD4hep::DDRec::IDDecoder::cellID(), DD4hep::DDRec::IDDecoder::cellIDFromLocal(), DD4hep::DDRec::IDDecoder::getClosestDaughter(), DD4hep::DDRec::Surface::initialize(), localToWorld(), DD4hep::DDRec::IDDecoder::position(), and worldToLocal().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_detector_8h}{Detector.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_detector_8cpp}{Detector.cpp}\end{DoxyCompactItemize}

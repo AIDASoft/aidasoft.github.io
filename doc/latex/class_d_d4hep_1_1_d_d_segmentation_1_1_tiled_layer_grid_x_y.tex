@@ -1,0 +1,559 @@
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y}{
+\section{DD4hep::DDSegmentation::TiledLayerGridXY Class Reference}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y}\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+}
+
+
+{\ttfamily \#include $<$TiledLayerGridXY.h$>$}Inheritance diagram for DD4hep::DDSegmentation::TiledLayerGridXY::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_acbf674bb93ded0eedfa0d57426af8400}{TiledLayerGridXY} (const std::string \&cellEncoding=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Default constructor passing the encoding string. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a4ff90dbb3f490c1258513bfb3c26e215}{TiledLayerGridXY} (\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field64}{BitField64} $\ast$decoder)
+\begin{DoxyCompactList}\small\item\em Default constructor used by derived classes passing an existing decoder. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a03eeb88ffc324d56f3bfac3abb707e62}{$\sim$TiledLayerGridXY} ()
+\begin{DoxyCompactList}\small\item\em destructor \item\end{DoxyCompactList}\item 
+virtual \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a1cf88ec570ea925ca8b324efae04ce04}{position} (const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{CellID} \&cellID) const 
+\begin{DoxyCompactList}\small\item\em determine the position based on the cell ID \item\end{DoxyCompactList}\item 
+virtual \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{CellID} \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a7b37dc7981a6f36fdc67bd2759af7bdb}{cellID} (const \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \&localPosition, const \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \&globalPosition, const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_a61a6833a18d1800bdef176595f83e3ba}{VolumeID} \&volumeID) const 
+\begin{DoxyCompactList}\small\item\em determine the cell ID based on the position \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a87648f3136523b1d32b0c3a02e85fa28}{gridSizeX} () const 
+\begin{DoxyCompactList}\small\item\em access the grid size in X \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a1e3d5ba29ff7da392441b974bc6c2c44}{gridSizeY} () const 
+\begin{DoxyCompactList}\small\item\em access the grid size in Y \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a9e892950c0d0f6556a8a91b79ea72ee5}{offsetX} () const 
+\begin{DoxyCompactList}\small\item\em access the coordinate offset in X \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a9aebdc0d2b7e2ce60a075d733eaf6188}{offsetY} () const 
+\begin{DoxyCompactList}\small\item\em access the coordinate offset in Y \item\end{DoxyCompactList}\item 
+std::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a6f4a84bfe3765e5c55b53b31996e2758}{layerOffsetX} () const 
+\begin{DoxyCompactList}\small\item\em access the coordinate layerOffset in X \item\end{DoxyCompactList}\item 
+std::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a805628a8e85ce9859fb86c64dfa45640}{layerOffsetY} () const 
+\begin{DoxyCompactList}\small\item\em access the coordinate layerOffset in Y \item\end{DoxyCompactList}\item 
+std::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a5302fa68f6d9dde47079504b6ce4608d}{boundaryLayerX} () const 
+\begin{DoxyCompactList}\small\item\em access the boundary dimension in X \item\end{DoxyCompactList}\item 
+std::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a328d361bb8b6d45143b940539dbb089e}{FractCellSizeXPerLayer} () const 
+\begin{DoxyCompactList}\small\item\em access the fraction cell size in X \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a68e8c0f2eda5eeec041759b2c688272f}{fieldNameX} () const 
+\begin{DoxyCompactList}\small\item\em access the field name used for X \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_ad401dafbadacc2036d67181928682742}{fieldNameY} () const 
+\begin{DoxyCompactList}\small\item\em access the field name used for Y \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a8a21faf4be7569e667a271846705f9f9}{fieldNameLayer} () const 
+\begin{DoxyCompactList}\small\item\em access the field name used for \hyperlink{class_d_d4hep_1_1_layer}{Layer} \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a183f76f3765e6ab4985b0d6eb024785a}{setGridSizeX} (double cellSize)
+\begin{DoxyCompactList}\small\item\em set the grid size in X \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a2556a5e0000580a8ffdf93bde33c36b8}{setGridSizeY} (double cellSize)
+\begin{DoxyCompactList}\small\item\em set the grid size in Y \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a19c0059402e512da58c2d241d8e67de7}{setOffsetX} (double offset)
+\begin{DoxyCompactList}\small\item\em set the coordinate offset in X \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a588e04b48f59f73af89b54302e3eb025}{setOffsetY} (double offset)
+\begin{DoxyCompactList}\small\item\em set the coordinate offset in Y \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a4368c4380115aa312e1b127e4b15aed9}{setLayerOffsetX} (double offset)
+\begin{DoxyCompactList}\small\item\em set the coordinate layerOffset in X \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a280670f55a514e9f6f373bef61832ad0}{setLayerOffsetY} (double offset)
+\begin{DoxyCompactList}\small\item\em set the coordinate layerOffset in Y \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a1e0e7dc80968a2a7513cdd974275e5d5}{setFieldNameX} (const std::string \&fieldName)
+\begin{DoxyCompactList}\small\item\em set the field name used for X \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a8e33e4196b585e5376e871818e784bfa}{setFieldNameY} (const std::string \&fieldName)
+\begin{DoxyCompactList}\small\item\em set the field name used for Y \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a2bf0d13d0e1ea42c698c10339e220590}{setFieldNameLayer} (const std::string \&fieldName)
+\begin{DoxyCompactList}\small\item\em set the field name used for Y \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a713a5e8262e11c1806893ead420f116d}{setBoundaryLayerX} (double halfX)
+\begin{DoxyCompactList}\small\item\em set the layer boundary dimension for X \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a89afa525c07a985c490e593f84961d7c}{setFractCellSizeXPerLayer} (double newFractCellSizeX)
+\begin{DoxyCompactList}\small\item\em set the layer fraction cell size for X \item\end{DoxyCompactList}\item 
+virtual std::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a5304d34d8b7bb2eb0a187a595796de31}{cellDimensions} (const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{CellID} \&cellID) const 
+\begin{DoxyCompactList}\small\item\em Returns a vector$<$double$>$ of the cellDimensions of the given cell ID in natural order of dimensions, e.g., dx/dy/dz, or dr/r$\ast$dPhi. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_ab579117ca41778248009a661cbaa27b7}{\_\-gridSizeX}
+\begin{DoxyCompactList}\small\item\em the grid size in X \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_aa5658d900b004184ff4bd2160438bbeb}{\_\-offsetX}
+\begin{DoxyCompactList}\small\item\em the coordinate offset in X \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_ae544578762aec1e7bb735efca00a28b9}{\_\-gridSizeY}
+\begin{DoxyCompactList}\small\item\em the grid size in Y \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_ab8f5e777f372e32435efd7d915217b79}{\_\-offsetY}
+\begin{DoxyCompactList}\small\item\em the coordinate offset in Y \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a55a6c20f981c68d6fbb3bbc8823ff770}{\_\-xId}
+\begin{DoxyCompactList}\small\item\em the field name used for X \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_abcbef3de34c9e92a82bd8a6a5621aa63}{\_\-yId}
+\begin{DoxyCompactList}\small\item\em the field name used for Y \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a4dfef8cb6d1319b076579fd565241c84}{\_\-identifierLayer}
+\begin{DoxyCompactList}\small\item\em encoding field used for the layer \item\end{DoxyCompactList}\item 
+std::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a6974df570df9c6cd533b17a78f3cb0d3}{\_\-layerOffsetX}
+\begin{DoxyCompactList}\small\item\em list of layer x offset \item\end{DoxyCompactList}\item 
+std::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a0ee4e15bd3807f5ecccc82ffb7962377}{\_\-layerOffsetY}
+\begin{DoxyCompactList}\small\item\em list of layer y offset \item\end{DoxyCompactList}\item 
+std::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a6ce81c79c43efdb092b454a1047fd666}{\_\-layerDimX}
+\begin{DoxyCompactList}\small\item\em list of layer boundary dimension for X \item\end{DoxyCompactList}\item 
+std::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a459d90c7d9a34184e093dd0ce01e5157}{\_\-fractCellSizeXPerLayer}
+\begin{DoxyCompactList}\small\item\em list of the layer fraction cell size for X \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 20 of file TiledLayerGridXY.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_acbf674bb93ded0eedfa0d57426af8400}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!TiledLayerGridXY@{TiledLayerGridXY}}
+\index{TiledLayerGridXY@{TiledLayerGridXY}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{TiledLayerGridXY}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDSegmentation::TiledLayerGridXY::TiledLayerGridXY (const std::string \& {\em cellEncoding} = {\ttfamily \char`\"{}\char`\"{}})}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_acbf674bb93ded0eedfa0d57426af8400}
+
+
+Default constructor passing the encoding string. default constructor using an encoding string 
+
+Definition at line 20 of file TiledLayerGridXY.cpp.
+
+References DD4hep::DDSegmentation::Segmentation::\_\-description, \_\-gridSizeX, \_\-gridSizeY, \_\-identifierLayer, \_\-layerOffsetX, \_\-layerOffsetY, \_\-offsetX, \_\-offsetY, DD4hep::DDSegmentation::Segmentation::\_\-type, \_\-xId, \_\-yId, DD4hep::DDSegmentation::SegmentationParameter::LengthUnit, DD4hep::DDSegmentation::SegmentationParameter::NoUnit, DD4hep::DDSegmentation::Segmentation::registerIdentifier(), and DD4hep::DDSegmentation::Segmentation::registerParameter().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a4ff90dbb3f490c1258513bfb3c26e215}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!TiledLayerGridXY@{TiledLayerGridXY}}
+\index{TiledLayerGridXY@{TiledLayerGridXY}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{TiledLayerGridXY}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDSegmentation::TiledLayerGridXY::TiledLayerGridXY ({\bf BitField64} $\ast$ {\em decoder})}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a4ff90dbb3f490c1258513bfb3c26e215}
+
+
+Default constructor used by derived classes passing an existing decoder. 
+
+Definition at line 43 of file TiledLayerGridXY.cpp.
+
+References DD4hep::DDSegmentation::Segmentation::\_\-description, \_\-gridSizeX, \_\-gridSizeY, \_\-identifierLayer, \_\-layerOffsetX, \_\-layerOffsetY, \_\-offsetX, \_\-offsetY, DD4hep::DDSegmentation::Segmentation::\_\-type, \_\-xId, \_\-yId, DD4hep::DDSegmentation::SegmentationParameter::LengthUnit, DD4hep::DDSegmentation::SegmentationParameter::NoUnit, DD4hep::DDSegmentation::Segmentation::registerIdentifier(), and DD4hep::DDSegmentation::Segmentation::registerParameter().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a03eeb88ffc324d56f3bfac3abb707e62}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!$\sim$TiledLayerGridXY@{$\sim$TiledLayerGridXY}}
+\index{$\sim$TiledLayerGridXY@{$\sim$TiledLayerGridXY}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{$\sim$TiledLayerGridXY}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDSegmentation::TiledLayerGridXY::$\sim$TiledLayerGridXY ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a03eeb88ffc324d56f3bfac3abb707e62}
+
+
+destructor 
+
+Definition at line 65 of file TiledLayerGridXY.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a5302fa68f6d9dde47079504b6ce4608d}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!boundaryLayerX@{boundaryLayerX}}
+\index{boundaryLayerX@{boundaryLayerX}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{boundaryLayerX}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$double$>$ DD4hep::DDSegmentation::TiledLayerGridXY::boundaryLayerX () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a5302fa68f6d9dde47079504b6ce4608d}
+
+
+access the boundary dimension in X 
+
+Definition at line 58 of file TiledLayerGridXY.h.
+
+References \_\-layerDimX.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a5304d34d8b7bb2eb0a187a595796de31}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!cellDimensions@{cellDimensions}}
+\index{cellDimensions@{cellDimensions}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{cellDimensions}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$ double $>$ DD4hep::DDSegmentation::TiledLayerGridXY::cellDimensions (const {\bf CellID} \& {\em cellID}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a5304d34d8b7bb2eb0a187a595796de31}
+
+
+Returns a vector$<$double$>$ of the cellDimensions of the given cell ID in natural order of dimensions, e.g., dx/dy/dz, or dr/r$\ast$dPhi. Returns a vector of the cellDimensions of the given cell ID 
+\begin{DoxyParams}{Parameters}
+\item[{\em cellID}]is ignored as all cells have the same dimension \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std::vector$<$double$>$ size 2:
+\begin{DoxyEnumerate}
+\item size in x
+\item size in y 
+\end{DoxyEnumerate}
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a9710f4942d7f6b52ae5342652e17c88d}{DD4hep::DDSegmentation::Segmentation}.
+
+Definition at line 114 of file TiledLayerGridXY.cpp.
+
+References \_\-gridSizeX, and \_\-gridSizeY.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a7b37dc7981a6f36fdc67bd2759af7bdb}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!cellID@{cellID}}
+\index{cellID@{cellID}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{cellID}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CellID} DD4hep::DDSegmentation::TiledLayerGridXY::cellID (const {\bf Vector3D} \& {\em localPosition}, \/  const {\bf Vector3D} \& {\em globalPosition}, \/  const {\bf VolumeID} \& {\em volumeID}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a7b37dc7981a6f36fdc67bd2759af7bdb}
+
+
+determine the cell ID based on the position 
+
+Implements \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ad5a60953d96d409850d8192f64f8ce3c}{DD4hep::DDSegmentation::Segmentation}.
+
+Definition at line 98 of file TiledLayerGridXY.cpp.
+
+References DD4hep::DDSegmentation::Segmentation::\_\-decoder, \_\-gridSizeX, \_\-gridSizeY, \_\-identifierLayer, \_\-layerOffsetX, \_\-offsetX, \_\-offsetY, \_\-xId, \_\-yId, DD4hep::DDSegmentation::BitField64::getValue(), DD4hep::DDSegmentation::Segmentation::positionToBin(), DD4hep::DDSegmentation::BitField64::setValue(), DD4hep::DDSegmentation::Vector3D::X, and DD4hep::DDSegmentation::Vector3D::Y.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a8a21faf4be7569e667a271846705f9f9}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!fieldNameLayer@{fieldNameLayer}}
+\index{fieldNameLayer@{fieldNameLayer}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{fieldNameLayer}]{\setlength{\rightskip}{0pt plus 5cm}const std::string\& DD4hep::DDSegmentation::TiledLayerGridXY::fieldNameLayer () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a8a21faf4be7569e667a271846705f9f9}
+
+
+access the field name used for \hyperlink{class_d_d4hep_1_1_layer}{Layer} 
+
+Definition at line 74 of file TiledLayerGridXY.h.
+
+References \_\-identifierLayer.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a68e8c0f2eda5eeec041759b2c688272f}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!fieldNameX@{fieldNameX}}
+\index{fieldNameX@{fieldNameX}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{fieldNameX}]{\setlength{\rightskip}{0pt plus 5cm}const std::string\& DD4hep::DDSegmentation::TiledLayerGridXY::fieldNameX () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a68e8c0f2eda5eeec041759b2c688272f}
+
+
+access the field name used for X 
+
+Definition at line 66 of file TiledLayerGridXY.h.
+
+References \_\-xId.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_ad401dafbadacc2036d67181928682742}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!fieldNameY@{fieldNameY}}
+\index{fieldNameY@{fieldNameY}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{fieldNameY}]{\setlength{\rightskip}{0pt plus 5cm}const std::string\& DD4hep::DDSegmentation::TiledLayerGridXY::fieldNameY () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_ad401dafbadacc2036d67181928682742}
+
+
+access the field name used for Y 
+
+Definition at line 70 of file TiledLayerGridXY.h.
+
+References \_\-yId.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a328d361bb8b6d45143b940539dbb089e}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!FractCellSizeXPerLayer@{FractCellSizeXPerLayer}}
+\index{FractCellSizeXPerLayer@{FractCellSizeXPerLayer}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{FractCellSizeXPerLayer}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$double$>$ DD4hep::DDSegmentation::TiledLayerGridXY::FractCellSizeXPerLayer () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a328d361bb8b6d45143b940539dbb089e}
+
+
+access the fraction cell size in X 
+
+Definition at line 62 of file TiledLayerGridXY.h.
+
+References \_\-fractCellSizeXPerLayer.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a87648f3136523b1d32b0c3a02e85fa28}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!gridSizeX@{gridSizeX}}
+\index{gridSizeX@{gridSizeX}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{gridSizeX}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::DDSegmentation::TiledLayerGridXY::gridSizeX () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a87648f3136523b1d32b0c3a02e85fa28}
+
+
+access the grid size in X 
+
+Definition at line 34 of file TiledLayerGridXY.h.
+
+References \_\-gridSizeX.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a1e3d5ba29ff7da392441b974bc6c2c44}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!gridSizeY@{gridSizeY}}
+\index{gridSizeY@{gridSizeY}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{gridSizeY}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::DDSegmentation::TiledLayerGridXY::gridSizeY () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a1e3d5ba29ff7da392441b974bc6c2c44}
+
+
+access the grid size in Y 
+
+Definition at line 38 of file TiledLayerGridXY.h.
+
+References \_\-gridSizeY.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a6f4a84bfe3765e5c55b53b31996e2758}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!layerOffsetX@{layerOffsetX}}
+\index{layerOffsetX@{layerOffsetX}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{layerOffsetX}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$double$>$ DD4hep::DDSegmentation::TiledLayerGridXY::layerOffsetX () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a6f4a84bfe3765e5c55b53b31996e2758}
+
+
+access the coordinate layerOffset in X 
+
+Definition at line 50 of file TiledLayerGridXY.h.
+
+References \_\-layerOffsetX.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a805628a8e85ce9859fb86c64dfa45640}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!layerOffsetY@{layerOffsetY}}
+\index{layerOffsetY@{layerOffsetY}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{layerOffsetY}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$double$>$ DD4hep::DDSegmentation::TiledLayerGridXY::layerOffsetY () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a805628a8e85ce9859fb86c64dfa45640}
+
+
+access the coordinate layerOffset in Y 
+
+Definition at line 54 of file TiledLayerGridXY.h.
+
+References \_\-layerOffsetY.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a9e892950c0d0f6556a8a91b79ea72ee5}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!offsetX@{offsetX}}
+\index{offsetX@{offsetX}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{offsetX}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::DDSegmentation::TiledLayerGridXY::offsetX () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a9e892950c0d0f6556a8a91b79ea72ee5}
+
+
+access the coordinate offset in X 
+
+Definition at line 42 of file TiledLayerGridXY.h.
+
+References \_\-offsetX.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a9aebdc0d2b7e2ce60a075d733eaf6188}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!offsetY@{offsetY}}
+\index{offsetY@{offsetY}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{offsetY}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::DDSegmentation::TiledLayerGridXY::offsetY () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a9aebdc0d2b7e2ce60a075d733eaf6188}
+
+
+access the coordinate offset in Y 
+
+Definition at line 46 of file TiledLayerGridXY.h.
+
+References \_\-offsetY.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a1cf88ec570ea925ca8b324efae04ce04}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!position@{position}}
+\index{position@{position}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector3D} DD4hep::DDSegmentation::TiledLayerGridXY::position (const {\bf CellID} \& {\em cellID}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a1cf88ec570ea925ca8b324efae04ce04}
+
+
+determine the position based on the cell ID 
+
+Implements \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a594fe6d78667415855858d083b64acad}{DD4hep::DDSegmentation::Segmentation}.
+
+Definition at line 70 of file TiledLayerGridXY.cpp.
+
+References DD4hep::DDSegmentation::Segmentation::\_\-decoder, \_\-fractCellSizeXPerLayer, \_\-gridSizeX, \_\-gridSizeY, \_\-identifierLayer, \_\-layerDimX, \_\-layerOffsetX, \_\-offsetX, \_\-offsetY, \_\-xId, \_\-yId, DD4hep::DDSegmentation::Segmentation::binToPosition(), DD4hep::DDSegmentation::BitField64::setValue(), DD4hep::DDSegmentation::Vector3D::X, and DD4hep::DDSegmentation::Vector3D::Y.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a713a5e8262e11c1806893ead420f116d}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!setBoundaryLayerX@{setBoundaryLayerX}}
+\index{setBoundaryLayerX@{setBoundaryLayerX}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{setBoundaryLayerX}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::TiledLayerGridXY::setBoundaryLayerX (double {\em halfX})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a713a5e8262e11c1806893ead420f116d}
+
+
+set the layer boundary dimension for X 
+
+Definition at line 114 of file TiledLayerGridXY.h.
+
+References \_\-layerDimX.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a2bf0d13d0e1ea42c698c10339e220590}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!setFieldNameLayer@{setFieldNameLayer}}
+\index{setFieldNameLayer@{setFieldNameLayer}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{setFieldNameLayer}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::TiledLayerGridXY::setFieldNameLayer (const std::string \& {\em fieldName})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a2bf0d13d0e1ea42c698c10339e220590}
+
+
+set the field name used for Y 
+
+Definition at line 110 of file TiledLayerGridXY.h.
+
+References \_\-identifierLayer.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a1e0e7dc80968a2a7513cdd974275e5d5}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!setFieldNameX@{setFieldNameX}}
+\index{setFieldNameX@{setFieldNameX}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{setFieldNameX}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::TiledLayerGridXY::setFieldNameX (const std::string \& {\em fieldName})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a1e0e7dc80968a2a7513cdd974275e5d5}
+
+
+set the field name used for X 
+
+Definition at line 102 of file TiledLayerGridXY.h.
+
+References \_\-xId.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a8e33e4196b585e5376e871818e784bfa}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!setFieldNameY@{setFieldNameY}}
+\index{setFieldNameY@{setFieldNameY}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{setFieldNameY}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::TiledLayerGridXY::setFieldNameY (const std::string \& {\em fieldName})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a8e33e4196b585e5376e871818e784bfa}
+
+
+set the field name used for Y 
+
+Definition at line 106 of file TiledLayerGridXY.h.
+
+References \_\-yId.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a89afa525c07a985c490e593f84961d7c}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!setFractCellSizeXPerLayer@{setFractCellSizeXPerLayer}}
+\index{setFractCellSizeXPerLayer@{setFractCellSizeXPerLayer}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{setFractCellSizeXPerLayer}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::TiledLayerGridXY::setFractCellSizeXPerLayer (double {\em newFractCellSizeX})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a89afa525c07a985c490e593f84961d7c}
+
+
+set the layer fraction cell size for X 
+
+Definition at line 119 of file TiledLayerGridXY.h.
+
+References \_\-fractCellSizeXPerLayer.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a183f76f3765e6ab4985b0d6eb024785a}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!setGridSizeX@{setGridSizeX}}
+\index{setGridSizeX@{setGridSizeX}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{setGridSizeX}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::TiledLayerGridXY::setGridSizeX (double {\em cellSize})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a183f76f3765e6ab4985b0d6eb024785a}
+
+
+set the grid size in X 
+
+Definition at line 78 of file TiledLayerGridXY.h.
+
+References \_\-gridSizeX.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a2556a5e0000580a8ffdf93bde33c36b8}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!setGridSizeY@{setGridSizeY}}
+\index{setGridSizeY@{setGridSizeY}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{setGridSizeY}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::TiledLayerGridXY::setGridSizeY (double {\em cellSize})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a2556a5e0000580a8ffdf93bde33c36b8}
+
+
+set the grid size in Y 
+
+Definition at line 82 of file TiledLayerGridXY.h.
+
+References \_\-gridSizeY.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a4368c4380115aa312e1b127e4b15aed9}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!setLayerOffsetX@{setLayerOffsetX}}
+\index{setLayerOffsetX@{setLayerOffsetX}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{setLayerOffsetX}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::TiledLayerGridXY::setLayerOffsetX (double {\em offset})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a4368c4380115aa312e1b127e4b15aed9}
+
+
+set the coordinate layerOffset in X 
+
+Definition at line 94 of file TiledLayerGridXY.h.
+
+References \_\-layerOffsetX.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a280670f55a514e9f6f373bef61832ad0}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!setLayerOffsetY@{setLayerOffsetY}}
+\index{setLayerOffsetY@{setLayerOffsetY}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{setLayerOffsetY}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::TiledLayerGridXY::setLayerOffsetY (double {\em offset})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a280670f55a514e9f6f373bef61832ad0}
+
+
+set the coordinate layerOffset in Y 
+
+Definition at line 98 of file TiledLayerGridXY.h.
+
+References \_\-layerOffsetY.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a19c0059402e512da58c2d241d8e67de7}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!setOffsetX@{setOffsetX}}
+\index{setOffsetX@{setOffsetX}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{setOffsetX}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::TiledLayerGridXY::setOffsetX (double {\em offset})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a19c0059402e512da58c2d241d8e67de7}
+
+
+set the coordinate offset in X 
+
+Definition at line 86 of file TiledLayerGridXY.h.
+
+References \_\-offsetX.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a588e04b48f59f73af89b54302e3eb025}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!setOffsetY@{setOffsetY}}
+\index{setOffsetY@{setOffsetY}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{setOffsetY}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::TiledLayerGridXY::setOffsetY (double {\em offset})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a588e04b48f59f73af89b54302e3eb025}
+
+
+set the coordinate offset in Y 
+
+Definition at line 90 of file TiledLayerGridXY.h.
+
+References \_\-offsetY.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a459d90c7d9a34184e093dd0ce01e5157}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!\_\-fractCellSizeXPerLayer@{\_\-fractCellSizeXPerLayer}}
+\index{\_\-fractCellSizeXPerLayer@{\_\-fractCellSizeXPerLayer}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{\_\-fractCellSizeXPerLayer}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$double$>$ {\bf DD4hep::DDSegmentation::TiledLayerGridXY::\_\-fractCellSizeXPerLayer}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a459d90c7d9a34184e093dd0ce01e5157}
+
+
+list of the layer fraction cell size for X 
+
+Definition at line 156 of file TiledLayerGridXY.h.
+
+Referenced by FractCellSizeXPerLayer(), position(), and setFractCellSizeXPerLayer().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_ab579117ca41778248009a661cbaa27b7}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!\_\-gridSizeX@{\_\-gridSizeX}}
+\index{\_\-gridSizeX@{\_\-gridSizeX}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{\_\-gridSizeX}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::DDSegmentation::TiledLayerGridXY::\_\-gridSizeX}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_ab579117ca41778248009a661cbaa27b7}
+
+
+the grid size in X 
+
+Definition at line 136 of file TiledLayerGridXY.h.
+
+Referenced by cellDimensions(), cellID(), gridSizeX(), position(), setGridSizeX(), and TiledLayerGridXY().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_ae544578762aec1e7bb735efca00a28b9}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!\_\-gridSizeY@{\_\-gridSizeY}}
+\index{\_\-gridSizeY@{\_\-gridSizeY}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{\_\-gridSizeY}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::DDSegmentation::TiledLayerGridXY::\_\-gridSizeY}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_ae544578762aec1e7bb735efca00a28b9}
+
+
+the grid size in Y 
+
+Definition at line 140 of file TiledLayerGridXY.h.
+
+Referenced by cellDimensions(), cellID(), gridSizeY(), position(), setGridSizeY(), and TiledLayerGridXY().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a4dfef8cb6d1319b076579fd565241c84}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!\_\-identifierLayer@{\_\-identifierLayer}}
+\index{\_\-identifierLayer@{\_\-identifierLayer}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{\_\-identifierLayer}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::DDSegmentation::TiledLayerGridXY::\_\-identifierLayer}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a4dfef8cb6d1319b076579fd565241c84}
+
+
+encoding field used for the layer 
+
+Definition at line 148 of file TiledLayerGridXY.h.
+
+Referenced by cellID(), fieldNameLayer(), position(), setFieldNameLayer(), and TiledLayerGridXY().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a6ce81c79c43efdb092b454a1047fd666}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!\_\-layerDimX@{\_\-layerDimX}}
+\index{\_\-layerDimX@{\_\-layerDimX}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{\_\-layerDimX}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$double$>$ {\bf DD4hep::DDSegmentation::TiledLayerGridXY::\_\-layerDimX}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a6ce81c79c43efdb092b454a1047fd666}
+
+
+list of layer boundary dimension for X 
+
+Definition at line 154 of file TiledLayerGridXY.h.
+
+Referenced by boundaryLayerX(), position(), and setBoundaryLayerX().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a6974df570df9c6cd533b17a78f3cb0d3}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!\_\-layerOffsetX@{\_\-layerOffsetX}}
+\index{\_\-layerOffsetX@{\_\-layerOffsetX}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{\_\-layerOffsetX}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$double$>$ {\bf DD4hep::DDSegmentation::TiledLayerGridXY::\_\-layerOffsetX}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a6974df570df9c6cd533b17a78f3cb0d3}
+
+
+list of layer x offset 
+
+Definition at line 150 of file TiledLayerGridXY.h.
+
+Referenced by cellID(), layerOffsetX(), position(), setLayerOffsetX(), and TiledLayerGridXY().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a0ee4e15bd3807f5ecccc82ffb7962377}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!\_\-layerOffsetY@{\_\-layerOffsetY}}
+\index{\_\-layerOffsetY@{\_\-layerOffsetY}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{\_\-layerOffsetY}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$double$>$ {\bf DD4hep::DDSegmentation::TiledLayerGridXY::\_\-layerOffsetY}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a0ee4e15bd3807f5ecccc82ffb7962377}
+
+
+list of layer y offset 
+
+Definition at line 152 of file TiledLayerGridXY.h.
+
+Referenced by layerOffsetY(), setLayerOffsetY(), and TiledLayerGridXY().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_aa5658d900b004184ff4bd2160438bbeb}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!\_\-offsetX@{\_\-offsetX}}
+\index{\_\-offsetX@{\_\-offsetX}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{\_\-offsetX}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::DDSegmentation::TiledLayerGridXY::\_\-offsetX}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_aa5658d900b004184ff4bd2160438bbeb}
+
+
+the coordinate offset in X 
+
+Definition at line 138 of file TiledLayerGridXY.h.
+
+Referenced by cellID(), offsetX(), position(), setOffsetX(), and TiledLayerGridXY().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_ab8f5e777f372e32435efd7d915217b79}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!\_\-offsetY@{\_\-offsetY}}
+\index{\_\-offsetY@{\_\-offsetY}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{\_\-offsetY}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::DDSegmentation::TiledLayerGridXY::\_\-offsetY}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_ab8f5e777f372e32435efd7d915217b79}
+
+
+the coordinate offset in Y 
+
+Definition at line 142 of file TiledLayerGridXY.h.
+
+Referenced by cellID(), offsetY(), position(), setOffsetY(), and TiledLayerGridXY().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a55a6c20f981c68d6fbb3bbc8823ff770}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!\_\-xId@{\_\-xId}}
+\index{\_\-xId@{\_\-xId}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{\_\-xId}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::DDSegmentation::TiledLayerGridXY::\_\-xId}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_a55a6c20f981c68d6fbb3bbc8823ff770}
+
+
+the field name used for X 
+
+Definition at line 144 of file TiledLayerGridXY.h.
+
+Referenced by cellID(), fieldNameX(), position(), setFieldNameX(), and TiledLayerGridXY().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_abcbef3de34c9e92a82bd8a6a5621aa63}{
+\index{DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}!\_\-yId@{\_\-yId}}
+\index{\_\-yId@{\_\-yId}!DD4hep::DDSegmentation::TiledLayerGridXY@{DD4hep::DDSegmentation::TiledLayerGridXY}}
+\subsubsection[{\_\-yId}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::DDSegmentation::TiledLayerGridXY::\_\-yId}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_grid_x_y_abcbef3de34c9e92a82bd8a6a5621aa63}
+
+
+the field name used for Y 
+
+Definition at line 146 of file TiledLayerGridXY.h.
+
+Referenced by cellID(), fieldNameY(), position(), setFieldNameY(), and TiledLayerGridXY().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDSegmentation/include/DDSegmentation/\hyperlink{_tiled_layer_grid_x_y_8h}{TiledLayerGridXY.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDSegmentation/src/\hyperlink{_tiled_layer_grid_x_y_8cpp}{TiledLayerGridXY.cpp}\end{DoxyCompactItemize}

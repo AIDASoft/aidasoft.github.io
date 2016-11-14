@@ -1,0 +1,216 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump}{
+\section{DD4hep::Simulation::Geant4DataDump Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump}\index{DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}}
+}
+
+
+Class to dump the records of the intrinsic Geant4 event model.  
+
+
+{\ttfamily \#include $<$Geant4DataDump.h$>$}\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle}{Geant4Particle} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a94c26fac6b79beaaed2c75c680b3f374}{Particle}
+\item 
+typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle}{Particle} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a78b5910af0db1442a14600ae8dfc2a92}{Particles}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_tracker_1_1_hit}{SimpleTracker::Hit} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_aaeea8b5b317a9a22e13f472200917ad2}{TrackerHit}
+\item 
+typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_tracker_1_1_hit}{SimpleTracker::Hit} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_aa71f3341672792aa15c10e82cdbeca4b}{TrackerHits}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_calorimeter_1_1_hit}{SimpleCalorimeter::Hit} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_abbb746f00c083cdb09c3e0331cb920be}{CalorimeterHit}
+\item 
+typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_calorimeter_1_1_hit}{SimpleCalorimeter::Hit} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a405c85a9a72c4f1dc0164d4a61d98f75}{CalorimeterHits}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a2709938040240f38f527791859ebaf34}{Geant4DataDump} (const std::string \&tag)
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_af966fda61c5237ac2858834cdeb1e238}{$\sim$Geant4DataDump} ()
+\begin{DoxyCompactList}\small\item\em Standard destructor. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a2cfd1367725a0d6156c7a7195ec64ea1}{print} (\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{PrintLevel} level, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_handle}{Geant4ParticleHandle} p) const 
+\begin{DoxyCompactList}\small\item\em Print a single particle to the output logging using the specified print level. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a50918352a7c46d20e94d26b4cf5d5e39}{print} (\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{PrintLevel} level, const std::string \&container, const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a78b5910af0db1442a14600ae8dfc2a92}{Particles} $\ast$parts)
+\begin{DoxyCompactList}\small\item\em Print the particle container to the output logging using the specified print level. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_af3765022b8a03075fde40b2129b468e8}{print} (\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{PrintLevel} level, const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_tracker_1_1_hit}{TrackerHit} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Print a single tracker hit to the output logging using the specified print level. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a2427e186357f34940bb19be59406e7c9}{print} (\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{PrintLevel} level, const std::string \&container, const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_aa71f3341672792aa15c10e82cdbeca4b}{TrackerHits} $\ast$hits)
+\begin{DoxyCompactList}\small\item\em Print the tracker hits container to the output logging using the specified print level. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a213bbcf2c9fb78f71afefe34935f3017}{print} (\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{PrintLevel} level, const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_calorimeter_1_1_hit}{CalorimeterHit} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Print a calorimeter tracker hit to the output logging using the specified print level. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_aedbce540469e2c554096f3b87fbd9991}{print} (\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{PrintLevel} level, const std::string \&container, const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a405c85a9a72c4f1dc0164d4a61d98f75}{CalorimeterHits} $\ast$hits)
+\begin{DoxyCompactList}\small\item\em Print the calorimeter hits container to the output logging using the specified print level. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::string \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a58986bd9d08cd72f5d5b780d0047e5e6}{m\_\-tag}
+\begin{DoxyCompactList}\small\item\em Tag variable. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to dump the records of the intrinsic Geant4 event model. \begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 38 of file Geant4DataDump.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_abbb746f00c083cdb09c3e0331cb920be}{
+\index{DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}!CalorimeterHit@{CalorimeterHit}}
+\index{CalorimeterHit@{CalorimeterHit}!DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}}
+\subsubsection[{CalorimeterHit}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf SimpleCalorimeter::Hit} {\bf DD4hep::Simulation::Geant4DataDump::CalorimeterHit}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_abbb746f00c083cdb09c3e0331cb920be}
+
+
+Definition at line 46 of file Geant4DataDump.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a405c85a9a72c4f1dc0164d4a61d98f75}{
+\index{DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}!CalorimeterHits@{CalorimeterHits}}
+\index{CalorimeterHits@{CalorimeterHits}!DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}}
+\subsubsection[{CalorimeterHits}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf SimpleCalorimeter::Hit}$\ast$$>$ {\bf DD4hep::Simulation::Geant4DataDump::CalorimeterHits}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a405c85a9a72c4f1dc0164d4a61d98f75}
+
+
+Definition at line 47 of file Geant4DataDump.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a94c26fac6b79beaaed2c75c680b3f374}{
+\index{DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}!Particle@{Particle}}
+\index{Particle@{Particle}!DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}}
+\subsubsection[{Particle}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geant4Particle} {\bf DD4hep::Simulation::Geant4DataDump::Particle}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a94c26fac6b79beaaed2c75c680b3f374}
+
+
+Definition at line 40 of file Geant4DataDump.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a78b5910af0db1442a14600ae8dfc2a92}{
+\index{DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}!Particles@{Particles}}
+\index{Particles@{Particles}!DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}}
+\subsubsection[{Particles}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf Particle}$\ast$$>$ {\bf DD4hep::Simulation::Geant4DataDump::Particles}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a78b5910af0db1442a14600ae8dfc2a92}
+
+
+Definition at line 41 of file Geant4DataDump.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_aaeea8b5b317a9a22e13f472200917ad2}{
+\index{DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}!TrackerHit@{TrackerHit}}
+\index{TrackerHit@{TrackerHit}!DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}}
+\subsubsection[{TrackerHit}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf SimpleTracker::Hit} {\bf DD4hep::Simulation::Geant4DataDump::TrackerHit}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_aaeea8b5b317a9a22e13f472200917ad2}
+
+
+Definition at line 43 of file Geant4DataDump.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_aa71f3341672792aa15c10e82cdbeca4b}{
+\index{DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}!TrackerHits@{TrackerHits}}
+\index{TrackerHits@{TrackerHits}!DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}}
+\subsubsection[{TrackerHits}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf SimpleTracker::Hit}$\ast$$>$ {\bf DD4hep::Simulation::Geant4DataDump::TrackerHits}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_aa71f3341672792aa15c10e82cdbeca4b}
+
+
+Definition at line 44 of file Geant4DataDump.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a2709938040240f38f527791859ebaf34}{
+\index{DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}!Geant4DataDump@{Geant4DataDump}}
+\index{Geant4DataDump@{Geant4DataDump}!DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}}
+\subsubsection[{Geant4DataDump}]{\setlength{\rightskip}{0pt plus 5cm}Geant4DataDump::Geant4DataDump (const std::string \& {\em tag})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a2709938040240f38f527791859ebaf34}
+
+
+Default constructor. 
+
+Definition at line 26 of file Geant4DataDump.cpp.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_af966fda61c5237ac2858834cdeb1e238}{
+\index{DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}!$\sim$Geant4DataDump@{$\sim$Geant4DataDump}}
+\index{$\sim$Geant4DataDump@{$\sim$Geant4DataDump}!DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}}
+\subsubsection[{$\sim$Geant4DataDump}]{\setlength{\rightskip}{0pt plus 5cm}Geant4DataDump::$\sim$Geant4DataDump ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_af966fda61c5237ac2858834cdeb1e238}
+
+
+Standard destructor. 
+
+Definition at line 30 of file Geant4DataDump.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_aedbce540469e2c554096f3b87fbd9991}{
+\index{DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}!print@{print}}
+\index{print@{print}!DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4DataDump::print ({\bf PrintLevel} {\em level}, \/  const std::string \& {\em container}, \/  const {\bf CalorimeterHits} $\ast$ {\em hits})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_aedbce540469e2c554096f3b87fbd9991}
+
+
+Print the calorimeter hits container to the output logging using the specified print level. 
+
+Definition at line 96 of file Geant4DataDump.cpp.
+
+References m\_\-tag, print(), and DD4hep::printout().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a213bbcf2c9fb78f71afefe34935f3017}{
+\index{DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}!print@{print}}
+\index{print@{print}!DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4DataDump::print ({\bf PrintLevel} {\em level}, \/  const {\bf CalorimeterHit} $\ast$ {\em h})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a213bbcf2c9fb78f71afefe34935f3017}
+
+
+Print a calorimeter tracker hit to the output logging using the specified print level. 
+
+Definition at line 83 of file Geant4DataDump.cpp.
+
+References DD4hep::Simulation::Geant4HitData::cellID, DD4hep::Simulation::Geant4HitData::MonteCarloContrib::deposit, DD4hep::Simulation::Geant4Calorimeter::Hit::energyDeposit, m\_\-tag, DD4hep::Simulation::Geant4HitData::MonteCarloContrib::pdgID, DD4hep::Simulation::Geant4Calorimeter::Hit::position, DD4hep::printout(), DD4hep::Simulation::Geant4HitData::MonteCarloContrib::time, DD4hep::Simulation::Geant4HitData::MonteCarloContrib::trackID, and DD4hep::Simulation::Geant4Calorimeter::Hit::truth.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a2427e186357f34940bb19be59406e7c9}{
+\index{DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}!print@{print}}
+\index{print@{print}!DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4DataDump::print ({\bf PrintLevel} {\em level}, \/  const std::string \& {\em container}, \/  const {\bf TrackerHits} $\ast$ {\em hits})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a2427e186357f34940bb19be59406e7c9}
+
+
+Print the tracker hits container to the output logging using the specified print level. 
+
+Definition at line 73 of file Geant4DataDump.cpp.
+
+References m\_\-tag, print(), and DD4hep::printout().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_af3765022b8a03075fde40b2129b468e8}{
+\index{DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}!print@{print}}
+\index{print@{print}!DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4DataDump::print ({\bf PrintLevel} {\em level}, \/  const {\bf TrackerHit} $\ast$ {\em h})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_af3765022b8a03075fde40b2129b468e8}
+
+
+Print a single tracker hit to the output logging using the specified print level. 
+
+Definition at line 66 of file Geant4DataDump.cpp.
+
+References DD4hep::Simulation::Geant4HitData::cellID, DD4hep::Simulation::Geant4HitData::MonteCarloContrib::deposit, DD4hep::Simulation::Geant4Tracker::Hit::energyDeposit, DD4hep::Simulation::Geant4Tracker::Hit::length, m\_\-tag, DD4hep::Simulation::Geant4HitData::MonteCarloContrib::pdgID, DD4hep::Simulation::Geant4Tracker::Hit::position, DD4hep::printout(), DD4hep::Simulation::Geant4HitData::MonteCarloContrib::time, DD4hep::Simulation::Geant4HitData::MonteCarloContrib::trackID, and DD4hep::Simulation::Geant4Tracker::Hit::truth.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a50918352a7c46d20e94d26b4cf5d5e39}{
+\index{DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}!print@{print}}
+\index{print@{print}!DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4DataDump::print ({\bf PrintLevel} {\em level}, \/  const std::string \& {\em container}, \/  const {\bf Particles} $\ast$ {\em parts})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a50918352a7c46d20e94d26b4cf5d5e39}
+
+
+Print the particle container to the output logging using the specified print level. 
+
+Definition at line 54 of file Geant4DataDump.cpp.
+
+References m\_\-tag, print(), and DD4hep::printout().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a2cfd1367725a0d6156c7a7195ec64ea1}{
+\index{DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}!print@{print}}
+\index{print@{print}!DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4DataDump::print ({\bf PrintLevel} {\em level}, \/  {\bf Geant4ParticleHandle} {\em p}) const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a2cfd1367725a0d6156c7a7195ec64ea1}
+
+
+Print a single particle to the output logging using the specified print level. 
+
+Definition at line 34 of file Geant4DataDump.cpp.
+
+References DD4hep::Simulation::Geant4ParticleHandle::energy(), DD4hep::Simulation::G4PARTICLE\_\-ABOVE\_\-ENERGY\_\-THRESHOLD, DD4hep::Simulation::G4PARTICLE\_\-CREATED\_\-CALORIMETER\_\-HIT, DD4hep::Simulation::G4PARTICLE\_\-CREATED\_\-TRACKER\_\-HIT, DD4hep::Simulation::G4PARTICLE\_\-HAS\_\-SECONDARIES, DD4hep::Simulation::G4PARTICLE\_\-KEEP\_\-PARENT, DD4hep::Simulation::G4PARTICLE\_\-KEEP\_\-PROCESS, DD4hep::Simulation::G4PARTICLE\_\-PRIMARY, DD4hep::ReferenceBitMask$<$ T $>$::isSet(), m\_\-tag, DD4hep::printout(), and DD4hep::yes\_\-no().
+
+Referenced by dump\_\-root(), and print().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a58986bd9d08cd72f5d5b780d0047e5e6}{
+\index{DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}!m\_\-tag@{m\_\-tag}}
+\index{m\_\-tag@{m\_\-tag}!DD4hep::Simulation::Geant4DataDump@{DD4hep::Simulation::Geant4DataDump}}
+\subsubsection[{m\_\-tag}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::Simulation::Geant4DataDump::m\_\-tag}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a58986bd9d08cd72f5d5b780d0047e5e6}
+
+
+Tag variable. 
+
+Definition at line 51 of file Geant4DataDump.h.
+
+Referenced by print().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_data_dump_8h}{Geant4DataDump.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_data_dump_8cpp}{Geant4DataDump.cpp}\end{DoxyCompactItemize}

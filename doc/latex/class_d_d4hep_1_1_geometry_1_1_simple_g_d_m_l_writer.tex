@@ -1,0 +1,197 @@
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer}{
+\section{DD4hep::Geometry::SimpleGDMLWriter Class Reference}
+\label{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer}\index{DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}}
+}
+
+
+Simple GDML creator from TGeo geometries in memory.  
+
+
+{\ttfamily \#include $<$SimpleGDMLWriter.h$>$}Inheritance diagram for DD4hep::Geometry::SimpleGDMLWriter::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_a15eda8337c0e6b902ca91bd3cf5dd9a0}{SimpleGDMLWriter} (std::ostream \&os)
+\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_ae3b2fd4273d79d7e59526531da0e9b96}{$\sim$SimpleGDMLWriter} ()
+\begin{DoxyCompactList}\small\item\em Standard destructor. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_a0ccf6cfb7ec9346ee6e5bba56f2a151a}{create} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} top)
+\begin{DoxyCompactList}\small\item\em Main entry point: create required object(s). \item\end{DoxyCompactList}\item 
+virtual void $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_a1ff1d6d4cb53ee0e3990e10b54fa4983}{handleVolume} (const std::string \&name, const TGeoVolume $\ast$volume) const 
+\begin{DoxyCompactList}\small\item\em Dump logical volume in GDML format to output stream. \item\end{DoxyCompactList}\item 
+virtual void $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_ababbd95c6645b282fdde7fcff6e0ceb5}{handleTransformation} (const std::string \&name, const TGeoMatrix $\ast$matrix) const 
+\begin{DoxyCompactList}\small\item\em Dump single volume transformation in GDML format to output stream. \item\end{DoxyCompactList}\item 
+virtual void $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_a77a44b4f0061288ba94126a2e2ef8cc0}{handleSolid} (const std::string \&name, const TGeoShape $\ast$volume) const 
+\begin{DoxyCompactList}\small\item\em Dump solid in GDML format to output stream. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_ad1e62eccf785a9d3cd34806aa6bc2cac}{handleDefines} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_geo_handler_types_a960cd930e1a491fc9a6afa5058865b4e}{DefinitionSet} \&defs) const 
+\begin{DoxyCompactList}\small\item\em Dump all constants in GDML format to output stream. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_a05103edd07021ff17363f0b26bdc4a84}{handleVisualisation} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_geo_handler_types_abeb370eb52c06e48c61e6c8bc19b66ab}{VisRefs} \&vis) const 
+\begin{DoxyCompactList}\small\item\em Dump all visualisation specs in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} format to output stream. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_a7f5910a2161e23d80f32e76df06de00a}{handleSolids} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_geo_handler_types_a85d065cdf670a4f9ea9c0c4dee921fce}{SolidSet} \&solids) const 
+\begin{DoxyCompactList}\small\item\em Dump all solids in GDML format to output stream. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_aa29f0cbfbea29acd276be5ac39617d53}{handleTransformations} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_geo_handler_types_aa52b3113e87db04c37666e85a9b5e569}{TransformSet} \&trafos) const 
+\begin{DoxyCompactList}\small\item\em Dump Transformations in GDML format to output stream. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_a2deafeaf88bb796a0063f746adc7025d}{handleStructure} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_geo_handler_types_a6713619ef278692ebdf9f6ee4a3f32de}{VolumeVector} \&volset) const 
+\begin{DoxyCompactList}\small\item\em Dump structure information in GDML format to output stream. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::ostream \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_acfe610e807da01fe85b3e2bf5f94f428}{m\_\-output}
+\begin{DoxyCompactList}\small\item\em Reference to output stream. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple GDML creator from TGeo geometries in memory. \begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 43 of file SimpleGDMLWriter.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_a15eda8337c0e6b902ca91bd3cf5dd9a0}{
+\index{DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}!SimpleGDMLWriter@{SimpleGDMLWriter}}
+\index{SimpleGDMLWriter@{SimpleGDMLWriter}!DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}}
+\subsubsection[{SimpleGDMLWriter}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::SimpleGDMLWriter::SimpleGDMLWriter (std::ostream \& {\em os})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_a15eda8337c0e6b902ca91bd3cf5dd9a0}
+
+
+Definition at line 48 of file SimpleGDMLWriter.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_ae3b2fd4273d79d7e59526531da0e9b96}{
+\index{DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}!$\sim$SimpleGDMLWriter@{$\sim$SimpleGDMLWriter}}
+\index{$\sim$SimpleGDMLWriter@{$\sim$SimpleGDMLWriter}!DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}}
+\subsubsection[{$\sim$SimpleGDMLWriter}]{\setlength{\rightskip}{0pt plus 5cm}virtual DD4hep::Geometry::SimpleGDMLWriter::$\sim$SimpleGDMLWriter ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_ae3b2fd4273d79d7e59526531da0e9b96}
+
+
+Standard destructor. 
+
+Definition at line 52 of file SimpleGDMLWriter.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_a0ccf6cfb7ec9346ee6e5bba56f2a151a}{
+\index{DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}!create@{create}}
+\index{create@{create}!DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}void SimpleGDMLWriter::create ({\bf DetElement} {\em top})}}
+\label{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_a0ccf6cfb7ec9346ee6e5bba56f2a151a}
+
+
+Main entry point: create required object(s). 
+
+Definition at line 292 of file SimpleGDMLWriter.cpp.
+
+References DD4hep::Geometry::GeoHandler::collect(), DD4hep::Geometry::LCDD::getInstance(), handleDefines(), handleSolids(), handleStructure(), handleTransformations(), handleVisualisation(), DD4hep::Geometry::GeoHandlerTypes::GeometryInfo::solids, DD4hep::Geometry::GeoHandlerTypes::GeometryInfo::trafos, DD4hep::Geometry::GeoHandlerTypes::GeometryInfo::vis, and DD4hep::Geometry::GeoHandlerTypes::GeometryInfo::volumes.\hypertarget{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_ad1e62eccf785a9d3cd34806aa6bc2cac}{
+\index{DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}!handleDefines@{handleDefines}}
+\index{handleDefines@{handleDefines}!DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}}
+\subsubsection[{handleDefines}]{\setlength{\rightskip}{0pt plus 5cm}virtual void DD4hep::Geometry::SimpleGDMLWriter::handleDefines (const {\bf DefinitionSet} \& {\em defs}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_ad1e62eccf785a9d3cd34806aa6bc2cac}
+
+
+Dump all constants in GDML format to output stream. 
+
+Referenced by create().\hypertarget{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_a77a44b4f0061288ba94126a2e2ef8cc0}{
+\index{DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}!handleSolid@{handleSolid}}
+\index{handleSolid@{handleSolid}!DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}}
+\subsubsection[{handleSolid}]{\setlength{\rightskip}{0pt plus 5cm}virtual void$\ast$ DD4hep::Geometry::SimpleGDMLWriter::handleSolid (const std::string \& {\em name}, \/  const TGeoShape $\ast$ {\em volume}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_a77a44b4f0061288ba94126a2e2ef8cc0}
+
+
+Dump solid in GDML format to output stream. 
+
+Referenced by handleSolids().\hypertarget{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_a7f5910a2161e23d80f32e76df06de00a}{
+\index{DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}!handleSolids@{handleSolids}}
+\index{handleSolids@{handleSolids}!DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}}
+\subsubsection[{handleSolids}]{\setlength{\rightskip}{0pt plus 5cm}void SimpleGDMLWriter::handleSolids (const {\bf SolidSet} \& {\em solids}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_a7f5910a2161e23d80f32e76df06de00a}
+
+
+Dump all solids in GDML format to output stream. 
+
+Definition at line 233 of file SimpleGDMLWriter.cpp.
+
+References handleSolid(), and m\_\-output.
+
+Referenced by create().\hypertarget{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_a2deafeaf88bb796a0063f746adc7025d}{
+\index{DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}!handleStructure@{handleStructure}}
+\index{handleStructure@{handleStructure}!DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}}
+\subsubsection[{handleStructure}]{\setlength{\rightskip}{0pt plus 5cm}void SimpleGDMLWriter::handleStructure (const {\bf VolumeVector} \& {\em volset}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_a2deafeaf88bb796a0063f746adc7025d}
+
+
+Dump structure information in GDML format to output stream. 
+
+Definition at line 194 of file SimpleGDMLWriter.cpp.
+
+References handleVolume(), and m\_\-output.
+
+Referenced by create().\hypertarget{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_ababbd95c6645b282fdde7fcff6e0ceb5}{
+\index{DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}!handleTransformation@{handleTransformation}}
+\index{handleTransformation@{handleTransformation}!DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}}
+\subsubsection[{handleTransformation}]{\setlength{\rightskip}{0pt plus 5cm}virtual void$\ast$ DD4hep::Geometry::SimpleGDMLWriter::handleTransformation (const std::string \& {\em name}, \/  const TGeoMatrix $\ast$ {\em matrix}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_ababbd95c6645b282fdde7fcff6e0ceb5}
+
+
+Dump single volume transformation in GDML format to output stream. 
+
+Referenced by handleTransformations().\hypertarget{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_aa29f0cbfbea29acd276be5ac39617d53}{
+\index{DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}!handleTransformations@{handleTransformations}}
+\index{handleTransformations@{handleTransformations}!DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}}
+\subsubsection[{handleTransformations}]{\setlength{\rightskip}{0pt plus 5cm}void SimpleGDMLWriter::handleTransformations (const {\bf TransformSet} \& {\em trafos}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_aa29f0cbfbea29acd276be5ac39617d53}
+
+
+Dump Transformations in GDML format to output stream. 
+
+Definition at line 225 of file SimpleGDMLWriter.cpp.
+
+References handleTransformation(), and m\_\-output.
+
+Referenced by create().\hypertarget{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_a05103edd07021ff17363f0b26bdc4a84}{
+\index{DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}!handleVisualisation@{handleVisualisation}}
+\index{handleVisualisation@{handleVisualisation}!DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}}
+\subsubsection[{handleVisualisation}]{\setlength{\rightskip}{0pt plus 5cm}void SimpleGDMLWriter::handleVisualisation (const {\bf VisRefs} \& {\em vis}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_a05103edd07021ff17363f0b26bdc4a84}
+
+
+Dump all visualisation specs in \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} format to output stream. 
+
+Definition at line 250 of file SimpleGDMLWriter.cpp.
+
+References DD4hep::Geometry::VisAttr::color(), DD4hep::Geometry::VisAttr::DASHED, DD4hep::Geometry::VisAttr::drawingStyle(), dd4hep::g, DD4hep::Handle$<$ T $>$::isValid(), DD4hep::Geometry::VisAttr::lineStyle(), m\_\-output, DD4hep::Handle$<$ T $>$::name(), DD4hep::Geometry::VisAttr::showDaughters(), DD4hep::Geometry::VisAttr::SOLID, DD4hep::Geometry::VisAttr::visible(), and DD4hep::Geometry::VisAttr::WIREFRAME.
+
+Referenced by create().\hypertarget{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_a1ff1d6d4cb53ee0e3990e10b54fa4983}{
+\index{DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}!handleVolume@{handleVolume}}
+\index{handleVolume@{handleVolume}!DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}}
+\subsubsection[{handleVolume}]{\setlength{\rightskip}{0pt plus 5cm}virtual void$\ast$ DD4hep::Geometry::SimpleGDMLWriter::handleVolume (const std::string \& {\em name}, \/  const TGeoVolume $\ast$ {\em volume}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_a1ff1d6d4cb53ee0e3990e10b54fa4983}
+
+
+Dump logical volume in GDML format to output stream. 
+
+Referenced by handleStructure().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_acfe610e807da01fe85b3e2bf5f94f428}{
+\index{DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}!m\_\-output@{m\_\-output}}
+\index{m\_\-output@{m\_\-output}!DD4hep::Geometry::SimpleGDMLWriter@{DD4hep::Geometry::SimpleGDMLWriter}}
+\subsubsection[{m\_\-output}]{\setlength{\rightskip}{0pt plus 5cm}std::ostream\& {\bf DD4hep::Geometry::SimpleGDMLWriter::m\_\-output}}}
+\label{class_d_d4hep_1_1_geometry_1_1_simple_g_d_m_l_writer_acfe610e807da01fe85b3e2bf5f94f428}
+
+
+Reference to output stream. 
+
+Definition at line 46 of file SimpleGDMLWriter.h.
+
+Referenced by handleSolids(), handleStructure(), handleTransformations(), and handleVisualisation().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_simple_g_d_m_l_writer_8h}{SimpleGDMLWriter.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_simple_g_d_m_l_writer_8cpp}{SimpleGDMLWriter.cpp}\end{DoxyCompactItemize}

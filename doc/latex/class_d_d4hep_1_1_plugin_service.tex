@@ -1,0 +1,112 @@
+\hypertarget{class_d_d4hep_1_1_plugin_service}{
+\section{DD4hep::PluginService Class Reference}
+\label{class_d_d4hep_1_1_plugin_service}\index{DD4hep::PluginService@{DD4hep::PluginService}}
+}
+
+
+Factory template for the plugin mechanism.  
+
+
+{\ttfamily \#include $<$Plugins.h$>$}\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_d_d4hep_1_1_plugin_service_1_1_func_pointer}{FuncPointer}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \hyperlink{class_d_d4hep_1_1_plugin_service_aa370cd45b770eaabf326eeaa91019382}{stub\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename FUNCTION $>$ }\\static \hyperlink{struct_d_d4hep_1_1_plugin_service_1_1_func_pointer}{FuncPointer}$<$ FUNCTION $>$ \hyperlink{class_d_d4hep_1_1_plugin_service_aa18d81d33b408245a85fc5fe36a5a607}{function} (FUNCTION func)
+\item 
+static bool \hyperlink{class_d_d4hep_1_1_plugin_service_a90761f21b553c0285eff00839dd912e8}{debug} ()
+\item 
+static bool \hyperlink{class_d_d4hep_1_1_plugin_service_a54147a8801746a0304f8b6c63aa0e083}{setDebug} (bool new\_\-value)
+\item 
+static void $\ast$ \hyperlink{class_d_d4hep_1_1_plugin_service_a63fcd240235468c6408563b0057c82df}{getCreator} (const std::string \&id, const std::type\_\-info \&info)
+\item 
+static void \hyperlink{class_d_d4hep_1_1_plugin_service_a55973b500e0191d1e843b7db9cfd37eb}{addFactory} (const std::string \&id, \hyperlink{class_d_d4hep_1_1_plugin_service_aa370cd45b770eaabf326eeaa91019382}{stub\_\-t} func, const std::type\_\-info \&signature\_\-type, const std::type\_\-info \&return\_\-type)
+\item 
+{\footnotesize template$<$typename R , typename... Args$>$ }\\static R \hyperlink{class_d_d4hep_1_1_plugin_service_a872e355f59bbe197c0b61c6f0571f8c8}{Create} (const std::string \&id, Args...args)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Factory template for the plugin mechanism. 
+
+Definition at line 88 of file Plugins.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_plugin_service_aa370cd45b770eaabf326eeaa91019382}{
+\index{DD4hep::PluginService@{DD4hep::PluginService}!stub\_\-t@{stub\_\-t}}
+\index{stub\_\-t@{stub\_\-t}!DD4hep::PluginService@{DD4hep::PluginService}}
+\subsubsection[{stub\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$ {\bf DD4hep::PluginService::stub\_\-t}}}
+\label{class_d_d4hep_1_1_plugin_service_aa370cd45b770eaabf326eeaa91019382}
+
+
+Definition at line 91 of file Plugins.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_plugin_service_a55973b500e0191d1e843b7db9cfd37eb}{
+\index{DD4hep::PluginService@{DD4hep::PluginService}!addFactory@{addFactory}}
+\index{addFactory@{addFactory}!DD4hep::PluginService@{DD4hep::PluginService}}
+\subsubsection[{addFactory}]{\setlength{\rightskip}{0pt plus 5cm}void PluginService::addFactory (const std::string \& {\em id}, \/  {\bf stub\_\-t} {\em func}, \/  const std::type\_\-info \& {\em signature\_\-type}, \/  const std::type\_\-info \& {\em return\_\-type})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_plugin_service_a55973b500e0191d1e843b7db9cfd37eb}
+
+
+Definition at line 156 of file Plugins.cpp.
+
+References debug(), DD4hep::INFO, and DD4hep::printout().
+
+Referenced by DD4hep::PluginRegistry$<$ SIGNATURE $>$::add().\hypertarget{class_d_d4hep_1_1_plugin_service_a872e355f59bbe197c0b61c6f0571f8c8}{
+\index{DD4hep::PluginService@{DD4hep::PluginService}!Create@{Create}}
+\index{Create@{Create}!DD4hep::PluginService@{DD4hep::PluginService}}
+\subsubsection[{Create}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename R , typename... Args$>$ static R DD4hep::PluginService::Create (const std::string \& {\em id}, \/  Args... {\em args})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_plugin_service_a872e355f59bbe197c0b61c6f0571f8c8}
+
+
+Definition at line 138 of file Plugins.h.
+
+References DD4hep::PluginService::FuncPointer$<$ FUNCTION $>$::fcn, DD4hep::PluginService::FuncPointer$<$ FUNCTION $>$::fptr, getCreator(), and DD4hep::PluginService::FuncPointer$<$ FUNCTION $>$::ptr.\hypertarget{class_d_d4hep_1_1_plugin_service_a90761f21b553c0285eff00839dd912e8}{
+\index{DD4hep::PluginService@{DD4hep::PluginService}!debug@{debug}}
+\index{debug@{debug}!DD4hep::PluginService@{DD4hep::PluginService}}
+\subsubsection[{debug}]{\setlength{\rightskip}{0pt plus 5cm}bool PluginService::debug ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_plugin_service_a90761f21b553c0285eff00839dd912e8}
+
+
+Definition at line 32 of file Plugins.cpp.
+
+Referenced by addFactory().\hypertarget{class_d_d4hep_1_1_plugin_service_aa18d81d33b408245a85fc5fe36a5a607}{
+\index{DD4hep::PluginService@{DD4hep::PluginService}!function@{function}}
+\index{function@{function}!DD4hep::PluginService@{DD4hep::PluginService}}
+\subsubsection[{function}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename FUNCTION $>$ static {\bf FuncPointer}$<$FUNCTION$>$ DD4hep::PluginService::function (FUNCTION {\em func})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_plugin_service_aa18d81d33b408245a85fc5fe36a5a607}
+
+
+Definition at line 105 of file Plugins.h.
+
+Referenced by DD4hep::PluginRegistry$<$ SIGNATURE $>$::add().\hypertarget{class_d_d4hep_1_1_plugin_service_a63fcd240235468c6408563b0057c82df}{
+\index{DD4hep::PluginService@{DD4hep::PluginService}!getCreator@{getCreator}}
+\index{getCreator@{getCreator}!DD4hep::PluginService@{DD4hep::PluginService}}
+\subsubsection[{getCreator}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ PluginService::getCreator (const std::string \& {\em id}, \/  const std::type\_\-info \& {\em info})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_plugin_service_a63fcd240235468c6408563b0057c82df}
+
+
+Definition at line 152 of file Plugins.cpp.
+
+Referenced by Create().\hypertarget{class_d_d4hep_1_1_plugin_service_a54147a8801746a0304f8b6c63aa0e083}{
+\index{DD4hep::PluginService@{DD4hep::PluginService}!setDebug@{setDebug}}
+\index{setDebug@{setDebug}!DD4hep::PluginService@{DD4hep::PluginService}}
+\subsubsection[{setDebug}]{\setlength{\rightskip}{0pt plus 5cm}bool PluginService::setDebug (bool {\em new\_\-value})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_plugin_service_a54147a8801746a0304f8b6c63aa0e083}
+
+
+Definition at line 36 of file Plugins.cpp.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_plugins_8h}{Plugins.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_plugins_8cpp}{Plugins.cpp}\end{DoxyCompactItemize}

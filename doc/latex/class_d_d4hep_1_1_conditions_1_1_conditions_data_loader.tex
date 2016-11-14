@@ -1,0 +1,218 @@
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader}{
+\section{DD4hep::Conditions::ConditionsDataLoader Class Reference}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader}\index{DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}}
+}
+
+
+Interface for a generic conditions loader.  
+
+
+{\ttfamily \#include $<$ConditionsDataLoader.h$>$}Inheritance diagram for DD4hep::Conditions::ConditionsDataLoader::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std::pair$<$ std::string, \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_acad32659f22e37a422ec6abdb4f95b3e}{Source}
+\item 
+typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_acad32659f22e37a422ec6abdb4f95b3e}{Source} $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a10469a47fdf0b7949194f79c35ee9510}{Sources}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader}{ConditionsDataLoader} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a22a3a55163245ff24bca31db419433be}{base\_\-t}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_i_o_v}{Condition::iov\_\-type} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a510aa9a02f5e798d8d96c9e3cb5a36af}{iov\_\-type}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition::key\_\-type} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_ac17b71656c9d6b5365c62d1d606ba8cc}{key\_\-type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a1d230a1e812648ae74e0857b279971e3}{ConditionsDataLoader} (LCDD \&lcdd, \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager}{ConditionsManager} mgr, const std::string nam)
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a5918a0778c3e0f0f80a441a5f3b88770}{$\sim$ConditionsDataLoader} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a13d300e82815a80b4c1601c95fff20cc}{addSource} (const std::string \&source, const \hyperlink{class_d_d4hep_1_1_i_o_v}{iov\_\-type} \&iov)
+\begin{DoxyCompactList}\small\item\em Add data source definition to loader. \item\end{DoxyCompactList}\item 
+virtual size\_\-t \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a5ae9c04eb1198bf3ca9bc6d54e6bfd8c}{load} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_ac17b71656c9d6b5365c62d1d606ba8cc}{key\_\-type} key, const \hyperlink{class_d_d4hep_1_1_i_o_v}{iov\_\-type} \&req\_\-validity, \hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{RangeConditions} \&conditions)=0
+\begin{DoxyCompactList}\small\item\em Load a condition set given a Detector Element and the conditions name according to their validity. \item\end{DoxyCompactList}\item 
+virtual size\_\-t \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a7c62044af7a8672ab9cb2b5bcf1022b3}{load\_\-range} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_ac17b71656c9d6b5365c62d1d606ba8cc}{key\_\-type} key, const \hyperlink{class_d_d4hep_1_1_i_o_v}{iov\_\-type} \&req\_\-validity, \hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{RangeConditions} \&conditions)=0
+\begin{DoxyCompactList}\small\item\em Load a condition set given a Detector Element and the conditions name according to their validity. \item\end{DoxyCompactList}\item 
+virtual size\_\-t \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a927c3e60a4ea2873d97433900783ffc1}{update} (const \hyperlink{class_d_d4hep_1_1_i_o_v}{iov\_\-type} \&req\_\-validity, \hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{RangeConditions} \&conditions, \hyperlink{class_d_d4hep_1_1_i_o_v}{iov\_\-type} \&conditions\_\-validity)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a1538131327aebb04c554cecf4c512bb7}{queueUpdate} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_entry}{Entry} $\ast$data)
+\begin{DoxyCompactList}\small\item\em Queue update to manager. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a65ad637b1fa714f1d3b784fdfcdccd37}{pushUpdates} ()
+\begin{DoxyCompactList}\small\item\em Push update to manager. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+LCDD \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a6920143ee0788f253031a3d0a25e2d0f}{m\_\-lcdd}
+\begin{DoxyCompactList}\small\item\em Reference to main detector description object. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager}{ConditionsManager} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a470c95c837745118517cc86bdc668346}{m\_\-mgr}
+\begin{DoxyCompactList}\small\item\em Reference to conditions manager used to queue update requests. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a10469a47fdf0b7949194f79c35ee9510}{Sources} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a1f27d2cb0eb76ecfb39322fb08343b31}{m\_\-sources}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: input data source definitions. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for a generic conditions loader. Common function for all loader.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 45 of file ConditionsDataLoader.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a22a3a55163245ff24bca31db419433be}{
+\index{DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}!base\_\-t@{base\_\-t}}
+\index{base\_\-t@{base\_\-t}!DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}}
+\subsubsection[{base\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf ConditionsDataLoader} {\bf DD4hep::Conditions::ConditionsDataLoader::base\_\-t}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a22a3a55163245ff24bca31db419433be}
+
+
+Definition at line 49 of file ConditionsDataLoader.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a510aa9a02f5e798d8d96c9e3cb5a36af}{
+\index{DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}!iov\_\-type@{iov\_\-type}}
+\index{iov\_\-type@{iov\_\-type}!DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}}
+\subsubsection[{iov\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Condition::iov\_\-type} {\bf DD4hep::Conditions::ConditionsDataLoader::iov\_\-type}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a510aa9a02f5e798d8d96c9e3cb5a36af}
+
+
+Definition at line 50 of file ConditionsDataLoader.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_ac17b71656c9d6b5365c62d1d606ba8cc}{
+\index{DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}!key\_\-type@{key\_\-type}}
+\index{key\_\-type@{key\_\-type}!DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}}
+\subsubsection[{key\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Condition::key\_\-type} {\bf DD4hep::Conditions::ConditionsDataLoader::key\_\-type}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_ac17b71656c9d6b5365c62d1d606ba8cc}
+
+
+Definition at line 51 of file ConditionsDataLoader.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_acad32659f22e37a422ec6abdb4f95b3e}{
+\index{DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}!Source@{Source}}
+\index{Source@{Source}!DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}}
+\subsubsection[{Source}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::pair$<$std::string, {\bf IOV}$>$ {\bf DD4hep::Conditions::ConditionsDataLoader::Source}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_acad32659f22e37a422ec6abdb4f95b3e}
+
+
+Definition at line 47 of file ConditionsDataLoader.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a10469a47fdf0b7949194f79c35ee9510}{
+\index{DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}!Sources@{Sources}}
+\index{Sources@{Sources}!DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}}
+\subsubsection[{Sources}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf Source}$>$ {\bf DD4hep::Conditions::ConditionsDataLoader::Sources}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a10469a47fdf0b7949194f79c35ee9510}
+
+
+Definition at line 48 of file ConditionsDataLoader.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a1d230a1e812648ae74e0857b279971e3}{
+\index{DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}!ConditionsDataLoader@{ConditionsDataLoader}}
+\index{ConditionsDataLoader@{ConditionsDataLoader}!DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}}
+\subsubsection[{ConditionsDataLoader}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Conditions::ConditionsDataLoader::ConditionsDataLoader (LCDD \& {\em lcdd}, \/  {\bf ConditionsManager} {\em mgr}, \/  const std::string {\em nam})}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a1d230a1e812648ae74e0857b279971e3}
+
+
+Default constructor. \hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a5918a0778c3e0f0f80a441a5f3b88770}{
+\index{DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}!$\sim$ConditionsDataLoader@{$\sim$ConditionsDataLoader}}
+\index{$\sim$ConditionsDataLoader@{$\sim$ConditionsDataLoader}!DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}}
+\subsubsection[{$\sim$ConditionsDataLoader}]{\setlength{\rightskip}{0pt plus 5cm}ConditionsDataLoader::$\sim$ConditionsDataLoader ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a5918a0778c3e0f0f80a441a5f3b88770}
+
+
+Default destructor. 
+
+Definition at line 34 of file ConditionsDataLoader.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a13d300e82815a80b4c1601c95fff20cc}{
+\index{DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}!addSource@{addSource}}
+\index{addSource@{addSource}!DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}}
+\subsubsection[{addSource}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Conditions::ConditionsDataLoader::addSource (const std::string \& {\em source}, \/  const {\bf iov\_\-type} \& {\em iov})}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a13d300e82815a80b4c1601c95fff20cc}
+
+
+Add data source definition to loader. \hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a5ae9c04eb1198bf3ca9bc6d54e6bfd8c}{
+\index{DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}!load@{load}}
+\index{load@{load}!DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}virtual size\_\-t DD4hep::Conditions::ConditionsDataLoader::load ({\bf key\_\-type} {\em key}, \/  const {\bf iov\_\-type} \& {\em req\_\-validity}, \/  {\bf RangeConditions} \& {\em conditions})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a5ae9c04eb1198bf3ca9bc6d54e6bfd8c}
+
+
+Load a condition set given a Detector Element and the conditions name according to their validity. \hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a7c62044af7a8672ab9cb2b5bcf1022b3}{
+\index{DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}!load\_\-range@{load\_\-range}}
+\index{load\_\-range@{load\_\-range}!DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}}
+\subsubsection[{load\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}virtual size\_\-t DD4hep::Conditions::ConditionsDataLoader::load\_\-range ({\bf key\_\-type} {\em key}, \/  const {\bf iov\_\-type} \& {\em req\_\-validity}, \/  {\bf RangeConditions} \& {\em conditions})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a7c62044af7a8672ab9cb2b5bcf1022b3}
+
+
+Load a condition set given a Detector Element and the conditions name according to their validity. \hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a65ad637b1fa714f1d3b784fdfcdccd37}{
+\index{DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}!pushUpdates@{pushUpdates}}
+\index{pushUpdates@{pushUpdates}!DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}}
+\subsubsection[{pushUpdates}]{\setlength{\rightskip}{0pt plus 5cm}void ConditionsDataLoader::pushUpdates ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a65ad637b1fa714f1d3b784fdfcdccd37}
+
+
+Push update to manager. 
+
+Definition at line 48 of file ConditionsDataLoader.cpp.
+
+References m\_\-mgr.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a1538131327aebb04c554cecf4c512bb7}{
+\index{DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}!queueUpdate@{queueUpdate}}
+\index{queueUpdate@{queueUpdate}!DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}}
+\subsubsection[{queueUpdate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Condition} ConditionsDataLoader::queueUpdate ({\bf Entry} $\ast$ {\em data})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a1538131327aebb04c554cecf4c512bb7}
+
+
+Queue update to manager. 
+
+Definition at line 43 of file ConditionsDataLoader.cpp.
+
+References m\_\-mgr.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a927c3e60a4ea2873d97433900783ffc1}{
+\index{DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}!update@{update}}
+\index{update@{update}!DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}virtual size\_\-t DD4hep::Conditions::ConditionsDataLoader::update (const {\bf iov\_\-type} \& {\em req\_\-validity}, \/  {\bf RangeConditions} \& {\em conditions}, \/  {\bf iov\_\-type} \& {\em conditions\_\-validity})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a927c3e60a4ea2873d97433900783ffc1}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a6920143ee0788f253031a3d0a25e2d0f}{
+\index{DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}!m\_\-lcdd@{m\_\-lcdd}}
+\index{m\_\-lcdd@{m\_\-lcdd}!DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}}
+\subsubsection[{m\_\-lcdd}]{\setlength{\rightskip}{0pt plus 5cm}LCDD\& {\bf DD4hep::Conditions::ConditionsDataLoader::m\_\-lcdd}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a6920143ee0788f253031a3d0a25e2d0f}
+
+
+Reference to main detector description object. 
+
+Definition at line 55 of file ConditionsDataLoader.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a470c95c837745118517cc86bdc668346}{
+\index{DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}!m\_\-mgr@{m\_\-mgr}}
+\index{m\_\-mgr@{m\_\-mgr}!DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}}
+\subsubsection[{m\_\-mgr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ConditionsManager} {\bf DD4hep::Conditions::ConditionsDataLoader::m\_\-mgr}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a470c95c837745118517cc86bdc668346}
+
+
+Reference to conditions manager used to queue update requests. 
+
+Definition at line 57 of file ConditionsDataLoader.h.
+
+Referenced by pushUpdates(), and queueUpdate().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a1f27d2cb0eb76ecfb39322fb08343b31}{
+\index{DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}!m\_\-sources@{m\_\-sources}}
+\index{m\_\-sources@{m\_\-sources}!DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}}
+\subsubsection[{m\_\-sources}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sources} {\bf DD4hep::Conditions::ConditionsDataLoader::m\_\-sources}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader_a1f27d2cb0eb76ecfb39322fb08343b31}
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}: input data source definitions. 
+
+Definition at line 59 of file ConditionsDataLoader.h.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCond/include/DDCond/\hyperlink{_conditions_data_loader_8h}{ConditionsDataLoader.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCond/src/\hyperlink{_conditions_data_loader_8cpp}{ConditionsDataLoader.cpp}\end{DoxyCompactItemize}

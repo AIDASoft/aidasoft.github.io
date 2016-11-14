@@ -1,0 +1,235 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map}{
+\section{DD4hep::Simulation::Geant4ParticleMap Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map}\index{DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}}
+}
+
+
+Data structure to map particles produced during the generation and the simulation.  
+
+
+{\ttfamily \#include $<$Geant4Particle.h$>$}\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle}{Geant4Particle} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a01ed68f2fc2e55ecf936e5ac3e6eae5f}{Particle}
+\item 
+typedef std::map$<$ int, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle}{Particle} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a065c5fb0629285022b9aa2a628bffef3}{ParticleMap}
+\item 
+typedef std::map$<$ int, int $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_aba09f5fcb2dd5874d129660ad4454a21}{TrackEquivalents}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_aeada79751afc2787bc020aff0e413504}{Geant4ParticleMap} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_ab81a69115c8908be2ae5a2cee23bd80e}{$\sim$Geant4ParticleMap} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a66ca25cafd6b47eb61632c7bfb9c5a36}{isValid} () const 
+\begin{DoxyCompactList}\small\item\em Check if the particle map was ever filled (ie. some particle handler was present). \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_afde244bfd828c1b09e515c76626a925e}{dump} () const 
+\begin{DoxyCompactList}\small\item\em Dump content. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a8a8ea52d779e40d4f41b369a8bc659fe}{clear} ()
+\begin{DoxyCompactList}\small\item\em Clear particle maps. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a272d5c51f1c4d6d7b526288f99611811}{adopt} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a065c5fb0629285022b9aa2a628bffef3}{ParticleMap} \&pm, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_aba09f5fcb2dd5874d129660ad4454a21}{TrackEquivalents} \&equiv)
+\begin{DoxyCompactList}\small\item\em Adopt particle maps. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a065c5fb0629285022b9aa2a628bffef3}{ParticleMap} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a3446a55a7dfdaf6d723c6a347249d63a}{particles} () const 
+\begin{DoxyCompactList}\small\item\em Access the particle map. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_aba09f5fcb2dd5874d129660ad4454a21}{TrackEquivalents} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a82008879ab783a6e8d3cc683ba7fec5e}{equivalents} () const 
+\begin{DoxyCompactList}\small\item\em Access the map of track equivalents. \item\end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a9155a0ddccd1e18b880e335dcf75ab2d}{particleID} (int track, bool throw\_\-if\_\-not\_\-found=true) const 
+\begin{DoxyCompactList}\small\item\em Access the equivalent track id (shortcut to the usage of TrackEquivalents). \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a065c5fb0629285022b9aa2a628bffef3}{ParticleMap} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_ac5be2ea78909ee55da8e4008c4f727a0}{particleMap}
+\begin{DoxyCompactList}\small\item\em Mapping of particles of this event. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_aba09f5fcb2dd5874d129660ad4454a21}{TrackEquivalents} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a61cdcde928de729988141a9cf643e9ad}{equivalentTracks}
+\begin{DoxyCompactList}\small\item\em Map associating the G4Track identifiers with identifiers of existing MCParticles. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Data structure to map particles produced during the generation and the simulation. This data structure is added to the \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event}{Geant4Event} data extensions by the Geant4GenerationInit action. Particles are added:
+\begin{DoxyItemize}
+\item During the generation if the required modules are activated
+\item At the end of the handling of the MC truth are particles to be kept are inserted if the required modules are activated such as the \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_handler}{Geant4ParticleHandler}.
+\end{DoxyItemize}
+
+Note: This object takes OWNERSHIP of the inserted particles! beware of double deletion of objects!
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 308 of file Geant4Particle.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a01ed68f2fc2e55ecf936e5ac3e6eae5f}{
+\index{DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}!Particle@{Particle}}
+\index{Particle@{Particle}!DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}}
+\subsubsection[{Particle}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geant4Particle} {\bf DD4hep::Simulation::Geant4ParticleMap::Particle}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a01ed68f2fc2e55ecf936e5ac3e6eae5f}
+
+
+Definition at line 310 of file Geant4Particle.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a065c5fb0629285022b9aa2a628bffef3}{
+\index{DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}!ParticleMap@{ParticleMap}}
+\index{ParticleMap@{ParticleMap}!DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}}
+\subsubsection[{ParticleMap}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$int,{\bf Particle}$\ast$$>$ {\bf DD4hep::Simulation::Geant4ParticleMap::ParticleMap}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a065c5fb0629285022b9aa2a628bffef3}
+
+
+Definition at line 311 of file Geant4Particle.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_aba09f5fcb2dd5874d129660ad4454a21}{
+\index{DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}!TrackEquivalents@{TrackEquivalents}}
+\index{TrackEquivalents@{TrackEquivalents}!DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}}
+\subsubsection[{TrackEquivalents}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$int,int$>$ {\bf DD4hep::Simulation::Geant4ParticleMap::TrackEquivalents}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_aba09f5fcb2dd5874d129660ad4454a21}
+
+
+Definition at line 312 of file Geant4Particle.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_aeada79751afc2787bc020aff0e413504}{
+\index{DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}!Geant4ParticleMap@{Geant4ParticleMap}}
+\index{Geant4ParticleMap@{Geant4ParticleMap}!DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}}
+\subsubsection[{Geant4ParticleMap}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4ParticleMap::Geant4ParticleMap ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_aeada79751afc2787bc020aff0e413504}
+
+
+Default constructor. 
+
+Definition at line 319 of file Geant4Particle.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_ab81a69115c8908be2ae5a2cee23bd80e}{
+\index{DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}!$\sim$Geant4ParticleMap@{$\sim$Geant4ParticleMap}}
+\index{$\sim$Geant4ParticleMap@{$\sim$Geant4ParticleMap}!DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}}
+\subsubsection[{$\sim$Geant4ParticleMap}]{\setlength{\rightskip}{0pt plus 5cm}Geant4ParticleMap::$\sim$Geant4ParticleMap ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_ab81a69115c8908be2ae5a2cee23bd80e}
+
+
+Default destructor. 
+
+Definition at line 395 of file Geant4Particle.cpp.
+
+References clear().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a272d5c51f1c4d6d7b526288f99611811}{
+\index{DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}!adopt@{adopt}}
+\index{adopt@{adopt}!DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}}
+\subsubsection[{adopt}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4ParticleMap::adopt ({\bf ParticleMap} \& {\em pm}, \/  {\bf TrackEquivalents} \& {\em equiv})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a272d5c51f1c4d6d7b526288f99611811}
+
+
+Adopt particle maps. 
+
+Definition at line 439 of file Geant4Particle.cpp.
+
+References clear(), equivalentTracks, and particleMap.
+
+Referenced by DD4hep::Simulation::Geant4ParticleHandler::endEvent().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a8a8ea52d779e40d4f41b369a8bc659fe}{
+\index{DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}!clear@{clear}}
+\index{clear@{clear}!DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4ParticleMap::clear ()}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a8a8ea52d779e40d4f41b369a8bc659fe}
+
+
+Clear particle maps. 
+
+Definition at line 400 of file Geant4Particle.cpp.
+
+References equivalentTracks, particleMap, and DD4hep::releaseObjects().
+
+Referenced by adopt(), and $\sim$Geant4ParticleMap().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_afde244bfd828c1b09e515c76626a925e}{
+\index{DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}!dump@{dump}}
+\index{dump@{dump}!DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}}
+\subsubsection[{dump}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4ParticleMap::dump () const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_afde244bfd828c1b09e515c76626a925e}
+
+
+Dump content. 
+
+Definition at line 407 of file Geant4Particle.cpp.
+
+References equivalentTracks, dd4hep::m, and particleMap.
+
+Referenced by particleID().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a82008879ab783a6e8d3cc683ba7fec5e}{
+\index{DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}!equivalents@{equivalents}}
+\index{equivalents@{equivalents}!DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}}
+\subsubsection[{equivalents}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf TrackEquivalents}\& DD4hep::Simulation::Geant4ParticleMap::equivalents () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a82008879ab783a6e8d3cc683ba7fec5e}
+
+
+Access the map of track equivalents. 
+
+Definition at line 333 of file Geant4Particle.h.
+
+References equivalentTracks.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a66ca25cafd6b47eb61632c7bfb9c5a36}{
+\index{DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}!isValid@{isValid}}
+\index{isValid@{isValid}!DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}}
+\subsubsection[{isValid}]{\setlength{\rightskip}{0pt plus 5cm}bool Geant4ParticleMap::isValid () const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a66ca25cafd6b47eb61632c7bfb9c5a36}
+
+
+Check if the particle map was ever filled (ie. some particle handler was present). 
+
+Definition at line 449 of file Geant4Particle.cpp.
+
+References equivalentTracks.
+
+Referenced by DD4hep::Simulation::Geant4OutputAction::end().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a9155a0ddccd1e18b880e335dcf75ab2d}{
+\index{DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}!particleID@{particleID}}
+\index{particleID@{particleID}!DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}}
+\subsubsection[{particleID}]{\setlength{\rightskip}{0pt plus 5cm}int Geant4ParticleMap::particleID (int {\em track}, \/  bool {\em throw\_\-if\_\-not\_\-found} = {\ttfamily true}) const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a9155a0ddccd1e18b880e335dcf75ab2d}
+
+
+Access the equivalent track id (shortcut to the usage of TrackEquivalents). 
+
+Definition at line 454 of file Geant4Particle.cpp.
+
+References dump(), equivalentTracks, DD4hep::ERROR, and DD4hep::printout().
+
+Referenced by DD4hep::Simulation::Geant4ParticlePrint::printParticle(), and DD4hep::Simulation::Geant4Output2ROOT::saveCollection().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a3446a55a7dfdaf6d723c6a347249d63a}{
+\index{DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}!particles@{particles}}
+\index{particles@{particles}!DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}}
+\subsubsection[{particles}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf ParticleMap}\& DD4hep::Simulation::Geant4ParticleMap::particles () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a3446a55a7dfdaf6d723c6a347249d63a}
+
+
+Access the particle map. 
+
+Definition at line 331 of file Geant4Particle.h.
+
+References particleMap.
+
+Referenced by DD4hep::Simulation::Geant4ParticlePrint::makePrintout(), and DD4hep::Simulation::Geant4Output2ROOT::saveEvent().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a61cdcde928de729988141a9cf643e9ad}{
+\index{DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}!equivalentTracks@{equivalentTracks}}
+\index{equivalentTracks@{equivalentTracks}!DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}}
+\subsubsection[{equivalentTracks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf TrackEquivalents} {\bf DD4hep::Simulation::Geant4ParticleMap::equivalentTracks}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_a61cdcde928de729988141a9cf643e9ad}
+
+
+Map associating the G4Track identifiers with identifiers of existing MCParticles. not persistent 
+
+Definition at line 316 of file Geant4Particle.h.
+
+Referenced by adopt(), clear(), dump(), equivalents(), isValid(), and particleID().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_ac5be2ea78909ee55da8e4008c4f727a0}{
+\index{DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}!particleMap@{particleMap}}
+\index{particleMap@{particleMap}!DD4hep::Simulation::Geant4ParticleMap@{DD4hep::Simulation::Geant4ParticleMap}}
+\subsubsection[{particleMap}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ParticleMap} {\bf DD4hep::Simulation::Geant4ParticleMap::particleMap}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map_ac5be2ea78909ee55da8e4008c4f727a0}
+
+
+Mapping of particles of this event. 
+
+Definition at line 314 of file Geant4Particle.h.
+
+Referenced by adopt(), clear(), dump(), particles(), and DD4hep::Simulation::Geant4Output2LCIO::saveParticles().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_particle_8h}{Geant4Particle.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_particle_8cpp}{Geant4Particle.cpp}\end{DoxyCompactItemize}

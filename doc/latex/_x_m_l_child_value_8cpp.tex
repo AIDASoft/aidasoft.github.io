@@ -1,0 +1,95 @@
+\hypertarget{_x_m_l_child_value_8cpp}{
+\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/XML/XMLChildValue.cpp File Reference}
+\label{_x_m_l_child_value_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/XML/XMLChildValue.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/XML/XMLChildValue.cpp}}
+}
+{\ttfamily \#include \char`\"{}XML/XMLChildValue.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_x_m_l_child_value_8cpp_aa75c4bd51529a044ed87deb228a4066d}{childValue}(name, type)~m\_\-element.child(Unicode\_\-\#\#name).attr$<$type$>$(Unicode\_\-value)
+\item 
+\#define \hyperlink{_x_m_l_child_value_8cpp_a04195618517294eca8873855aab7ff98}{childValueDefault}(name, type, def)
+\item 
+\#define \hyperlink{_x_m_l_child_value_8cpp_accabcb0a0a37bcff066b1281c9814553}{XML\_\-ATTR\_\-ACCESSOR}(type, name)~type ChildValue::name() const \{ return childValue(name,type); \}
+\item 
+\#define \hyperlink{_x_m_l_child_value_8cpp_a5329c32158716b05939bad5ab5e572df}{XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT}(name, type, dressing)
+\item 
+\#define \hyperlink{_x_m_l_child_value_8cpp_a3b2602f2e6cdf903b4d9acd047d61b12}{XML\_\-ATTR\_\-ACCESSOR\_\-DOUBLE}(name)~XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT(name,double,\_\-toDouble)
+\item 
+\#define \hyperlink{_x_m_l_child_value_8cpp_aa9f53a44681848d2aeda1c5cdac2efb8}{XML\_\-ATTR\_\-ACCESSOR\_\-INT}(name)~XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT(name,int,\_\-toInt)
+\item 
+\#define \hyperlink{_x_m_l_child_value_8cpp_a8efa1be16815f59e7b049cab22c08a21}{XML\_\-ATTR\_\-ACCESSOR\_\-BOOL}(name)~XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT(name,bool,\_\-toBool)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_x_m_l_child_value_8cpp_aa75c4bd51529a044ed87deb228a4066d}{
+\index{XMLChildValue.cpp@{XMLChildValue.cpp}!childValue@{childValue}}
+\index{childValue@{childValue}!XMLChildValue.cpp@{XMLChildValue.cpp}}
+\subsubsection[{childValue}]{\setlength{\rightskip}{0pt plus 5cm}\#define childValue(name, \/  type)~m\_\-element.child(Unicode\_\-\#\#name).attr$<$type$>$(Unicode\_\-value)}}
+\label{_x_m_l_child_value_8cpp_aa75c4bd51529a044ed87deb228a4066d}
+
+
+Definition at line 21 of file XMLChildValue.cpp.
+
+Referenced by DD4hep::XML::ChildValue::nameStr(), DD4hep::XML::ChildValue::padType(), DD4hep::XML::ChildValue::refStr(), DD4hep::XML::ChildValue::typeStr(), and DD4hep::XML::ChildValue::valueStr().\hypertarget{_x_m_l_child_value_8cpp_a04195618517294eca8873855aab7ff98}{
+\index{XMLChildValue.cpp@{XMLChildValue.cpp}!childValueDefault@{childValueDefault}}
+\index{childValueDefault@{childValueDefault}!XMLChildValue.cpp@{XMLChildValue.cpp}}
+\subsubsection[{childValueDefault}]{\setlength{\rightskip}{0pt plus 5cm}\#define childValueDefault(name, \/  type, \/  def)}}
+\label{_x_m_l_child_value_8cpp_a04195618517294eca8873855aab7ff98}
+{\bfseries Value:}
+\begin{DoxyCode}
+Handle_t __h = m_element.child(Unicode_##name,false);                 \
+  if ( __h.ptr() && __h.hasAttr(Unicode_value) ) return __h.attr < type > (Unicod
+      e_value); \
+  return def;
+\end{DoxyCode}
+
+
+Definition at line 23 of file XMLChildValue.cpp.
+
+Referenced by DD4hep::XML::ChildValue::limitsStr(), DD4hep::XML::ChildValue::moduleStr(), DD4hep::XML::ChildValue::readoutStr(), DD4hep::XML::ChildValue::regionStr(), and DD4hep::XML::ChildValue::visStr().\hypertarget{_x_m_l_child_value_8cpp_accabcb0a0a37bcff066b1281c9814553}{
+\index{XMLChildValue.cpp@{XMLChildValue.cpp}!XML\_\-ATTR\_\-ACCESSOR@{XML\_\-ATTR\_\-ACCESSOR}}
+\index{XML\_\-ATTR\_\-ACCESSOR@{XML\_\-ATTR\_\-ACCESSOR}!XMLChildValue.cpp@{XMLChildValue.cpp}}
+\subsubsection[{XML\_\-ATTR\_\-ACCESSOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define XML\_\-ATTR\_\-ACCESSOR(type, \/  name)~type ChildValue::name() const \{ return childValue(name,type); \}}}
+\label{_x_m_l_child_value_8cpp_accabcb0a0a37bcff066b1281c9814553}
+
+
+Definition at line 28 of file XMLChildValue.cpp.\hypertarget{_x_m_l_child_value_8cpp_a8efa1be16815f59e7b049cab22c08a21}{
+\index{XMLChildValue.cpp@{XMLChildValue.cpp}!XML\_\-ATTR\_\-ACCESSOR\_\-BOOL@{XML\_\-ATTR\_\-ACCESSOR\_\-BOOL}}
+\index{XML\_\-ATTR\_\-ACCESSOR\_\-BOOL@{XML\_\-ATTR\_\-ACCESSOR\_\-BOOL}!XMLChildValue.cpp@{XMLChildValue.cpp}}
+\subsubsection[{XML\_\-ATTR\_\-ACCESSOR\_\-BOOL}]{\setlength{\rightskip}{0pt plus 5cm}\#define XML\_\-ATTR\_\-ACCESSOR\_\-BOOL(name)~XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT(name,bool,\_\-toBool)}}
+\label{_x_m_l_child_value_8cpp_a8efa1be16815f59e7b049cab22c08a21}
+
+
+Definition at line 39 of file XMLChildValue.cpp.\hypertarget{_x_m_l_child_value_8cpp_a5329c32158716b05939bad5ab5e572df}{
+\index{XMLChildValue.cpp@{XMLChildValue.cpp}!XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT@{XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT}}
+\index{XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT@{XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT}!XMLChildValue.cpp@{XMLChildValue.cpp}}
+\subsubsection[{XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT}]{\setlength{\rightskip}{0pt plus 5cm}\#define XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT(name, \/  type, \/  dressing)}}
+\label{_x_m_l_child_value_8cpp_a5329c32158716b05939bad5ab5e572df}
+{\bfseries Value:}
+\begin{DoxyCode}
+type ChildValue::name(type default_val) const {                 \
+    Handle_t __h = m_element.child(Unicode_##name,false);         \
+    if ( __h.ptr() )  {                                           \
+      const XmlChar* val = __h.attr_value_nothrow(Unicode_value); \
+      return val ? dressing(val) : default_val; }                 \
+    return default_val; }
+\end{DoxyCode}
+
+
+Definition at line 29 of file XMLChildValue.cpp.\hypertarget{_x_m_l_child_value_8cpp_a3b2602f2e6cdf903b4d9acd047d61b12}{
+\index{XMLChildValue.cpp@{XMLChildValue.cpp}!XML\_\-ATTR\_\-ACCESSOR\_\-DOUBLE@{XML\_\-ATTR\_\-ACCESSOR\_\-DOUBLE}}
+\index{XML\_\-ATTR\_\-ACCESSOR\_\-DOUBLE@{XML\_\-ATTR\_\-ACCESSOR\_\-DOUBLE}!XMLChildValue.cpp@{XMLChildValue.cpp}}
+\subsubsection[{XML\_\-ATTR\_\-ACCESSOR\_\-DOUBLE}]{\setlength{\rightskip}{0pt plus 5cm}\#define XML\_\-ATTR\_\-ACCESSOR\_\-DOUBLE(name)~XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT(name,double,\_\-toDouble)}}
+\label{_x_m_l_child_value_8cpp_a3b2602f2e6cdf903b4d9acd047d61b12}
+
+
+Definition at line 37 of file XMLChildValue.cpp.\hypertarget{_x_m_l_child_value_8cpp_aa9f53a44681848d2aeda1c5cdac2efb8}{
+\index{XMLChildValue.cpp@{XMLChildValue.cpp}!XML\_\-ATTR\_\-ACCESSOR\_\-INT@{XML\_\-ATTR\_\-ACCESSOR\_\-INT}}
+\index{XML\_\-ATTR\_\-ACCESSOR\_\-INT@{XML\_\-ATTR\_\-ACCESSOR\_\-INT}!XMLChildValue.cpp@{XMLChildValue.cpp}}
+\subsubsection[{XML\_\-ATTR\_\-ACCESSOR\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define XML\_\-ATTR\_\-ACCESSOR\_\-INT(name)~XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT(name,int,\_\-toInt)}}
+\label{_x_m_l_child_value_8cpp_aa9f53a44681848d2aeda1c5cdac2efb8}
+
+
+Definition at line 38 of file XMLChildValue.cpp.

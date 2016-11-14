@@ -1,0 +1,178 @@
+\hypertarget{class_d_d4hep_1_1_gear_handle}{
+\section{DD4hep::GearHandle Class Reference}
+\label{class_d_d4hep_1_1_gear_handle}\index{DD4hep::GearHandle@{DD4hep::GearHandle}}
+}
+
+
+{\ttfamily \#include $<$DDGear.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_gear_handle_a782739bfe116441082e6b4597bb6bf6e}{GearHandle} ()
+\item 
+\hyperlink{class_d_d4hep_1_1_gear_handle_adeb098c8edf707d3d122de032ff476fd}{GearHandle} (gear::GearParametersImpl $\ast$gearObj, const std::string \&nam)
+\item 
+virtual \hyperlink{class_d_d4hep_1_1_gear_handle_a7b8b36839e741d9d3e4bb22f44262f01}{$\sim$GearHandle} ()
+\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_gear_handle_acb3a333f73bd074c0d91bc453ae85cc0}{name} ()
+\item 
+gear::GearParametersImpl $\ast$ \hyperlink{class_d_d4hep_1_1_gear_handle_aaa9e8fbe619ab3a1a45fac04773e6c9a}{gearObject} ()
+\item 
+gear::GearParametersImpl $\ast$ \hyperlink{class_d_d4hep_1_1_gear_handle_a6dc3d8b5eaadccd2a6fa8c8e31739cbd}{takeGearObject} ()
+\item 
+void \hyperlink{class_d_d4hep_1_1_gear_handle_ae5f3ea169e473f5f0bd46f8d27d5d170}{addMaterial} (const std::string nam, double A, double Z, double density, double radLen, double intLen)
+\begin{DoxyCompactList}\small\item\em add a SimpleMaterial object \item\end{DoxyCompactList}\item 
+const std::vector$<$ gear::SimpleMaterialImpl $>$ \& \hyperlink{class_d_d4hep_1_1_gear_handle_ae127a028091e597d755f33c1d1303032}{materials} ()
+\begin{DoxyCompactList}\small\item\em get all materials assigned to this wrapper \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_gear_handle_a08d410c5f9ea89384c3166fe42f0bae8}{GearHandle} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Geometry::DetElement} \&)
+\item 
+\hyperlink{class_d_d4hep_1_1_gear_handle_a7b88ea01bf9e0fb58e7df2997c8825fb}{GearHandle} (const \hyperlink{class_d_d4hep_1_1_gear_handle}{GearHandle} \&, const \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Geometry::DetElement} \&)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+gear::GearParametersImpl $\ast$ \hyperlink{class_d_d4hep_1_1_gear_handle_a211b76e59d3561a189c0f5b3b7186d08}{\_\-gObj}
+\item 
+std::string \hyperlink{class_d_d4hep_1_1_gear_handle_a73f13b4c51b157ad9ff56335a5063d3b}{\_\-name}
+\item 
+std::vector$<$ gear::SimpleMaterialImpl $>$ \hyperlink{class_d_d4hep_1_1_gear_handle_a7a666fef6469ba28d864d41e16000c29}{\_\-materials}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple wrapper class for objects of type GearParametersImpl that can be added to DetElements with the extension mechanism. There can only be one such object added to any given DetElement \begin{DoxyAuthor}{Author}
+F.Gaede, DESY 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+\$Id\$ 
+\end{DoxyVersion}
+
+
+Definition at line 26 of file DDGear.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_gear_handle_a782739bfe116441082e6b4597bb6bf6e}{
+\index{DD4hep::GearHandle@{DD4hep::GearHandle}!GearHandle@{GearHandle}}
+\index{GearHandle@{GearHandle}!DD4hep::GearHandle@{DD4hep::GearHandle}}
+\subsubsection[{GearHandle}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::GearHandle::GearHandle ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_gear_handle_a782739bfe116441082e6b4597bb6bf6e}
+Default c'tor -\/ only used by \hyperlink{namespace_d_d4hep}{DD4hep} extenbsion mechanism. 
+
+Definition at line 35 of file DDGear.h.\hypertarget{class_d_d4hep_1_1_gear_handle_adeb098c8edf707d3d122de032ff476fd}{
+\index{DD4hep::GearHandle@{DD4hep::GearHandle}!GearHandle@{GearHandle}}
+\index{GearHandle@{GearHandle}!DD4hep::GearHandle@{DD4hep::GearHandle}}
+\subsubsection[{GearHandle}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::GearHandle::GearHandle (gear::GearParametersImpl $\ast$ {\em gearObj}, \/  const std::string \& {\em nam})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_gear_handle_adeb098c8edf707d3d122de032ff476fd}
+User c'tor -\/ specify a name (should be the canonical name used in \hyperlink{namespacegear}{gear}, eg. TPCParameters, SITParameters, etc.) and the GearParametersImpl object 
+
+Definition at line 39 of file DDGear.h.\hypertarget{class_d_d4hep_1_1_gear_handle_a7b8b36839e741d9d3e4bb22f44262f01}{
+\index{DD4hep::GearHandle@{DD4hep::GearHandle}!$\sim$GearHandle@{$\sim$GearHandle}}
+\index{$\sim$GearHandle@{$\sim$GearHandle}!DD4hep::GearHandle@{DD4hep::GearHandle}}
+\subsubsection[{$\sim$GearHandle}]{\setlength{\rightskip}{0pt plus 5cm}virtual DD4hep::GearHandle::$\sim$GearHandle ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_gear_handle_a7b8b36839e741d9d3e4bb22f44262f01}
+D'tor deletes GearParametersImpl object if ownerhsip has not been taken away 
+
+Definition at line 42 of file DDGear.h.
+
+References \_\-gObj.\hypertarget{class_d_d4hep_1_1_gear_handle_a08d410c5f9ea89384c3166fe42f0bae8}{
+\index{DD4hep::GearHandle@{DD4hep::GearHandle}!GearHandle@{GearHandle}}
+\index{GearHandle@{GearHandle}!DD4hep::GearHandle@{DD4hep::GearHandle}}
+\subsubsection[{GearHandle}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::GearHandle::GearHandle (const {\bf Geometry::DetElement} \&)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_gear_handle_a08d410c5f9ea89384c3166fe42f0bae8}
+dummy implementation of required c'tors to allow using the extension mechanism 
+
+Definition at line 72 of file DDGear.h.\hypertarget{class_d_d4hep_1_1_gear_handle_a7b88ea01bf9e0fb58e7df2997c8825fb}{
+\index{DD4hep::GearHandle@{DD4hep::GearHandle}!GearHandle@{GearHandle}}
+\index{GearHandle@{GearHandle}!DD4hep::GearHandle@{DD4hep::GearHandle}}
+\subsubsection[{GearHandle}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::GearHandle::GearHandle (const {\bf GearHandle} \&, \/  const {\bf Geometry::DetElement} \&)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_gear_handle_a7b88ea01bf9e0fb58e7df2997c8825fb}
+
+
+Definition at line 73 of file DDGear.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_gear_handle_ae5f3ea169e473f5f0bd46f8d27d5d170}{
+\index{DD4hep::GearHandle@{DD4hep::GearHandle}!addMaterial@{addMaterial}}
+\index{addMaterial@{addMaterial}!DD4hep::GearHandle@{DD4hep::GearHandle}}
+\subsubsection[{addMaterial}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::GearHandle::addMaterial (const std::string {\em nam}, \/  double {\em A}, \/  double {\em Z}, \/  double {\em density}, \/  double {\em radLen}, \/  double {\em intLen})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_gear_handle_ae5f3ea169e473f5f0bd46f8d27d5d170}
+
+
+add a SimpleMaterial object 
+
+Definition at line 62 of file DDGear.h.
+
+References \_\-materials.
+
+Referenced by DD4hep::DDRec::createGearForCLIC(), and DD4hep::DDRec::createGearForILD().\hypertarget{class_d_d4hep_1_1_gear_handle_aaa9e8fbe619ab3a1a45fac04773e6c9a}{
+\index{DD4hep::GearHandle@{DD4hep::GearHandle}!gearObject@{gearObject}}
+\index{gearObject@{gearObject}!DD4hep::GearHandle@{DD4hep::GearHandle}}
+\subsubsection[{gearObject}]{\setlength{\rightskip}{0pt plus 5cm}gear::GearParametersImpl$\ast$ DD4hep::GearHandle::gearObject ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_gear_handle_aaa9e8fbe619ab3a1a45fac04773e6c9a}
+Get GearParametersImpl object 
+
+Definition at line 51 of file DDGear.h.
+
+References \_\-gObj.\hypertarget{class_d_d4hep_1_1_gear_handle_ae127a028091e597d755f33c1d1303032}{
+\index{DD4hep::GearHandle@{DD4hep::GearHandle}!materials@{materials}}
+\index{materials@{materials}!DD4hep::GearHandle@{DD4hep::GearHandle}}
+\subsubsection[{materials}]{\setlength{\rightskip}{0pt plus 5cm}const std::vector$<$ gear::SimpleMaterialImpl $>$\& DD4hep::GearHandle::materials ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_gear_handle_ae127a028091e597d755f33c1d1303032}
+
+
+get all materials assigned to this wrapper 
+
+Definition at line 68 of file DDGear.h.
+
+References \_\-materials.\hypertarget{class_d_d4hep_1_1_gear_handle_acb3a333f73bd074c0d91bc453ae85cc0}{
+\index{DD4hep::GearHandle@{DD4hep::GearHandle}!name@{name}}
+\index{name@{name}!DD4hep::GearHandle@{DD4hep::GearHandle}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}const std::string\& DD4hep::GearHandle::name ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_gear_handle_acb3a333f73bd074c0d91bc453ae85cc0}
+Name of GearParametersImpl object -\/ should be the canonical name used in \hyperlink{namespacegear}{gear}, eg. TPCParameters, SITParameters, etc. 
+
+Definition at line 48 of file DDGear.h.
+
+References \_\-name.\hypertarget{class_d_d4hep_1_1_gear_handle_a6dc3d8b5eaadccd2a6fa8c8e31739cbd}{
+\index{DD4hep::GearHandle@{DD4hep::GearHandle}!takeGearObject@{takeGearObject}}
+\index{takeGearObject@{takeGearObject}!DD4hep::GearHandle@{DD4hep::GearHandle}}
+\subsubsection[{takeGearObject}]{\setlength{\rightskip}{0pt plus 5cm}gear::GearParametersImpl$\ast$ DD4hep::GearHandle::takeGearObject ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_gear_handle_a6dc3d8b5eaadccd2a6fa8c8e31739cbd}
+Get GearParametersImpl object \_\-and\_\- transfer ownership 
+
+Definition at line 54 of file DDGear.h.
+
+References \_\-gObj.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_gear_handle_a211b76e59d3561a189c0f5b3b7186d08}{
+\index{DD4hep::GearHandle@{DD4hep::GearHandle}!\_\-gObj@{\_\-gObj}}
+\index{\_\-gObj@{\_\-gObj}!DD4hep::GearHandle@{DD4hep::GearHandle}}
+\subsubsection[{\_\-gObj}]{\setlength{\rightskip}{0pt plus 5cm}gear::GearParametersImpl$\ast$ {\bf DD4hep::GearHandle::\_\-gObj}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_gear_handle_a211b76e59d3561a189c0f5b3b7186d08}
+
+
+Definition at line 29 of file DDGear.h.
+
+Referenced by gearObject(), takeGearObject(), and $\sim$GearHandle().\hypertarget{class_d_d4hep_1_1_gear_handle_a7a666fef6469ba28d864d41e16000c29}{
+\index{DD4hep::GearHandle@{DD4hep::GearHandle}!\_\-materials@{\_\-materials}}
+\index{\_\-materials@{\_\-materials}!DD4hep::GearHandle@{DD4hep::GearHandle}}
+\subsubsection[{\_\-materials}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$ gear::SimpleMaterialImpl $>$ {\bf DD4hep::GearHandle::\_\-materials}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_gear_handle_a7a666fef6469ba28d864d41e16000c29}
+
+
+Definition at line 31 of file DDGear.h.
+
+Referenced by addMaterial(), and materials().\hypertarget{class_d_d4hep_1_1_gear_handle_a73f13b4c51b157ad9ff56335a5063d3b}{
+\index{DD4hep::GearHandle@{DD4hep::GearHandle}!\_\-name@{\_\-name}}
+\index{\_\-name@{\_\-name}!DD4hep::GearHandle@{DD4hep::GearHandle}}
+\subsubsection[{\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::GearHandle::\_\-name}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_gear_handle_a73f13b4c51b157ad9ff56335a5063d3b}
+
+
+Definition at line 30 of file DDGear.h.
+
+Referenced by name().
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDRec/include/DDRec/\hyperlink{_d_d_gear_8h}{DDGear.h}\end{DoxyCompactItemize}

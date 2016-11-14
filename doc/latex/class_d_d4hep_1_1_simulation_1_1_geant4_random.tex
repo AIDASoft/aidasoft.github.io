@@ -1,0 +1,505 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random}{
+\section{DD4hep::Simulation::Geant4Random Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random}\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+}
+
+
+Mini interface to THE random generator of the application.  
+
+
+{\ttfamily \#include $<$Geant4Random.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4Random::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_simulation_1_1_geant4_random}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a44e88e26d5ae30b269b81c6d2dfc6511}{Geant4Random} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$context, const std::string \&name)
+\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a36518f1890fdb6177b2296b5f905fb07}{$\sim$Geant4Random} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a31f43f8b61c1eacccac4d89945e97f6b}{initialize} ()
+\begin{DoxyCompactList}\small\item\em Initialize the instance. \item\end{DoxyCompactList}\item 
+CLHEP::HepRandomEngine $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a80dcc27ca6d3ddc4a99f6f3b9d0d4465}{engine} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{namespace_c_l_h_e_p}{CLHEP} random number engine (valid after initialization only). \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a67c43b5a941c94c3bbf7d134274bbde8}{setSeed} (long seed)
+\begin{DoxyCompactList}\small\item\em Should initialise the status of the algorithm according to seed. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_af110cf82c38501f6a437f3b0b7fc9bf4}{setSeeds} (const long $\ast$seeds, int size)
+\begin{DoxyCompactList}\small\item\em Should initialise the status of the algorithm. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_aa8f56d1e097951d747ae3251cc845992}{saveStatus} (const char filename\mbox{[}$\,$\mbox{]}=\char`\"{}Config.conf\char`\"{}) const 
+\begin{DoxyCompactList}\small\item\em Should save on a file specific to the instantiated engine in use the current status. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_aad43065d6a4213d3ac0f3d9d024ce5ff}{restoreStatus} (const char filename\mbox{[}$\,$\mbox{]}=\char`\"{}Config.conf\char`\"{})
+\begin{DoxyCompactList}\small\item\em Should read from a file and restore the last saved engine configuration. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a523d8d48f4a11d28ae471a8f385151d7}{showStatus} () const 
+\begin{DoxyCompactList}\small\item\em Should dump the current engine status on the screen. \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a691d3cc880c5db6fab4699784a8b375c}{rndm\_\-clhep} ()
+\begin{DoxyCompactList}\small\item\em Create flat distributed random numbers in the interval \mbox{]}0,1\mbox{]} calling \hyperlink{namespace_c_l_h_e_p}{CLHEP}. \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a4aaab596ee59a7ae5cbee9cbfde250d5}{rndm} (int i=0)
+\begin{DoxyCompactList}\small\item\em Create flat distributed random numbers in the interval \mbox{]}0,1\mbox{]}. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_aaf9f4a7acf4d65ce0b3f6b19486d473d}{rndmArray} (int n, float $\ast$array)
+\begin{DoxyCompactList}\small\item\em Create a float array of flat distributed random numbers in the interval \mbox{]}0,1\mbox{]}. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a45700086c1a78f0982bd5539e9263895}{rndmArray} (int n, double $\ast$array)
+\begin{DoxyCompactList}\small\item\em Create a double array of flat distributed random numbers in the interval \mbox{]}0,1\mbox{]}. \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_af0c23cab921aa21e6707eae5091aba15}{uniform} (double x1=1)
+\begin{DoxyCompactList}\small\item\em Create uniformly disributed random numbers in the interval \mbox{]}0,x1\mbox{]}. \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a5e717c2a88ed9c72dcfb8e2de1c4bef3}{uniform} (double x1, double x2)
+\begin{DoxyCompactList}\small\item\em Create uniformly disributed random numbers in the interval \mbox{]}x1,x2\mbox{]}. \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a676f18f9a0f12e26e67f5390c2f6a5b7}{exp} (double tau)
+\begin{DoxyCompactList}\small\item\em Create exponentially distributed random numbers. \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a759d26cbc394bdbd9d34196c33b7419e}{gauss} (double mean=0, double sigma=1)
+\begin{DoxyCompactList}\small\item\em Create gaussian distributed random numbers. \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a44860eb96afcbda002a7845e8319eb4f}{landau} (double mean=0, double sigma=1)
+\begin{DoxyCompactList}\small\item\em Create landau distributed random numbers. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a1319236bb57ff830f1d575dbe928cb01}{circle} (double \&x, double \&y, double r)
+\begin{DoxyCompactList}\small\item\em Create tuple of randum number around a circle with radius r. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_af0825e540ad54e3510b4e5a1450a3211}{sphere} (double \&x, double \&y, double \&z, double r)
+\begin{DoxyCompactList}\small\item\em Create tuple of randum number on a sphere with radius r. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random}{Geant4Random} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a76e4bbadf0c58d9f6ee05decdd200fe6}{instance} (bool throw\_\-exception=true)
+\begin{DoxyCompactList}\small\item\em Access the main Geant4 random generator instance. Must be created before used! \item\end{DoxyCompactList}\item 
+static \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random}{Geant4Random} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a544fa42f6ae0d64697e366da5e1297b2}{setMainInstance} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random}{Geant4Random} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Make this random generator instance the one used by Geant4. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::string \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a0392ac65cdbecdf7aa9663d919246d66}{m\_\-file}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: File name if initialized from file. If set, engine name and seeds are ignored. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a288d4450519a05e0c2360c4994790cce}{m\_\-engineType}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: Engine type. default: \char`\"{}HepJamesRandom\char`\"{}. \item\end{DoxyCompactList}\item 
+long \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a24193f5a0f19684a176f12a5aedec2b2}{m\_\-seed}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: Initial random seed. Default: 123456789. \item\end{DoxyCompactList}\item 
+long \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_aa74af649720c65fd7e4e9d357e77c01d}{m\_\-luxury}
+\item 
+bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a3d14b4420a812cdb4e0965f77e3f5988}{m\_\-replace}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: Indicator to replace the \hyperlink{namespace_r_o_o_t}{ROOT} gRandom instance. \item\end{DoxyCompactList}\item 
+CLHEP::HepRandomEngine $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_aad17696c3d6d9f9953a40e75d8125da6}{m\_\-engine}
+\begin{DoxyCompactList}\small\item\em Reference to the \hyperlink{namespace_c_l_h_e_p}{CLHEP} random number engine (valid only after initialization). \item\end{DoxyCompactList}\item 
+TRandom $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a026a1847cc9ce6ae7bae842fa6f4b452}{m\_\-rootRandom}
+\begin{DoxyCompactList}\small\item\em Reference to \hyperlink{namespace_r_o_o_t}{ROOT} random instance. \item\end{DoxyCompactList}\item 
+TRandom $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a55a93202818178faaeabd4ae322a208e}{m\_\-rootOLD}
+\item 
+bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_aa8dd0cf1aa819f72ec19b69b6ae171c5}{m\_\-inited}
+\begin{DoxyCompactList}\small\item\em Flag to remember initialization. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_ac0f82c2b468e2eec2341f3740273273a}{Geant4Exec}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Mini interface to THE random generator of the application. Mini interface to THE random generator of the application. Necessary, that on every object creates its own instance, but accesses the main instance avaible throu the \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context}.
+
+This is mandatory to ensure reproducability of the event generation process. Particular objects may use a dependent generator from an experiment framework like GAUDI.
+
+This main interface is supposed to be stable. Unclear however is if the generation functions will have to become virtual.... Future will tell us.
+
+The first instance of the random action is automatically set to be the Geant4 instance. If another instance should be used by Geant4, use \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a544fa42f6ae0d64697e366da5e1297b2}{setMainInstance(Geant4Random$\ast$ ptr)}.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 60 of file Geant4Random.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_a44e88e26d5ae30b269b81c6d2dfc6511}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!Geant4Random@{Geant4Random}}
+\index{Geant4Random@{Geant4Random}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{Geant4Random}]{\setlength{\rightskip}{0pt plus 5cm}Geant4Random::Geant4Random ({\bf Geant4Context} $\ast$ {\em context}, \/  const std::string \& {\em name})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_a44e88e26d5ae30b269b81c6d2dfc6511}
+
+
+Standard constructor. Default constructor.
+
+Please Note: Should be used only for initialization of the main instance. Subsequent usage should be invoked using the class member \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random_a76e4bbadf0c58d9f6ee05decdd200fe6}{Geant4Random::instance()}.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em context}]Geant4 context for this action. \item[{\em name}]Name of the action object \end{DoxyParams}
+
+
+Definition at line 79 of file Geant4Random.cpp.
+
+References DD4hep::Simulation::Geant4Action::declareProperty(), DD4hep::InstanceCount::increment(), m\_\-engine, m\_\-engineType, m\_\-file, m\_\-luxury, m\_\-replace, and m\_\-seed.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_a36518f1890fdb6177b2296b5f905fb07}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!$\sim$Geant4Random@{$\sim$Geant4Random}}
+\index{$\sim$Geant4Random@{$\sim$Geant4Random}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{$\sim$Geant4Random}]{\setlength{\rightskip}{0pt plus 5cm}Geant4Random::$\sim$Geant4Random ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_a36518f1890fdb6177b2296b5f905fb07}
+
+
+Default destructor. 
+
+Definition at line 94 of file Geant4Random.cpp.
+
+References DD4hep::InstanceCount::decrement(), DD4hep::deletePtr(), m\_\-rootOLD, and m\_\-rootRandom.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_a1319236bb57ff830f1d575dbe928cb01}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!circle@{circle}}
+\index{circle@{circle}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{circle}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Random::circle (double \& {\em x}, \/  double \& {\em y}, \/  double {\em r})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_a1319236bb57ff830f1d575dbe928cb01}
+
+
+Create tuple of randum number around a circle with radius r. 
+
+Definition at line 309 of file Geant4Random.cpp.
+
+References initialize(), and m\_\-inited.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_a80dcc27ca6d3ddc4a99f6f3b9d0d4465}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!engine@{engine}}
+\index{engine@{engine}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{engine}]{\setlength{\rightskip}{0pt plus 5cm}CLHEP::HepRandomEngine$\ast$ DD4hep::Simulation::Geant4Random::engine ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_a80dcc27ca6d3ddc4a99f6f3b9d0d4465}
+
+
+\hyperlink{namespace_c_l_h_e_p}{CLHEP} random number engine (valid after initialization only). Access to the \hyperlink{namespace_c_l_h_e_p}{CLHEP} random number engine. For further doc see CLHEP/Random/RandomEngine.h 
+
+Definition at line 117 of file Geant4Random.h.
+
+References m\_\-engine.
+
+Referenced by DD4hep::Simulation::Geant4EventSeed::begin().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_a676f18f9a0f12e26e67f5390c2f6a5b7}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!exp@{exp}}
+\index{exp@{exp}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{exp}]{\setlength{\rightskip}{0pt plus 5cm}double Geant4Random::exp (double {\em tau})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_a676f18f9a0f12e26e67f5390c2f6a5b7}
+
+
+Create exponentially distributed random numbers. 
+
+Definition at line 291 of file Geant4Random.cpp.
+
+References initialize(), and m\_\-inited.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_a759d26cbc394bdbd9d34196c33b7419e}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!gauss@{gauss}}
+\index{gauss@{gauss}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{gauss}]{\setlength{\rightskip}{0pt plus 5cm}double Geant4Random::gauss (double {\em mean} = {\ttfamily 0}, \/  double {\em sigma} = {\ttfamily 1})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_a759d26cbc394bdbd9d34196c33b7419e}
+
+
+Create gaussian distributed random numbers. Generates random vectors, uniformly distributed over a circle of given radius. 
+
+Definition at line 297 of file Geant4Random.cpp.
+
+References initialize(), and m\_\-inited.
+
+Referenced by DD4hep::Simulation::Geant4InteractionVertexSmear::smear().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_a31f43f8b61c1eacccac4d89945e97f6b}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!initialize@{initialize}}
+\index{initialize@{initialize}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Random::initialize ()}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_a31f43f8b61c1eacccac4d89945e97f6b}
+
+
+Initialize the instance. Called either by user or on request of the first random number. To propagate the engine to Geant4, initialize MUST be called by the user. 
+
+Create new engine if a type is specified 
+
+Definition at line 155 of file Geant4Random.cpp.
+
+References DD4hep::Simulation::Geant4Action::except(), m\_\-engine, m\_\-engineType, m\_\-file, m\_\-inited, m\_\-luxury, m\_\-rootRandom, m\_\-seed, and setMainInstance().
+
+Referenced by circle(), DD4hep::Simulation::Geant4Exec::configure(), exp(), gauss(), landau(), restoreStatus(), rndm(), rndm\_\-clhep(), rndmArray(), setMainInstance(), setSeed(), setSeeds(), sphere(), and uniform().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_a76e4bbadf0c58d9f6ee05decdd200fe6}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!instance@{instance}}
+\index{instance@{instance}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Random} $\ast$ Geant4Random::instance (bool {\em throw\_\-exception} = {\ttfamily true})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_a76e4bbadf0c58d9f6ee05decdd200fe6}
+
+
+Access the main Geant4 random generator instance. Must be created before used! 
+
+Definition at line 110 of file Geant4Random.cpp.
+
+Referenced by DD4hep::Simulation::Geant4EventSeed::begin(), DD4hep::Simulation::Geant4EventSeed::beginEvent(), DD4hep::Simulation::Geant4Exec::configure(), and DD4hep::Simulation::SequenceHdl$<$ Geant4GeneratorActionSequence $>$::createClientContext().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_a44860eb96afcbda002a7845e8319eb4f}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!landau@{landau}}
+\index{landau@{landau}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{landau}]{\setlength{\rightskip}{0pt plus 5cm}double Geant4Random::landau (double {\em mean} = {\ttfamily 0}, \/  double {\em sigma} = {\ttfamily 1})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_a44860eb96afcbda002a7845e8319eb4f}
+
+
+Create landau distributed random numbers. 
+
+Definition at line 303 of file Geant4Random.cpp.
+
+References initialize(), and m\_\-inited.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_aad43065d6a4213d3ac0f3d9d024ce5ff}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!restoreStatus@{restoreStatus}}
+\index{restoreStatus@{restoreStatus}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{restoreStatus}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Random::restoreStatus (const char {\em filename}\mbox{[}$\,$\mbox{]} = {\ttfamily \char`\"{}Config.conf\char`\"{}})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_aad43065d6a4213d3ac0f3d9d024ce5ff}
+
+
+Should read from a file and restore the last saved engine configuration. 
+
+Definition at line 221 of file Geant4Random.cpp.
+
+References initialize(), m\_\-engine, and m\_\-inited.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_a4aaab596ee59a7ae5cbee9cbfde250d5}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!rndm@{rndm}}
+\index{rndm@{rndm}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{rndm}]{\setlength{\rightskip}{0pt plus 5cm}double Geant4Random::rndm (int {\em i} = {\ttfamily 0})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_a4aaab596ee59a7ae5cbee9cbfde250d5}
+
+
+Create flat distributed random numbers in the interval \mbox{]}0,1\mbox{]}. 
+
+Definition at line 261 of file Geant4Random.cpp.
+
+References initialize(), and m\_\-inited.
+
+Referenced by DD4hep::Simulation::Geant4IsotropeGenerator::getParticleDirectionCosTheta(), DD4hep::Simulation::Geant4IsotropeGenerator::getParticleDirectionEta(), DD4hep::Simulation::Geant4IsotropeGenerator::getParticleDirectionFFbar(), and DD4hep::Simulation::Geant4IsotropeGenerator::getParticleDirectionUniform().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_a691d3cc880c5db6fab4699784a8b375c}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!rndm\_\-clhep@{rndm\_\-clhep}}
+\index{rndm\_\-clhep@{rndm\_\-clhep}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{rndm\_\-clhep}]{\setlength{\rightskip}{0pt plus 5cm}double Geant4Random::rndm\_\-clhep ()}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_a691d3cc880c5db6fab4699784a8b375c}
+
+
+Create flat distributed random numbers in the interval \mbox{]}0,1\mbox{]} calling \hyperlink{namespace_c_l_h_e_p}{CLHEP}. Create flat distributed random numbers in the interval \mbox{]}0,1\mbox{]}.
+
+Basic random generator functions This is more or less a test function, since the result should be identical to calling rndm. 
+
+Definition at line 255 of file Geant4Random.cpp.
+
+References initialize(), m\_\-engine, and m\_\-inited.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_a45700086c1a78f0982bd5539e9263895}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!rndmArray@{rndmArray}}
+\index{rndmArray@{rndmArray}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{rndmArray}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Random::rndmArray (int {\em n}, \/  double $\ast$ {\em array})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_a45700086c1a78f0982bd5539e9263895}
+
+
+Create a double array of flat distributed random numbers in the interval \mbox{]}0,1\mbox{]}. 
+
+Definition at line 273 of file Geant4Random.cpp.
+
+References initialize(), and m\_\-inited.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_aaf9f4a7acf4d65ce0b3f6b19486d473d}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!rndmArray@{rndmArray}}
+\index{rndmArray@{rndmArray}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{rndmArray}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Random::rndmArray (int {\em n}, \/  float $\ast$ {\em array})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_aaf9f4a7acf4d65ce0b3f6b19486d473d}
+
+
+Create a float array of flat distributed random numbers in the interval \mbox{]}0,1\mbox{]}. 
+
+Definition at line 267 of file Geant4Random.cpp.
+
+References initialize(), and m\_\-inited.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_aa8f56d1e097951d747ae3251cc845992}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!saveStatus@{saveStatus}}
+\index{saveStatus@{saveStatus}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{saveStatus}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Random::saveStatus (const char {\em filename}\mbox{[}$\,$\mbox{]} = {\ttfamily \char`\"{}Config.conf\char`\"{}}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_aa8f56d1e097951d747ae3251cc845992}
+
+
+Should save on a file specific to the instantiated engine in use the current status. 
+
+Definition at line 213 of file Geant4Random.cpp.
+
+References DD4hep::Simulation::Geant4Action::except(), m\_\-engine, and m\_\-inited.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_a544fa42f6ae0d64697e366da5e1297b2}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!setMainInstance@{setMainInstance}}
+\index{setMainInstance@{setMainInstance}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{setMainInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Random} $\ast$ Geant4Random::setMainInstance ({\bf Geant4Random} $\ast$ {\em ptr})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_a544fa42f6ae0d64697e366da5e1297b2}
+
+
+Make this random generator instance the one used by Geant4. Returns reference to previous instance. It is up to the user to manage the reference. Caveat: other code may hold references to this instance.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em ptr}]Reference to main random number generator \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to previous random number generator instance 
+\end{DoxyReturn}
+
+
+Definition at line 118 of file Geant4Random.cpp.
+
+References initialize(), m\_\-engine, m\_\-inited, m\_\-replace, m\_\-rootOLD, m\_\-rootRandom, and DD4hep::Simulation::Geant4Action::printP2().
+
+Referenced by DD4hep::Simulation::Geant4Exec::configure(), and initialize().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_a67c43b5a941c94c3bbf7d134274bbde8}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!setSeed@{setSeed}}
+\index{setSeed@{setSeed}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{setSeed}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Random::setSeed (long {\em seed})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_a67c43b5a941c94c3bbf7d134274bbde8}
+
+
+Should initialise the status of the algorithm according to seed. 
+
+Definition at line 196 of file Geant4Random.cpp.
+
+References initialize(), m\_\-engine, m\_\-inited, and m\_\-seed.
+
+Referenced by DD4hep::Simulation::Geant4EventSeed::beginEvent().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_af110cf82c38501f6a437f3b0b7fc9bf4}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!setSeeds@{setSeeds}}
+\index{setSeeds@{setSeeds}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{setSeeds}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Random::setSeeds (const long $\ast$ {\em seeds}, \/  int {\em size})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_af110cf82c38501f6a437f3b0b7fc9bf4}
+
+
+Should initialise the status of the algorithm. Initialization according to the zero terminated array of seeds. It is allowed to ignore one or many seeds in this array. 
+
+Definition at line 206 of file Geant4Random.cpp.
+
+References initialize(), m\_\-engine, m\_\-inited, and m\_\-seed.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_a523d8d48f4a11d28ae471a8f385151d7}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!showStatus@{showStatus}}
+\index{showStatus@{showStatus}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{showStatus}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Random::showStatus () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_a523d8d48f4a11d28ae471a8f385151d7}
+
+
+Should dump the current engine status on the screen. 
+
+Definition at line 227 of file Geant4Random.cpp.
+
+References DD4hep::Simulation::Geant4Action::error(), m\_\-engine, m\_\-engineType, m\_\-file, m\_\-inited, m\_\-rootRandom, and DD4hep::Simulation::Geant4Action::printP2().
+
+Referenced by DD4hep::Simulation::Geant4EventSeed::beginEvent().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_af0825e540ad54e3510b4e5a1450a3211}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!sphere@{sphere}}
+\index{sphere@{sphere}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{sphere}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Random::sphere (double \& {\em x}, \/  double \& {\em y}, \/  double \& {\em z}, \/  double {\em r})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_af0825e540ad54e3510b4e5a1450a3211}
+
+
+Create tuple of randum number on a sphere with radius r. 
+
+Definition at line 315 of file Geant4Random.cpp.
+
+References initialize(), and m\_\-inited.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_a5e717c2a88ed9c72dcfb8e2de1c4bef3}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!uniform@{uniform}}
+\index{uniform@{uniform}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{uniform}]{\setlength{\rightskip}{0pt plus 5cm}double Geant4Random::uniform (double {\em x1}, \/  double {\em x2})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_a5e717c2a88ed9c72dcfb8e2de1c4bef3}
+
+
+Create uniformly disributed random numbers in the interval \mbox{]}x1,x2\mbox{]}. 
+
+Definition at line 285 of file Geant4Random.cpp.
+
+References initialize(), and m\_\-inited.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_af0c23cab921aa21e6707eae5091aba15}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!uniform@{uniform}}
+\index{uniform@{uniform}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{uniform}]{\setlength{\rightskip}{0pt plus 5cm}double Geant4Random::uniform (double {\em x1} = {\ttfamily 1})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_af0c23cab921aa21e6707eae5091aba15}
+
+
+Create uniformly disributed random numbers in the interval \mbox{]}0,x1\mbox{]}. 
+
+Definition at line 279 of file Geant4Random.cpp.
+
+References initialize(), and m\_\-inited.
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_ac0f82c2b468e2eec2341f3740273273a}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!Geant4Exec@{Geant4Exec}}
+\index{Geant4Exec@{Geant4Exec}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{Geant4Exec}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Geant4Exec}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_ac0f82c2b468e2eec2341f3740273273a}
+
+
+Definition at line 61 of file Geant4Random.h.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_aad17696c3d6d9f9953a40e75d8125da6}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!m\_\-engine@{m\_\-engine}}
+\index{m\_\-engine@{m\_\-engine}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{m\_\-engine}]{\setlength{\rightskip}{0pt plus 5cm}CLHEP::HepRandomEngine$\ast$ {\bf DD4hep::Simulation::Geant4Random::m\_\-engine}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_aad17696c3d6d9f9953a40e75d8125da6}
+
+
+Reference to the \hyperlink{namespace_c_l_h_e_p}{CLHEP} random number engine (valid only after initialization). 
+
+Definition at line 74 of file Geant4Random.h.
+
+Referenced by engine(), Geant4Random(), initialize(), restoreStatus(), rndm\_\-clhep(), saveStatus(), setMainInstance(), setSeed(), setSeeds(), and showStatus().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_a288d4450519a05e0c2360c4994790cce}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!m\_\-engineType@{m\_\-engineType}}
+\index{m\_\-engineType@{m\_\-engineType}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{m\_\-engineType}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::Simulation::Geant4Random::m\_\-engineType}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_a288d4450519a05e0c2360c4994790cce}
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}: Engine type. default: \char`\"{}HepJamesRandom\char`\"{}. 
+
+Definition at line 67 of file Geant4Random.h.
+
+Referenced by Geant4Random(), initialize(), and showStatus().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_a0392ac65cdbecdf7aa9663d919246d66}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!m\_\-file@{m\_\-file}}
+\index{m\_\-file@{m\_\-file}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{m\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::Simulation::Geant4Random::m\_\-file}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_a0392ac65cdbecdf7aa9663d919246d66}
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}: File name if initialized from file. If set, engine name and seeds are ignored. 
+
+Definition at line 65 of file Geant4Random.h.
+
+Referenced by Geant4Random(), initialize(), and showStatus().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_aa8dd0cf1aa819f72ec19b69b6ae171c5}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!m\_\-inited@{m\_\-inited}}
+\index{m\_\-inited@{m\_\-inited}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{m\_\-inited}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf DD4hep::Simulation::Geant4Random::m\_\-inited}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_aa8dd0cf1aa819f72ec19b69b6ae171c5}
+
+
+Flag to remember initialization. 
+
+Definition at line 79 of file Geant4Random.h.
+
+Referenced by circle(), exp(), gauss(), initialize(), landau(), restoreStatus(), rndm(), rndm\_\-clhep(), rndmArray(), saveStatus(), setMainInstance(), setSeed(), setSeeds(), showStatus(), sphere(), and uniform().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_aa74af649720c65fd7e4e9d357e77c01d}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!m\_\-luxury@{m\_\-luxury}}
+\index{m\_\-luxury@{m\_\-luxury}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{m\_\-luxury}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf DD4hep::Simulation::Geant4Random::m\_\-luxury}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_aa74af649720c65fd7e4e9d357e77c01d}
+
+
+Definition at line 69 of file Geant4Random.h.
+
+Referenced by Geant4Random(), and initialize().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_a3d14b4420a812cdb4e0965f77e3f5988}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!m\_\-replace@{m\_\-replace}}
+\index{m\_\-replace@{m\_\-replace}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{m\_\-replace}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf DD4hep::Simulation::Geant4Random::m\_\-replace}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_a3d14b4420a812cdb4e0965f77e3f5988}
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}: Indicator to replace the \hyperlink{namespace_r_o_o_t}{ROOT} gRandom instance. 
+
+Definition at line 71 of file Geant4Random.h.
+
+Referenced by Geant4Random(), and setMainInstance().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_a55a93202818178faaeabd4ae322a208e}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!m\_\-rootOLD@{m\_\-rootOLD}}
+\index{m\_\-rootOLD@{m\_\-rootOLD}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{m\_\-rootOLD}]{\setlength{\rightskip}{0pt plus 5cm}TRandom $\ast$ {\bf DD4hep::Simulation::Geant4Random::m\_\-rootOLD}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_a55a93202818178faaeabd4ae322a208e}
+
+
+Definition at line 77 of file Geant4Random.h.
+
+Referenced by setMainInstance(), and $\sim$Geant4Random().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_a026a1847cc9ce6ae7bae842fa6f4b452}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!m\_\-rootRandom@{m\_\-rootRandom}}
+\index{m\_\-rootRandom@{m\_\-rootRandom}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{m\_\-rootRandom}]{\setlength{\rightskip}{0pt plus 5cm}TRandom$\ast$ {\bf DD4hep::Simulation::Geant4Random::m\_\-rootRandom}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_a026a1847cc9ce6ae7bae842fa6f4b452}
+
+
+Reference to \hyperlink{namespace_r_o_o_t}{ROOT} random instance. 
+
+Definition at line 77 of file Geant4Random.h.
+
+Referenced by initialize(), setMainInstance(), showStatus(), and $\sim$Geant4Random().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_random_a24193f5a0f19684a176f12a5aedec2b2}{
+\index{DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}!m\_\-seed@{m\_\-seed}}
+\index{m\_\-seed@{m\_\-seed}!DD4hep::Simulation::Geant4Random@{DD4hep::Simulation::Geant4Random}}
+\subsubsection[{m\_\-seed}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf DD4hep::Simulation::Geant4Random::m\_\-seed}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_random_a24193f5a0f19684a176f12a5aedec2b2}
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}: Initial random seed. Default: 123456789. 
+
+Definition at line 69 of file Geant4Random.h.
+
+Referenced by Geant4Random(), initialize(), setSeed(), and setSeeds().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_random_8h}{Geant4Random.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_random_8cpp}{Geant4Random.cpp}\end{DoxyCompactItemize}

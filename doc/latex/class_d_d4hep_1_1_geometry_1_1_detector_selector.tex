@@ -1,0 +1,135 @@
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_detector_selector}{
+\section{DD4hep::Geometry::DetectorSelector Class Reference}
+\label{class_d_d4hep_1_1_geometry_1_1_detector_selector}\index{DD4hep::Geometry::DetectorSelector@{DD4hep::Geometry::DetectorSelector}}
+}
+
+
+\hyperlink{class_d_d4hep_1_1_view}{View} on \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} to select detectors according to certain criteria.  
+
+
+{\ttfamily \#include $<$DetectorSelector.h$>$}\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_detector_selector_a6ce0dfe8c83f5d36138244218f260ed1}{Result}
+\begin{DoxyCompactList}\small\item\em Result set definition. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_detector_selector_a683570559af13a80725cf14d8c3cd4b6}{DetectorSelector} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \&\_\-lcdd)
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_detector_selector_a20dcfab3e2fb33672b347aa4fdcea393}{$\sim$DetectorSelector} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_geometry_1_1_detector_selector_a6ce0dfe8c83f5d36138244218f260ed1}{Result} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_detector_selector_ad9407f2aa15753164488fe498e167d9f}{detectors} (const std::string \&type)
+\begin{DoxyCompactList}\small\item\em Access a set of subdetectors according to the sensitive type. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_detector_selector_a6ce0dfe8c83f5d36138244218f260ed1}{Result} \hyperlink{class_d_d4hep_1_1_geometry_1_1_detector_selector_a2e5d96725e4b37a6cea8e7c704d91a87}{detectors} (const std::string \&type1, const std::string \&type2, const std::string \&type3=\char`\"{}\char`\"{}, const std::string \&type4=\char`\"{}\char`\"{}, const std::string \&type5=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Access a set of subdetectors according to several sensitive types. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_detector_selector_a6ce0dfe8c83f5d36138244218f260ed1}{Result} \hyperlink{class_d_d4hep_1_1_geometry_1_1_detector_selector_ab87dfdbdee0e921660d7f54bbdc02a9f}{detectors} (unsigned int includeFlag, unsigned int excludeFlag=0) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_detector_selector_a6091743fea97ad21aa2bca9e5da2d3d0}{lcdd}
+\begin{DoxyCompactList}\small\item\em Reference to main detector description object. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_d_d4hep_1_1_view}{View} on \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} to select detectors according to certain criteria. Usage:
+
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD}\& lcd = ....; \hyperlink{class_d_d4hep_1_1_geometry_1_1_detector_selector}{DetectorSelector} selector(lcdd); \hyperlink{class_d_d4hep_1_1_geometry_1_1_detector_selector_a6ce0dfe8c83f5d36138244218f260ed1}{DetectorSelector::Result} r = selector.detectors(\char`\"{}tracker\char`\"{});
+
+or multiple types: r = selector.detectors(\char`\"{}tracker\char`\"{}, \char`\"{}calorimeter\char`\"{});
+
+or selections using \hyperlink{class_d_d4hep_1_1_det_type}{DetType} flags, e.g: select all barrel trackers but not the Vertex detector r = selector.detectors( \hyperlink{class_d_d4hep_1_1_det_type_aca757d7a9b865d1fb8f7997eb5c0a72cae974ecec59fd2a2900db7e5f44cd0884}{DetType::TRACKER} $|$ \hyperlink{class_d_d4hep_1_1_det_type_aca757d7a9b865d1fb8f7997eb5c0a72caaca38656f429ac259f2aeb2a22359c1e}{DetType::BARREL} , \hyperlink{class_d_d4hep_1_1_det_type_aca757d7a9b865d1fb8f7997eb5c0a72cadd4fea08e228d05a34ba2e613697d85e}{DetType::VERTEX} ) ;
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 45 of file DetectorSelector.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_detector_selector_a6ce0dfe8c83f5d36138244218f260ed1}{
+\index{DD4hep::Geometry::DetectorSelector@{DD4hep::Geometry::DetectorSelector}!Result@{Result}}
+\index{Result@{Result}!DD4hep::Geometry::DetectorSelector@{DD4hep::Geometry::DetectorSelector}}
+\subsubsection[{Result}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf DetElement}$>$ {\bf DD4hep::Geometry::DetectorSelector::Result}}}
+\label{class_d_d4hep_1_1_geometry_1_1_detector_selector_a6ce0dfe8c83f5d36138244218f260ed1}
+
+
+Result set definition. 
+
+Definition at line 48 of file DetectorSelector.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_detector_selector_a683570559af13a80725cf14d8c3cd4b6}{
+\index{DD4hep::Geometry::DetectorSelector@{DD4hep::Geometry::DetectorSelector}!DetectorSelector@{DetectorSelector}}
+\index{DetectorSelector@{DetectorSelector}!DD4hep::Geometry::DetectorSelector@{DD4hep::Geometry::DetectorSelector}}
+\subsubsection[{DetectorSelector}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::DetectorSelector::DetectorSelector ({\bf LCDD} \& {\em \_\-lcdd})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_detector_selector_a683570559af13a80725cf14d8c3cd4b6}
+
+
+Default constructor. 
+
+Definition at line 57 of file DetectorSelector.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_detector_selector_a20dcfab3e2fb33672b347aa4fdcea393}{
+\index{DD4hep::Geometry::DetectorSelector@{DD4hep::Geometry::DetectorSelector}!$\sim$DetectorSelector@{$\sim$DetectorSelector}}
+\index{$\sim$DetectorSelector@{$\sim$DetectorSelector}!DD4hep::Geometry::DetectorSelector@{DD4hep::Geometry::DetectorSelector}}
+\subsubsection[{$\sim$DetectorSelector}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::DetectorSelector::$\sim$DetectorSelector ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_detector_selector_a20dcfab3e2fb33672b347aa4fdcea393}
+
+
+Default destructor. 
+
+Definition at line 60 of file DetectorSelector.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_detector_selector_ab87dfdbdee0e921660d7f54bbdc02a9f}{
+\index{DD4hep::Geometry::DetectorSelector@{DD4hep::Geometry::DetectorSelector}!detectors@{detectors}}
+\index{detectors@{detectors}!DD4hep::Geometry::DetectorSelector@{DD4hep::Geometry::DetectorSelector}}
+\subsubsection[{detectors}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetectorSelector::Result} DetectorSelector::detectors (unsigned int {\em includeFlag}, \/  unsigned int {\em excludeFlag} = {\ttfamily 0}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_detector_selector_ab87dfdbdee0e921660d7f54bbdc02a9f}
+return a vector with all detectors that have all the type properties in includeFlag set but none of the properties given in excludeFlag 
+
+Definition at line 54 of file DetectorSelector.cpp.
+
+References DD4hep::Geometry::LCDD::detectors(), DD4hep::Handle$<$ T $>$::isValid(), lcdd, DD4hep::Geometry::DetElement::parent(), and DD4hep::Geometry::DetElement::typeFlag().\hypertarget{class_d_d4hep_1_1_geometry_1_1_detector_selector_a2e5d96725e4b37a6cea8e7c704d91a87}{
+\index{DD4hep::Geometry::DetectorSelector@{DD4hep::Geometry::DetectorSelector}!detectors@{detectors}}
+\index{detectors@{detectors}!DD4hep::Geometry::DetectorSelector@{DD4hep::Geometry::DetectorSelector}}
+\subsubsection[{detectors}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result} DD4hep::Geometry::DetectorSelector::detectors (const std::string \& {\em type1}, \/  const std::string \& {\em type2}, \/  const std::string \& {\em type3} = {\ttfamily \char`\"{}\char`\"{}}, \/  const std::string \& {\em type4} = {\ttfamily \char`\"{}\char`\"{}}, \/  const std::string \& {\em type5} = {\ttfamily \char`\"{}\char`\"{}})}}
+\label{class_d_d4hep_1_1_geometry_1_1_detector_selector_a2e5d96725e4b37a6cea8e7c704d91a87}
+
+
+Access a set of subdetectors according to several sensitive types. \hypertarget{class_d_d4hep_1_1_geometry_1_1_detector_selector_ad9407f2aa15753164488fe498e167d9f}{
+\index{DD4hep::Geometry::DetectorSelector@{DD4hep::Geometry::DetectorSelector}!detectors@{detectors}}
+\index{detectors@{detectors}!DD4hep::Geometry::DetectorSelector@{DD4hep::Geometry::DetectorSelector}}
+\subsubsection[{detectors}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Result}\& DD4hep::Geometry::DetectorSelector::detectors (const std::string \& {\em type})}}
+\label{class_d_d4hep_1_1_geometry_1_1_detector_selector_ad9407f2aa15753164488fe498e167d9f}
+
+
+Access a set of subdetectors according to the sensitive type. Please note:
+\begin{DoxyItemize}
+\item The sensitive type of a detector is set in the 'detector constructor'.
+\item Not sensitive detector structures have the name 'passive'
+\item Compounds (ie. nested detectors) are of type 'compound' 
+\end{DoxyItemize}
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_detector_selector_a6091743fea97ad21aa2bca9e5da2d3d0}{
+\index{DD4hep::Geometry::DetectorSelector@{DD4hep::Geometry::DetectorSelector}!lcdd@{lcdd}}
+\index{lcdd@{lcdd}!DD4hep::Geometry::DetectorSelector@{DD4hep::Geometry::DetectorSelector}}
+\subsubsection[{lcdd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LCDD}\& {\bf DD4hep::Geometry::DetectorSelector::lcdd}}}
+\label{class_d_d4hep_1_1_geometry_1_1_detector_selector_a6091743fea97ad21aa2bca9e5da2d3d0}
+
+
+Reference to main detector description object. 
+
+Definition at line 51 of file DetectorSelector.h.
+
+Referenced by detectors().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_detector_selector_8h}{DetectorSelector.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_detector_selector_8cpp}{DetectorSelector.cpp}\end{DoxyCompactItemize}

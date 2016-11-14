@@ -1,0 +1,226 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence}{
+\section{DD4hep::Simulation::Geant4RunActionSequence Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence}\index{DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}}
+}
+
+
+Concrete basic implementation of the Geant4 run action sequencer.  
+
+
+{\ttfamily \#include $<$Geant4RunAction.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4RunActionSequence::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a91f1971562561332f1a41e8e3492e602}{Geant4RunActionSequence} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$context, const std::string \&nam)
+\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a4489dd79f6a419c4788a73efd50f6024}{$\sim$Geant4RunActionSequence} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_ad94eee6a819a88302a0eaa0874d88fa3}{updateContext} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$ctxt)
+\begin{DoxyCompactList}\small\item\em Set or update client context. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_adf657c521620857ffed702783c0a2712}{configureFiber} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$thread\_\-context)
+\begin{DoxyCompactList}\small\item\em Set or update client for the use in a new thread fiber. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action}{Geant4RunAction} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a8ebffd1974870b7e167f580610c9aa72}{get} (const std::string \&name) const 
+\begin{DoxyCompactList}\small\item\em Get an action by name. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q , typename T $>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a45da17c9f91b5448ce77b99cd44db369}{callAtBegin} (Q $\ast$p, void(T::$\ast$f)(const G4Run $\ast$))
+\begin{DoxyCompactList}\small\item\em Register begin-\/of-\/run callback. Types Q and \hyperlink{class_t}{T} must be polymorph! \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q , typename T $>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_aeaecc7d36c3d746ccc4902c86c60e3da}{callAtEnd} (Q $\ast$p, void(T::$\ast$f)(const G4Run $\ast$))
+\begin{DoxyCompactList}\small\item\em Register end-\/of-\/run callback. Types Q and \hyperlink{class_t}{T} must be polymorph! \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a9daef9eac6020138426b08116710ceaf}{adopt} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action}{Geant4RunAction} $\ast$action)
+\begin{DoxyCompactList}\small\item\em Add an actor responding to all callbacks. Sequence takes ownership. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a447a8f86614e2a958dcc0761ce89344b}{begin} (const G4Run $\ast$run)
+\begin{DoxyCompactList}\small\item\em Begin-\/of-\/run callback. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a2a21cad772d05ac39502c35e334c6e5f}{end} (const G4Run $\ast$run)
+\begin{DoxyCompactList}\small\item\em End-\/of-\/run callback. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_d_d4hep_1_1_callback_sequence}{CallbackSequence} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a833ebd7f7da62ebeeb561815387b0bbe}{m\_\-begin}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence for begin-\/run action. \item\end{DoxyCompactList}\item 
+\hyperlink{struct_d_d4hep_1_1_callback_sequence}{CallbackSequence} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a94c03005b1c789e05144558c840737f6}{m\_\-end}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence for end-\/run action. \item\end{DoxyCompactList}\item 
+Actors$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action}{Geant4RunAction} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a780b499622542d52941141b108ab1258}{m\_\-actors}
+\begin{DoxyCompactList}\small\item\em The list of action objects to be called. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Concrete basic implementation of the Geant4 run action sequencer. Concrete implementation of the Geant4 run action sequence. The sequence dispatches the callbacks at the beginning and the and of a run to all registered \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action}{Geant4RunAction} members and all registered callbacks.
+
+Note Multi-\/Threading issue: Callbacks and the action list is protected against multiple threads calling the Geant4 callbacks!
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 107 of file Geant4RunAction.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a91f1971562561332f1a41e8e3492e602}{
+\index{DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}!Geant4RunActionSequence@{Geant4RunActionSequence}}
+\index{Geant4RunActionSequence@{Geant4RunActionSequence}!DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}}
+\subsubsection[{Geant4RunActionSequence}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4RunActionSequence::Geant4RunActionSequence ({\bf Geant4Context} $\ast$ {\em context}, \/  const std::string \& {\em nam})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a91f1971562561332f1a41e8e3492e602}
+
+
+Standard constructor. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a4489dd79f6a419c4788a73efd50f6024}{
+\index{DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}!$\sim$Geant4RunActionSequence@{$\sim$Geant4RunActionSequence}}
+\index{$\sim$Geant4RunActionSequence@{$\sim$Geant4RunActionSequence}!DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}}
+\subsubsection[{$\sim$Geant4RunActionSequence}]{\setlength{\rightskip}{0pt plus 5cm}Geant4RunActionSequence::$\sim$Geant4RunActionSequence ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a4489dd79f6a419c4788a73efd50f6024}
+
+
+Default destructor. 
+
+Definition at line 108 of file Geant4RunAction.cpp.
+
+References DD4hep::CallbackSequence::clear(), DD4hep::InstanceCount::decrement(), m\_\-actors, m\_\-begin, m\_\-end, and DD4hep::Simulation::Geant4Action::release().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a9daef9eac6020138426b08116710ceaf}{
+\index{DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}!adopt@{adopt}}
+\index{adopt@{adopt}!DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}}
+\subsubsection[{adopt}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4RunActionSequence::adopt ({\bf Geant4RunAction} $\ast$ {\em action})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a9daef9eac6020138426b08116710ceaf}
+
+
+Add an actor responding to all callbacks. Sequence takes ownership. 
+
+Definition at line 133 of file Geant4RunAction.cpp.
+
+References DD4hep::Simulation::Geant4Action::addRef(), and m\_\-actors.
+
+Referenced by DD4hep::Converter$<$ T, ARG $>$::operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a447a8f86614e2a958dcc0761ce89344b}{
+\index{DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}!begin@{begin}}
+\index{begin@{begin}!DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4RunActionSequence::begin (const G4Run $\ast$ {\em run})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a447a8f86614e2a958dcc0761ce89344b}
+
+
+Begin-\/of-\/run callback. Pre-\/track action callback. 
+
+Definition at line 144 of file Geant4RunAction.cpp.
+
+References DD4hep::Simulation::Geant4RunAction::begin(), m\_\-actors, and m\_\-begin.
+
+Referenced by DD4hep::Simulation::Geant4UserRunAction::BeginOfRunAction().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a45da17c9f91b5448ce77b99cd44db369}{
+\index{DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}!callAtBegin@{callAtBegin}}
+\index{callAtBegin@{callAtBegin}!DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}}
+\subsubsection[{callAtBegin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q , typename T $>$ void DD4hep::Simulation::Geant4RunActionSequence::callAtBegin (Q $\ast$ {\em p}, \/  void(T::$\ast$)(const G4Run $\ast$) {\em f})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a45da17c9f91b5448ce77b99cd44db369}
+
+
+Register begin-\/of-\/run callback. Types Q and \hyperlink{class_t}{T} must be polymorph! 
+
+Definition at line 128 of file Geant4RunAction.h.
+
+References DD4hep::CallbackSequence::add(), and m\_\-begin.
+
+Referenced by DD4hep::Simulation::Geant4OutputAction::configureFiber(), DD4hep::Simulation::Geant4EventSeed::Geant4EventSeed(), DD4hep::Simulation::Geant4GeneratorActionInit::Geant4GeneratorActionInit(), and DD4hep::Converter$<$ T, ARG $>$::operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_aeaecc7d36c3d746ccc4902c86c60e3da}{
+\index{DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}!callAtEnd@{callAtEnd}}
+\index{callAtEnd@{callAtEnd}!DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}}
+\subsubsection[{callAtEnd}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q , typename T $>$ void DD4hep::Simulation::Geant4RunActionSequence::callAtEnd (Q $\ast$ {\em p}, \/  void(T::$\ast$)(const G4Run $\ast$) {\em f})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_aeaecc7d36c3d746ccc4902c86c60e3da}
+
+
+Register end-\/of-\/run callback. Types Q and \hyperlink{class_t}{T} must be polymorph! 
+
+Definition at line 133 of file Geant4RunAction.h.
+
+References DD4hep::CallbackSequence::add(), and m\_\-end.
+
+Referenced by DD4hep::Simulation::Geant4OutputAction::configureFiber(), DD4hep::Simulation::Geant4GeneratorActionInit::Geant4GeneratorActionInit(), and DD4hep::Converter$<$ T, ARG $>$::operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_adf657c521620857ffed702783c0a2712}{
+\index{DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}!configureFiber@{configureFiber}}
+\index{configureFiber@{configureFiber}!DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}}
+\subsubsection[{configureFiber}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4RunActionSequence::configureFiber ({\bf Geant4Context} $\ast$ {\em thread\_\-context})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_adf657c521620857ffed702783c0a2712}
+
+
+Set or update client for the use in a new thread fiber. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a6adc7138508303e4e417cb48a737ab19}{DD4hep::Simulation::Geant4Action}.
+
+Definition at line 123 of file Geant4RunAction.cpp.
+
+References DD4hep::Simulation::Geant4Action::configureFiber(), and m\_\-actors.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a2a21cad772d05ac39502c35e334c6e5f}{
+\index{DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}!end@{end}}
+\index{end@{end}!DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4RunActionSequence::end (const G4Run $\ast$ {\em run})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a2a21cad772d05ac39502c35e334c6e5f}
+
+
+End-\/of-\/run callback. Post-\/track action callback. 
+
+Definition at line 151 of file Geant4RunAction.cpp.
+
+References DD4hep::Simulation::Geant4RunAction::end(), m\_\-actors, and m\_\-end.
+
+Referenced by DD4hep::Simulation::Geant4UserRunAction::EndOfRunAction().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a8ebffd1974870b7e167f580610c9aa72}{
+\index{DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}!get@{get}}
+\index{get@{get}!DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4RunAction}$\ast$ DD4hep::Simulation::Geant4RunActionSequence::get (const std::string \& {\em name}) const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a8ebffd1974870b7e167f580610c9aa72}
+
+
+Get an action by name. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_ad94eee6a819a88302a0eaa0874d88fa3}{
+\index{DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}!updateContext@{updateContext}}
+\index{updateContext@{updateContext}!DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}}
+\subsubsection[{updateContext}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4RunActionSequence::updateContext ({\bf Geant4Context} $\ast$ {\em ctxt})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_ad94eee6a819a88302a0eaa0874d88fa3}
+
+
+Set or update client context. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae3b9daf2af881df956c46568c0743313}{DD4hep::Simulation::Geant4Action}.
+
+Definition at line 117 of file Geant4RunAction.cpp.
+
+References m\_\-actors, and DD4hep::Simulation::Geant4Action::m\_\-context.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a780b499622542d52941141b108ab1258}{
+\index{DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}!m\_\-actors@{m\_\-actors}}
+\index{m\_\-actors@{m\_\-actors}!DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}}
+\subsubsection[{m\_\-actors}]{\setlength{\rightskip}{0pt plus 5cm}Actors$<${\bf Geant4RunAction}$>$ {\bf DD4hep::Simulation::Geant4RunActionSequence::m\_\-actors}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a780b499622542d52941141b108ab1258}
+
+
+The list of action objects to be called. 
+
+Definition at line 114 of file Geant4RunAction.h.
+
+Referenced by adopt(), begin(), configureFiber(), end(), updateContext(), and $\sim$Geant4RunActionSequence().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a833ebd7f7da62ebeeb561815387b0bbe}{
+\index{DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}!m\_\-begin@{m\_\-begin}}
+\index{m\_\-begin@{m\_\-begin}!DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}}
+\subsubsection[{m\_\-begin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CallbackSequence} {\bf DD4hep::Simulation::Geant4RunActionSequence::m\_\-begin}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a833ebd7f7da62ebeeb561815387b0bbe}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence for begin-\/run action. 
+
+Definition at line 110 of file Geant4RunAction.h.
+
+Referenced by begin(), callAtBegin(), and $\sim$Geant4RunActionSequence().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a94c03005b1c789e05144558c840737f6}{
+\index{DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}!m\_\-end@{m\_\-end}}
+\index{m\_\-end@{m\_\-end}!DD4hep::Simulation::Geant4RunActionSequence@{DD4hep::Simulation::Geant4RunActionSequence}}
+\subsubsection[{m\_\-end}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CallbackSequence} {\bf DD4hep::Simulation::Geant4RunActionSequence::m\_\-end}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_a94c03005b1c789e05144558c840737f6}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence for end-\/run action. 
+
+Definition at line 112 of file Geant4RunAction.h.
+
+Referenced by callAtEnd(), end(), and $\sim$Geant4RunActionSequence().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_run_action_8h}{Geant4RunAction.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_run_action_8cpp}{Geant4RunAction.cpp}\end{DoxyCompactItemize}

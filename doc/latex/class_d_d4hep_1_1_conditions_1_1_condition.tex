@@ -1,0 +1,529 @@
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition}{
+\section{DD4hep::Conditions::Condition Class Reference}
+\label{class_d_d4hep_1_1_conditions_1_1_condition}\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+}
+
+
+Main condition object handle.  
+
+
+{\ttfamily \#include $<$Conditions.h$>$}Inheritance diagram for DD4hep::Conditions::Condition::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_conditions_1_1_condition}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_1_1_processor}{Processor}
+\begin{DoxyCompactList}\small\item\em Abstract base for processing callbacks. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298}{StringFlags} \{ \par
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a407e2b00d51258e13d82e8632f62746b}{WITH\_\-IOV} =  1$<$$<$0, 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a4a0769943c197cfba347ebc1397a2ee7}{WITH\_\-ADDRESS} =  1$<$$<$1, 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a14e827a81942c00e5a4db449e434225e}{WITH\_\-TYPE} =  1$<$$<$2, 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a3d197a913c287e610e4620cc80ba46d7}{WITH\_\-COMMENT} =  1$<$$<$4, 
+\par
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a1f2afb3299a66acc0b45e2e098053253}{WITH\_\-DATATYPE} =  1$<$$<$5, 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a35bae13c963ac6e110acfd8e11a2f054}{WITH\_\-DATA} =  1$<$$<$6, 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a09fe0228207ad624d583479a9c7c10d1}{NO\_\-NAME} =  1$<$$<$20, 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a9a77df7c1176110f0e42e09fe834cc6a}{NONE}
+ \}
+\item 
+enum \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9}{ConditionState} \{ \par
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9a5dc589abb882dce294a5c4232fe381a7}{INACTIVE} =  0, 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9a6a6c6f47c2bd5105363d432f8e55fcfa}{ACTIVE} =  1$<$$<$0, 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9aaecadd3a86731c33c98552cb8b5da1dc}{CHECKED} =  1$<$$<$2, 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9a81168be4049b53d9debe98ba4a1e1001}{DERIVED} =  1$<$$<$3, 
+\par
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9a2473120270dacdf59c4d2ad3e2448b5e}{TEMPERATURE} =  1$<$$<$4, 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9acc3efde567a81db8bb17e82694367ed8}{PRESSURE} =  1$<$$<$5, 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9a6b6a69db6a46a34008646da2d4e24c8f}{ALIGNMENT} =  1$<$$<$6, 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9a1a23fffc99552355e8f769351699b9a7}{USER\_\-FLAGS\_\-FIRST} =  1$<$$<$16, 
+\par
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9afb991714d979422b523fd4c3259bedbf}{USER\_\-FLAGS\_\-LAST} =  1$<$$<$31
+ \}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object}{Interna::ConditionObject} \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a6fc8dae0dad41db6a237920c85f8a55d}{Object}
+\begin{DoxyCompactList}\small\item\em Standard object type. \item\end{DoxyCompactList}\item 
+typedef unsigned int \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{key\_\-type}
+\begin{DoxyCompactList}\small\item\em Forward definition of the key type. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_ad84300e226b2085ec5e9db7f47be5539}{iov\_\-type}
+\begin{DoxyCompactList}\small\item\em Forward definition of the iov type. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a2dbcbbb3d3c0fef0cf843e7d41dd14c2}{Condition} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_adda1381c6a8624074e5c6bb011c060ad}{Condition} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \&c)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a6bd06500c7a9dce845e676d6370ad3c3}{Condition} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_object}{Object} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a54aa97a5c9e69787c94f1aee79d2f919}{Condition} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&e)
+\begin{DoxyCompactList}\small\item\em Constructor to be used when reading the already parsed object. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a0169d2e5f3d98ac7500b9f612ad21cc9}{Condition} (const std::string \&name, const std::string \&type)
+\begin{DoxyCompactList}\small\item\em Initializing constructor for a pure, undecorated conditions object. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a270d3763943c0042ed991a310670ea5c}{operator=} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \&c)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_ac877415327919f75d4d88d3f9c67f2f5}{str} (int with\_\-data=WITH\_\-IOV$|$WITH\_\-ADDRESS$|$WITH\_\-DATATYPE) const 
+\begin{DoxyCompactList}\small\item\em Output method. \item\end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a927e07797c9f318c43aa7ed220e3b424}{dataType} () const 
+\begin{DoxyCompactList}\small\item\em Access the data type. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_opaque_data}{OpaqueData} \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a1154252bf161472cd72411149a10702d}{data} () const 
+\begin{DoxyCompactList}\small\item\em Access the \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} block. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_i_o_v_type}{IOVType} \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a855588ac1eb5fea843808c0fce5dd3aa}{iovType} () const 
+\begin{DoxyCompactList}\small\item\em Access the \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} type. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_i_o_v}{iov\_\-type} \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_ab22cbdbeece6355070483572b6a117fb}{iov} () const 
+\begin{DoxyCompactList}\small\item\em Access the \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} block. \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_ab4b94316f4df66998b750336ab14dc90}{name} () const 
+\begin{DoxyCompactList}\small\item\em Access the name of the condition. \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_ad9e7b6937816fe75a440802f835de6bc}{type} () const 
+\begin{DoxyCompactList}\small\item\em Access the type field of the condition. \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_aba1cf327a9df8f9e694cebc1c3505d4e}{comment} () const 
+\begin{DoxyCompactList}\small\item\em Access the comment field of the condition. \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a2380234fddc3c50888eaf57ae60948f0}{value} () const 
+\begin{DoxyCompactList}\small\item\em Access the value field of the condition as a string. \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7bbc628e25bc0f887743ce52f56b07cb}{address} () const 
+\begin{DoxyCompactList}\small\item\em Access the address string \mbox{[}e.g. database identifier\mbox{]}. \item\end{DoxyCompactList}\item 
+const std::type\_\-info \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a4000e74dc8e5830d56f01b5dad0951ff}{typeInfo} () const 
+\begin{DoxyCompactList}\small\item\em Access to the type information. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_basic_grammar}{BasicGrammar} \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a858566d0194945ed9b0e0de1bf2597cd}{descriptor} () const 
+\begin{DoxyCompactList}\small\item\em Access to the grammar type. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{key\_\-type} \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a38db941b4934fbb36ebb7eade86593a8}{key} () const 
+\begin{DoxyCompactList}\small\item\em Hash identifier. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_affc3f86e2c713e2122dabc3372d460f0}{rebind} ()
+\begin{DoxyCompactList}\small\item\em Re-\/evaluate the conditions data according to the previous bound type definition. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_t}{T} \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a5e287f594f3d14d6a6870be8c34b65cc}{bind} ()
+\begin{DoxyCompactList}\small\item\em Bind the data of the conditions object to a given format. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_t}{T} \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_af21f0921b4cd325d6cc6616747a278c9}{get} ()
+\begin{DoxyCompactList}\small\item\em Generic getter. Specify the exact type, not a polymorph type. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\const \hyperlink{class_t}{T} \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a8e5ee257360520a40edf585d93874d1f}{get} () const 
+\begin{DoxyCompactList}\small\item\em Generic getter (const version). Specify the exact type, not a polymorph type. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_adddcbf402cb3e6fc31aebc933045da88}{is\_\-bound} () const 
+\begin{DoxyCompactList}\small\item\em Check if object is already bound.... \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main condition object handle. This objects allows access to the data block and the interval of validity for a single condition.
+
+Note: \hyperlink{namespace_d_d4hep_1_1_conditions}{Conditions} may be shared between several DetElement objects. Hence, the back-\/link to the DetElement structure cannot be set -\/ it would be ambiguous.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 70 of file Conditions.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_ad84300e226b2085ec5e9db7f47be5539}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!iov\_\-type@{iov\_\-type}}
+\index{iov\_\-type@{iov\_\-type}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{iov\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf IOV} {\bf DD4hep::Conditions::Condition::iov\_\-type}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_ad84300e226b2085ec5e9db7f47be5539}
+
+
+Forward definition of the iov type. 
+
+Definition at line 77 of file Conditions.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!key\_\-type@{key\_\-type}}
+\index{key\_\-type@{key\_\-type}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{key\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf DD4hep::Conditions::Condition::key\_\-type}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}
+
+
+Forward definition of the key type. 
+
+Definition at line 75 of file Conditions.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a6fc8dae0dad41db6a237920c85f8a55d}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!Object@{Object}}
+\index{Object@{Object}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{Object}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Interna::ConditionObject} {\bf DD4hep::Conditions::Condition::Object}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a6fc8dae0dad41db6a237920c85f8a55d}
+
+
+Standard object type. 
+
+Definition at line 73 of file Conditions.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!ConditionState@{ConditionState}}
+\index{ConditionState@{ConditionState}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{ConditionState}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DD4hep::Conditions::Condition::ConditionState}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{INACTIVE@{INACTIVE}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!INACTIVE@{INACTIVE}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9a5dc589abb882dce294a5c4232fe381a7}{
+INACTIVE}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9a5dc589abb882dce294a5c4232fe381a7}
+}]\index{ACTIVE@{ACTIVE}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!ACTIVE@{ACTIVE}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9a6a6c6f47c2bd5105363d432f8e55fcfa}{
+ACTIVE}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9a6a6c6f47c2bd5105363d432f8e55fcfa}
+}]\index{CHECKED@{CHECKED}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!CHECKED@{CHECKED}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9aaecadd3a86731c33c98552cb8b5da1dc}{
+CHECKED}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9aaecadd3a86731c33c98552cb8b5da1dc}
+}]\index{DERIVED@{DERIVED}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!DERIVED@{DERIVED}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9a81168be4049b53d9debe98ba4a1e1001}{
+DERIVED}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9a81168be4049b53d9debe98ba4a1e1001}
+}]\index{TEMPERATURE@{TEMPERATURE}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!TEMPERATURE@{TEMPERATURE}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9a2473120270dacdf59c4d2ad3e2448b5e}{
+TEMPERATURE}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9a2473120270dacdf59c4d2ad3e2448b5e}
+}]\index{PRESSURE@{PRESSURE}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!PRESSURE@{PRESSURE}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9acc3efde567a81db8bb17e82694367ed8}{
+PRESSURE}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9acc3efde567a81db8bb17e82694367ed8}
+}]\index{ALIGNMENT@{ALIGNMENT}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!ALIGNMENT@{ALIGNMENT}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9a6b6a69db6a46a34008646da2d4e24c8f}{
+ALIGNMENT}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9a6b6a69db6a46a34008646da2d4e24c8f}
+}]\index{USER\_\-FLAGS\_\-FIRST@{USER\_\-FLAGS\_\-FIRST}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!USER\_\-FLAGS\_\-FIRST@{USER\_\-FLAGS\_\-FIRST}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9a1a23fffc99552355e8f769351699b9a7}{
+USER\_\-FLAGS\_\-FIRST}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9a1a23fffc99552355e8f769351699b9a7}
+}]\index{USER\_\-FLAGS\_\-LAST@{USER\_\-FLAGS\_\-LAST}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!USER\_\-FLAGS\_\-LAST@{USER\_\-FLAGS\_\-LAST}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9afb991714d979422b523fd4c3259bedbf}{
+USER\_\-FLAGS\_\-LAST}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a22825c02029e39fd0aa95c08c9be56d9afb991714d979422b523fd4c3259bedbf}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 90 of file Conditions.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!StringFlags@{StringFlags}}
+\index{StringFlags@{StringFlags}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{StringFlags}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DD4hep::Conditions::Condition::StringFlags}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{WITH\_\-IOV@{WITH\_\-IOV}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!WITH\_\-IOV@{WITH\_\-IOV}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a407e2b00d51258e13d82e8632f62746b}{
+WITH\_\-IOV}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a407e2b00d51258e13d82e8632f62746b}
+}]\index{WITH\_\-ADDRESS@{WITH\_\-ADDRESS}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!WITH\_\-ADDRESS@{WITH\_\-ADDRESS}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a4a0769943c197cfba347ebc1397a2ee7}{
+WITH\_\-ADDRESS}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a4a0769943c197cfba347ebc1397a2ee7}
+}]\index{WITH\_\-TYPE@{WITH\_\-TYPE}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!WITH\_\-TYPE@{WITH\_\-TYPE}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a14e827a81942c00e5a4db449e434225e}{
+WITH\_\-TYPE}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a14e827a81942c00e5a4db449e434225e}
+}]\index{WITH\_\-COMMENT@{WITH\_\-COMMENT}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!WITH\_\-COMMENT@{WITH\_\-COMMENT}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a3d197a913c287e610e4620cc80ba46d7}{
+WITH\_\-COMMENT}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a3d197a913c287e610e4620cc80ba46d7}
+}]\index{WITH\_\-DATATYPE@{WITH\_\-DATATYPE}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!WITH\_\-DATATYPE@{WITH\_\-DATATYPE}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a1f2afb3299a66acc0b45e2e098053253}{
+WITH\_\-DATATYPE}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a1f2afb3299a66acc0b45e2e098053253}
+}]\index{WITH\_\-DATA@{WITH\_\-DATA}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!WITH\_\-DATA@{WITH\_\-DATA}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a35bae13c963ac6e110acfd8e11a2f054}{
+WITH\_\-DATA}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a35bae13c963ac6e110acfd8e11a2f054}
+}]\index{NO\_\-NAME@{NO\_\-NAME}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!NO\_\-NAME@{NO\_\-NAME}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a09fe0228207ad624d583479a9c7c10d1}{
+NO\_\-NAME}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a09fe0228207ad624d583479a9c7c10d1}
+}]\index{NONE@{NONE}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!NONE@{NONE}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a9a77df7c1176110f0e42e09fe834cc6a}{
+NONE}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a6d54644b9e4e9d550a10707e72e5b298a9a77df7c1176110f0e42e09fe834cc6a}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 80 of file Conditions.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a2dbcbbb3d3c0fef0cf843e7d41dd14c2}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!Condition@{Condition}}
+\index{Condition@{Condition}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{Condition}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Conditions::Condition::Condition ()}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a2dbcbbb3d3c0fef0cf843e7d41dd14c2}
+
+
+Default constructor. \hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_adda1381c6a8624074e5c6bb011c060ad}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!Condition@{Condition}}
+\index{Condition@{Condition}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{Condition}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Conditions::Condition::Condition (const {\bf Condition} \& {\em c})}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_adda1381c6a8624074e5c6bb011c060ad}
+
+
+Copy constructor. \hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a6bd06500c7a9dce845e676d6370ad3c3}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!Condition@{Condition}}
+\index{Condition@{Condition}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{Condition}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Conditions::Condition::Condition ({\bf Condition::Object} $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a6bd06500c7a9dce845e676d6370ad3c3}
+
+
+Initializing constructor. 
+
+Definition at line 182 of file Conditions.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a54aa97a5c9e69787c94f1aee79d2f919}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!Condition@{Condition}}
+\index{Condition@{Condition}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{Condition}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q $>$ DD4hep::Conditions::Condition::Condition (const {\bf Handle}$<$ Q $>$ \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a54aa97a5c9e69787c94f1aee79d2f919}
+
+
+Constructor to be used when reading the already parsed object. 
+
+Definition at line 122 of file Conditions.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a0169d2e5f3d98ac7500b9f612ad21cc9}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!Condition@{Condition}}
+\index{Condition@{Condition}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{Condition}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Conditions::Condition::Condition (const std::string \& {\em name}, \/  const std::string \& {\em type})}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a0169d2e5f3d98ac7500b9f612ad21cc9}
+
+
+Initializing constructor for a pure, undecorated conditions object. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a7bbc628e25bc0f887743ce52f56b07cb}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!address@{address}}
+\index{address@{address}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{address}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf string} \& Condition::address () const}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a7bbc628e25bc0f887743ce52f56b07cb}
+
+
+Access the address string \mbox{[}e.g. database identifier\mbox{]}. 
+
+Definition at line 124 of file Conditions.cpp.
+
+References DD4hep::Handle$<$ Interna::ConditionObject $>$::access(), and DD4hep::Conditions::Interna::ConditionObject::address.\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a5e287f594f3d14d6a6870be8c34b65cc}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!bind@{bind}}
+\index{bind@{bind}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{bind}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf T} \& DD4hep::Conditions::Condition::bind ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a5e287f594f3d14d6a6870be8c34b65cc}
+
+
+Bind the data of the conditions object to a given format. Bind the data of the conditions object to a given format.
+
+Note: The type definition is possible exactly once. Any further rebindings MUST match the identical type. 
+
+Definition at line 194 of file ConditionsInterna.h.
+
+References DD4hep::Handle$<$ Interna::ConditionObject $>$::access(), DD4hep::Conditions::Interna::ConditionObject::data, DD4hep::OpaqueDataBlock::set(), and DD4hep::Conditions::Interna::ConditionObject::value.
+
+Referenced by DD4hep::Conditions::Test::access\_\-val(), and DD4hep::Alignments::AlignmentCondition::data().\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_aba1cf327a9df8f9e694cebc1c3505d4e}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!comment@{comment}}
+\index{comment@{comment}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{comment}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf string} \& Condition::comment () const}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_aba1cf327a9df8f9e694cebc1c3505d4e}
+
+
+Access the comment field of the condition. 
+
+Definition at line 119 of file Conditions.cpp.
+
+References DD4hep::Handle$<$ Interna::ConditionObject $>$::access(), and DD4hep::Conditions::Interna::ConditionObject::comment.\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a1154252bf161472cd72411149a10702d}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!data@{data}}
+\index{data@{data}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DD4hep::OpaqueData} \& Condition::data () const}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a1154252bf161472cd72411149a10702d}
+
+
+Access the \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} block. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_handle_a821fe41f46aa5ce97cfb04a6a60e5cd5}{DD4hep::Handle$<$ Interna::ConditionObject $>$}.
+
+Definition at line 89 of file Conditions.cpp.
+
+References DD4hep::Handle$<$ Interna::ConditionObject $>$::access(), and DD4hep::Conditions::Interna::ConditionObject::data.
+
+Referenced by DD4hep::Conditions::Test::\_\-\_\-print\_\-bound\_\-container(), and is\_\-bound().\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a927e07797c9f318c43aa7ed220e3b424}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!dataType@{dataType}}
+\index{dataType@{dataType}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{dataType}]{\setlength{\rightskip}{0pt plus 5cm}int Condition::dataType () const}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a927e07797c9f318c43aa7ed220e3b424}
+
+
+Access the data type. Data block (bound type) 
+
+Definition at line 84 of file Conditions.cpp.
+
+References DD4hep::Handle$<$ Interna::ConditionObject $>$::access(), DD4hep::Conditions::Interna::ConditionObject::data, and DD4hep::OpaqueDataBlock::type.\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a858566d0194945ed9b0e0de1bf2597cd}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!descriptor@{descriptor}}
+\index{descriptor@{descriptor}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{descriptor}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf DD4hep::BasicGrammar} \& Condition::descriptor () const}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a858566d0194945ed9b0e0de1bf2597cd}
+
+
+Access to the grammar type. 
+
+Definition at line 139 of file Conditions.cpp.
+
+References DD4hep::Handle$<$ Interna::ConditionObject $>$::access(), DD4hep::Conditions::Interna::ConditionObject::data, dd4hep::g, and DD4hep::OpaqueData::grammar.
+
+Referenced by typeInfo().\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a8e5ee257360520a40edf585d93874d1f}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!get@{get}}
+\index{get@{get}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const {\bf T} \& DD4hep::Conditions::Condition::get () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a8e5ee257360520a40edf585d93874d1f}
+
+
+Generic getter (const version). Specify the exact type, not a polymorph type. 
+
+Definition at line 203 of file ConditionsInterna.h.
+
+References DD4hep::Handle$<$ Interna::ConditionObject $>$::access(), DD4hep::Conditions::Interna::ConditionObject::data, and DD4hep::OpaqueData::get().\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_af21f0921b4cd325d6cc6616747a278c9}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!get@{get}}
+\index{get@{get}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf T} \& DD4hep::Conditions::Condition::get ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_af21f0921b4cd325d6cc6616747a278c9}
+
+
+Generic getter. Specify the exact type, not a polymorph type. 
+
+Definition at line 199 of file ConditionsInterna.h.
+
+References DD4hep::Handle$<$ Interna::ConditionObject $>$::access(), DD4hep::Conditions::Interna::ConditionObject::data, and DD4hep::OpaqueData::get().
+
+Referenced by DD4hep::Conditions::Test::\_\-\_\-print\_\-bound\_\-val(), DD4hep::Conditions::Test::access\_\-val(), DD4hep::Alignments::AlignmentCondition::data(), and DD4hep::Conditions::ConditionUpdateContext::get().\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_ab22cbdbeece6355070483572b6a117fb}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!iov@{iov}}
+\index{iov@{iov}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{iov}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf DD4hep::IOV} \& Condition::iov () const}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_ab22cbdbeece6355070483572b6a117fb}
+
+
+Access the \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} block. 
+
+Definition at line 99 of file Conditions.cpp.
+
+References DD4hep::Handle$<$ Interna::ConditionObject $>$::access(), and DD4hep::Conditions::Interna::ConditionObject::iovData().
+
+Referenced by DD4hep::Conditions::Test::check\_\-discrete\_\-condition(), DD4hep::Conditions::ConditionUpdateContext::get(), and DD4hep::Conditions::ConditionsManagerObject::registerUnlocked().\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a855588ac1eb5fea843808c0fce5dd3aa}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!iovType@{iovType}}
+\index{iovType@{iovType}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{iovType}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf DD4hep::IOVType} \& Condition::iovType () const}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a855588ac1eb5fea843808c0fce5dd3aa}
+
+
+Access the \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} type. Interval of validity 
+
+Definition at line 94 of file Conditions.cpp.
+
+References DD4hep::Handle$<$ Interna::ConditionObject $>$::access(), and DD4hep::Conditions::Interna::ConditionObject::iovType().\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_adddcbf402cb3e6fc31aebc933045da88}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!is\_\-bound@{is\_\-bound}}
+\index{is\_\-bound@{is\_\-bound}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{is\_\-bound}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Conditions::Condition::is\_\-bound () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_adddcbf402cb3e6fc31aebc933045da88}
+
+
+Check if object is already bound.... 
+
+Definition at line 178 of file Conditions.h.
+
+References data(), DD4hep::OpaqueData::is\_\-bound(), and DD4hep::Handle$<$ Interna::ConditionObject $>$::isValid().
+
+Referenced by DD4hep::Conditions::Test::access\_\-val(), and DD4hep::Alignments::AlignmentCondition::data().\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a38db941b4934fbb36ebb7eade86593a8}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!key@{key}}
+\index{key@{key}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Condition::key\_\-type} Condition::key () const}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a38db941b4934fbb36ebb7eade86593a8}
+
+
+Hash identifier. 
+
+Definition at line 134 of file Conditions.cpp.
+
+References DD4hep::Handle$<$ Interna::ConditionObject $>$::access(), and DD4hep::Conditions::Interna::ConditionObject::hash.\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_ab4b94316f4df66998b750336ab14dc90}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!name@{name}}
+\index{name@{name}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf string} \& Condition::name () const}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_ab4b94316f4df66998b750336ab14dc90}
+
+
+Access the name of the condition. Direct data items in string form 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_handle_a9c62b8d37e0f2354bae0093498dc15a1}{DD4hep::Handle$<$ Interna::ConditionObject $>$}.
+
+Definition at line 104 of file Conditions.cpp.
+
+References DD4hep::Handle$<$ Interna::ConditionObject $>$::access(), and DD4hep::NamedObject::name.
+
+Referenced by DD4hep::Conditions::Test::\_\-\_\-print\_\-bound\_\-container(), DD4hep::Conditions::Test::\_\-\_\-print\_\-bound\_\-val(), DD4hep::Conditions::Test::check\_\-discrete\_\-condition(), and rebind().\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a270d3763943c0042ed991a310670ea5c}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!operator=@{operator=}}
+\index{operator=@{operator=}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Condition}\& DD4hep::Conditions::Condition::operator= (const {\bf Condition} \& {\em c})}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a270d3763943c0042ed991a310670ea5c}
+
+
+Assignment operator. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_handle_a9bbf8f498df42e81ad26fb00233505a6}{DD4hep::Handle$<$ Interna::ConditionObject $>$}.\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_affc3f86e2c713e2122dabc3372d460f0}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!rebind@{rebind}}
+\index{rebind@{rebind}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{rebind}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Condition} \& Condition::rebind ()}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_affc3f86e2c713e2122dabc3372d460f0}
+
+
+Re-\/evaluate the conditions data according to the previous bound type definition. \hyperlink{namespace_d_d4hep_1_1_conditions}{Conditions} handling 
+
+Definition at line 151 of file Conditions.cpp.
+
+References DD4hep::Handle$<$ Interna::ConditionObject $>$::access(), DD4hep::Conditions::Interna::ConditionObject::data, DD4hep::except(), DD4hep::OpaqueData::fromString(), DD4hep::INFO, DD4hep::Conditions::Interna::ConditionObject::iov, DD4hep::IOV::iovType, name(), DD4hep::printout(), DD4hep::IOVType::type, DD4hep::Conditions::Interna::ConditionObject::validity, and DD4hep::Conditions::Interna::ConditionObject::value.\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_ac877415327919f75d4d88d3f9c67f2f5}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!str@{str}}
+\index{str@{str}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf string} Condition::str (int {\em with\_\-data} = {\ttfamily WITH\_\-IOV$|$WITH\_\-ADDRESS$|$WITH\_\-DATATYPE}) const}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_ac877415327919f75d4d88d3f9c67f2f5}
+
+
+Output method. 
+
+Definition at line 62 of file Conditions.cpp.
+
+References DD4hep::Handle$<$ Interna::ConditionObject $>$::access(), DD4hep::Conditions::Interna::ConditionObject::address, DD4hep::Conditions::Interna::ConditionObject::comment, DD4hep::Conditions::Interna::ConditionObject::data, DD4hep::OpaqueData::dataType(), DD4hep::Conditions::Interna::ConditionObject::iovData(), DD4hep::NamedObject::name, NO\_\-NAME, DD4hep::OpaqueData::str(), DD4hep::IOV::str(), DD4hep::NamedObject::type, WITH\_\-ADDRESS, WITH\_\-COMMENT, WITH\_\-DATA, WITH\_\-DATATYPE, WITH\_\-IOV, and WITH\_\-TYPE.\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_ad9e7b6937816fe75a440802f835de6bc}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!type@{type}}
+\index{type@{type}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf string} \& Condition::type () const}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_ad9e7b6937816fe75a440802f835de6bc}
+
+
+Access the type field of the condition. 
+
+Definition at line 109 of file Conditions.cpp.
+
+References DD4hep::Handle$<$ Interna::ConditionObject $>$::access(), and DD4hep::NamedObject::type.\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a4000e74dc8e5830d56f01b5dad0951ff}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!typeInfo@{typeInfo}}
+\index{typeInfo@{typeInfo}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{typeInfo}]{\setlength{\rightskip}{0pt plus 5cm}const type\_\-info \& Condition::typeInfo () const}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a4000e74dc8e5830d56f01b5dad0951ff}
+
+
+Access to the type information. \hyperlink{namespace_d_d4hep_1_1_conditions}{Conditions} meta-\/data 
+
+Definition at line 129 of file Conditions.cpp.
+
+References descriptor(), and DD4hep::BasicGrammar::type().
+
+Referenced by DD4hep::Conditions::Test::\_\-\_\-print\_\-bound\_\-container(), and DD4hep::Conditions::Test::\_\-\_\-print\_\-bound\_\-val().\hypertarget{class_d_d4hep_1_1_conditions_1_1_condition_a2380234fddc3c50888eaf57ae60948f0}{
+\index{DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}!value@{value}}
+\index{value@{value}!DD4hep::Conditions::Condition@{DD4hep::Conditions::Condition}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf string} \& Condition::value () const}}
+\label{class_d_d4hep_1_1_conditions_1_1_condition_a2380234fddc3c50888eaf57ae60948f0}
+
+
+Access the value field of the condition as a string. 
+
+Definition at line 114 of file Conditions.cpp.
+
+References DD4hep::Handle$<$ Interna::ConditionObject $>$::access(), and DD4hep::Conditions::Interna::ConditionObject::value.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_conditions_8h}{Conditions.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_conditions_8cpp}{Conditions.cpp}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/objects/\hyperlink{_d_d_core_2include_2_d_d4hep_2objects_2_conditions_interna_8h}{ConditionsInterna.h}\end{DoxyCompactItemize}

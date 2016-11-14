@@ -1,0 +1,117 @@
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_dependency_builder}{
+\section{DD4hep::Conditions::DependencyBuilder Class Reference}
+\label{class_d_d4hep_1_1_conditions_1_1_dependency_builder}\index{DD4hep::Conditions::DependencyBuilder@{DD4hep::Conditions::DependencyBuilder}}
+}
+
+
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} dependency builder.  
+
+
+{\ttfamily \#include $<$ConditionDerived.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_dependency_builder_a3587f9592bbecbbf5594e9953a67eea1}{DependencyBuilder} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_key}{ConditionKey} \&target, \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_update_call}{ConditionUpdateCall} $\ast$call)
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_conditions_1_1_dependency_builder_a133550ebf6fef71c365258c1034a4957}{$\sim$DependencyBuilder} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency}{ConditionDependency} $\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_dependency_builder_a250f7140327ba7e4e7344b47313ad0b5}{operator-\/$>$} ()
+\begin{DoxyCompactList}\small\item\em Access underlying object directly. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_dependency_builder_afbfb0aa5a9cd8a969588d705cca795e5}{add} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_key}{ConditionKey} \&source)
+\begin{DoxyCompactList}\small\item\em Add a new dependency. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency}{ConditionDependency} $\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_dependency_builder_a184c80416875c91985dda61b26a04022}{release} ()
+\begin{DoxyCompactList}\small\item\em Release the created dependency and take ownership. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_dependency}{ConditionDependency} $\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_dependency_builder_a038744f80e334eb539859fbc60614836}{m\_\-dependency}
+\begin{DoxyCompactList}\small\item\em The created dependency. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} dependency builder. \begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 202 of file ConditionDerived.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_dependency_builder_a3587f9592bbecbbf5594e9953a67eea1}{
+\index{DD4hep::Conditions::DependencyBuilder@{DD4hep::Conditions::DependencyBuilder}!DependencyBuilder@{DependencyBuilder}}
+\index{DependencyBuilder@{DependencyBuilder}!DD4hep::Conditions::DependencyBuilder@{DD4hep::Conditions::DependencyBuilder}}
+\subsubsection[{DependencyBuilder}]{\setlength{\rightskip}{0pt plus 5cm}DependencyBuilder::DependencyBuilder (const {\bf ConditionKey} \& {\em target}, \/  {\bf ConditionUpdateCall} $\ast$ {\em call})}}
+\label{class_d_d4hep_1_1_conditions_1_1_dependency_builder_a3587f9592bbecbbf5594e9953a67eea1}
+
+
+Initializing constructor. 
+
+Definition at line 85 of file ConditionDerived.cpp.\hypertarget{class_d_d4hep_1_1_conditions_1_1_dependency_builder_a133550ebf6fef71c365258c1034a4957}{
+\index{DD4hep::Conditions::DependencyBuilder@{DD4hep::Conditions::DependencyBuilder}!$\sim$DependencyBuilder@{$\sim$DependencyBuilder}}
+\index{$\sim$DependencyBuilder@{$\sim$DependencyBuilder}!DD4hep::Conditions::DependencyBuilder@{DD4hep::Conditions::DependencyBuilder}}
+\subsubsection[{$\sim$DependencyBuilder}]{\setlength{\rightskip}{0pt plus 5cm}DependencyBuilder::$\sim$DependencyBuilder ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_dependency_builder_a133550ebf6fef71c365258c1034a4957}
+
+
+Default destructor. 
+
+Definition at line 91 of file ConditionDerived.cpp.
+
+References m\_\-dependency, and DD4hep::releasePtr().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_dependency_builder_afbfb0aa5a9cd8a969588d705cca795e5}{
+\index{DD4hep::Conditions::DependencyBuilder@{DD4hep::Conditions::DependencyBuilder}!add@{add}}
+\index{add@{add}!DD4hep::Conditions::DependencyBuilder@{DD4hep::Conditions::DependencyBuilder}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void DependencyBuilder::add (const {\bf ConditionKey} \& {\em source})}}
+\label{class_d_d4hep_1_1_conditions_1_1_dependency_builder_afbfb0aa5a9cd8a969588d705cca795e5}
+
+
+Add a new dependency. 
+
+Definition at line 96 of file ConditionDerived.cpp.
+
+References DD4hep::Conditions::ConditionDependency::dependencies, DD4hep::except(), and m\_\-dependency.\hypertarget{class_d_d4hep_1_1_conditions_1_1_dependency_builder_a250f7140327ba7e4e7344b47313ad0b5}{
+\index{DD4hep::Conditions::DependencyBuilder@{DD4hep::Conditions::DependencyBuilder}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!DD4hep::Conditions::DependencyBuilder@{DD4hep::Conditions::DependencyBuilder}}
+\subsubsection[{operator-\/$>$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ConditionDependency}$\ast$ DD4hep::Conditions::DependencyBuilder::operator-\/$>$ ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_dependency_builder_a250f7140327ba7e4e7344b47313ad0b5}
+
+
+Access underlying object directly. 
+
+Definition at line 212 of file ConditionDerived.h.
+
+References m\_\-dependency.\hypertarget{class_d_d4hep_1_1_conditions_1_1_dependency_builder_a184c80416875c91985dda61b26a04022}{
+\index{DD4hep::Conditions::DependencyBuilder@{DD4hep::Conditions::DependencyBuilder}!release@{release}}
+\index{release@{release}!DD4hep::Conditions::DependencyBuilder@{DD4hep::Conditions::DependencyBuilder}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ConditionDependency} $\ast$ DependencyBuilder::release ()}}
+\label{class_d_d4hep_1_1_conditions_1_1_dependency_builder_a184c80416875c91985dda61b26a04022}
+
+
+Release the created dependency and take ownership. 
+
+Definition at line 105 of file ConditionDerived.cpp.
+
+References DD4hep::except(), and m\_\-dependency.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_dependency_builder_a038744f80e334eb539859fbc60614836}{
+\index{DD4hep::Conditions::DependencyBuilder@{DD4hep::Conditions::DependencyBuilder}!m\_\-dependency@{m\_\-dependency}}
+\index{m\_\-dependency@{m\_\-dependency}!DD4hep::Conditions::DependencyBuilder@{DD4hep::Conditions::DependencyBuilder}}
+\subsubsection[{m\_\-dependency}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ConditionDependency}$\ast$ {\bf DD4hep::Conditions::DependencyBuilder::m\_\-dependency}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_dependency_builder_a038744f80e334eb539859fbc60614836}
+
+
+The created dependency. 
+
+Definition at line 205 of file ConditionDerived.h.
+
+Referenced by add(), operator-\/$>$(), release(), and $\sim$DependencyBuilder().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_condition_derived_8h}{ConditionDerived.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_condition_derived_8cpp}{ConditionDerived.cpp}\end{DoxyCompactItemize}

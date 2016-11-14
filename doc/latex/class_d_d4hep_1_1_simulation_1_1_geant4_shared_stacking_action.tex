@@ -1,0 +1,144 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action}{
+\section{DD4hep::Simulation::Geant4SharedStackingAction Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action}\index{DD4hep::Simulation::Geant4SharedStackingAction@{DD4hep::Simulation::Geant4SharedStackingAction}}
+}
+
+
+Implementation of the Geant4 shared stacking action.  
+
+
+{\ttfamily \#include $<$Geant4StackingAction.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4SharedStackingAction::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_a555935d842ff0a023c1bf80592ad086e}{Geant4SharedStackingAction} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$context, const std::string \&nam)
+\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_a0cfbf0ceed945aff6b837df8fd5459c7}{$\sim$Geant4SharedStackingAction} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_af204c8b8ed06b5ac14c168ea639c51ac}{configureFiber} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$thread\_\-context)
+\begin{DoxyCompactList}\small\item\em Set or update client for the use in a new thread fiber. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_a8201cb5679ace2713e6a34ebe1282dbf}{use} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stacking_action}{Geant4StackingAction} $\ast$action)
+\begin{DoxyCompactList}\small\item\em Underlying object to be used during the execution of this thread. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_af92666552c404908a7e99c8145846c5f}{newStage} ()
+\begin{DoxyCompactList}\small\item\em New-\/stage callback. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_a22e3516dfed160da7a3b246d28098891}{prepare} ()
+\begin{DoxyCompactList}\small\item\em Preparation callback. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stacking_action}{Geant4StackingAction} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_a3f3be5f46d2ee56467337edf438fc153}{m\_\-action}
+\begin{DoxyCompactList}\small\item\em Reference to the shared action. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of the Geant4 shared stacking action. Wrapper to share single instances of stacking actions for multi-\/threaded purposes. The wrapper ensures the locking of the basic actions to avoid race conditions.
+
+Shared action should be 'fast'. The global lock otherwise inhibits the efficient use of the multiple threads.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 66 of file Geant4StackingAction.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_a555935d842ff0a023c1bf80592ad086e}{
+\index{DD4hep::Simulation::Geant4SharedStackingAction@{DD4hep::Simulation::Geant4SharedStackingAction}!Geant4SharedStackingAction@{Geant4SharedStackingAction}}
+\index{Geant4SharedStackingAction@{Geant4SharedStackingAction}!DD4hep::Simulation::Geant4SharedStackingAction@{DD4hep::Simulation::Geant4SharedStackingAction}}
+\subsubsection[{Geant4SharedStackingAction}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4SharedStackingAction::Geant4SharedStackingAction ({\bf Geant4Context} $\ast$ {\em context}, \/  const std::string \& {\em nam})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_a555935d842ff0a023c1bf80592ad086e}
+
+
+Standard constructor. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_a0cfbf0ceed945aff6b837df8fd5459c7}{
+\index{DD4hep::Simulation::Geant4SharedStackingAction@{DD4hep::Simulation::Geant4SharedStackingAction}!$\sim$Geant4SharedStackingAction@{$\sim$Geant4SharedStackingAction}}
+\index{$\sim$Geant4SharedStackingAction@{$\sim$Geant4SharedStackingAction}!DD4hep::Simulation::Geant4SharedStackingAction@{DD4hep::Simulation::Geant4SharedStackingAction}}
+\subsubsection[{$\sim$Geant4SharedStackingAction}]{\setlength{\rightskip}{0pt plus 5cm}Geant4SharedStackingAction::$\sim$Geant4SharedStackingAction ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_a0cfbf0ceed945aff6b837df8fd5459c7}
+
+
+Default destructor. 
+
+Definition at line 50 of file Geant4StackingAction.cpp.
+
+References DD4hep::InstanceCount::decrement(), m\_\-action, and DD4hep::releasePtr().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_af204c8b8ed06b5ac14c168ea639c51ac}{
+\index{DD4hep::Simulation::Geant4SharedStackingAction@{DD4hep::Simulation::Geant4SharedStackingAction}!configureFiber@{configureFiber}}
+\index{configureFiber@{configureFiber}!DD4hep::Simulation::Geant4SharedStackingAction@{DD4hep::Simulation::Geant4SharedStackingAction}}
+\subsubsection[{configureFiber}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SharedStackingAction::configureFiber ({\bf Geant4Context} $\ast$ {\em thread\_\-context})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_af204c8b8ed06b5ac14c168ea639c51ac}
+
+
+Set or update client for the use in a new thread fiber. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a6adc7138508303e4e417cb48a737ab19}{DD4hep::Simulation::Geant4Action}.
+
+Definition at line 56 of file Geant4StackingAction.cpp.
+
+References DD4hep::Simulation::Geant4Action::configureFiber(), and m\_\-action.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_af92666552c404908a7e99c8145846c5f}{
+\index{DD4hep::Simulation::Geant4SharedStackingAction@{DD4hep::Simulation::Geant4SharedStackingAction}!newStage@{newStage}}
+\index{newStage@{newStage}!DD4hep::Simulation::Geant4SharedStackingAction@{DD4hep::Simulation::Geant4SharedStackingAction}}
+\subsubsection[{newStage}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SharedStackingAction::newStage ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_af92666552c404908a7e99c8145846c5f}
+
+
+New-\/stage callback. Begin-\/of-\/stacking callback. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stacking_action_a2709ba86b13b0574dcd1d8e580209d0b}{DD4hep::Simulation::Geant4StackingAction}.
+
+Definition at line 72 of file Geant4StackingAction.cpp.
+
+References DD4hep::Simulation::Geant4Action::context(), m\_\-action, and DD4hep::Simulation::Geant4StackingAction::newStage().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_a22e3516dfed160da7a3b246d28098891}{
+\index{DD4hep::Simulation::Geant4SharedStackingAction@{DD4hep::Simulation::Geant4SharedStackingAction}!prepare@{prepare}}
+\index{prepare@{prepare}!DD4hep::Simulation::Geant4SharedStackingAction@{DD4hep::Simulation::Geant4SharedStackingAction}}
+\subsubsection[{prepare}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SharedStackingAction::prepare ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_a22e3516dfed160da7a3b246d28098891}
+
+
+Preparation callback. End-\/of-\/stacking callback. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stacking_action_a3974c0e7b737bdccced8c196fc316b5b}{DD4hep::Simulation::Geant4StackingAction}.
+
+Definition at line 82 of file Geant4StackingAction.cpp.
+
+References DD4hep::Simulation::Geant4Action::context(), m\_\-action, and DD4hep::Simulation::Geant4StackingAction::prepare().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_a8201cb5679ace2713e6a34ebe1282dbf}{
+\index{DD4hep::Simulation::Geant4SharedStackingAction@{DD4hep::Simulation::Geant4SharedStackingAction}!use@{use}}
+\index{use@{use}!DD4hep::Simulation::Geant4SharedStackingAction@{DD4hep::Simulation::Geant4SharedStackingAction}}
+\subsubsection[{use}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SharedStackingAction::use ({\bf Geant4StackingAction} $\ast$ {\em action})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_a8201cb5679ace2713e6a34ebe1282dbf}
+
+
+Underlying object to be used during the execution of this thread. 
+
+Definition at line 61 of file Geant4StackingAction.cpp.
+
+References DD4hep::Simulation::Geant4Action::addRef(), DD4hep::PropertyManager::adopt(), m\_\-action, DD4hep::Simulation::Geant4Action::m\_\-properties, and DD4hep::Simulation::Geant4Action::properties().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_a3f3be5f46d2ee56467337edf438fc153}{
+\index{DD4hep::Simulation::Geant4SharedStackingAction@{DD4hep::Simulation::Geant4SharedStackingAction}!m\_\-action@{m\_\-action}}
+\index{m\_\-action@{m\_\-action}!DD4hep::Simulation::Geant4SharedStackingAction@{DD4hep::Simulation::Geant4SharedStackingAction}}
+\subsubsection[{m\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4StackingAction}$\ast$ {\bf DD4hep::Simulation::Geant4SharedStackingAction::m\_\-action}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_a3f3be5f46d2ee56467337edf438fc153}
+
+
+Reference to the shared action. 
+
+Definition at line 69 of file Geant4StackingAction.h.
+
+Referenced by configureFiber(), newStage(), prepare(), use(), and $\sim$Geant4SharedStackingAction().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_stacking_action_8h}{Geant4StackingAction.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_stacking_action_8cpp}{Geant4StackingAction.cpp}\end{DoxyCompactItemize}

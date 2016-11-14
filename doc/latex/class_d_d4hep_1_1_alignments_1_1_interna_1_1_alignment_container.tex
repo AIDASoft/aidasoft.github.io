@@ -1,0 +1,219 @@
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container}{
+\section{DD4hep::Alignments::Interna::AlignmentContainer Class Reference}
+\label{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container}\index{DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}}
+}
+
+
+The data class behind a alignments container handle.  
+
+
+{\ttfamily \#include $<$AlignmentsInterna.h$>$}Inheritance diagram for DD4hep::Alignments::Interna::AlignmentContainer::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_ab824a65f935a0c79b9ea1a7a85014b88}{Alignment::key\_\-type} \hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a7395f0e25d9e524d2a2bd7df0f4364e6}{key\_\-type}
+\begin{DoxyCompactList}\small\item\em Forward defintion of the key type. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_i_o_v}{Alignment::iov\_\-type} \hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a99b2a8d269ecefcf1b59269ad94e75e3}{iov\_\-type}
+\begin{DoxyCompactList}\small\item\em Forward definition of the iov type. \item\end{DoxyCompactList}\item 
+typedef std::pair$<$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a7395f0e25d9e524d2a2bd7df0f4364e6}{key\_\-type}, std::string $>$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a64a96ad5b67f6e67b12fd3aaaa8bbcb8}{key\_\-value}
+\begin{DoxyCompactList}\small\item\em Forward definition of the mapping type. \item\end{DoxyCompactList}\item 
+typedef std::map$<$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a7395f0e25d9e524d2a2bd7df0f4364e6}{key\_\-type}, \hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a64a96ad5b67f6e67b12fd3aaaa8bbcb8}{key\_\-value} $>$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a3fc62784c22ba44d9ac63c424ec55799}{Keys}
+\begin{DoxyCompactList}\small\item\em Definition of the keys. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a360f49ea724e7c446c8b81adfbac8c85}{AlignmentContainer} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_object}{Geometry::DetElementObject} $\ast$parent)
+\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_ab3390799871933e6408bbe0c0ff41444}{$\sim$AlignmentContainer} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a4abe330b3f28a9ee56f512844312f477}{get} (const std::string \&alignment\_\-key, const \hyperlink{class_d_d4hep_1_1_i_o_v}{iov\_\-type} \&iov)
+\begin{DoxyCompactList}\small\item\em Access to alignment objects by key and \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_af87ee43a853d77f00ba6ed6902f3b717}{get} (\hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a7395f0e25d9e524d2a2bd7df0f4364e6}{key\_\-type} hash\_\-key, const \hyperlink{class_d_d4hep_1_1_i_o_v}{iov\_\-type} \&iov)
+\begin{DoxyCompactList}\small\item\em Access to alignment objects directly by their hash key. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a3f1a415452fb4494cc7ddc2a84b2593a}{get} (const std::string \&alignment\_\-key, const UserPool \&iov)
+\begin{DoxyCompactList}\small\item\em Access to alignment objects. Only alignments in the pool are accessed. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_ae9d28749c0b244cac8d9206fca1c06fe}{get} (\hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a7395f0e25d9e524d2a2bd7df0f4364e6}{key\_\-type} alignment\_\-key, const UserPool \&iov)
+\begin{DoxyCompactList}\small\item\em Access to alignment objects. Only alignments in the pool are accessed. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_aff0df8ea16dc1a811cce12b6f702ce2b}{addKey} (const std::string \&\hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a64a96ad5b67f6e67b12fd3aaaa8bbcb8}{key\_\-value})
+\begin{DoxyCompactList}\small\item\em Add a new key to the alignments access map. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_acf31dddb1e9328a25ab5a7539b7b6eb0}{addKey} (const std::string \&\hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a64a96ad5b67f6e67b12fd3aaaa8bbcb8}{key\_\-value}, const std::string \&data\_\-value)
+\begin{DoxyCompactList}\small\item\em Add a new key to the alignments access map: Allow for alias if key\_\-val != data\_\-val. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespace_d_d4hep_a21dd977310ff183f61ca6ae14b59a989}{DetElement} \hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a21939f73d4dae58da536ec3f3480e7d3}{detector}
+\begin{DoxyCompactList}\small\item\em The hosting detector element. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a3fc62784c22ba44d9ac63c424ec55799}{Keys} \hyperlink{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_adb4a3abb58c149338ecc2d08e2c0aec9}{keys}
+\begin{DoxyCompactList}\small\item\em Known keys of alignments in this container. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The data class behind a alignments container handle. See \hyperlink{_alignments_interna_8cpp}{AlignmentsInterna.cpp} for the implementation.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 112 of file AlignmentsInterna.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a99b2a8d269ecefcf1b59269ad94e75e3}{
+\index{DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}!iov\_\-type@{iov\_\-type}}
+\index{iov\_\-type@{iov\_\-type}!DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}}
+\subsubsection[{iov\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Alignment::iov\_\-type} {\bf DD4hep::Alignments::Interna::AlignmentContainer::iov\_\-type}}}
+\label{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a99b2a8d269ecefcf1b59269ad94e75e3}
+
+
+Forward definition of the iov type. 
+
+Definition at line 117 of file AlignmentsInterna.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a7395f0e25d9e524d2a2bd7df0f4364e6}{
+\index{DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}!key\_\-type@{key\_\-type}}
+\index{key\_\-type@{key\_\-type}!DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}}
+\subsubsection[{key\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Alignment::key\_\-type} {\bf DD4hep::Alignments::Interna::AlignmentContainer::key\_\-type}}}
+\label{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a7395f0e25d9e524d2a2bd7df0f4364e6}
+
+
+Forward defintion of the key type. 
+
+Definition at line 115 of file AlignmentsInterna.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a64a96ad5b67f6e67b12fd3aaaa8bbcb8}{
+\index{DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}!key\_\-value@{key\_\-value}}
+\index{key\_\-value@{key\_\-value}!DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}}
+\subsubsection[{key\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::pair$<${\bf key\_\-type}, std::string$>$ {\bf DD4hep::Alignments::Interna::AlignmentContainer::key\_\-value}}}
+\label{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a64a96ad5b67f6e67b12fd3aaaa8bbcb8}
+
+
+Forward definition of the mapping type. 
+
+Definition at line 119 of file AlignmentsInterna.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a3fc62784c22ba44d9ac63c424ec55799}{
+\index{DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}!Keys@{Keys}}
+\index{Keys@{Keys}!DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}}
+\subsubsection[{Keys}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<${\bf key\_\-type}, {\bf key\_\-value}$>$ {\bf DD4hep::Alignments::Interna::AlignmentContainer::Keys}}}
+\label{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a3fc62784c22ba44d9ac63c424ec55799}
+
+
+Definition of the keys. 
+
+Definition at line 121 of file AlignmentsInterna.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a360f49ea724e7c446c8b81adfbac8c85}{
+\index{DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}!AlignmentContainer@{AlignmentContainer}}
+\index{AlignmentContainer@{AlignmentContainer}!DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}}
+\subsubsection[{AlignmentContainer}]{\setlength{\rightskip}{0pt plus 5cm}AlignmentContainer::AlignmentContainer ({\bf Geometry::DetElementObject} $\ast$ {\em parent})}}
+\label{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a360f49ea724e7c446c8b81adfbac8c85}
+
+
+Standard constructor. 
+
+Definition at line 59 of file AlignmentsInterna.cpp.
+
+References DD4hep::InstanceCount::increment().\hypertarget{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_ab3390799871933e6408bbe0c0ff41444}{
+\index{DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}!$\sim$AlignmentContainer@{$\sim$AlignmentContainer}}
+\index{$\sim$AlignmentContainer@{$\sim$AlignmentContainer}!DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}}
+\subsubsection[{$\sim$AlignmentContainer}]{\setlength{\rightskip}{0pt plus 5cm}AlignmentContainer::$\sim$AlignmentContainer ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_ab3390799871933e6408bbe0c0ff41444}
+
+
+Default destructor. 
+
+Definition at line 66 of file AlignmentsInterna.cpp.
+
+References DD4hep::InstanceCount::decrement().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_acf31dddb1e9328a25ab5a7539b7b6eb0}{
+\index{DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}!addKey@{addKey}}
+\index{addKey@{addKey}!DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}}
+\subsubsection[{addKey}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Alignments::Interna::AlignmentContainer::addKey (const std::string \& {\em key\_\-value}, \/  const std::string \& {\em data\_\-value})}}
+\label{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_acf31dddb1e9328a25ab5a7539b7b6eb0}
+
+
+Add a new key to the alignments access map: Allow for alias if key\_\-val != data\_\-val. \hypertarget{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_aff0df8ea16dc1a811cce12b6f702ce2b}{
+\index{DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}!addKey@{addKey}}
+\index{addKey@{addKey}!DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}}
+\subsubsection[{addKey}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Alignments::Interna::AlignmentContainer::addKey (const std::string \& {\em key\_\-value})}}
+\label{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_aff0df8ea16dc1a811cce12b6f702ce2b}
+
+
+Add a new key to the alignments access map. \hypertarget{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_ae9d28749c0b244cac8d9206fca1c06fe}{
+\index{DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}!get@{get}}
+\index{get@{get}!DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignment} AlignmentContainer::get ({\bf key\_\-type} {\em alignment\_\-key}, \/  const UserPool \& {\em iov})}}
+\label{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_ae9d28749c0b244cac8d9206fca1c06fe}
+
+
+Access to alignment objects. Only alignments in the pool are accessed. Access to alignment objects directly by their hash key. 
+
+Last resort: Assume the key value is globally known: 
+
+Definition at line 128 of file AlignmentsInterna.cpp.
+
+References detector, DD4hep::Alignments::AlignmentsLoader::get(), and keys.\hypertarget{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a3f1a415452fb4494cc7ddc2a84b2593a}{
+\index{DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}!get@{get}}
+\index{get@{get}!DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignment} DD4hep::Alignments::Interna::AlignmentContainer::get (const std::string \& {\em alignment\_\-key}, \/  const UserPool \& {\em iov})}}
+\label{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a3f1a415452fb4494cc7ddc2a84b2593a}
+
+
+Access to alignment objects. Only alignments in the pool are accessed. \hypertarget{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_af87ee43a853d77f00ba6ed6902f3b717}{
+\index{DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}!get@{get}}
+\index{get@{get}!DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignment} AlignmentContainer::get ({\bf key\_\-type} {\em hash\_\-key}, \/  const {\bf iov\_\-type} \& {\em iov})}}
+\label{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_af87ee43a853d77f00ba6ed6902f3b717}
+
+
+Access to alignment objects directly by their hash key. 
+
+Last resort: Assume the key value is globally known: 
+
+Definition at line 103 of file AlignmentsInterna.cpp.
+
+References detector, DD4hep::Alignments::AlignmentsLoader::get(), and keys.\hypertarget{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a4abe330b3f28a9ee56f512844312f477}{
+\index{DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}!get@{get}}
+\index{get@{get}!DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignment} DD4hep::Alignments::Interna::AlignmentContainer::get (const std::string \& {\em alignment\_\-key}, \/  const {\bf iov\_\-type} \& {\em iov})}}
+\label{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a4abe330b3f28a9ee56f512844312f477}
+
+
+Access to alignment objects by key and \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. 
+
+Referenced by DD4hep::Alignments::Container::get().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a21939f73d4dae58da536ec3f3480e7d3}{
+\index{DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}!detector@{detector}}
+\index{detector@{detector}!DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}}
+\subsubsection[{detector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} {\bf DD4hep::Alignments::Interna::AlignmentContainer::detector}}}
+\label{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_a21939f73d4dae58da536ec3f3480e7d3}
+
+
+The hosting detector element. 
+
+Definition at line 133 of file AlignmentsInterna.h.
+
+Referenced by get().\hypertarget{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_adb4a3abb58c149338ecc2d08e2c0aec9}{
+\index{DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}!keys@{keys}}
+\index{keys@{keys}!DD4hep::Alignments::Interna::AlignmentContainer@{DD4hep::Alignments::Interna::AlignmentContainer}}
+\subsubsection[{keys}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Keys} {\bf DD4hep::Alignments::Interna::AlignmentContainer::keys}}}
+\label{class_d_d4hep_1_1_alignments_1_1_interna_1_1_alignment_container_adb4a3abb58c149338ecc2d08e2c0aec9}
+
+
+Known keys of alignments in this container. 
+
+Definition at line 149 of file AlignmentsInterna.h.
+
+Referenced by get(), and DD4hep::Alignments::Container::numKeys().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/objects/\hyperlink{_alignments_interna_8h}{AlignmentsInterna.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_alignments_interna_8cpp}{AlignmentsInterna.cpp}\end{DoxyCompactItemize}

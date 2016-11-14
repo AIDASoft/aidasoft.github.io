@@ -1,0 +1,259 @@
+\hypertarget{class_d_d4hep_1_1_opaque_data_block}{
+\section{DD4hep::OpaqueDataBlock Class Reference}
+\label{class_d_d4hep_1_1_opaque_data_block}\index{DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}}
+}
+
+
+Class describing an opaque conditions data block.  
+
+
+{\ttfamily \#include $<$OpaqueData.h$>$}Inheritance diagram for DD4hep::OpaqueDataBlock::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_opaque_data_block}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_opaque_data_block_a1c0cf067c26869fcb636fbfed8002c73}{OpaqueDataBlock} ()
+\begin{DoxyCompactList}\small\item\em Standard initializing constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_opaque_data_block_a5c97af2f7c4130d78158040c2a95ab34}{OpaqueDataBlock} (const \hyperlink{class_d_d4hep_1_1_opaque_data_block}{OpaqueDataBlock} \&\hyperlink{class_d_d4hep_1_1_opaque_data_block_ab598893c35f36d91467423c37a28984e}{data})
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_opaque_data_block_a175f12bf6af71e59c1334cbb4099b4b3}{$\sim$OpaqueDataBlock} ()
+\begin{DoxyCompactList}\small\item\em Standard Destructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_opaque_data_block}{OpaqueDataBlock} \& \hyperlink{class_d_d4hep_1_1_opaque_data_block_a9fa632b86dc6203b7077c9f09cb23853}{operator=} (const \hyperlink{class_d_d4hep_1_1_opaque_data_block}{OpaqueDataBlock} \&clone)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_opaque_data_block_a488c26189a1d06ed642a335be951af7b}{move} (\hyperlink{class_d_d4hep_1_1_opaque_data_block}{OpaqueDataBlock} \&from)
+\begin{DoxyCompactList}\small\item\em Move the data content: 'from' will be reset to NULL. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_opaque_data_block_a237aa4d85136b95af80cd46be06a1053}{bind} (const \hyperlink{class_d_d4hep_1_1_basic_grammar}{BasicGrammar} $\ast$\hyperlink{class_d_d4hep_1_1_opaque_data_ac911f7e23be3e5d583bf5ccebae03e31}{grammar}, void($\ast$ctor)(void $\ast$, const void $\ast$), void($\ast$dtor)(void $\ast$))
+\begin{DoxyCompactList}\small\item\em Bind data value. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_t}{T} \& \hyperlink{class_d_d4hep_1_1_opaque_data_block_a3aa9b95d8df9109bb52f5f19711bee43}{bind} ()
+\begin{DoxyCompactList}\small\item\em Bind data value. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_opaque_data_block_a0e0adbb76c89f89adced464ca9e79bd7}{assign} (const void $\ast$ptr, const std::type\_\-info \&typ)
+\begin{DoxyCompactList}\small\item\em Set data value. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_t}{T} \& \hyperlink{class_d_d4hep_1_1_opaque_data_block_a69737512e448c58b88d34095b9155e53}{set} (const std::string \&value)
+\begin{DoxyCompactList}\small\item\em Bind grammar and assign value. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{class_d_d4hep_1_1_opaque_data_block_a6e7306f78bcdfcf15f53fdc6a2f34457}{type}
+\begin{DoxyCompactList}\small\item\em Data buffer type: Must be a bitmap! \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{class_d_d4hep_1_1_opaque_data_block_a6c653f7754960906a4a260f035e915bca9c3e9fc003a5148f3f1707780b347eeb}{PLAIN\_\-DATA} =  1$<$$<$0, 
+\hyperlink{class_d_d4hep_1_1_opaque_data_block_a6c653f7754960906a4a260f035e915bca10ec45b910bc75641243cb866d304fa7}{ALLOC\_\-DATA} =  1$<$$<$1, 
+\hyperlink{class_d_d4hep_1_1_opaque_data_block_a6c653f7754960906a4a260f035e915bcafca2143abe27ac43e936bf63f6771b9e}{BOUND\_\-DATA} =  1$<$$<$2
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+enum DD4hep::OpaqueDataBlock:: \{ ... \}  \hyperlink{class_d_d4hep_1_1_opaque_data_block_a0e431bafd05dde4afeba30aab68e8930}{\_\-DataTypes}
+\item 
+unsigned char \hyperlink{class_d_d4hep_1_1_opaque_data_block_ab598893c35f36d91467423c37a28984e}{data} \mbox{[}sizeof(std::vector$<$ void $\ast$ $>$)\mbox{]}
+\begin{DoxyCompactList}\small\item\em Data buffer: plain data are allocated directly on this buffer. \item\end{DoxyCompactList}\item 
+void($\ast$ \hyperlink{class_d_d4hep_1_1_opaque_data_block_a6958d0e712c3e0126bc61b84d1f16ed2}{destruct} )(void $\ast$)
+\begin{DoxyCompactList}\small\item\em Destructor function -\/-\/ only set if the object is valid. \item\end{DoxyCompactList}\item 
+void($\ast$ \hyperlink{class_d_d4hep_1_1_opaque_data_block_a7da11d357cbefd4d6cf56390d321f69e}{copy} )(void $\ast$, const void $\ast$)
+\begin{DoxyCompactList}\small\item\em Constructor function -\/-\/ only set if the object is valid. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class describing an opaque conditions data block. \begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 81 of file OpaqueData.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_d_d4hep_1_1_opaque_data_block_a6c653f7754960906a4a260f035e915bc}{
+\subsubsection[{"@4}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_opaque_data_block_a6c653f7754960906a4a260f035e915bc}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{PLAIN\_\-DATA@{PLAIN\_\-DATA}!DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}}\index{DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}!PLAIN\_\-DATA@{PLAIN\_\-DATA}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_opaque_data_block_a6c653f7754960906a4a260f035e915bca9c3e9fc003a5148f3f1707780b347eeb}{
+PLAIN\_\-DATA}
+\label{class_d_d4hep_1_1_opaque_data_block_a6c653f7754960906a4a260f035e915bca9c3e9fc003a5148f3f1707780b347eeb}
+}]\index{ALLOC\_\-DATA@{ALLOC\_\-DATA}!DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}}\index{DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}!ALLOC\_\-DATA@{ALLOC\_\-DATA}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_opaque_data_block_a6c653f7754960906a4a260f035e915bca10ec45b910bc75641243cb866d304fa7}{
+ALLOC\_\-DATA}
+\label{class_d_d4hep_1_1_opaque_data_block_a6c653f7754960906a4a260f035e915bca10ec45b910bc75641243cb866d304fa7}
+}]\index{BOUND\_\-DATA@{BOUND\_\-DATA}!DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}}\index{DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}!BOUND\_\-DATA@{BOUND\_\-DATA}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_opaque_data_block_a6c653f7754960906a4a260f035e915bcafca2143abe27ac43e936bf63f6771b9e}{
+BOUND\_\-DATA}
+\label{class_d_d4hep_1_1_opaque_data_block_a6c653f7754960906a4a260f035e915bcafca2143abe27ac43e936bf63f6771b9e}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 83 of file OpaqueData.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_opaque_data_block_a1c0cf067c26869fcb636fbfed8002c73}{
+\index{DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}!OpaqueDataBlock@{OpaqueDataBlock}}
+\index{OpaqueDataBlock@{OpaqueDataBlock}!DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}}
+\subsubsection[{OpaqueDataBlock}]{\setlength{\rightskip}{0pt plus 5cm}OpaqueDataBlock::OpaqueDataBlock ()}}
+\label{class_d_d4hep_1_1_opaque_data_block_a1c0cf067c26869fcb636fbfed8002c73}
+
+
+Standard initializing constructor. 
+
+Definition at line 82 of file OpaqueData.cpp.
+
+References DD4hep::InstanceCount::increment().\hypertarget{class_d_d4hep_1_1_opaque_data_block_a5c97af2f7c4130d78158040c2a95ab34}{
+\index{DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}!OpaqueDataBlock@{OpaqueDataBlock}}
+\index{OpaqueDataBlock@{OpaqueDataBlock}!DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}}
+\subsubsection[{OpaqueDataBlock}]{\setlength{\rightskip}{0pt plus 5cm}OpaqueDataBlock::OpaqueDataBlock (const {\bf OpaqueDataBlock} \& {\em data})}}
+\label{class_d_d4hep_1_1_opaque_data_block_a5c97af2f7c4130d78158040c2a95ab34}
+
+
+Copy constructor. 
+
+Definition at line 87 of file OpaqueData.cpp.
+
+References bind(), copy, destruct, DD4hep::OpaqueData::grammar, DD4hep::InstanceCount::increment(), and DD4hep::OpaqueData::pointer.\hypertarget{class_d_d4hep_1_1_opaque_data_block_a175f12bf6af71e59c1334cbb4099b4b3}{
+\index{DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}!$\sim$OpaqueDataBlock@{$\sim$OpaqueDataBlock}}
+\index{$\sim$OpaqueDataBlock@{$\sim$OpaqueDataBlock}!DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}}
+\subsubsection[{$\sim$OpaqueDataBlock}]{\setlength{\rightskip}{0pt plus 5cm}OpaqueDataBlock::$\sim$OpaqueDataBlock ()}}
+\label{class_d_d4hep_1_1_opaque_data_block_a175f12bf6af71e59c1334cbb4099b4b3}
+
+
+Standard Destructor. 
+
+Definition at line 97 of file OpaqueData.cpp.
+
+References ALLOC\_\-DATA, DD4hep::InstanceCount::decrement(), destruct, DD4hep::OpaqueData::grammar, DD4hep::OpaqueData::pointer, and type.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_opaque_data_block_a0e0adbb76c89f89adced464ca9e79bd7}{
+\index{DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}!assign@{assign}}
+\index{assign@{assign}!DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}}
+\subsubsection[{assign}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::OpaqueDataBlock::assign (const void $\ast$ {\em ptr}, \/  const std::type\_\-info \& {\em typ})}}
+\label{class_d_d4hep_1_1_opaque_data_block_a0e0adbb76c89f89adced464ca9e79bd7}
+
+
+Set data value. \hypertarget{class_d_d4hep_1_1_opaque_data_block_a3aa9b95d8df9109bb52f5f19711bee43}{
+\index{DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}!bind@{bind}}
+\index{bind@{bind}!DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}}
+\subsubsection[{bind}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf T} \& DD4hep::OpaqueDataBlock::bind ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_opaque_data_block_a3aa9b95d8df9109bb52f5f19711bee43}
+
+
+Bind data value. 
+
+Definition at line 51 of file OpaqueData\_\-inl.h.
+
+References DD4hep::OpaqueData::pointer.
+
+Referenced by OpaqueDataBlock(), and operator=().\hypertarget{class_d_d4hep_1_1_opaque_data_block_a237aa4d85136b95af80cd46be06a1053}{
+\index{DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}!bind@{bind}}
+\index{bind@{bind}!DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}}
+\subsubsection[{bind}]{\setlength{\rightskip}{0pt plus 5cm}bool OpaqueDataBlock::bind (const {\bf BasicGrammar} $\ast$ {\em grammar}, \/  void($\ast$)(void $\ast$, const void $\ast$) {\em ctor}, \/  void($\ast$)(void $\ast$) {\em dtor})}}
+\label{class_d_d4hep_1_1_opaque_data_block_a237aa4d85136b95af80cd46be06a1053}
+
+
+Bind data value. Set data value. 
+
+Definition at line 151 of file OpaqueData.cpp.
+
+References ALLOC\_\-DATA, copy, data, destruct, DD4hep::except(), DD4hep::OpaqueData::grammar, PLAIN\_\-DATA, DD4hep::OpaqueData::pointer, DD4hep::BasicGrammar::sizeOf(), DD4hep::BasicGrammar::type(), type, and DD4hep::typeinfoCheck().\hypertarget{class_d_d4hep_1_1_opaque_data_block_a488c26189a1d06ed642a335be951af7b}{
+\index{DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}!move@{move}}
+\index{move@{move}!DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}bool OpaqueDataBlock::move ({\bf OpaqueDataBlock} \& {\em from})}}
+\label{class_d_d4hep_1_1_opaque_data_block_a488c26189a1d06ed642a335be951af7b}
+
+
+Move the data content: 'from' will be reset to NULL. 
+
+Definition at line 108 of file OpaqueData.cpp.
+
+References copy, data, destruct, DD4hep::OpaqueData::grammar, PLAIN\_\-DATA, DD4hep::OpaqueData::pointer, and type.\hypertarget{class_d_d4hep_1_1_opaque_data_block_a9fa632b86dc6203b7077c9f09cb23853}{
+\index{DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}!operator=@{operator=}}
+\index{operator=@{operator=}!DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf OpaqueDataBlock} \& OpaqueDataBlock::operator= (const {\bf OpaqueDataBlock} \& {\em clone})}}
+\label{class_d_d4hep_1_1_opaque_data_block_a9fa632b86dc6203b7077c9f09cb23853}
+
+
+Assignment operator. Copy constructor. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_opaque_data_ab939ef76406d35f26e6913a392741e72}{DD4hep::OpaqueData}.
+
+Definition at line 125 of file OpaqueData.cpp.
+
+References ALLOC\_\-DATA, bind(), copy, destruct, DD4hep::except(), DD4hep::OpaqueData::grammar, DD4hep::OpaqueData::pointer, and type.\hypertarget{class_d_d4hep_1_1_opaque_data_block_a69737512e448c58b88d34095b9155e53}{
+\index{DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}!set@{set}}
+\index{set@{set}!DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf T} \& DD4hep::OpaqueDataBlock::set (const std::string \& {\em value})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_opaque_data_block_a69737512e448c58b88d34095b9155e53}
+
+
+Bind grammar and assign value. 
+
+Definition at line 56 of file OpaqueData\_\-inl.h.
+
+References DD4hep::OpaqueData::fromString(), and DD4hep::typeName().
+
+Referenced by DD4hep::Conditions::Condition::bind().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_opaque_data_block_a0e431bafd05dde4afeba30aab68e8930}{
+\index{DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}!\_\-DataTypes@{\_\-DataTypes}}
+\index{\_\-DataTypes@{\_\-DataTypes}!DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}}
+\subsubsection[{\_\-DataTypes}]{\setlength{\rightskip}{0pt plus 5cm}enum \{ ... \}   {\bf DD4hep::OpaqueDataBlock::\_\-DataTypes}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_opaque_data_block_a0e431bafd05dde4afeba30aab68e8930}
+\hypertarget{class_d_d4hep_1_1_opaque_data_block_a7da11d357cbefd4d6cf56390d321f69e}{
+\index{DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}!copy@{copy}}
+\index{copy@{copy}!DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ {\bf DD4hep::OpaqueDataBlock::copy})(void $\ast$, const void $\ast$)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_opaque_data_block_a7da11d357cbefd4d6cf56390d321f69e}
+
+
+Constructor function -\/-\/ only set if the object is valid. 
+
+Referenced by bind(), move(), OpaqueDataBlock(), and operator=().\hypertarget{class_d_d4hep_1_1_opaque_data_block_ab598893c35f36d91467423c37a28984e}{
+\index{DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}!data@{data}}
+\index{data@{data}!DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char {\bf DD4hep::OpaqueDataBlock::data}\mbox{[}sizeof(std::vector$<$ void $\ast$ $>$)\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_opaque_data_block_ab598893c35f36d91467423c37a28984e}
+
+
+Data buffer: plain data are allocated directly on this buffer. Internal data buffer is sufficient to store any vector 
+
+Definition at line 90 of file OpaqueData.h.
+
+Referenced by bind(), and move().\hypertarget{class_d_d4hep_1_1_opaque_data_block_a6958d0e712c3e0126bc61b84d1f16ed2}{
+\index{DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}!destruct@{destruct}}
+\index{destruct@{destruct}!DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}}
+\subsubsection[{destruct}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ {\bf DD4hep::OpaqueDataBlock::destruct})(void $\ast$)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_opaque_data_block_a6958d0e712c3e0126bc61b84d1f16ed2}
+
+
+Destructor function -\/-\/ only set if the object is valid. 
+
+Referenced by bind(), move(), OpaqueDataBlock(), operator=(), and $\sim$OpaqueDataBlock().\hypertarget{class_d_d4hep_1_1_opaque_data_block_a6e7306f78bcdfcf15f53fdc6a2f34457}{
+\index{DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}!type@{type}}
+\index{type@{type}!DD4hep::OpaqueDataBlock@{DD4hep::OpaqueDataBlock}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf DD4hep::OpaqueDataBlock::type}}}
+\label{class_d_d4hep_1_1_opaque_data_block_a6e7306f78bcdfcf15f53fdc6a2f34457}
+
+
+Data buffer type: Must be a bitmap! 
+
+Definition at line 98 of file OpaqueData.h.
+
+Referenced by bind(), DD4hep::Conditions::Condition::dataType(), move(), operator=(), and $\sim$OpaqueDataBlock().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_opaque_data_8h}{OpaqueData.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_opaque_data_8cpp}{OpaqueData.cpp}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/objects/\hyperlink{_opaque_data__inl_8h}{OpaqueData\_\-inl.h}\end{DoxyCompactItemize}

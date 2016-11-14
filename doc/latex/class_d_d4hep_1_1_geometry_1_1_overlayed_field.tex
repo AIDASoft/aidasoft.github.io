@@ -1,0 +1,333 @@
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field}{
+\section{DD4hep::Geometry::OverlayedField Class Reference}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field}\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+}
+
+
+Class describing a field overlay with several sources.  
+
+
+{\ttfamily \#include $<$Fields.h$>$}
+
+Inherits DD4hep::Ref\_\-t.\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_1_1_object}{Object}
+\begin{DoxyCompactList}\small\item\em Internal data class shared by all handles. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a2f60d9b8d93ccdb0844510b1d3f61b9f}{FieldType} \{ \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a2f60d9b8d93ccdb0844510b1d3f61b9fa0f91cdc2eef79d1d0f79b51dee49eab1}{ELECTRIC} =  0x1, 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a2f60d9b8d93ccdb0844510b1d3f61b9fa471f7e06140ef02e7c63027095ba413a}{MAGNETIC} =  0x2
+ \}
+\item 
+typedef std::map$<$ std::string, std::string $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_ade93bff8af042a76d9d25e1f7072b532}{PropertyValues}
+\item 
+typedef std::map$<$ std::string, \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_ade93bff8af042a76d9d25e1f7072b532}{PropertyValues} $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_acdf81fbf8e0c336cb724ee2846a2c5b0}{Properties}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_ad03ce820722778df653df02a079b5958}{OverlayedField} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_af64d7fb69a5f08d5f128afddbb604d3e}{OverlayedField} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&e)
+\begin{DoxyCompactList}\small\item\em Constructor to be used when reading the already parsed DOM tree. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_afb142bf8642bee1ebd9a4ed733f4d90a}{OverlayedField} (const std::string \&name)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_1_1_object}{Object} constructor. \item\end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a27ef8145f77b824398f5caf854a598b5}{type} () const 
+\begin{DoxyCompactList}\small\item\em Access the field type. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_aae467e2f06b9842ef57133cefc0a0ce0}{changesEnergy} () const 
+\begin{DoxyCompactList}\small\item\em Does the field change the energy of charged particles? \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a035b1481dfc0a04b37a31795e3df0ba2}{add} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field}{CartesianField} field)
+\begin{DoxyCompactList}\small\item\em Add a new field component. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a5b4697422c41e1eae7cff779f8ff5dcf}{combinedElectric} (const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&pos, double $\ast$field) const 
+\begin{DoxyCompactList}\small\item\em Returns the 3 electric field components (x, y, z) if many components are present. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_ab00ec3a945a635c235e9ae5d6cffcf03}{combinedElectric} (const double $\ast$pos, double $\ast$field) const 
+\begin{DoxyCompactList}\small\item\em Returns the 3 electric field components (x, y, z) if many components are present. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_aecc0411ef346abd521b0d3ddbc8a570e}{combinedMagnetic} (const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&pos, double $\ast$field) const 
+\begin{DoxyCompactList}\small\item\em Returns the 3 magnetic field components (x, y, z) if many components are present. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_aab6c2dd942c5970006201ca7aaee7f23}{combinedMagnetic} (const double $\ast$pos, double $\ast$field) const 
+\begin{DoxyCompactList}\small\item\em Returns the 3 magnetic field components (x, y, z) if many components are present. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a4b87593d18f3b7c4a675231a0a978dba}{electricField} (const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&pos, \hyperlink{namespace_d_d4hep_1_1_geometry_a56730a0ddb9f3f089c415cd693bd7c19}{Direction} \&field) const 
+\begin{DoxyCompactList}\small\item\em Returns the 3 electric field components (x, y, z). \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a12a09e1c0e21fb6cbbfc80b252a010c2}{electricField} (const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&pos, double $\ast$field) const 
+\begin{DoxyCompactList}\small\item\em Returns the 3 electric field components (x, y, z). \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_adf8eafcce3969010f3f8d39f9e09b3a9}{electricField} (const double $\ast$pos, double $\ast$field) const 
+\begin{DoxyCompactList}\small\item\em Returns the 3 electric field components (x, y, z). \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a7f94edbcb2a607da89c5ceca9167e900}{magneticField} (const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&pos, \hyperlink{namespace_d_d4hep_1_1_geometry_a56730a0ddb9f3f089c415cd693bd7c19}{Direction} \&field) const 
+\begin{DoxyCompactList}\small\item\em Returns the 3 magnetic field components (x, y, z). \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_afa24afd69fe7a4f1730ee4d14b2e9559}{magneticField} (const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&pos, double $\ast$field) const 
+\begin{DoxyCompactList}\small\item\em Returns the 3 magnetic field components (x, y, z). \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_ae02970e5b4ec1575adcfdb05345e7316}{magneticField} (const double $\ast$pos, double $\ast$field) const 
+\begin{DoxyCompactList}\small\item\em Returns the 3 magnetic field components (x, y, z). \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_ae3937e0cc788e234ee2b96182eeeeb60}{electromagneticField} (const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&pos, double $\ast$val) const 
+\begin{DoxyCompactList}\small\item\em Returns the 3 electric (val\mbox{[}0\mbox{]}-\/val\mbox{[}2\mbox{]}) and magnetic field components (val\mbox{[}3\mbox{]}-\/val\mbox{[}5\mbox{]}). \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a4be1f82d78ddb39722af11c407be7266}{electromagneticField} (const double $\ast$pos, double $\ast$val) const 
+\begin{DoxyCompactList}\small\item\em Returns the 3 electric (val\mbox{[}0\mbox{]}-\/val\mbox{[}2\mbox{]}) and magnetic field components (val\mbox{[}3\mbox{]}-\/val\mbox{[}5\mbox{]}). \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_acdf81fbf8e0c336cb724ee2846a2c5b0}{Properties} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_ab62f0df6c7eeb974faa87e327f8bcdfb}{properties} () const 
+\begin{DoxyCompactList}\small\item\em Access to properties container. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class describing a field overlay with several sources. Generic structure describing any field type (electric or magnetic) with field components in Cartesian coordinates.
+
+The actual behaviour is solely implemented in the underlying object classes. The overlay field is the sum of several magnetic of electric field components.
+
+The resulting field vectors are computed by the vector addition of the individual components.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 130 of file Fields.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_acdf81fbf8e0c336cb724ee2846a2c5b0}{
+\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!Properties@{Properties}}
+\index{Properties@{Properties}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+\subsubsection[{Properties}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$std::string, {\bf PropertyValues}$>$ {\bf DD4hep::Geometry::OverlayedField::Properties}}}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_acdf81fbf8e0c336cb724ee2846a2c5b0}
+
+
+Definition at line 136 of file Fields.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_ade93bff8af042a76d9d25e1f7072b532}{
+\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!PropertyValues@{PropertyValues}}
+\index{PropertyValues@{PropertyValues}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+\subsubsection[{PropertyValues}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$std::string, std::string$>$ {\bf DD4hep::Geometry::OverlayedField::PropertyValues}}}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_ade93bff8af042a76d9d25e1f7072b532}
+
+
+Definition at line 135 of file Fields.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a2f60d9b8d93ccdb0844510b1d3f61b9f}{
+\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!FieldType@{FieldType}}
+\index{FieldType@{FieldType}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+\subsubsection[{FieldType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DD4hep::Geometry::OverlayedField::FieldType}}}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a2f60d9b8d93ccdb0844510b1d3f61b9f}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{ELECTRIC@{ELECTRIC}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!ELECTRIC@{ELECTRIC}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a2f60d9b8d93ccdb0844510b1d3f61b9fa0f91cdc2eef79d1d0f79b51dee49eab1}{
+ELECTRIC}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a2f60d9b8d93ccdb0844510b1d3f61b9fa0f91cdc2eef79d1d0f79b51dee49eab1}
+}]\index{MAGNETIC@{MAGNETIC}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!MAGNETIC@{MAGNETIC}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a2f60d9b8d93ccdb0844510b1d3f61b9fa471f7e06140ef02e7c63027095ba413a}{
+MAGNETIC}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a2f60d9b8d93ccdb0844510b1d3f61b9fa471f7e06140ef02e7c63027095ba413a}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 132 of file Fields.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_ad03ce820722778df653df02a079b5958}{
+\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!OverlayedField@{OverlayedField}}
+\index{OverlayedField@{OverlayedField}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+\subsubsection[{OverlayedField}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::OverlayedField::OverlayedField ()}}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_ad03ce820722778df653df02a079b5958}
+
+
+Default constructor. \hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_af64d7fb69a5f08d5f128afddbb604d3e}{
+\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!OverlayedField@{OverlayedField}}
+\index{OverlayedField@{OverlayedField}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+\subsubsection[{OverlayedField}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q $>$ DD4hep::Geometry::OverlayedField::OverlayedField (const {\bf Handle}$<$ Q $>$ \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_af64d7fb69a5f08d5f128afddbb604d3e}
+
+
+Constructor to be used when reading the already parsed DOM tree. 
+
+Definition at line 163 of file Fields.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_afb142bf8642bee1ebd9a4ed733f4d90a}{
+\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!OverlayedField@{OverlayedField}}
+\index{OverlayedField@{OverlayedField}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+\subsubsection[{OverlayedField}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::OverlayedField::OverlayedField (const std::string \& {\em name})}}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_afb142bf8642bee1ebd9a4ed733f4d90a}
+
+
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_overlayed_field_1_1_object}{Object} constructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a035b1481dfc0a04b37a31795e3df0ba2}{
+\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!add@{add}}
+\index{add@{add}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void OverlayedField::add ({\bf CartesianField} {\em field})}}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a035b1481dfc0a04b37a31795e3df0ba2}
+
+
+Add a new field component. 
+
+Definition at line 105 of file Fields.cpp.
+
+References DD4hep::Geometry::OverlayedField::Object::electric, DD4hep::Geometry::CartesianField::ELECTRIC, DD4hep::Geometry::OverlayedField::Object::electric\_\-components, DD4hep::Geometry::CartesianField::fieldType(), DD4hep::Geometry::OverlayedField::Object::magnetic, DD4hep::Geometry::CartesianField::MAGNETIC, DD4hep::Geometry::OverlayedField::Object::magnetic\_\-components, and DD4hep::Geometry::OverlayedField::Object::type.
+
+Referenced by DD4hep::Geometry::LCDDImp::addField().\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_aae467e2f06b9842ef57133cefc0a0ce0}{
+\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!changesEnergy@{changesEnergy}}
+\index{changesEnergy@{changesEnergy}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+\subsubsection[{changesEnergy}]{\setlength{\rightskip}{0pt plus 5cm}bool OverlayedField::changesEnergy () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_aae467e2f06b9842ef57133cefc0a0ce0}
+
+
+Does the field change the energy of charged particles? 
+
+Definition at line 99 of file Fields.cpp.
+
+References DD4hep::Geometry::CartesianField::ELECTRIC, and type().
+
+Referenced by DD4hep::Simulation::Geant4Field::DoesFieldChangeEnergy(), and DD4hep::Simulation::Geant4FieldTrackingSetup::execute().\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_ab00ec3a945a635c235e9ae5d6cffcf03}{
+\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!combinedElectric@{combinedElectric}}
+\index{combinedElectric@{combinedElectric}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+\subsubsection[{combinedElectric}]{\setlength{\rightskip}{0pt plus 5cm}void OverlayedField::combinedElectric (const double $\ast$ {\em pos}, \/  double $\ast$ {\em field}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_ab00ec3a945a635c235e9ae5d6cffcf03}
+
+
+Returns the 3 electric field components (x, y, z) if many components are present. Returns the 3 electric field components (x, y, z). 
+
+Definition at line 134 of file Fields.cpp.\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a5b4697422c41e1eae7cff779f8ff5dcf}{
+\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!combinedElectric@{combinedElectric}}
+\index{combinedElectric@{combinedElectric}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+\subsubsection[{combinedElectric}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Geometry::OverlayedField::combinedElectric (const {\bf Position} \& {\em pos}, \/  double $\ast$ {\em field}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a5b4697422c41e1eae7cff779f8ff5dcf}
+
+
+Returns the 3 electric field components (x, y, z) if many components are present. 
+
+Definition at line 180 of file Fields.h.
+
+Referenced by electricField().\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_aab6c2dd942c5970006201ca7aaee7f23}{
+\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!combinedMagnetic@{combinedMagnetic}}
+\index{combinedMagnetic@{combinedMagnetic}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+\subsubsection[{combinedMagnetic}]{\setlength{\rightskip}{0pt plus 5cm}void OverlayedField::combinedMagnetic (const double $\ast$ {\em pos}, \/  double $\ast$ {\em field}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_aab6c2dd942c5970006201ca7aaee7f23}
+
+
+Returns the 3 magnetic field components (x, y, z) if many components are present. Returns the 3 magnetic field components (x, y, z). 
+
+Definition at line 140 of file Fields.cpp.\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_aecc0411ef346abd521b0d3ddbc8a570e}{
+\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!combinedMagnetic@{combinedMagnetic}}
+\index{combinedMagnetic@{combinedMagnetic}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+\subsubsection[{combinedMagnetic}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Geometry::OverlayedField::combinedMagnetic (const {\bf Position} \& {\em pos}, \/  double $\ast$ {\em field}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_aecc0411ef346abd521b0d3ddbc8a570e}
+
+
+Returns the 3 magnetic field components (x, y, z) if many components are present. 
+
+Definition at line 188 of file Fields.h.
+
+Referenced by magneticField().\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_adf8eafcce3969010f3f8d39f9e09b3a9}{
+\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!electricField@{electricField}}
+\index{electricField@{electricField}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+\subsubsection[{electricField}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Geometry::OverlayedField::electricField (const double $\ast$ {\em pos}, \/  double $\ast$ {\em field}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_adf8eafcce3969010f3f8d39f9e09b3a9}
+
+
+Returns the 3 electric field components (x, y, z). 
+
+Definition at line 206 of file Fields.h.
+
+References combinedElectric(), and DD4hep::Geometry::CartesianField::value().\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a12a09e1c0e21fb6cbbfc80b252a010c2}{
+\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!electricField@{electricField}}
+\index{electricField@{electricField}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+\subsubsection[{electricField}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Geometry::OverlayedField::electricField (const {\bf Position} \& {\em pos}, \/  double $\ast$ {\em field}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a12a09e1c0e21fb6cbbfc80b252a010c2}
+
+
+Returns the 3 electric field components (x, y, z). 
+
+Definition at line 201 of file Fields.h.
+
+References electricField().\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a4b87593d18f3b7c4a675231a0a978dba}{
+\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!electricField@{electricField}}
+\index{electricField@{electricField}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+\subsubsection[{electricField}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Geometry::OverlayedField::electricField (const {\bf Position} \& {\em pos}, \/  {\bf Direction} \& {\em field}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a4b87593d18f3b7c4a675231a0a978dba}
+
+
+Returns the 3 electric field components (x, y, z). 
+
+Definition at line 196 of file Fields.h.
+
+Referenced by electricField().\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a4be1f82d78ddb39722af11c407be7266}{
+\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!electromagneticField@{electromagneticField}}
+\index{electromagneticField@{electromagneticField}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+\subsubsection[{electromagneticField}]{\setlength{\rightskip}{0pt plus 5cm}void OverlayedField::electromagneticField (const double $\ast$ {\em pos}, \/  double $\ast$ {\em val}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a4be1f82d78ddb39722af11c407be7266}
+
+
+Returns the 3 electric (val\mbox{[}0\mbox{]}-\/val\mbox{[}2\mbox{]}) and magnetic field components (val\mbox{[}3\mbox{]}-\/val\mbox{[}5\mbox{]}). 
+
+Definition at line 146 of file Fields.cpp.
+
+References DD4hep::Geometry::OverlayedField::Object::electric\_\-components, and DD4hep::Geometry::OverlayedField::Object::magnetic\_\-components.\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_ae3937e0cc788e234ee2b96182eeeeb60}{
+\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!electromagneticField@{electromagneticField}}
+\index{electromagneticField@{electromagneticField}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+\subsubsection[{electromagneticField}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Geometry::OverlayedField::electromagneticField (const {\bf Position} \& {\em pos}, \/  double $\ast$ {\em val}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_ae3937e0cc788e234ee2b96182eeeeb60}
+
+
+Returns the 3 electric (val\mbox{[}0\mbox{]}-\/val\mbox{[}2\mbox{]}) and magnetic field components (val\mbox{[}3\mbox{]}-\/val\mbox{[}5\mbox{]}). 
+
+Definition at line 230 of file Fields.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_ae02970e5b4ec1575adcfdb05345e7316}{
+\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!magneticField@{magneticField}}
+\index{magneticField@{magneticField}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+\subsubsection[{magneticField}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Geometry::OverlayedField::magneticField (const double $\ast$ {\em pos}, \/  double $\ast$ {\em field}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_ae02970e5b4ec1575adcfdb05345e7316}
+
+
+Returns the 3 magnetic field components (x, y, z). 
+
+Definition at line 223 of file Fields.h.
+
+References combinedMagnetic(), and DD4hep::Geometry::CartesianField::value().\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_afa24afd69fe7a4f1730ee4d14b2e9559}{
+\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!magneticField@{magneticField}}
+\index{magneticField@{magneticField}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+\subsubsection[{magneticField}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Geometry::OverlayedField::magneticField (const {\bf Position} \& {\em pos}, \/  double $\ast$ {\em field}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_afa24afd69fe7a4f1730ee4d14b2e9559}
+
+
+Returns the 3 magnetic field components (x, y, z). 
+
+Definition at line 218 of file Fields.h.
+
+References magneticField().\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a7f94edbcb2a607da89c5ceca9167e900}{
+\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!magneticField@{magneticField}}
+\index{magneticField@{magneticField}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+\subsubsection[{magneticField}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Geometry::OverlayedField::magneticField (const {\bf Position} \& {\em pos}, \/  {\bf Direction} \& {\em field}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a7f94edbcb2a607da89c5ceca9167e900}
+
+
+Returns the 3 magnetic field components (x, y, z). 
+
+Definition at line 213 of file Fields.h.
+
+Referenced by DD4hep::Simulation::Geant4Field::GetFieldValue(), and magneticField().\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_ab62f0df6c7eeb974faa87e327f8bcdfb}{
+\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!properties@{properties}}
+\index{properties@{properties}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+\subsubsection[{properties}]{\setlength{\rightskip}{0pt plus 5cm}{\bf OverlayedField::Properties} \& OverlayedField::properties () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_ab62f0df6c7eeb974faa87e327f8bcdfb}
+
+
+Access to properties container. 
+
+Definition at line 94 of file Fields.cpp.\hypertarget{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a27ef8145f77b824398f5caf854a598b5}{
+\index{DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}!type@{type}}
+\index{type@{type}!DD4hep::Geometry::OverlayedField@{DD4hep::Geometry::OverlayedField}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}int DD4hep::Geometry::OverlayedField::type () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_overlayed_field_a27ef8145f77b824398f5caf854a598b5}
+
+
+Access the field type. 
+
+Definition at line 169 of file Fields.h.
+
+Referenced by changesEnergy().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_fields_8h}{Fields.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_fields_8cpp}{Fields.cpp}\end{DoxyCompactItemize}

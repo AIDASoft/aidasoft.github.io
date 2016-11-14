@@ -1,0 +1,469 @@
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume}{
+\section{DD4hep::Geometry::Volume Class Reference}
+\label{class_d_d4hep_1_1_geometry_1_1_volume}\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+}
+
+
+\hyperlink{class_d_d4hep_1_1_handle}{Handle} class holding a placed volume (also called physical volume).  
+
+
+{\ttfamily \#include $<$Volumes.h$>$}Inheritance diagram for DD4hep::Geometry::Volume::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{class_d_d4hep_1_1_geometry_1_1_volume}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ TGeoVolume $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_ac9545eb97e81ed894b7192a26e4ef5a9}{Base}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_extension}{VolumeExtension} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a12968f95257e99e277f773ccf6d58ee5}{Object}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a5e8cfa8694162b1e3be9401e64667370}{Volume} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_ac5e2f7fc0aeafa1ca916e01e8a159c29}{Volume} (const TGeoVolume $\ast$\hyperlink{_multi_view_8cpp_a8320ee13ac034dbf6d624fe8953dd337}{v})
+\begin{DoxyCompactList}\small\item\em Copy from handle. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_ac9854eb2a3029d348c04643e44abbea4}{Volume} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \&\hyperlink{_multi_view_8cpp_a8320ee13ac034dbf6d624fe8953dd337}{v})
+\begin{DoxyCompactList}\small\item\em Copy from handle. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a94b33c96ae6d3156333dcbc025808201}{Volume} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_t}{T} $>$ \&\hyperlink{_multi_view_8cpp_a8320ee13ac034dbf6d624fe8953dd337}{v})
+\begin{DoxyCompactList}\small\item\em Copy from arbitrary Element. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_adf459bc7a5cc8226ea4ca7d35c6f4eba}{Volume} (const std::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructor to be used when creating a new geometry tree. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_ac235438382cd2da68de97bcf2eafae08}{Volume} (const std::string \&name, const \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type}{Solid} \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s}, const \hyperlink{class_d_d4hep_1_1_geometry_1_1_material}{Material} \&m)
+\begin{DoxyCompactList}\small\item\em Constructor to be used when creating a new geometry tree. Also sets materuial and solid attributes. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_af071e34d365d16c7f7dfe5b2fe59d520}{operator=} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \&a)
+\begin{DoxyCompactList}\small\item\em Assignment operator (must match copy constructor). \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_extension}{Object} $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_aca15c04f667b12b142a300070c9b99ca}{data} () const 
+\begin{DoxyCompactList}\small\item\em Check if placement is properly instrumented. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a61a47d1aa7dfeb411f663d7425aad1e6}{placeVolume} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \&vol) const 
+\begin{DoxyCompactList}\small\item\em Place daughter volume. The position and rotation are the identity. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a6dc8c06bdc867360d95e4db2ce71a471}{placeVolume} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \&volume, const \hyperlink{namespace_d_d4hep_1_1_geometry_aeb4c0356d12fd7be49a0aae50514e64b}{Transform3D} \&tr) const 
+\begin{DoxyCompactList}\small\item\em Place daughter volume according to a generic Transform3D. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_aeee43002378b1a0332d6b0ccdf4969b9}{placeVolume} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \&vol, const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&pos) const 
+\begin{DoxyCompactList}\small\item\em Place un-\/rotated daughter volume at the given position. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a26ca4b9a6bebdb8d6f8245ac64296f28}{placeVolume} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \&vol, const \hyperlink{namespace_d_d4hep_1_1_geometry_a24667b2b9c3cec3d5239828db4d52189}{RotationZYX} \&rot) const 
+\begin{DoxyCompactList}\small\item\em Place rotated daughter volume. The position is automatically the identity position. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a5087814789bfdbf06b46b2569191a9c6}{placeVolume} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \&vol, const \hyperlink{namespace_d_d4hep_1_1_geometry_a022fecb763315fa2bf39cbb648944a0e}{Rotation3D} \&rot) const 
+\begin{DoxyCompactList}\small\item\em Place rotated daughter volume. The position is automatically the identity position. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_add08120b9db1393b5db41b5cf2cd3e01}{setAttributes} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \&lcdd, const std::string \&region, const std::string \&limits, const std::string \&vis) const 
+\begin{DoxyCompactList}\small\item\em Attach attributes to the volume. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a4070385330a1c5200adaaa13ef4e6547}{setRegion} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \&lcdd, const std::string \&name) const 
+\begin{DoxyCompactList}\small\item\em Set the regional attributes to the volume. Note: If the name string is empty, the action is ignored. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a9078b71f780beef0718462d48c0fda0f}{setRegion} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_region}{Region} \&obj) const 
+\begin{DoxyCompactList}\small\item\em Set the regional attributes to the volume. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_region}{Region} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a849db64ccfd2670fd485593f67ae2bb3}{region} () const 
+\begin{DoxyCompactList}\small\item\em Access to the handle to the region structure. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a5c4e1991240829fbf7de49a281984550}{setLimitSet} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \&lcdd, const std::string \&name) const 
+\begin{DoxyCompactList}\small\item\em Set the limits to the volume. Note: If the name string is empty, the action is ignored. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a9d569026c41f483a7f54a9a6947c96cd}{setLimitSet} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_limit_set}{LimitSet} \&obj) const 
+\begin{DoxyCompactList}\small\item\em Set the limits to the volume. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_limit_set}{LimitSet} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_aeadd5c51ef8dc4c601e191beea40edbc}{limitSet} () const 
+\begin{DoxyCompactList}\small\item\em Access to the limit set. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a5db10a2a883d77b2654fe1875d5d7bb5}{setVisAttributes} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_vis_attr}{VisAttr} \&obj) const 
+\begin{DoxyCompactList}\small\item\em Set Visualization attributes to the volume. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a2aa60c41207795302295e8147e2dc3d9}{setVisAttributes} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \&lcdd, const std::string \&name) const 
+\begin{DoxyCompactList}\small\item\em Set Visualization attributes to the volume. Note: If the name string is empty, the action is ignored. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_vis_attr}{VisAttr} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a53c50a053aebaff28bb27a36c824db50}{visAttributes} () const 
+\begin{DoxyCompactList}\small\item\em Access the visualisation attributes. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a0aab37c2e9c3d24ebbc6642f0951e217}{setSensitiveDetector} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_sensitive_detector}{SensitiveDetector} \&obj) const 
+\begin{DoxyCompactList}\small\item\em Assign the sensitive detector structure. \item\end{DoxyCompactList}\item 
+\hyperlink{group___d_d4_h_e_p___g_e_o_m_e_t_r_y_ga40af83be6718bb8828a3d83dc7f8c930}{Ref\_\-t} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a8dcf0ca9c159ed116f3f85fd67efa336}{sensitiveDetector} () const 
+\begin{DoxyCompactList}\small\item\em Access to the handle to the sensitive detector. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a7b4a6460ec44a12b59fc1a00556c21cf}{isSensitive} () const 
+\begin{DoxyCompactList}\small\item\em Accessor if volume is sensitive (ie. is attached to a sensitive detector). \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_ab620d3dc2b453442d9b806e338b661f7}{setSolid} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type}{Solid} \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s}) const 
+\begin{DoxyCompactList}\small\item\em Set the volume's solid shape. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type}{Solid} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a35ba3ff621375ca5fb8e5c9474e4e179}{solid} () const 
+\begin{DoxyCompactList}\small\item\em Access to Solid (Shape). \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a65caa62ff7fbf16f38cb85af994944c7}{setMaterial} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_material}{Material} \&m) const 
+\begin{DoxyCompactList}\small\item\em Set the volume's material. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_material}{Material} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_ab27715df3e7b1b8f36ca802e6d894005}{material} () const 
+\begin{DoxyCompactList}\small\item\em Access to the \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} material. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_ae810687dc4b2e3ad5e9a99290eb88ce5}{operator TGeoVolume $\ast$} () const 
+\begin{DoxyCompactList}\small\item\em Auto conversion to underlying \hyperlink{namespace_r_o_o_t}{ROOT} object. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_d_d4hep_1_1_handle}{Handle} class holding a placed volume (also called physical volume). \hyperlink{class_d_d4hep_1_1_handle}{Handle} describing a \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume}
+
+For any further documentation please see the following \hyperlink{namespace_r_o_o_t}{ROOT} documentation: \begin{DoxySeeAlso}{See also}
+\href{http://root.cern.ch/root/html/TGeoVolume.html}{\tt http://root.cern.ch/root/html/TGeoVolume.html}
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 237 of file Volumes.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_ac9545eb97e81ed894b7192a26e4ef5a9}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!Base@{Base}}
+\index{Base@{Base}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{Base}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Handle}$<$TGeoVolume$>$ {\bf DD4hep::Geometry::Volume::Base}}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_ac9545eb97e81ed894b7192a26e4ef5a9}
+
+
+Definition at line 240 of file Volumes.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_a12968f95257e99e277f773ccf6d58ee5}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!Object@{Object}}
+\index{Object@{Object}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{Object}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf VolumeExtension} {\bf DD4hep::Geometry::Volume::Object}}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_a12968f95257e99e277f773ccf6d58ee5}
+
+
+Definition at line 241 of file Volumes.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_a5e8cfa8694162b1e3be9401e64667370}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!Volume@{Volume}}
+\index{Volume@{Volume}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{Volume}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::Volume::Volume ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_a5e8cfa8694162b1e3be9401e64667370}
+
+
+Default constructor. 
+
+Definition at line 245 of file Volumes.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_ac5e2f7fc0aeafa1ca916e01e8a159c29}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!Volume@{Volume}}
+\index{Volume@{Volume}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{Volume}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::Volume::Volume (const TGeoVolume $\ast$ {\em v})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_ac5e2f7fc0aeafa1ca916e01e8a159c29}
+
+
+Copy from handle. 
+
+Definition at line 250 of file Volumes.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_ac9854eb2a3029d348c04643e44abbea4}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!Volume@{Volume}}
+\index{Volume@{Volume}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{Volume}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::Volume::Volume (const {\bf Volume} \& {\em v})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_ac9854eb2a3029d348c04643e44abbea4}
+
+
+Copy from handle. 
+
+Definition at line 255 of file Volumes.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_a94b33c96ae6d3156333dcbc025808201}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!Volume@{Volume}}
+\index{Volume@{Volume}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{Volume}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ DD4hep::Geometry::Volume::Volume (const {\bf Handle}$<$ {\bf T} $>$ \& {\em v})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_a94b33c96ae6d3156333dcbc025808201}
+
+
+Copy from arbitrary Element. 
+
+Definition at line 260 of file Volumes.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_adf459bc7a5cc8226ea4ca7d35c6f4eba}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!Volume@{Volume}}
+\index{Volume@{Volume}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{Volume}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::Volume::Volume (const std::string \& {\em name})}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_adf459bc7a5cc8226ea4ca7d35c6f4eba}
+
+
+Constructor to be used when creating a new geometry tree. \hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_ac235438382cd2da68de97bcf2eafae08}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!Volume@{Volume}}
+\index{Volume@{Volume}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{Volume}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::Volume::Volume (const std::string \& {\em name}, \/  const {\bf Solid} \& {\em s}, \/  const {\bf Material} \& {\em m})}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_ac235438382cd2da68de97bcf2eafae08}
+
+
+Constructor to be used when creating a new geometry tree. Also sets materuial and solid attributes. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_aca15c04f667b12b142a300070c9b99ca}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!data@{data}}
+\index{data@{data}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Volume::Object} $\ast$ Volume::data () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_aca15c04f667b12b142a300070c9b99ca}
+
+
+Check if placement is properly instrumented. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_handle_a821fe41f46aa5ce97cfb04a6a60e5cd5}{DD4hep::Handle$<$ T $>$}.
+
+Definition at line 486 of file Volumes.cpp.
+
+References \_\-userExtension().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_a7b4a6460ec44a12b59fc1a00556c21cf}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!isSensitive@{isSensitive}}
+\index{isSensitive@{isSensitive}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{isSensitive}]{\setlength{\rightskip}{0pt plus 5cm}bool Volume::isSensitive () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_a7b4a6460ec44a12b59fc1a00556c21cf}
+
+
+Accessor if volume is sensitive (ie. is attached to a sensitive detector). 
+
+Definition at line 750 of file Volumes.cpp.
+
+References \_\-data().
+
+Referenced by DD4hep::DDRec::LayeringExtensionImpl::LayerAttributes::addElement(), DD4hep::Geometry::VolumeManager::adoptPlacement(), DD4hep::DDRec::IDDecoder::findReadout(), and DD4hep::SurfaceInstaller::install().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_aeadd5c51ef8dc4c601e191beea40edbc}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!limitSet@{limitSet}}
+\index{limitSet@{limitSet}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{limitSet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LimitSet} Volume::limitSet () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_aeadd5c51ef8dc4c601e191beea40edbc}
+
+
+Access to the limit set. 
+
+Definition at line 732 of file Volumes.cpp.
+
+References \_\-data().
+
+Referenced by DD4hep::Geometry::GeoHandler::i\_\-collect().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_ab27715df3e7b1b8f36ca802e6d894005}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!material@{material}}
+\index{material@{material}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{material}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Material} Volume::material () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_ab27715df3e7b1b8f36ca802e6d894005}
+
+
+Access to the \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} material. 
+
+Definition at line 558 of file Volumes.cpp.
+
+References DD4hep::Handle$<$ T $>$::m\_\-element.
+
+Referenced by DD4hep::DDRec::LayeringExtensionImpl::LayerAttributes::addElement().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_ae810687dc4b2e3ad5e9a99290eb88ce5}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!operator TGeoVolume $\ast$@{operator TGeoVolume $\ast$}}
+\index{operator TGeoVolume $\ast$@{operator TGeoVolume $\ast$}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{operator TGeoVolume $\ast$}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::Volume::operator TGeoVolume $\ast$ () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_ae810687dc4b2e3ad5e9a99290eb88ce5}
+
+
+Auto conversion to underlying \hyperlink{namespace_r_o_o_t}{ROOT} object. 
+
+Definition at line 332 of file Volumes.h.
+
+References DD4hep::Handle$<$ T $>$::m\_\-element.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_af071e34d365d16c7f7dfe5b2fe59d520}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!operator=@{operator=}}
+\index{operator=@{operator=}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Volume}\& DD4hep::Geometry::Volume::operator= (const {\bf Volume} \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_af071e34d365d16c7f7dfe5b2fe59d520}
+
+
+Assignment operator (must match copy constructor). 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_handle_a9bbf8f498df42e81ad26fb00233505a6}{DD4hep::Handle$<$ T $>$}.
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_assembly_a49d6772ff3ef1ed2a49a27ce35caaaac}{DD4hep::Geometry::Assembly}.
+
+Definition at line 271 of file Volumes.h.
+
+References DD4hep::Handle$<$ T $>$::m\_\-element.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_a5087814789bfdbf06b46b2569191a9c6}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!placeVolume@{placeVolume}}
+\index{placeVolume@{placeVolume}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{placeVolume}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PlacedVolume} Volume::placeVolume (const {\bf Volume} \& {\em vol}, \/  const {\bf Rotation3D} \& {\em rot}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_a5087814789bfdbf06b46b2569191a9c6}
+
+
+Place rotated daughter volume. The position is automatically the identity position. 
+
+Definition at line 540 of file Volumes.cpp.
+
+References \_\-addNode(), DD4hep::Geometry::\_\-rotation3D(), and DD4hep::Handle$<$ T $>$::m\_\-element.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_a26ca4b9a6bebdb8d6f8245ac64296f28}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!placeVolume@{placeVolume}}
+\index{placeVolume@{placeVolume}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{placeVolume}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PlacedVolume} Volume::placeVolume (const {\bf Volume} \& {\em vol}, \/  const {\bf RotationZYX} \& {\em rot}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_a26ca4b9a6bebdb8d6f8245ac64296f28}
+
+
+Place rotated daughter volume. The position is automatically the identity position. 
+
+Definition at line 535 of file Volumes.cpp.
+
+References \_\-addNode(), DD4hep::Geometry::\_\-rotationZYX(), and DD4hep::Handle$<$ T $>$::m\_\-element.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_aeee43002378b1a0332d6b0ccdf4969b9}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!placeVolume@{placeVolume}}
+\index{placeVolume@{placeVolume}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{placeVolume}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PlacedVolume} Volume::placeVolume (const {\bf Volume} \& {\em vol}, \/  const {\bf Position} \& {\em pos}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_aeee43002378b1a0332d6b0ccdf4969b9}
+
+
+Place un-\/rotated daughter volume at the given position. 
+
+Definition at line 530 of file Volumes.cpp.
+
+References \_\-addNode(), DD4hep::Geometry::\_\-translation(), and DD4hep::Handle$<$ T $>$::m\_\-element.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_a6dc8c06bdc867360d95e4db2ce71a471}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!placeVolume@{placeVolume}}
+\index{placeVolume@{placeVolume}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{placeVolume}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PlacedVolume} Volume::placeVolume (const {\bf Volume} \& {\em volume}, \/  const {\bf Transform3D} \& {\em tr}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_a6dc8c06bdc867360d95e4db2ce71a471}
+
+
+Place daughter volume according to a generic Transform3D. Place daughter volume according to generic Transform3D. 
+
+Definition at line 520 of file Volumes.cpp.
+
+References \_\-addNode(), DD4hep::Geometry::\_\-transform(), and DD4hep::Handle$<$ T $>$::m\_\-element.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_a61a47d1aa7dfeb411f663d7425aad1e6}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!placeVolume@{placeVolume}}
+\index{placeVolume@{placeVolume}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{placeVolume}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PlacedVolume} Volume::placeVolume (const {\bf Volume} \& {\em vol}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_a61a47d1aa7dfeb411f663d7425aad1e6}
+
+
+Place daughter volume. The position and rotation are the identity. 
+
+Definition at line 525 of file Volumes.cpp.
+
+References \_\-addNode(), DD4hep::Geometry::identityTransform(), and DD4hep::Handle$<$ T $>$::m\_\-element.
+
+Referenced by create\_\-detector(), create\_\-element(), DD4hep::XML::createPlacedEnvelope(), DD4hep::Geometry::LCDDImp::init(), and placeStaves().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_a849db64ccfd2670fd485593f67ae2bb3}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!region@{region}}
+\index{region@{region}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{region}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Region} Volume::region () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_a849db64ccfd2670fd485593f67ae2bb3}
+
+
+Access to the handle to the region structure. 
+
+Definition at line 713 of file Volumes.cpp.
+
+References \_\-data().
+
+Referenced by DD4hep::Geometry::GeoHandler::i\_\-collect().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_a8dcf0ca9c159ed116f3f85fd67efa336}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!sensitiveDetector@{sensitiveDetector}}
+\index{sensitiveDetector@{sensitiveDetector}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{sensitiveDetector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ref\_\-t} Volume::sensitiveDetector () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_a8dcf0ca9c159ed116f3f85fd67efa336}
+
+
+Access to the handle to the sensitive detector. 
+
+Definition at line 744 of file Volumes.cpp.
+
+References \_\-data(), and DD4hep::Geometry::VolumeExtension::sens\_\-det.
+
+Referenced by DD4hep::Simulation::Geant4ConversionHelper::encoding(), DD4hep::DDRec::IDDecoder::findReadout(), and DD4hep::Simulation::Geant4VolumeManager::volumeDescriptor().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_add08120b9db1393b5db41b5cf2cd3e01}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!setAttributes@{setAttributes}}
+\index{setAttributes@{setAttributes}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{setAttributes}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Volume}\& DD4hep::Geometry::Volume::setAttributes (const {\bf LCDD} \& {\em lcdd}, \/  const std::string \& {\em region}, \/  const std::string \& {\em limits}, \/  const std::string \& {\em vis}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_add08120b9db1393b5db41b5cf2cd3e01}
+
+
+Attach attributes to the volume. 
+
+Referenced by create\_\-detector(), and DD4hep::XML::createPlacedEnvelope().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_a9d569026c41f483a7f54a9a6947c96cd}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!setLimitSet@{setLimitSet}}
+\index{setLimitSet@{setLimitSet}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{setLimitSet}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Volume} \& Volume::setLimitSet (const {\bf LimitSet} \& {\em obj}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_a9d569026c41f483a7f54a9a6947c96cd}
+
+
+Set the limits to the volume. 
+
+Definition at line 726 of file Volumes.cpp.
+
+References \_\-data().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_a5c4e1991240829fbf7de49a281984550}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!setLimitSet@{setLimitSet}}
+\index{setLimitSet@{setLimitSet}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{setLimitSet}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Volume}\& DD4hep::Geometry::Volume::setLimitSet (const {\bf LCDD} \& {\em lcdd}, \/  const std::string \& {\em name}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_a5c4e1991240829fbf7de49a281984550}
+
+
+Set the limits to the volume. Note: If the name string is empty, the action is ignored. 
+
+Referenced by create\_\-detector(), and DD4hep::Geometry::GeoHandler::i\_\-collect().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_a65caa62ff7fbf16f38cb85af994944c7}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!setMaterial@{setMaterial}}
+\index{setMaterial@{setMaterial}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{setMaterial}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Volume} \& Volume::setMaterial (const {\bf Material} \& {\em m}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_a65caa62ff7fbf16f38cb85af994944c7}
+
+
+Set the volume's material. 
+
+Definition at line 545 of file Volumes.cpp.
+
+References DD4hep::Handle$<$ T $>$::\_\-ptr(), DD4hep::Handle$<$ T $>$::isValid(), DD4hep::Handle$<$ T $>$::m\_\-element, and DD4hep::Handle$<$ T $>$::name().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_a9078b71f780beef0718462d48c0fda0f}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!setRegion@{setRegion}}
+\index{setRegion@{setRegion}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{setRegion}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Volume} \& Volume::setRegion (const {\bf Region} \& {\em obj}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_a9078b71f780beef0718462d48c0fda0f}
+
+
+Set the regional attributes to the volume. 
+
+Definition at line 707 of file Volumes.cpp.
+
+References \_\-data().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_a4070385330a1c5200adaaa13ef4e6547}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!setRegion@{setRegion}}
+\index{setRegion@{setRegion}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{setRegion}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Volume}\& DD4hep::Geometry::Volume::setRegion (const {\bf LCDD} \& {\em lcdd}, \/  const std::string \& {\em name}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_a4070385330a1c5200adaaa13ef4e6547}
+
+
+Set the regional attributes to the volume. Note: If the name string is empty, the action is ignored. 
+
+Referenced by create\_\-detector(), DD4hep::Geometry::LCDDImp::endDocument(), and DD4hep::Geometry::GeoHandler::i\_\-collect().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_a0aab37c2e9c3d24ebbc6642f0951e217}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!setSensitiveDetector@{setSensitiveDetector}}
+\index{setSensitiveDetector@{setSensitiveDetector}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{setSensitiveDetector}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Volume} \& Volume::setSensitiveDetector (const {\bf SensitiveDetector} \& {\em obj}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_a0aab37c2e9c3d24ebbc6642f0951e217}
+
+
+Assign the sensitive detector structure. 
+
+Definition at line 737 of file Volumes.cpp.
+
+References \_\-data().
+
+Referenced by create\_\-detector().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_ab620d3dc2b453442d9b806e338b661f7}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!setSolid@{setSolid}}
+\index{setSolid@{setSolid}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{setSolid}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Volume} \& Volume::setSolid (const {\bf Solid} \& {\em s}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_ab620d3dc2b453442d9b806e338b661f7}
+
+
+Set the volume's solid shape. 
+
+Definition at line 688 of file Volumes.cpp.
+
+References DD4hep::Handle$<$ T $>$::m\_\-element.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_a2aa60c41207795302295e8147e2dc3d9}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!setVisAttributes@{setVisAttributes}}
+\index{setVisAttributes@{setVisAttributes}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{setVisAttributes}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Volume}\& DD4hep::Geometry::Volume::setVisAttributes (const {\bf LCDD} \& {\em lcdd}, \/  const std::string \& {\em name}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_a2aa60c41207795302295e8147e2dc3d9}
+
+
+Set Visualization attributes to the volume. Note: If the name string is empty, the action is ignored. \hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_a5db10a2a883d77b2654fe1875d5d7bb5}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!setVisAttributes@{setVisAttributes}}
+\index{setVisAttributes@{setVisAttributes}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{setVisAttributes}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Volume} \& Volume::setVisAttributes (const {\bf VisAttr} \& {\em obj}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_a5db10a2a883d77b2654fe1875d5d7bb5}
+
+
+Set Visualization attributes to the volume. 
+
+Definition at line 565 of file Volumes.cpp.
+
+References \_\-userExtension(), DD4hep::Geometry::VisAttrObject::alpha, DD4hep::Geometry::VisAttrObject::col, DD4hep::Geometry::VisAttrObject::color, DD4hep::Geometry::VisAttr::DASHED, DD4hep::Handle$<$ T $>$::data(), DD4hep::DEBUG, DD4hep::Geometry::VisAttrObject::drawingStyle, DD4hep::Handle$<$ T $>$::isValid(), DD4hep::Geometry::VisAttrObject::lineStyle, DD4hep::Handle$<$ T $>$::m\_\-element, DD4hep::Handle$<$ T $>$::name(), DD4hep::printout(), DD4hep::Geometry::VisAttrObject::showDaughters, DD4hep::Geometry::VisAttr::SOLID, DD4hep::Geometry::VolumeExtension::vis, and DD4hep::Geometry::VisAttrObject::visible.
+
+Referenced by create\_\-detector(), and DD4hep::Geometry::LCDDImp::endDocument().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_a35ba3ff621375ca5fb8e5c9474e4e179}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!solid@{solid}}
+\index{solid@{solid}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{solid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Solid} Volume::solid () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_a35ba3ff621375ca5fb8e5c9474e4e179}
+
+
+Access to Solid (Shape). 
+
+Definition at line 694 of file Volumes.cpp.
+
+Referenced by DD4hep::DDRec::LayeringExtensionImpl::LayerAttributes::addElement(), DD4hep::DDRec::createGearForCLIC(), DD4hep::DDRec::createGearForILD(), DD4hep::DDRec::IDDecoder::getClosestDaughter(), DD4hep::DDRec::SubdetectorExtensionImpl::getNSides(), DD4hep::DDRec::SubdetectorExtensionImpl::getRMax(), DD4hep::DDRec::SubdetectorExtensionImpl::getRMin(), DD4hep::DDRec::SubdetectorExtensionImpl::getZMax(), DD4hep::DDRec::SubdetectorExtensionImpl::getZMin(), and DD4hep::SurfaceInstaller::install().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_a53c50a053aebaff28bb27a36c824db50}{
+\index{DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}!visAttributes@{visAttributes}}
+\index{visAttributes@{visAttributes}!DD4hep::Geometry::Volume@{DD4hep::Geometry::Volume}}
+\subsubsection[{visAttributes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf VisAttr} Volume::visAttributes () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_a53c50a053aebaff28bb27a36c824db50}
+
+
+Access the visualisation attributes. 
+
+Definition at line 680 of file Volumes.cpp.
+
+References \_\-data(), and DD4hep::Geometry::VolumeExtension::vis.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_volumes_8h}{Volumes.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_volumes_8cpp}{Volumes.cpp}\end{DoxyCompactItemize}

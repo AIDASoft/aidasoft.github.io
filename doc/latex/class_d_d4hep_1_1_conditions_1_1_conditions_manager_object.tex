@@ -1,0 +1,807 @@
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object}{
+\section{DD4hep::Conditions::ConditionsManagerObject Class Reference}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object}\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+}
+
+
+\hyperlink{namespace_d_d4hep_1_1_conditions}{Conditions} internal namespace declaration.  
+
+
+{\ttfamily \#include $<$ConditionsInterna.h$>$}Inheritance diagram for DD4hep::Conditions::ConditionsManagerObject::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.31455cm]{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1dd4hep__ptr}{dd4hep\_\-ptr}$<$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader}{ConditionsDataLoader} $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ab2df3fc6386b7f71ed3087271d90acc6}{Loader}
+\item 
+typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_i_o_v_type}{IOVType} $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a8c3b7d5bdfb7fc6bf6e61ddba5a5f652}{IOVTypes}
+\item 
+typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool}{ConditionsIOVPool} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a1617c134372fbb79d06990707f19bb0c}{TypedConditionPool}
+\item 
+typedef std::pair$<$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_listener}{ConditionsListener} $\ast$, void $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac4cd1e3a448bc1f8bae384d194f10c23}{Listener}
+\item 
+typedef std::set$<$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac4cd1e3a448bc1f8bae384d194f10c23}{Listener} $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aba0162524bc90a39e30bd5f1f0067ee2}{Listeners}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection}{ConditionsManager::Dependencies} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a539905074db3aee8b401d575649dbdd8}{Dependencies}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_a8dd76f9acef2c8d3b7970e266fe7eff6}{ConditionsManager::ConditionKeys} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aad75140018040c6ad49e56a4d56a35ee}{ConditionKeys}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition::key\_\-type} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac44eafc69174743e81d2f60e1f510719}{key\_\-type}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_i_o_v}{Condition::iov\_\-type} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a0190ec510ca46da4a1cc908ac3c3a1dd}{iov\_\-type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ad22280768d433c68fabe8709a1bb6fda}{\_\-\_\-queue\_\-update} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_entry}{Conditions::Entry} $\ast$data)
+\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_adff4e6fe39f5057945ff8ac0634aad2e}{ConditionsManagerObject} (LCDD \&lcdd)
+\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a78747f9367ce2e43b3d0ee4214eb9ab3}{$\sim$ConditionsManagerObject} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+LCDD \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ace8f542e07423795f472dac6e606121e}{lcdd} () const 
+\begin{DoxyCompactList}\small\item\em Access to the detector description instance. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a1617c134372fbb79d06990707f19bb0c}{TypedConditionPool} \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a216b4a65afcc3533f3b8dd1af996dc8c}{conditionsPool} () const 
+\begin{DoxyCompactList}\small\item\em Access to managed pool of typed conditions indexed by IOV-\/type and \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} key. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_data_loader}{ConditionsDataLoader} $\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ad0e321f7b3bd3abf8a6ccac213c022b8}{loader} () const 
+\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a598756c7672c67065f3d116689f95722}{initialize} ()
+\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a74aa106c194fb9ca929c8cf523632ce3}{callOnRegister} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac4cd1e3a448bc1f8bae384d194f10c23}{Listener} \&callee, bool add)
+\begin{DoxyCompactList}\small\item\em (Un)Registration of conditions listeners with callback when a new condition is registered \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a4a8912db5a30d6792455aef57c223bed}{callOnRemove} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac4cd1e3a448bc1f8bae384d194f10c23}{Listener} \&callee, bool add)
+\begin{DoxyCompactList}\small\item\em (Un)Registration of conditions listeners with callback when a condition is unregistered \item\end{DoxyCompactList}\item 
+std::pair$<$ bool, const \hyperlink{class_d_d4hep_1_1_i_o_v_type}{IOVType} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ace52e06206ed940af14fd32db36d5d08}{registerIOVType} (size\_\-t \hyperlink{class_d_d4hep_1_1_i_o_v}{iov\_\-type}, const std::string \&iov\_\-name)
+\begin{DoxyCompactList}\small\item\em Register new \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} type if it does not (yet) exist. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a8c3b7d5bdfb7fc6bf6e61ddba5a5f652}{IOVTypes} \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ab19f2ded7e79ae78aa18dbbb52bc0bba}{iovTypes} () const 
+\begin{DoxyCompactList}\small\item\em Access \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} by its type. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_i_o_v_type}{IOVType} $\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a58a9d92f553861ae2d5fcf036a9b3d77}{iovType} (size\_\-t \hyperlink{class_d_d4hep_1_1_i_o_v}{iov\_\-type}) const 
+\begin{DoxyCompactList}\small\item\em Access \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} by its type. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_i_o_v_type}{IOVType} $\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a3b5688694720507165694439db5294b8}{iovType} (const std::string \&iov\_\-name) const 
+\begin{DoxyCompactList}\small\item\em Access \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} by its name. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a9ff0d68cbe3771a7a9354bdf518ddd11}{fromString} (const std::string \&iov\_\-str, \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \&iov)
+\begin{DoxyCompactList}\small\item\em Create \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} from string. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_pool}{ConditionsPool} $\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aead446d145420ab3f6e48c74194dff05}{registerIOV} (const std::string \&data)
+\begin{DoxyCompactList}\small\item\em Register \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} using new string data. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_pool}{ConditionsPool} $\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac6647d16096a5fccda601eada638e13b}{registerIOV} (const \hyperlink{class_d_d4hep_1_1_i_o_v_type}{IOVType} \&typ, \hyperlink{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}{IOV::Key} key)
+\begin{DoxyCompactList}\small\item\em Register \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} with type and key. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a745cd16ef676c16294d450c60617fbd1}{registerUnlocked} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_pool}{ConditionsPool} $\ast$pool, \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} cond)
+\begin{DoxyCompactList}\small\item\em Register new condition with the conditions store. Unlocked version, not multi-\/threaded. \item\end{DoxyCompactList}\item 
+long \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a897ca111b081fb1c6ed8a39739684d0e}{prepare} (const \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \&required\_\-validity, const \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aad75140018040c6ad49e56a4d56a35ee}{ConditionKeys} \&keys, \hyperlink{class_d_d4hep_1_1dd4hep__ptr}{dd4hep\_\-ptr}$<$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool}{UserPool} $>$ \&user\_\-pool)
+\begin{DoxyCompactList}\small\item\em Prepare all updates for the given keys to the clients with the defined \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. \item\end{DoxyCompactList}\item 
+long \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a50cd5fe85ead70ca4a0561ca37cbc435}{prepare} (const \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \&required\_\-validity, const \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aad75140018040c6ad49e56a4d56a35ee}{ConditionKeys} \&keys, \hyperlink{class_d_d4hep_1_1dd4hep__ptr}{dd4hep\_\-ptr}$<$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool}{UserPool} $>$ \&user\_\-pool, const \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection}{Dependencies} \&dependencies, bool verify\_\-dependencies=true)
+\begin{DoxyCompactList}\small\item\em Prepare all updates for the given keys to the clients with the defined \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. \item\end{DoxyCompactList}\item 
+long \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a4550e641d43365715516abc3f82586e6}{prepare} (const \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \&required\_\-validity, \hyperlink{class_d_d4hep_1_1dd4hep__ptr}{dd4hep\_\-ptr}$<$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool}{UserPool} $>$ \&user\_\-pool)
+\begin{DoxyCompactList}\small\item\em Prepare all updates to the clients with the defined \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. \item\end{DoxyCompactList}\item 
+long \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a12104037c413426d82374b639acd88e8}{prepare} (const \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \&required\_\-validity, \hyperlink{class_d_d4hep_1_1dd4hep__ptr}{dd4hep\_\-ptr}$<$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool}{UserPool} $>$ \&user\_\-pool, const \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection}{Dependencies} \&dependencies, bool verify\_\-dependencies=true)
+\begin{DoxyCompactList}\small\item\em Prepare all updates to the clients with the defined \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. \item\end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aca6c43594d93ab8773e245b8cffb0f60}{clean} (const \hyperlink{class_d_d4hep_1_1_i_o_v_type}{IOVType} $\ast$typ, int max\_\-age)
+\begin{DoxyCompactList}\small\item\em Clean conditions, which are above the age limit. \item\end{DoxyCompactList}\item 
+std::pair$<$ int, int $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a16cf2685ed249700904621d9a68bcdb2}{clear} ()
+\begin{DoxyCompactList}\small\item\em Full cleanup of all managed conditions. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a9bda89e54e1ad3b202f7295ec6c102a8}{pushUpdates} ()
+\begin{DoxyCompactList}\small\item\em Push all pending updates to the conditions store. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_af839b57cfdda205e2555e757651423fd}{registerCondition} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} c)
+\begin{DoxyCompactList}\small\item\em Register a new managed condition. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aa2b1c984fdda098cfbaba3e9ed09accd}{get} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac44eafc69174743e81d2f60e1f510719}{key\_\-type} key, const \hyperlink{class_d_d4hep_1_1_i_o_v}{iov\_\-type} \&req\_\-validity)
+\begin{DoxyCompactList}\small\item\em Retrieve a condition set given a Detector Element and the conditions name according to their validity. \item\end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{RangeConditions} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac1c07dfc605bd517d4edfcca2c4bd21a}{getRange} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac44eafc69174743e81d2f60e1f510719}{key\_\-type} key, const \hyperlink{class_d_d4hep_1_1_i_o_v}{iov\_\-type} \&req\_\-validity)
+\begin{DoxyCompactList}\small\item\em Retrieve a condition given a Detector Element and the conditions name. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a8367e7cb7b833dee436e0eacb6c37a87}{m\_\-maxIOVTypes}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: maximal number of \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} types to be handled. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_acbd30bb422ca98796d1eabf4e17706a2}{m\_\-poolType}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_pool}{ConditionsPool} constructor type (default: empty. MUST BE SET!). \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a015a2e784bea5773c62513f6d24af753}{m\_\-updateType}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: \hyperlink{class_d_d4hep_1_1_conditions_1_1_update_pool}{UpdatePool} constructor type (default: DD4hep\_\-ConditionsLinearUpdatePool). \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_abe38ba943a936b6322ec553e53f0c7dd}{m\_\-userType}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool}{UserPool} constructor type (default: DD4hep\_\-ConditionsLinearUserPool). \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_adc2a8ecbe9ee734901bdf11dc2e3da0e}{m\_\-loaderType}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: \hyperlink{namespace_d_d4hep_1_1_conditions}{Conditions} loader type (default: \char`\"{}multi\char`\"{} -\/$>$ DD4hep\_\-Conditions\_\-multi\_\-Loader). \item\end{DoxyCompactList}\item 
+LCDD \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a6ca16a780558379464d37ca9e691e9ef}{m\_\-lcdd}
+\begin{DoxyCompactList}\small\item\em Reference to main detector description object. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a8c3b7d5bdfb7fc6bf6e61ddba5a5f652}{IOVTypes} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_abc6f28abb03bdfa1f3c0d51de6e6ac9d}{m\_\-iovTypes}
+\begin{DoxyCompactList}\small\item\em Collection of \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} types managed. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a1617c134372fbb79d06990707f19bb0c}{TypedConditionPool} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a90c9b5060b3a6299aa7d5d4e9a0d8105}{m\_\-rawPool}
+\begin{DoxyCompactList}\small\item\em Managed pool of typed conditions indexed by IOV-\/type and \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} key. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aba0162524bc90a39e30bd5f1f0067ee2}{Listeners} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a28a1e3f34a87dcd305b0f71bb92f297f}{m\_\-onRegister}
+\begin{DoxyCompactList}\small\item\em \hyperlink{namespace_d_d4hep_1_1_conditions}{Conditions} listeners on registration of new conditions. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aba0162524bc90a39e30bd5f1f0067ee2}{Listeners} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aa6081a3511680ee1060e78b6a570636d}{m\_\-onRemove}
+\begin{DoxyCompactList}\small\item\em \hyperlink{namespace_d_d4hep_1_1_conditions}{Conditions} listeners on de-\/registration of new conditions. \item\end{DoxyCompactList}\item 
+\hyperlink{struct_d_d4hep_1_1dd4hep__mutex__t}{dd4hep\_\-mutex\_\-t} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a4da3e311e9b9121fef58f2cd80da12f9}{m\_\-updateLock}
+\begin{DoxyCompactList}\small\item\em Lock to protect the update/delayed conditions pool. \item\end{DoxyCompactList}\item 
+\hyperlink{struct_d_d4hep_1_1dd4hep__mutex__t}{dd4hep\_\-mutex\_\-t} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_af0a0803e28ed3d30721609a420689e4a}{m\_\-poolLock}
+\begin{DoxyCompactList}\small\item\em Lock to protect the pool of all known conditions. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1dd4hep__ptr}{Loader} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a94483d902a20171f95eaf0e2d531f05d}{m\_\-loader}
+\begin{DoxyCompactList}\small\item\em Reference to data loader. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1dd4hep__ptr}{dd4hep\_\-ptr}$<$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_update_pool}{UpdatePool} $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a83ef3cf4c818d972d9c8720913c7525b}{m\_\-updatePool}
+\begin{DoxyCompactList}\small\item\em Reference to update conditions pool. \item\end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_af4a66ea9d20e133cadd6e33a188d7f5b}{locked}
+\begin{DoxyCompactList}\small\item\em Public access: if locked, DetElements stay intact and are not altered. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aa859ab1f2f920ff8b69869d27e3dd8d1}{select} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac44eafc69174743e81d2f60e1f510719}{key\_\-type} key, const \hyperlink{class_d_d4hep_1_1_i_o_v}{iov\_\-type} \&req\_\-validity, \hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{RangeConditions} \&conditions)
+\begin{DoxyCompactList}\small\item\em Retrieve a condition set given a Detector Element and the conditions name according to their validity. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a64da19430050ca03c6ee43c83ca68dd9}{select\_\-range} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac44eafc69174743e81d2f60e1f510719}{key\_\-type} key, const \hyperlink{class_d_d4hep_1_1_i_o_v}{iov\_\-type} \&req\_\-validity, \hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{RangeConditions} \&conditions)
+\begin{DoxyCompactList}\small\item\em Retrieve a condition set given a Detector Element and the conditions name according to their validity. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac945da1c9e23ba4e7db40221a38d4abc}{registerCallee} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aba0162524bc90a39e30bd5f1f0067ee2}{Listeners} \&listeners, const \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac4cd1e3a448bc1f8bae384d194f10c23}{Listener} \&callee, bool add)
+\begin{DoxyCompactList}\small\item\em Register a set of new managed condition for an \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} range. Called by \_\-\_\-load\_\-immediate. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a872970f1bb67a3d225be8c63422f848f}{onRegister} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} condition)
+\begin{DoxyCompactList}\small\item\em Listener invocation when a condition is registered to the cache. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_adb550d80aca3b897f299530b4c4bfd0b}{onRemove} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} condition)
+\begin{DoxyCompactList}\small\item\em Listener invocation when a condition is deregistered from the cache. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a4e7c5a6f766e182c7fcdcf766c28f9a0}{\_\-\_\-get\_\-checked\_\-pool} (const \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \&required\_\-validity, \hyperlink{class_d_d4hep_1_1dd4hep__ptr}{dd4hep\_\-ptr}$<$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool}{UserPool} $>$ \&user\_\-pool)
+\begin{DoxyCompactList}\small\item\em Helper to check iov and user pool and create user pool if not present. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ae399ab8adc57b6187de6a733d9fcfc73}{DD4hep::Conditions::ConditionsPool}
+\item 
+class \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a967e35cec9ace4f5cfb821c8d1f86f0b}{DD4hep::Conditions::ConditionsDataLoader}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{namespace_d_d4hep_1_1_conditions}{Conditions} internal namespace declaration. Internally defined datastructures are not presented to the user directly, but are used by dedicated views.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 The data class behind a conditions manager handle For convenience, the class definition is here. See \hyperlink{_conditions_manager_8cpp}{ConditionsManager.cpp} for the implementation.
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 64 of file ConditionsInterna.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aad75140018040c6ad49e56a4d56a35ee}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!ConditionKeys@{ConditionKeys}}
+\index{ConditionKeys@{ConditionKeys}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{ConditionKeys}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf ConditionsManager::ConditionKeys} {\bf DD4hep::Conditions::ConditionsManagerObject::ConditionKeys}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aad75140018040c6ad49e56a4d56a35ee}
+
+
+Definition at line 78 of file ConditionsInterna.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a539905074db3aee8b401d575649dbdd8}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!Dependencies@{Dependencies}}
+\index{Dependencies@{Dependencies}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{Dependencies}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf ConditionsManager::Dependencies} {\bf DD4hep::Conditions::ConditionsManagerObject::Dependencies}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a539905074db3aee8b401d575649dbdd8}
+
+
+Definition at line 77 of file ConditionsInterna.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a0190ec510ca46da4a1cc908ac3c3a1dd}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!iov\_\-type@{iov\_\-type}}
+\index{iov\_\-type@{iov\_\-type}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{iov\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Condition::iov\_\-type} {\bf DD4hep::Conditions::ConditionsManagerObject::iov\_\-type}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a0190ec510ca46da4a1cc908ac3c3a1dd}
+
+
+Definition at line 80 of file ConditionsInterna.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a8c3b7d5bdfb7fc6bf6e61ddba5a5f652}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!IOVTypes@{IOVTypes}}
+\index{IOVTypes@{IOVTypes}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{IOVTypes}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf IOVType}$>$ {\bf DD4hep::Conditions::ConditionsManagerObject::IOVTypes}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a8c3b7d5bdfb7fc6bf6e61ddba5a5f652}
+
+
+Definition at line 73 of file ConditionsInterna.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac44eafc69174743e81d2f60e1f510719}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!key\_\-type@{key\_\-type}}
+\index{key\_\-type@{key\_\-type}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{key\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Condition::key\_\-type} {\bf DD4hep::Conditions::ConditionsManagerObject::key\_\-type}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac44eafc69174743e81d2f60e1f510719}
+
+
+Definition at line 79 of file ConditionsInterna.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac4cd1e3a448bc1f8bae384d194f10c23}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!Listener@{Listener}}
+\index{Listener@{Listener}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{Listener}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::pair$<${\bf ConditionsListener}$\ast$,void$\ast$$>$ {\bf DD4hep::Conditions::ConditionsManagerObject::Listener}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac4cd1e3a448bc1f8bae384d194f10c23}
+
+
+Definition at line 75 of file ConditionsInterna.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aba0162524bc90a39e30bd5f1f0067ee2}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!Listeners@{Listeners}}
+\index{Listeners@{Listeners}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{Listeners}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::set$<${\bf Listener}$>$ {\bf DD4hep::Conditions::ConditionsManagerObject::Listeners}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aba0162524bc90a39e30bd5f1f0067ee2}
+
+
+Definition at line 76 of file ConditionsInterna.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ab2df3fc6386b7f71ed3087271d90acc6}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!Loader@{Loader}}
+\index{Loader@{Loader}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{Loader}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf dd4hep\_\-ptr}$<${\bf ConditionsDataLoader}$>$ {\bf DD4hep::Conditions::ConditionsManagerObject::Loader}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ab2df3fc6386b7f71ed3087271d90acc6}
+
+
+Definition at line 72 of file ConditionsInterna.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a1617c134372fbb79d06990707f19bb0c}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!TypedConditionPool@{TypedConditionPool}}
+\index{TypedConditionPool@{TypedConditionPool}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{TypedConditionPool}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf ConditionsIOVPool}$\ast$$>$ {\bf DD4hep::Conditions::ConditionsManagerObject::TypedConditionPool}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a1617c134372fbb79d06990707f19bb0c}
+
+
+Definition at line 74 of file ConditionsInterna.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_adff4e6fe39f5057945ff8ac0634aad2e}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!ConditionsManagerObject@{ConditionsManagerObject}}
+\index{ConditionsManagerObject@{ConditionsManagerObject}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{ConditionsManagerObject}]{\setlength{\rightskip}{0pt plus 5cm}ConditionsManagerObject::ConditionsManagerObject (LCDD \& {\em lcdd})}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_adff4e6fe39f5057945ff8ac0634aad2e}
+
+
+Standard constructor. 
+
+Definition at line 137 of file ConditionsInterna.cpp.
+
+References DD4hep::PropertyConfigurable::declareProperty(), DD4hep::InstanceCount::increment(), m\_\-iovTypes, m\_\-loaderType, m\_\-maxIOVTypes, m\_\-poolType, m\_\-rawPool, m\_\-updateType, and m\_\-userType.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a78747f9367ce2e43b3d0ee4214eb9ab3}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!$\sim$ConditionsManagerObject@{$\sim$ConditionsManagerObject}}
+\index{$\sim$ConditionsManagerObject@{$\sim$ConditionsManagerObject}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{$\sim$ConditionsManagerObject}]{\setlength{\rightskip}{0pt plus 5cm}ConditionsManagerObject::$\sim$ConditionsManagerObject ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a78747f9367ce2e43b3d0ee4214eb9ab3}
+
+
+Default destructor. 
+
+Definition at line 154 of file ConditionsInterna.cpp.
+
+References DD4hep::InstanceCount::decrement(), m\_\-lcdd, m\_\-rawPool, DD4hep::Alignments::AlignmentsLoader::release(), and DD4hep::Conditions::ConditionsLoader::release().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a4e7c5a6f766e182c7fcdcf766c28f9a0}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!\_\-\_\-get\_\-checked\_\-pool@{\_\-\_\-get\_\-checked\_\-pool}}
+\index{\_\-\_\-get\_\-checked\_\-pool@{\_\-\_\-get\_\-checked\_\-pool}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{\_\-\_\-get\_\-checked\_\-pool}]{\setlength{\rightskip}{0pt plus 5cm}void ConditionsManagerObject::\_\-\_\-get\_\-checked\_\-pool (const {\bf IOV} \& {\em required\_\-validity}, \/  {\bf dd4hep\_\-ptr}$<$ {\bf UserPool} $>$ \& {\em user\_\-pool})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a4e7c5a6f766e182c7fcdcf766c28f9a0}
+
+
+Helper to check iov and user pool and create user pool if not present. 
+
+Definition at line 450 of file ConditionsInterna.cpp.
+
+References DD4hep::dd4hep\_\-ptr$<$ T $>$::adopt(), DD4hep::except(), DD4hep::Errors::invalidArg(), m\_\-rawPool, and DD4hep::IOVType::type.
+
+Referenced by prepare().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ad22280768d433c68fabe8709a1bb6fda}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!\_\-\_\-queue\_\-update@{\_\-\_\-queue\_\-update}}
+\index{\_\-\_\-queue\_\-update@{\_\-\_\-queue\_\-update}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{\_\-\_\-queue\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Condition} ConditionsManagerObject::\_\-\_\-queue\_\-update ({\bf Conditions::Entry} $\ast$ {\em e})}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ad22280768d433c68fabe8709a1bb6fda}
+Set a single conditions value to be managed. Requires EXTERNALLY held lock on update pool!
+
+Set a single conditions value to be managed. Requires external lock on update pool! 
+
+Definition at line 344 of file ConditionsInterna.cpp.
+
+References DD4hep::Conditions::Interna::ConditionObject::address, DD4hep::Conditions::Interna::ConditionObject::comment, DD4hep::Conditions::Entry::detector, DD4hep::INFO, DD4hep::Conditions::ConditionsPool::insert(), DD4hep::Conditions::ConditionsPool::iov, DD4hep::Conditions::Interna::ConditionObject::iov, DD4hep::NamedObject::name, DD4hep::Geometry::DetElement::path(), DD4hep::Conditions::Interna::ConditionObject::pool, DD4hep::printout(), DD4hep::Handle$<$ T $>$::ptr(), registerIOV(), DD4hep::NamedObject::type, DD4hep::Conditions::Interna::ConditionObject::validity, DD4hep::Conditions::Entry::validity, DD4hep::Conditions::Entry::value, and DD4hep::Conditions::Interna::ConditionObject::value.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a74aa106c194fb9ca929c8cf523632ce3}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!callOnRegister@{callOnRegister}}
+\index{callOnRegister@{callOnRegister}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{callOnRegister}]{\setlength{\rightskip}{0pt plus 5cm}void ConditionsManagerObject::callOnRegister (const {\bf Listener} \& {\em callee}, \/  bool {\em add})}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a74aa106c194fb9ca929c8cf523632ce3}
+
+
+(Un)Registration of conditions listeners with callback when a new condition is registered 
+
+Definition at line 198 of file ConditionsInterna.cpp.
+
+References m\_\-onRegister, and registerCallee().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a4a8912db5a30d6792455aef57c223bed}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!callOnRemove@{callOnRemove}}
+\index{callOnRemove@{callOnRemove}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{callOnRemove}]{\setlength{\rightskip}{0pt plus 5cm}void ConditionsManagerObject::callOnRemove (const {\bf Listener} \& {\em callee}, \/  bool {\em add})}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a4a8912db5a30d6792455aef57c223bed}
+
+
+(Un)Registration of conditions listeners with callback when a condition is unregistered (Un)Registration of conditions listeners with callback when a condition is de-\/registered 
+
+Definition at line 203 of file ConditionsInterna.cpp.
+
+References m\_\-onRemove, and registerCallee().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aca6c43594d93ab8773e245b8cffb0f60}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!clean@{clean}}
+\index{clean@{clean}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{clean}]{\setlength{\rightskip}{0pt plus 5cm}int ConditionsManagerObject::clean (const {\bf IOVType} $\ast$ {\em typ}, \/  int {\em max\_\-age})}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aca6c43594d93ab8773e245b8cffb0f60}
+
+
+Clean conditions, which are above the age limit. \begin{DoxyReturn}{Returns}
+Number of conditions cleaned up and removed 
+\end{DoxyReturn}
+
+
+Definition at line 369 of file ConditionsInterna.cpp.
+
+References DD4hep::Conditions::ConditionsIOVPool::clean(), m\_\-rawPool, m\_\-updateLock, and DD4hep::IOVType::type.
+
+Referenced by DD4hep::Conditions::ConditionsManager::clean().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a16cf2685ed249700904621d9a68bcdb2}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!clear@{clear}}
+\index{clear@{clear}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pair}$<$ int, int $>$ ConditionsManagerObject::clear ()}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a16cf2685ed249700904621d9a68bcdb2}
+
+
+Full cleanup of all managed conditions. \begin{DoxyReturn}{Returns}
+pair$<$Number of pools cleared, Number of conditions cleaned up and removed$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 380 of file ConditionsInterna.cpp.
+
+References DD4hep::Conditions::ConditionsIOVPool::clean(), and m\_\-rawPool.
+
+Referenced by DD4hep::Conditions::ConditionsManager::clear().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a216b4a65afcc3533f3b8dd1af996dc8c}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!conditionsPool@{conditionsPool}}
+\index{conditionsPool@{conditionsPool}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{conditionsPool}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf TypedConditionPool}\& DD4hep::Conditions::ConditionsManagerObject::conditionsPool () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a216b4a65afcc3533f3b8dd1af996dc8c}
+
+
+Access to managed pool of typed conditions indexed by IOV-\/type and \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} key. 
+
+Definition at line 153 of file ConditionsInterna.h.
+
+References m\_\-rawPool.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a9ff0d68cbe3771a7a9354bdf518ddd11}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!fromString@{fromString}}
+\index{fromString@{fromString}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{fromString}]{\setlength{\rightskip}{0pt plus 5cm}void ConditionsManagerObject::fromString (const std::string \& {\em iov\_\-str}, \/  {\bf IOV} \& {\em iov})}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a9ff0d68cbe3771a7a9354bdf518ddd11}
+
+
+Create \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} from string. 
+
+Definition at line 259 of file ConditionsInterna.cpp.
+
+References DD4hep::except(), DD4hep::Errors::invalidArg(), DD4hep::IOV::iovType, iovType(), DD4hep::IOV::set(), DD4hep::IOVType::type, and DD4hep::IOV::type.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aa2b1c984fdda098cfbaba3e9ed09accd}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!get@{get}}
+\index{get@{get}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Condition} DD4hep::Conditions::ConditionsManagerObject::get ({\bf key\_\-type} {\em key}, \/  const {\bf iov\_\-type} \& {\em req\_\-validity})}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aa2b1c984fdda098cfbaba3e9ed09accd}
+
+
+Retrieve a condition set given a Detector Element and the conditions name according to their validity. 
+
+Referenced by DD4hep::Conditions::ConditionsLoaderImp::get(), DD4hep::Conditions::ConditionsAccess::get(), and DD4hep::Conditions::AlignmentsLoaderImp::get().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac1c07dfc605bd517d4edfcca2c4bd21a}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!getRange@{getRange}}
+\index{getRange@{getRange}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{getRange}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RangeConditions} DD4hep::Conditions::ConditionsManagerObject::getRange ({\bf key\_\-type} {\em key}, \/  const {\bf iov\_\-type} \& {\em req\_\-validity})}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac1c07dfc605bd517d4edfcca2c4bd21a}
+
+
+Retrieve a condition given a Detector Element and the conditions name. 
+
+Referenced by DD4hep::Conditions::ConditionsAccess::getRange().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a598756c7672c67065f3d116689f95722}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!initialize@{initialize}}
+\index{initialize@{initialize}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void ConditionsManagerObject::initialize ()}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a598756c7672c67065f3d116689f95722}
+
+
+Definition at line 168 of file ConditionsInterna.cpp.
+
+References DD4hep::dd4hep\_\-ptr$<$ T $>$::adopt(), DD4hep::except(), m\_\-lcdd, m\_\-loader, m\_\-loaderType, m\_\-updatePool, m\_\-updateType, and DD4hep::Errors::noSys().
+
+Referenced by DD4hep::Conditions::ConditionsManager::initialize().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a3b5688694720507165694439db5294b8}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!iovType@{iovType}}
+\index{iovType@{iovType}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{iovType}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf IOVType}$\ast$ DD4hep::Conditions::ConditionsManagerObject::iovType (const std::string \& {\em iov\_\-name}) const}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a3b5688694720507165694439db5294b8}
+
+
+Access \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} by its name. \hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a58a9d92f553861ae2d5fcf036a9b3d77}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!iovType@{iovType}}
+\index{iovType@{iovType}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{iovType}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf IOVType} $\ast$ ConditionsManagerObject::iovType (size\_\-t {\em iov\_\-type}) const}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a58a9d92f553861ae2d5fcf036a9b3d77}
+
+
+Access \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} by its type. 
+
+Definition at line 241 of file ConditionsInterna.cpp.
+
+References DD4hep::except(), m\_\-iovTypes, and DD4hep::IOVType::type.
+
+Referenced by fromString().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ab19f2ded7e79ae78aa18dbbb52bc0bba}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!iovTypes@{iovTypes}}
+\index{iovTypes@{iovTypes}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{iovTypes}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf IOVTypes}\& DD4hep::Conditions::ConditionsManagerObject::iovTypes () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ab19f2ded7e79ae78aa18dbbb52bc0bba}
+
+
+Access \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} by its type. 
+
+Definition at line 171 of file ConditionsInterna.h.
+
+References m\_\-iovTypes.
+
+Referenced by DD4hep::Conditions::ConditionsManager::iovTypesUsed(), and DD4hep::Conditions::ConditionsAccess::iovTypesUsed().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ace8f542e07423795f472dac6e606121e}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!lcdd@{lcdd}}
+\index{lcdd@{lcdd}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{lcdd}]{\setlength{\rightskip}{0pt plus 5cm}LCDD\& DD4hep::Conditions::ConditionsManagerObject::lcdd () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ace8f542e07423795f472dac6e606121e}
+
+
+Access to the detector description instance. 
+
+Definition at line 150 of file ConditionsInterna.h.
+
+References m\_\-lcdd.
+
+Referenced by DD4hep::Conditions::ConditionsDependencyHandler::lcdd().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ad0e321f7b3bd3abf8a6ccac213c022b8}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!loader@{loader}}
+\index{loader@{loader}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{loader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ConditionsDataLoader}$\ast$ DD4hep::Conditions::ConditionsManagerObject::loader () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ad0e321f7b3bd3abf8a6ccac213c022b8}
+
+
+Definition at line 155 of file ConditionsInterna.h.
+
+References m\_\-loader.
+
+Referenced by DD4hep::Conditions::ConditionsManager::loader().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a872970f1bb67a3d225be8c63422f848f}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!onRegister@{onRegister}}
+\index{onRegister@{onRegister}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{onRegister}]{\setlength{\rightskip}{0pt plus 5cm}void ConditionsManagerObject::onRegister ({\bf Condition} {\em condition})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a872970f1bb67a3d225be8c63422f848f}
+
+
+Listener invocation when a condition is registered to the cache. Call this when a condition is registered to the cache. 
+
+Definition at line 208 of file ConditionsInterna.cpp.
+
+References m\_\-onRegister, and DD4hep::Conditions::ConditionsListener::onRegisterCondition().
+
+Referenced by DD4hep::Conditions::ConditionsPool::onRegister(), and registerCondition().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_adb550d80aca3b897f299530b4c4bfd0b}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!onRemove@{onRemove}}
+\index{onRemove@{onRemove}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{onRemove}]{\setlength{\rightskip}{0pt plus 5cm}void ConditionsManagerObject::onRemove ({\bf Condition} {\em condition})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_adb550d80aca3b897f299530b4c4bfd0b}
+
+
+Listener invocation when a condition is deregistered from the cache. Call this when a condition is deregistered from the cache. 
+
+Definition at line 213 of file ConditionsInterna.cpp.
+
+References m\_\-onRemove, and DD4hep::Conditions::ConditionsListener::onRemoveCondition().
+
+Referenced by DD4hep::Conditions::ConditionsPool::onRemove().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a12104037c413426d82374b639acd88e8}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!prepare@{prepare}}
+\index{prepare@{prepare}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{prepare}]{\setlength{\rightskip}{0pt plus 5cm}long ConditionsManagerObject::prepare (const {\bf IOV} \& {\em required\_\-validity}, \/  {\bf dd4hep\_\-ptr}$<$ {\bf UserPool} $>$ \& {\em user\_\-pool}, \/  const {\bf Dependencies} \& {\em dependencies}, \/  bool {\em verify\_\-dependencies} = {\ttfamily true})}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a12104037c413426d82374b639acd88e8}
+
+
+Prepare all updates to the clients with the defined \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. 
+
+Definition at line 508 of file ConditionsInterna.cpp.
+
+References prepare().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a4550e641d43365715516abc3f82586e6}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!prepare@{prepare}}
+\index{prepare@{prepare}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{prepare}]{\setlength{\rightskip}{0pt plus 5cm}long ConditionsManagerObject::prepare (const {\bf IOV} \& {\em required\_\-validity}, \/  {\bf dd4hep\_\-ptr}$<$ {\bf UserPool} $>$ \& {\em user\_\-pool})}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a4550e641d43365715516abc3f82586e6}
+
+
+Prepare all updates to the clients with the defined \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. 
+
+First push any pending updates and register them to pending pools...
+
+Now update/fill the user pool 
+
+Definition at line 498 of file ConditionsInterna.cpp.
+
+References \_\-\_\-get\_\-checked\_\-pool(), and pushUpdates().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a50cd5fe85ead70ca4a0561ca37cbc435}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!prepare@{prepare}}
+\index{prepare@{prepare}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{prepare}]{\setlength{\rightskip}{0pt plus 5cm}long ConditionsManagerObject::prepare (const {\bf IOV} \& {\em required\_\-validity}, \/  const {\bf ConditionKeys} \& {\em keys}, \/  {\bf dd4hep\_\-ptr}$<$ {\bf UserPool} $>$ \& {\em user\_\-pool}, \/  const {\bf Dependencies} \& {\em dependencies}, \/  bool {\em verify\_\-dependencies} = {\ttfamily true})}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a50cd5fe85ead70ca4a0561ca37cbc435}
+
+
+Prepare all updates for the given keys to the clients with the defined \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. 
+
+Definition at line 483 of file ConditionsInterna.cpp.
+
+References prepare().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a897ca111b081fb1c6ed8a39739684d0e}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!prepare@{prepare}}
+\index{prepare@{prepare}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{prepare}]{\setlength{\rightskip}{0pt plus 5cm}long ConditionsManagerObject::prepare (const {\bf IOV} \& {\em required\_\-validity}, \/  const {\bf ConditionKeys} \& {\em keys}, \/  {\bf dd4hep\_\-ptr}$<$ {\bf UserPool} $>$ \& {\em user\_\-pool})}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a897ca111b081fb1c6ed8a39739684d0e}
+
+
+Prepare all updates for the given keys to the clients with the defined \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. 
+
+First push any pending updates and register them to pending pools...
+
+Now update/fill the user pool 
+
+Definition at line 469 of file ConditionsInterna.cpp.
+
+References \_\-\_\-get\_\-checked\_\-pool(), and pushUpdates().
+
+Referenced by prepare(), and DD4hep::Conditions::ConditionsManager::prepare().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a9bda89e54e1ad3b202f7295ec6c102a8}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!pushUpdates@{pushUpdates}}
+\index{pushUpdates@{pushUpdates}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{pushUpdates}]{\setlength{\rightskip}{0pt plus 5cm}void ConditionsManagerObject::pushUpdates ()}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a9bda89e54e1ad3b202f7295ec6c102a8}
+
+
+Push all pending updates to the conditions store. Note: This does not yet make the new conditions availible to the clients 
+
+Definition at line 393 of file ConditionsInterna.cpp.
+
+References \_\-E, m\_\-poolLock, m\_\-updateLock, and m\_\-updatePool.
+
+Referenced by prepare().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac945da1c9e23ba4e7db40221a38d4abc}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!registerCallee@{registerCallee}}
+\index{registerCallee@{registerCallee}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{registerCallee}]{\setlength{\rightskip}{0pt plus 5cm}void ConditionsManagerObject::registerCallee ({\bf Listeners} \& {\em listeners}, \/  const {\bf Listener} \& {\em callee}, \/  bool {\em add})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac945da1c9e23ba4e7db40221a38d4abc}
+
+
+Register a set of new managed condition for an \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} range. Called by \_\-\_\-load\_\-immediate. 
+
+Definition at line 188 of file ConditionsInterna.cpp.
+
+Referenced by callOnRegister(), and callOnRemove().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_af839b57cfdda205e2555e757651423fd}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!registerCondition@{registerCondition}}
+\index{registerCondition@{registerCondition}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{registerCondition}]{\setlength{\rightskip}{0pt plus 5cm}void ConditionsManagerObject::registerCondition ({\bf Condition} {\em c})}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_af839b57cfdda205e2555e757651423fd}
+
+
+Register a new managed condition. The condition is created externally by the user. Lengthy and tedious procedure. 
+
+Definition at line 522 of file ConditionsInterna.cpp.
+
+References DD4hep::except(), DD4hep::Conditions::ConditionsPool::insert(), DD4hep::Conditions::UserPool::insert(), DD4hep::IOV::keyData, locked, m\_\-poolLock, m\_\-poolType, m\_\-rawPool, onRegister(), DD4hep::Handle$<$ T $>$::ptr(), and DD4hep::IOV::type.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac6647d16096a5fccda601eada638e13b}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!registerIOV@{registerIOV}}
+\index{registerIOV@{registerIOV}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{registerIOV}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ConditionsPool} $\ast$ ConditionsManagerObject::registerIOV (const {\bf IOVType} \& {\em typ}, \/  {\bf IOV::Key} {\em key})}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ac6647d16096a5fccda601eada638e13b}
+
+
+Register \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} with type and key. 
+
+Definition at line 303 of file ConditionsInterna.cpp.
+
+References DD4hep::Conditions::ConditionsIOVPool::elements, DD4hep::Conditions::ConditionsPool::iov, m\_\-lcdd, m\_\-poolLock, m\_\-poolType, m\_\-rawPool, and DD4hep::IOVType::type.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aead446d145420ab3f6e48c74194dff05}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!registerIOV@{registerIOV}}
+\index{registerIOV@{registerIOV}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{registerIOV}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ConditionsPool}$\ast$ DD4hep::Conditions::ConditionsManagerObject::registerIOV (const std::string \& {\em data})}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aead446d145420ab3f6e48c74194dff05}
+
+
+Register \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} using new string data. 
+
+Referenced by \_\-\_\-queue\_\-update(), and DD4hep::Conditions::ConditionsManager::registerIOV().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ace52e06206ed940af14fd32db36d5d08}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!registerIOVType@{registerIOVType}}
+\index{registerIOVType@{registerIOVType}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{registerIOVType}]{\setlength{\rightskip}{0pt plus 5cm}std::pair$<$bool, const {\bf IOVType}$\ast$$>$ DD4hep::Conditions::ConditionsManagerObject::registerIOVType (size\_\-t {\em iov\_\-type}, \/  const std::string \& {\em iov\_\-name})}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ace52e06206ed940af14fd32db36d5d08}
+
+
+Register new \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} type if it does not (yet) exist. Returns (false,pointer) if \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} existed and (true,pointer) if new \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} was registered to the manager. \hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a745cd16ef676c16294d450c60617fbd1}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!registerUnlocked@{registerUnlocked}}
+\index{registerUnlocked@{registerUnlocked}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{registerUnlocked}]{\setlength{\rightskip}{0pt plus 5cm}bool ConditionsManagerObject::registerUnlocked ({\bf ConditionsPool} $\ast$ {\em pool}, \/  {\bf Condition} {\em cond})}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a745cd16ef676c16294d450c60617fbd1}
+
+
+Register new condition with the conditions store. Unlocked version, not multi-\/threaded. 
+
+Definition at line 325 of file ConditionsInterna.cpp.
+
+References DD4hep::except(), DD4hep::Conditions::ConditionsPool::insert(), DD4hep::Errors::invalidArg(), DD4hep::Conditions::ConditionsPool::iov, DD4hep::Conditions::Condition::iov(), DD4hep::Handle$<$ T $>$::isValid(), m\_\-onRegister, and DD4hep::Conditions::ConditionsListener::onRegisterCondition().
+
+Referenced by DD4hep::Conditions::ConditionsManager::registerUnlocked().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aa859ab1f2f920ff8b69869d27e3dd8d1}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!select@{select}}
+\index{select@{select}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{select}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Conditions::ConditionsManagerObject::select ({\bf key\_\-type} {\em key}, \/  const {\bf iov\_\-type} \& {\em req\_\-validity}, \/  {\bf RangeConditions} \& {\em conditions})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aa859ab1f2f920ff8b69869d27e3dd8d1}
+
+
+Retrieve a condition set given a Detector Element and the conditions name according to their validity. \hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a64da19430050ca03c6ee43c83ca68dd9}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!select\_\-range@{select\_\-range}}
+\index{select\_\-range@{select\_\-range}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{select\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Conditions::ConditionsManagerObject::select\_\-range ({\bf key\_\-type} {\em key}, \/  const {\bf iov\_\-type} \& {\em req\_\-validity}, \/  {\bf RangeConditions} \& {\em conditions})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a64da19430050ca03c6ee43c83ca68dd9}
+
+
+Retrieve a condition set given a Detector Element and the conditions name according to their validity. 
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a967e35cec9ace4f5cfb821c8d1f86f0b}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}}
+\index{DD4hep::Conditions::ConditionsDataLoader@{DD4hep::Conditions::ConditionsDataLoader}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{DD4hep::Conditions::ConditionsDataLoader}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf DD4hep::Conditions::ConditionsDataLoader}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a967e35cec9ace4f5cfb821c8d1f86f0b}
+
+
+Definition at line 69 of file ConditionsInterna.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ae399ab8adc57b6187de6a733d9fcfc73}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!DD4hep::Conditions::ConditionsPool@{DD4hep::Conditions::ConditionsPool}}
+\index{DD4hep::Conditions::ConditionsPool@{DD4hep::Conditions::ConditionsPool}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{DD4hep::Conditions::ConditionsPool}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf DD4hep::Conditions::ConditionsPool}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_ae399ab8adc57b6187de6a733d9fcfc73}
+
+
+Definition at line 68 of file ConditionsInterna.h.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_af4a66ea9d20e133cadd6e33a188d7f5b}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!locked@{locked}}
+\index{locked@{locked}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{locked}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::Conditions::ConditionsManagerObject::locked}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_af4a66ea9d20e133cadd6e33a188d7f5b}
+
+
+Public access: if locked, DetElements stay intact and are not altered. 
+
+Definition at line 114 of file ConditionsInterna.h.
+
+Referenced by registerCondition().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_abc6f28abb03bdfa1f3c0d51de6e6ac9d}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!m\_\-iovTypes@{m\_\-iovTypes}}
+\index{m\_\-iovTypes@{m\_\-iovTypes}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{m\_\-iovTypes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IOVTypes} {\bf DD4hep::Conditions::ConditionsManagerObject::m\_\-iovTypes}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_abc6f28abb03bdfa1f3c0d51de6e6ac9d}
+
+
+Collection of \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} types managed. 
+
+Definition at line 97 of file ConditionsInterna.h.
+
+Referenced by ConditionsManagerObject(), iovType(), and iovTypes().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a6ca16a780558379464d37ca9e691e9ef}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!m\_\-lcdd@{m\_\-lcdd}}
+\index{m\_\-lcdd@{m\_\-lcdd}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{m\_\-lcdd}]{\setlength{\rightskip}{0pt plus 5cm}LCDD\& {\bf DD4hep::Conditions::ConditionsManagerObject::m\_\-lcdd}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a6ca16a780558379464d37ca9e691e9ef}
+
+
+Reference to main detector description object. 
+
+Definition at line 95 of file ConditionsInterna.h.
+
+Referenced by initialize(), lcdd(), registerIOV(), and $\sim$ConditionsManagerObject().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a94483d902a20171f95eaf0e2d531f05d}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!m\_\-loader@{m\_\-loader}}
+\index{m\_\-loader@{m\_\-loader}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{m\_\-loader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Loader} {\bf DD4hep::Conditions::ConditionsManagerObject::m\_\-loader}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a94483d902a20171f95eaf0e2d531f05d}
+
+
+Reference to data loader. 
+
+Definition at line 109 of file ConditionsInterna.h.
+
+Referenced by initialize(), and loader().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_adc2a8ecbe9ee734901bdf11dc2e3da0e}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!m\_\-loaderType@{m\_\-loaderType}}
+\index{m\_\-loaderType@{m\_\-loaderType}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{m\_\-loaderType}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::Conditions::ConditionsManagerObject::m\_\-loaderType}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_adc2a8ecbe9ee734901bdf11dc2e3da0e}
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}: \hyperlink{namespace_d_d4hep_1_1_conditions}{Conditions} loader type (default: \char`\"{}multi\char`\"{} -\/$>$ DD4hep\_\-Conditions\_\-multi\_\-Loader). 
+
+Definition at line 92 of file ConditionsInterna.h.
+
+Referenced by ConditionsManagerObject(), and initialize().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a8367e7cb7b833dee436e0eacb6c37a87}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!m\_\-maxIOVTypes@{m\_\-maxIOVTypes}}
+\index{m\_\-maxIOVTypes@{m\_\-maxIOVTypes}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{m\_\-maxIOVTypes}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::Conditions::ConditionsManagerObject::m\_\-maxIOVTypes}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a8367e7cb7b833dee436e0eacb6c37a87}
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}: maximal number of \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} types to be handled. 
+
+Definition at line 84 of file ConditionsInterna.h.
+
+Referenced by ConditionsManagerObject().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a28a1e3f34a87dcd305b0f71bb92f297f}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!m\_\-onRegister@{m\_\-onRegister}}
+\index{m\_\-onRegister@{m\_\-onRegister}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{m\_\-onRegister}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Listeners} {\bf DD4hep::Conditions::ConditionsManagerObject::m\_\-onRegister}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a28a1e3f34a87dcd305b0f71bb92f297f}
+
+
+\hyperlink{namespace_d_d4hep_1_1_conditions}{Conditions} listeners on registration of new conditions. 
+
+Definition at line 101 of file ConditionsInterna.h.
+
+Referenced by callOnRegister(), onRegister(), and registerUnlocked().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aa6081a3511680ee1060e78b6a570636d}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!m\_\-onRemove@{m\_\-onRemove}}
+\index{m\_\-onRemove@{m\_\-onRemove}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{m\_\-onRemove}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Listeners} {\bf DD4hep::Conditions::ConditionsManagerObject::m\_\-onRemove}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_aa6081a3511680ee1060e78b6a570636d}
+
+
+\hyperlink{namespace_d_d4hep_1_1_conditions}{Conditions} listeners on de-\/registration of new conditions. 
+
+Definition at line 103 of file ConditionsInterna.h.
+
+Referenced by callOnRemove(), and onRemove().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_af0a0803e28ed3d30721609a420689e4a}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!m\_\-poolLock@{m\_\-poolLock}}
+\index{m\_\-poolLock@{m\_\-poolLock}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{m\_\-poolLock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf dd4hep\_\-mutex\_\-t} {\bf DD4hep::Conditions::ConditionsManagerObject::m\_\-poolLock}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_af0a0803e28ed3d30721609a420689e4a}
+
+
+Lock to protect the pool of all known conditions. 
+
+Definition at line 107 of file ConditionsInterna.h.
+
+Referenced by pushUpdates(), registerCondition(), and registerIOV().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_acbd30bb422ca98796d1eabf4e17706a2}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!m\_\-poolType@{m\_\-poolType}}
+\index{m\_\-poolType@{m\_\-poolType}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{m\_\-poolType}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::Conditions::ConditionsManagerObject::m\_\-poolType}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_acbd30bb422ca98796d1eabf4e17706a2}
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}: \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_pool}{ConditionsPool} constructor type (default: empty. MUST BE SET!). 
+
+Definition at line 86 of file ConditionsInterna.h.
+
+Referenced by ConditionsManagerObject(), registerCondition(), and registerIOV().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a90c9b5060b3a6299aa7d5d4e9a0d8105}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!m\_\-rawPool@{m\_\-rawPool}}
+\index{m\_\-rawPool@{m\_\-rawPool}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{m\_\-rawPool}]{\setlength{\rightskip}{0pt plus 5cm}{\bf TypedConditionPool} {\bf DD4hep::Conditions::ConditionsManagerObject::m\_\-rawPool}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a90c9b5060b3a6299aa7d5d4e9a0d8105}
+
+
+Managed pool of typed conditions indexed by IOV-\/type and \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} key. 
+
+Definition at line 99 of file ConditionsInterna.h.
+
+Referenced by \_\-\_\-get\_\-checked\_\-pool(), clean(), clear(), ConditionsManagerObject(), conditionsPool(), DD4hep::Conditions::ConditionsManager::iovPool(), registerCondition(), registerIOV(), and $\sim$ConditionsManagerObject().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a4da3e311e9b9121fef58f2cd80da12f9}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!m\_\-updateLock@{m\_\-updateLock}}
+\index{m\_\-updateLock@{m\_\-updateLock}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{m\_\-updateLock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf dd4hep\_\-mutex\_\-t} {\bf DD4hep::Conditions::ConditionsManagerObject::m\_\-updateLock}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a4da3e311e9b9121fef58f2cd80da12f9}
+
+
+Lock to protect the update/delayed conditions pool. 
+
+Definition at line 105 of file ConditionsInterna.h.
+
+Referenced by clean(), and pushUpdates().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a83ef3cf4c818d972d9c8720913c7525b}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!m\_\-updatePool@{m\_\-updatePool}}
+\index{m\_\-updatePool@{m\_\-updatePool}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{m\_\-updatePool}]{\setlength{\rightskip}{0pt plus 5cm}{\bf dd4hep\_\-ptr}$<${\bf UpdatePool}$>$ {\bf DD4hep::Conditions::ConditionsManagerObject::m\_\-updatePool}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a83ef3cf4c818d972d9c8720913c7525b}
+
+
+Reference to update conditions pool. 
+
+Definition at line 111 of file ConditionsInterna.h.
+
+Referenced by initialize(), and pushUpdates().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a015a2e784bea5773c62513f6d24af753}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!m\_\-updateType@{m\_\-updateType}}
+\index{m\_\-updateType@{m\_\-updateType}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{m\_\-updateType}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::Conditions::ConditionsManagerObject::m\_\-updateType}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_a015a2e784bea5773c62513f6d24af753}
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}: \hyperlink{class_d_d4hep_1_1_conditions_1_1_update_pool}{UpdatePool} constructor type (default: DD4hep\_\-ConditionsLinearUpdatePool). 
+
+Definition at line 88 of file ConditionsInterna.h.
+
+Referenced by ConditionsManagerObject(), and initialize().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_abe38ba943a936b6322ec553e53f0c7dd}{
+\index{DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}!m\_\-userType@{m\_\-userType}}
+\index{m\_\-userType@{m\_\-userType}!DD4hep::Conditions::ConditionsManagerObject@{DD4hep::Conditions::ConditionsManagerObject}}
+\subsubsection[{m\_\-userType}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::Conditions::ConditionsManagerObject::m\_\-userType}}}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object_abe38ba943a936b6322ec553e53f0c7dd}
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}: \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool}{UserPool} constructor type (default: DD4hep\_\-ConditionsLinearUserPool). 
+
+Definition at line 90 of file ConditionsInterna.h.
+
+Referenced by ConditionsManagerObject().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCond/include/DDCond/\hyperlink{_d_d_cond_2include_2_d_d_cond_2_conditions_interna_8h}{ConditionsInterna.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCond/src/\hyperlink{_d_d_cond_2src_2_conditions_interna_8cpp}{ConditionsInterna.cpp}\end{DoxyCompactItemize}

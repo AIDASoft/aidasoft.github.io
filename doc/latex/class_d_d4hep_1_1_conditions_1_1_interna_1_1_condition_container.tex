@@ -1,0 +1,219 @@
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container}{
+\section{DD4hep::Conditions::Interna::ConditionContainer Class Reference}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container}\index{DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}}
+}
+
+
+The data class behind a conditions container handle.  
+
+
+{\ttfamily \#include $<$ConditionsInterna.h$>$}Inheritance diagram for DD4hep::Conditions::Interna::ConditionContainer::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition::key\_\-type} \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a7a4545b4b0536565feb7346bd97c63fa}{key\_\-type}
+\begin{DoxyCompactList}\small\item\em Forward defintion of the key type. \item\end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_i_o_v}{Condition::iov\_\-type} \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_aa697bd92da7a05031b5eef63bb9f000b}{iov\_\-type}
+\begin{DoxyCompactList}\small\item\em Forward definition of the iov type. \item\end{DoxyCompactList}\item 
+typedef std::pair$<$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a7a4545b4b0536565feb7346bd97c63fa}{key\_\-type}, std::string $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a2a8452e68d48eb94553607e7d7ae13f6}{key\_\-value}
+\begin{DoxyCompactList}\small\item\em Forward definition of the mapping type. \item\end{DoxyCompactList}\item 
+typedef std::map$<$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a7a4545b4b0536565feb7346bd97c63fa}{key\_\-type}, \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a2a8452e68d48eb94553607e7d7ae13f6}{key\_\-value} $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a01f9461850ee260a6c76646f9619c8bb}{Keys}
+\begin{DoxyCompactList}\small\item\em Definition of the keys. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a766c849d73bfff4a401fc002a75c7594}{ConditionContainer} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_object}{Geometry::DetElementObject} $\ast$parent)
+\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a18cfd1f77eea4ae5fdf3a46ed8aa61ea}{$\sim$ConditionContainer} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a27dc131c286e1e4be01223d446842e4f}{get} (const std::string \&condition\_\-key, const \hyperlink{class_d_d4hep_1_1_i_o_v}{iov\_\-type} \&iov)
+\begin{DoxyCompactList}\small\item\em Access to condition objects by key and \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a49d51d2eee6ff6d8d5f959338a719725}{get} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a7a4545b4b0536565feb7346bd97c63fa}{key\_\-type} hash\_\-key, const \hyperlink{class_d_d4hep_1_1_i_o_v}{iov\_\-type} \&iov)
+\begin{DoxyCompactList}\small\item\em Access to condition objects directly by their hash key. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a999f00f1cf10e88559f434210f6a6672}{get} (const std::string \&condition\_\-key, const \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool}{UserPool} \&iov)
+\begin{DoxyCompactList}\small\item\em Access to condition objects. Only conditions in the pool are accessed. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a90e9c820b464a25d242823b7a0786a6a}{get} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a7a4545b4b0536565feb7346bd97c63fa}{key\_\-type} condition\_\-key, const \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool}{UserPool} \&iov)
+\begin{DoxyCompactList}\small\item\em Access to condition objects. Only conditions in the pool are accessed. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a74e97e0b749c515d2632ccc9bc079630}{addKey} (const std::string \&\hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a2a8452e68d48eb94553607e7d7ae13f6}{key\_\-value})
+\begin{DoxyCompactList}\small\item\em Add a new key to the conditions access map. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a04b12ce7b23723203334b6844306d079}{addKey} (const std::string \&\hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a2a8452e68d48eb94553607e7d7ae13f6}{key\_\-value}, const std::string \&data\_\-value)
+\begin{DoxyCompactList}\small\item\em Add a new key to the conditions access map: Allow for alias if key\_\-val != data\_\-val. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespace_d_d4hep_a21dd977310ff183f61ca6ae14b59a989}{DetElement} \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_aea33e2b2bf7d2ee4db38f87d2f231a2e}{detector}
+\begin{DoxyCompactList}\small\item\em The hosting detector element. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a01f9461850ee260a6c76646f9619c8bb}{Keys} \hyperlink{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a80876b929c712092fb1e036e1916f621}{keys}
+\begin{DoxyCompactList}\small\item\em Known keys of conditions in this container. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The data class behind a conditions container handle. See ConditionsInterna.cpp for the implementation.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 146 of file ConditionsInterna.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_aa697bd92da7a05031b5eef63bb9f000b}{
+\index{DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}!iov\_\-type@{iov\_\-type}}
+\index{iov\_\-type@{iov\_\-type}!DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}}
+\subsubsection[{iov\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Condition::iov\_\-type} {\bf DD4hep::Conditions::Interna::ConditionContainer::iov\_\-type}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_aa697bd92da7a05031b5eef63bb9f000b}
+
+
+Forward definition of the iov type. 
+
+Definition at line 151 of file ConditionsInterna.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a7a4545b4b0536565feb7346bd97c63fa}{
+\index{DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}!key\_\-type@{key\_\-type}}
+\index{key\_\-type@{key\_\-type}!DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}}
+\subsubsection[{key\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Condition::key\_\-type} {\bf DD4hep::Conditions::Interna::ConditionContainer::key\_\-type}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a7a4545b4b0536565feb7346bd97c63fa}
+
+
+Forward defintion of the key type. 
+
+Definition at line 149 of file ConditionsInterna.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a2a8452e68d48eb94553607e7d7ae13f6}{
+\index{DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}!key\_\-value@{key\_\-value}}
+\index{key\_\-value@{key\_\-value}!DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}}
+\subsubsection[{key\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::pair$<${\bf key\_\-type}, std::string$>$ {\bf DD4hep::Conditions::Interna::ConditionContainer::key\_\-value}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a2a8452e68d48eb94553607e7d7ae13f6}
+
+
+Forward definition of the mapping type. 
+
+Definition at line 153 of file ConditionsInterna.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a01f9461850ee260a6c76646f9619c8bb}{
+\index{DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}!Keys@{Keys}}
+\index{Keys@{Keys}!DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}}
+\subsubsection[{Keys}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<${\bf key\_\-type}, {\bf key\_\-value}$>$ {\bf DD4hep::Conditions::Interna::ConditionContainer::Keys}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a01f9461850ee260a6c76646f9619c8bb}
+
+
+Definition of the keys. 
+
+Definition at line 155 of file ConditionsInterna.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a766c849d73bfff4a401fc002a75c7594}{
+\index{DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}!ConditionContainer@{ConditionContainer}}
+\index{ConditionContainer@{ConditionContainer}!DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}}
+\subsubsection[{ConditionContainer}]{\setlength{\rightskip}{0pt plus 5cm}Interna::ConditionContainer::ConditionContainer ({\bf Geometry::DetElementObject} $\ast$ {\em parent})}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a766c849d73bfff4a401fc002a75c7594}
+
+
+Standard constructor. 
+
+Definition at line 63 of file ConditionsInterna.cpp.
+
+References DD4hep::InstanceCount::increment().\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a18cfd1f77eea4ae5fdf3a46ed8aa61ea}{
+\index{DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}!$\sim$ConditionContainer@{$\sim$ConditionContainer}}
+\index{$\sim$ConditionContainer@{$\sim$ConditionContainer}!DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}}
+\subsubsection[{$\sim$ConditionContainer}]{\setlength{\rightskip}{0pt plus 5cm}Interna::ConditionContainer::$\sim$ConditionContainer ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a18cfd1f77eea4ae5fdf3a46ed8aa61ea}
+
+
+Default destructor. 
+
+Definition at line 70 of file ConditionsInterna.cpp.
+
+References DD4hep::InstanceCount::decrement().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a04b12ce7b23723203334b6844306d079}{
+\index{DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}!addKey@{addKey}}
+\index{addKey@{addKey}!DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}}
+\subsubsection[{addKey}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Conditions::Interna::ConditionContainer::addKey (const std::string \& {\em key\_\-value}, \/  const std::string \& {\em data\_\-value})}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a04b12ce7b23723203334b6844306d079}
+
+
+Add a new key to the conditions access map: Allow for alias if key\_\-val != data\_\-val. \hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a74e97e0b749c515d2632ccc9bc079630}{
+\index{DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}!addKey@{addKey}}
+\index{addKey@{addKey}!DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}}
+\subsubsection[{addKey}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Conditions::Interna::ConditionContainer::addKey (const std::string \& {\em key\_\-value})}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a74e97e0b749c515d2632ccc9bc079630}
+
+
+Add a new key to the conditions access map. \hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a90e9c820b464a25d242823b7a0786a6a}{
+\index{DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}!get@{get}}
+\index{get@{get}!DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Condition} Interna::ConditionContainer::get ({\bf key\_\-type} {\em condition\_\-key}, \/  const {\bf UserPool} \& {\em iov})}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a90e9c820b464a25d242823b7a0786a6a}
+
+
+Access to condition objects. Only conditions in the pool are accessed. Access to condition objects directly by their hash key. 
+
+Last resort: Assume the key value is globally known: 
+
+Definition at line 130 of file ConditionsInterna.cpp.
+
+References detector, DD4hep::Conditions::ConditionsLoader::get(), and keys.\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a999f00f1cf10e88559f434210f6a6672}{
+\index{DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}!get@{get}}
+\index{get@{get}!DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Condition} DD4hep::Conditions::Interna::ConditionContainer::get (const std::string \& {\em condition\_\-key}, \/  const {\bf UserPool} \& {\em iov})}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a999f00f1cf10e88559f434210f6a6672}
+
+
+Access to condition objects. Only conditions in the pool are accessed. \hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a49d51d2eee6ff6d8d5f959338a719725}{
+\index{DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}!get@{get}}
+\index{get@{get}!DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Condition} Interna::ConditionContainer::get ({\bf key\_\-type} {\em hash\_\-key}, \/  const {\bf iov\_\-type} \& {\em iov})}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a49d51d2eee6ff6d8d5f959338a719725}
+
+
+Access to condition objects directly by their hash key. 
+
+Last resort: Assume the key value is globally known: 
+
+Definition at line 105 of file ConditionsInterna.cpp.
+
+References detector, DD4hep::Conditions::ConditionsLoader::get(), and keys.\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a27dc131c286e1e4be01223d446842e4f}{
+\index{DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}!get@{get}}
+\index{get@{get}!DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Condition} DD4hep::Conditions::Interna::ConditionContainer::get (const std::string \& {\em condition\_\-key}, \/  const {\bf iov\_\-type} \& {\em iov})}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a27dc131c286e1e4be01223d446842e4f}
+
+
+Access to condition objects by key and \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. 
+
+Referenced by DD4hep::Conditions::Container::get().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_aea33e2b2bf7d2ee4db38f87d2f231a2e}{
+\index{DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}!detector@{detector}}
+\index{detector@{detector}!DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}}
+\subsubsection[{detector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} {\bf DD4hep::Conditions::Interna::ConditionContainer::detector}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_aea33e2b2bf7d2ee4db38f87d2f231a2e}
+
+
+The hosting detector element. 
+
+Definition at line 167 of file ConditionsInterna.h.
+
+Referenced by get().\hypertarget{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a80876b929c712092fb1e036e1916f621}{
+\index{DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}!keys@{keys}}
+\index{keys@{keys}!DD4hep::Conditions::Interna::ConditionContainer@{DD4hep::Conditions::Interna::ConditionContainer}}
+\subsubsection[{keys}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Keys} {\bf DD4hep::Conditions::Interna::ConditionContainer::keys}}}
+\label{class_d_d4hep_1_1_conditions_1_1_interna_1_1_condition_container_a80876b929c712092fb1e036e1916f621}
+
+
+Known keys of conditions in this container. 
+
+Definition at line 183 of file ConditionsInterna.h.
+
+Referenced by get(), and DD4hep::Conditions::Container::numKeys().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/objects/\hyperlink{_d_d_core_2include_2_d_d4hep_2objects_2_conditions_interna_8h}{ConditionsInterna.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_d_d_core_2src_2_conditions_interna_8cpp}{ConditionsInterna.cpp}\end{DoxyCompactItemize}

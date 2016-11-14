@@ -1,0 +1,335 @@
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object}{
+\section{DD4hep::Geometry::SegmentationObject Class Reference}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object}\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+}
+
+
+Implementation class supporting generic \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation}{Segmentation} of sensitive detectors.  
+
+
+{\ttfamily \#include $<$SegmentationsInterna.h$>$}Inheritance diagram for DD4hep::Geometry::SegmentationObject::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_geometry_1_1_segmentation_object}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation}{DDSegmentation::Segmentation} \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a57ca8eb515f079fdc61916df50468818}{BaseSegmentation}
+\item 
+typedef \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_af38026430ca0e1ef64acdfc898f5dd3d}{DDSegmentation::Parameters} \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_adb4bb039e0cd15ea9fbe0232d07c49cc}{Parameters}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_parameter}{DDSegmentation::Parameter} \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a0d017ffe7385b6fe44bf411386cc672b}{Parameter}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a79ddebe4b3ce1664bac66bedff5dc096}{SegmentationObject} (\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation}{BaseSegmentation} $\ast$\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s}=0)
+\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_ad2db3a9de2c3add55caf0c549cf93892}{$\sim$SegmentationObject} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a6bc072f2300d6869228cd55a48bc1945}{fieldDescription} () const 
+\begin{DoxyCompactList}\small\item\em Access the encoding string. \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_aad3049b7772dc945e0ce68deed8a0d23}{name} () const 
+\begin{DoxyCompactList}\small\item\em Access the segmentation name. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a41dcfab1ad8b2e330cb8a4c239026a17}{setName} (const std::string \&value)
+\begin{DoxyCompactList}\small\item\em Set the segmentation name. \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_abbf94d0c2dc6014127573a8b8c93d2d8}{type} () const 
+\begin{DoxyCompactList}\small\item\em Access the segmentation type. \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_aaee5396e4d743bb2df49c381cc0a766b}{description} () const 
+\begin{DoxyCompactList}\small\item\em Access the description of the segmentation. \item\end{DoxyCompactList}\item 
+BitField64 $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a1fb5b783285a54fb554a5312c0cfebcc}{decoder} () const 
+\begin{DoxyCompactList}\small\item\em Access the underlying decoder. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a537aadc3926ed058ac98d8c6fae2d3fb}{setDecoder} (BitField64 $\ast$decoder) const 
+\begin{DoxyCompactList}\small\item\em Set the underlying decoder. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_parameter}{Parameter} \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a5b3ad09c737314600b6c8b3c41bdb9a9}{parameter} (const std::string \&parameterName) const 
+\begin{DoxyCompactList}\small\item\em Access to parameter by name. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_adb4bb039e0cd15ea9fbe0232d07c49cc}{Parameters} \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a1ca8bae37e4cb457192779046717aa19}{parameters} () const 
+\begin{DoxyCompactList}\small\item\em Access to all parameters. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a8246875bc5c3dd4c4613bf56350690da}{setParameters} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_adb4bb039e0cd15ea9fbe0232d07c49cc}{Parameters} \&parameters)
+\begin{DoxyCompactList}\small\item\em Set all parameters from an existing set of parameters. \item\end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a48c53872382d4ecd3f87ea82298a435f}{position} (const CellID \&cellID) const 
+\begin{DoxyCompactList}\small\item\em Determine the local position based on the cell ID. \item\end{DoxyCompactList}\item 
+CellID \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_ace43e4d369d28910913b6f2775291e37}{cellID} (const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&localPosition, const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&globalPosition, const VolumeID \&volumeID) const 
+\begin{DoxyCompactList}\small\item\em Determine the cell ID based on the position. \item\end{DoxyCompactList}\item 
+VolumeID \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a1e49d904fd608d2ad07299269e7a1348}{volumeID} (const CellID \&cellID) const 
+\begin{DoxyCompactList}\small\item\em Determine the volume ID from the full cell ID by removing all local fields. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a923aab6baaf9590932b3fe05b305edb2}{neighbours} (const CellID \&cellID, std::set$<$ CellID $>$ \&neighbours) const 
+\begin{DoxyCompactList}\small\item\em Calculates the neighbours of the given cell ID and adds them to the list of neighbours. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned long \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a2fb8a80e389d915e7c74499f09fd341b}{magic}
+\begin{DoxyCompactList}\small\item\em Magic word to check object integrity. \item\end{DoxyCompactList}\item 
+unsigned char \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a50926f063e074096e83ee667d70114a7}{useForHitPosition}
+\begin{DoxyCompactList}\small\item\em Flag to use segmentation for hit positioning. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_object}{DetElementObject} $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_aa9f9012806e2dfff465ae66650f10b94}{detector}
+\begin{DoxyCompactList}\small\item\em Reference to hosting top level \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} structure. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_sensitive_detector_object}{SensitiveDetectorObject} $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_ae62042fd318764e7744b87de21cb25ad}{sensitive}
+\begin{DoxyCompactList}\small\item\em Reference to hosting top level sensitve detector structure. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation}{BaseSegmentation} $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a96eb25f8256d85ec907729f371ad315c}{segmentation}
+\begin{DoxyCompactList}\small\item\em Reference to base segmentation. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation class supporting generic \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation}{Segmentation} of sensitive detectors. The \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object}{SegmentationObject} wraps the functionality of the \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation}{DDSegmentation} base class.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 42 of file SegmentationsInterna.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a57ca8eb515f079fdc61916df50468818}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!BaseSegmentation@{BaseSegmentation}}
+\index{BaseSegmentation@{BaseSegmentation}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{BaseSegmentation}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf DDSegmentation::Segmentation} {\bf DD4hep::Geometry::SegmentationObject::BaseSegmentation}}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a57ca8eb515f079fdc61916df50468818}
+
+
+Definition at line 44 of file SegmentationsInterna.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a0d017ffe7385b6fe44bf411386cc672b}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!Parameter@{Parameter}}
+\index{Parameter@{Parameter}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{Parameter}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf DDSegmentation::Parameter} {\bf DD4hep::Geometry::SegmentationObject::Parameter}}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a0d017ffe7385b6fe44bf411386cc672b}
+
+
+Definition at line 46 of file SegmentationsInterna.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_adb4bb039e0cd15ea9fbe0232d07c49cc}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!Parameters@{Parameters}}
+\index{Parameters@{Parameters}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{Parameters}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf DDSegmentation::Parameters} {\bf DD4hep::Geometry::SegmentationObject::Parameters}}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_adb4bb039e0cd15ea9fbe0232d07c49cc}
+
+
+Definition at line 45 of file SegmentationsInterna.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a79ddebe4b3ce1664bac66bedff5dc096}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!SegmentationObject@{SegmentationObject}}
+\index{SegmentationObject@{SegmentationObject}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{SegmentationObject}]{\setlength{\rightskip}{0pt plus 5cm}SegmentationObject::SegmentationObject ({\bf BaseSegmentation} $\ast$ {\em s} = {\ttfamily 0})}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a79ddebe4b3ce1664bac66bedff5dc096}
+
+
+Standard constructor. 
+
+Definition at line 29 of file SegmentationsInterna.cpp.
+
+References DD4hep::InstanceCount::increment().\hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_ad2db3a9de2c3add55caf0c549cf93892}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!$\sim$SegmentationObject@{$\sim$SegmentationObject}}
+\index{$\sim$SegmentationObject@{$\sim$SegmentationObject}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{$\sim$SegmentationObject}]{\setlength{\rightskip}{0pt plus 5cm}SegmentationObject::$\sim$SegmentationObject ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_ad2db3a9de2c3add55caf0c549cf93892}
+
+
+Default destructor. 
+
+Definition at line 37 of file SegmentationsInterna.cpp.
+
+References DD4hep::InstanceCount::decrement(), and segmentation.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_ace43e4d369d28910913b6f2775291e37}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!cellID@{cellID}}
+\index{cellID@{cellID}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{cellID}]{\setlength{\rightskip}{0pt plus 5cm}CellID SegmentationObject::cellID (const {\bf Position} \& {\em localPosition}, \/  const {\bf Position} \& {\em globalPosition}, \/  const VolumeID \& {\em volumeID}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_ace43e4d369d28910913b6f2775291e37}
+
+
+Determine the cell ID based on the position. 
+
+Definition at line 99 of file SegmentationsInterna.cpp.
+
+References DD4hep::DDSegmentation::Segmentation::cellID(), and segmentation.\hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a1fb5b783285a54fb554a5312c0cfebcc}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!decoder@{decoder}}
+\index{decoder@{decoder}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{decoder}]{\setlength{\rightskip}{0pt plus 5cm}BitField64 $\ast$ SegmentationObject::decoder () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a1fb5b783285a54fb554a5312c0cfebcc}
+
+
+Access the underlying decoder. 
+
+Definition at line 69 of file SegmentationsInterna.cpp.
+
+References DD4hep::DDSegmentation::Segmentation::decoder(), and segmentation.\hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_aaee5396e4d743bb2df49c381cc0a766b}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!description@{description}}
+\index{description@{description}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{description}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf string} \& SegmentationObject::description () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_aaee5396e4d743bb2df49c381cc0a766b}
+
+
+Access the description of the segmentation. 
+
+Definition at line 64 of file SegmentationsInterna.cpp.
+
+References DD4hep::DDSegmentation::Segmentation::description(), and segmentation.\hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a6bc072f2300d6869228cd55a48bc1945}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!fieldDescription@{fieldDescription}}
+\index{fieldDescription@{fieldDescription}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{fieldDescription}]{\setlength{\rightskip}{0pt plus 5cm}{\bf string} SegmentationObject::fieldDescription () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a6bc072f2300d6869228cd55a48bc1945}
+
+
+Access the encoding string. 
+
+Definition at line 45 of file SegmentationsInterna.cpp.
+
+References DD4hep::DDSegmentation::Segmentation::fieldDescription(), and segmentation.\hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_aad3049b7772dc945e0ce68deed8a0d23}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!name@{name}}
+\index{name@{name}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf string} \& SegmentationObject::name () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_aad3049b7772dc945e0ce68deed8a0d23}
+
+
+Access the segmentation name. 
+
+Definition at line 50 of file SegmentationsInterna.cpp.
+
+References DD4hep::DDSegmentation::Segmentation::name(), and segmentation.\hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a923aab6baaf9590932b3fe05b305edb2}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!neighbours@{neighbours}}
+\index{neighbours@{neighbours}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{neighbours}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Geometry::SegmentationObject::neighbours (const CellID \& {\em cellID}, \/  std::set$<$ CellID $>$ \& {\em neighbours}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a923aab6baaf9590932b3fe05b305edb2}
+
+
+Calculates the neighbours of the given cell ID and adds them to the list of neighbours. \hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a5b3ad09c737314600b6c8b3c41bdb9a9}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!parameter@{parameter}}
+\index{parameter@{parameter}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{parameter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parameter} DD4hep::Geometry::SegmentationObject::parameter (const std::string \& {\em parameterName}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a5b3ad09c737314600b6c8b3c41bdb9a9}
+
+
+Access to parameter by name. \hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a1ca8bae37e4cb457192779046717aa19}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!parameters@{parameters}}
+\index{parameters@{parameters}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{parameters}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parameters} SegmentationObject::parameters () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a1ca8bae37e4cb457192779046717aa19}
+
+
+Access to all parameters. 
+
+Definition at line 84 of file SegmentationsInterna.cpp.
+
+References DD4hep::DDSegmentation::Segmentation::parameters(), and segmentation.\hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a48c53872382d4ecd3f87ea82298a435f}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!position@{position}}
+\index{position@{position}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} SegmentationObject::position (const CellID \& {\em cellID}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a48c53872382d4ecd3f87ea82298a435f}
+
+
+Determine the local position based on the cell ID. \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation}{Segmentation} interface 
+
+Definition at line 94 of file SegmentationsInterna.cpp.
+
+References DD4hep::DDSegmentation::Segmentation::position(), and segmentation.\hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a537aadc3926ed058ac98d8c6fae2d3fb}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!setDecoder@{setDecoder}}
+\index{setDecoder@{setDecoder}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{setDecoder}]{\setlength{\rightskip}{0pt plus 5cm}void SegmentationObject::setDecoder (BitField64 $\ast$ {\em decoder}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a537aadc3926ed058ac98d8c6fae2d3fb}
+
+
+Set the underlying decoder. 
+
+Definition at line 74 of file SegmentationsInterna.cpp.
+
+References segmentation, and DD4hep::DDSegmentation::Segmentation::setDecoder().\hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a41dcfab1ad8b2e330cb8a4c239026a17}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!setName@{setName}}
+\index{setName@{setName}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{setName}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Geometry::SegmentationObject::setName (const std::string \& {\em value})}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a41dcfab1ad8b2e330cb8a4c239026a17}
+
+
+Set the segmentation name. \hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a8246875bc5c3dd4c4613bf56350690da}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!setParameters@{setParameters}}
+\index{setParameters@{setParameters}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{setParameters}]{\setlength{\rightskip}{0pt plus 5cm}void SegmentationObject::setParameters (const {\bf Parameters} \& {\em parameters})}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a8246875bc5c3dd4c4613bf56350690da}
+
+
+Set all parameters from an existing set of parameters. 
+
+Definition at line 89 of file SegmentationsInterna.cpp.
+
+References segmentation, and DD4hep::DDSegmentation::Segmentation::setParameters().\hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_abbf94d0c2dc6014127573a8b8c93d2d8}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!type@{type}}
+\index{type@{type}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf string} \& SegmentationObject::type () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_abbf94d0c2dc6014127573a8b8c93d2d8}
+
+
+Access the segmentation type. 
+
+Definition at line 59 of file SegmentationsInterna.cpp.
+
+References segmentation, and DD4hep::DDSegmentation::Segmentation::type().\hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a1e49d904fd608d2ad07299269e7a1348}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!volumeID@{volumeID}}
+\index{volumeID@{volumeID}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{volumeID}]{\setlength{\rightskip}{0pt plus 5cm}VolumeID SegmentationObject::volumeID (const CellID \& {\em cellID}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a1e49d904fd608d2ad07299269e7a1348}
+
+
+Determine the volume ID from the full cell ID by removing all local fields. 
+
+Definition at line 106 of file SegmentationsInterna.cpp.
+
+References segmentation, and DD4hep::DDSegmentation::Segmentation::volumeID().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_aa9f9012806e2dfff465ae66650f10b94}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!detector@{detector}}
+\index{detector@{detector}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{detector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Handle}$<${\bf DetElementObject}$>$ {\bf DD4hep::Geometry::SegmentationObject::detector}}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_aa9f9012806e2dfff465ae66650f10b94}
+
+
+Reference to hosting top level \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} structure. 
+
+Definition at line 93 of file SegmentationsInterna.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a2fb8a80e389d915e7c74499f09fd341b}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!magic@{magic}}
+\index{magic@{magic}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{magic}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf DD4hep::Geometry::SegmentationObject::magic}}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a2fb8a80e389d915e7c74499f09fd341b}
+
+
+Magic word to check object integrity. Data members. 
+
+Definition at line 89 of file SegmentationsInterna.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a96eb25f8256d85ec907729f371ad315c}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!segmentation@{segmentation}}
+\index{segmentation@{segmentation}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{segmentation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BaseSegmentation}$\ast$ {\bf DD4hep::Geometry::SegmentationObject::segmentation}}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a96eb25f8256d85ec907729f371ad315c}
+
+
+Reference to base segmentation. 
+
+Definition at line 97 of file SegmentationsInterna.h.
+
+Referenced by cellID(), decoder(), description(), fieldDescription(), name(), parameters(), position(), setDecoder(), setParameters(), type(), volumeID(), and $\sim$SegmentationObject().\hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_ae62042fd318764e7744b87de21cb25ad}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!sensitive@{sensitive}}
+\index{sensitive@{sensitive}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{sensitive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Handle}$<${\bf SensitiveDetectorObject}$>$ {\bf DD4hep::Geometry::SegmentationObject::sensitive}}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_ae62042fd318764e7744b87de21cb25ad}
+
+
+Reference to hosting top level sensitve detector structure. 
+
+Definition at line 95 of file SegmentationsInterna.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a50926f063e074096e83ee667d70114a7}{
+\index{DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}!useForHitPosition@{useForHitPosition}}
+\index{useForHitPosition@{useForHitPosition}!DD4hep::Geometry::SegmentationObject@{DD4hep::Geometry::SegmentationObject}}
+\subsubsection[{useForHitPosition}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char {\bf DD4hep::Geometry::SegmentationObject::useForHitPosition}}}
+\label{class_d_d4hep_1_1_geometry_1_1_segmentation_object_a50926f063e074096e83ee667d70114a7}
+
+
+Flag to use segmentation for hit positioning. 
+
+Definition at line 91 of file SegmentationsInterna.h.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/objects/\hyperlink{_segmentations_interna_8h}{SegmentationsInterna.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_segmentations_interna_8cpp}{SegmentationsInterna.cpp}\end{DoxyCompactItemize}

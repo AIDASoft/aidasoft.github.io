@@ -1,0 +1,495 @@
+\hypertarget{class_d_d4hep_1_1_i_o_v}{
+\section{DD4hep::IOV Class Reference}
+\label{class_d_d4hep_1_1_i_o_v}\index{DD4hep::IOV@{DD4hep::IOV}}
+}
+
+
+Class describing the interval of validty.  
+
+
+{\ttfamily \#include $<$IOV.h$>$}\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef long \hyperlink{class_d_d4hep_1_1_i_o_v_a3f518f6b507c82c4ee614e52b3519325}{Key\_\-first\_\-type}
+\begin{DoxyCompactList}\small\item\em Key definition. \item\end{DoxyCompactList}\item 
+typedef long \hyperlink{class_d_d4hep_1_1_i_o_v_ae1e4d1584dcc17a416008a93d94376b5}{Key\_\-second\_\-type}
+\item 
+typedef std::pair$<$ \hyperlink{class_d_d4hep_1_1_i_o_v_a3f518f6b507c82c4ee614e52b3519325}{Key\_\-first\_\-type}, \hyperlink{class_d_d4hep_1_1_i_o_v_ae1e4d1584dcc17a416008a93d94376b5}{Key\_\-second\_\-type} $>$ \hyperlink{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}{Key}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_i_o_v_a0a32eb684174feeec7047c7fe4d351cb}{IOV} (const \hyperlink{class_d_d4hep_1_1_i_o_v_type}{IOVType} $\ast$typ)
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_i_o_v_a1744cedccf7a479d152c842f7fc5220a}{IOV} (const \hyperlink{class_d_d4hep_1_1_i_o_v_type}{IOVType} $\ast$typ, const \hyperlink{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}{Key} \&key)
+\begin{DoxyCompactList}\small\item\em Specialized copy constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_i_o_v_aa10ef137157d26b5af800d45ed69fcab}{IOV} (const \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \&copy)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_i_o_v_ae9f9e2f904e4d89e13615ddd03e365ba}{$\sim$IOV} ()
+\begin{DoxyCompactList}\small\item\em Standard Destructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \& \hyperlink{class_d_d4hep_1_1_i_o_v_a3e52be5e863dcb3e84549dd309da9878}{operator=} (const \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \&c)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_i_o_v_aa473ed270d7b0e3930b2654406233a3c}{move} (\hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \&from)
+\begin{DoxyCompactList}\small\item\em Move the data content: 'from' will be reset to NULL. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_i_o_v_a52ef776877661a865c23e07d2e2c9bef}{str} () const 
+\begin{DoxyCompactList}\small\item\em Create string representation of the \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_i_o_v_a9c942c869bb92e7b14b6d6308a6f15d7}{has\_\-range} () const 
+\begin{DoxyCompactList}\small\item\em Check if the \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} corresponds to a range. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_i_o_v_a37f1849ee9dfed07510a1628bb4b5796}{is\_\-discrete} () const 
+\begin{DoxyCompactList}\small\item\em Check if the \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} corresponds to a range. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}{Key} \hyperlink{class_d_d4hep_1_1_i_o_v_adf743118faa708c28f3299867f946567}{key} () const 
+\begin{DoxyCompactList}\small\item\em Get the local key of the \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_i_o_v_aa75452d30ebad70f84372091d6f777e4}{set} (const \hyperlink{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}{Key} \&value)
+\begin{DoxyCompactList}\small\item\em Set discrete \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} value. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_i_o_v_a8c9578e074d7c685fd7d1454b6b35d40}{set} (\hyperlink{class_d_d4hep_1_1_i_o_v_a3f518f6b507c82c4ee614e52b3519325}{Key\_\-first\_\-type} value)
+\begin{DoxyCompactList}\small\item\em Set discrete \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} value. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_i_o_v_ab1157ed01d8a99029c6d2cfc9379ac9b}{set} (\hyperlink{class_d_d4hep_1_1_i_o_v_a3f518f6b507c82c4ee614e52b3519325}{Key\_\-first\_\-type} val\_\-1, \hyperlink{class_d_d4hep_1_1_i_o_v_ae1e4d1584dcc17a416008a93d94376b5}{Key\_\-second\_\-type} val\_\-2)
+\begin{DoxyCompactList}\small\item\em Set range \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} value. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \& \hyperlink{class_d_d4hep_1_1_i_o_v_acbc1f282468528fd38d471bf7f9d58c0}{reset} ()
+\begin{DoxyCompactList}\small\item\em Set keys to unphysical values (LONG\_\-MAX, LONG\_\-MIN). \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \& \hyperlink{class_d_d4hep_1_1_i_o_v_a5407ab1da0910ee18ca80dfa6985d0af}{invert} ()
+\begin{DoxyCompactList}\small\item\em Invert the key values (first=second and second=first). \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_i_o_v_ae6f8261feefa4678c0842d43946d146d}{iov\_\-intersection} (const \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \&comparator)
+\begin{DoxyCompactList}\small\item\em Set the intersection of this \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} with the argument \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_i_o_v_ab045b2ff365c11e6ff93c4ca01270a49}{iov\_\-intersection} (const \hyperlink{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}{IOV::Key} \&comparator)
+\begin{DoxyCompactList}\small\item\em Set the intersection of this \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} with the argument \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_i_o_v_aa0261c65bd7ffa708862bdd0e69845d9}{iov\_\-union} (const \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \&comparator)
+\begin{DoxyCompactList}\small\item\em Set the union of this \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} with the argument \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_i_o_v_ad6a050933305a95b61d26975c057590e}{iov\_\-union} (const \hyperlink{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}{IOV::Key} \&comparator)
+\begin{DoxyCompactList}\small\item\em Set the union of this \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} with the argument \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_i_o_v_abe1a3f5122ab3e9aa97a82a1444a515d}{contains} (const \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \&iov) const 
+\begin{DoxyCompactList}\small\item\em Check for validity containment. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_d_d4hep_1_1_i_o_v_a25febeab024c770e5846197ca2a6b6fa}{same\_\-type} (const \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \&iov, const \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \&test)
+\begin{DoxyCompactList}\small\item\em Check if 2 \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} objects are of the same type. \item\end{DoxyCompactList}\item 
+static bool \hyperlink{class_d_d4hep_1_1_i_o_v_a43849b67b7823c3acd522bac26cf179d}{key\_\-is\_\-contained} (const \hyperlink{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}{Key} \&key, const \hyperlink{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}{Key} \&test)
+\begin{DoxyCompactList}\small\item\em Check if \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} 'test' is fully contained in \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} 'key'. \item\end{DoxyCompactList}\item 
+static bool \hyperlink{class_d_d4hep_1_1_i_o_v_abb985b984cc6eb8576a4f124de7668f5}{key\_\-contains\_\-range} (const \hyperlink{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}{Key} \&key, const \hyperlink{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}{Key} \&test)
+\begin{DoxyCompactList}\small\item\em Same as above, but reverse logic. Gives sometimes more understandable logic. \item\end{DoxyCompactList}\item 
+static bool \hyperlink{class_d_d4hep_1_1_i_o_v_a6354b88d28e4e57bd50a02d9d4df7653}{key\_\-overlaps\_\-lower\_\-end} (const \hyperlink{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}{Key} \&key, const \hyperlink{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}{Key} \&test)
+\begin{DoxyCompactList}\small\item\em Check if \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} 'test' has an overlap on the lower interval edge with \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} 'key'. \item\end{DoxyCompactList}\item 
+static bool \hyperlink{class_d_d4hep_1_1_i_o_v_a2bbff41fece1d4692a155f997fb7aebf}{key\_\-overlaps\_\-higher\_\-end} (const \hyperlink{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}{Key} \&key, const \hyperlink{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}{Key} \&test)
+\begin{DoxyCompactList}\small\item\em Check if \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} 'test' has an overlap on the upper interval edge with \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} 'key'. \item\end{DoxyCompactList}\item 
+static bool \hyperlink{class_d_d4hep_1_1_i_o_v_ae2d6950a52f1d51409a19b76385252df}{key\_\-partially\_\-contained} (const \hyperlink{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}{Key} \&key, const \hyperlink{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}{Key} \&test)
+\begin{DoxyCompactList}\small\item\em Check if \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} 'test' has an overlap on the upper interval edge with \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} 'key'. \item\end{DoxyCompactList}\item 
+static bool \hyperlink{class_d_d4hep_1_1_i_o_v_aa1b5388443f86ca31d23c99a34f444c5}{full\_\-match} (const \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \&iov, const \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \&test)
+\begin{DoxyCompactList}\small\item\em Check if \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} 'test' is of same type and is fully contained in iov. \item\end{DoxyCompactList}\item 
+static bool \hyperlink{class_d_d4hep_1_1_i_o_v_ab55de0c04c0d06c457e248b4db839b08}{partial\_\-match} (const \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \&iov, const \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \&test)
+\begin{DoxyCompactList}\small\item\em Check if \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} 'test' is of same type and is at least partially contained in iov. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{class_d_d4hep_1_1_i_o_v_type}{IOVType} $\ast$ \hyperlink{class_d_d4hep_1_1_i_o_v_a885a5ed2be528cf1db783cade2a0b838}{iovType}
+\item 
+\hyperlink{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}{Key} \hyperlink{class_d_d4hep_1_1_i_o_v_a28eb02fd8d9c45b770e6a234303991de}{keyData}
+\item 
+int \hyperlink{class_d_d4hep_1_1_i_o_v_a0bd227cbdf7eab4949e12bffc7238d72}{optData}
+\item 
+unsigned int \hyperlink{class_d_d4hep_1_1_i_o_v_a497f2859ca7cb011151ae6b977b50aa0}{type}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} buffer type: Must be a bitmap! \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_i_o_v_a1ba2ab174011fccf1dba8cd60e1d6bd1}{IOV} ()
+\begin{DoxyCompactList}\small\item\em Initializing constructor: Does not set reference to \hyperlink{class_d_d4hep_1_1_i_o_v_type}{IOVType} ! \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class describing the interval of validty. \begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 59 of file IOV.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}{
+\index{DD4hep::IOV@{DD4hep::IOV}!Key@{Key}}
+\index{Key@{Key}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{Key}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::pair$<${\bf Key\_\-first\_\-type},{\bf Key\_\-second\_\-type}$>$ {\bf DD4hep::IOV::Key}}}
+\label{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}
+
+
+Definition at line 67 of file IOV.h.\hypertarget{class_d_d4hep_1_1_i_o_v_a3f518f6b507c82c4ee614e52b3519325}{
+\index{DD4hep::IOV@{DD4hep::IOV}!Key\_\-first\_\-type@{Key\_\-first\_\-type}}
+\index{Key\_\-first\_\-type@{Key\_\-first\_\-type}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{Key\_\-first\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef long {\bf DD4hep::IOV::Key\_\-first\_\-type}}}
+\label{class_d_d4hep_1_1_i_o_v_a3f518f6b507c82c4ee614e52b3519325}
+
+
+Key definition. 
+
+Definition at line 65 of file IOV.h.\hypertarget{class_d_d4hep_1_1_i_o_v_ae1e4d1584dcc17a416008a93d94376b5}{
+\index{DD4hep::IOV@{DD4hep::IOV}!Key\_\-second\_\-type@{Key\_\-second\_\-type}}
+\index{Key\_\-second\_\-type@{Key\_\-second\_\-type}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{Key\_\-second\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef long {\bf DD4hep::IOV::Key\_\-second\_\-type}}}
+\label{class_d_d4hep_1_1_i_o_v_ae1e4d1584dcc17a416008a93d94376b5}
+
+
+Definition at line 66 of file IOV.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_i_o_v_a1ba2ab174011fccf1dba8cd60e1d6bd1}{
+\index{DD4hep::IOV@{DD4hep::IOV}!IOV@{IOV}}
+\index{IOV@{IOV}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{IOV}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::IOV::IOV ()\hspace{0.3cm}{\ttfamily  \mbox{[}explicit, private\mbox{]}}}}
+\label{class_d_d4hep_1_1_i_o_v_a1ba2ab174011fccf1dba8cd60e1d6bd1}
+
+
+Initializing constructor: Does not set reference to \hyperlink{class_d_d4hep_1_1_i_o_v_type}{IOVType} ! \hypertarget{class_d_d4hep_1_1_i_o_v_a0a32eb684174feeec7047c7fe4d351cb}{
+\index{DD4hep::IOV@{DD4hep::IOV}!IOV@{IOV}}
+\index{IOV@{IOV}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{IOV}]{\setlength{\rightskip}{0pt plus 5cm}IOV::IOV (const {\bf IOVType} $\ast$ {\em typ})\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}
+\label{class_d_d4hep_1_1_i_o_v_a0a32eb684174feeec7047c7fe4d351cb}
+
+
+Initializing constructor. 
+
+Definition at line 43 of file IOV.cpp.
+
+References DD4hep::IOVType::type, type, and DD4hep::IOVType::UNKNOWN\_\-IOV.\hypertarget{class_d_d4hep_1_1_i_o_v_a1744cedccf7a479d152c842f7fc5220a}{
+\index{DD4hep::IOV@{DD4hep::IOV}!IOV@{IOV}}
+\index{IOV@{IOV}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{IOV}]{\setlength{\rightskip}{0pt plus 5cm}IOV::IOV (const {\bf IOVType} $\ast$ {\em typ}, \/  const {\bf Key} \& {\em key})\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}
+\label{class_d_d4hep_1_1_i_o_v_a1744cedccf7a479d152c842f7fc5220a}
+
+
+Specialized copy constructor. Copy constructor. 
+
+Definition at line 48 of file IOV.cpp.
+
+References DD4hep::IOVType::type, type, and DD4hep::IOVType::UNKNOWN\_\-IOV.\hypertarget{class_d_d4hep_1_1_i_o_v_aa10ef137157d26b5af800d45ed69fcab}{
+\index{DD4hep::IOV@{DD4hep::IOV}!IOV@{IOV}}
+\index{IOV@{IOV}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{IOV}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::IOV::IOV (const {\bf IOV} \& {\em copy})}}
+\label{class_d_d4hep_1_1_i_o_v_aa10ef137157d26b5af800d45ed69fcab}
+
+
+Copy constructor. \hypertarget{class_d_d4hep_1_1_i_o_v_ae9f9e2f904e4d89e13615ddd03e365ba}{
+\index{DD4hep::IOV@{DD4hep::IOV}!$\sim$IOV@{$\sim$IOV}}
+\index{$\sim$IOV@{$\sim$IOV}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{$\sim$IOV}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::IOV::$\sim$IOV ()}}
+\label{class_d_d4hep_1_1_i_o_v_ae9f9e2f904e4d89e13615ddd03e365ba}
+
+
+Standard Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_i_o_v_abe1a3f5122ab3e9aa97a82a1444a515d}{
+\index{DD4hep::IOV@{DD4hep::IOV}!contains@{contains}}
+\index{contains@{contains}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{contains}]{\setlength{\rightskip}{0pt plus 5cm}bool IOV::contains (const {\bf IOV} \& {\em iov}) const}}
+\label{class_d_d4hep_1_1_i_o_v_abe1a3f5122ab3e9aa97a82a1444a515d}
+
+
+Check for validity containment. Check if the caller 'iov' is of the same type and the range is fully conained by the caller. 
+
+Definition at line 156 of file IOV.cpp.
+
+References iovType, key\_\-is\_\-contained(), keyData, type, and DD4hep::IOVType::type.
+
+Referenced by DD4hep::Conditions::Test::check\_\-discrete\_\-condition().\hypertarget{class_d_d4hep_1_1_i_o_v_aa1b5388443f86ca31d23c99a34f444c5}{
+\index{DD4hep::IOV@{DD4hep::IOV}!full\_\-match@{full\_\-match}}
+\index{full\_\-match@{full\_\-match}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{full\_\-match}]{\setlength{\rightskip}{0pt plus 5cm}static bool DD4hep::IOV::full\_\-match (const {\bf IOV} \& {\em iov}, \/  const {\bf IOV} \& {\em test})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_i_o_v_aa1b5388443f86ca31d23c99a34f444c5}
+
+
+Check if \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} 'test' is of same type and is fully contained in iov. 
+
+Definition at line 147 of file IOV.h.
+
+References key\_\-is\_\-contained(), keyData, and same\_\-type().\hypertarget{class_d_d4hep_1_1_i_o_v_a9c942c869bb92e7b14b6d6308a6f15d7}{
+\index{DD4hep::IOV@{DD4hep::IOV}!has\_\-range@{has\_\-range}}
+\index{has\_\-range@{has\_\-range}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{has\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::IOV::has\_\-range () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_i_o_v_a9c942c869bb92e7b14b6d6308a6f15d7}
+
+
+Check if the \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} corresponds to a range. 
+
+Definition at line 90 of file IOV.h.
+
+References keyData.\hypertarget{class_d_d4hep_1_1_i_o_v_a5407ab1da0910ee18ca80dfa6985d0af}{
+\index{DD4hep::IOV@{DD4hep::IOV}!invert@{invert}}
+\index{invert@{invert}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{invert}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IOV} \& IOV::invert ()}}
+\label{class_d_d4hep_1_1_i_o_v_a5407ab1da0910ee18ca80dfa6985d0af}
+
+
+Invert the key values (first=second and second=first). Set keys to unphysical values (LONG\_\-MAX, LONG\_\-MIN). 
+
+Definition at line 78 of file IOV.cpp.
+
+References keyData.\hypertarget{class_d_d4hep_1_1_i_o_v_ab045b2ff365c11e6ff93c4ca01270a49}{
+\index{DD4hep::IOV@{DD4hep::IOV}!iov\_\-intersection@{iov\_\-intersection}}
+\index{iov\_\-intersection@{iov\_\-intersection}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{iov\_\-intersection}]{\setlength{\rightskip}{0pt plus 5cm}void IOV::iov\_\-intersection (const {\bf IOV::Key} \& {\em comparator})}}
+\label{class_d_d4hep_1_1_i_o_v_ab045b2ff365c11e6ff93c4ca01270a49}
+
+
+Set the intersection of this \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} with the argument \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. 
+
+Definition at line 94 of file IOV.cpp.
+
+References keyData.\hypertarget{class_d_d4hep_1_1_i_o_v_ae6f8261feefa4678c0842d43946d146d}{
+\index{DD4hep::IOV@{DD4hep::IOV}!iov\_\-intersection@{iov\_\-intersection}}
+\index{iov\_\-intersection@{iov\_\-intersection}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{iov\_\-intersection}]{\setlength{\rightskip}{0pt plus 5cm}void IOV::iov\_\-intersection (const {\bf IOV} \& {\em comparator})}}
+\label{class_d_d4hep_1_1_i_o_v_ae6f8261feefa4678c0842d43946d146d}
+
+
+Set the intersection of this \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} with the argument \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. 
+
+Definition at line 85 of file IOV.cpp.
+
+References iovType, and keyData.
+
+Referenced by DD4hep::Conditions::ConditionUpdateContext::get(), and DD4hep::Conditions::ConditionsIOVPool::select().\hypertarget{class_d_d4hep_1_1_i_o_v_ad6a050933305a95b61d26975c057590e}{
+\index{DD4hep::IOV@{DD4hep::IOV}!iov\_\-union@{iov\_\-union}}
+\index{iov\_\-union@{iov\_\-union}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{iov\_\-union}]{\setlength{\rightskip}{0pt plus 5cm}void IOV::iov\_\-union (const {\bf IOV::Key} \& {\em comparator})}}
+\label{class_d_d4hep_1_1_i_o_v_ad6a050933305a95b61d26975c057590e}
+
+
+Set the union of this \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} with the argument \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. 
+
+Definition at line 110 of file IOV.cpp.
+
+References keyData.\hypertarget{class_d_d4hep_1_1_i_o_v_aa0261c65bd7ffa708862bdd0e69845d9}{
+\index{DD4hep::IOV@{DD4hep::IOV}!iov\_\-union@{iov\_\-union}}
+\index{iov\_\-union@{iov\_\-union}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{iov\_\-union}]{\setlength{\rightskip}{0pt plus 5cm}void IOV::iov\_\-union (const {\bf IOV} \& {\em comparator})}}
+\label{class_d_d4hep_1_1_i_o_v_aa0261c65bd7ffa708862bdd0e69845d9}
+
+
+Set the union of this \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} with the argument \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. 
+
+Definition at line 101 of file IOV.cpp.
+
+References iovType, and keyData.\hypertarget{class_d_d4hep_1_1_i_o_v_a37f1849ee9dfed07510a1628bb4b5796}{
+\index{DD4hep::IOV@{DD4hep::IOV}!is\_\-discrete@{is\_\-discrete}}
+\index{is\_\-discrete@{is\_\-discrete}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{is\_\-discrete}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::IOV::is\_\-discrete () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_i_o_v_a37f1849ee9dfed07510a1628bb4b5796}
+
+
+Check if the \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} corresponds to a range. 
+
+Definition at line 92 of file IOV.h.
+
+References keyData.
+
+Referenced by DD4hep::Conditions::Test::check\_\-discrete\_\-condition().\hypertarget{class_d_d4hep_1_1_i_o_v_adf743118faa708c28f3299867f946567}{
+\index{DD4hep::IOV@{DD4hep::IOV}!key@{key}}
+\index{key@{key}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Key} DD4hep::IOV::key () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_i_o_v_adf743118faa708c28f3299867f946567}
+
+
+Get the local key of the \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. 
+
+Definition at line 94 of file IOV.h.
+
+References keyData.
+
+Referenced by DD4hep::Conditions::ConditionsIOVPool::select(), and DD4hep::Conditions::ConditionsIOVPool::selectRange().\hypertarget{class_d_d4hep_1_1_i_o_v_abb985b984cc6eb8576a4f124de7668f5}{
+\index{DD4hep::IOV@{DD4hep::IOV}!key\_\-contains\_\-range@{key\_\-contains\_\-range}}
+\index{key\_\-contains\_\-range@{key\_\-contains\_\-range}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{key\_\-contains\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}static bool DD4hep::IOV::key\_\-contains\_\-range (const {\bf Key} \& {\em key}, \/  const {\bf Key} \& {\em test})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_i_o_v_abb985b984cc6eb8576a4f124de7668f5}
+
+
+Same as above, but reverse logic. Gives sometimes more understandable logic. 
+
+Definition at line 130 of file IOV.h.
+
+Referenced by DD4hep::Conditions::ConditionsIOVPool::select().\hypertarget{class_d_d4hep_1_1_i_o_v_a43849b67b7823c3acd522bac26cf179d}{
+\index{DD4hep::IOV@{DD4hep::IOV}!key\_\-is\_\-contained@{key\_\-is\_\-contained}}
+\index{key\_\-is\_\-contained@{key\_\-is\_\-contained}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{key\_\-is\_\-contained}]{\setlength{\rightskip}{0pt plus 5cm}static bool DD4hep::IOV::key\_\-is\_\-contained (const {\bf Key} \& {\em key}, \/  const {\bf Key} \& {\em test})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_i_o_v_a43849b67b7823c3acd522bac26cf179d}
+
+
+Check if \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} 'test' is fully contained in \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} 'key'. 
+
+Definition at line 127 of file IOV.h.
+
+Referenced by contains(), full\_\-match(), DD4hep::Conditions::ConditionsDependencyHandler::get(), and DD4hep::Conditions::ConditionsIOVPool::selectRange().\hypertarget{class_d_d4hep_1_1_i_o_v_a2bbff41fece1d4692a155f997fb7aebf}{
+\index{DD4hep::IOV@{DD4hep::IOV}!key\_\-overlaps\_\-higher\_\-end@{key\_\-overlaps\_\-higher\_\-end}}
+\index{key\_\-overlaps\_\-higher\_\-end@{key\_\-overlaps\_\-higher\_\-end}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{key\_\-overlaps\_\-higher\_\-end}]{\setlength{\rightskip}{0pt plus 5cm}static bool DD4hep::IOV::key\_\-overlaps\_\-higher\_\-end (const {\bf Key} \& {\em key}, \/  const {\bf Key} \& {\em test})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_i_o_v_a2bbff41fece1d4692a155f997fb7aebf}
+
+
+Check if \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} 'test' has an overlap on the upper interval edge with \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} 'key'. 
+
+Definition at line 136 of file IOV.h.
+
+Referenced by DD4hep::Conditions::ConditionsIOVPool::selectRange().\hypertarget{class_d_d4hep_1_1_i_o_v_a6354b88d28e4e57bd50a02d9d4df7653}{
+\index{DD4hep::IOV@{DD4hep::IOV}!key\_\-overlaps\_\-lower\_\-end@{key\_\-overlaps\_\-lower\_\-end}}
+\index{key\_\-overlaps\_\-lower\_\-end@{key\_\-overlaps\_\-lower\_\-end}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{key\_\-overlaps\_\-lower\_\-end}]{\setlength{\rightskip}{0pt plus 5cm}static bool DD4hep::IOV::key\_\-overlaps\_\-lower\_\-end (const {\bf Key} \& {\em key}, \/  const {\bf Key} \& {\em test})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_i_o_v_a6354b88d28e4e57bd50a02d9d4df7653}
+
+
+Check if \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} 'test' has an overlap on the lower interval edge with \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} 'key'. 
+
+Definition at line 133 of file IOV.h.
+
+Referenced by DD4hep::Conditions::ConditionsIOVPool::selectRange().\hypertarget{class_d_d4hep_1_1_i_o_v_ae2d6950a52f1d51409a19b76385252df}{
+\index{DD4hep::IOV@{DD4hep::IOV}!key\_\-partially\_\-contained@{key\_\-partially\_\-contained}}
+\index{key\_\-partially\_\-contained@{key\_\-partially\_\-contained}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{key\_\-partially\_\-contained}]{\setlength{\rightskip}{0pt plus 5cm}static bool DD4hep::IOV::key\_\-partially\_\-contained (const {\bf Key} \& {\em key}, \/  const {\bf Key} \& {\em test})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_i_o_v_ae2d6950a52f1d51409a19b76385252df}
+
+
+Check if \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} 'test' has an overlap on the upper interval edge with \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} 'key'. 
+
+Definition at line 139 of file IOV.h.
+
+Referenced by partial\_\-match().\hypertarget{class_d_d4hep_1_1_i_o_v_aa473ed270d7b0e3930b2654406233a3c}{
+\index{DD4hep::IOV@{DD4hep::IOV}!move@{move}}
+\index{move@{move}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void IOV::move ({\bf IOV} \& {\em from})}}
+\label{class_d_d4hep_1_1_i_o_v_aa473ed270d7b0e3930b2654406233a3c}
+
+
+Move the data content: 'from' will be reset to NULL. 
+
+Definition at line 118 of file IOV.cpp.
+
+References iovType, keyData, optData, type, and DD4hep::IOVType::UNKNOWN\_\-IOV.\hypertarget{class_d_d4hep_1_1_i_o_v_a3e52be5e863dcb3e84549dd309da9878}{
+\index{DD4hep::IOV@{DD4hep::IOV}!operator=@{operator=}}
+\index{operator=@{operator=}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IOV}\& DD4hep::IOV::operator= (const {\bf IOV} \& {\em c})}}
+\label{class_d_d4hep_1_1_i_o_v_a3e52be5e863dcb3e84549dd309da9878}
+
+
+Assignment operator. \hypertarget{class_d_d4hep_1_1_i_o_v_ab55de0c04c0d06c457e248b4db839b08}{
+\index{DD4hep::IOV@{DD4hep::IOV}!partial\_\-match@{partial\_\-match}}
+\index{partial\_\-match@{partial\_\-match}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{partial\_\-match}]{\setlength{\rightskip}{0pt plus 5cm}static bool DD4hep::IOV::partial\_\-match (const {\bf IOV} \& {\em iov}, \/  const {\bf IOV} \& {\em test})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_i_o_v_ab55de0c04c0d06c457e248b4db839b08}
+
+
+Check if \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} 'test' is of same type and is at least partially contained in iov. 
+
+Definition at line 150 of file IOV.h.
+
+References key\_\-partially\_\-contained(), keyData, and same\_\-type().\hypertarget{class_d_d4hep_1_1_i_o_v_acbc1f282468528fd38d471bf7f9d58c0}{
+\index{DD4hep::IOV@{DD4hep::IOV}!reset@{reset}}
+\index{reset@{reset}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IOV} \& IOV::reset ()}}
+\label{class_d_d4hep_1_1_i_o_v_acbc1f282468528fd38d471bf7f9d58c0}
+
+
+Set keys to unphysical values (LONG\_\-MAX, LONG\_\-MIN). 
+
+Definition at line 71 of file IOV.cpp.
+
+References keyData.\hypertarget{class_d_d4hep_1_1_i_o_v_a25febeab024c770e5846197ca2a6b6fa}{
+\index{DD4hep::IOV@{DD4hep::IOV}!same\_\-type@{same\_\-type}}
+\index{same\_\-type@{same\_\-type}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{same\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}static bool DD4hep::IOV::same\_\-type (const {\bf IOV} \& {\em iov}, \/  const {\bf IOV} \& {\em test})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_i_o_v_a25febeab024c770e5846197ca2a6b6fa}
+
+
+Check if 2 \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} objects are of the same type. 
+
+Definition at line 121 of file IOV.h.
+
+References iovType, type, and DD4hep::IOVType::type.
+
+Referenced by full\_\-match(), and partial\_\-match().\hypertarget{class_d_d4hep_1_1_i_o_v_ab1157ed01d8a99029c6d2cfc9379ac9b}{
+\index{DD4hep::IOV@{DD4hep::IOV}!set@{set}}
+\index{set@{set}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::IOV::set ({\bf Key\_\-first\_\-type} {\em val\_\-1}, \/  {\bf Key\_\-second\_\-type} {\em val\_\-2})}}
+\label{class_d_d4hep_1_1_i_o_v_ab1157ed01d8a99029c6d2cfc9379ac9b}
+
+
+Set range \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} value. \hypertarget{class_d_d4hep_1_1_i_o_v_a8c9578e074d7c685fd7d1454b6b35d40}{
+\index{DD4hep::IOV@{DD4hep::IOV}!set@{set}}
+\index{set@{set}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::IOV::set ({\bf Key\_\-first\_\-type} {\em value})}}
+\label{class_d_d4hep_1_1_i_o_v_a8c9578e074d7c685fd7d1454b6b35d40}
+
+
+Set discrete \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} value. \hypertarget{class_d_d4hep_1_1_i_o_v_aa75452d30ebad70f84372091d6f777e4}{
+\index{DD4hep::IOV@{DD4hep::IOV}!set@{set}}
+\index{set@{set}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}void IOV::set (const {\bf Key} \& {\em value})}}
+\label{class_d_d4hep_1_1_i_o_v_aa75452d30ebad70f84372091d6f777e4}
+
+
+Set discrete \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} value. 
+
+Definition at line 55 of file IOV.cpp.
+
+References keyData.
+
+Referenced by DD4hep::Conditions::ConditionsManagerObject::fromString().\hypertarget{class_d_d4hep_1_1_i_o_v_a52ef776877661a865c23e07d2e2c9bef}{
+\index{DD4hep::IOV@{DD4hep::IOV}!str@{str}}
+\index{str@{str}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf string} IOV::str () const}}
+\label{class_d_d4hep_1_1_i_o_v_a52ef776877661a865c23e07d2e2c9bef}
+
+
+Create string representation of the \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. 
+
+Definition at line 126 of file IOV.cpp.
+
+References iovType, keyData, DD4hep::IOVType::name, type, and DD4hep::IOVType::type.
+
+Referenced by DD4hep::Conditions::Test::check\_\-discrete\_\-condition(), DD4hep::Conditions::Test::TestEnv::dump\_\-conditions\_\-pools(), and DD4hep::Conditions::Condition::str().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_i_o_v_a885a5ed2be528cf1db783cade2a0b838}{
+\index{DD4hep::IOV@{DD4hep::IOV}!iovType@{iovType}}
+\index{iovType@{iovType}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{iovType}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf IOVType}$\ast$ {\bf DD4hep::IOV::iovType}}}
+\label{class_d_d4hep_1_1_i_o_v_a885a5ed2be528cf1db783cade2a0b838}
+
+
+Definition at line 69 of file IOV.h.
+
+Referenced by contains(), DD4hep::Conditions::ConditionsDependencyHandler::do\_\-callback(), DD4hep::Conditions::ConditionsManagerObject::fromString(), iov\_\-intersection(), iov\_\-union(), DD4hep::Conditions::Interna::ConditionObject::iovType(), move(), DD4hep::Conditions::Condition::rebind(), same\_\-type(), and str().\hypertarget{class_d_d4hep_1_1_i_o_v_a28eb02fd8d9c45b770e6a234303991de}{
+\index{DD4hep::IOV@{DD4hep::IOV}!keyData@{keyData}}
+\index{keyData@{keyData}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{keyData}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Key} {\bf DD4hep::IOV::keyData}}}
+\label{class_d_d4hep_1_1_i_o_v_a28eb02fd8d9c45b770e6a234303991de}
+
+
+Definition at line 70 of file IOV.h.
+
+Referenced by DD4hep::Conditions::ConditionsIOVPool::clean(), contains(), full\_\-match(), DD4hep::Conditions::ConditionsDependencyHandler::get(), has\_\-range(), invert(), iov\_\-intersection(), iov\_\-union(), is\_\-discrete(), key(), move(), partial\_\-match(), DD4hep::Conditions::ConditionsManagerObject::registerCondition(), reset(), set(), and str().\hypertarget{class_d_d4hep_1_1_i_o_v_a0bd227cbdf7eab4949e12bffc7238d72}{
+\index{DD4hep::IOV@{DD4hep::IOV}!optData@{optData}}
+\index{optData@{optData}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{optData}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::IOV::optData}}}
+\label{class_d_d4hep_1_1_i_o_v_a0bd227cbdf7eab4949e12bffc7238d72}
+
+
+Definition at line 71 of file IOV.h.
+
+Referenced by move().\hypertarget{class_d_d4hep_1_1_i_o_v_a497f2859ca7cb011151ae6b977b50aa0}{
+\index{DD4hep::IOV@{DD4hep::IOV}!type@{type}}
+\index{type@{type}!DD4hep::IOV@{DD4hep::IOV}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf DD4hep::IOV::type}}}
+\label{class_d_d4hep_1_1_i_o_v_a497f2859ca7cb011151ae6b977b50aa0}
+
+
+\hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} buffer type: Must be a bitmap! 
+
+Definition at line 73 of file IOV.h.
+
+Referenced by contains(), DD4hep::Conditions::ConditionsManagerObject::fromString(), IOV(), move(), DD4hep::Conditions::ConditionsManagerObject::registerCondition(), same\_\-type(), and str().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_i_o_v_8h}{IOV.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_i_o_v_8cpp}{IOV.cpp}\end{DoxyCompactItemize}

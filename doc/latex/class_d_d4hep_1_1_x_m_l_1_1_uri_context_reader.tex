@@ -1,0 +1,185 @@
+\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader}{
+\section{DD4hep::XML::UriContextReader Class Reference}
+\label{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader}\index{DD4hep::XML::UriContextReader@{DD4hep::XML::UriContextReader}}
+}
+
+
+Class supporting to read data given a URI.  
+
+
+{\ttfamily \#include $<$UriReader.h$>$}Inheritance diagram for DD4hep::XML::UriContextReader::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_aede2321d47f8d747c084287e367b35ac}{UriContextReader} (\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_uri_reader}{UriReader} $\ast$reader, \hyperlink{struct_d_d4hep_1_1_x_m_l_1_1_uri_reader_1_1_user_context}{UriReader::UserContext} $\ast$ctxt)
+\begin{DoxyCompactList}\small\item\em Default initializing constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_ae8808c053cfc81ddff19c1be89f95e6e}{UriContextReader} (const \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader}{UriContextReader} \&copy)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_a065124ec7d3af30801bf471ed4259690}{$\sim$UriContextReader} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{struct_d_d4hep_1_1_x_m_l_1_1_uri_reader_1_1_user_context}{UserContext} $\ast$ \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_ad7ba7d778fdc8df96cca1e298003a403}{context} ()
+\begin{DoxyCompactList}\small\item\em Access to local context. \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_a1a6ca7eb85dadbc69463a367f396fe72}{load} (const std::string \&system\_\-id, std::string \&data)
+\begin{DoxyCompactList}\small\item\em Resolve a given URI to a string containing the data. \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_a4a092a836c08154d7d787f9244701944}{load} (const std::string \&system\_\-id, \hyperlink{struct_d_d4hep_1_1_x_m_l_1_1_uri_reader_1_1_user_context}{UserContext} $\ast$context, std::string \&data)
+\begin{DoxyCompactList}\small\item\em Resolve a given URI to a string containing the data with context. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_ae3ec9a7f4f18adf4dcac1d894453dbd0}{parserLoaded} (const std::string \&system\_\-id)
+\begin{DoxyCompactList}\small\item\em Inform reader about a locally (e.g. by XercesC) handled source load. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_ad55127447ec6782a4bf610ea2a33e233}{parserLoaded} (const std::string \&system\_\-id, \hyperlink{struct_d_d4hep_1_1_x_m_l_1_1_uri_reader_1_1_user_context}{UserContext} $\ast$ctxt)
+\begin{DoxyCompactList}\small\item\em Inform reader about a locally (e.g. by XercesC) handled source load. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_uri_reader}{UriReader} $\ast$ \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_a55aeba72e0e3b7ca7699c1b9fa439da8}{m\_\-reader}
+\begin{DoxyCompactList}\small\item\em Pointer to true reader object. \item\end{DoxyCompactList}\item 
+\hyperlink{struct_d_d4hep_1_1_x_m_l_1_1_uri_reader_1_1_user_context}{UriReader::UserContext} $\ast$ \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_ac95a39733d67430a8faa6427f750e448}{m\_\-context}
+\begin{DoxyCompactList}\small\item\em Pointer to user context. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class supporting to read data given a URI. Wrapper to read \hyperlink{namespace_d_d4hep_1_1_x_m_l}{XML} URI using a virtual reader instance. This implementation allows to externally chain an argument structure to the resolution function, which allows to set/retrieve further arguments such as e.g. conditions IOVs.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 71 of file UriReader.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_aede2321d47f8d747c084287e367b35ac}{
+\index{DD4hep::XML::UriContextReader@{DD4hep::XML::UriContextReader}!UriContextReader@{UriContextReader}}
+\index{UriContextReader@{UriContextReader}!DD4hep::XML::UriContextReader@{DD4hep::XML::UriContextReader}}
+\subsubsection[{UriContextReader}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::XML::UriContextReader::UriContextReader ({\bf UriReader} $\ast$ {\em reader}, \/  {\bf UriReader::UserContext} $\ast$ {\em ctxt})}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_aede2321d47f8d747c084287e367b35ac}
+
+
+Default initializing constructor. Default constructor. 
+
+Definition at line 33 of file UriReader.cpp.\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_ae8808c053cfc81ddff19c1be89f95e6e}{
+\index{DD4hep::XML::UriContextReader@{DD4hep::XML::UriContextReader}!UriContextReader@{UriContextReader}}
+\index{UriContextReader@{UriContextReader}!DD4hep::XML::UriContextReader@{DD4hep::XML::UriContextReader}}
+\subsubsection[{UriContextReader}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::XML::UriContextReader::UriContextReader (const {\bf UriContextReader} \& {\em copy})}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_ae8808c053cfc81ddff19c1be89f95e6e}
+
+
+Copy constructor. 
+
+Definition at line 39 of file UriReader.cpp.\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_a065124ec7d3af30801bf471ed4259690}{
+\index{DD4hep::XML::UriContextReader@{DD4hep::XML::UriContextReader}!$\sim$UriContextReader@{$\sim$UriContextReader}}
+\index{$\sim$UriContextReader@{$\sim$UriContextReader}!DD4hep::XML::UriContextReader@{DD4hep::XML::UriContextReader}}
+\subsubsection[{$\sim$UriContextReader}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::XML::UriContextReader::$\sim$UriContextReader ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_a065124ec7d3af30801bf471ed4259690}
+
+
+Default destructor. 
+
+Definition at line 45 of file UriReader.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_ad7ba7d778fdc8df96cca1e298003a403}{
+\index{DD4hep::XML::UriContextReader@{DD4hep::XML::UriContextReader}!context@{context}}
+\index{context@{context}!DD4hep::XML::UriContextReader@{DD4hep::XML::UriContextReader}}
+\subsubsection[{context}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf UserContext}$\ast$ DD4hep::XML::UriContextReader::context ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_ad7ba7d778fdc8df96cca1e298003a403}
+
+
+Access to local context. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_uri_reader_a9f8d06469b3e5bf1e69c72c4285dfcac}{DD4hep::XML::UriReader}.
+
+Definition at line 85 of file UriReader.h.
+
+References m\_\-context.
+
+Referenced by load(), and parserLoaded().\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_a4a092a836c08154d7d787f9244701944}{
+\index{DD4hep::XML::UriContextReader@{DD4hep::XML::UriContextReader}!load@{load}}
+\index{load@{load}!DD4hep::XML::UriContextReader@{DD4hep::XML::UriContextReader}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::XML::UriContextReader::load (const std::string \& {\em system\_\-id}, \/  {\bf UserContext} $\ast$ {\em context}, \/  std::string \& {\em data})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_a4a092a836c08154d7d787f9244701944}
+
+
+Resolve a given URI to a string containing the data with context. Resolve a given URI to a string containing the data. 
+
+Implements \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_uri_reader_a80a35ded7f30ba3b1954edb0e0493d6f}{DD4hep::XML::UriReader}.
+
+Definition at line 54 of file UriReader.cpp.
+
+References DD4hep::XML::UriReader::load(), and m\_\-reader.\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_a1a6ca7eb85dadbc69463a367f396fe72}{
+\index{DD4hep::XML::UriContextReader@{DD4hep::XML::UriContextReader}!load@{load}}
+\index{load@{load}!DD4hep::XML::UriContextReader@{DD4hep::XML::UriContextReader}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::XML::UriContextReader::load (const std::string \& {\em system\_\-id}, \/  std::string \& {\em data})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_a1a6ca7eb85dadbc69463a367f396fe72}
+
+
+Resolve a given URI to a string containing the data. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_uri_reader_a4cb644360608b580a1aaa4ccb9a8c7fa}{DD4hep::XML::UriReader}.
+
+Definition at line 49 of file UriReader.cpp.
+
+References context(), DD4hep::XML::UriReader::load(), and m\_\-reader.\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_ad55127447ec6782a4bf610ea2a33e233}{
+\index{DD4hep::XML::UriContextReader@{DD4hep::XML::UriContextReader}!parserLoaded@{parserLoaded}}
+\index{parserLoaded@{parserLoaded}!DD4hep::XML::UriContextReader@{DD4hep::XML::UriContextReader}}
+\subsubsection[{parserLoaded}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::XML::UriContextReader::parserLoaded (const std::string \& {\em system\_\-id}, \/  {\bf UserContext} $\ast$ {\em ctxt})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_ad55127447ec6782a4bf610ea2a33e233}
+
+
+Inform reader about a locally (e.g. by XercesC) handled source load. 
+
+Implements \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_uri_reader_ad04589fb5da7fe238c1a0cf1c8e4f0ac}{DD4hep::XML::UriReader}.
+
+Definition at line 64 of file UriReader.cpp.
+
+References m\_\-reader, and DD4hep::XML::UriReader::parserLoaded().\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_ae3ec9a7f4f18adf4dcac1d894453dbd0}{
+\index{DD4hep::XML::UriContextReader@{DD4hep::XML::UriContextReader}!parserLoaded@{parserLoaded}}
+\index{parserLoaded@{parserLoaded}!DD4hep::XML::UriContextReader@{DD4hep::XML::UriContextReader}}
+\subsubsection[{parserLoaded}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::XML::UriContextReader::parserLoaded (const std::string \& {\em system\_\-id})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_ae3ec9a7f4f18adf4dcac1d894453dbd0}
+
+
+Inform reader about a locally (e.g. by XercesC) handled source load. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_uri_reader_a58d5ece4bc5ee3b5d1d8f9eac85baecd}{DD4hep::XML::UriReader}.
+
+Definition at line 59 of file UriReader.cpp.
+
+References context(), m\_\-reader, and DD4hep::XML::UriReader::parserLoaded().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_ac95a39733d67430a8faa6427f750e448}{
+\index{DD4hep::XML::UriContextReader@{DD4hep::XML::UriContextReader}!m\_\-context@{m\_\-context}}
+\index{m\_\-context@{m\_\-context}!DD4hep::XML::UriContextReader@{DD4hep::XML::UriContextReader}}
+\subsubsection[{m\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UriReader::UserContext}$\ast$ {\bf DD4hep::XML::UriContextReader::m\_\-context}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_ac95a39733d67430a8faa6427f750e448}
+
+
+Pointer to user context. 
+
+Definition at line 76 of file UriReader.h.
+
+Referenced by context().\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_a55aeba72e0e3b7ca7699c1b9fa439da8}{
+\index{DD4hep::XML::UriContextReader@{DD4hep::XML::UriContextReader}!m\_\-reader@{m\_\-reader}}
+\index{m\_\-reader@{m\_\-reader}!DD4hep::XML::UriContextReader@{DD4hep::XML::UriContextReader}}
+\subsubsection[{m\_\-reader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UriReader}$\ast$ {\bf DD4hep::XML::UriContextReader::m\_\-reader}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_uri_context_reader_a55aeba72e0e3b7ca7699c1b9fa439da8}
+
+
+Pointer to true reader object. 
+
+Definition at line 74 of file UriReader.h.
+
+Referenced by load(), and parserLoaded().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/XML/\hyperlink{_uri_reader_8h}{UriReader.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/XML/\hyperlink{_uri_reader_8cpp}{UriReader.cpp}\end{DoxyCompactItemize}

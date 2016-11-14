@@ -1,0 +1,420 @@
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2}{
+\section{DD4hep::DDSegmentation::PolarGridRPhi2 Class Reference}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2}\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+}
+
+
+{\ttfamily \#include $<$PolarGridRPhi2.h$>$}Inheritance diagram for DD4hep::DDSegmentation::PolarGridRPhi2::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a88552803b42baa290fc38268bc06f099}{PolarGridRPhi2} (const std::string \&cellEncoding=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Default constructor passing the encoding string. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_ad79eed46ad54d3caf96ef51b8fd29ea7}{PolarGridRPhi2} (\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field64}{BitField64} $\ast$decoder)
+\begin{DoxyCompactList}\small\item\em Default constructor used by derived classes passing an existing decoder. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a63dc7071aea7a6fbcb5a01b35bdad59e}{$\sim$PolarGridRPhi2} ()
+\begin{DoxyCompactList}\small\item\em destructor \item\end{DoxyCompactList}\item 
+virtual \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a5a61e856d814397d2be8046585266863}{position} (const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{CellID} \&cellID) const 
+\begin{DoxyCompactList}\small\item\em determine the position based on the cell ID \item\end{DoxyCompactList}\item 
+virtual \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{CellID} \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_ae1cd15b95add489ababb51f9103de6b4}{cellID} (const \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \&localPosition, const \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \&globalPosition, const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_a61a6833a18d1800bdef176595f83e3ba}{VolumeID} \&volumeID) const 
+\begin{DoxyCompactList}\small\item\em determine the cell ID based on the position \item\end{DoxyCompactList}\item 
+std::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_ad0fa4b4b84d24247dc74fc4602619ba8}{gridRValues} () const 
+\begin{DoxyCompactList}\small\item\em access the grid size in R \item\end{DoxyCompactList}\item 
+std::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_af4f179409116da086b120f46ab3433ec}{gridPhiValues} () const 
+\begin{DoxyCompactList}\small\item\em access the grid size in Phi \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a7df4f48eab7247dc4b8f0b1fc1b464d8}{offsetR} () const 
+\begin{DoxyCompactList}\small\item\em access the coordinate offset in R \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a2a77b6a183ab9fa40e0001f4ac723cf7}{offsetPhi} () const 
+\begin{DoxyCompactList}\small\item\em access the coordinate offset in Phi \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a95ef3314ebba93b87f5a508efb2e7066}{fieldNameR} () const 
+\begin{DoxyCompactList}\small\item\em access the field name used for R \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a4c0c6f5fc47520801723c337224e546d}{fieldNamePhi} () const 
+\begin{DoxyCompactList}\small\item\em access the field name used for Phi \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a2194e846c26953f06cc74481d8aadeb4}{setGridRValues} (double cellSize, int rID)
+\begin{DoxyCompactList}\small\item\em set the grid Boundaries in R \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a349f115397bac2c6c4891353bcfd88b0}{setGridSizePhi} (double cellSize, int phiID)
+\begin{DoxyCompactList}\small\item\em set the grid size in Phi \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a6d8ed0487267fd1b67bc0d76b2f41b3a}{setGridRValues} (std::vector$<$ double $>$ const \&rValues)
+\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a738e77165e575ee463fab4e5daec543b}{setGridPhiValues} (std::vector$<$ double $>$ const \&phiValues)
+\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_afe071e7c5168bda97cac7c4a64c9265e}{setOffsetR} (double offset)
+\begin{DoxyCompactList}\small\item\em set the coordinate offset in R \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_aa2807e9eae64b363d6a19cc605de5b81}{setOffsetPhi} (double offset)
+\begin{DoxyCompactList}\small\item\em set the coordinate offset in Phi \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_aac669f48623b5176e941a1e66fde5877}{setFieldNameR} (const std::string \&fieldName)
+\begin{DoxyCompactList}\small\item\em set the field name used for X \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a6cd00f3574bc968232a95d1204238c14}{setFieldNamePhi} (const std::string \&fieldName)
+\begin{DoxyCompactList}\small\item\em set the field name used for Y \item\end{DoxyCompactList}\item 
+virtual std::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a15d4dfe8784e9ec12a6d801231925b12}{cellDimensions} (const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{CellID} \&cellID) const 
+\begin{DoxyCompactList}\small\item\em Returns a vector$<$double$>$ of the cellDimensions of the given cell ID in natural order of dimensions: dr, r$\ast$dPhi. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a036c555ece1b698614ed4186f97a72d4}{\_\-gridRValues}
+\begin{DoxyCompactList}\small\item\em the grid boundaries in R \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a775bd660c36c5310b65195f3080e92fe}{\_\-offsetR}
+\begin{DoxyCompactList}\small\item\em the coordinate offset in R \item\end{DoxyCompactList}\item 
+std::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a078188d23dac5d6ed26c85dddf0f9e74}{\_\-gridPhiValues}
+\begin{DoxyCompactList}\small\item\em the grid sizes in Phi \item\end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_aab823b5b9e861ba2db50721d800d451a}{\_\-offsetPhi}
+\begin{DoxyCompactList}\small\item\em the coordinate offset in Phi \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a93baa19a86e2412bf85fe2749c9d2bb4}{\_\-rId}
+\begin{DoxyCompactList}\small\item\em the field name used for R \item\end{DoxyCompactList}\item 
+std::string \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a95332f186af59bd325277868ffeb3ea6}{\_\-phiId}
+\begin{DoxyCompactList}\small\item\em the field name used for Phi \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A segmentation for arbitrary sizes in R and R-\/dependent sizes in Phi\par
+ Note: Counting of phi-\/ids starts at the offset. There are no negative phi-\/IDs\par
+ The grid\_\-r\_\-values give the boundaries of the bin, the grid\_\-phi\_\-values give the size of the bin for each radial bin see also \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a2194e846c26953f06cc74481d8aadeb4}{PolarGridRPhi2::setGridRValues} and \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a738e77165e575ee463fab4e5daec543b}{PolarGridRPhi2::setGridPhiValues}\par
+ Example:\par
+ \begin{DoxyVerb}
+    <segmentation type="PolarGridRPhi2"
+                  grid_r_values="3.2*cm 3.7*cm 4.9*cm 5.5*cm<br/>
+                                 6.*cm 7.*cm 7.5*cm 8.7*cm<br/>
+                                 9.5*cm 10.*cm 11.*cm 11.8*cm<br/>
+                                 12.*cm 13.*cm 14.*cm 15.0*cm"
+                  grid_phi_values="360/(4*8)*degree 360/(5*8)*degree
+                                   360/(6*8)*degree 360/(6*8)*degree
+                                   360/(7*8)*degree 360/(8*8)*degree
+                                   360/(9*8)*degree 360/(9*8)*degree
+                                   360/(10*8)*degree 360/(11*8)*degree
+                                   360/(12*8)*degree 360/(12*8)*degree
+                                   360/(13*8)*degree 360/(14*8)*degree
+                                   360/(15*8)*degree"
+                  offset_phi="-180.0*degree"
+                     />
+    <id>system:8,barrel:3,layer:8,slice:5,r:32:16,phi:16</id>
+   \end{DoxyVerb}
+ \begin{DoxyVersion}{Version}
+\$Id\$ 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2015-\/03 
+\end{DoxyDate}
+
+
+Definition at line 45 of file PolarGridRPhi2.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a88552803b42baa290fc38268bc06f099}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!PolarGridRPhi2@{PolarGridRPhi2}}
+\index{PolarGridRPhi2@{PolarGridRPhi2}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{PolarGridRPhi2}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDSegmentation::PolarGridRPhi2::PolarGridRPhi2 (const std::string \& {\em cellEncoding} = {\ttfamily \char`\"{}\char`\"{}})}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a88552803b42baa290fc38268bc06f099}
+
+
+Default constructor passing the encoding string. default constructor using an encoding string 
+
+Definition at line 14 of file PolarGridRPhi2.cpp.
+
+References DD4hep::DDSegmentation::Segmentation::\_\-description, \_\-gridPhiValues, \_\-gridRValues, \_\-offsetPhi, \_\-offsetR, \_\-phiId, \_\-rId, DD4hep::DDSegmentation::Segmentation::\_\-type, DD4hep::DDSegmentation::SegmentationParameter::AngleUnit, DD4hep::DDSegmentation::SegmentationParameter::LengthUnit, DD4hep::DDSegmentation::Segmentation::registerIdentifier(), and DD4hep::DDSegmentation::Segmentation::registerParameter().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_ad79eed46ad54d3caf96ef51b8fd29ea7}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!PolarGridRPhi2@{PolarGridRPhi2}}
+\index{PolarGridRPhi2@{PolarGridRPhi2}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{PolarGridRPhi2}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDSegmentation::PolarGridRPhi2::PolarGridRPhi2 ({\bf BitField64} $\ast$ {\em decoder})}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_ad79eed46ad54d3caf96ef51b8fd29ea7}
+
+
+Default constructor used by derived classes passing an existing decoder. 
+
+Definition at line 30 of file PolarGridRPhi2.cpp.
+
+References DD4hep::DDSegmentation::Segmentation::\_\-description, \_\-gridPhiValues, \_\-gridRValues, \_\-offsetPhi, \_\-offsetR, \_\-phiId, \_\-rId, DD4hep::DDSegmentation::Segmentation::\_\-type, DD4hep::DDSegmentation::SegmentationParameter::AngleUnit, DD4hep::DDSegmentation::SegmentationParameter::LengthUnit, DD4hep::DDSegmentation::Segmentation::registerIdentifier(), and DD4hep::DDSegmentation::Segmentation::registerParameter().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a63dc7071aea7a6fbcb5a01b35bdad59e}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!$\sim$PolarGridRPhi2@{$\sim$PolarGridRPhi2}}
+\index{$\sim$PolarGridRPhi2@{$\sim$PolarGridRPhi2}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{$\sim$PolarGridRPhi2}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDSegmentation::PolarGridRPhi2::$\sim$PolarGridRPhi2 ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a63dc7071aea7a6fbcb5a01b35bdad59e}
+
+
+destructor 
+
+Definition at line 46 of file PolarGridRPhi2.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a15d4dfe8784e9ec12a6d801231925b12}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!cellDimensions@{cellDimensions}}
+\index{cellDimensions@{cellDimensions}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{cellDimensions}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$ double $>$ DD4hep::DDSegmentation::PolarGridRPhi2::cellDimensions (const {\bf CellID} \& {\em cellID}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a15d4dfe8784e9ec12a6d801231925b12}
+
+
+Returns a vector$<$double$>$ of the cellDimensions of the given cell ID in natural order of dimensions: dr, r$\ast$dPhi. Returns a vector of the cellDimensions of the given cell ID 
+\begin{DoxyParams}{Parameters}
+\item[{\em cellID}]is ignored as all cells have the same dimension \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std::vector$<$double$>$ size 2:
+\begin{DoxyEnumerate}
+\item size in r
+\item size of r$\ast$dPhi at the radial centre of the pad 
+\end{DoxyEnumerate}
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a9710f4942d7f6b52ae5342652e17c88d}{DD4hep::DDSegmentation::Segmentation}.
+
+Definition at line 87 of file PolarGridRPhi2.cpp.
+
+References DD4hep::DDSegmentation::Segmentation::\_\-decoder, \_\-gridPhiValues, \_\-gridRValues, \_\-offsetR, \_\-rId, DD4hep::DDSegmentation::Segmentation::binToPosition(), and DD4hep::DDSegmentation::BitField64::setValue().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_ae1cd15b95add489ababb51f9103de6b4}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!cellID@{cellID}}
+\index{cellID@{cellID}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{cellID}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CellID} DD4hep::DDSegmentation::PolarGridRPhi2::cellID (const {\bf Vector3D} \& {\em localPosition}, \/  const {\bf Vector3D} \& {\em globalPosition}, \/  const {\bf VolumeID} \& {\em volumeID}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_ae1cd15b95add489ababb51f9103de6b4}
+
+
+determine the cell ID based on the position 
+
+Implements \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ad5a60953d96d409850d8192f64f8ce3c}{DD4hep::DDSegmentation::Segmentation}.
+
+Definition at line 69 of file PolarGridRPhi2.cpp.
+
+References DD4hep::DDSegmentation::Segmentation::\_\-decoder, \_\-gridPhiValues, \_\-gridRValues, \_\-offsetPhi, \_\-offsetR, \_\-phiId, \_\-rId, DD4hep::DDSegmentation::BitField64::getValue(), M\_\-PI, DD4hep::DDSegmentation::Segmentation::positionToBin(), DD4hep::DDSegmentation::BitField64::setValue(), DD4hep::DDSegmentation::Vector3D::X, and DD4hep::DDSegmentation::Vector3D::Y.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a4c0c6f5fc47520801723c337224e546d}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!fieldNamePhi@{fieldNamePhi}}
+\index{fieldNamePhi@{fieldNamePhi}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{fieldNamePhi}]{\setlength{\rightskip}{0pt plus 5cm}const std::string\& DD4hep::DDSegmentation::PolarGridRPhi2::fieldNamePhi () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a4c0c6f5fc47520801723c337224e546d}
+
+
+access the field name used for Phi 
+
+Definition at line 79 of file PolarGridRPhi2.h.
+
+References \_\-phiId.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a95ef3314ebba93b87f5a508efb2e7066}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!fieldNameR@{fieldNameR}}
+\index{fieldNameR@{fieldNameR}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{fieldNameR}]{\setlength{\rightskip}{0pt plus 5cm}const std::string\& DD4hep::DDSegmentation::PolarGridRPhi2::fieldNameR () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a95ef3314ebba93b87f5a508efb2e7066}
+
+
+access the field name used for R 
+
+Definition at line 75 of file PolarGridRPhi2.h.
+
+References \_\-rId.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_af4f179409116da086b120f46ab3433ec}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!gridPhiValues@{gridPhiValues}}
+\index{gridPhiValues@{gridPhiValues}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{gridPhiValues}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$double$>$ DD4hep::DDSegmentation::PolarGridRPhi2::gridPhiValues () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_af4f179409116da086b120f46ab3433ec}
+
+
+access the grid size in Phi 
+
+Definition at line 63 of file PolarGridRPhi2.h.
+
+References \_\-gridPhiValues.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_ad0fa4b4b84d24247dc74fc4602619ba8}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!gridRValues@{gridRValues}}
+\index{gridRValues@{gridRValues}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{gridRValues}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$double$>$ DD4hep::DDSegmentation::PolarGridRPhi2::gridRValues () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_ad0fa4b4b84d24247dc74fc4602619ba8}
+
+
+access the grid size in R 
+
+Definition at line 59 of file PolarGridRPhi2.h.
+
+References \_\-gridRValues.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a2a77b6a183ab9fa40e0001f4ac723cf7}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!offsetPhi@{offsetPhi}}
+\index{offsetPhi@{offsetPhi}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{offsetPhi}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::DDSegmentation::PolarGridRPhi2::offsetPhi () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a2a77b6a183ab9fa40e0001f4ac723cf7}
+
+
+access the coordinate offset in Phi 
+
+Definition at line 71 of file PolarGridRPhi2.h.
+
+References \_\-offsetPhi.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a7df4f48eab7247dc4b8f0b1fc1b464d8}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!offsetR@{offsetR}}
+\index{offsetR@{offsetR}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{offsetR}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::DDSegmentation::PolarGridRPhi2::offsetR () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a7df4f48eab7247dc4b8f0b1fc1b464d8}
+
+
+access the coordinate offset in R 
+
+Definition at line 67 of file PolarGridRPhi2.h.
+
+References \_\-offsetR.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a5a61e856d814397d2be8046585266863}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!position@{position}}
+\index{position@{position}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector3D} DD4hep::DDSegmentation::PolarGridRPhi2::position (const {\bf CellID} \& {\em cellID}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a5a61e856d814397d2be8046585266863}
+
+
+determine the position based on the cell ID 
+
+Implements \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a594fe6d78667415855858d083b64acad}{DD4hep::DDSegmentation::Segmentation}.
+
+Definition at line 51 of file PolarGridRPhi2.cpp.
+
+References DD4hep::DDSegmentation::Segmentation::\_\-decoder, \_\-gridPhiValues, \_\-gridRValues, \_\-offsetPhi, \_\-offsetR, \_\-phiId, \_\-rId, DD4hep::DDSegmentation::Segmentation::binToPosition(), M\_\-PI, DD4hep::DDSegmentation::BitField64::setValue(), DD4hep::DDSegmentation::Vector3D::X, and DD4hep::DDSegmentation::Vector3D::Y.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a6cd00f3574bc968232a95d1204238c14}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!setFieldNamePhi@{setFieldNamePhi}}
+\index{setFieldNamePhi@{setFieldNamePhi}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{setFieldNamePhi}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::PolarGridRPhi2::setFieldNamePhi (const std::string \& {\em fieldName})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a6cd00f3574bc968232a95d1204238c14}
+
+
+set the field name used for Y 
+
+Definition at line 117 of file PolarGridRPhi2.h.
+
+References \_\-phiId.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_aac669f48623b5176e941a1e66fde5877}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!setFieldNameR@{setFieldNameR}}
+\index{setFieldNameR@{setFieldNameR}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{setFieldNameR}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::PolarGridRPhi2::setFieldNameR (const std::string \& {\em fieldName})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_aac669f48623b5176e941a1e66fde5877}
+
+
+set the field name used for X 
+
+Definition at line 113 of file PolarGridRPhi2.h.
+
+References \_\-rId.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a738e77165e575ee463fab4e5daec543b}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!setGridPhiValues@{setGridPhiValues}}
+\index{setGridPhiValues@{setGridPhiValues}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{setGridPhiValues}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::PolarGridRPhi2::setGridPhiValues (std::vector$<$ double $>$ const \& {\em phiValues})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a738e77165e575ee463fab4e5daec543b}
+set the grid size in Phi for each bin in R 
+\begin{DoxyParams}{Parameters}
+\item[{\em phiValues}]The size in phi for each bin in R, this vector is one smaller than the vector for \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a2194e846c26953f06cc74481d8aadeb4}{PolarGridRPhi2::setGridRValues} \end{DoxyParams}
+
+
+Definition at line 99 of file PolarGridRPhi2.h.
+
+References \_\-gridPhiValues.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a6d8ed0487267fd1b67bc0d76b2f41b3a}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!setGridRValues@{setGridRValues}}
+\index{setGridRValues@{setGridRValues}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{setGridRValues}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::PolarGridRPhi2::setGridRValues (std::vector$<$ double $>$ const \& {\em rValues})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a6d8ed0487267fd1b67bc0d76b2f41b3a}
+set the grid boundaries for R 
+\begin{DoxyParams}{Parameters}
+\item[{\em rValues}]The boundaries of the segments in radius, the first value is the lower boundary of the first bin, the highest value is the upper boundary of the last bin \end{DoxyParams}
+
+
+Definition at line 93 of file PolarGridRPhi2.h.
+
+References \_\-gridRValues.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a2194e846c26953f06cc74481d8aadeb4}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!setGridRValues@{setGridRValues}}
+\index{setGridRValues@{setGridRValues}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{setGridRValues}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::PolarGridRPhi2::setGridRValues (double {\em cellSize}, \/  int {\em rID})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a2194e846c26953f06cc74481d8aadeb4}
+
+
+set the grid Boundaries in R 
+
+Definition at line 83 of file PolarGridRPhi2.h.
+
+References \_\-gridRValues.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a349f115397bac2c6c4891353bcfd88b0}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!setGridSizePhi@{setGridSizePhi}}
+\index{setGridSizePhi@{setGridSizePhi}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{setGridSizePhi}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::PolarGridRPhi2::setGridSizePhi (double {\em cellSize}, \/  int {\em phiID})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a349f115397bac2c6c4891353bcfd88b0}
+
+
+set the grid size in Phi 
+
+Definition at line 87 of file PolarGridRPhi2.h.
+
+References \_\-gridPhiValues.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_aa2807e9eae64b363d6a19cc605de5b81}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!setOffsetPhi@{setOffsetPhi}}
+\index{setOffsetPhi@{setOffsetPhi}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{setOffsetPhi}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::PolarGridRPhi2::setOffsetPhi (double {\em offset})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_aa2807e9eae64b363d6a19cc605de5b81}
+
+
+set the coordinate offset in Phi 
+
+Definition at line 109 of file PolarGridRPhi2.h.
+
+References \_\-offsetPhi.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_afe071e7c5168bda97cac7c4a64c9265e}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!setOffsetR@{setOffsetR}}
+\index{setOffsetR@{setOffsetR}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{setOffsetR}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::PolarGridRPhi2::setOffsetR (double {\em offset})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_afe071e7c5168bda97cac7c4a64c9265e}
+
+
+set the coordinate offset in R 
+
+Definition at line 105 of file PolarGridRPhi2.h.
+
+References \_\-offsetR.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a078188d23dac5d6ed26c85dddf0f9e74}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!\_\-gridPhiValues@{\_\-gridPhiValues}}
+\index{\_\-gridPhiValues@{\_\-gridPhiValues}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{\_\-gridPhiValues}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$double$>$ {\bf DD4hep::DDSegmentation::PolarGridRPhi2::\_\-gridPhiValues}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a078188d23dac5d6ed26c85dddf0f9e74}
+
+
+the grid sizes in Phi 
+
+Definition at line 137 of file PolarGridRPhi2.h.
+
+Referenced by cellDimensions(), cellID(), gridPhiValues(), PolarGridRPhi2(), position(), setGridPhiValues(), and setGridSizePhi().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a036c555ece1b698614ed4186f97a72d4}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!\_\-gridRValues@{\_\-gridRValues}}
+\index{\_\-gridRValues@{\_\-gridRValues}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{\_\-gridRValues}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$double$>$ {\bf DD4hep::DDSegmentation::PolarGridRPhi2::\_\-gridRValues}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a036c555ece1b698614ed4186f97a72d4}
+
+
+the grid boundaries in R 
+
+Definition at line 133 of file PolarGridRPhi2.h.
+
+Referenced by cellDimensions(), cellID(), gridRValues(), PolarGridRPhi2(), position(), and setGridRValues().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_aab823b5b9e861ba2db50721d800d451a}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!\_\-offsetPhi@{\_\-offsetPhi}}
+\index{\_\-offsetPhi@{\_\-offsetPhi}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{\_\-offsetPhi}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::DDSegmentation::PolarGridRPhi2::\_\-offsetPhi}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_aab823b5b9e861ba2db50721d800d451a}
+
+
+the coordinate offset in Phi 
+
+Definition at line 139 of file PolarGridRPhi2.h.
+
+Referenced by cellID(), offsetPhi(), PolarGridRPhi2(), position(), and setOffsetPhi().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a775bd660c36c5310b65195f3080e92fe}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!\_\-offsetR@{\_\-offsetR}}
+\index{\_\-offsetR@{\_\-offsetR}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{\_\-offsetR}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::DDSegmentation::PolarGridRPhi2::\_\-offsetR}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a775bd660c36c5310b65195f3080e92fe}
+
+
+the coordinate offset in R 
+
+Definition at line 135 of file PolarGridRPhi2.h.
+
+Referenced by cellDimensions(), cellID(), offsetR(), PolarGridRPhi2(), position(), and setOffsetR().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a95332f186af59bd325277868ffeb3ea6}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!\_\-phiId@{\_\-phiId}}
+\index{\_\-phiId@{\_\-phiId}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{\_\-phiId}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::DDSegmentation::PolarGridRPhi2::\_\-phiId}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a95332f186af59bd325277868ffeb3ea6}
+
+
+the field name used for Phi 
+
+Definition at line 143 of file PolarGridRPhi2.h.
+
+Referenced by cellID(), fieldNamePhi(), PolarGridRPhi2(), position(), and setFieldNamePhi().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a93baa19a86e2412bf85fe2749c9d2bb4}{
+\index{DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}!\_\-rId@{\_\-rId}}
+\index{\_\-rId@{\_\-rId}!DD4hep::DDSegmentation::PolarGridRPhi2@{DD4hep::DDSegmentation::PolarGridRPhi2}}
+\subsubsection[{\_\-rId}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::DDSegmentation::PolarGridRPhi2::\_\-rId}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_polar_grid_r_phi2_a93baa19a86e2412bf85fe2749c9d2bb4}
+
+
+the field name used for R 
+
+Definition at line 141 of file PolarGridRPhi2.h.
+
+Referenced by cellDimensions(), cellID(), fieldNameR(), PolarGridRPhi2(), position(), and setFieldNameR().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDSegmentation/include/DDSegmentation/\hyperlink{_d_d_segmentation_2include_2_d_d_segmentation_2_polar_grid_r_phi2_8h}{PolarGridRPhi2.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDSegmentation/src/\hyperlink{_d_d_segmentation_2src_2_polar_grid_r_phi2_8cpp}{PolarGridRPhi2.cpp}\end{DoxyCompactItemize}

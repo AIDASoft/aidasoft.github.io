@@ -1,0 +1,140 @@
+\hypertarget{_geant4_converter_8cpp}{
+\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/Geant4Converter.cpp File Reference}
+\label{_geant4_converter_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/Geant4Converter.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/Geant4Converter.cpp}}
+}
+{\ttfamily \#include \char`\"{}DD4hep/LCDD.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/Plugins.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/Volumes.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/Printout.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/DD4hepUnits.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/objects/ObjectsInterna.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/objects/DetectorInterna.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DDG4/Geant4Field.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DDG4/Geant4Converter.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DDG4/Geant4SensitiveDetector.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TROOT.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TColor.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoNode.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoShape.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoCone.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoHype.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoPcon.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoEltu.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoPgon.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoSphere.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoTorus.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoTrd1.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoTrd2.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoTube.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoArb8.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoMatrix.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoBoolNode.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoParaboloid.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoCompositeShape.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoShapeAssembly.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoScaledShape.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoManager.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TClass.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TMath.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4VisAttributes.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4ProductionCuts.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4VUserRegionInformation.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4Element.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4Box.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4Trd.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4Tubs.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4Trap.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4Cons.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4Hype.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4Torus.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4Sphere.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4Polycone.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4Polyhedra.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4UnionSolid.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4Paraboloid.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4Ellipsoid.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4EllipticalTube.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4SubtractionSolid.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4IntersectionSolid.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4Region.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4UserLimits.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4LogicalVolume.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4Material.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4Isotope.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4Transform3D.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4ThreeVector.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4PVPlacement.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4ElectroMagneticField.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4FieldManager.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4ReflectionFactory.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}CLHEP/Units/SystemOfUnits.h\char`\"{}}\par
+{\ttfamily \#include $<$iostream$>$}\par
+{\ttfamily \#include $<$iomanip$>$}\par
+{\ttfamily \#include $<$sstream$>$}\par
+{\ttfamily \#include \char`\"{}DDG4/Geant4AssemblyVolume.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/DetectorTools.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4RotationMatrix.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4AffineTransform.hh\char`\"{}}\par
+{\ttfamily \#include \char`\"{}G4VPhysicalVolume.hh\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstd_1_1string}{string} \hyperlink{_geant4_converter_8cpp_ac5a01b817225c14295ef43363d867087}{printSolid} (G4VSolid $\ast$sol)
+\item 
+{\footnotesize template$<$typename O , typename C , typename F $>$ }\\void \hyperlink{_geant4_converter_8cpp_a07e7659aecdf8fa88e159fd691c46bbe}{handleRefs} (const O $\ast$o, const C \&c, F pmf)
+\item 
+{\footnotesize template$<$typename O , typename C , typename F $>$ }\\void \hyperlink{_geant4_converter_8cpp_ae67154a251a25b85bf28b62829a03c39}{handle} (const O $\ast$o, const C \&c, F pmf)
+\item 
+{\footnotesize template$<$typename O , typename C , typename F $>$ }\\void \hyperlink{_geant4_converter_8cpp_a2ec5c72f110e5e4eeaac04f2fde81db3}{handleMap} (const O $\ast$o, const C \&c, F pmf)
+\item 
+{\footnotesize template$<$typename O , typename C , typename F $>$ }\\void \hyperlink{_geant4_converter_8cpp_a7d7afa44a05c52b63ca8815b5f5ba063}{handleRMap} (const O $\ast$o, const C \&c, F pmf)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_geant4_converter_8cpp_ae67154a251a25b85bf28b62829a03c39}{
+\index{Geant4Converter.cpp@{Geant4Converter.cpp}!handle@{handle}}
+\index{handle@{handle}!Geant4Converter.cpp@{Geant4Converter.cpp}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename O , typename C , typename F $>$ void handle (const O $\ast$ {\em o}, \/  const C \& {\em c}, \/  F {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{_geant4_converter_8cpp_ae67154a251a25b85bf28b62829a03c39}
+
+
+Definition at line 984 of file Geant4Converter.cpp.
+
+Referenced by DD4hep::Simulation::\_\-convertAction(), DD4hep::Simulation::\_\-convertSensitive(), DD4hep::Simulation::Geant4Converter::create(), DD4hep::DDRec::createGearForCLIC(), DD4hep::DDRec::createGearForILD(), handleRMap(), and DD4hep::Converter$<$ T, ARG $>$::operator()().\hypertarget{_geant4_converter_8cpp_a2ec5c72f110e5e4eeaac04f2fde81db3}{
+\index{Geant4Converter.cpp@{Geant4Converter.cpp}!handleMap@{handleMap}}
+\index{handleMap@{handleMap}!Geant4Converter.cpp@{Geant4Converter.cpp}}
+\subsubsection[{handleMap}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename O , typename C , typename F $>$ void handleMap (const O $\ast$ {\em o}, \/  const C \& {\em c}, \/  F {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{_geant4_converter_8cpp_a2ec5c72f110e5e4eeaac04f2fde81db3}
+
+
+Definition at line 990 of file Geant4Converter.cpp.
+
+Referenced by DD4hep::Simulation::Geant4Converter::create().\hypertarget{_geant4_converter_8cpp_a07e7659aecdf8fa88e159fd691c46bbe}{
+\index{Geant4Converter.cpp@{Geant4Converter.cpp}!handleRefs@{handleRefs}}
+\index{handleRefs@{handleRefs}!Geant4Converter.cpp@{Geant4Converter.cpp}}
+\subsubsection[{handleRefs}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename O , typename C , typename F $>$ void handleRefs (const O $\ast$ {\em o}, \/  const C \& {\em c}, \/  F {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{_geant4_converter_8cpp_a07e7659aecdf8fa88e159fd691c46bbe}
+
+
+Definition at line 978 of file Geant4Converter.cpp.
+
+Referenced by DD4hep::Simulation::Geant4Converter::create().\hypertarget{_geant4_converter_8cpp_a7d7afa44a05c52b63ca8815b5f5ba063}{
+\index{Geant4Converter.cpp@{Geant4Converter.cpp}!handleRMap@{handleRMap}}
+\index{handleRMap@{handleRMap}!Geant4Converter.cpp@{Geant4Converter.cpp}}
+\subsubsection[{handleRMap}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename O , typename C , typename F $>$ void handleRMap (const O $\ast$ {\em o}, \/  const C \& {\em c}, \/  F {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{_geant4_converter_8cpp_a7d7afa44a05c52b63ca8815b5f5ba063}
+
+
+Definition at line 995 of file Geant4Converter.cpp.
+
+References handle().
+
+Referenced by DD4hep::Simulation::Geant4Converter::create().\hypertarget{_geant4_converter_8cpp_ac5a01b817225c14295ef43363d867087}{
+\index{Geant4Converter.cpp@{Geant4Converter.cpp}!printSolid@{printSolid}}
+\index{printSolid@{printSolid}!Geant4Converter.cpp@{Geant4Converter.cpp}}
+\subsubsection[{printSolid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf string} printSolid (G4VSolid $\ast$ {\em sol})}}
+\label{_geant4_converter_8cpp_ac5a01b817225c14295ef43363d867087}
+
+
+Definition at line 933 of file Geant4Converter.cpp.

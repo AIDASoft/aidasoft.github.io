@@ -1,0 +1,127 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt}{
+\section{DD4hep::Simulation::Geant4EventReaderHepEvt Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt}\index{DD4hep::Simulation::Geant4EventReaderHepEvt@{DD4hep::Simulation::Geant4EventReaderHepEvt}}
+}
+
+
+Class to populate Geant4 primaries from StdHep files.  
+Inheritance diagram for DD4hep::Simulation::Geant4EventReaderHepEvt::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt_a9f54306f8cbb584efb6a1e1e511d6f1e}{Geant4EventReaderHepEvt} (const std::string \&nam, int format)
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt_a76273635b29ccc9d9977327da6d6d32d}{$\sim$Geant4EventReaderHepEvt} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_ae4f4bc83ffcf5b0c1868ad78859851e7}{EventReaderStatus} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt_a33f1a507c2567df42f14616d6724727a}{readParticles} (int event\_\-number, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_vertex}{Vertex} \&primary\_\-vertex, std::vector$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle}{Particle} $\ast$ $>$ \&particles)
+\begin{DoxyCompactList}\small\item\em Read an event and fill a vector of MCParticles. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_ae4f4bc83ffcf5b0c1868ad78859851e7}{EventReaderStatus} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt_a9e8bf8ad3882ab62d481c6020b9adaed}{moveToEvent} (int event\_\-number)
+\begin{DoxyCompactList}\small\item\em skipEvents if required \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_ae4f4bc83ffcf5b0c1868ad78859851e7}{EventReaderStatus} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt_a643c4f3e44964b0a5692b5b169ada9e6}{skipEvent} ()
+\begin{DoxyCompactList}\small\item\em Skip event. To be implemented for sequential sources. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::ifstream \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt_ac65db88522c8b307f04ae3ec193fbcb5}{m\_\-input}
+\item 
+int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt_a7d4105611f4277b52394d78aae4de38e}{m\_\-format}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to populate Geant4 primaries from StdHep files. Class to populate Geant4 primary particles and vertices from a file in HEPEvt format (ASCII)
+
+\begin{DoxyAuthor}{Author}
+P.Kostka (main author) 
+
+M.Frank (code reshuffeling into new DDG4 scheme) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 37 of file Geant4EventReaderHepEvt.cpp.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt_a9f54306f8cbb584efb6a1e1e511d6f1e}{
+\index{DD4hep::Simulation::Geant4EventReaderHepEvt@{DD4hep::Simulation::Geant4EventReaderHepEvt}!Geant4EventReaderHepEvt@{Geant4EventReaderHepEvt}}
+\index{Geant4EventReaderHepEvt@{Geant4EventReaderHepEvt}!DD4hep::Simulation::Geant4EventReaderHepEvt@{DD4hep::Simulation::Geant4EventReaderHepEvt}}
+\subsubsection[{Geant4EventReaderHepEvt}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4EventReaderHepEvt::Geant4EventReaderHepEvt (const std::string \& {\em nam}, \/  int {\em format})\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt_a9f54306f8cbb584efb6a1e1e511d6f1e}
+
+
+Initializing constructor. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt_a76273635b29ccc9d9977327da6d6d32d}{
+\index{DD4hep::Simulation::Geant4EventReaderHepEvt@{DD4hep::Simulation::Geant4EventReaderHepEvt}!$\sim$Geant4EventReaderHepEvt@{$\sim$Geant4EventReaderHepEvt}}
+\index{$\sim$Geant4EventReaderHepEvt@{$\sim$Geant4EventReaderHepEvt}!DD4hep::Simulation::Geant4EventReaderHepEvt@{DD4hep::Simulation::Geant4EventReaderHepEvt}}
+\subsubsection[{$\sim$Geant4EventReaderHepEvt}]{\setlength{\rightskip}{0pt plus 5cm}Geant4EventReaderHepEvt::$\sim$Geant4EventReaderHepEvt ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt_a76273635b29ccc9d9977327da6d6d32d}
+
+
+Default destructor. 
+
+Definition at line 121 of file Geant4EventReaderHepEvt.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt_a9e8bf8ad3882ab62d481c6020b9adaed}{
+\index{DD4hep::Simulation::Geant4EventReaderHepEvt@{DD4hep::Simulation::Geant4EventReaderHepEvt}!moveToEvent@{moveToEvent}}
+\index{moveToEvent@{moveToEvent}!DD4hep::Simulation::Geant4EventReaderHepEvt@{DD4hep::Simulation::Geant4EventReaderHepEvt}}
+\subsubsection[{moveToEvent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4EventReader::EventReaderStatus} Geant4EventReaderHepEvt::moveToEvent (int {\em event\_\-number})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt_a9e8bf8ad3882ab62d481c6020b9adaed}
+
+
+skipEvents if required 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_a0b6d2fe12ae259534cbe7a5b6e35b642}{DD4hep::Simulation::Geant4EventReader}.
+
+Definition at line 127 of file Geant4EventReaderHepEvt.cpp.
+
+References DD4hep::Simulation::Geant4EventReader::EVENT\_\-READER\_\-OK, DD4hep::INFO, DD4hep::Simulation::Geant4EventReader::m\_\-currEvent, DD4hep::printout(), readParticles(), and DD4hep::Simulation::HepMC::vertex().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt_a33f1a507c2567df42f14616d6724727a}{
+\index{DD4hep::Simulation::Geant4EventReaderHepEvt@{DD4hep::Simulation::Geant4EventReaderHepEvt}!readParticles@{readParticles}}
+\index{readParticles@{readParticles}!DD4hep::Simulation::Geant4EventReaderHepEvt@{DD4hep::Simulation::Geant4EventReaderHepEvt}}
+\subsubsection[{readParticles}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf EventReaderStatus} DD4hep::Simulation::Geant4EventReaderHepEvt::readParticles (int {\em event\_\-number}, \/  {\bf Vertex} \& {\em primary\_\-vertex}, \/  std::vector$<$ {\bf Particle} $\ast$ $>$ \& {\em particles})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt_a33f1a507c2567df42f14616d6724727a}
+
+
+Read an event and fill a vector of MCParticles. 
+
+Referenced by moveToEvent().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt_a643c4f3e44964b0a5692b5b169ada9e6}{
+\index{DD4hep::Simulation::Geant4EventReaderHepEvt@{DD4hep::Simulation::Geant4EventReaderHepEvt}!skipEvent@{skipEvent}}
+\index{skipEvent@{skipEvent}!DD4hep::Simulation::Geant4EventReaderHepEvt@{DD4hep::Simulation::Geant4EventReaderHepEvt}}
+\subsubsection[{skipEvent}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf EventReaderStatus} DD4hep::Simulation::Geant4EventReaderHepEvt::skipEvent ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt_a643c4f3e44964b0a5692b5b169ada9e6}
+
+
+Skip event. To be implemented for sequential sources. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_a9381626ad4f4fa20e304414f6654ee03}{DD4hep::Simulation::Geant4EventReader}.
+
+Definition at line 53 of file Geant4EventReaderHepEvt.cpp.
+
+References DD4hep::Simulation::Geant4EventReader::EVENT\_\-READER\_\-OK.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt_a7d4105611f4277b52394d78aae4de38e}{
+\index{DD4hep::Simulation::Geant4EventReaderHepEvt@{DD4hep::Simulation::Geant4EventReaderHepEvt}!m\_\-format@{m\_\-format}}
+\index{m\_\-format@{m\_\-format}!DD4hep::Simulation::Geant4EventReaderHepEvt@{DD4hep::Simulation::Geant4EventReaderHepEvt}}
+\subsubsection[{m\_\-format}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::Simulation::Geant4EventReaderHepEvt::m\_\-format}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt_a7d4105611f4277b52394d78aae4de38e}
+
+
+Definition at line 41 of file Geant4EventReaderHepEvt.cpp.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt_ac65db88522c8b307f04ae3ec193fbcb5}{
+\index{DD4hep::Simulation::Geant4EventReaderHepEvt@{DD4hep::Simulation::Geant4EventReaderHepEvt}!m\_\-input@{m\_\-input}}
+\index{m\_\-input@{m\_\-input}!DD4hep::Simulation::Geant4EventReaderHepEvt@{DD4hep::Simulation::Geant4EventReaderHepEvt}}
+\subsubsection[{m\_\-input}]{\setlength{\rightskip}{0pt plus 5cm}std::ifstream {\bf DD4hep::Simulation::Geant4EventReaderHepEvt::m\_\-input}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt_ac65db88522c8b307f04ae3ec193fbcb5}
+
+
+Definition at line 40 of file Geant4EventReaderHepEvt.cpp.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/plugins/\hyperlink{_geant4_event_reader_hep_evt_8cpp}{Geant4EventReaderHepEvt.cpp}\end{DoxyCompactItemize}

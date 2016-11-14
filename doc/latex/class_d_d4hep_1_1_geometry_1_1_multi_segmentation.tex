@@ -1,0 +1,253 @@
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_multi_segmentation}{
+\section{DD4hep::Geometry::MultiSegmentation Class Reference}
+\label{class_d_d4hep_1_1_geometry_1_1_multi_segmentation}\index{DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}}
+}
+
+
+Implementation class for the grid XZ segmentation.  
+
+
+{\ttfamily \#include $<$MultiSegmentation.h$>$}Inheritance diagram for DD4hep::Geometry::MultiSegmentation::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_geometry_1_1_multi_segmentation}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_t}{MultiSegmentationHandle::Implementation} \hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_ab30207d7b5e4366c7227de5743a88452}{Object}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a083ba7cc081c5c3c47cafac5980100f8}{DDSegmentation::MultiSegmentation::Segmentations} \hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_ae2c7165290144f20af27248eab1858c5}{Segmentations}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a97c6e80bf6021fd636b9daa02a51e500}{MultiSegmentation} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_afe1ecdac22ae72be46f40371512dbdcd}{MultiSegmentation} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation}{MultiSegmentation} \&e)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_ae419654849efd81b60901d521924244c}{MultiSegmentation} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation}{Segmentation} \&e)
+\begin{DoxyCompactList}\small\item\em Copy Constructor from segmentation base object. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a7ce624da1104ebe6d35c0cfa2d75aaad}{MultiSegmentation} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_t}{Object} $>$ \&e)
+\begin{DoxyCompactList}\small\item\em Copy constructor from handle. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a2f828b0c929bc0e37db579c1dd73b86d}{MultiSegmentation} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&e)
+\begin{DoxyCompactList}\small\item\em Copy constructor from other polymorph/equivalent handle. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation}{MultiSegmentation} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a71f8f2f78a2f3054f67c4aff149c6137}{operator=} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation}{MultiSegmentation} \&seg)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a4c49fe036eda4b83a03ae28bd2592b6f}{operator==} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation}{MultiSegmentation} \&seg) const 
+\begin{DoxyCompactList}\small\item\em Equality operator. \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a21a3cade54354ef637fb9f72c19e536d}{discriminatorName} () const 
+\begin{DoxyCompactList}\small\item\em access the field name used to discriminate sub-\/segmentations \item\end{DoxyCompactList}\item 
+BitFieldValue $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_af270c789eedbe8a2a4fe830d2c43e20d}{discriminator} () const 
+\begin{DoxyCompactList}\small\item\em Discriminating bitfield entry. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_ae2c7165290144f20af27248eab1858c5}{Segmentations} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a8a9d4ff9ae316833f1f8467152b7439a}{subSegmentations} () const 
+\begin{DoxyCompactList}\small\item\em The underlying sub-\/segementations. \item\end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a3d35ba15f395f90d54d33d39b82587b9}{position} (const CellID \&cellID) const 
+\begin{DoxyCompactList}\small\item\em determine the position based on the cell ID \item\end{DoxyCompactList}\item 
+CellID \hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_ab30df6aaf2cf4128c21679a9afd0087e}{cellID} (const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&local, const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&global, const VolumeID \&volID) const 
+\begin{DoxyCompactList}\small\item\em determine the cell ID based on the position \item\end{DoxyCompactList}\item 
+const std::string \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a87968a8c0890db6aee6251792a764bc8}{fieldNameY} () const 
+\item 
+std::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_aab6ca6c547f06eff88d6d95260f6617c}{cellDimensions} (const CellID \&cellID) const 
+\begin{DoxyCompactList}\small\item\em Returns a vector$<$double$>$ of the cellDimensions of the given cell ID in natural order of dimensions, e.g., dx/dy/dz, or dr/r$\ast$dPhi. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation class for the grid XZ segmentation. Concrete user handle to serve specific needs of client code which requires access to the base functionality not served by the super-\/class \hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation}{Segmentation}.
+
+Note: We only check the validity of the underlying handle. If for whatever reason the implementation object is not valid This is not checked. In principle this CANNOT happen unless some brain-\/dead has fiddled with the handled object directly.....
+
+Note: The handle base corrsponding to this object in for conveniance reasons instantiated in DD4hep/src/Segmentations.cpp.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 58 of file MultiSegmentation.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_ab30207d7b5e4366c7227de5743a88452}{
+\index{DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}!Object@{Object}}
+\index{Object@{Object}!DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}}
+\subsubsection[{Object}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf MultiSegmentationHandle::Implementation} {\bf DD4hep::Geometry::MultiSegmentation::Object}}}
+\label{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_ab30207d7b5e4366c7227de5743a88452}
+
+
+Definition at line 60 of file MultiSegmentation.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_ae2c7165290144f20af27248eab1858c5}{
+\index{DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}!Segmentations@{Segmentations}}
+\index{Segmentations@{Segmentations}!DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}}
+\subsubsection[{Segmentations}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf DDSegmentation::MultiSegmentation::Segmentations} {\bf DD4hep::Geometry::MultiSegmentation::Segmentations}}}
+\label{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_ae2c7165290144f20af27248eab1858c5}
+
+
+Definition at line 61 of file MultiSegmentation.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a97c6e80bf6021fd636b9daa02a51e500}{
+\index{DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}!MultiSegmentation@{MultiSegmentation}}
+\index{MultiSegmentation@{MultiSegmentation}!DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}}
+\subsubsection[{MultiSegmentation}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::MultiSegmentation::MultiSegmentation ()}}
+\label{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a97c6e80bf6021fd636b9daa02a51e500}
+
+
+Default constructor. \hypertarget{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_afe1ecdac22ae72be46f40371512dbdcd}{
+\index{DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}!MultiSegmentation@{MultiSegmentation}}
+\index{MultiSegmentation@{MultiSegmentation}!DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}}
+\subsubsection[{MultiSegmentation}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::MultiSegmentation::MultiSegmentation (const {\bf MultiSegmentation} \& {\em e})}}
+\label{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_afe1ecdac22ae72be46f40371512dbdcd}
+
+
+Copy constructor. \hypertarget{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_ae419654849efd81b60901d521924244c}{
+\index{DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}!MultiSegmentation@{MultiSegmentation}}
+\index{MultiSegmentation@{MultiSegmentation}!DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}}
+\subsubsection[{MultiSegmentation}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::MultiSegmentation::MultiSegmentation (const {\bf Segmentation} \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_ae419654849efd81b60901d521924244c}
+
+
+Copy Constructor from segmentation base object. 
+
+Definition at line 69 of file MultiSegmentation.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a7ce624da1104ebe6d35c0cfa2d75aaad}{
+\index{DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}!MultiSegmentation@{MultiSegmentation}}
+\index{MultiSegmentation@{MultiSegmentation}!DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}}
+\subsubsection[{MultiSegmentation}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::MultiSegmentation::MultiSegmentation (const {\bf Handle}$<$ {\bf Object} $>$ \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a7ce624da1104ebe6d35c0cfa2d75aaad}
+
+
+Copy constructor from handle. 
+
+Definition at line 71 of file MultiSegmentation.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a2f828b0c929bc0e37db579c1dd73b86d}{
+\index{DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}!MultiSegmentation@{MultiSegmentation}}
+\index{MultiSegmentation@{MultiSegmentation}!DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}}
+\subsubsection[{MultiSegmentation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q $>$ DD4hep::Geometry::MultiSegmentation::MultiSegmentation (const {\bf Handle}$<$ Q $>$ \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a2f828b0c929bc0e37db579c1dd73b86d}
+
+
+Copy constructor from other polymorph/equivalent handle. 
+
+Definition at line 73 of file MultiSegmentation.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_aab6ca6c547f06eff88d6d95260f6617c}{
+\index{DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}!cellDimensions@{cellDimensions}}
+\index{cellDimensions@{cellDimensions}!DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}}
+\subsubsection[{cellDimensions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vector}$<$ double $>$ MultiSegmentation::cellDimensions (const CellID \& {\em id}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_aab6ca6c547f06eff88d6d95260f6617c}
+
+
+Returns a vector$<$double$>$ of the cellDimensions of the given cell ID in natural order of dimensions, e.g., dx/dy/dz, or dr/r$\ast$dPhi. Returns a vector of the cellDimensions of the given cell ID 
+\begin{DoxyParams}{Parameters}
+\item[{\em cellID}]is ignored as all cells have the same dimension \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std::vector$<$double$>$ size 2:
+\begin{DoxyEnumerate}
+\item size in x
+\item size in z
+\end{DoxyEnumerate}
+\end{DoxyReturn}
+Returns a vector of the cellDimensions of the given cell ID 
+\begin{DoxyParams}{Parameters}
+\item[{\em cellID}]is ignored as all cells have the same dimension \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$double$>$ size 2:
+\begin{DoxyEnumerate}
+\item size in x
+\item size in y 
+\end{DoxyEnumerate}
+\end{DoxyReturn}
+
+
+Definition at line 62 of file MultiSegmentation.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().\hypertarget{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_ab30df6aaf2cf4128c21679a9afd0087e}{
+\index{DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}!cellID@{cellID}}
+\index{cellID@{cellID}!DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}}
+\subsubsection[{cellID}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::CellID MultiSegmentation::cellID (const {\bf Position} \& {\em local}, \/  const {\bf Position} \& {\em global}, \/  const VolumeID \& {\em volID}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_ab30df6aaf2cf4128c21679a9afd0087e}
+
+
+determine the cell ID based on the position 
+
+Definition at line 46 of file MultiSegmentation.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().\hypertarget{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_af270c789eedbe8a2a4fe830d2c43e20d}{
+\index{DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}!discriminator@{discriminator}}
+\index{discriminator@{discriminator}!DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}}
+\subsubsection[{discriminator}]{\setlength{\rightskip}{0pt plus 5cm}BitFieldValue $\ast$ MultiSegmentation::discriminator () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_af270c789eedbe8a2a4fe830d2c43e20d}
+
+
+Discriminating bitfield entry. 
+
+Definition at line 30 of file MultiSegmentation.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().\hypertarget{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a21a3cade54354ef637fb9f72c19e536d}{
+\index{DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}!discriminatorName@{discriminatorName}}
+\index{discriminatorName@{discriminatorName}!DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}}
+\subsubsection[{discriminatorName}]{\setlength{\rightskip}{0pt plus 5cm}const std::string \& MultiSegmentation::discriminatorName () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a21a3cade54354ef637fb9f72c19e536d}
+
+
+access the field name used to discriminate sub-\/segmentations 
+
+Definition at line 25 of file MultiSegmentation.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().\hypertarget{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a87968a8c0890db6aee6251792a764bc8}{
+\index{DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}!fieldNameY@{fieldNameY}}
+\index{fieldNameY@{fieldNameY}!DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}}
+\subsubsection[{fieldNameY}]{\setlength{\rightskip}{0pt plus 5cm}const std::string\& DD4hep::Geometry::MultiSegmentation::fieldNameY () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a87968a8c0890db6aee6251792a764bc8}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a71f8f2f78a2f3054f67c4aff149c6137}{
+\index{DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}!operator=@{operator=}}
+\index{operator=@{operator=}!DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MultiSegmentation}\& DD4hep::Geometry::MultiSegmentation::operator= (const {\bf MultiSegmentation} \& {\em seg})}}
+\label{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a71f8f2f78a2f3054f67c4aff149c6137}
+
+
+Assignment operator. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_handle_a9bbf8f498df42e81ad26fb00233505a6}{DD4hep::Handle$<$ T $>$}.\hypertarget{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a4c49fe036eda4b83a03ae28bd2592b6f}{
+\index{DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}!operator==@{operator==}}
+\index{operator==@{operator==}!DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Geometry::MultiSegmentation::operator== (const {\bf MultiSegmentation} \& {\em seg}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a4c49fe036eda4b83a03ae28bd2592b6f}
+
+
+Equality operator. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_handle_a618470283b3a2cc5ed0545fec90dc759}{DD4hep::Handle$<$ T $>$}.
+
+Definition at line 77 of file MultiSegmentation.h.
+
+References DD4hep::Handle$<$ T $>$::m\_\-element.\hypertarget{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a3d35ba15f395f90d54d33d39b82587b9}{
+\index{DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}!position@{position}}
+\index{position@{position}!DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} MultiSegmentation::position (const CellID \& {\em cellID}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a3d35ba15f395f90d54d33d39b82587b9}
+
+
+determine the position based on the cell ID 
+
+Definition at line 41 of file MultiSegmentation.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().\hypertarget{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a8a9d4ff9ae316833f1f8467152b7439a}{
+\index{DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}!subSegmentations@{subSegmentations}}
+\index{subSegmentations@{subSegmentations}!DD4hep::Geometry::MultiSegmentation@{DD4hep::Geometry::MultiSegmentation}}
+\subsubsection[{subSegmentations}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MultiSegmentation::Segmentations} \& MultiSegmentation::subSegmentations () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_multi_segmentation_a8a9d4ff9ae316833f1f8467152b7439a}
+
+
+The underlying sub-\/segementations. 
+
+Definition at line 36 of file MultiSegmentation.cpp.
+
+References DD4hep::Handle$<$ T $>$::access().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_d_d_core_2include_2_d_d4hep_2_multi_segmentation_8h}{MultiSegmentation.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_d_d_core_2src_2_multi_segmentation_8cpp}{MultiSegmentation.cpp}\end{DoxyCompactItemize}

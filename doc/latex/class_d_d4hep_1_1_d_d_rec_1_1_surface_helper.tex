@@ -1,0 +1,117 @@
+\hypertarget{class_d_d4hep_1_1_d_d_rec_1_1_surface_helper}{
+\section{DD4hep::DDRec::SurfaceHelper Class Reference}
+\label{class_d_d4hep_1_1_d_d_rec_1_1_surface_helper}\index{DD4hep::DDRec::SurfaceHelper@{DD4hep::DDRec::SurfaceHelper}}
+}
+
+
+{\ttfamily \#include $<$SurfaceHelper.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_surface_helper_a76e5fe1cc5622045a000d2d94fdffc4d}{SurfaceHelper} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Geometry::DetElement} \&e)
+\item 
+\hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_surface_helper_ae56de2da052504fa76ade5995a2d363d}{$\sim$SurfaceHelper} ()
+\item 
+const \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_surface_list}{SurfaceList} \& \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_surface_helper_afd1438e4c040058aac95a8af0167c91d}{surfaceList} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_surface_helper_ac394507ee2065b75f9540b388fd87170}{initialize} ()
+\begin{DoxyCompactList}\small\item\em initializes surfaces from VolSurfaces assigned to this DetElement in detector construction \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_surface_list}{SurfaceList} \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_surface_helper_a9284825af9dcbb9557f0cde59090dcd6}{\_\-sL}
+\item 
+const \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Geometry::DetElement} \& \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_surface_helper_a879149ec569894c3080e2e0f3464dd8d}{\_\-det}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_surface}{Surface} helper class that allows to access all surfaces assigned to a DetElement and all its daughters. (originally this was called \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_surface_manager}{SurfaceManager}).
+
+\begin{DoxyAuthor}{Author}
+F.Gaede, DESY 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Apr, 11 2014 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+
+\end{DoxyVersion}
+Id}
+
+
+Definition at line 17 of file SurfaceHelper.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_rec_1_1_surface_helper_a76e5fe1cc5622045a000d2d94fdffc4d}{
+\index{DD4hep::DDRec::SurfaceHelper@{DD4hep::DDRec::SurfaceHelper}!SurfaceHelper@{SurfaceHelper}}
+\index{SurfaceHelper@{SurfaceHelper}!DD4hep::DDRec::SurfaceHelper@{DD4hep::DDRec::SurfaceHelper}}
+\subsubsection[{SurfaceHelper}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDRec::SurfaceHelper::SurfaceHelper (const {\bf Geometry::DetElement} \& {\em e})}}
+\label{class_d_d4hep_1_1_d_d_rec_1_1_surface_helper_a76e5fe1cc5622045a000d2d94fdffc4d}
+
+
+Definition at line 15 of file SurfaceHelper.cpp.
+
+References initialize().\hypertarget{class_d_d4hep_1_1_d_d_rec_1_1_surface_helper_ae56de2da052504fa76ade5995a2d363d}{
+\index{DD4hep::DDRec::SurfaceHelper@{DD4hep::DDRec::SurfaceHelper}!$\sim$SurfaceHelper@{$\sim$SurfaceHelper}}
+\index{$\sim$SurfaceHelper@{$\sim$SurfaceHelper}!DD4hep::DDRec::SurfaceHelper@{DD4hep::DDRec::SurfaceHelper}}
+\subsubsection[{$\sim$SurfaceHelper}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDRec::SurfaceHelper::$\sim$SurfaceHelper ()}}
+\label{class_d_d4hep_1_1_d_d_rec_1_1_surface_helper_ae56de2da052504fa76ade5995a2d363d}
+
+
+Definition at line 20 of file SurfaceHelper.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_rec_1_1_surface_helper_ac394507ee2065b75f9540b388fd87170}{
+\index{DD4hep::DDRec::SurfaceHelper@{DD4hep::DDRec::SurfaceHelper}!initialize@{initialize}}
+\index{initialize@{initialize}!DD4hep::DDRec::SurfaceHelper@{DD4hep::DDRec::SurfaceHelper}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDRec::SurfaceHelper::initialize ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_rec_1_1_surface_helper_ac394507ee2065b75f9540b388fd87170}
+
+
+initializes surfaces from VolSurfaces assigned to this DetElement in detector construction 
+
+Definition at line 25 of file SurfaceHelper.cpp.
+
+References \_\-det, \_\-sL, DD4hep::Geometry::DetElement::children(), DD4hep::Geometry::LCDD::getInstance(), DD4hep::DDRec::DetectorSurfaces::surfaceList(), and DD4hep::Geometry::LCDD::world().
+
+Referenced by SurfaceHelper().\hypertarget{class_d_d4hep_1_1_d_d_rec_1_1_surface_helper_afd1438e4c040058aac95a8af0167c91d}{
+\index{DD4hep::DDRec::SurfaceHelper@{DD4hep::DDRec::SurfaceHelper}!surfaceList@{surfaceList}}
+\index{surfaceList@{surfaceList}!DD4hep::DDRec::SurfaceHelper@{DD4hep::DDRec::SurfaceHelper}}
+\subsubsection[{surfaceList}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf SurfaceList}\& DD4hep::DDRec::SurfaceHelper::surfaceList ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_rec_1_1_surface_helper_afd1438e4c040058aac95a8af0167c91d}
+Get the list of all surfaces added to this DetElement and all its daughters -\/ instantiate \hyperlink{class_d_d4hep_1_1_d_d_rec_1_1_surface_helper}{SurfaceHelper} with lcdd.world() to get all surfaces. 
+
+Definition at line 28 of file SurfaceHelper.h.
+
+References \_\-sL.
+
+Referenced by DD4hep::DDRec::SurfaceManager::initialize().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_d_d_rec_1_1_surface_helper_a879149ec569894c3080e2e0f3464dd8d}{
+\index{DD4hep::DDRec::SurfaceHelper@{DD4hep::DDRec::SurfaceHelper}!\_\-det@{\_\-det}}
+\index{\_\-det@{\_\-det}!DD4hep::DDRec::SurfaceHelper@{DD4hep::DDRec::SurfaceHelper}}
+\subsubsection[{\_\-det}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Geometry::DetElement}\& {\bf DD4hep::DDRec::SurfaceHelper::\_\-det}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_rec_1_1_surface_helper_a879149ec569894c3080e2e0f3464dd8d}
+
+
+Definition at line 32 of file SurfaceHelper.h.
+
+Referenced by initialize().\hypertarget{class_d_d4hep_1_1_d_d_rec_1_1_surface_helper_a9284825af9dcbb9557f0cde59090dcd6}{
+\index{DD4hep::DDRec::SurfaceHelper@{DD4hep::DDRec::SurfaceHelper}!\_\-sL@{\_\-sL}}
+\index{\_\-sL@{\_\-sL}!DD4hep::DDRec::SurfaceHelper@{DD4hep::DDRec::SurfaceHelper}}
+\subsubsection[{\_\-sL}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SurfaceList} {\bf DD4hep::DDRec::SurfaceHelper::\_\-sL}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_d_d_rec_1_1_surface_helper_a9284825af9dcbb9557f0cde59090dcd6}
+
+
+Definition at line 31 of file SurfaceHelper.h.
+
+Referenced by initialize(), and surfaceList().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDRec/include/DDRec/\hyperlink{_surface_helper_8h}{SurfaceHelper.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDRec/src/\hyperlink{_surface_helper_8cpp}{SurfaceHelper.cpp}\end{DoxyCompactItemize}

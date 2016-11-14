@@ -1,0 +1,82 @@
+\hypertarget{_geant4_event_seed_8h}{
+\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/Geant4EventSeed.h File Reference}
+\label{_geant4_event_seed_8h}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/Geant4EventSeed.h@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/Geant4EventSeed.h}}
+}
+{\ttfamily \#include \char`\"{}DDG4/Geant4RunAction.h\char`\"{}}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_seed}{DD4hep::Simulation::Geant4EventSeed}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_d_d4hep}{DD4hep}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the AIDA detector description toolkit. \item\end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_d_d4hep_1_1_simulation}{DD4hep::Simulation}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the Geant4 based simulation part of the AIDA detector description toolkit. \item\end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_event_seed}{EventSeed}
+
+
+\begin{DoxyCompactList}\small\item\em Set the event seed for each event. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_geant4_event_seed_8h_a86173ca25b300cf3276b088d3fc6bdaf}{hashsize}(n)~( 1U $<$$<$ (n) )
+\item 
+\#define \hyperlink{_geant4_event_seed_8h_aacd6ed104463685849b2550389d05ff3}{hashmask}(n)~( hashsize ( n ) -\/ 1 )
+\item 
+\#define \hyperlink{_geant4_event_seed_8h_afd9fa1747724ec6142812721997394c3}{mix}(a, b, c)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \hyperlink{namespace_d_d4hep_1_1_simulation_a7a70f98f660222ddbf5b8dea8ffd1bb6}{DD4hep::Simulation::jenkins\_\-hash} (unsigned char $\ast$k, unsigned length, unsigned initval)
+\item 
+unsigned int \hyperlink{namespace_d_d4hep_1_1_simulation_ae0f666f5766acb8613abdf7257606965}{DD4hep::Simulation::hash} (unsigned int initialSeed, unsigned int eventNumber, unsigned int runNumber)
+\begin{DoxyCompactList}\small\item\em calculate hash from initialSeed, eventID and runID \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_geant4_event_seed_8h_aacd6ed104463685849b2550389d05ff3}{
+\index{Geant4EventSeed.h@{Geant4EventSeed.h}!hashmask@{hashmask}}
+\index{hashmask@{hashmask}!Geant4EventSeed.h@{Geant4EventSeed.h}}
+\subsubsection[{hashmask}]{\setlength{\rightskip}{0pt plus 5cm}\#define hashmask(n)~( hashsize ( n ) -\/ 1 )}}
+\label{_geant4_event_seed_8h_aacd6ed104463685849b2550389d05ff3}
+
+
+Definition at line 71 of file Geant4EventSeed.h.\hypertarget{_geant4_event_seed_8h_a86173ca25b300cf3276b088d3fc6bdaf}{
+\index{Geant4EventSeed.h@{Geant4EventSeed.h}!hashsize@{hashsize}}
+\index{hashsize@{hashsize}!Geant4EventSeed.h@{Geant4EventSeed.h}}
+\subsubsection[{hashsize}]{\setlength{\rightskip}{0pt plus 5cm}\#define hashsize(n)~( 1U $<$$<$ (n) )}}
+\label{_geant4_event_seed_8h_a86173ca25b300cf3276b088d3fc6bdaf}
+
+
+Definition at line 70 of file Geant4EventSeed.h.\hypertarget{_geant4_event_seed_8h_afd9fa1747724ec6142812721997394c3}{
+\index{Geant4EventSeed.h@{Geant4EventSeed.h}!mix@{mix}}
+\index{mix@{mix}!Geant4EventSeed.h@{Geant4EventSeed.h}}
+\subsubsection[{mix}]{\setlength{\rightskip}{0pt plus 5cm}\#define mix(a, \/  b, \/  c)}}
+\label{_geant4_event_seed_8h_afd9fa1747724ec6142812721997394c3}
+{\bfseries Value:}
+\begin{DoxyCode}
+{                                           \
+      a -= b; a -= c; a ^= (c>>13);             \
+      b -= c; b -= a; b ^= (a<<8);              \
+      c -= a; c -= b; c ^= (b>>13);             \
+      a -= b; a -= c; a ^= (c>>12);             \
+      b -= c; b -= a; b ^= (a<<16);             \
+      c -= a; c -= b; c ^= (b>>5);              \
+      a -= b; a -= c; a ^= (c>>3);              \
+      b -= c; b -= a; b ^= (a<<10);             \
+      c -= a; c -= b; c ^= (b>>15);             \
+    }
+\end{DoxyCode}
+
+
+Definition at line 100 of file Geant4EventSeed.h.
+
+Referenced by DD4hep::Simulation::jenkins\_\-hash().

@@ -1,0 +1,189 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event}{
+\section{DD4hep::Simulation::Geant4Event Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_event}\index{DD4hep::Simulation::Geant4Event@{DD4hep::Simulation::Geant4Event}}
+}
+
+
+User event context for DDG4.  
+
+
+{\ttfamily \#include $<$Geant4Context.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4Event::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_simulation_1_1_geant4_event}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_a3e3bf4d4021aa3a90e66678f52b7f0e9}{Geant4Event} (const G4Event $\ast$run, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random}{Geant4Random} $\ast$rndm)
+\begin{DoxyCompactList}\small\item\em Intializing constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_ab98455cace8f9234b238e350c2299fd0}{$\sim$Geant4Event} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_aeecd69c0d548e5f307f01a94ac9ed132}{operator const G4Event \&} () const 
+\begin{DoxyCompactList}\small\item\em Access the G4Event directly: Automatic type conversion. \item\end{DoxyCompactList}\item 
+const G4Event \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_a85bac44c4e4c1d442df960361cda94fc}{event} () const 
+\begin{DoxyCompactList}\small\item\em Access the G4Event directly: Explicit G4Event accessor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random}{Geant4Random} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_a6d3669fb2ba85939926297de1eb160f7}{random} () const 
+\begin{DoxyCompactList}\small\item\em Access the random number generator. \item\end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_aee3baf75d103ea5fbb2e59230392c5d1}{addExtension} (void $\ast$ptr, const std::type\_\-info \&info, \hyperlink{class_d_d4hep_1_1_object_extensions_af9ca2813f0d7fa65ac13d905d9721cdf}{destruct\_\-t} dtor)
+\begin{DoxyCompactList}\small\item\em Add an extension object to the detector element. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_t}{T} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_af662da07fc86ccd6bc94fdb7b05faa26}{addExtension} (\hyperlink{class_t}{T} $\ast$ptr, bool take\_\-ownership=true)
+\begin{DoxyCompactList}\small\item\em Add user extension object. Ownership is transferred and object deleted at the end of the event. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_t}{T} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_afb5a4367c7a4ef75dc716eceef3f2b87}{extension} (bool alert=true)
+\begin{DoxyCompactList}\small\item\em Access to type safe extension object. Exception is thrown if the object is invalid. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const G4Event $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_a1d336fefbd6316dc5373a3b2d362cffa}{m\_\-event}
+\begin{DoxyCompactList}\small\item\em Reference to the original Geant4 event object. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_random}{Geant4Random} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_a0eb7e282d0f186db2a738cc3ac9e1718}{m\_\-random}
+\begin{DoxyCompactList}\small\item\em Reference to the main random number generator. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+User event context for DDG4. The context is accessible from the \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} pointer, which is present in every \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action}. The event context is only valid however, if there is actually an event being procesed ie. only during the lifetime of the corresponding G4Event objects.
+
+Please note: Extensions are only valid within the hosting event and are INVALID across different events. Hence: They are only useful to extend data of an event.
+
+Any random numbers used to process one event should be accessed from this location. The framework ensures that the same seeded sequence is used throughout the processing of one single event.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 125 of file Geant4Context.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_a3e3bf4d4021aa3a90e66678f52b7f0e9}{
+\index{DD4hep::Simulation::Geant4Event@{DD4hep::Simulation::Geant4Event}!Geant4Event@{Geant4Event}}
+\index{Geant4Event@{Geant4Event}!DD4hep::Simulation::Geant4Event@{DD4hep::Simulation::Geant4Event}}
+\subsubsection[{Geant4Event}]{\setlength{\rightskip}{0pt plus 5cm}Geant4Event::Geant4Event (const G4Event $\ast$ {\em run}, \/  {\bf Geant4Random} $\ast$ {\em rndm})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_a3e3bf4d4021aa3a90e66678f52b7f0e9}
+
+
+Intializing constructor. 
+
+Definition at line 41 of file Geant4Context.cpp.
+
+References DD4hep::InstanceCount::increment().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_ab98455cace8f9234b238e350c2299fd0}{
+\index{DD4hep::Simulation::Geant4Event@{DD4hep::Simulation::Geant4Event}!$\sim$Geant4Event@{$\sim$Geant4Event}}
+\index{$\sim$Geant4Event@{$\sim$Geant4Event}!DD4hep::Simulation::Geant4Event@{DD4hep::Simulation::Geant4Event}}
+\subsubsection[{$\sim$Geant4Event}]{\setlength{\rightskip}{0pt plus 5cm}Geant4Event::$\sim$Geant4Event ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_ab98455cace8f9234b238e350c2299fd0}
+
+
+Default destructor. 
+
+Definition at line 48 of file Geant4Context.cpp.
+
+References DD4hep::InstanceCount::decrement().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_af662da07fc86ccd6bc94fdb7b05faa26}{
+\index{DD4hep::Simulation::Geant4Event@{DD4hep::Simulation::Geant4Event}!addExtension@{addExtension}}
+\index{addExtension@{addExtension}!DD4hep::Simulation::Geant4Event@{DD4hep::Simulation::Geant4Event}}
+\subsubsection[{addExtension}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf T}$\ast$ DD4hep::Simulation::Geant4Event::addExtension ({\bf T} $\ast$ {\em ptr}, \/  bool {\em take\_\-ownership} = {\ttfamily true})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_af662da07fc86ccd6bc94fdb7b05faa26}
+
+
+Add user extension object. Ownership is transferred and object deleted at the end of the event. 
+
+Definition at line 152 of file Geant4Context.h.
+
+References addExtension().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_aee3baf75d103ea5fbb2e59230392c5d1}{
+\index{DD4hep::Simulation::Geant4Event@{DD4hep::Simulation::Geant4Event}!addExtension@{addExtension}}
+\index{addExtension@{addExtension}!DD4hep::Simulation::Geant4Event@{DD4hep::Simulation::Geant4Event}}
+\subsubsection[{addExtension}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ DD4hep::Simulation::Geant4Event::addExtension (void $\ast$ {\em ptr}, \/  const std::type\_\-info \& {\em info}, \/  {\bf destruct\_\-t} {\em dtor})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_aee3baf75d103ea5fbb2e59230392c5d1}
+
+
+Add an extension object to the detector element. Note: To add an extension, which should NOT be deleted, set 'dtor' to \hyperlink{class_d_d4hep_1_1_object_extensions_a0c32fb2af89407102b494ab9c15f9eac}{ObjectExtensions::\_\-noDelete} or 0. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_object_extensions_a9e4010c2b9cbfda1455c10821a3cae85}{DD4hep::ObjectExtensions}.
+
+Definition at line 148 of file Geant4Context.h.
+
+Referenced by addExtension(), DD4hep::Simulation::Geant4Output2LCIO::begin(), DD4hep::Simulation::generationInitialization(), and DD4hep::Simulation::Geant4ParticleHandler::operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_a85bac44c4e4c1d442df960361cda94fc}{
+\index{DD4hep::Simulation::Geant4Event@{DD4hep::Simulation::Geant4Event}!event@{event}}
+\index{event@{event}!DD4hep::Simulation::Geant4Event@{DD4hep::Simulation::Geant4Event}}
+\subsubsection[{event}]{\setlength{\rightskip}{0pt plus 5cm}const G4Event\& DD4hep::Simulation::Geant4Event::event () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_a85bac44c4e4c1d442df960361cda94fc}
+
+
+Access the G4Event directly: Explicit G4Event accessor. 
+
+Definition at line 139 of file Geant4Context.h.
+
+References m\_\-event.
+
+Referenced by DD4hep::Simulation::Test::Geant4TestEventAction::begin(), and DD4hep::Simulation::Test::Geant4TestEventAction::end().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_afb5a4367c7a4ef75dc716eceef3f2b87}{
+\index{DD4hep::Simulation::Geant4Event@{DD4hep::Simulation::Geant4Event}!extension@{extension}}
+\index{extension@{extension}!DD4hep::Simulation::Geant4Event@{DD4hep::Simulation::Geant4Event}}
+\subsubsection[{extension}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf T}$\ast$ DD4hep::Simulation::Geant4Event::extension (bool {\em alert} = {\ttfamily true})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_afb5a4367c7a4ef75dc716eceef3f2b87}
+
+
+Access to type safe extension object. Exception is thrown if the object is invalid. 
+
+Definition at line 157 of file Geant4Context.h.
+
+Referenced by DD4hep::Simulation::Geant4ParticleHandler::beginEvent(), DD4hep::Simulation::Geant4Output2LCIO::commit(), DD4hep::Simulation::Geant4OutputAction::end(), DD4hep::Simulation::Geant4ParticleHandler::endEvent(), DD4hep::Simulation::generatePrimaries(), DD4hep::Simulation::Geant4ParticlePrint::makePrintout(), DD4hep::Simulation::Geant4TrackingAction::mark(), DD4hep::Simulation::Geant4Sensitive::mark(), DD4hep::Simulation::mergeInteractions(), DD4hep::Simulation::Geant4ParticleGenerator::operator()(), DD4hep::Simulation::Geant4InteractionVertexSmear::operator()(), DD4hep::Simulation::Geant4InteractionVertexBoost::operator()(), DD4hep::Simulation::Geant4InteractionMerger::operator()(), DD4hep::Simulation::Geant4InputAction::operator()(), DD4hep::Simulation::Geant4GeneratorWrapper::operator()(), DD4hep::Simulation::Geant4ParticleGenerator::printInteraction(), DD4hep::Simulation::Geant4ParticlePrint::printParticle(), DD4hep::Simulation::Geant4ParticleHandler::rebaseSimulatedTracks(), DD4hep::Simulation::Geant4Output2LCIO::saveCollection(), DD4hep::Simulation::Geant4Output2ROOT::saveEvent(), and DD4hep::Simulation::Geant4Output2LCIO::saveEvent().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_aeecd69c0d548e5f307f01a94ac9ed132}{
+\index{DD4hep::Simulation::Geant4Event@{DD4hep::Simulation::Geant4Event}!operator const G4Event \&@{operator const G4Event \&}}
+\index{operator const G4Event \&@{operator const G4Event \&}!DD4hep::Simulation::Geant4Event@{DD4hep::Simulation::Geant4Event}}
+\subsubsection[{operator const G4Event \&}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4Event::operator const G4Event \& () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_aeecd69c0d548e5f307f01a94ac9ed132}
+
+
+Access the G4Event directly: Automatic type conversion. 
+
+Definition at line 137 of file Geant4Context.h.
+
+References m\_\-event.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_a6d3669fb2ba85939926297de1eb160f7}{
+\index{DD4hep::Simulation::Geant4Event@{DD4hep::Simulation::Geant4Event}!random@{random}}
+\index{random@{random}!DD4hep::Simulation::Geant4Event@{DD4hep::Simulation::Geant4Event}}
+\subsubsection[{random}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Random}\& DD4hep::Simulation::Geant4Event::random () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_a6d3669fb2ba85939926297de1eb160f7}
+
+
+Access the random number generator. 
+
+Definition at line 141 of file Geant4Context.h.
+
+References m\_\-random.
+
+Referenced by DD4hep::Simulation::Geant4IsotropeGenerator::getParticleDirectionCosTheta(), DD4hep::Simulation::Geant4IsotropeGenerator::getParticleDirectionEta(), DD4hep::Simulation::Geant4IsotropeGenerator::getParticleDirectionFFbar(), DD4hep::Simulation::Geant4IsotropeGenerator::getParticleDirectionUniform(), and DD4hep::Simulation::Geant4InteractionVertexSmear::smear().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_a1d336fefbd6316dc5373a3b2d362cffa}{
+\index{DD4hep::Simulation::Geant4Event@{DD4hep::Simulation::Geant4Event}!m\_\-event@{m\_\-event}}
+\index{m\_\-event@{m\_\-event}!DD4hep::Simulation::Geant4Event@{DD4hep::Simulation::Geant4Event}}
+\subsubsection[{m\_\-event}]{\setlength{\rightskip}{0pt plus 5cm}const G4Event$\ast$ {\bf DD4hep::Simulation::Geant4Event::m\_\-event}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_a1d336fefbd6316dc5373a3b2d362cffa}
+
+
+Reference to the original Geant4 event object. 
+
+Definition at line 127 of file Geant4Context.h.
+
+Referenced by event(), and operator const G4Event \&().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_a0eb7e282d0f186db2a738cc3ac9e1718}{
+\index{DD4hep::Simulation::Geant4Event@{DD4hep::Simulation::Geant4Event}!m\_\-random@{m\_\-random}}
+\index{m\_\-random@{m\_\-random}!DD4hep::Simulation::Geant4Event@{DD4hep::Simulation::Geant4Event}}
+\subsubsection[{m\_\-random}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Random}$\ast$ {\bf DD4hep::Simulation::Geant4Event::m\_\-random}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_a0eb7e282d0f186db2a738cc3ac9e1718}
+
+
+Reference to the main random number generator. 
+
+Definition at line 129 of file Geant4Context.h.
+
+Referenced by random().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_context_8h}{Geant4Context.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_context_8cpp}{Geant4Context.cpp}\end{DoxyCompactItemize}

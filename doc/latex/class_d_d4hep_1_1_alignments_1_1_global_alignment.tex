@@ -1,0 +1,290 @@
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment}{
+\section{DD4hep::Alignments::GlobalAlignment Class Reference}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment}\index{DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}}
+}
+
+
+Main handle class to hold a TGeo alignment object of type TGeoPhysicalNode.  
+
+
+{\ttfamily \#include $<$GlobalAlignment.h$>$}Inheritance diagram for DD4hep::Alignments::GlobalAlignment::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_alignments_1_1_global_alignment}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a022dd4bb7b30b90de999a8d9ed3e7d4a}{GlobalAlignment} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a49f7dd112c9adddc872156f145ccaf78}{GlobalAlignment} (TGeoPhysicalNode $\ast$p)
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_ac32e57cf2777dd055ace00131dcd8fce}{GlobalAlignment} (const \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{GlobalAlignment} \&c)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a0611b1ce9dcaf5629ceb43b075ee471e}{GlobalAlignment} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&e)
+\begin{DoxyCompactList}\small\item\em Constructor to be used when reading the already parsed object. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a28bf3bee23b8298826ffdfab0c8a94ae}{GlobalAlignment} (const std::string \&path)
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{GlobalAlignment} \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a723fc5d2669d586790c48ff820880171}{operator=} (const \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{GlobalAlignment} \&c)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \item\end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a1dba2022e2a869a16901a9606c629d57}{numNodes} () const 
+\begin{DoxyCompactList}\small\item\em Number of nodes in this branch (=depth of the placement hierarchy from the top level volume). \item\end{DoxyCompactList}\item 
+PlacedVolume \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a4445f18516ca144ef79493f15b4042cf}{placement} () const 
+\begin{DoxyCompactList}\small\item\em Access the placement of this node. \item\end{DoxyCompactList}\item 
+PlacedVolume \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a8378dc0dd2250e04561f21a452e0ee5d}{motherPlacement} (int level\_\-up=1) const 
+\begin{DoxyCompactList}\small\item\em Access the placement of the mother of this node. \item\end{DoxyCompactList}\item 
+PlacedVolume \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a74a90943af3e537f040e4bd22b738046}{nodePlacement} (int level=-\/1) const 
+\begin{DoxyCompactList}\small\item\em Access the placement of a node in the chain of placements for this branch. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a328240cbc53ba92424336a5898ba49d3}{Transform3D} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_ab9ed5fdc920cd4d8ed4303096aaec174}{toGlobal} (int level=-\/1) const 
+\begin{DoxyCompactList}\small\item\em Access the currently applied alignment/placement matrix with respect to the world. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a9cd5167ec3a33a95ca76a9c7fe06271e}{Position} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a1ae3bd19e88fdf178a5595f829d0210a}{toGlobal} (const \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a9cd5167ec3a33a95ca76a9c7fe06271e}{Position} \&localPoint, int level=-\/1) const 
+\begin{DoxyCompactList}\small\item\em Transform a point from local coordinates of a given level to global coordinates. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a9cd5167ec3a33a95ca76a9c7fe06271e}{Position} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_afbb2091137975e333688b024d9781d42}{globalToLocal} (const \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a9cd5167ec3a33a95ca76a9c7fe06271e}{Position} \&globalPoint, int level=-\/1) const 
+\begin{DoxyCompactList}\small\item\em Transform a point from global coordinates to local coordinates of a given level. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a328240cbc53ba92424336a5898ba49d3}{Transform3D} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_ab1d4442ce582827d0db9680ce7dc5b4b}{toMother} (int level=-\/1) const 
+\begin{DoxyCompactList}\small\item\em Access the currently applied alignment/placement matrix with respect to mother volume. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a328240cbc53ba92424336a5898ba49d3}{Transform3D} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a975ed8070110b96afc671388d8b3e31f}{nominal} () const 
+\begin{DoxyCompactList}\small\item\em Access the currently applied alignment/placement matrix (mother to daughter). \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a328240cbc53ba92424336a5898ba49d3}{Transform3D} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a3b392c1322cd9b4b9166aff9a116517c}{delta} () const 
+\begin{DoxyCompactList}\small\item\em Access the currently applied correction matrix (delta) (mother to daughter). \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a328240cbc53ba92424336a5898ba49d3}{Transform3D} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a8e320407ca494e5b3a8bfb1bb13bfad7}{invDelta} () const 
+\begin{DoxyCompactList}\small\item\em Access the inverse of the currently applied correction matrix (delta) (mother to daughter). \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{namespace_d_d4hep_1_1_geometry_a24667b2b9c3cec3d5239828db4d52189}{Geometry::RotationZYX} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_af30b8cf1e2dbdfb67f6819ef88e02478}{RotationZYX}
+\item 
+typedef \hyperlink{namespace_d_d4hep_1_1_geometry_aeb4c0356d12fd7be49a0aae50514e64b}{Geometry::Transform3D} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a328240cbc53ba92424336a5898ba49d3}{Transform3D}
+\item 
+typedef \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Geometry::Position} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a9cd5167ec3a33a95ca76a9c7fe06271e}{Position}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main handle class to hold a TGeo alignment object of type TGeoPhysicalNode. See the \hyperlink{namespace_r_o_o_t}{ROOT} documentation about the TGeoPhysicalNode for further details: \begin{DoxySeeAlso}{See also}
+\href{http://root.cern.ch/root/html/TGeoPhysicalNode.html}{\tt http://root.cern.ch/root/html/TGeoPhysicalNode.html}
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 38 of file GlobalAlignment.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_a9cd5167ec3a33a95ca76a9c7fe06271e}{
+\index{DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}!Position@{Position}}
+\index{Position@{Position}!DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::Position} {\bf DD4hep::Alignments::GlobalAlignment::Position}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_a9cd5167ec3a33a95ca76a9c7fe06271e}
+
+
+Definition at line 42 of file GlobalAlignment.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_af30b8cf1e2dbdfb67f6819ef88e02478}{
+\index{DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}!RotationZYX@{RotationZYX}}
+\index{RotationZYX@{RotationZYX}!DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}}
+\subsubsection[{RotationZYX}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::RotationZYX} {\bf DD4hep::Alignments::GlobalAlignment::RotationZYX}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_af30b8cf1e2dbdfb67f6819ef88e02478}
+
+
+Definition at line 40 of file GlobalAlignment.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_a328240cbc53ba92424336a5898ba49d3}{
+\index{DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}!Transform3D@{Transform3D}}
+\index{Transform3D@{Transform3D}!DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}}
+\subsubsection[{Transform3D}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::Transform3D} {\bf DD4hep::Alignments::GlobalAlignment::Transform3D}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_a328240cbc53ba92424336a5898ba49d3}
+
+
+Definition at line 41 of file GlobalAlignment.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_a022dd4bb7b30b90de999a8d9ed3e7d4a}{
+\index{DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}!GlobalAlignment@{GlobalAlignment}}
+\index{GlobalAlignment@{GlobalAlignment}!DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}}
+\subsubsection[{GlobalAlignment}]{\setlength{\rightskip}{0pt plus 5cm}GlobalAlignment::GlobalAlignment ()}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_a022dd4bb7b30b90de999a8d9ed3e7d4a}
+
+
+Default constructor. 
+
+Definition at line 41 of file GlobalAlignment.cpp.\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_a49f7dd112c9adddc872156f145ccaf78}{
+\index{DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}!GlobalAlignment@{GlobalAlignment}}
+\index{GlobalAlignment@{GlobalAlignment}!DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}}
+\subsubsection[{GlobalAlignment}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Alignments::GlobalAlignment::GlobalAlignment (TGeoPhysicalNode $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_a49f7dd112c9adddc872156f145ccaf78}
+
+
+Default constructor. 
+
+Definition at line 48 of file GlobalAlignment.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_ac32e57cf2777dd055ace00131dcd8fce}{
+\index{DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}!GlobalAlignment@{GlobalAlignment}}
+\index{GlobalAlignment@{GlobalAlignment}!DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}}
+\subsubsection[{GlobalAlignment}]{\setlength{\rightskip}{0pt plus 5cm}GlobalAlignment::GlobalAlignment (const {\bf GlobalAlignment} \& {\em c})}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_ac32e57cf2777dd055ace00131dcd8fce}
+
+
+Copy constructor. 
+
+Definition at line 45 of file GlobalAlignment.cpp.\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_a0611b1ce9dcaf5629ceb43b075ee471e}{
+\index{DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}!GlobalAlignment@{GlobalAlignment}}
+\index{GlobalAlignment@{GlobalAlignment}!DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}}
+\subsubsection[{GlobalAlignment}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q $>$ DD4hep::Alignments::GlobalAlignment::GlobalAlignment (const {\bf Handle}$<$ Q $>$ \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_a0611b1ce9dcaf5629ceb43b075ee471e}
+
+
+Constructor to be used when reading the already parsed object. 
+
+Definition at line 54 of file GlobalAlignment.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_a28bf3bee23b8298826ffdfab0c8a94ae}{
+\index{DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}!GlobalAlignment@{GlobalAlignment}}
+\index{GlobalAlignment@{GlobalAlignment}!DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}}
+\subsubsection[{GlobalAlignment}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Alignments::GlobalAlignment::GlobalAlignment (const std::string \& {\em path})}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_a28bf3bee23b8298826ffdfab0c8a94ae}
+
+
+Initializing constructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_a3b392c1322cd9b4b9166aff9a116517c}{
+\index{DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}!delta@{delta}}
+\index{delta@{delta}!DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}}
+\subsubsection[{delta}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignment::Transform3D} GlobalAlignment::delta () const}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_a3b392c1322cd9b4b9166aff9a116517c}
+
+
+Access the currently applied correction matrix (delta) (mother to daughter). Access the currently applied correction matrix (delta). 
+
+Definition at line 131 of file GlobalAlignment.cpp.
+
+References DD4hep::Geometry::\_\-transform(), and DD4hep::Handle$<$ TGeoPhysicalNode $>$::ptr().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_afbb2091137975e333688b024d9781d42}{
+\index{DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}!globalToLocal@{globalToLocal}}
+\index{globalToLocal@{globalToLocal}!DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}}
+\subsubsection[{globalToLocal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignment::Position} GlobalAlignment::globalToLocal (const {\bf Position} \& {\em globalPoint}, \/  int {\em level} = {\ttfamily -\/1}) const}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_afbb2091137975e333688b024d9781d42}
+
+
+Transform a point from global coordinates to local coordinates of a given level. Transform a point from local coordinates of a given level to global coordinates. 
+
+Definition at line 110 of file GlobalAlignment.cpp.
+
+References dd4hep::m, and DD4hep::Handle$<$ TGeoPhysicalNode $>$::ptr().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_a8e320407ca494e5b3a8bfb1bb13bfad7}{
+\index{DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}!invDelta@{invDelta}}
+\index{invDelta@{invDelta}!DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}}
+\subsubsection[{invDelta}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignment::Transform3D} GlobalAlignment::invDelta () const}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_a8e320407ca494e5b3a8bfb1bb13bfad7}
+
+
+Access the inverse of the currently applied correction matrix (delta) (mother to daughter). 
+
+Definition at line 142 of file GlobalAlignment.cpp.
+
+References DD4hep::Geometry::\_\-transform(), and DD4hep::Handle$<$ TGeoPhysicalNode $>$::ptr().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_a8378dc0dd2250e04561f21a452e0ee5d}{
+\index{DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}!motherPlacement@{motherPlacement}}
+\index{motherPlacement@{motherPlacement}!DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}}
+\subsubsection[{motherPlacement}]{\setlength{\rightskip}{0pt plus 5cm}PlacedVolume GlobalAlignment::motherPlacement (int {\em level\_\-up} = {\ttfamily 1}) const}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_a8378dc0dd2250e04561f21a452e0ee5d}
+
+
+Access the placement of the mother of this node. 
+
+Definition at line 85 of file GlobalAlignment.cpp.
+
+References DD4hep::Handle$<$ TGeoPhysicalNode $>$::name(), placement(), and DD4hep::Handle$<$ TGeoPhysicalNode $>$::ptr().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_a74a90943af3e537f040e4bd22b738046}{
+\index{DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}!nodePlacement@{nodePlacement}}
+\index{nodePlacement@{nodePlacement}!DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}}
+\subsubsection[{nodePlacement}]{\setlength{\rightskip}{0pt plus 5cm}PlacedVolume GlobalAlignment::nodePlacement (int {\em level} = {\ttfamily -\/1}) const}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_a74a90943af3e537f040e4bd22b738046}
+
+
+Access the placement of a node in the chain of placements for this branch. Remeber the special cases: nodePlacement(-\/1) == nodePlacement(\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a1dba2022e2a869a16901a9606c629d57}{numNodes()}) = \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a4445f18516ca144ef79493f15b4042cf}{placement()} nodePlacement(\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a1dba2022e2a869a16901a9606c629d57}{numNodes()}-\/1) == \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a8378dc0dd2250e04561f21a452e0ee5d}{motherPlacement()} = TGeoPhysicalNode::GetMother() == direct mother of \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment_a4445f18516ca144ef79493f15b4042cf}{placement()} 
+
+Definition at line 76 of file GlobalAlignment.cpp.
+
+References DD4hep::Handle$<$ TGeoPhysicalNode $>$::name(), placement(), and DD4hep::Handle$<$ TGeoPhysicalNode $>$::ptr().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_a975ed8070110b96afc671388d8b3e31f}{
+\index{DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}!nominal@{nominal}}
+\index{nominal@{nominal}!DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}}
+\subsubsection[{nominal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignment::Transform3D} GlobalAlignment::nominal () const}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_a975ed8070110b96afc671388d8b3e31f}
+
+
+Access the currently applied alignment/placement matrix (mother to daughter). Access the currently applied alignment/placement matrix. 
+
+Definition at line 125 of file GlobalAlignment.cpp.
+
+References DD4hep::Geometry::\_\-transform(), and DD4hep::Handle$<$ TGeoPhysicalNode $>$::ptr().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_a1dba2022e2a869a16901a9606c629d57}{
+\index{DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}!numNodes@{numNodes}}
+\index{numNodes@{numNodes}!DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}}
+\subsubsection[{numNodes}]{\setlength{\rightskip}{0pt plus 5cm}int GlobalAlignment::numNodes () const}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_a1dba2022e2a869a16901a9606c629d57}
+
+
+Number of nodes in this branch (=depth of the placement hierarchy from the top level volume). Number of nodes in this branch. 
+
+Definition at line 64 of file GlobalAlignment.cpp.
+
+References DD4hep::Handle$<$ TGeoPhysicalNode $>$::ptr().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_a723fc5d2669d586790c48ff820880171}{
+\index{DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}!operator=@{operator=}}
+\index{operator=@{operator=}!DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignment} \& GlobalAlignment::operator= (const {\bf GlobalAlignment} \& {\em c})}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_a723fc5d2669d586790c48ff820880171}
+
+
+Assignment operator. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_handle_a9bbf8f498df42e81ad26fb00233505a6}{DD4hep::Handle$<$ TGeoPhysicalNode $>$}.
+
+Definition at line 56 of file GlobalAlignment.cpp.
+
+References DD4hep::Handle$<$ TGeoPhysicalNode $>$::m\_\-element, and DD4hep::Handle$<$ T $>$::ptr().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_a4445f18516ca144ef79493f15b4042cf}{
+\index{DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}!placement@{placement}}
+\index{placement@{placement}!DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}}
+\subsubsection[{placement}]{\setlength{\rightskip}{0pt plus 5cm}PlacedVolume GlobalAlignment::placement () const}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_a4445f18516ca144ef79493f15b4042cf}
+
+
+Access the placement of this node. 
+
+Definition at line 70 of file GlobalAlignment.cpp.
+
+References DD4hep::Handle$<$ TGeoPhysicalNode $>$::ptr().
+
+Referenced by motherPlacement(), and nodePlacement().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_a1ae3bd19e88fdf178a5595f829d0210a}{
+\index{DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}!toGlobal@{toGlobal}}
+\index{toGlobal@{toGlobal}!DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}}
+\subsubsection[{toGlobal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignment::Position} GlobalAlignment::toGlobal (const {\bf Position} \& {\em localPoint}, \/  int {\em level} = {\ttfamily -\/1}) const}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_a1ae3bd19e88fdf178a5595f829d0210a}
+
+
+Transform a point from local coordinates of a given level to global coordinates. 
+
+Definition at line 101 of file GlobalAlignment.cpp.
+
+References dd4hep::m, and DD4hep::Handle$<$ TGeoPhysicalNode $>$::ptr().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_ab9ed5fdc920cd4d8ed4303096aaec174}{
+\index{DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}!toGlobal@{toGlobal}}
+\index{toGlobal@{toGlobal}!DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}}
+\subsubsection[{toGlobal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignment::Transform3D} GlobalAlignment::toGlobal (int {\em level} = {\ttfamily -\/1}) const}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_ab9ed5fdc920cd4d8ed4303096aaec174}
+
+
+Access the currently applied alignment/placement matrix with respect to the world. Access the currently applied alignment/placement matrix. 
+
+Definition at line 95 of file GlobalAlignment.cpp.
+
+References DD4hep::Geometry::\_\-transform(), and DD4hep::Handle$<$ TGeoPhysicalNode $>$::ptr().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_alignment_ab1d4442ce582827d0db9680ce7dc5b4b}{
+\index{DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}!toMother@{toMother}}
+\index{toMother@{toMother}!DD4hep::Alignments::GlobalAlignment@{DD4hep::Alignments::GlobalAlignment}}
+\subsubsection[{toMother}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignment::Transform3D} GlobalAlignment::toMother (int {\em level} = {\ttfamily -\/1}) const}}
+\label{class_d_d4hep_1_1_alignments_1_1_global_alignment_ab1d4442ce582827d0db9680ce7dc5b4b}
+
+
+Access the currently applied alignment/placement matrix with respect to mother volume. Access the currently applied alignment/placement matrix. 
+
+Definition at line 119 of file GlobalAlignment.cpp.
+
+References DD4hep::Geometry::\_\-transform(), and DD4hep::Handle$<$ TGeoPhysicalNode $>$::ptr().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_global_alignment_8h}{GlobalAlignment.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_global_alignment_8cpp}{GlobalAlignment.cpp}\end{DoxyCompactItemize}

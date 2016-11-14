@@ -1,0 +1,230 @@
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_field}{
+\section{DD4hep::Geometry::CartesianField Class Reference}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_field}\index{DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}}
+}
+
+
+\hyperlink{class_d_d4hep_1_1_handle}{Handle} class describing any field with 3D cartesian vectors for the field strength.  
+
+
+{\ttfamily \#include $<$Fields.h$>$}
+
+Inherits DD4hep::Ref\_\-t.\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field_1_1_object}{Object}
+\begin{DoxyCompactList}\small\item\em Internal data class shared by all handles of a given type. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field_aa56ad95ffc11f27e7e793c9479680b78}{FieldType} \{ \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field_aa56ad95ffc11f27e7e793c9479680b78a5a722f0da5938358899c908e35d4b1ab}{UNKNOWN} =  0, 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field_aa56ad95ffc11f27e7e793c9479680b78afaf0fbca8e9d9556c784207943f88313}{ELECTRIC} =  0x1, 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field_aa56ad95ffc11f27e7e793c9479680b78a866e3d72a57ad60654afcedfa068e36b}{MAGNETIC} =  0x2
+ \}
+\item 
+typedef std::map$<$ std::string, std::string $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a05dc63b1528e795f7d877d3fb236c394}{PropertyValues}
+\item 
+typedef std::map$<$ std::string, \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a05dc63b1528e795f7d877d3fb236c394}{PropertyValues} $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a37a636b9f5ee9ead172cca958dacb920}{Properties}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a65e67bc0e5d3481af8fefc0f1402aaaa}{CartesianField} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a9c038e6dc1accccbb1ba92cf0ac82d17}{CartesianField} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field}{CartesianField} \&e)
+\begin{DoxyCompactList}\small\item\em Constructor to be used when reading the already parsed DOM tree. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a9feb07987ef78617905c04b29d1f8668}{CartesianField} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&e)
+\begin{DoxyCompactList}\small\item\em Constructor to be used when reading the already parsed DOM tree. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field}{CartesianField} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a2f848b1b5eb1cf751e58c7d2076dd915}{operator=} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field}{CartesianField} \&f)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \item\end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a75f08636b6349cfd0ec276d09187af2f}{fieldType} () const 
+\begin{DoxyCompactList}\small\item\em Access the field type. \item\end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a9d06918823238356e8a1786391af78cc}{type} () const 
+\begin{DoxyCompactList}\small\item\em Access the field type (string). \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field_ae90a6c790ecc560abf0d44a59f2e9364}{changesEnergy} () const 
+\begin{DoxyCompactList}\small\item\em Does the field change the energy of charged particles? \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a124dcb501e72381b6c5aacfd5382822b}{value} (const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&pos, \hyperlink{namespace_d_d4hep_1_1_geometry_a56730a0ddb9f3f089c415cd693bd7c19}{Direction} \&field) const 
+\begin{DoxyCompactList}\small\item\em Returns the 3 field components (x, y, z). \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a21a1a039c5a742fb3f62932059f7d1a7}{value} (const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&pos, double $\ast$val) const 
+\begin{DoxyCompactList}\small\item\em Returns the 3 field components (x, y, z). \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field_afb9f7d4d28e90f2e341e8272c718c604}{value} (const double $\ast$pos, double $\ast$val) const 
+\begin{DoxyCompactList}\small\item\em Returns the 3 field components (x, y, z). \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a37a636b9f5ee9ead172cca958dacb920}{Properties} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field_ac6bf85a9043a7c08f84ce30afacc4b61}{properties} () const 
+\begin{DoxyCompactList}\small\item\em Access to properties container. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_d_d4hep_1_1_handle}{Handle} class describing any field with 3D cartesian vectors for the field strength. Generic structure describing any field type (electric or magnetic) with field components in Cartesian coordinates.
+
+The actual behaviour is solely implemented in the underlying object class.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 46 of file Fields.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a37a636b9f5ee9ead172cca958dacb920}{
+\index{DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}!Properties@{Properties}}
+\index{Properties@{Properties}!DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}}
+\subsubsection[{Properties}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$std::string, {\bf PropertyValues}$>$ {\bf DD4hep::Geometry::CartesianField::Properties}}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a37a636b9f5ee9ead172cca958dacb920}
+
+
+Definition at line 52 of file Fields.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a05dc63b1528e795f7d877d3fb236c394}{
+\index{DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}!PropertyValues@{PropertyValues}}
+\index{PropertyValues@{PropertyValues}!DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}}
+\subsubsection[{PropertyValues}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$std::string, std::string$>$ {\bf DD4hep::Geometry::CartesianField::PropertyValues}}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a05dc63b1528e795f7d877d3fb236c394}
+
+
+Definition at line 51 of file Fields.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_field_aa56ad95ffc11f27e7e793c9479680b78}{
+\index{DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}!FieldType@{FieldType}}
+\index{FieldType@{FieldType}!DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}}
+\subsubsection[{FieldType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DD4hep::Geometry::CartesianField::FieldType}}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_field_aa56ad95ffc11f27e7e793c9479680b78}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{UNKNOWN@{UNKNOWN}!DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}}\index{DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}!UNKNOWN@{UNKNOWN}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_field_aa56ad95ffc11f27e7e793c9479680b78a5a722f0da5938358899c908e35d4b1ab}{
+UNKNOWN}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_field_aa56ad95ffc11f27e7e793c9479680b78a5a722f0da5938358899c908e35d4b1ab}
+}]\index{ELECTRIC@{ELECTRIC}!DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}}\index{DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}!ELECTRIC@{ELECTRIC}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_field_aa56ad95ffc11f27e7e793c9479680b78afaf0fbca8e9d9556c784207943f88313}{
+ELECTRIC}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_field_aa56ad95ffc11f27e7e793c9479680b78afaf0fbca8e9d9556c784207943f88313}
+}]\index{MAGNETIC@{MAGNETIC}!DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}}\index{DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}!MAGNETIC@{MAGNETIC}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_field_aa56ad95ffc11f27e7e793c9479680b78a866e3d72a57ad60654afcedfa068e36b}{
+MAGNETIC}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_field_aa56ad95ffc11f27e7e793c9479680b78a866e3d72a57ad60654afcedfa068e36b}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 48 of file Fields.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a65e67bc0e5d3481af8fefc0f1402aaaa}{
+\index{DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}!CartesianField@{CartesianField}}
+\index{CartesianField@{CartesianField}!DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}}
+\subsubsection[{CartesianField}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::CartesianField::CartesianField ()}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a65e67bc0e5d3481af8fefc0f1402aaaa}
+
+
+Default constructor. \hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a9c038e6dc1accccbb1ba92cf0ac82d17}{
+\index{DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}!CartesianField@{CartesianField}}
+\index{CartesianField@{CartesianField}!DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}}
+\subsubsection[{CartesianField}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::CartesianField::CartesianField (const {\bf CartesianField} \& {\em e})}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a9c038e6dc1accccbb1ba92cf0ac82d17}
+
+
+Constructor to be used when reading the already parsed DOM tree. \hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a9feb07987ef78617905c04b29d1f8668}{
+\index{DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}!CartesianField@{CartesianField}}
+\index{CartesianField@{CartesianField}!DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}}
+\subsubsection[{CartesianField}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q $>$ DD4hep::Geometry::CartesianField::CartesianField (const {\bf Handle}$<$ Q $>$ \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a9feb07987ef78617905c04b29d1f8668}
+
+
+Constructor to be used when reading the already parsed DOM tree. 
+
+Definition at line 81 of file Fields.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_field_ae90a6c790ecc560abf0d44a59f2e9364}{
+\index{DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}!changesEnergy@{changesEnergy}}
+\index{changesEnergy@{changesEnergy}!DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}}
+\subsubsection[{changesEnergy}]{\setlength{\rightskip}{0pt plus 5cm}bool CartesianField::changesEnergy () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_field_ae90a6c790ecc560abf0d44a59f2e9364}
+
+
+Does the field change the energy of charged particles? 
+
+Definition at line 52 of file Fields.cpp.
+
+References ELECTRIC, and fieldType().\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a75f08636b6349cfd0ec276d09187af2f}{
+\index{DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}!fieldType@{fieldType}}
+\index{fieldType@{fieldType}!DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}}
+\subsubsection[{fieldType}]{\setlength{\rightskip}{0pt plus 5cm}int DD4hep::Geometry::CartesianField::fieldType () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a75f08636b6349cfd0ec276d09187af2f}
+
+
+Access the field type. 
+
+Definition at line 88 of file Fields.h.
+
+References type().
+
+Referenced by DD4hep::Geometry::OverlayedField::add(), and changesEnergy().\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a2f848b1b5eb1cf751e58c7d2076dd915}{
+\index{DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}!operator=@{operator=}}
+\index{operator=@{operator=}!DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CartesianField}\& DD4hep::Geometry::CartesianField::operator= (const {\bf CartesianField} \& {\em f})}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a2f848b1b5eb1cf751e58c7d2076dd915}
+
+
+Assignment operator. \hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_field_ac6bf85a9043a7c08f84ce30afacc4b61}{
+\index{DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}!properties@{properties}}
+\index{properties@{properties}!DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}}
+\subsubsection[{properties}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CartesianField::Properties} \& CartesianField::properties () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_field_ac6bf85a9043a7c08f84ce30afacc4b61}
+
+
+Access to properties container. 
+
+Definition at line 57 of file Fields.cpp.\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a9d06918823238356e8a1786391af78cc}{
+\index{DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}!type@{type}}
+\index{type@{type}!DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ CartesianField::type () const}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a9d06918823238356e8a1786391af78cc}
+
+
+Access the field type (string). 
+
+Definition at line 47 of file Fields.cpp.
+
+Referenced by fieldType().\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_field_afb9f7d4d28e90f2e341e8272c718c604}{
+\index{DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}!value@{value}}
+\index{value@{value}!DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}void CartesianField::value (const double $\ast$ {\em pos}, \/  double $\ast$ {\em val}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_field_afb9f7d4d28e90f2e341e8272c718c604}
+
+
+Returns the 3 field components (x, y, z). 
+
+Definition at line 72 of file Fields.cpp.\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a21a1a039c5a742fb3f62932059f7d1a7}{
+\index{DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}!value@{value}}
+\index{value@{value}!DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}void CartesianField::value (const {\bf Position} \& {\em pos}, \/  double $\ast$ {\em val}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a21a1a039c5a742fb3f62932059f7d1a7}
+
+
+Returns the 3 field components (x, y, z). 
+
+Definition at line 67 of file Fields.cpp.
+
+References value().\hypertarget{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a124dcb501e72381b6c5aacfd5382822b}{
+\index{DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}!value@{value}}
+\index{value@{value}!DD4hep::Geometry::CartesianField@{DD4hep::Geometry::CartesianField}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}void CartesianField::value (const {\bf Position} \& {\em pos}, \/  {\bf Direction} \& {\em field}) const}}
+\label{class_d_d4hep_1_1_geometry_1_1_cartesian_field_a124dcb501e72381b6c5aacfd5382822b}
+
+
+Returns the 3 field components (x, y, z). 
+
+Definition at line 62 of file Fields.cpp.
+
+Referenced by DD4hep::Geometry::OverlayedField::electricField(), DD4hep::Geometry::OverlayedField::magneticField(), and value().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_fields_8h}{Fields.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_fields_8cpp}{Fields.cpp}\end{DoxyCompactItemize}

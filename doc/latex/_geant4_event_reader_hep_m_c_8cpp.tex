@@ -1,0 +1,90 @@
+\hypertarget{_geant4_event_reader_hep_m_c_8cpp}{
+\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/plugins/Geant4EventReaderHepMC.cpp File Reference}
+\label{_geant4_event_reader_hep_m_c_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/plugins/Geant4EventReaderHepMC.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/plugins/Geant4EventReaderHepMC.cpp}}
+}
+{\ttfamily \#include \char`\"{}DDG4/IoStreams.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DDG4/Geant4InputAction.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DDG4/Factories.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/Printout.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DDG4/Geant4Primary.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}CLHEP/Units/SystemOfUnits.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}CLHEP/Units/PhysicalConstants.h\char`\"{}}\par
+{\ttfamily \#include $<$cerrno$>$}\par
+{\ttfamily \#include $<$algorithm$>$}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_m_c}{DD4hep::Simulation::Geant4EventReaderHepMC}
+\begin{DoxyCompactList}\small\item\em Class to populate Geant4 primaries from StdHep files. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_hep_m_c_1_1_event_header}{DD4hep::Simulation::HepMC::EventHeader}
+\item 
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_hep_m_c_1_1_event_stream}{DD4hep::Simulation::HepMC::EventStream}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_d_d4hep}{DD4hep}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the AIDA detector description toolkit. \item\end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_d_d4hep_1_1_simulation}{DD4hep::Simulation}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the Geant4 based simulation part of the AIDA detector description toolkit. \item\end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_hep_m_c}{DD4hep::Simulation::HepMC}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_d_d4hep_1_1_reference_bit_mask}{DD4hep::ReferenceBitMask}$<$ int $>$ \hyperlink{_geant4_event_reader_hep_m_c_8cpp_a26571eca698a4610629e5036e207ee88}{PropertyMask}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_hep_m_c_abd57f9534b4e3e74fa2e5f25525d452c}{DD4hep::Simulation::HepMC::known\_\-io} \{ \par
+\hyperlink{namespace_d_d4hep_1_1_simulation_1_1_hep_m_c_abd57f9534b4e3e74fa2e5f25525d452ca1851fc44abe80e919efb31e16f25abae}{DD4hep::Simulation::HepMC::gen} = 1, 
+\hyperlink{namespace_d_d4hep_1_1_simulation_1_1_hep_m_c_abd57f9534b4e3e74fa2e5f25525d452caa170d10707fb62bbdffdc5e2a65834fd}{DD4hep::Simulation::HepMC::ascii}, 
+\hyperlink{namespace_d_d4hep_1_1_simulation_1_1_hep_m_c_abd57f9534b4e3e74fa2e5f25525d452ca35d3a404a7b5dcdd485900294bbba4cc}{DD4hep::Simulation::HepMC::extascii}, 
+\hyperlink{namespace_d_d4hep_1_1_simulation_1_1_hep_m_c_abd57f9534b4e3e74fa2e5f25525d452ca17b19f25d74815dc415a5fde0f894f2d}{DD4hep::Simulation::HepMC::ascii\_\-pdt}, 
+\par
+\hyperlink{namespace_d_d4hep_1_1_simulation_1_1_hep_m_c_abd57f9534b4e3e74fa2e5f25525d452ca951f0ef82695d1e0a1353c5237a3dbcc}{DD4hep::Simulation::HepMC::extascii\_\-pdt}
+ \}
+\begin{DoxyCompactList}\small\item\em The known\_\-io enum is used to track which type of input is being read. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_hep_m_c_ae12e8ca37b7071f67c1810fa9420acad}{DD4hep::Simulation::HepMC::get\_\-input} (istream \&is, istringstream \&iline)
+\item 
+int \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_hep_m_c_a433e938fb3dfef8ae2590fa16cdb2229}{DD4hep::Simulation::HepMC::read\_\-until\_\-event\_\-end} (istream \&is)
+\item 
+int \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_hep_m_c_a9a0a541fc8f48d5f9b80131b7f3b7e88}{DD4hep::Simulation::HepMC::read\_\-weight\_\-names} (EventStream \&, istringstream \&iline)
+\item 
+int \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_hep_m_c_ab38b9307ace39b3227306e907c3f6840}{DD4hep::Simulation::HepMC::read\_\-particle} (EventStream \&info, istringstream \&iline, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle}{Geant4Particle} $\ast$p)
+\item 
+int \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_hep_m_c_a05115a3e0b60dbe2ee86c5094cdd16bc}{DD4hep::Simulation::HepMC::read\_\-vertex} (EventStream \&info, istream \&is, istringstream \&iline)
+\item 
+int \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_hep_m_c_aff50680cc4089a0f2c3b7a0218b3ed2e}{DD4hep::Simulation::HepMC::read\_\-event\_\-header} (EventStream \&info, istringstream \&input, EventHeader \&header)
+\item 
+int \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_hep_m_c_a873025dee0b6f8a5ce8bd3485e518213}{DD4hep::Simulation::HepMC::read\_\-cross\_\-section} (EventStream \&info, istringstream \&input)
+\item 
+int \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_hep_m_c_a35bd1c93d31d755bf0b911399c90c789}{DD4hep::Simulation::HepMC::read\_\-units} (EventStream \&info, istringstream \&input)
+\item 
+int \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_hep_m_c_a973a0fe661658598d3982e072e11f77d}{DD4hep::Simulation::HepMC::read\_\-heavy\_\-ion} (EventStream \&, istringstream \&input)
+\item 
+int \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_hep_m_c_a599dd238f1b1dc069a14f3bf57c09cfb}{DD4hep::Simulation::HepMC::read\_\-pdf} (EventStream \&, istringstream \&input)
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_vertex}{Geant4Vertex} $\ast$ \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_hep_m_c_a3a13a13dbe2dce0cfbea9607895abf14}{DD4hep::Simulation::HepMC::vertex} (EventStream \&info, int i)
+\item 
+void \hyperlink{namespace_d_d4hep_1_1_simulation_1_1_hep_m_c_a07b61ea67e59ff0e064a976336f7f3f3}{DD4hep::Simulation::HepMC::fix\_\-particles} (EventStream \&info)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_geant4_event_reader_hep_m_c_8cpp_a26571eca698a4610629e5036e207ee88}{
+\index{Geant4EventReaderHepMC.cpp@{Geant4EventReaderHepMC.cpp}!PropertyMask@{PropertyMask}}
+\index{PropertyMask@{PropertyMask}!Geant4EventReaderHepMC.cpp@{Geant4EventReaderHepMC.cpp}}
+\subsubsection[{PropertyMask}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf DD4hep::ReferenceBitMask}$<$int$>$ {\bf PropertyMask}}}
+\label{_geant4_event_reader_hep_m_c_8cpp_a26571eca698a4610629e5036e207ee88}
+
+
+Definition at line 83 of file Geant4EventReaderHepMC.cpp.

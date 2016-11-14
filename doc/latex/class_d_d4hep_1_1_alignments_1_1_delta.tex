@@ -1,0 +1,319 @@
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta}{
+\section{DD4hep::Alignments::Delta Class Reference}
+\label{class_d_d4hep_1_1_alignments_1_1_delta}\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}
+}
+
+
+Class describing an condition to re-\/adjust an alignment.  
+
+
+{\ttfamily \#include $<$AlignmentData.h$>$}\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_ab10dd6760463baa51d8b585aaa4c70aa}{AlignmentFlags} \{ \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_ab10dd6760463baa51d8b585aaa4c70aaadcf1a03f3ac4ff2143e681c760133e4b}{HAVE\_\-NONE} =  0, 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_ab10dd6760463baa51d8b585aaa4c70aaa709ec8fdc3ef1322d009d78a787775bf}{HAVE\_\-TRANSLATION} =  1$<$$<$2, 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_ab10dd6760463baa51d8b585aaa4c70aaa79ecddccc03ca432d87a65be9ff4e54e}{HAVE\_\-ROTATION} =  1$<$$<$3, 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_ab10dd6760463baa51d8b585aaa4c70aaad7e7bc1c957ff212a4bfcade0e1647b9}{HAVE\_\-PIVOT} =  1$<$$<$4
+ \}
+\item 
+typedef Translation3D \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_a9ff8cc825f916a4ae84f1780c11f2519}{Pivot}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_a1db2d4fa836434f834b0bd0502bc43d7}{Delta} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_a4da265200c1c24051c8861dd7f5d09f2}{Delta} (const Position \&tr)
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_ae692692779f93fe44ddcf501e1e4cdcd}{Delta} (const RotationZYX \&rot)
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_a0e678885ecb41d17d6a4d3f2ded6679e}{Delta} (const Position \&tr, const RotationZYX \&rot)
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_a8ade447b698a6765cf76eb5e98af91ad}{Delta} (const Translation3D \&piv, const RotationZYX \&rot)
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_a1694ccda25ab2214ec8145c36153ab37}{Delta} (const Position \&tr, const Translation3D \&piv, const RotationZYX \&rot)
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_a3fcd404a6a78a214f1c655a07d3db46d}{Delta} (const \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta}{Delta} \&c)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_a7eff633a0f57a904c8a125178e9ba3b8}{$\sim$Delta} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_delta}{Delta} \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_afb22b2e26ceb2bb74b5fae0f2415abdd}{operator=} (const \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta}{Delta} \&c)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_a7262de6cf3b79dea8fd3b7ff86e10e10}{clear} ()
+\begin{DoxyCompactList}\small\item\em Reset information to identity. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_a032579329da702161e55ec9fc2366955}{checkFlag} (unsigned int mask) const 
+\begin{DoxyCompactList}\small\item\em Check a given flag. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_a395852746451e6e2de16e829161a5ac3}{setFlag} (unsigned int mask)
+\begin{DoxyCompactList}\small\item\em Check a given flag. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_a8f3a0954d20782c7fa2c3aec4553dafa}{hasTranslation} () const 
+\begin{DoxyCompactList}\small\item\em Access flags: Check if the delta operation contains a translation. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_a0a152e2828b449449094100ba4efb4c6}{hasRotation} () const 
+\begin{DoxyCompactList}\small\item\em Access flags: Check if the delta operation contains a rotation. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_ad50ffdd1939dad697c42040102309a29}{hasPivot} () const 
+\begin{DoxyCompactList}\small\item\em Access flags: Check if the delta operation contains a pivot. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Position \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_af53e050fbb66b78037d8ab20a59ff737}{translation}
+\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_a9ff8cc825f916a4ae84f1780c11f2519}{Pivot} \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_acc2685bae6a2d77214b537136c31c653}{pivot}
+\item 
+RotationZYX \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_ae901fae9cfcb9b8dd337943adeda4f0b}{rotation}
+\item 
+unsigned int \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta_a0d3375bd33c904430901e1ac3c1a1660}{flags}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class describing an condition to re-\/adjust an alignment. \begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 49 of file AlignmentData.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_a9ff8cc825f916a4ae84f1780c11f2519}{
+\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!Pivot@{Pivot}}
+\index{Pivot@{Pivot}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}
+\subsubsection[{Pivot}]{\setlength{\rightskip}{0pt plus 5cm}typedef Translation3D {\bf DD4hep::Alignments::Delta::Pivot}}}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_a9ff8cc825f916a4ae84f1780c11f2519}
+
+
+Definition at line 51 of file AlignmentData.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_ab10dd6760463baa51d8b585aaa4c70aa}{
+\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!AlignmentFlags@{AlignmentFlags}}
+\index{AlignmentFlags@{AlignmentFlags}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}
+\subsubsection[{AlignmentFlags}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DD4hep::Alignments::Delta::AlignmentFlags}}}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_ab10dd6760463baa51d8b585aaa4c70aa}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{HAVE\_\-NONE@{HAVE\_\-NONE}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!HAVE\_\-NONE@{HAVE\_\-NONE}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_ab10dd6760463baa51d8b585aaa4c70aaadcf1a03f3ac4ff2143e681c760133e4b}{
+HAVE\_\-NONE}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_ab10dd6760463baa51d8b585aaa4c70aaadcf1a03f3ac4ff2143e681c760133e4b}
+}]\index{HAVE\_\-TRANSLATION@{HAVE\_\-TRANSLATION}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!HAVE\_\-TRANSLATION@{HAVE\_\-TRANSLATION}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_ab10dd6760463baa51d8b585aaa4c70aaa709ec8fdc3ef1322d009d78a787775bf}{
+HAVE\_\-TRANSLATION}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_ab10dd6760463baa51d8b585aaa4c70aaa709ec8fdc3ef1322d009d78a787775bf}
+}]\index{HAVE\_\-ROTATION@{HAVE\_\-ROTATION}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!HAVE\_\-ROTATION@{HAVE\_\-ROTATION}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_ab10dd6760463baa51d8b585aaa4c70aaa79ecddccc03ca432d87a65be9ff4e54e}{
+HAVE\_\-ROTATION}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_ab10dd6760463baa51d8b585aaa4c70aaa79ecddccc03ca432d87a65be9ff4e54e}
+}]\index{HAVE\_\-PIVOT@{HAVE\_\-PIVOT}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!HAVE\_\-PIVOT@{HAVE\_\-PIVOT}}\item[{\em 
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_ab10dd6760463baa51d8b585aaa4c70aaad7e7bc1c957ff212a4bfcade0e1647b9}{
+HAVE\_\-PIVOT}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_ab10dd6760463baa51d8b585aaa4c70aaad7e7bc1c957ff212a4bfcade0e1647b9}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 57 of file AlignmentData.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_a1db2d4fa836434f834b0bd0502bc43d7}{
+\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!Delta@{Delta}}
+\index{Delta@{Delta}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}
+\subsubsection[{Delta}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Alignments::Delta::Delta ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_a1db2d4fa836434f834b0bd0502bc43d7}
+
+
+Default constructor. 
+
+Definition at line 65 of file AlignmentData.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_a4da265200c1c24051c8861dd7f5d09f2}{
+\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!Delta@{Delta}}
+\index{Delta@{Delta}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}
+\subsubsection[{Delta}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Alignments::Delta::Delta (const Position \& {\em tr})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_a4da265200c1c24051c8861dd7f5d09f2}
+
+
+Initializing constructor. 
+
+Definition at line 67 of file AlignmentData.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_ae692692779f93fe44ddcf501e1e4cdcd}{
+\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!Delta@{Delta}}
+\index{Delta@{Delta}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}
+\subsubsection[{Delta}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Alignments::Delta::Delta (const RotationZYX \& {\em rot})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_ae692692779f93fe44ddcf501e1e4cdcd}
+
+
+Initializing constructor. 
+
+Definition at line 70 of file AlignmentData.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_a0e678885ecb41d17d6a4d3f2ded6679e}{
+\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!Delta@{Delta}}
+\index{Delta@{Delta}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}
+\subsubsection[{Delta}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Alignments::Delta::Delta (const Position \& {\em tr}, \/  const RotationZYX \& {\em rot})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_a0e678885ecb41d17d6a4d3f2ded6679e}
+
+
+Initializing constructor. 
+
+Definition at line 73 of file AlignmentData.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_a8ade447b698a6765cf76eb5e98af91ad}{
+\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!Delta@{Delta}}
+\index{Delta@{Delta}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}
+\subsubsection[{Delta}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Alignments::Delta::Delta (const Translation3D \& {\em piv}, \/  const RotationZYX \& {\em rot})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_a8ade447b698a6765cf76eb5e98af91ad}
+
+
+Initializing constructor. 
+
+Definition at line 76 of file AlignmentData.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_a1694ccda25ab2214ec8145c36153ab37}{
+\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!Delta@{Delta}}
+\index{Delta@{Delta}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}
+\subsubsection[{Delta}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Alignments::Delta::Delta (const Position \& {\em tr}, \/  const Translation3D \& {\em piv}, \/  const RotationZYX \& {\em rot})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_a1694ccda25ab2214ec8145c36153ab37}
+
+
+Initializing constructor. 
+
+Definition at line 79 of file AlignmentData.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_a3fcd404a6a78a214f1c655a07d3db46d}{
+\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!Delta@{Delta}}
+\index{Delta@{Delta}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}
+\subsubsection[{Delta}]{\setlength{\rightskip}{0pt plus 5cm}Delta::Delta (const {\bf Delta} \& {\em c})}}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_a3fcd404a6a78a214f1c655a07d3db46d}
+
+
+Copy constructor. 
+
+Definition at line 30 of file AlignmentData.cpp.\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_a7eff633a0f57a904c8a125178e9ba3b8}{
+\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!$\sim$Delta@{$\sim$Delta}}
+\index{$\sim$Delta@{$\sim$Delta}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}
+\subsubsection[{$\sim$Delta}]{\setlength{\rightskip}{0pt plus 5cm}Delta::$\sim$Delta ()}}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_a7eff633a0f57a904c8a125178e9ba3b8}
+
+
+Default destructor. 
+
+Definition at line 36 of file AlignmentData.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_a032579329da702161e55ec9fc2366955}{
+\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!checkFlag@{checkFlag}}
+\index{checkFlag@{checkFlag}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}
+\subsubsection[{checkFlag}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Alignments::Delta::checkFlag (unsigned int {\em mask}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_a032579329da702161e55ec9fc2366955}
+
+
+Check a given flag. 
+
+Definition at line 90 of file AlignmentData.h.
+
+References flags.
+
+Referenced by DD4hep::Alignments::AlignmentStack::StackEntry::checkOverlap(), DD4hep::Alignments::AlignmentStack::StackEntry::hasMatrix(), hasPivot(), hasRotation(), hasTranslation(), DD4hep::Alignments::AlignmentStack::StackEntry::needsReset(), DD4hep::Alignments::AlignmentStack::StackEntry::overlapDefined(), DD4hep::Alignments::AlignmentStack::StackEntry::overlapValue(), and DD4hep::Alignments::AlignmentStack::StackEntry::resetChildren().\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_a7262de6cf3b79dea8fd3b7ff86e10e10}{
+\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!clear@{clear}}
+\index{clear@{clear}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Delta::clear ()}}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_a7262de6cf3b79dea8fd3b7ff86e10e10}
+
+
+Reset information to identity. 
+
+Definition at line 51 of file AlignmentData.cpp.
+
+References flags, pivot, rotation, and translation.\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_ad50ffdd1939dad697c42040102309a29}{
+\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!hasPivot@{hasPivot}}
+\index{hasPivot@{hasPivot}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}
+\subsubsection[{hasPivot}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Alignments::Delta::hasPivot () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_ad50ffdd1939dad697c42040102309a29}
+
+
+Access flags: Check if the delta operation contains a pivot. 
+
+Definition at line 98 of file AlignmentData.h.
+
+References checkFlag(), and HAVE\_\-PIVOT.\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_a0a152e2828b449449094100ba4efb4c6}{
+\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!hasRotation@{hasRotation}}
+\index{hasRotation@{hasRotation}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}
+\subsubsection[{hasRotation}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Alignments::Delta::hasRotation () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_a0a152e2828b449449094100ba4efb4c6}
+
+
+Access flags: Check if the delta operation contains a rotation. 
+
+Definition at line 96 of file AlignmentData.h.
+
+References checkFlag(), and HAVE\_\-ROTATION.\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_a8f3a0954d20782c7fa2c3aec4553dafa}{
+\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!hasTranslation@{hasTranslation}}
+\index{hasTranslation@{hasTranslation}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}
+\subsubsection[{hasTranslation}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Alignments::Delta::hasTranslation () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_a8f3a0954d20782c7fa2c3aec4553dafa}
+
+
+Access flags: Check if the delta operation contains a translation. 
+
+Definition at line 94 of file AlignmentData.h.
+
+References checkFlag(), and HAVE\_\-TRANSLATION.\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_afb22b2e26ceb2bb74b5fae0f2415abdd}{
+\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!operator=@{operator=}}
+\index{operator=@{operator=}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Delta} \& Delta::operator= (const {\bf Delta} \& {\em c})}}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_afb22b2e26ceb2bb74b5fae0f2415abdd}
+
+
+Assignment operator. 
+
+Definition at line 40 of file AlignmentData.cpp.
+
+References flags, pivot, rotation, and translation.\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_a395852746451e6e2de16e829161a5ac3}{
+\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!setFlag@{setFlag}}
+\index{setFlag@{setFlag}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}
+\subsubsection[{setFlag}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Alignments::Delta::setFlag (unsigned int {\em mask})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_a395852746451e6e2de16e829161a5ac3}
+
+
+Check a given flag. 
+
+Definition at line 92 of file AlignmentData.h.
+
+References flags.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_a0d3375bd33c904430901e1ac3c1a1660}{
+\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!flags@{flags}}
+\index{flags@{flags}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf DD4hep::Alignments::Delta::flags}}}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_a0d3375bd33c904430901e1ac3c1a1660}
+
+
+Definition at line 55 of file AlignmentData.h.
+
+Referenced by checkFlag(), clear(), computeDelta(), operator=(), DD4hep::Alignments::AlignmentDecorator$<$ T $>$::setDelta(), DD4hep::Alignments::AlignmentDecorator$<$ T $>$::setDeltaPivot(), setFlag(), DD4hep::Alignments::AlignmentStack::StackEntry::setOverlapCheck(), DD4hep::Alignments::AlignmentStack::StackEntry::setOverlapPrecision(), DD4hep::Alignments::AlignmentStack::StackEntry::setReset(), and DD4hep::Alignments::AlignmentStack::StackEntry::setResetChildren().\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_acc2685bae6a2d77214b537136c31c653}{
+\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!pivot@{pivot}}
+\index{pivot@{pivot}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}
+\subsubsection[{pivot}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pivot} {\bf DD4hep::Alignments::Delta::pivot}}}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_acc2685bae6a2d77214b537136c31c653}
+
+
+Definition at line 53 of file AlignmentData.h.
+
+Referenced by clear(), computeDelta(), operator$<$$<$(), operator=(), and DD4hep::Alignments::AlignmentDecorator$<$ T $>$::setDeltaPivot().\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_ae901fae9cfcb9b8dd337943adeda4f0b}{
+\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!rotation@{rotation}}
+\index{rotation@{rotation}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}
+\subsubsection[{rotation}]{\setlength{\rightskip}{0pt plus 5cm}RotationZYX {\bf DD4hep::Alignments::Delta::rotation}}}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_ae901fae9cfcb9b8dd337943adeda4f0b}
+
+
+Definition at line 54 of file AlignmentData.h.
+
+Referenced by clear(), computeDelta(), operator$<$$<$(), operator=(), DD4hep::Alignments::AlignmentDecorator$<$ T $>$::setDelta(), and DD4hep::Alignments::AlignmentDecorator$<$ T $>$::setDeltaPivot().\hypertarget{class_d_d4hep_1_1_alignments_1_1_delta_af53e050fbb66b78037d8ab20a59ff737}{
+\index{DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}!translation@{translation}}
+\index{translation@{translation}!DD4hep::Alignments::Delta@{DD4hep::Alignments::Delta}}
+\subsubsection[{translation}]{\setlength{\rightskip}{0pt plus 5cm}Position {\bf DD4hep::Alignments::Delta::translation}}}
+\label{class_d_d4hep_1_1_alignments_1_1_delta_af53e050fbb66b78037d8ab20a59ff737}
+
+
+Definition at line 52 of file AlignmentData.h.
+
+Referenced by clear(), computeDelta(), operator$<$$<$(), operator=(), DD4hep::Alignments::AlignmentDecorator$<$ T $>$::setDelta(), and DD4hep::Alignments::AlignmentDecorator$<$ T $>$::setDeltaPivot().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_alignment_data_8h}{AlignmentData.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_alignment_data_8cpp}{AlignmentData.cpp}\end{DoxyCompactItemize}

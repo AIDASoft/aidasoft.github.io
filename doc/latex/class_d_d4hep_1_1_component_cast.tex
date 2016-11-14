@@ -1,0 +1,211 @@
+\hypertarget{class_d_d4hep_1_1_component_cast}{
+\section{DD4hep::ComponentCast Class Reference}
+\label{class_d_d4hep_1_1_component_cast}\index{DD4hep::ComponentCast@{DD4hep::ComponentCast}}
+}
+
+
+Class to perform dynamic casts using unknown pointers.  
+
+
+{\ttfamily \#include $<$DD4hep/Primitives.h$>$}\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{class_d_d4hep_1_1_component_cast_a60cfc51ff4c1b324e86c3f6b4bf4ba55}{destroy\_\-t} )(void $\ast$)
+\item 
+typedef void $\ast$($\ast$ \hyperlink{class_d_d4hep_1_1_component_cast_a8d1ee595a10ab3382d1c7dc1b8987c1f}{cast\_\-t} )(const void $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{class_d_d4hep_1_1_component_cast_aace12e8cef1815233b06c108f0d85082}{apply\_\-dynCast} (const \hyperlink{class_d_d4hep_1_1_component_cast}{ComponentCast} \&to, const void $\ast$ptr) const 
+\begin{DoxyCompactList}\small\item\em Apply cast using typeinfo instead of dynamic\_\-cast. \item\end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{class_d_d4hep_1_1_component_cast_a07a0c4c9fe6a3d703602df77211ce37e}{apply\_\-upCast} (const \hyperlink{class_d_d4hep_1_1_component_cast}{ComponentCast} \&to, const void $\ast$ptr) const 
+\begin{DoxyCompactList}\small\item\em Apply cast using typeinfo instead of dynamic\_\-cast. \item\end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{class_d_d4hep_1_1_component_cast_abf0cc9ff379a6dfb09f95c2a6c3c9fb7}{apply\_\-downCast} (const \hyperlink{class_d_d4hep_1_1_component_cast}{ComponentCast} \&to, const void $\ast$ptr) const 
+\begin{DoxyCompactList}\small\item\em Apply cast using typeinfo instead of dynamic\_\-cast. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename TYPE $>$ }\\static void \hyperlink{class_d_d4hep_1_1_component_cast_ab2bb84f3ada8c005febcf8167ddc13bf}{\_\-destroy} (void $\ast$p)
+\item 
+{\footnotesize template$<$typename TYPE $>$ }\\static void $\ast$ \hyperlink{class_d_d4hep_1_1_component_cast_aec81a88f83f9f521a28779fc922c9656}{\_\-cast} (const void $\ast$p)
+\item 
+{\footnotesize template$<$typename TYPE $>$ }\\static \hyperlink{class_d_d4hep_1_1_component_cast}{ComponentCast} \& \hyperlink{class_d_d4hep_1_1_component_cast_a0bd14bc60af0175c7dad5164128cf030}{instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std::type\_\-info \& \hyperlink{class_d_d4hep_1_1_component_cast_a984d18ed863fe54855cf3308560270f0}{type}
+\item 
+const void $\ast$ \hyperlink{class_d_d4hep_1_1_component_cast_ae8cce3fcc69745f330272a49d51024dd}{abi\_\-class}
+\item 
+\hyperlink{class_d_d4hep_1_1_component_cast_a60cfc51ff4c1b324e86c3f6b4bf4ba55}{destroy\_\-t} \hyperlink{class_d_d4hep_1_1_component_cast_af161de076d882540309e24d86ef50137}{destroy}
+\item 
+\hyperlink{class_d_d4hep_1_1_component_cast_a8d1ee595a10ab3382d1c7dc1b8987c1f}{cast\_\-t} \hyperlink{class_d_d4hep_1_1_component_cast_a2f6cd06755e613e3f02c5302361d7024}{cast}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_component_cast_a6a1068534a7f7287cd1f4a342c34a91a}{ComponentCast} (const std::type\_\-info \&t, \hyperlink{class_d_d4hep_1_1_component_cast_a60cfc51ff4c1b324e86c3f6b4bf4ba55}{destroy\_\-t} d, \hyperlink{class_d_d4hep_1_1_component_cast_a8d1ee595a10ab3382d1c7dc1b8987c1f}{cast\_\-t} c)
+\begin{DoxyCompactList}\small\item\em Initializing Constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_component_cast_a1554d35b906921cba45fc717702ff8c4}{$\sim$ComponentCast} ()
+\begin{DoxyCompactList}\small\item\em Defautl destructor. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to perform dynamic casts using unknown pointers. It is mandatory that the pointers referred do actually support the asked functionalty. Miracles also I cannot do.....
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+13.08.2013 
+\end{DoxyDate}
+
+
+Definition at line 168 of file Primitives.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_component_cast_a8d1ee595a10ab3382d1c7dc1b8987c1f}{
+\index{DD4hep::ComponentCast@{DD4hep::ComponentCast}!cast\_\-t@{cast\_\-t}}
+\index{cast\_\-t@{cast\_\-t}!DD4hep::ComponentCast@{DD4hep::ComponentCast}}
+\subsubsection[{cast\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$($\ast$ {\bf DD4hep::ComponentCast::cast\_\-t})(const void $\ast$)}}
+\label{class_d_d4hep_1_1_component_cast_a8d1ee595a10ab3382d1c7dc1b8987c1f}
+
+
+Definition at line 171 of file Primitives.h.\hypertarget{class_d_d4hep_1_1_component_cast_a60cfc51ff4c1b324e86c3f6b4bf4ba55}{
+\index{DD4hep::ComponentCast@{DD4hep::ComponentCast}!destroy\_\-t@{destroy\_\-t}}
+\index{destroy\_\-t@{destroy\_\-t}!DD4hep::ComponentCast@{DD4hep::ComponentCast}}
+\subsubsection[{destroy\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ {\bf DD4hep::ComponentCast::destroy\_\-t})(void $\ast$)}}
+\label{class_d_d4hep_1_1_component_cast_a60cfc51ff4c1b324e86c3f6b4bf4ba55}
+
+
+Definition at line 170 of file Primitives.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_component_cast_a6a1068534a7f7287cd1f4a342c34a91a}{
+\index{DD4hep::ComponentCast@{DD4hep::ComponentCast}!ComponentCast@{ComponentCast}}
+\index{ComponentCast@{ComponentCast}!DD4hep::ComponentCast@{DD4hep::ComponentCast}}
+\subsubsection[{ComponentCast}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::ComponentCast::ComponentCast (const std::type\_\-info \& {\em t}, \/  {\bf destroy\_\-t} {\em d}, \/  {\bf cast\_\-t} {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_component_cast_a6a1068534a7f7287cd1f4a342c34a91a}
+
+
+Initializing Constructor. 
+
+Definition at line 277 of file Primitives.cpp.
+
+References abi\_\-class, type, and DD4hep::typeName().\hypertarget{class_d_d4hep_1_1_component_cast_a1554d35b906921cba45fc717702ff8c4}{
+\index{DD4hep::ComponentCast@{DD4hep::ComponentCast}!$\sim$ComponentCast@{$\sim$ComponentCast}}
+\index{$\sim$ComponentCast@{$\sim$ComponentCast}!DD4hep::ComponentCast@{DD4hep::ComponentCast}}
+\subsubsection[{$\sim$ComponentCast}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::ComponentCast::$\sim$ComponentCast ()\hspace{0.3cm}{\ttfamily  \mbox{[}private, virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_component_cast_a1554d35b906921cba45fc717702ff8c4}
+
+
+Defautl destructor. 
+
+Definition at line 290 of file Primitives.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_component_cast_aec81a88f83f9f521a28779fc922c9656}{
+\index{DD4hep::ComponentCast@{DD4hep::ComponentCast}!\_\-cast@{\_\-cast}}
+\index{\_\-cast@{\_\-cast}!DD4hep::ComponentCast@{DD4hep::ComponentCast}}
+\subsubsection[{\_\-cast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE $>$ static void$\ast$ DD4hep::ComponentCast::\_\-cast (const void $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_component_cast_aec81a88f83f9f521a28779fc922c9656}
+
+
+Definition at line 192 of file Primitives.h.\hypertarget{class_d_d4hep_1_1_component_cast_ab2bb84f3ada8c005febcf8167ddc13bf}{
+\index{DD4hep::ComponentCast@{DD4hep::ComponentCast}!\_\-destroy@{\_\-destroy}}
+\index{\_\-destroy@{\_\-destroy}!DD4hep::ComponentCast@{DD4hep::ComponentCast}}
+\subsubsection[{\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE $>$ static void DD4hep::ComponentCast::\_\-destroy (void $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_component_cast_ab2bb84f3ada8c005febcf8167ddc13bf}
+
+
+Definition at line 188 of file Primitives.h.\hypertarget{class_d_d4hep_1_1_component_cast_abf0cc9ff379a6dfb09f95c2a6c3c9fb7}{
+\index{DD4hep::ComponentCast@{DD4hep::ComponentCast}!apply\_\-downCast@{apply\_\-downCast}}
+\index{apply\_\-downCast@{apply\_\-downCast}!DD4hep::ComponentCast@{DD4hep::ComponentCast}}
+\subsubsection[{apply\_\-downCast}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ DD4hep::ComponentCast::apply\_\-downCast (const {\bf ComponentCast} \& {\em to}, \/  const void $\ast$ {\em ptr}) const}}
+\label{class_d_d4hep_1_1_component_cast_abf0cc9ff379a6dfb09f95c2a6c3c9fb7}
+
+
+Apply cast using typeinfo instead of dynamic\_\-cast. 
+
+Definition at line 368 of file Primitives.cpp.
+
+References abi\_\-class, cast, cast\_\-wrap(), and type.
+
+Referenced by DD4hep::Simulation::Geant4HitCollection::getData(), and DD4hep::Simulation::Geant4HitCollection::releaseData().\hypertarget{class_d_d4hep_1_1_component_cast_aace12e8cef1815233b06c108f0d85082}{
+\index{DD4hep::ComponentCast@{DD4hep::ComponentCast}!apply\_\-dynCast@{apply\_\-dynCast}}
+\index{apply\_\-dynCast@{apply\_\-dynCast}!DD4hep::ComponentCast@{DD4hep::ComponentCast}}
+\subsubsection[{apply\_\-dynCast}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ DD4hep::ComponentCast::apply\_\-dynCast (const {\bf ComponentCast} \& {\em to}, \/  const void $\ast$ {\em ptr}) const}}
+\label{class_d_d4hep_1_1_component_cast_aace12e8cef1815233b06c108f0d85082}
+
+
+Apply cast using typeinfo instead of dynamic\_\-cast. 
+
+Definition at line 319 of file Primitives.cpp.
+
+References abi\_\-class, cast, cast\_\-wrap(), and type.
+
+Referenced by apply\_\-upCast(), and DD4hep::Simulation::Geant4HitWrapper::HitManipulator::castHit().\hypertarget{class_d_d4hep_1_1_component_cast_a07a0c4c9fe6a3d703602df77211ce37e}{
+\index{DD4hep::ComponentCast@{DD4hep::ComponentCast}!apply\_\-upCast@{apply\_\-upCast}}
+\index{apply\_\-upCast@{apply\_\-upCast}!DD4hep::ComponentCast@{DD4hep::ComponentCast}}
+\subsubsection[{apply\_\-upCast}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ DD4hep::ComponentCast::apply\_\-upCast (const {\bf ComponentCast} \& {\em to}, \/  const void $\ast$ {\em ptr}) const}}
+\label{class_d_d4hep_1_1_component_cast_a07a0c4c9fe6a3d703602df77211ce37e}
+
+
+Apply cast using typeinfo instead of dynamic\_\-cast. 
+
+Definition at line 359 of file Primitives.cpp.
+
+References apply\_\-dynCast().\hypertarget{class_d_d4hep_1_1_component_cast_a0bd14bc60af0175c7dad5164128cf030}{
+\index{DD4hep::ComponentCast@{DD4hep::ComponentCast}!instance@{instance}}
+\index{instance@{instance}!DD4hep::ComponentCast@{DD4hep::ComponentCast}}
+\subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE $>$ static {\bf ComponentCast}\& DD4hep::ComponentCast::instance ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_d4hep_1_1_component_cast_a0bd14bc60af0175c7dad5164128cf030}
+
+
+Definition at line 197 of file Primitives.h.
+
+Referenced by DD4hep::Simulation::Geant4HitWrapper::HitManipulator::instance().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_component_cast_ae8cce3fcc69745f330272a49d51024dd}{
+\index{DD4hep::ComponentCast@{DD4hep::ComponentCast}!abi\_\-class@{abi\_\-class}}
+\index{abi\_\-class@{abi\_\-class}!DD4hep::ComponentCast@{DD4hep::ComponentCast}}
+\subsubsection[{abi\_\-class}]{\setlength{\rightskip}{0pt plus 5cm}const void$\ast$ {\bf DD4hep::ComponentCast::abi\_\-class}}}
+\label{class_d_d4hep_1_1_component_cast_ae8cce3fcc69745f330272a49d51024dd}
+
+
+Definition at line 177 of file Primitives.h.
+
+Referenced by apply\_\-downCast(), apply\_\-dynCast(), and ComponentCast().\hypertarget{class_d_d4hep_1_1_component_cast_a2f6cd06755e613e3f02c5302361d7024}{
+\index{DD4hep::ComponentCast@{DD4hep::ComponentCast}!cast@{cast}}
+\index{cast@{cast}!DD4hep::ComponentCast@{DD4hep::ComponentCast}}
+\subsubsection[{cast}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cast\_\-t} {\bf DD4hep::ComponentCast::cast}}}
+\label{class_d_d4hep_1_1_component_cast_a2f6cd06755e613e3f02c5302361d7024}
+
+
+Definition at line 179 of file Primitives.h.
+
+Referenced by apply\_\-downCast(), and apply\_\-dynCast().\hypertarget{class_d_d4hep_1_1_component_cast_af161de076d882540309e24d86ef50137}{
+\index{DD4hep::ComponentCast@{DD4hep::ComponentCast}!destroy@{destroy}}
+\index{destroy@{destroy}!DD4hep::ComponentCast@{DD4hep::ComponentCast}}
+\subsubsection[{destroy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf destroy\_\-t} {\bf DD4hep::ComponentCast::destroy}}}
+\label{class_d_d4hep_1_1_component_cast_af161de076d882540309e24d86ef50137}
+
+
+Definition at line 178 of file Primitives.h.\hypertarget{class_d_d4hep_1_1_component_cast_a984d18ed863fe54855cf3308560270f0}{
+\index{DD4hep::ComponentCast@{DD4hep::ComponentCast}!type@{type}}
+\index{type@{type}!DD4hep::ComponentCast@{DD4hep::ComponentCast}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}const std::type\_\-info\& {\bf DD4hep::ComponentCast::type}}}
+\label{class_d_d4hep_1_1_component_cast_a984d18ed863fe54855cf3308560270f0}
+
+
+Definition at line 175 of file Primitives.h.
+
+Referenced by apply\_\-downCast(), apply\_\-dynCast(), and ComponentCast().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_primitives_8h}{Primitives.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_primitives_8cpp}{Primitives.cpp}\end{DoxyCompactItemize}

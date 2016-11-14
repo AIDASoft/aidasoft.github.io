@@ -1,0 +1,68 @@
+\hypertarget{_component_properties__inl_8h}{
+\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/ComponentProperties\_\-inl.h File Reference}
+\label{_component_properties__inl_8h}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/ComponentProperties\_\-inl.h@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/ComponentProperties\_\-inl.h}}
+}
+{\ttfamily \#include \char`\"{}DD4hep/BasicGrammar.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/ComponentProperties.h\char`\"{}}\par
+{\ttfamily \#include $<$sstream$>$}\par
+{\ttfamily \#include $<$vector$>$}\par
+{\ttfamily \#include $<$list$>$}\par
+{\ttfamily \#include $<$map$>$}\par
+{\ttfamily \#include $<$set$>$}\par
+{\ttfamily \#include $<$stdexcept$>$}\par
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_d_d4hep}{DD4hep}
+
+
+\begin{DoxyCompactList}\small\item\em Namespace for the AIDA detector description toolkit. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_component_properties__inl_8h_ad389d4c6526776c78c29e4bca0beeab6}{DD4HEP\_\-DEFINE\_\-PROPERTY\_\-TYPE}(x)
+\item 
+\#define \hyperlink{_component_properties__inl_8h_a2dfa1ae2a1a0cffbbe084f92ef1ce405}{DD4HEP\_\-DEFINE\_\-PROPERTY\_\-CONT}(x)
+\item 
+\#define \hyperlink{_component_properties__inl_8h_a27a91e7127d713c07d3c488b7ab3e609}{DD4HEP\_\-DEFINE\_\-PROPERTY\_\-U\_\-CONT}(x)~DD4HEP\_\-DEFINE\_\-PROPERTY\_\-CONT(x)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_component_properties__inl_8h_a2dfa1ae2a1a0cffbbe084f92ef1ce405}{
+\index{ComponentProperties\_\-inl.h@{ComponentProperties\_\-inl.h}!DD4HEP\_\-DEFINE\_\-PROPERTY\_\-CONT@{DD4HEP\_\-DEFINE\_\-PROPERTY\_\-CONT}}
+\index{DD4HEP\_\-DEFINE\_\-PROPERTY\_\-CONT@{DD4HEP\_\-DEFINE\_\-PROPERTY\_\-CONT}!ComponentProperties_inl.h@{ComponentProperties\_\-inl.h}}
+\subsubsection[{DD4HEP\_\-DEFINE\_\-PROPERTY\_\-CONT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-DEFINE\_\-PROPERTY\_\-CONT(x)}}
+\label{_component_properties__inl_8h_a2dfa1ae2a1a0cffbbe084f92ef1ce405}
+{\bfseries Value:}
+\begin{DoxyCode}
+DD4HEP_DEFINE_PROPERTY_TYPE(x);               \
+  DD4HEP_DEFINE_PROPERTY_TYPE(std::vector<x>);  \
+  DD4HEP_DEFINE_PROPERTY_TYPE(std::list<x>);    \
+  DD4HEP_DEFINE_PROPERTY_TYPE(std::set<x>)
+\end{DoxyCode}
+
+
+Definition at line 80 of file ComponentProperties\_\-inl.h.\hypertarget{_component_properties__inl_8h_ad389d4c6526776c78c29e4bca0beeab6}{
+\index{ComponentProperties\_\-inl.h@{ComponentProperties\_\-inl.h}!DD4HEP\_\-DEFINE\_\-PROPERTY\_\-TYPE@{DD4HEP\_\-DEFINE\_\-PROPERTY\_\-TYPE}}
+\index{DD4HEP\_\-DEFINE\_\-PROPERTY\_\-TYPE@{DD4HEP\_\-DEFINE\_\-PROPERTY\_\-TYPE}!ComponentProperties_inl.h@{ComponentProperties\_\-inl.h}}
+\subsubsection[{DD4HEP\_\-DEFINE\_\-PROPERTY\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-DEFINE\_\-PROPERTY\_\-TYPE(x)}}
+\label{_component_properties__inl_8h_ad389d4c6526776c78c29e4bca0beeab6}
+{\bfseries Value:}
+\begin{DoxyCode}
+template x Property::value() const;                     \
+  template void Property::value(x& value) const;          \
+  template void Property::set(const x& value);            \
+  template Property& Property::operator=(const x& value); \
+  template void Property::make(x& value)
+\end{DoxyCode}
+
+
+Definition at line 72 of file ComponentProperties\_\-inl.h.\hypertarget{_component_properties__inl_8h_a27a91e7127d713c07d3c488b7ab3e609}{
+\index{ComponentProperties\_\-inl.h@{ComponentProperties\_\-inl.h}!DD4HEP\_\-DEFINE\_\-PROPERTY\_\-U\_\-CONT@{DD4HEP\_\-DEFINE\_\-PROPERTY\_\-U\_\-CONT}}
+\index{DD4HEP\_\-DEFINE\_\-PROPERTY\_\-U\_\-CONT@{DD4HEP\_\-DEFINE\_\-PROPERTY\_\-U\_\-CONT}!ComponentProperties_inl.h@{ComponentProperties\_\-inl.h}}
+\subsubsection[{DD4HEP\_\-DEFINE\_\-PROPERTY\_\-U\_\-CONT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-DEFINE\_\-PROPERTY\_\-U\_\-CONT(x)~DD4HEP\_\-DEFINE\_\-PROPERTY\_\-CONT(x)}}
+\label{_component_properties__inl_8h_a27a91e7127d713c07d3c488b7ab3e609}
+
+
+Definition at line 97 of file ComponentProperties\_\-inl.h.

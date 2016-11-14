@@ -1,0 +1,246 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_output_action}{
+\section{DD4hep::Simulation::Geant4OutputAction Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_output_action}\index{DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}}
+}
+
+
+Base class to output Geant4 event data to persistent media.  
+
+
+{\ttfamily \#include $<$Geant4OutputAction.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4OutputAction::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{class_d_d4hep_1_1_simulation_1_1_geant4_output_action}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_1_1_output_context}{OutputContext}
+\begin{DoxyCompactList}\small\item\em Helper class for thread savety. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_a983f32c2248efafa8c632b9608820f86}{Geant4OutputAction} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$c, const std::string \&nam)
+\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_aeead76ac5f330277dfb11c924bbfbc08}{$\sim$Geant4OutputAction} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_abc1171027ea0a21fedef2d49a14ec557}{configureFiber} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$ctxt)
+\begin{DoxyCompactList}\small\item\em Set or update client for the use in a new thread fiber. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_afaad36616c890ac39e80421d340efd47}{begin} (const G4Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em begin-\/of-\/event callback \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_a6fa4e933973a42a00b7be10292619780}{end} (const G4Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em End-\/of-\/event callback. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_afc8b13d72433d8f917555e952e1ce528}{beginRun} (const G4Run $\ast$run)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} to initialize storing the Geant4 information. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_ac89540100411ccec1804da9afbb843a4}{endRun} (const G4Run $\ast$run)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} to store the Geant4 run information. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_a4016b3e0ee787a3ac3d1fcd7a4c84a68}{saveRun} (const G4Run $\ast$run)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} to store the Geant4 event. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_a660080e931d757573839927ca99bfbed}{saveEvent} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_1_1_output_context}{OutputContext}$<$ G4Event $>$ \&ctxt)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} to store the Geant4 event. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_aa43d1f01dbcb11ac1d937a878d87a90f}{saveCollection} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_1_1_output_context}{OutputContext}$<$ G4Event $>$ \&ctxt, \hyperlink{class_g4_v_hits_collection}{G4VHitsCollection} $\ast$collection)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} to store each Geant4 hit collection. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_a1d83299b79de6a1a75e70ef5a9e4d3eb}{commit} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_1_1_output_context}{OutputContext}$<$ G4Event $>$ \&ctxt)
+\begin{DoxyCompactList}\small\item\em Commit data at end of filling procedure. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::string \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_ac3bd42351cc01a0e259cb5cc9641c6f4}{m\_\-output}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: \char`\"{}Output\char`\"{} output destination. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_a7d76cce37c53f07c27f41a887fc05dbe}{m\_\-errorFatal}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: \char`\"{}HandleErrorsAsFatal\char`\"{} \hyperlink{class_d_d4hep_1_1_handle}{Handle} errors as fatal and rethrow eventual exceptions. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_map}{Geant4ParticleMap} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_ac2c6fd898ae2b43b9742cd0fb36d31c1}{m\_\-truth}
+\begin{DoxyCompactList}\small\item\em Reference to MC truth object. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class to output Geant4 event data to persistent media. \begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 41 of file Geant4OutputAction.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_a983f32c2248efafa8c632b9608820f86}{
+\index{DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}!Geant4OutputAction@{Geant4OutputAction}}
+\index{Geant4OutputAction@{Geant4OutputAction}!DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}}
+\subsubsection[{Geant4OutputAction}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4OutputAction::Geant4OutputAction ({\bf Geant4Context} $\ast$ {\em c}, \/  const std::string \& {\em nam})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_a983f32c2248efafa8c632b9608820f86}
+
+
+Standard constructor. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_aeead76ac5f330277dfb11c924bbfbc08}{
+\index{DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}!$\sim$Geant4OutputAction@{$\sim$Geant4OutputAction}}
+\index{$\sim$Geant4OutputAction@{$\sim$Geant4OutputAction}!DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}}
+\subsubsection[{$\sim$Geant4OutputAction}]{\setlength{\rightskip}{0pt plus 5cm}Geant4OutputAction::$\sim$Geant4OutputAction ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_aeead76ac5f330277dfb11c924bbfbc08}
+
+
+Default destructor. 
+
+Definition at line 42 of file Geant4OutputAction.cpp.
+
+References DD4hep::InstanceCount::decrement().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_afaad36616c890ac39e80421d340efd47}{
+\index{DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}!begin@{begin}}
+\index{begin@{begin}!DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4OutputAction::begin (const G4Event $\ast$ {\em event})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_afaad36616c890ac39e80421d340efd47}
+
+
+begin-\/of-\/event callback 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_ad10785d157fa962f4ef2a5361bb0f5da}{DD4hep::Simulation::Geant4EventAction}.
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output2_l_c_i_o_a36b7ecdf04169c4597bae18e021b60ea}{DD4hep::Simulation::Geant4Output2LCIO}.
+
+Definition at line 54 of file Geant4OutputAction.cpp.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_afc8b13d72433d8f917555e952e1ce528}{
+\index{DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}!beginRun@{beginRun}}
+\index{beginRun@{beginRun}!DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}}
+\subsubsection[{beginRun}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4OutputAction::beginRun (const G4Run $\ast$ {\em run})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_afc8b13d72433d8f917555e952e1ce528}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} to initialize storing the Geant4 information. \hyperlink{class_d_d4hep_1_1_callback}{Callback} to initialize the storing of the Geant4 information. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output2_r_o_o_t_a03f3906460b18ff0b31b9c0f9060d93d}{DD4hep::Simulation::Geant4Output2ROOT}, and \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output2_l_c_i_o_aebca66a953f5c24b0098b5066fe4c3fc}{DD4hep::Simulation::Geant4Output2LCIO}.
+
+Definition at line 111 of file Geant4OutputAction.cpp.
+
+Referenced by configureFiber().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_a1d83299b79de6a1a75e70ef5a9e4d3eb}{
+\index{DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}!commit@{commit}}
+\index{commit@{commit}!DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}}
+\subsubsection[{commit}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4OutputAction::commit ({\bf OutputContext}$<$ G4Event $>$ \& {\em ctxt})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_a1d83299b79de6a1a75e70ef5a9e4d3eb}
+
+
+Commit data at end of filling procedure. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output2_r_o_o_t_a06090a17c7d266dcdfb7b2b180aeaffe}{DD4hep::Simulation::Geant4Output2ROOT}, and \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output2_l_c_i_o_a86575064911453b387f237077fa8a969}{DD4hep::Simulation::Geant4Output2LCIO}.
+
+Definition at line 107 of file Geant4OutputAction.cpp.
+
+Referenced by end().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_abc1171027ea0a21fedef2d49a14ec557}{
+\index{DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}!configureFiber@{configureFiber}}
+\index{configureFiber@{configureFiber}!DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}}
+\subsubsection[{configureFiber}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4OutputAction::configureFiber ({\bf Geant4Context} $\ast$ {\em ctxt})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_abc1171027ea0a21fedef2d49a14ec557}
+
+
+Set or update client for the use in a new thread fiber. Set or update client for the use in a new thread fiber with seperate action sequences. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a6adc7138508303e4e417cb48a737ab19}{DD4hep::Simulation::Geant4Action}.
+
+Definition at line 47 of file Geant4OutputAction.cpp.
+
+References beginRun(), DD4hep::Simulation::Geant4RunActionSequence::callAtBegin(), DD4hep::Simulation::Geant4RunActionSequence::callAtEnd(), endRun(), and DD4hep::Simulation::Geant4Context::runAction().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_a6fa4e933973a42a00b7be10292619780}{
+\index{DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}!end@{end}}
+\index{end@{end}!DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4OutputAction::end (const G4Event $\ast$ {\em event})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_a6fa4e933973a42a00b7be10292619780}
+
+
+End-\/of-\/event callback. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_af131bad73c28da3419af7c29e0b8c250}{DD4hep::Simulation::Geant4EventAction}.
+
+Definition at line 58 of file Geant4OutputAction.cpp.
+
+References commit(), DD4hep::Simulation::Geant4Action::context(), DD4hep::ERROR, DD4hep::Simulation::Geant4Context::event(), DD4hep::Simulation::Geant4Event::extension(), DD4hep::Simulation::Geant4ParticleMap::isValid(), m\_\-errorFatal, m\_\-truth, DD4hep::Simulation::Geant4Action::name(), DD4hep::printout(), saveCollection(), saveEvent(), and DD4hep::WARNING.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_ac89540100411ccec1804da9afbb843a4}{
+\index{DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}!endRun@{endRun}}
+\index{endRun@{endRun}!DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}}
+\subsubsection[{endRun}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4OutputAction::endRun (const G4Run $\ast$ {\em run})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_ac89540100411ccec1804da9afbb843a4}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} to store the Geant4 run information. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output2_l_c_i_o_a9365b2b05b745a7807ce06163a7977fb}{DD4hep::Simulation::Geant4Output2LCIO}.
+
+Definition at line 115 of file Geant4OutputAction.cpp.
+
+Referenced by configureFiber().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_aa43d1f01dbcb11ac1d937a878d87a90f}{
+\index{DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}!saveCollection@{saveCollection}}
+\index{saveCollection@{saveCollection}!DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}}
+\subsubsection[{saveCollection}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4OutputAction::saveCollection ({\bf OutputContext}$<$ G4Event $>$ \& {\em ctxt}, \/  {\bf G4VHitsCollection} $\ast$ {\em collection})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_aa43d1f01dbcb11ac1d937a878d87a90f}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} to store each Geant4 hit collection. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output2_r_o_o_t_a1f61031bde79ed84a62145cb32ac4428}{DD4hep::Simulation::Geant4Output2ROOT}, and \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output2_l_c_i_o_aeba8f94323098614ee901a3ff0642c73}{DD4hep::Simulation::Geant4Output2LCIO}.
+
+Definition at line 127 of file Geant4OutputAction.cpp.
+
+Referenced by end().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_a660080e931d757573839927ca99bfbed}{
+\index{DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}!saveEvent@{saveEvent}}
+\index{saveEvent@{saveEvent}!DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}}
+\subsubsection[{saveEvent}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4OutputAction::saveEvent ({\bf OutputContext}$<$ G4Event $>$ \& {\em ctxt})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_a660080e931d757573839927ca99bfbed}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} to store the Geant4 event. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output2_r_o_o_t_a0562da9b5fdb0f81fa8d14457fd3f319}{DD4hep::Simulation::Geant4Output2ROOT}, and \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output2_l_c_i_o_a86749213718dcb1ed4783ab86a374d92}{DD4hep::Simulation::Geant4Output2LCIO}.
+
+Definition at line 123 of file Geant4OutputAction.cpp.
+
+Referenced by end().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_a4016b3e0ee787a3ac3d1fcd7a4c84a68}{
+\index{DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}!saveRun@{saveRun}}
+\index{saveRun@{saveRun}!DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}}
+\subsubsection[{saveRun}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4OutputAction::saveRun (const G4Run $\ast$ {\em run})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_a4016b3e0ee787a3ac3d1fcd7a4c84a68}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} to store the Geant4 event. \hyperlink{class_d_d4hep_1_1_callback}{Callback} to store the Geant4 run information. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output2_l_c_i_o_a0fa2240decba857840eed494d6349f5f}{DD4hep::Simulation::Geant4Output2LCIO}.
+
+Definition at line 119 of file Geant4OutputAction.cpp.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_a7d76cce37c53f07c27f41a887fc05dbe}{
+\index{DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}!m\_\-errorFatal@{m\_\-errorFatal}}
+\index{m\_\-errorFatal@{m\_\-errorFatal}!DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}}
+\subsubsection[{m\_\-errorFatal}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf DD4hep::Simulation::Geant4OutputAction::m\_\-errorFatal}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_a7d76cce37c53f07c27f41a887fc05dbe}
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}: \char`\"{}HandleErrorsAsFatal\char`\"{} \hyperlink{class_d_d4hep_1_1_handle}{Handle} errors as fatal and rethrow eventual exceptions. 
+
+Definition at line 59 of file Geant4OutputAction.h.
+
+Referenced by end().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_ac3bd42351cc01a0e259cb5cc9641c6f4}{
+\index{DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}!m\_\-output@{m\_\-output}}
+\index{m\_\-output@{m\_\-output}!DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}}
+\subsubsection[{m\_\-output}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::Simulation::Geant4OutputAction::m\_\-output}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_ac3bd42351cc01a0e259cb5cc9641c6f4}
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}: \char`\"{}Output\char`\"{} output destination. 
+
+Definition at line 57 of file Geant4OutputAction.h.
+
+Referenced by DD4hep::Simulation::Geant4Output2ROOT::beginRun(), and DD4hep::Simulation::Geant4Output2LCIO::beginRun().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_ac2c6fd898ae2b43b9742cd0fb36d31c1}{
+\index{DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}!m\_\-truth@{m\_\-truth}}
+\index{m\_\-truth@{m\_\-truth}!DD4hep::Simulation::Geant4OutputAction@{DD4hep::Simulation::Geant4OutputAction}}
+\subsubsection[{m\_\-truth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4ParticleMap}$\ast$ {\bf DD4hep::Simulation::Geant4OutputAction::m\_\-truth}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_ac2c6fd898ae2b43b9742cd0fb36d31c1}
+
+
+Reference to MC truth object. 
+
+Definition at line 61 of file Geant4OutputAction.h.
+
+Referenced by end(), and DD4hep::Simulation::Geant4Output2ROOT::saveCollection().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_output_action_8h}{Geant4OutputAction.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_output_action_8cpp}{Geant4OutputAction.cpp}\end{DoxyCompactItemize}

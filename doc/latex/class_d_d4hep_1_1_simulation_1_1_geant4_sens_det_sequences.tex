@@ -1,0 +1,192 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences}{
+\section{DD4hep::Simulation::Geant4SensDetSequences Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences}\index{DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}}
+}
+
+
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences}{Geant4SensDetSequences}: class to access groups of sensitive actions.  
+
+
+{\ttfamily \#include $<$Geant4SensDetAction.h$>$}\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std::map$<$ std::string, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence}{Geant4SensDetActionSequence} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a2266138a517dd9b784af9234312fdd12}{Members}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a5a78304dcb1472bf7a7de1b4305a264f}{Geant4SensDetSequences} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a6f27557827175da8f038b84959cb109d}{$\sim$Geant4SensDetSequences} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence}{Geant4SensDetActionSequence} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_ac9ce2f754375eef699ff1a05c1759c03}{operator\mbox{[}$\,$\mbox{]}} (const std::string \&name) const 
+\begin{DoxyCompactList}\small\item\em Access sequence member by name. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence}{Geant4SensDetActionSequence} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a3eab0a62ebd3ebf84c311732e40bc162}{find} (const std::string \&name) const 
+\begin{DoxyCompactList}\small\item\em Access sequence member by name. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a2266138a517dd9b784af9234312fdd12}{Members} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a40e7646be1758328d5bf58213b320bf9}{sequences} ()
+\begin{DoxyCompactList}\small\item\em Access to the members. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a2266138a517dd9b784af9234312fdd12}{Members} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_aacde15e4b1fb60c1ed56f438bc92db9a}{sequences} () const 
+\begin{DoxyCompactList}\small\item\em Access to the members CONST. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_ad30860ebb23e7fbbaf18c8a7194ae6cc}{clear} ()
+\begin{DoxyCompactList}\small\item\em Clear the sequence list. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a4ec3cfb93ef16c90a28f451c58711692}{insert} (const std::string \&name, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence}{Geant4SensDetActionSequence} $\ast$seq)
+\begin{DoxyCompactList}\small\item\em Insert sequence member. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a2266138a517dd9b784af9234312fdd12}{Members} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a913b05e77e69effeeafbd0f7a604cd70}{m\_\-sequences}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a17a3e017d1d61a4f615d4e8eef0f98cb}{Geant4ActionContainer}
+\item 
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a0dd78d992a2c8dccba1ab80d814020cc}{Geant4SensDetActionSequence}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences}{Geant4SensDetSequences}: class to access groups of sensitive actions. Concrete implementation of the sensitive detector action sequence
+
+Note Multi-\/Threading issue: Neither callbacks not the action list is protected against multiple threads calling the Geant4 callbacks! These must be protected in the user actions themselves.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 420 of file Geant4SensDetAction.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a2266138a517dd9b784af9234312fdd12}{
+\index{DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}!Members@{Members}}
+\index{Members@{Members}!DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}}
+\subsubsection[{Members}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$std::string, {\bf Geant4SensDetActionSequence}$\ast$$>$ {\bf DD4hep::Simulation::Geant4SensDetSequences::Members}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a2266138a517dd9b784af9234312fdd12}
+
+
+Definition at line 424 of file Geant4SensDetAction.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a5a78304dcb1472bf7a7de1b4305a264f}{
+\index{DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}!Geant4SensDetSequences@{Geant4SensDetSequences}}
+\index{Geant4SensDetSequences@{Geant4SensDetSequences}!DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}}
+\subsubsection[{Geant4SensDetSequences}]{\setlength{\rightskip}{0pt plus 5cm}Geant4SensDetSequences::Geant4SensDetSequences ()}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a5a78304dcb1472bf7a7de1b4305a264f}
+
+
+Default constructor. 
+
+Definition at line 400 of file Geant4SensDetAction.cpp.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a6f27557827175da8f038b84959cb109d}{
+\index{DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}!$\sim$Geant4SensDetSequences@{$\sim$Geant4SensDetSequences}}
+\index{$\sim$Geant4SensDetSequences@{$\sim$Geant4SensDetSequences}!DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}}
+\subsubsection[{$\sim$Geant4SensDetSequences}]{\setlength{\rightskip}{0pt plus 5cm}Geant4SensDetSequences::$\sim$Geant4SensDetSequences ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a6f27557827175da8f038b84959cb109d}
+
+
+Default destructor. 
+
+Definition at line 404 of file Geant4SensDetAction.cpp.
+
+References m\_\-sequences, and DD4hep::releaseObjects().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_ad30860ebb23e7fbbaf18c8a7194ae6cc}{
+\index{DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}!clear@{clear}}
+\index{clear@{clear}!DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SensDetSequences::clear ()}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_ad30860ebb23e7fbbaf18c8a7194ae6cc}
+
+
+Clear the sequence list. 
+
+Definition at line 440 of file Geant4SensDetAction.cpp.
+
+References m\_\-sequences.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a3eab0a62ebd3ebf84c311732e40bc162}{
+\index{DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}!find@{find}}
+\index{find@{find}!DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4SensDetActionSequence} $\ast$ Geant4SensDetSequences::find (const std::string \& {\em name}) const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a3eab0a62ebd3ebf84c311732e40bc162}
+
+
+Access sequence member by name. 
+
+Definition at line 419 of file Geant4SensDetAction.cpp.
+
+References m\_\-sequences.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a4ec3cfb93ef16c90a28f451c58711692}{
+\index{DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}!insert@{insert}}
+\index{insert@{insert}!DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Simulation::Geant4SensDetSequences::insert (const std::string \& {\em name}, \/  {\bf Geant4SensDetActionSequence} $\ast$ {\em seq})\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a4ec3cfb93ef16c90a28f451c58711692}
+
+
+Insert sequence member. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_ac9ce2f754375eef699ff1a05c1759c03}{
+\index{DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4SensDetActionSequence}$\ast$ DD4hep::Simulation::Geant4SensDetSequences::operator\mbox{[}$\,$\mbox{]} (const std::string \& {\em name}) const}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_ac9ce2f754375eef699ff1a05c1759c03}
+
+
+Access sequence member by name. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_aacde15e4b1fb60c1ed56f438bc92db9a}{
+\index{DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}!sequences@{sequences}}
+\index{sequences@{sequences}!DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}}
+\subsubsection[{sequences}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Members}\& DD4hep::Simulation::Geant4SensDetSequences::sequences () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_aacde15e4b1fb60c1ed56f438bc92db9a}
+
+
+Access to the members CONST. 
+
+Definition at line 443 of file Geant4SensDetAction.h.
+
+References m\_\-sequences.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a40e7646be1758328d5bf58213b320bf9}{
+\index{DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}!sequences@{sequences}}
+\index{sequences@{sequences}!DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}}
+\subsubsection[{sequences}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Members}\& DD4hep::Simulation::Geant4SensDetSequences::sequences ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a40e7646be1758328d5bf58213b320bf9}
+
+
+Access to the members. 
+
+Definition at line 439 of file Geant4SensDetAction.h.
+
+References m\_\-sequences.
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a17a3e017d1d61a4f615d4e8eef0f98cb}{
+\index{DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}!Geant4ActionContainer@{Geant4ActionContainer}}
+\index{Geant4ActionContainer@{Geant4ActionContainer}!DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}}
+\subsubsection[{Geant4ActionContainer}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Geant4ActionContainer}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a17a3e017d1d61a4f615d4e8eef0f98cb}
+
+
+Definition at line 422 of file Geant4SensDetAction.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a0dd78d992a2c8dccba1ab80d814020cc}{
+\index{DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}!Geant4SensDetActionSequence@{Geant4SensDetActionSequence}}
+\index{Geant4SensDetActionSequence@{Geant4SensDetActionSequence}!DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}}
+\subsubsection[{Geant4SensDetActionSequence}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Geant4SensDetActionSequence}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a0dd78d992a2c8dccba1ab80d814020cc}
+
+
+Definition at line 423 of file Geant4SensDetAction.h.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a913b05e77e69effeeafbd0f7a604cd70}{
+\index{DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}!m\_\-sequences@{m\_\-sequences}}
+\index{m\_\-sequences@{m\_\-sequences}!DD4hep::Simulation::Geant4SensDetSequences@{DD4hep::Simulation::Geant4SensDetSequences}}
+\subsubsection[{m\_\-sequences}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Members} {\bf DD4hep::Simulation::Geant4SensDetSequences::m\_\-sequences}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_sequences_a913b05e77e69effeeafbd0f7a604cd70}
+
+
+Definition at line 426 of file Geant4SensDetAction.h.
+
+Referenced by clear(), find(), sequences(), and $\sim$Geant4SensDetSequences().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_sens_det_action_8h}{Geant4SensDetAction.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_sens_det_action_8cpp}{Geant4SensDetAction.cpp}\end{DoxyCompactItemize}

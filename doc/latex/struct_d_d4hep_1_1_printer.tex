@@ -1,0 +1,224 @@
+\hypertarget{struct_d_d4hep_1_1_printer}{
+\section{DD4hep::Printer$<$ T $>$ Class Template Reference}
+\label{struct_d_d4hep_1_1_printer}\index{DD4hep::Printer@{DD4hep::Printer}}
+}
+
+
+Helper class template to implement ASCII object dumps.  
+
+
+{\ttfamily \#include $<$DD4hep/compact/Conversions.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_d_d4hep_1_1_printer_accc6dac339dc1c219f32c0f2cdef6b70}{Printer} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{Geometry::LCDD} $\ast$l, std::ostream \&stream, const std::string \&p=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Initializing constructor of the functor. \item\end{DoxyCompactList}\item 
+void \hyperlink{struct_d_d4hep_1_1_printer_a8612eda65f4491a0e5d45e235ca09359}{operator()} (const \hyperlink{class_t}{T} \&value) const 
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} operator to be specialized depending on the element type. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{struct_d_d4hep_1_1_printer_afe43814cba7a5a64dc550b7b9be43a81}{operator()} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_d_d4hep_1_1_named_object}{NamedObject} $>$ \&val) const
+\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{struct_d_d4hep_1_1_printer_aa5a952368672b69afb9dbbc0243798d5}{operator()} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_t_named}{TNamed} $>$ \&val) const
+\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{struct_d_d4hep_1_1_printer_af17e77692a1780cd7e9b72f8ef93b305}{operator()} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_constant}{Constant} \&val) const
+\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{struct_d_d4hep_1_1_printer_a28d6e698fccdabcfda67d3460012355a}{operator()} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_material}{Material} \&val) const
+\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{struct_d_d4hep_1_1_printer_a75af40a21128f843605984b619878a7e}{operator()} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_vis_attr}{VisAttr} \&val) const
+\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{struct_d_d4hep_1_1_printer_a81f7b0ce01f9aa05f670dab7bfcd0926}{operator()} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_readout}{Readout} \&val) const
+\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{struct_d_d4hep_1_1_printer_a9a184466159682beda92ac777baa0c59}{operator()} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_region}{Region} \&val) const
+\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{struct_d_d4hep_1_1_printer_a39503398afc129d7f2bc912e8ebc9324}{operator()} (const RotationZYX \&val) const
+\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{struct_d_d4hep_1_1_printer_a88343bb8ee9c514f04c9f82bce31ae11}{operator()} (const Position \&val) const
+\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{struct_d_d4hep_1_1_printer_a07e2ce42a673e4d054442f6b4ebbc63c}{operator()} (const Condition \&val) const
+\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{struct_d_d4hep_1_1_printer_a4926e2d73384ba7456382d8da861efa6}{operator()} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} $\ast$const \&) const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{Geometry::LCDD} $\ast$ \hyperlink{struct_d_d4hep_1_1_printer_a09e1761c59664ca7953a3bead1f44dd4}{lcdd}
+\begin{DoxyCompactList}\small\item\em Reference to the detector description object. \item\end{DoxyCompactList}\item 
+std::ostream \& \hyperlink{struct_d_d4hep_1_1_printer_a1ec1ad8ef8150a32854541bec0f9d7c8}{os}
+\begin{DoxyCompactList}\small\item\em Reference to the output stream object, the \hyperlink{struct_d_d4hep_1_1_printer}{Printer} object should write. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{struct_d_d4hep_1_1_printer_a59b1bd251047feee01c469a91564a320}{prefix}
+\begin{DoxyCompactList}\small\item\em Optional text prefix when formatting the output. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$ class DD4hep::Printer$<$ T $>$}
+
+Helper class template to implement ASCII object dumps. Small helper class to print objects
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 208 of file Printout.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_d_d4hep_1_1_printer_accc6dac339dc1c219f32c0f2cdef6b70}{
+\index{DD4hep::Printer@{DD4hep::Printer}!Printer@{Printer}}
+\index{Printer@{Printer}!DD4hep::Printer@{DD4hep::Printer}}
+\subsubsection[{Printer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf DD4hep::Printer}$<$ {\bf T} $>$::{\bf Printer} (const {\bf Geometry::LCDD} $\ast$ {\em l}, \/  std::ostream \& {\em stream}, \/  const std::string \& {\em p} = {\ttfamily \char`\"{}\char`\"{}})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_printer_accc6dac339dc1c219f32c0f2cdef6b70}
+
+
+Initializing constructor of the functor. 
+
+Definition at line 216 of file Printout.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_d_d4hep_1_1_printer_a4926e2d73384ba7456382d8da861efa6}{
+\index{DD4hep::Printer@{DD4hep::Printer}!operator()@{operator()}}
+\index{operator()@{operator()}!DD4hep::Printer@{DD4hep::Printer}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void {\bf DD4hep::Printer}$<$ const {\bf LCDD} $\ast$ $>$::operator() (const {\bf LCDD} $\ast$const \&) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_printer_a4926e2d73384ba7456382d8da861efa6}
+
+
+Definition at line 134 of file ObjectPrintout.cpp.
+
+References DD4hep::Printer$<$ T $>$::lcdd, and DD4hep::Printer$<$ T $>$::os.\hypertarget{struct_d_d4hep_1_1_printer_a07e2ce42a673e4d054442f6b4ebbc63c}{
+\index{DD4hep::Printer@{DD4hep::Printer}!operator()@{operator()}}
+\index{operator()@{operator()}!DD4hep::Printer@{DD4hep::Printer}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void {\bf DD4hep::Printer}$<$ Condition $>$::operator() (const Condition \& {\em val}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_printer_a07e2ce42a673e4d054442f6b4ebbc63c}
+
+
+Definition at line 78 of file ObjectPrintout.cpp.
+
+References DD4hep::INFO, DD4hep::Printer$<$ T $>$::prefix, and DD4hep::printout().\hypertarget{struct_d_d4hep_1_1_printer_a88343bb8ee9c514f04c9f82bce31ae11}{
+\index{DD4hep::Printer@{DD4hep::Printer}!operator()@{operator()}}
+\index{operator()@{operator()}!DD4hep::Printer@{DD4hep::Printer}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void {\bf DD4hep::Printer}$<$ Position $>$::operator() (const Position \& {\em val}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_printer_a88343bb8ee9c514f04c9f82bce31ae11}
+
+
+Definition at line 75 of file ObjectPrintout.cpp.
+
+References DD4hep::INFO, DD4hep::Printer$<$ T $>$::prefix, and DD4hep::printout().\hypertarget{struct_d_d4hep_1_1_printer_a39503398afc129d7f2bc912e8ebc9324}{
+\index{DD4hep::Printer@{DD4hep::Printer}!operator()@{operator()}}
+\index{operator()@{operator()}!DD4hep::Printer@{DD4hep::Printer}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void {\bf DD4hep::Printer}$<$ RotationZYX $>$::operator() (const RotationZYX \& {\em val}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_printer_a39503398afc129d7f2bc912e8ebc9324}
+
+
+Definition at line 70 of file ObjectPrintout.cpp.
+
+References DD4hep::INFO, DD4hep::Printer$<$ T $>$::prefix, and DD4hep::printout().\hypertarget{struct_d_d4hep_1_1_printer_a9a184466159682beda92ac777baa0c59}{
+\index{DD4hep::Printer@{DD4hep::Printer}!operator()@{operator()}}
+\index{operator()@{operator()}!DD4hep::Printer@{DD4hep::Printer}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void {\bf DD4hep::Printer}$<$ {\bf Region} $>$::operator() (const {\bf Region} \& {\em val}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_printer_a9a184466159682beda92ac777baa0c59}
+
+
+Definition at line 66 of file ObjectPrintout.cpp.
+
+References DD4hep::INFO, DD4hep::Printer$<$ T $>$::prefix, and DD4hep::printout().\hypertarget{struct_d_d4hep_1_1_printer_a81f7b0ce01f9aa05f670dab7bfcd0926}{
+\index{DD4hep::Printer@{DD4hep::Printer}!operator()@{operator()}}
+\index{operator()@{operator()}!DD4hep::Printer@{DD4hep::Printer}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void {\bf DD4hep::Printer}$<$ {\bf Readout} $>$::operator() (const {\bf Readout} \& {\em val}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_printer_a81f7b0ce01f9aa05f670dab7bfcd0926}
+
+
+Definition at line 62 of file ObjectPrintout.cpp.
+
+References DD4hep::INFO, DD4hep::Printer$<$ T $>$::prefix, and DD4hep::printout().\hypertarget{struct_d_d4hep_1_1_printer_a75af40a21128f843605984b619878a7e}{
+\index{DD4hep::Printer@{DD4hep::Printer}!operator()@{operator()}}
+\index{operator()@{operator()}!DD4hep::Printer@{DD4hep::Printer}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void {\bf DD4hep::Printer}$<$ {\bf VisAttr} $>$::operator() (const {\bf VisAttr} \& {\em val}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_printer_a75af40a21128f843605984b619878a7e}
+
+
+Definition at line 58 of file ObjectPrintout.cpp.
+
+References DD4hep::INFO, DD4hep::Printer$<$ T $>$::prefix, DD4hep::printout(), and DD4hep::Geometry::VisAttr::toString().\hypertarget{struct_d_d4hep_1_1_printer_a28d6e698fccdabcfda67d3460012355a}{
+\index{DD4hep::Printer@{DD4hep::Printer}!operator()@{operator()}}
+\index{operator()@{operator()}!DD4hep::Printer@{DD4hep::Printer}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void {\bf DD4hep::Printer}$<$ {\bf Material} $>$::operator() (const {\bf Material} \& {\em val}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_printer_a28d6e698fccdabcfda67d3460012355a}
+
+
+Definition at line 54 of file ObjectPrintout.cpp.
+
+References DD4hep::INFO, DD4hep::Printer$<$ T $>$::prefix, DD4hep::printout(), and DD4hep::Geometry::Material::toString().\hypertarget{struct_d_d4hep_1_1_printer_af17e77692a1780cd7e9b72f8ef93b305}{
+\index{DD4hep::Printer@{DD4hep::Printer}!operator()@{operator()}}
+\index{operator()@{operator()}!DD4hep::Printer@{DD4hep::Printer}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void {\bf DD4hep::Printer}$<$ {\bf Constant} $>$::operator() (const {\bf Constant} \& {\em val}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_printer_af17e77692a1780cd7e9b72f8ef93b305}
+
+
+Definition at line 50 of file ObjectPrintout.cpp.
+
+References DD4hep::INFO, DD4hep::Printer$<$ T $>$::prefix, DD4hep::printout(), and DD4hep::Geometry::Constant::toString().\hypertarget{struct_d_d4hep_1_1_printer_aa5a952368672b69afb9dbbc0243798d5}{
+\index{DD4hep::Printer@{DD4hep::Printer}!operator()@{operator()}}
+\index{operator()@{operator()}!DD4hep::Printer@{DD4hep::Printer}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void {\bf DD4hep::Printer}$<$ {\bf Handle}$<$ {\bf TNamed} $>$ $>$::operator() (const {\bf Handle}$<$ {\bf TNamed} $>$ \& {\em val}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_printer_aa5a952368672b69afb9dbbc0243798d5}
+
+
+Definition at line 46 of file ObjectPrintout.cpp.
+
+References DD4hep::INFO, DD4hep::Printer$<$ T $>$::prefix, and DD4hep::printout().\hypertarget{struct_d_d4hep_1_1_printer_afe43814cba7a5a64dc550b7b9be43a81}{
+\index{DD4hep::Printer@{DD4hep::Printer}!operator()@{operator()}}
+\index{operator()@{operator()}!DD4hep::Printer@{DD4hep::Printer}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void {\bf DD4hep::Printer}$<$ {\bf Handle}$<$ {\bf NamedObject} $>$ $>$::operator() (const {\bf Handle}$<$ {\bf NamedObject} $>$ \& {\em val}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{struct_d_d4hep_1_1_printer_afe43814cba7a5a64dc550b7b9be43a81}
+
+
+Definition at line 43 of file ObjectPrintout.cpp.
+
+References DD4hep::INFO, DD4hep::Printer$<$ T $>$::prefix, and DD4hep::printout().\hypertarget{struct_d_d4hep_1_1_printer_a8612eda65f4491a0e5d45e235ca09359}{
+\index{DD4hep::Printer@{DD4hep::Printer}!operator()@{operator()}}
+\index{operator()@{operator()}!DD4hep::Printer@{DD4hep::Printer}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf DD4hep::Printer}$<$ {\bf T} $>$::operator() (const {\bf T} \& {\em value}) const}}
+\label{struct_d_d4hep_1_1_printer_a8612eda65f4491a0e5d45e235ca09359}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} operator to be specialized depending on the element type. 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_d_d4hep_1_1_printer_a09e1761c59664ca7953a3bead1f44dd4}{
+\index{DD4hep::Printer@{DD4hep::Printer}!lcdd@{lcdd}}
+\index{lcdd@{lcdd}!DD4hep::Printer@{DD4hep::Printer}}
+\subsubsection[{lcdd}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ const {\bf Geometry::LCDD}$\ast$ {\bf DD4hep::Printer}$<$ {\bf T} $>$::{\bf lcdd}}}
+\label{struct_d_d4hep_1_1_printer_a09e1761c59664ca7953a3bead1f44dd4}
+
+
+Reference to the detector description object. 
+
+Definition at line 210 of file Printout.h.
+
+Referenced by DD4hep::Printer$<$ T $>$::operator()().\hypertarget{struct_d_d4hep_1_1_printer_a1ec1ad8ef8150a32854541bec0f9d7c8}{
+\index{DD4hep::Printer@{DD4hep::Printer}!os@{os}}
+\index{os@{os}!DD4hep::Printer@{DD4hep::Printer}}
+\subsubsection[{os}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ std::ostream\& {\bf DD4hep::Printer}$<$ {\bf T} $>$::{\bf os}}}
+\label{struct_d_d4hep_1_1_printer_a1ec1ad8ef8150a32854541bec0f9d7c8}
+
+
+Reference to the output stream object, the \hyperlink{struct_d_d4hep_1_1_printer}{Printer} object should write. 
+
+Definition at line 212 of file Printout.h.
+
+Referenced by DD4hep::Printer$<$ T $>$::operator()().\hypertarget{struct_d_d4hep_1_1_printer_a59b1bd251047feee01c469a91564a320}{
+\index{DD4hep::Printer@{DD4hep::Printer}!prefix@{prefix}}
+\index{prefix@{prefix}!DD4hep::Printer@{DD4hep::Printer}}
+\subsubsection[{prefix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ std::string {\bf DD4hep::Printer}$<$ {\bf T} $>$::{\bf prefix}}}
+\label{struct_d_d4hep_1_1_printer_a59b1bd251047feee01c469a91564a320}
+
+
+Optional text prefix when formatting the output. 
+
+Definition at line 214 of file Printout.h.
+
+Referenced by DD4hep::Printer$<$ T $>$::operator()().
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_printout_8h}{Printout.h}\end{DoxyCompactItemize}

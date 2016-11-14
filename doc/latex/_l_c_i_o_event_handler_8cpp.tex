@@ -1,0 +1,83 @@
+\hypertarget{_l_c_i_o_event_handler_8cpp}{
+\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDEve/lcio/LCIOEventHandler.cpp File Reference}
+\label{_l_c_i_o_event_handler_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDEve/lcio/LCIOEventHandler.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDEve/lcio/LCIOEventHandler.cpp}}
+}
+{\ttfamily \#include \char`\"{}LCIOEventHandler.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/Printout.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/Objects.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/Factories.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}IO/LCReader.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}EVENT/LCCollection.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}EVENT/SimCalorimeterHit.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}EVENT/SimTrackerHit.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}EVENT/MCParticle.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TSystem.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGMsgBox.h\char`\"{}}\par
+{\ttfamily \#include $<$stdexcept$>$}\par
+{\ttfamily \#include $<$climits$>$}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const void $\ast$ \hyperlink{_l_c_i_o_event_handler_8cpp_aee34c98af0f878f66a225479872d5a3e}{\_\-fill} (const SimTrackerHit $\ast$\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s}, \hyperlink{class_d_d4hep_1_1_d_d_eve_hit}{DDEveHit} $\ast$target)
+\item 
+const void $\ast$ \hyperlink{_l_c_i_o_event_handler_8cpp_a88f21917045e09376383e065da41cf79}{\_\-fill} (const SimCalorimeterHit $\ast$\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s}, \hyperlink{class_d_d4hep_1_1_d_d_eve_hit}{DDEveHit} $\ast$target)
+\item 
+static const void $\ast$ \hyperlink{_l_c_i_o_event_handler_8cpp_a01038da42ced654c661296147bbf6237}{\_\-convertHitFunc} (const LCObject $\ast$source, \hyperlink{class_d_d4hep_1_1_d_d_eve_hit}{DDEveHit} $\ast$target)
+\item 
+static const void $\ast$ \hyperlink{_l_c_i_o_event_handler_8cpp_ade909bde2b857590ffbfe02ebbc20e56}{\_\-convertParticleFunc} (const LCObject $\ast$source, \hyperlink{class_d_d4hep_1_1_d_d_eve_particle}{DDEveParticle} $\ast$target)
+\item 
+static void $\ast$ \hyperlink{_l_c_i_o_event_handler_8cpp_ad3b3e0ec7ae85864d6e2b917e319dc8f}{\_\-create} (const char $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_l_c_i_o_event_handler_8cpp_a01038da42ced654c661296147bbf6237}{
+\index{LCIOEventHandler.cpp@{LCIOEventHandler.cpp}!\_\-convertHitFunc@{\_\-convertHitFunc}}
+\index{\_\-convertHitFunc@{\_\-convertHitFunc}!LCIOEventHandler.cpp@{LCIOEventHandler.cpp}}
+\subsubsection[{\_\-convertHitFunc}]{\setlength{\rightskip}{0pt plus 5cm}static const void$\ast$ \_\-convertHitFunc (const LCObject $\ast$ {\em source}, \/  {\bf DDEveHit} $\ast$ {\em target})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{_l_c_i_o_event_handler_8cpp_a01038da42ced654c661296147bbf6237}
+
+
+Definition at line 57 of file LCIOEventHandler.cpp.
+
+References \_\-fill().
+
+Referenced by DD4hep::LCIOEventHandler::collectionLoop().\hypertarget{_l_c_i_o_event_handler_8cpp_ade909bde2b857590ffbfe02ebbc20e56}{
+\index{LCIOEventHandler.cpp@{LCIOEventHandler.cpp}!\_\-convertParticleFunc@{\_\-convertParticleFunc}}
+\index{\_\-convertParticleFunc@{\_\-convertParticleFunc}!LCIOEventHandler.cpp@{LCIOEventHandler.cpp}}
+\subsubsection[{\_\-convertParticleFunc}]{\setlength{\rightskip}{0pt plus 5cm}static const void$\ast$ \_\-convertParticleFunc (const LCObject $\ast$ {\em source}, \/  {\bf DDEveParticle} $\ast$ {\em target})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{_l_c_i_o_event_handler_8cpp_ade909bde2b857590ffbfe02ebbc20e56}
+
+
+Definition at line 64 of file LCIOEventHandler.cpp.
+
+Referenced by DD4hep::LCIOEventHandler::collectionLoop().\hypertarget{_l_c_i_o_event_handler_8cpp_ad3b3e0ec7ae85864d6e2b917e319dc8f}{
+\index{LCIOEventHandler.cpp@{LCIOEventHandler.cpp}!\_\-create@{\_\-create}}
+\index{\_\-create@{\_\-create}!LCIOEventHandler.cpp@{LCIOEventHandler.cpp}}
+\subsubsection[{\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}static void$\ast$ \_\-create (const char $\ast$)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{_l_c_i_o_event_handler_8cpp_ad3b3e0ec7ae85864d6e2b917e319dc8f}
+
+
+Definition at line 69 of file LCIOEventHandler.cpp.
+
+Referenced by ClassImp().\hypertarget{_l_c_i_o_event_handler_8cpp_a88f21917045e09376383e065da41cf79}{
+\index{LCIOEventHandler.cpp@{LCIOEventHandler.cpp}!\_\-fill@{\_\-fill}}
+\index{\_\-fill@{\_\-fill}!LCIOEventHandler.cpp@{LCIOEventHandler.cpp}}
+\subsubsection[{\_\-fill}]{\setlength{\rightskip}{0pt plus 5cm}const void$\ast$ \_\-fill (const SimCalorimeterHit $\ast$ {\em s}, \/  {\bf DDEveHit} $\ast$ {\em target})}}
+\label{_l_c_i_o_event_handler_8cpp_a88f21917045e09376383e065da41cf79}
+
+
+Definition at line 48 of file LCIOEventHandler.cpp.
+
+References DD4hep::DDEveHit::deposit, DD4hep::DDEveHit::x, DD4hep::DDEveHit::y, and DD4hep::DDEveHit::z.\hypertarget{_l_c_i_o_event_handler_8cpp_aee34c98af0f878f66a225479872d5a3e}{
+\index{LCIOEventHandler.cpp@{LCIOEventHandler.cpp}!\_\-fill@{\_\-fill}}
+\index{\_\-fill@{\_\-fill}!LCIOEventHandler.cpp@{LCIOEventHandler.cpp}}
+\subsubsection[{\_\-fill}]{\setlength{\rightskip}{0pt plus 5cm}const void$\ast$ \_\-fill (const SimTrackerHit $\ast$ {\em s}, \/  {\bf DDEveHit} $\ast$ {\em target})}}
+\label{_l_c_i_o_event_handler_8cpp_aee34c98af0f878f66a225479872d5a3e}
+
+
+Definition at line 40 of file LCIOEventHandler.cpp.
+
+References DD4hep::DDEveHit::deposit, DD4hep::DDEveHit::x, DD4hep::DDEveHit::y, and DD4hep::DDEveHit::z.
+
+Referenced by \_\-convertHitFunc().

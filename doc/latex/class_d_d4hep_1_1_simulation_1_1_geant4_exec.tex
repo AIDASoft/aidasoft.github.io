@@ -1,0 +1,80 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_exec}{
+\section{DD4hep::Simulation::Geant4Exec Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_exec}\index{DD4hep::Simulation::Geant4Exec@{DD4hep::Simulation::Geant4Exec}}
+}
+
+
+Main executor steering the Geant4 execution.  
+
+
+{\ttfamily \#include $<$Geant4Kernel.h$>$}\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_exec_a68d70832e5acb1c074ce12cae898af09}{configure} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4Kernel} \&kernel)
+\begin{DoxyCompactList}\small\item\em Configure the application. \item\end{DoxyCompactList}\item 
+static int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_exec_ae5486a8c520af49cbcc5d5ba4323e773}{initialize} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4Kernel} \&kernel)
+\begin{DoxyCompactList}\small\item\em Initialize the application. \item\end{DoxyCompactList}\item 
+static int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_exec_a006a064ae70aa7839d656ae7cdd8fc59}{run} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4Kernel} \&kernel)
+\begin{DoxyCompactList}\small\item\em Run the application and simulate events. \item\end{DoxyCompactList}\item 
+static int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_exec_a592e79f8ae539bd7491cd3af0572555c}{terminate} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4Kernel} \&kernel)
+\begin{DoxyCompactList}\small\item\em Terminate the application. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main executor steering the Geant4 execution. 
+
+Definition at line 274 of file Geant4Kernel.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_exec_a68d70832e5acb1c074ce12cae898af09}{
+\index{DD4hep::Simulation::Geant4Exec@{DD4hep::Simulation::Geant4Exec}!configure@{configure}}
+\index{configure@{configure}!DD4hep::Simulation::Geant4Exec@{DD4hep::Simulation::Geant4Exec}}
+\subsubsection[{configure}]{\setlength{\rightskip}{0pt plus 5cm}int Geant4Exec::configure ({\bf Geant4Kernel} \& {\em kernel})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_exec_a68d70832e5acb1c074ce12cae898af09}
+
+
+Configure the application. Configure the simulation. 
+
+Initialize the engine etc. 
+
+Definition at line 514 of file Geant4Exec.cpp.
+
+References DD4hep::DEBUG, DD4hep::Simulation::Geant4ActionContainer::detectorConstruction(), DD4hep::Simulation::Geant4Kernel::executePhase(), DD4hep::Simulation::Geant4PhysicsListActionSequence::extensionList(), DD4hep::Simulation::Geant4Random::initialize(), DD4hep::Simulation::Geant4Random::instance(), DD4hep::Simulation::Geant4Kernel::isMultiThreaded(), DD4hep::Simulation::Geant4Kernel::lcdd(), DD4hep::Simulation::Geant4PhysicsListActionSequence::m\_\-rangecut, DD4hep::Simulation::Geant4ActionContainer::physicsList(), DD4hep::printLevel(), DD4hep::printout(), DD4hep::Simulation::Geant4Action::property(), DD4hep::Simulation::Geant4Kernel::runManager(), DD4hep::Geometry::LCDD::sensitiveDetectors(), DD4hep::Property::set(), DD4hep::Simulation::Geant4Random::setMainInstance(), DD4hep::Simulation::Geant4ActionContainer::userInitialization(), DD4hep::WARNING, and DD4hep::Simulation::Geant4ActionContainer::workerContext().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_exec_ae5486a8c520af49cbcc5d5ba4323e773}{
+\index{DD4hep::Simulation::Geant4Exec@{DD4hep::Simulation::Geant4Exec}!initialize@{initialize}}
+\index{initialize@{initialize}!DD4hep::Simulation::Geant4Exec@{DD4hep::Simulation::Geant4Exec}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}int Geant4Exec::initialize ({\bf Geant4Kernel} \& {\em kernel})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_exec_ae5486a8c520af49cbcc5d5ba4323e773}
+
+
+Initialize the application. Initialize the simulation. 
+
+Definition at line 583 of file Geant4Exec.cpp.
+
+References DD4hep::Simulation::Geant4Kernel::executePhase(), and DD4hep::Simulation::Geant4Kernel::runManager().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_exec_a006a064ae70aa7839d656ae7cdd8fc59}{
+\index{DD4hep::Simulation::Geant4Exec@{DD4hep::Simulation::Geant4Exec}!run@{run}}
+\index{run@{run}!DD4hep::Simulation::Geant4Exec@{DD4hep::Simulation::Geant4Exec}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}int Geant4Exec::run ({\bf Geant4Kernel} \& {\em kernel})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_exec_a006a064ae70aa7839d656ae7cdd8fc59}
+
+
+Run the application and simulate events. Run the simulation. 
+
+Definition at line 595 of file Geant4Exec.cpp.
+
+References DD4hep::Simulation::Geant4Action::except(), DD4hep::Simulation::Geant4Kernel::executePhase(), DD4hep::format(), DD4hep::Simulation::Geant4Kernel::globalAction(), DD4hep::Simulation::Geant4Kernel::property(), DD4hep::Simulation::Geant4Kernel::runManager(), and DD4hep::Property::value().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_exec_a592e79f8ae539bd7491cd3af0572555c}{
+\index{DD4hep::Simulation::Geant4Exec@{DD4hep::Simulation::Geant4Exec}!terminate@{terminate}}
+\index{terminate@{terminate}!DD4hep::Simulation::Geant4Exec@{DD4hep::Simulation::Geant4Exec}}
+\subsubsection[{terminate}]{\setlength{\rightskip}{0pt plus 5cm}int Geant4Exec::terminate ({\bf Geant4Kernel} \& {\em kernel})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_exec_a592e79f8ae539bd7491cd3af0572555c}
+
+
+Terminate the application. Run the simulation. 
+
+Definition at line 620 of file Geant4Exec.cpp.
+
+References DD4hep::Simulation::Geant4Kernel::executePhase().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_kernel_8h}{Geant4Kernel.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_exec_8cpp}{Geant4Exec.cpp}\end{DoxyCompactItemize}

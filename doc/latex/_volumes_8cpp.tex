@@ -1,0 +1,182 @@
+\hypertarget{_volumes_8cpp}{
+\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/Volumes.cpp File Reference}
+\label{_volumes_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/Volumes.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/Volumes.cpp}}
+}
+{\ttfamily \#include \char`\"{}DD4hep/LCDD.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/Printout.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/InstanceCount.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/MatrixHelpers.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DD4hep/objects/ObjectsInterna.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TColor.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoShape.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoVolume.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoNode.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoMatrix.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoMedium.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoVoxelFinder.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TGeoShapeAssembly.h\char`\"{}}\par
+{\ttfamily \#include $<$climits$>$}\par
+{\ttfamily \#include $<$iostream$>$}\par
+{\ttfamily \#include $<$stdexcept$>$}\par
+{\ttfamily \#include $<$sstream$>$}\par
+{\ttfamily \#include \char`\"{}TROOT.h\char`\"{}}\par
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef TGeoNode \hyperlink{_volumes_8cpp_a83f3b66b11096c206d134e70c9103a8e}{geo\_\-node\_\-t}
+\item 
+typedef TGeoVolume \hyperlink{_volumes_8cpp_a6369702c0bd3a63eeb1ccda4c5fd2885}{geo\_\-volume\_\-t}
+\item 
+typedef TGeoVolumeAssembly \hyperlink{_volumes_8cpp_afd56328e7bf39593ed2be452748b766a}{geo\_\-assembly\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static T::Object $\ast$ \hyperlink{_volumes_8cpp_a1c1cde892e7b9b8d7ff4c77fb2b7aa34}{\_\-userExtension} (const \hyperlink{class_t}{T} \&\hyperlink{_multi_view_8cpp_a8320ee13ac034dbf6d624fe8953dd337}{v})
+\item 
+\hyperlink{_volumes_8cpp_ae43a2b26233111b60dfa2908b387adbb}{ClassImp} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume_extension}{PlacedVolumeExtension}) static TGeoVolume $\ast$\_\-createTGeoVolume(const \hyperlink{classstd_1_1string}{string} \&name
+\item 
+\hyperlink{_volumes_8cpp_ace6d22343ef2267c6169252783997419}{magic} (0)
+\item 
+\hyperlink{_volumes_8cpp_a196c28143d6edfa2a06de0e72638dde5}{refCount} (0)
+\item 
+\hyperlink{_volumes_8cpp_a51575e459f2c9dab072bf1246119db2a}{volIDs} ()
+\item 
+static \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume_extension}{PlacedVolume::Object} $\ast$ \hyperlink{_volumes_8cpp_a1fed71b283145beb621afd55ac0d795a}{\_\-data} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} \&\hyperlink{_multi_view_8cpp_a8320ee13ac034dbf6d624fe8953dd337}{v})
+\item 
+\hyperlink{_volumes_8cpp_a35bfc969417fc823e2baec3e10bdcdfd}{ClassImp} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_extension}{VolumeExtension}) \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_extension}{VolumeExtension}
+\begin{DoxyCompactList}\small\item\em Enable \hyperlink{namespace_r_o_o_t}{ROOT} persistency. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_extension}{Volume::Object} $\ast$ \hyperlink{_volumes_8cpp_af67cc7a88abe7fe25fba4ef71c57782b}{\_\-data} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \&\hyperlink{_multi_view_8cpp_a8320ee13ac034dbf6d624fe8953dd337}{v}, bool throw\_\-exception=true)
+\begin{DoxyCompactList}\small\item\em Accessor to the data part of the Volume. \item\end{DoxyCompactList}\item 
+static \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} \hyperlink{_volumes_8cpp_a17c6076661d5cf9623f4754f19fae1eb}{\_\-addNode} (TGeoVolume $\ast$par, TGeoVolume $\ast$daughter, TGeoMatrix $\ast$transform)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+TGeoShape $\ast$ \hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_volumes_8cpp_afd56328e7bf39593ed2be452748b766a}{
+\index{Volumes.cpp@{Volumes.cpp}!geo\_\-assembly\_\-t@{geo\_\-assembly\_\-t}}
+\index{geo\_\-assembly\_\-t@{geo\_\-assembly\_\-t}!Volumes.cpp@{Volumes.cpp}}
+\subsubsection[{geo\_\-assembly\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef TGeoVolumeAssembly {\bf geo\_\-assembly\_\-t}}}
+\label{_volumes_8cpp_afd56328e7bf39593ed2be452748b766a}
+
+
+Definition at line 286 of file Volumes.cpp.\hypertarget{_volumes_8cpp_a83f3b66b11096c206d134e70c9103a8e}{
+\index{Volumes.cpp@{Volumes.cpp}!geo\_\-node\_\-t@{geo\_\-node\_\-t}}
+\index{geo\_\-node\_\-t@{geo\_\-node\_\-t}!Volumes.cpp@{Volumes.cpp}}
+\subsubsection[{geo\_\-node\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef TGeoNode {\bf geo\_\-node\_\-t}}}
+\label{_volumes_8cpp_a83f3b66b11096c206d134e70c9103a8e}
+
+
+Definition at line 284 of file Volumes.cpp.\hypertarget{_volumes_8cpp_a6369702c0bd3a63eeb1ccda4c5fd2885}{
+\index{Volumes.cpp@{Volumes.cpp}!geo\_\-volume\_\-t@{geo\_\-volume\_\-t}}
+\index{geo\_\-volume\_\-t@{geo\_\-volume\_\-t}!Volumes.cpp@{Volumes.cpp}}
+\subsubsection[{geo\_\-volume\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef TGeoVolume {\bf geo\_\-volume\_\-t}}}
+\label{_volumes_8cpp_a6369702c0bd3a63eeb1ccda4c5fd2885}
+
+
+Definition at line 285 of file Volumes.cpp.
+
+\subsection{Function Documentation}
+\hypertarget{_volumes_8cpp_a17c6076661d5cf9623f4754f19fae1eb}{
+\index{Volumes.cpp@{Volumes.cpp}!\_\-addNode@{\_\-addNode}}
+\index{\_\-addNode@{\_\-addNode}!Volumes.cpp@{Volumes.cpp}}
+\subsubsection[{\_\-addNode}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf PlacedVolume} \_\-addNode (TGeoVolume $\ast$ {\em par}, \/  TGeoVolume $\ast$ {\em daughter}, \/  TGeoMatrix $\ast$ {\em transform})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{_volumes_8cpp_a17c6076661d5cf9623f4754f19fae1eb}
+
+
+Definition at line 491 of file Volumes.cpp.
+
+References DD4hep::Geometry::identityTransform().
+
+Referenced by DD4hep::Geometry::Volume::placeVolume().\hypertarget{_volumes_8cpp_af67cc7a88abe7fe25fba4ef71c57782b}{
+\index{Volumes.cpp@{Volumes.cpp}!\_\-data@{\_\-data}}
+\index{\_\-data@{\_\-data}!Volumes.cpp@{Volumes.cpp}}
+\subsubsection[{\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Volume::Object}$\ast$ \_\-data (const {\bf Volume} \& {\em v}, \/  bool {\em throw\_\-exception} = {\ttfamily true})}}
+\label{_volumes_8cpp_af67cc7a88abe7fe25fba4ef71c57782b}
+
+
+Accessor to the data part of the Volume. 
+
+Definition at line 465 of file Volumes.cpp.
+
+References \_\-userExtension().
+
+Referenced by DD4hep::Alignments::GlobalDetectorAlignment::volumeAlignments().\hypertarget{_volumes_8cpp_a1fed71b283145beb621afd55ac0d795a}{
+\index{Volumes.cpp@{Volumes.cpp}!\_\-data@{\_\-data}}
+\index{\_\-data@{\_\-data}!Volumes.cpp@{Volumes.cpp}}
+\subsubsection[{\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf PlacedVolume::Object}$\ast$ \_\-data (const {\bf PlacedVolume} \& {\em v})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{_volumes_8cpp_a1fed71b283145beb621afd55ac0d795a}
+
+
+Definition at line 364 of file Volumes.cpp.
+
+References \_\-userExtension().
+
+Referenced by DD4hep::Geometry::Volume::isSensitive(), DD4hep::Geometry::Volume::limitSet(), DD4hep::Geometry::Volume::region(), DD4hep::Geometry::Volume::sensitiveDetector(), DD4hep::Geometry::Volume::setLimitSet(), DD4hep::Geometry::Volume::setRegion(), DD4hep::Geometry::Volume::setSensitiveDetector(), DD4hep::Geometry::PlacedVolume::toString(), DD4hep::Geometry::Volume::visAttributes(), and DD4hep::Geometry::PlacedVolume::volIDs().\hypertarget{_volumes_8cpp_a1c1cde892e7b9b8d7ff4c77fb2b7aa34}{
+\index{Volumes.cpp@{Volumes.cpp}!\_\-userExtension@{\_\-userExtension}}
+\index{\_\-userExtension@{\_\-userExtension}!Volumes.cpp@{Volumes.cpp}}
+\subsubsection[{\_\-userExtension}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ static T::Object$\ast$ \_\-userExtension (const {\bf T} \& {\em v})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{_volumes_8cpp_a1c1cde892e7b9b8d7ff4c77fb2b7aa34}
+
+
+Definition at line 287 of file Volumes.cpp.
+
+Referenced by \_\-data(), DD4hep::Geometry::Volume::data(), DD4hep::Geometry::PlacedVolume::data(), and DD4hep::Geometry::Volume::setVisAttributes().\hypertarget{_volumes_8cpp_a35bfc969417fc823e2baec3e10bdcdfd}{
+\index{Volumes.cpp@{Volumes.cpp}!ClassImp@{ClassImp}}
+\index{ClassImp@{ClassImp}!Volumes.cpp@{Volumes.cpp}}
+\subsubsection[{ClassImp}]{\setlength{\rightskip}{0pt plus 5cm}ClassImp ({\bf VolumeExtension})}}
+\label{_volumes_8cpp_a35bfc969417fc823e2baec3e10bdcdfd}
+
+
+Enable \hyperlink{namespace_r_o_o_t}{ROOT} persistency. Default constructor 
+
+Definition at line 417 of file Volumes.cpp.
+
+References INCREMENT\_\-COUNTER.\hypertarget{_volumes_8cpp_ae43a2b26233111b60dfa2908b387adbb}{
+\index{Volumes.cpp@{Volumes.cpp}!ClassImp@{ClassImp}}
+\index{ClassImp@{ClassImp}!Volumes.cpp@{Volumes.cpp}}
+\subsubsection[{ClassImp}]{\setlength{\rightskip}{0pt plus 5cm}ClassImp ({\bf PlacedVolumeExtension}) const}}
+\label{_volumes_8cpp_ae43a2b26233111b60dfa2908b387adbb}
+\hypertarget{_volumes_8cpp_ace6d22343ef2267c6169252783997419}{
+\index{Volumes.cpp@{Volumes.cpp}!magic@{magic}}
+\index{magic@{magic}!Volumes.cpp@{Volumes.cpp}}
+\subsubsection[{magic}]{\setlength{\rightskip}{0pt plus 5cm}magic (0)}}
+\label{_volumes_8cpp_ace6d22343ef2267c6169252783997419}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\end{description}
+\end{Desc}
+
+
+Referenced by volIDs().\hypertarget{_volumes_8cpp_a196c28143d6edfa2a06de0e72638dde5}{
+\index{Volumes.cpp@{Volumes.cpp}!refCount@{refCount}}
+\index{refCount@{refCount}!Volumes.cpp@{Volumes.cpp}}
+\subsubsection[{refCount}]{\setlength{\rightskip}{0pt plus 5cm}refCount (0)}}
+\label{_volumes_8cpp_a196c28143d6edfa2a06de0e72638dde5}
+\hypertarget{_volumes_8cpp_a51575e459f2c9dab072bf1246119db2a}{
+\index{Volumes.cpp@{Volumes.cpp}!volIDs@{volIDs}}
+\index{volIDs@{volIDs}!Volumes.cpp@{Volumes.cpp}}
+\subsubsection[{volIDs}]{\setlength{\rightskip}{0pt plus 5cm}volIDs ()}}
+\label{_volumes_8cpp_a51575e459f2c9dab072bf1246119db2a}
+
+
+Definition at line 308 of file Volumes.cpp.
+
+References INCREMENT\_\-COUNTER, magic(), and DD4hep::magic\_\-word().
+
+\subsection{Variable Documentation}
+\hypertarget{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{
+\index{Volumes.cpp@{Volumes.cpp}!s@{s}}
+\index{s@{s}!Volumes.cpp@{Volumes.cpp}}
+\subsubsection[{s}]{\setlength{\rightskip}{0pt plus 5cm}TGeoShape$\ast$ {\bf s}}}
+\label{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}
+
+
+Definition at line 295 of file Volumes.cpp.
+
+Referenced by \_\-stack(), DD4hep::Layering::absorberThicknessInLayer(), DD4hep::DDSegmentation::BitField64::addField(), TiXmlElement::Attribute(), DD4hep::DDSegmentation::BitFieldValue::BitFieldValue(), ClassImp(), DD4hep::copyObject(), create\_\-detector(), DD4hep::DDRec::createGearForCLIC(), DD4hep::DDRec::createGearForILD(), DD4hep::DDRec::invalid\_\-detector\_\-element::createMsg(), DD4hep::DDRec::invalid\_\-position::createMsg(), DD4hep::DDRec::invalid\_\-cell\_\-id::createMsg(), DD4hep::DDSegmentation::TypedSegmentationParameter$<$ std::vector$<$ TYPE $>$ $>$::defaultValue(), DD4hep::DDSegmentation::TypedSegmentationParameter$<$ TYPE $>$::defaultValue(), DD4hep::Geometry::DetectorTools::elementPath(), DD4hep::XML::LayeringCnv::fromCompact(), DD4hep::View::ImportEventElement(), DD4hep::View::ImportGeoElement(), DD4hep::DDSegmentation::BitField64::init(), DD4hep::ElementListContextMenu::install(), DD4hep::PluginFactoryBase::make\_\-return(), DD4hep::Utilities::MakeNodesVisible(), DD4hep::DDSegmentation::BitFieldValue::operator=(), DD4hep::DDSegmentation::Segmentation::parameter(), DD4hep::Path::Path(), DD4hep::Simulation::Geant4GeometryMaps::placementPath(), DD4hep::Geometry::DetectorTools::placementPath(), DD4hep::Simulation::Geant4SensDetActionSequence::process(), DD4hep::Simulation::Geant4StepHandler::sdName(), DD4hep::Layering::sensitivePositionsInLayer(), DD4hep::DDSegmentation::TypedSegmentationParameter$<$ std::vector$<$ TYPE $>$ $>$::setValue(), DD4hep::DDSegmentation::TypedSegmentationParameter$<$ TYPE $>$::setValue(), DD4hep::Layering::singleLayerThickness(), DD4hep::DDSegmentation::MultiSegmentation::subsegmentation(), DD4hep::DDSegmentation::SegmentationParameter::toString(), DD4hep::Geometry::PlacedVolume::toString(), DD4hep::Geometry::toStringSolid(), DD4hep::DDSegmentation::TypedSegmentationParameter$<$ std::vector$<$ TYPE $>$ $>$::type(), DD4hep::DDSegmentation::TypedSegmentationParameter$<$ std::vector$<$ TYPE $>$ $>$::value(), and DD4hep::DDSegmentation::TypedSegmentationParameter$<$ TYPE $>$::value().

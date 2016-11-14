@@ -1,0 +1,350 @@
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}{
+\section{DD4hep::Simulation::Geant4ActionPhase Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+}
+
+
+Action phase definition. Client callback at various stage of the simulation processing.  
+
+
+{\ttfamily \#include $<$Geant4ActionPhase.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4ActionPhase::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std::vector$<$ std::pair$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} $\ast$, \hyperlink{class_d_d4hep_1_1_callback}{Callback} $>$ $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a4df9a501a5c2d810603cd58f5ff5157d}{Members}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a8ede43df709ab0035560db446aa2f8ad}{Geant4ActionPhase} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$context, const std::string \&name, const std::type\_\-info \&arg\_\-type0, const std::type\_\-info \&arg\_\-type1, const std::type\_\-info \&arg\_\-type2)
+\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ae2d320d1dd7f433b5defb6f4fed5d757}{$\sim$Geant4ActionPhase} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a4df9a501a5c2d810603cd58f5ff5157d}{Members} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a350be3254b4fd82068c18fec6381491e}{members} () const 
+\begin{DoxyCompactList}\small\item\em Access phase members. \item\end{DoxyCompactList}\item 
+const std::type\_\-info $\ast$const $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ac481d5b2c86b3fd20ffc4adaf593a17a}{argTypes} () const 
+\begin{DoxyCompactList}\small\item\em Type of the first phase callback-\/argument. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a69f90116c5b2b689cf25e88e0a9f90e7}{execute} (void $\ast$argument)
+\begin{DoxyCompactList}\small\item\em Execute all members in the phase context. \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a61f8e3266a3e0f059539479fd335bb08}{add} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} $\ast$action, \hyperlink{class_d_d4hep_1_1_callback}{Callback} callback)
+\begin{DoxyCompactList}\small\item\em Add a new member to the phase. \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_aac2407103c62385824359ff8fa680f48}{remove} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} $\ast$action, \hyperlink{class_d_d4hep_1_1_callback}{Callback} callback)
+\begin{DoxyCompactList}\small\item\em Remove an existing member from the phase. If not existing returns false. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE , typename IF\_\-TYPE , typename A0 , typename R $>$ }\\bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a3d654d4b6017d6bfa74c4651b9f70bfd}{add} (TYPE $\ast$member, R(IF\_\-TYPE::$\ast$callback)(A0 arg))
+\begin{DoxyCompactList}\small\item\em Add a new member to the phase. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE , typename IF\_\-TYPE , typename A0 , typename A1 , typename R $>$ }\\bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ad63f4a395da9d021994d58bd8b1ce015}{add} (TYPE $\ast$member, R(IF\_\-TYPE::$\ast$callback)(A0 arg0, A1 arg1))
+\begin{DoxyCompactList}\small\item\em Add a new member to the phase. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE , typename IF\_\-TYPE , typename A0 , typename A1 , typename A2 , typename R $>$ }\\bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ad63f4a395da9d021994d58bd8b1ce015}{add} (TYPE $\ast$member, R(IF\_\-TYPE::$\ast$callback)(A0 arg0, A1 arg1))
+\begin{DoxyCompactList}\small\item\em Add a new member to the phase. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE , typename PMF $>$ }\\bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a00496ac37e590398b28f92108e56a35f}{remove} (TYPE $\ast$member)
+\begin{DoxyCompactList}\small\item\em Remove all member callbacks from the phase. If not existing returns false. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE , typename PMF $>$ }\\bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a9759c4205f62d091a35f4fc628ea2847}{remove} (TYPE $\ast$member, PMF callback)
+\begin{DoxyCompactList}\small\item\em Remove an existing member callback from the phase. If not existing returns false. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ae0022a7ef73336336dc256644bd06a12}{call} ()
+\begin{DoxyCompactList}\small\item\em Create action to execute phase members. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename A0 $>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_adcdd1c93f7e68e1172726ab95ab8f86f}{call} (A0 a0)
+\item 
+{\footnotesize template$<$typename A0 , typename A1 $>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a225034a1d517ce143896aa3e37ed1d0d}{call} (A0 a0, A1 a1)
+\item 
+{\footnotesize template$<$typename A0 , typename A1 , typename A2 $>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a7446c7f582c82adbb22d967ce1fefe87}{call} (A0 a0, A1 a1, A2 a2)
+\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ae866431033c441eca344ef5790755c35}{call} (const G4Run $\ast$run)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} in BeginRun/EndRun. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ad645b1ab9a7a1df5b464e3a6fb4df887}{call} (G4Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} in prepare primaries. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ad2d3a9e9414b4808875fa59dd022a310}{call} (const G4Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} in BeginEvent/EndEvent. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_af0f665dd43b54a635ebdb739c21f50e3}{call} (const G4Track $\ast$track)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} in Begin/End tracking action. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a1ae70049ecebbd987436c44338081dfc}{call} (const G4Step $\ast$step)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} in Begin/End stepping action. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_aa63d358a785e614c0087a24203bd1821}{call} (const G4Step $\ast$step, G4SteppingManager $\ast$mgr)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} for user stepping action. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a8bf0c8fb01a1f6f20a4297bcb8cb300e}{call} (G4HCofThisEvent $\ast$hce)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} for sensitives begin/end/clear. \item\end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a23cbc92a4515243fc274f3a52f72dcc0}{call} (G4Step $\ast$step, G4TouchableHistory $\ast$history)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} for sensitives. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a4df9a501a5c2d810603cd58f5ff5157d}{Members} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a24b9ef3a3dbb361f17a5e2600dc6f57d}{m\_\-members}
+\begin{DoxyCompactList}\small\item\em Phase members (actions) being called for a particular phase. \item\end{DoxyCompactList}\item 
+const std::type\_\-info $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a92e33c1a9f3cdbd49cf3b31a61213f57}{m\_\-argTypes} \mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em Type information of the argument type of the callback. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Action phase definition. Client callback at various stage of the simulation processing. \begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 69 of file Geant4ActionPhase.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a4df9a501a5c2d810603cd58f5ff5157d}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!Members@{Members}}
+\index{Members@{Members}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{Members}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<$std::pair$<${\bf Geant4Action}$\ast$, {\bf Callback}$>$ $>$ {\bf DD4hep::Simulation::Geant4ActionPhase::Members}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a4df9a501a5c2d810603cd58f5ff5157d}
+
+
+Definition at line 71 of file Geant4ActionPhase.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a8ede43df709ab0035560db446aa2f8ad}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!Geant4ActionPhase@{Geant4ActionPhase}}
+\index{Geant4ActionPhase@{Geant4ActionPhase}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{Geant4ActionPhase}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4ActionPhase::Geant4ActionPhase ({\bf Geant4Context} $\ast$ {\em context}, \/  const std::string \& {\em name}, \/  const std::type\_\-info \& {\em arg\_\-type0}, \/  const std::type\_\-info \& {\em arg\_\-type1}, \/  const std::type\_\-info \& {\em arg\_\-type2})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a8ede43df709ab0035560db446aa2f8ad}
+
+
+Standard constructor. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ae2d320d1dd7f433b5defb6f4fed5d757}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!$\sim$Geant4ActionPhase@{$\sim$Geant4ActionPhase}}
+\index{$\sim$Geant4ActionPhase@{$\sim$Geant4ActionPhase}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{$\sim$Geant4ActionPhase}]{\setlength{\rightskip}{0pt plus 5cm}Geant4ActionPhase::$\sim$Geant4ActionPhase ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ae2d320d1dd7f433b5defb6f4fed5d757}
+
+
+Default destructor. 
+
+Definition at line 51 of file Geant4ActionPhase.cpp.
+
+References DD4hep::InstanceCount::decrement(), and m\_\-members.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ad63f4a395da9d021994d58bd8b1ce015}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!add@{add}}
+\index{add@{add}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE , typename IF\_\-TYPE , typename A0 , typename A1 , typename A2 , typename R $>$ bool DD4hep::Simulation::Geant4ActionPhase::add (TYPE $\ast$ {\em member}, \/  R(IF\_\-TYPE::$\ast$)(A0 arg0, A1 arg1) {\em callback})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ad63f4a395da9d021994d58bd8b1ce015}
+
+
+Add a new member to the phase. 
+
+Definition at line 119 of file Geant4ActionPhase.h.
+
+References add(), m\_\-argTypes, and DD4hep::typeinfoCheck().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ad63f4a395da9d021994d58bd8b1ce015}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!add@{add}}
+\index{add@{add}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE , typename IF\_\-TYPE , typename A0 , typename A1 , typename R $>$ bool DD4hep::Simulation::Geant4ActionPhase::add (TYPE $\ast$ {\em member}, \/  R(IF\_\-TYPE::$\ast$)(A0 arg0, A1 arg1) {\em callback})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ad63f4a395da9d021994d58bd8b1ce015}
+
+
+Add a new member to the phase. 
+
+Definition at line 109 of file Geant4ActionPhase.h.
+
+References add(), m\_\-argTypes, and DD4hep::typeinfoCheck().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a3d654d4b6017d6bfa74c4651b9f70bfd}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!add@{add}}
+\index{add@{add}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE , typename IF\_\-TYPE , typename A0 , typename R $>$ bool DD4hep::Simulation::Geant4ActionPhase::add (TYPE $\ast$ {\em member}, \/  R(IF\_\-TYPE::$\ast$)(A0 arg) {\em callback})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a3d654d4b6017d6bfa74c4651b9f70bfd}
+
+
+Add a new member to the phase. 
+
+Definition at line 100 of file Geant4ActionPhase.h.
+
+References add(), m\_\-argTypes, and DD4hep::typeinfoCheck().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a61f8e3266a3e0f059539479fd335bb08}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!add@{add}}
+\index{add@{add}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}bool Geant4ActionPhase::add ({\bf Geant4Action} $\ast$ {\em action}, \/  {\bf Callback} {\em callback})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a61f8e3266a3e0f059539479fd335bb08}
+
+
+Add a new member to the phase. 
+
+Definition at line 59 of file Geant4ActionPhase.cpp.
+
+References DD4hep::Simulation::Geant4Action::addRef(), and m\_\-members.
+
+Referenced by add().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ac481d5b2c86b3fd20ffc4adaf593a17a}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!argTypes@{argTypes}}
+\index{argTypes@{argTypes}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{argTypes}]{\setlength{\rightskip}{0pt plus 5cm}const std::type\_\-info$\ast$ const$\ast$ DD4hep::Simulation::Geant4ActionPhase::argTypes () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ac481d5b2c86b3fd20ffc4adaf593a17a}
+
+
+Type of the first phase callback-\/argument. 
+
+Definition at line 89 of file Geant4ActionPhase.h.
+
+References m\_\-argTypes.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a23cbc92a4515243fc274f3a52f72dcc0}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!call@{call}}
+\index{call@{call}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{call}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void DD4hep::Simulation::Geant4ActionPhase::call (G4Step $\ast$ {\em step}, \/  G4TouchableHistory $\ast$ {\em history})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a23cbc92a4515243fc274f3a52f72dcc0}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} for sensitives. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a8bf0c8fb01a1f6f20a4297bcb8cb300e}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!call@{call}}
+\index{call@{call}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{call}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void DD4hep::Simulation::Geant4ActionPhase::call (G4HCofThisEvent $\ast$ {\em hce})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a8bf0c8fb01a1f6f20a4297bcb8cb300e}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} for sensitives begin/end/clear. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_aa63d358a785e614c0087a24203bd1821}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!call@{call}}
+\index{call@{call}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{call}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void DD4hep::Simulation::Geant4ActionPhase::call (const G4Step $\ast$ {\em step}, \/  G4SteppingManager $\ast$ {\em mgr})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_aa63d358a785e614c0087a24203bd1821}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} for user stepping action. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a1ae70049ecebbd987436c44338081dfc}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!call@{call}}
+\index{call@{call}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{call}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void DD4hep::Simulation::Geant4ActionPhase::call (const G4Step $\ast$ {\em step})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a1ae70049ecebbd987436c44338081dfc}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} in Begin/End stepping action. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_af0f665dd43b54a635ebdb739c21f50e3}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!call@{call}}
+\index{call@{call}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{call}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void DD4hep::Simulation::Geant4ActionPhase::call (const G4Track $\ast$ {\em track})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_af0f665dd43b54a635ebdb739c21f50e3}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} in Begin/End tracking action. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ad2d3a9e9414b4808875fa59dd022a310}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!call@{call}}
+\index{call@{call}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{call}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void DD4hep::Simulation::Geant4ActionPhase::call (const G4Event $\ast$ {\em event})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ad2d3a9e9414b4808875fa59dd022a310}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} in BeginEvent/EndEvent. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ad645b1ab9a7a1df5b464e3a6fb4df887}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!call@{call}}
+\index{call@{call}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{call}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void DD4hep::Simulation::Geant4ActionPhase::call (G4Event $\ast$ {\em event})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ad645b1ab9a7a1df5b464e3a6fb4df887}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} in prepare primaries. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ae866431033c441eca344ef5790755c35}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!call@{call}}
+\index{call@{call}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{call}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void DD4hep::Simulation::Geant4ActionPhase::call (const G4Run $\ast$ {\em run})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ae866431033c441eca344ef5790755c35}
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} in BeginRun/EndRun. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a7446c7f582c82adbb22d967ce1fefe87}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!call@{call}}
+\index{call@{call}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{call}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename A0 , typename A1 , typename A2 $>$ void DD4hep::Simulation::Geant4ActionPhase::call (A0 {\em a0}, \/  A1 {\em a1}, \/  A2 {\em a2})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a7446c7f582c82adbb22d967ce1fefe87}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a225034a1d517ce143896aa3e37ed1d0d}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!call@{call}}
+\index{call@{call}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{call}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename A0 , typename A1 $>$ void DD4hep::Simulation::Geant4ActionPhase::call (A0 {\em a0}, \/  A1 {\em a1})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a225034a1d517ce143896aa3e37ed1d0d}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_adcdd1c93f7e68e1172726ab95ab8f86f}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!call@{call}}
+\index{call@{call}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{call}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename A0 $>$ void DD4hep::Simulation::Geant4ActionPhase::call (A0 {\em a0})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_adcdd1c93f7e68e1172726ab95ab8f86f}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ae0022a7ef73336336dc256644bd06a12}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!call@{call}}
+\index{call@{call}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{call}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Simulation::Geant4ActionPhase::call ()}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_ae0022a7ef73336336dc256644bd06a12}
+
+
+Create action to execute phase members. \hyperlink{class_d_d4hep_1_1_callback}{Callback} in Begin stacking action. 
+
+Definition at line 104 of file Geant4ActionPhase.cpp.
+
+References execute().
+
+Referenced by DD4hep::Converter$<$ T, ARG $>$::operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a69f90116c5b2b689cf25e88e0a9f90e7}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!execute@{execute}}
+\index{execute@{execute}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4ActionPhase::execute (void $\ast$ {\em argument})}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a69f90116c5b2b689cf25e88e0a9f90e7}
+
+
+Execute all members in the phase context. 
+
+Definition at line 88 of file Geant4ActionPhase.cpp.
+
+References m\_\-members.
+
+Referenced by call().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a350be3254b4fd82068c18fec6381491e}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!members@{members}}
+\index{members@{members}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{members}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Members}\& DD4hep::Simulation::Geant4ActionPhase::members () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a350be3254b4fd82068c18fec6381491e}
+
+
+Access phase members. 
+
+Definition at line 85 of file Geant4ActionPhase.h.
+
+References m\_\-members.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a9759c4205f62d091a35f4fc628ea2847}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!remove@{remove}}
+\index{remove@{remove}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE , typename PMF $>$ bool DD4hep::Simulation::Geant4ActionPhase::remove (TYPE $\ast$ {\em member}, \/  PMF {\em callback})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a9759c4205f62d091a35f4fc628ea2847}
+
+
+Remove an existing member callback from the phase. If not existing returns false. 
+
+Definition at line 134 of file Geant4ActionPhase.h.
+
+References DD4hep::Callback::make().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a00496ac37e590398b28f92108e56a35f}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!remove@{remove}}
+\index{remove@{remove}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TYPE , typename PMF $>$ bool DD4hep::Simulation::Geant4ActionPhase::remove (TYPE $\ast$ {\em member})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a00496ac37e590398b28f92108e56a35f}
+
+
+Remove all member callbacks from the phase. If not existing returns false. 
+
+Definition at line 130 of file Geant4ActionPhase.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_aac2407103c62385824359ff8fa680f48}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!remove@{remove}}
+\index{remove@{remove}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}bool Geant4ActionPhase::remove ({\bf Geant4Action} $\ast$ {\em action}, \/  {\bf Callback} {\em callback})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_aac2407103c62385824359ff8fa680f48}
+
+
+Remove an existing member from the phase. If not existing returns false. 
+
+Definition at line 66 of file Geant4ActionPhase.cpp.
+
+References find(), DD4hep::Callback::func, m\_\-members, and DD4hep::Callback::par.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a92e33c1a9f3cdbd49cf3b31a61213f57}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!m\_\-argTypes@{m\_\-argTypes}}
+\index{m\_\-argTypes@{m\_\-argTypes}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{m\_\-argTypes}]{\setlength{\rightskip}{0pt plus 5cm}const std::type\_\-info$\ast$ {\bf DD4hep::Simulation::Geant4ActionPhase::m\_\-argTypes}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a92e33c1a9f3cdbd49cf3b31a61213f57}
+
+
+Type information of the argument type of the callback. 
+
+Definition at line 76 of file Geant4ActionPhase.h.
+
+Referenced by add(), and argTypes().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a24b9ef3a3dbb361f17a5e2600dc6f57d}{
+\index{DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}!m\_\-members@{m\_\-members}}
+\index{m\_\-members@{m\_\-members}!DD4hep::Simulation::Geant4ActionPhase@{DD4hep::Simulation::Geant4ActionPhase}}
+\subsubsection[{m\_\-members}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Members} {\bf DD4hep::Simulation::Geant4ActionPhase::m\_\-members}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase_a24b9ef3a3dbb361f17a5e2600dc6f57d}
+
+
+Phase members (actions) being called for a particular phase. 
+
+Definition at line 74 of file Geant4ActionPhase.h.
+
+Referenced by add(), execute(), members(), remove(), and $\sim$Geant4ActionPhase().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_action_phase_8h}{Geant4ActionPhase.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_action_phase_8cpp}{Geant4ActionPhase.cpp}\end{DoxyCompactItemize}

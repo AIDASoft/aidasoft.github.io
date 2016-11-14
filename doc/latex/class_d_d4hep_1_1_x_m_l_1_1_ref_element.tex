@@ -1,0 +1,153 @@
+\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_ref_element}{
+\section{DD4hep::XML::RefElement Class Reference}
+\label{class_d_d4hep_1_1_x_m_l_1_1_ref_element}\index{DD4hep::XML::RefElement@{DD4hep::XML::RefElement}}
+}
+
+
+User abstraction class to manipulate named \hyperlink{namespace_d_d4hep_1_1_x_m_l}{XML} elements (references) within a document.  
+
+
+{\ttfamily \#include $<$XMLElements.h$>$}Inheritance diagram for DD4hep::XML::RefElement::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_d4hep_1_1_x_m_l_1_1_ref_element}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_ref_element_a59a0e1ae7ebec907fd7df64528fcb654}{RefElement} (const \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_handle__t}{Handle\_\-t} \&e)
+\begin{DoxyCompactList}\small\item\em Construction from existing object handle. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_ref_element_ab35b2b5265479d3876429a6b8a825a99}{RefElement} (const \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_ref_element}{RefElement} \&e)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_ref_element_ad49f3b5422b4070c2fbb04622e94a208}{RefElement} (const \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_document}{Document} \&d, const \hyperlink{namespace_d_d4hep_1_1_x_m_l_a09e5d9cc86ed782f6826dfe0778c1815}{XmlChar} $\ast$type, const \hyperlink{namespace_d_d4hep_1_1_x_m_l_a09e5d9cc86ed782f6826dfe0778c1815}{XmlChar} $\ast$name)
+\begin{DoxyCompactList}\small\item\em Initializing constructor to create a new XMLElement and add it to the document. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_ref_element}{RefElement} \& \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_ref_element_a5af29e6f73c8b0e1aa23dff6dbe8b39d}{operator=} (const \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_ref_element}{RefElement} \&e)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \item\end{DoxyCompactList}\item 
+const \hyperlink{namespace_d_d4hep_1_1_x_m_l_a09e5d9cc86ed782f6826dfe0778c1815}{XmlChar} $\ast$ \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_ref_element_a3bdb94c1c90405444a2d3cb0fd6e3d8d}{name} () const 
+\begin{DoxyCompactList}\small\item\em Access the object's name in unicode. \item\end{DoxyCompactList}\item 
+const \hyperlink{namespace_d_d4hep_1_1_x_m_l_a09e5d9cc86ed782f6826dfe0778c1815}{XmlChar} $\ast$ \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_ref_element_ab7f8c264c97670244ff179b7c89e8dfa}{refName} () const 
+\begin{DoxyCompactList}\small\item\em Access the object's reference name in unicode (same as name). \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_ref_element_ab466a91b8e0dd13e48ae8a74662b92d5}{setName} (const \hyperlink{namespace_d_d4hep_1_1_x_m_l_a09e5d9cc86ed782f6826dfe0778c1815}{XmlChar} $\ast$new\_\-name)
+\begin{DoxyCompactList}\small\item\em Change/set the object's name. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespace_d_d4hep_1_1_x_m_l_a5c19b7116be99d69b4b22d911357baaf}{Attribute} \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_ref_element_a581df5a2c94d0c6ed1bacce5e478928d}{m\_\-name}
+\begin{DoxyCompactList}\small\item\em Attribute holding thre name. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+User abstraction class to manipulate named \hyperlink{namespace_d_d4hep_1_1_x_m_l}{XML} elements (references) within a document. User class encapsulating a DOM element which can be referenced. Like the \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_element}{Element}, but the \char`\"{}name\char`\"{} attribute is required. The reference then has the corresponding \char`\"{}ref\char`\"{} attribute. The value of \char`\"{}name\char`\"{} and \char`\"{}ref\char`\"{} must match to establish the reference.
+
+\begin{DoxyAuthor}{Author}
+M.Frank 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+
+
+Definition at line 844 of file XMLElements.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_ref_element_a59a0e1ae7ebec907fd7df64528fcb654}{
+\index{DD4hep::XML::RefElement@{DD4hep::XML::RefElement}!RefElement@{RefElement}}
+\index{RefElement@{RefElement}!DD4hep::XML::RefElement@{DD4hep::XML::RefElement}}
+\subsubsection[{RefElement}]{\setlength{\rightskip}{0pt plus 5cm}RefElement::RefElement (const {\bf Handle\_\-t} \& {\em e})}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_ref_element_a59a0e1ae7ebec907fd7df64528fcb654}
+
+
+Construction from existing object handle. 
+
+Definition at line 1141 of file XMLElements.cpp.
+
+References \_\-U, DD4hep::XML::Element::getAttr(), DD4hep::XML::Element::m\_\-element, and m\_\-name.\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_ref_element_ab35b2b5265479d3876429a6b8a825a99}{
+\index{DD4hep::XML::RefElement@{DD4hep::XML::RefElement}!RefElement@{RefElement}}
+\index{RefElement@{RefElement}!DD4hep::XML::RefElement@{DD4hep::XML::RefElement}}
+\subsubsection[{RefElement}]{\setlength{\rightskip}{0pt plus 5cm}RefElement::RefElement (const {\bf RefElement} \& {\em e})}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_ref_element_ab35b2b5265479d3876429a6b8a825a99}
+
+
+Copy constructor. 
+
+Definition at line 1147 of file XMLElements.cpp.\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_ref_element_ad49f3b5422b4070c2fbb04622e94a208}{
+\index{DD4hep::XML::RefElement@{DD4hep::XML::RefElement}!RefElement@{RefElement}}
+\index{RefElement@{RefElement}!DD4hep::XML::RefElement@{DD4hep::XML::RefElement}}
+\subsubsection[{RefElement}]{\setlength{\rightskip}{0pt plus 5cm}RefElement::RefElement (const {\bf Document} \& {\em d}, \/  const {\bf XmlChar} $\ast$ {\em type}, \/  const {\bf XmlChar} $\ast$ {\em name})}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_ref_element_ad49f3b5422b4070c2fbb04622e94a208}
+
+
+Initializing constructor to create a new XMLElement and add it to the document. 
+
+Definition at line 1135 of file XMLElements.cpp.
+
+References \_\-U, m\_\-name, and DD4hep::XML::Element::setAttr().
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_ref_element_a3bdb94c1c90405444a2d3cb0fd6e3d8d}{
+\index{DD4hep::XML::RefElement@{DD4hep::XML::RefElement}!name@{name}}
+\index{name@{name}!DD4hep::XML::RefElement@{DD4hep::XML::RefElement}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf XmlChar} $\ast$ RefElement::name () const}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_ref_element_a3bdb94c1c90405444a2d3cb0fd6e3d8d}
+
+
+Access the object's name in unicode. 
+
+Definition at line 1157 of file XMLElements.cpp.
+
+References DD4hep::XML::Element::m\_\-element, m\_\-name, and DD4hep::XML::Handle\_\-t::tag().\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_ref_element_a5af29e6f73c8b0e1aa23dff6dbe8b39d}{
+\index{DD4hep::XML::RefElement@{DD4hep::XML::RefElement}!operator=@{operator=}}
+\index{operator=@{operator=}!DD4hep::XML::RefElement@{DD4hep::XML::RefElement}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RefElement} \& RefElement::operator= (const {\bf RefElement} \& {\em e})}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_ref_element_a5af29e6f73c8b0e1aa23dff6dbe8b39d}
+
+
+Assignment operator. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_element_afa8ba01485168c3492bd913c22bc8c0d}{DD4hep::XML::Element}.
+
+Definition at line 1152 of file XMLElements.cpp.
+
+References DD4hep::XML::Element::m\_\-element.\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_ref_element_ab7f8c264c97670244ff179b7c89e8dfa}{
+\index{DD4hep::XML::RefElement@{DD4hep::XML::RefElement}!refName@{refName}}
+\index{refName@{refName}!DD4hep::XML::RefElement@{DD4hep::XML::RefElement}}
+\subsubsection[{refName}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf XmlChar} $\ast$ RefElement::refName () const}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_ref_element_ab7f8c264c97670244ff179b7c89e8dfa}
+
+
+Access the object's reference name in unicode (same as name). 
+
+Definition at line 1163 of file XMLElements.cpp.
+
+References DD4hep::XML::Element::m\_\-element, m\_\-name, and DD4hep::XML::Handle\_\-t::tag().\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_ref_element_ab466a91b8e0dd13e48ae8a74662b92d5}{
+\index{DD4hep::XML::RefElement@{DD4hep::XML::RefElement}!setName@{setName}}
+\index{setName@{setName}!DD4hep::XML::RefElement@{DD4hep::XML::RefElement}}
+\subsubsection[{setName}]{\setlength{\rightskip}{0pt plus 5cm}void RefElement::setName (const {\bf XmlChar} $\ast$ {\em new\_\-name})}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_ref_element_ab466a91b8e0dd13e48ae8a74662b92d5}
+
+
+Change/set the object's name. 
+
+Definition at line 1169 of file XMLElements.cpp.
+
+References \_\-U, and DD4hep::XML::Element::setAttr().
+
+\subsection{Member Data Documentation}
+\hypertarget{class_d_d4hep_1_1_x_m_l_1_1_ref_element_a581df5a2c94d0c6ed1bacce5e478928d}{
+\index{DD4hep::XML::RefElement@{DD4hep::XML::RefElement}!m\_\-name@{m\_\-name}}
+\index{m\_\-name@{m\_\-name}!DD4hep::XML::RefElement@{DD4hep::XML::RefElement}}
+\subsubsection[{m\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Attribute} {\bf DD4hep::XML::RefElement::m\_\-name}}}
+\label{class_d_d4hep_1_1_x_m_l_1_1_ref_element_a581df5a2c94d0c6ed1bacce5e478928d}
+
+
+Attribute holding thre name. 
+
+Definition at line 847 of file XMLElements.h.
+
+Referenced by name(), RefElement(), and refName().
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/XML/\hyperlink{_x_m_l_elements_8h}{XMLElements.h}\item 
+/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/XML/\hyperlink{_x_m_l_elements_8cpp}{XMLElements.cpp}\end{DoxyCompactItemize}
