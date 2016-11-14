@@ -1,521 +1,687 @@
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler}{
-\section{DD4hep::Simulation::Geant4TrackHandler Class Reference}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler}\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler}{}\section{D\+D4hep\+:\+:Simulation\+:\+:Geant4\+Track\+Handler Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler}\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
 
 
-Helper class to ease the extraction of information from a G4Track object.  
+Helper class to ease the extraction of information from a G4\+Track object.  
 
 
-{\ttfamily \#include $<$Geant4TrackHandler.h$>$}\subsection*{Public Types}
+
+
+{\ttfamily \#include $<$Geant4\+Track\+Handler.\+h$>$}
+
+\subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef \hyperlink{class_g4_v_user_track_information}{G4VUserTrackInformation} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a0db29f37f6c64822f75c656ac27c03b4}{Info}
+typedef \hyperlink{class_g4_v_user_track_information}{G4\+V\+User\+Track\+Information} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a0db29f37f6c64822f75c656ac27c03b4}{Info}
 \item 
-typedef G4ReferenceCountedHandle$<$ G4VTouchable $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a7db438397a8ccd838ba7bf5fe1b75bdb}{Touchable}
+typedef G4\+Reference\+Counted\+Handle$<$ G4\+V\+Touchable $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a7db438397a8ccd838ba7bf5fe1b75bdb}{Touchable}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a265dee4b9cf7103db1a6ea66941d300a}{Geant4TrackHandler} (const G4Track $\ast$t)
-\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
-const char $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ad3d5910f752a3d4c0c97e1ef9fd3f4d2}{statusName} () const 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a265dee4b9cf7103db1a6ea66941d300a}{Geant4\+Track\+Handler} (const G4\+Track $\ast$t)
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a402c1436c1bbd21912b4eec241825d32}{status\+Name} () const
 \item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a4f2fd4751ba0b7ee7d8339b1b0c7ec04}{operator const G4Track $\ast$} () const 
-\begin{DoxyCompactList}\small\item\em Conversion to G4Track. \item\end{DoxyCompactList}\item 
-int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a752a1a03018a5876076a6dc0872871ee}{id} () const 
-\begin{DoxyCompactList}\small\item\em Track's identifier. \item\end{DoxyCompactList}\item 
-int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ad41774cc4b314a21030145ed342ff234}{parent} () const 
-\begin{DoxyCompactList}\small\item\em Track's parent identifier. \item\end{DoxyCompactList}\item 
-G4ParticleDefinition $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a3b1eb4da3634e8d0e912837732c00bdd}{trackDef} () const 
-\begin{DoxyCompactList}\small\item\em Track's particle definition. \item\end{DoxyCompactList}\item 
-const std::string \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_acf7fba0ed0fc7a6074ddb00899b94aae}{name} () const 
-\begin{DoxyCompactList}\small\item\em Track's particle name. \item\end{DoxyCompactList}\item 
-const std::string \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a9083ce32805aafb9f95d1bdf53cfc440}{type} () const 
-\begin{DoxyCompactList}\small\item\em Track's particle type. \item\end{DoxyCompactList}\item 
-const G4ThreeVector \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ad859295b60042a38265402f242442bd7}{position} () const 
-\begin{DoxyCompactList}\small\item\em Track's position. \item\end{DoxyCompactList}\item 
-const G4ThreeVector \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a2cfe782eee6aa47c77510395f5fe65f4}{vertex} () const 
-\begin{DoxyCompactList}\small\item\em Track's vertex position, where the track was created. \item\end{DoxyCompactList}\item 
-double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a898c62c8e1639fd059d8dfd97fecf2d1}{globalTime} () const 
-\begin{DoxyCompactList}\small\item\em Track global time. \item\end{DoxyCompactList}\item 
-double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a13a89fbc1343bbb75d0a77386f8cfc65}{properTime} () const 
-\begin{DoxyCompactList}\small\item\em Track proper time. \item\end{DoxyCompactList}\item 
-double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a99dc1b9082ce4f63fa2501010c3b4a4e}{energy} () const 
-\begin{DoxyCompactList}\small\item\em Track's energy. \item\end{DoxyCompactList}\item 
-double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a7186b098fbff57fc9a547bff5602c1f5}{kineticEnergy} () const 
-\begin{DoxyCompactList}\small\item\em Track's kinetic energy. \item\end{DoxyCompactList}\item 
-double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a48537f6a5370efc3246fa3656412a677}{velocity} () const 
-\begin{DoxyCompactList}\small\item\em Track velocity. \item\end{DoxyCompactList}\item 
-double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a90e8a848e17758df7905f8506ee0c19d}{length} () const 
-\begin{DoxyCompactList}\small\item\em Track length. \item\end{DoxyCompactList}\item 
-double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_af8197965eb41bea4f5653a334fca2b7d}{time} () const 
-\begin{DoxyCompactList}\small\item\em Track time. \item\end{DoxyCompactList}\item 
-G4VPhysicalVolume $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_abd177f86afc0aa606d25ddb60e7766d4}{vol} () const 
-\begin{DoxyCompactList}\small\item\em Physical (original) volume of the track. \item\end{DoxyCompactList}\item 
-G4ThreeVector \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_afa0618147c0860c4b003908cd24d26d9}{momentum} () const 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a6a8487e74ce467e4792ec60cf9846f9e}{operator const G4\+Track $\ast$} () const
+\begin{DoxyCompactList}\small\item\em Conversion to G4\+Track. \end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ab7681e7aa6c392a8cdbd41d9d3e7c7b9}{id} () const
+\begin{DoxyCompactList}\small\item\em Track\textquotesingle{}s identifier. \end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a9af21d940686e7a243eebea3676b0cca}{parent} () const
+\begin{DoxyCompactList}\small\item\em Track\textquotesingle{}s parent identifier. \end{DoxyCompactList}\item 
+G4\+Particle\+Definition $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ac6cfe20cc38d006243a07e9f9b8c198f}{track\+Def} () const
+\begin{DoxyCompactList}\small\item\em Track\textquotesingle{}s particle definition. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a946b340138f8d53ae394980251f32e77}{name} () const
+\begin{DoxyCompactList}\small\item\em Track\textquotesingle{}s particle name. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a619850c062c24f0c3dc6138aae3ffbcb}{type} () const
+\begin{DoxyCompactList}\small\item\em Track\textquotesingle{}s particle type. \end{DoxyCompactList}\item 
+const G4\+Three\+Vector \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a03fa77009e7a4af92b45457be799baa5}{position} () const
+\begin{DoxyCompactList}\small\item\em Track\textquotesingle{}s position. \end{DoxyCompactList}\item 
+const G4\+Three\+Vector \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a170e1d49e624b26b540485e0aa3f5549}{vertex} () const
+\begin{DoxyCompactList}\small\item\em Track\textquotesingle{}s vertex position, where the track was created. \end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a6baa2a4bff1728d1de2d83da6e06cbdd}{global\+Time} () const
+\begin{DoxyCompactList}\small\item\em Track global time. \end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a48e9356a58f172abf33d1410d3aa61c2}{proper\+Time} () const
+\begin{DoxyCompactList}\small\item\em Track proper time. \end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a9f570cb8f5bda9880c39a08c970d68fe}{energy} () const
+\begin{DoxyCompactList}\small\item\em Track\textquotesingle{}s energy. \end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a4e4e1b38fb592e189ac303a6ef19f0cf}{kinetic\+Energy} () const
+\begin{DoxyCompactList}\small\item\em Track\textquotesingle{}s kinetic energy. \end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_aa190c53d0eebac9b69ec9112b6c23492}{velocity} () const
+\begin{DoxyCompactList}\small\item\em Track velocity. \end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_af2567747abef792c86729878fdecfe4d}{length} () const
+\begin{DoxyCompactList}\small\item\em Track length. \end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_aaa1df8165c645a9aae1f959d77a191ce}{time} () const
+\begin{DoxyCompactList}\small\item\em Track time. \end{DoxyCompactList}\item 
+G4\+V\+Physical\+Volume $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a454676baecb2ae344dcf491ba8a15090}{vol} () const
+\begin{DoxyCompactList}\small\item\em Physical (original) volume of the track. \end{DoxyCompactList}\item 
+G4\+Three\+Vector \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_af184b1eae4fe7d2da7d9579922514d1b}{momentum} () const
 \item 
-G4VPhysicalVolume $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ab1fc24b8386fe9c128724f40ff10eea0}{nextVol} () const 
-\begin{DoxyCompactList}\small\item\em Next physical volume of the track. \item\end{DoxyCompactList}\item 
-const G4LogicalVolume $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_af5209e28628bd58a99d0ca28299d94e9}{vertexVol} () const 
-\begin{DoxyCompactList}\small\item\em Logical volume of the origine vertex. \item\end{DoxyCompactList}\item 
-const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a7db438397a8ccd838ba7bf5fe1b75bdb}{Touchable} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a5ed6c27f8de4cbfe76f4213c06bd72b3}{touchable} () const 
-\begin{DoxyCompactList}\small\item\em Touchable of the track. \item\end{DoxyCompactList}\item 
-const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a7db438397a8ccd838ba7bf5fe1b75bdb}{Touchable} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a9d2aba96b778903b66882e922ec24f29}{nextTouchable} () const 
-\begin{DoxyCompactList}\small\item\em Next touchable of the track. \item\end{DoxyCompactList}\item 
-const G4VProcess $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a58d18fef161e0f06bd860e0a67c3db48}{creatorProcess} () const 
-\begin{DoxyCompactList}\small\item\em Physical process of the track generation. \item\end{DoxyCompactList}\item 
-const std::string \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a12603b39059e2c20a5bca9c3389da596}{creatorName} () const 
-\begin{DoxyCompactList}\small\item\em Physical process of the track generation. \item\end{DoxyCompactList}\item 
-\hyperlink{class_g4_v_user_track_information}{Info} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_afb2d00560f0fda5d1b9b1323e56adefb}{userInfo} () const 
-\begin{DoxyCompactList}\small\item\em User information block. \item\end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_t}{T} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a32b937f003ac5ca77676fcd2486279e4}{info} () const 
-\begin{DoxyCompactList}\small\item\em Specific user information block. \item\end{DoxyCompactList}\item 
-const G4Step $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a751a9e1a533202afb900064702e76e61}{step} () const 
-\begin{DoxyCompactList}\small\item\em Step information. \item\end{DoxyCompactList}\item 
-G4int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_aa9746a4283a024869e1cdedf62231926}{stepNumber} () const 
-\begin{DoxyCompactList}\small\item\em Step number. \item\end{DoxyCompactList}\item 
-int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a929075b1a75bdab50f4e69a19d5b6931}{pdgID} () const 
-\begin{DoxyCompactList}\small\item\em Access the PDG particle identification. \item\end{DoxyCompactList}\item 
-const G4DynamicParticle $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a3348efba5ab5cda2b8d918974482fe63}{dynamic} () const 
-\begin{DoxyCompactList}\small\item\em Access the dynamic particle of the track object. \item\end{DoxyCompactList}\item 
-const G4PrimaryParticle $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a62a4f0316aff9faca83efe0f86e35793}{primary} () const 
-\begin{DoxyCompactList}\small\item\em Access the primary particle of the track object (if present). \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+G4\+V\+Physical\+Volume $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ad00d99a8dbf18835de9b4cc52a50061b}{next\+Vol} () const
+\begin{DoxyCompactList}\small\item\em Next physical volume of the track. \end{DoxyCompactList}\item 
+const G4\+Logical\+Volume $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a9a21433f606d817747006d54d3d9ef74}{vertex\+Vol} () const
+\begin{DoxyCompactList}\small\item\em Logical volume of the origine vertex. \end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a7db438397a8ccd838ba7bf5fe1b75bdb}{Touchable} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_aa092449d256643f453e7339ad7fa4417}{touchable} () const
+\begin{DoxyCompactList}\small\item\em Touchable of the track. \end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a7db438397a8ccd838ba7bf5fe1b75bdb}{Touchable} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a372a2c1b761fe31bb51f29a195a787d0}{next\+Touchable} () const
+\begin{DoxyCompactList}\small\item\em Next touchable of the track. \end{DoxyCompactList}\item 
+const G4\+V\+Process $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ae081ca27887a7aa012bd2df5b7eb5b98}{creator\+Process} () const
+\begin{DoxyCompactList}\small\item\em Physical process of the track generation. \end{DoxyCompactList}\item 
+const std\+::string \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a63cf6a2e7bc4e786a3722cf9ced12cf1}{creator\+Name} () const
+\begin{DoxyCompactList}\small\item\em Physical process of the track generation. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a0db29f37f6c64822f75c656ac27c03b4}{Info} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a66ccd67b8130fe0311e38a21699d9b72}{user\+Info} () const
+\begin{DoxyCompactList}\small\item\em User information block. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_t}{T} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a6d21a4b708c7cb447793cd442a87997f}{info} () const
+\begin{DoxyCompactList}\small\item\em Specific user information block. \end{DoxyCompactList}\item 
+const G4\+Step $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a5d49e7ad72048dbfcdfd209c88d6d252}{step} () const
+\begin{DoxyCompactList}\small\item\em Step information. \end{DoxyCompactList}\item 
+G4int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_af3908966bb8fcc2549d7fa206d587758}{step\+Number} () const
+\begin{DoxyCompactList}\small\item\em Step number. \end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a7211bc51d66addbea6e1f1185b59d270}{pdg\+ID} () const
+\begin{DoxyCompactList}\small\item\em Access the P\+DG particle identification. \end{DoxyCompactList}\item 
+const G4\+Dynamic\+Particle $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a5821e52ab86d15c7f80cd758727df2c5}{dynamic} () const
+\begin{DoxyCompactList}\small\item\em Access the dynamic particle of the track object. \end{DoxyCompactList}\item 
+const G4\+Primary\+Particle $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_afb8ea564a87f821b18d3a5ae9e09bf70}{primary} () const
+\begin{DoxyCompactList}\small\item\em Access the primary particle of the track object (if present) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-const G4Track $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a40a5ac7eb61ca69314a64f9f3c5a0f0b}{track}
-\begin{DoxyCompactList}\small\item\em Reference to the track object. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+const G4\+Track $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a40a5ac7eb61ca69314a64f9f3c5a0f0b}{track}
+\begin{DoxyCompactList}\small\item\em Reference to the track object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Helper class to ease the extraction of information from a G4Track object. Tiny helper/utility class to easily access Geant4 track information. Born by lazyness: Avoid typing millions of statements!
+Helper class to ease the extraction of information from a G4\+Track object. 
+
+Tiny helper/utility class to easily access Geant4 track information. Born by lazyness\+: Avoid typing millions of statements!
 
 \begin{DoxyAuthor}{Author}
-M.Frank 
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
-Definition at line 53 of file Geant4TrackHandler.h.
+Definition at line 53 of file Geant4\+Track\+Handler.\+h.
+
+
 
 \subsection{Member Typedef Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a0db29f37f6c64822f75c656ac27c03b4}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!Info@{Info}}
-\index{Info@{Info}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{Info}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf G4VUserTrackInformation} {\bf DD4hep::Simulation::Geant4TrackHandler::Info}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a0db29f37f6c64822f75c656ac27c03b4}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a0db29f37f6c64822f75c656ac27c03b4}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a0db29f37f6c64822f75c656ac27c03b4} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!Info@{Info}}
+\index{Info@{Info}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{Info}{Info}}
+{\footnotesize\ttfamily typedef \hyperlink{class_g4_v_user_track_information}{G4\+V\+User\+Track\+Information} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a0db29f37f6c64822f75c656ac27c03b4}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::\+Info}}
 
 
-Definition at line 55 of file Geant4TrackHandler.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a7db438397a8ccd838ba7bf5fe1b75bdb}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!Touchable@{Touchable}}
-\index{Touchable@{Touchable}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{Touchable}]{\setlength{\rightskip}{0pt plus 5cm}typedef G4ReferenceCountedHandle$<$G4VTouchable$>$ {\bf DD4hep::Simulation::Geant4TrackHandler::Touchable}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a7db438397a8ccd838ba7bf5fe1b75bdb}
+
+Definition at line 55 of file Geant4\+Track\+Handler.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a7db438397a8ccd838ba7bf5fe1b75bdb}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a7db438397a8ccd838ba7bf5fe1b75bdb} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!Touchable@{Touchable}}
+\index{Touchable@{Touchable}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{Touchable}{Touchable}}
+{\footnotesize\ttfamily typedef G4\+Reference\+Counted\+Handle$<$G4\+V\+Touchable$>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a7db438397a8ccd838ba7bf5fe1b75bdb}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::\+Touchable}}
 
 
-Definition at line 56 of file Geant4TrackHandler.h.
+
+Definition at line 56 of file Geant4\+Track\+Handler.\+h.
+
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a265dee4b9cf7103db1a6ea66941d300a}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!Geant4TrackHandler@{Geant4TrackHandler}}
-\index{Geant4TrackHandler@{Geant4TrackHandler}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{Geant4TrackHandler}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4TrackHandler::Geant4TrackHandler (const G4Track $\ast$ {\em t})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a265dee4b9cf7103db1a6ea66941d300a}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a265dee4b9cf7103db1a6ea66941d300a}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a265dee4b9cf7103db1a6ea66941d300a} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!Geant4\+Track\+Handler@{Geant4\+Track\+Handler}}
+\index{Geant4\+Track\+Handler@{Geant4\+Track\+Handler}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{Geant4\+Track\+Handler()}{Geant4TrackHandler()}}
+{\footnotesize\ttfamily D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::\+Geant4\+Track\+Handler (\begin{DoxyParamCaption}\item[{const G4\+Track $\ast$}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Initializing constructor. 
 
 Should test here if the track pointer is valid to avoind any later trouble 
 
-Definition at line 60 of file Geant4TrackHandler.h.
+Definition at line 60 of file Geant4\+Track\+Handler.\+h.
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a12603b39059e2c20a5bca9c3389da596}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!creatorName@{creatorName}}
-\index{creatorName@{creatorName}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{creatorName}]{\setlength{\rightskip}{0pt plus 5cm}const std::string DD4hep::Simulation::Geant4TrackHandler::creatorName () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a12603b39059e2c20a5bca9c3389da596}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a63cf6a2e7bc4e786a3722cf9ced12cf1}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a63cf6a2e7bc4e786a3722cf9ced12cf1} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!creator\+Name@{creator\+Name}}
+\index{creator\+Name@{creator\+Name}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{creator\+Name()}{creatorName()}}
+{\footnotesize\ttfamily const std\+::string D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::creator\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-
-Physical process of the track generation. 
-
-Definition at line 167 of file Geant4TrackHandler.h.
-
-References creatorProcess().
-
-Referenced by DD4hep::Simulation::Geant4EscapeCounter::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a58d18fef161e0f06bd860e0a67c3db48}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!creatorProcess@{creatorProcess}}
-\index{creatorProcess@{creatorProcess}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{creatorProcess}]{\setlength{\rightskip}{0pt plus 5cm}const G4VProcess$\ast$ DD4hep::Simulation::Geant4TrackHandler::creatorProcess () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a58d18fef161e0f06bd860e0a67c3db48}
 
 
 Physical process of the track generation. 
 
-Definition at line 163 of file Geant4TrackHandler.h.
 
-References track.
 
-Referenced by DD4hep::Simulation::Geant4ParticleHandler::begin(), creatorName(), and DD4hep::Simulation::Geant4TrackingPostAction::end().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a3348efba5ab5cda2b8d918974482fe63}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!dynamic@{dynamic}}
-\index{dynamic@{dynamic}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{dynamic}]{\setlength{\rightskip}{0pt plus 5cm}const G4DynamicParticle$\ast$ DD4hep::Simulation::Geant4TrackHandler::dynamic () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a3348efba5ab5cda2b8d918974482fe63}
+Definition at line 167 of file Geant4\+Track\+Handler.\+h.
+
+
+
+References creator\+Process().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Escape\+Counter\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ae081ca27887a7aa012bd2df5b7eb5b98}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ae081ca27887a7aa012bd2df5b7eb5b98} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!creator\+Process@{creator\+Process}}
+\index{creator\+Process@{creator\+Process}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{creator\+Process()}{creatorProcess()}}
+{\footnotesize\ttfamily const G4\+V\+Process$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::creator\+Process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Physical process of the track generation. 
+
+
+
+Definition at line 163 of file Geant4\+Track\+Handler.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::begin(), creator\+Name(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracking\+Post\+Action\+::end().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a5821e52ab86d15c7f80cd758727df2c5}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a5821e52ab86d15c7f80cd758727df2c5} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!dynamic@{dynamic}}
+\index{dynamic@{dynamic}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{dynamic()}{dynamic()}}
+{\footnotesize\ttfamily const G4\+Dynamic\+Particle$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::dynamic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Access the dynamic particle of the track object. 
 
-Definition at line 194 of file Geant4TrackHandler.h.
-
-References track.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a99dc1b9082ce4f63fa2501010c3b4a4e}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!energy@{energy}}
-\index{energy@{energy}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{energy}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::Simulation::Geant4TrackHandler::energy () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a99dc1b9082ce4f63fa2501010c3b4a4e}
 
 
-Track's energy. 
+Definition at line 194 of file Geant4\+Track\+Handler.\+h.
 
-Definition at line 120 of file Geant4TrackHandler.h.
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a9f570cb8f5bda9880c39a08c970d68fe}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a9f570cb8f5bda9880c39a08c970d68fe} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!energy@{energy}}
+\index{energy@{energy}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{energy()}{energy()}}
+{\footnotesize\ttfamily double D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::energy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-References track.
 
-Referenced by DD4hep::Simulation::Geant4EscapeCounter::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a898c62c8e1639fd059d8dfd97fecf2d1}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!globalTime@{globalTime}}
-\index{globalTime@{globalTime}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{globalTime}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::Simulation::Geant4TrackHandler::globalTime () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a898c62c8e1639fd059d8dfd97fecf2d1}
+
+Track\textquotesingle{}s energy. 
+
+
+
+Definition at line 120 of file Geant4\+Track\+Handler.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Escape\+Counter\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a6baa2a4bff1728d1de2d83da6e06cbdd}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a6baa2a4bff1728d1de2d83da6e06cbdd} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!global\+Time@{global\+Time}}
+\index{global\+Time@{global\+Time}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{global\+Time()}{globalTime()}}
+{\footnotesize\ttfamily double D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::global\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Track global time. 
 
-Definition at line 112 of file Geant4TrackHandler.h.
-
-References track.
-
-Referenced by DD4hep::Simulation::Geant4ParticleHandler::begin().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a752a1a03018a5876076a6dc0872871ee}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!id@{id}}
-\index{id@{id}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}int DD4hep::Simulation::Geant4TrackHandler::id () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a752a1a03018a5876076a6dc0872871ee}
 
 
-Track's identifier. 
+Definition at line 112 of file Geant4\+Track\+Handler.\+h.
 
-Definition at line 84 of file Geant4TrackHandler.h.
 
-References track.
 
-Referenced by DD4hep::Simulation::Geant4ParticleHandler::begin(), DD4hep::Simulation::Geant4ParticleHandler::end(), and DD4hep::Simulation::Geant4EscapeCounter::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a32b937f003ac5ca77676fcd2486279e4}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!info@{info}}
-\index{info@{info}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{info}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf T}$\ast$ DD4hep::Simulation::Geant4TrackHandler::info () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a32b937f003ac5ca77676fcd2486279e4}
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::begin().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ab7681e7aa6c392a8cdbd41d9d3e7c7b9}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ab7681e7aa6c392a8cdbd41d9d3e7c7b9} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!id@{id}}
+\index{id@{id}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily int D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Track\textquotesingle{}s identifier. 
+
+
+
+Definition at line 84 of file Geant4\+Track\+Handler.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::begin(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::end(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Escape\+Counter\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a6d21a4b708c7cb447793cd442a87997f}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a6d21a4b708c7cb447793cd442a87997f} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!info@{info}}
+\index{info@{info}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{class_t}{T}$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Specific user information block. 
 
-Definition at line 177 of file Geant4TrackHandler.h.
-
-References userInfo().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a7186b098fbff57fc9a547bff5602c1f5}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!kineticEnergy@{kineticEnergy}}
-\index{kineticEnergy@{kineticEnergy}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{kineticEnergy}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::Simulation::Geant4TrackHandler::kineticEnergy () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a7186b098fbff57fc9a547bff5602c1f5}
 
 
-Track's kinetic energy. 
+Definition at line 177 of file Geant4\+Track\+Handler.\+h.
 
-Definition at line 124 of file Geant4TrackHandler.h.
 
-References track.
 
-Referenced by DD4hep::Simulation::Geant4ParticleHandler::begin().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a90e8a848e17758df7905f8506ee0c19d}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!length@{length}}
-\index{length@{length}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::Simulation::Geant4TrackHandler::length () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a90e8a848e17758df7905f8506ee0c19d}
+References user\+Info().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a4e4e1b38fb592e189ac303a6ef19f0cf}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a4e4e1b38fb592e189ac303a6ef19f0cf} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!kinetic\+Energy@{kinetic\+Energy}}
+\index{kinetic\+Energy@{kinetic\+Energy}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{kinetic\+Energy()}{kineticEnergy()}}
+{\footnotesize\ttfamily double D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::kinetic\+Energy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Track\textquotesingle{}s kinetic energy. 
+
+
+
+Definition at line 124 of file Geant4\+Track\+Handler.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::begin().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_af2567747abef792c86729878fdecfe4d}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_af2567747abef792c86729878fdecfe4d} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!length@{length}}
+\index{length@{length}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily double D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Track length. 
 
-Definition at line 132 of file Geant4TrackHandler.h.
-
-References track.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_afa0618147c0860c4b003908cd24d26d9}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!momentum@{momentum}}
-\index{momentum@{momentum}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{momentum}]{\setlength{\rightskip}{0pt plus 5cm}G4ThreeVector DD4hep::Simulation::Geant4TrackHandler::momentum () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_afa0618147c0860c4b003908cd24d26d9}
 
 
-Definition at line 143 of file Geant4TrackHandler.h.
+Definition at line 132 of file Geant4\+Track\+Handler.\+h.
 
-References track.
-
-Referenced by DD4hep::Simulation::Geant4ParticleHandler::begin().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_acf7fba0ed0fc7a6074ddb00899b94aae}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!name@{name}}
-\index{name@{name}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}const std::string\& DD4hep::Simulation::Geant4TrackHandler::name () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_acf7fba0ed0fc7a6074ddb00899b94aae}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_af184b1eae4fe7d2da7d9579922514d1b}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_af184b1eae4fe7d2da7d9579922514d1b} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!momentum@{momentum}}
+\index{momentum@{momentum}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{momentum()}{momentum()}}
+{\footnotesize\ttfamily G4\+Three\+Vector D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::momentum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
-Track's particle name. 
 
-Definition at line 96 of file Geant4TrackHandler.h.
+Definition at line 143 of file Geant4\+Track\+Handler.\+h.
 
-References trackDef().
 
-Referenced by DD4hep::Simulation::Geant4EscapeCounter::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a9d2aba96b778903b66882e922ec24f29}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!nextTouchable@{nextTouchable}}
-\index{nextTouchable@{nextTouchable}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{nextTouchable}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Touchable}\& DD4hep::Simulation::Geant4TrackHandler::nextTouchable () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a9d2aba96b778903b66882e922ec24f29}
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::begin().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a946b340138f8d53ae394980251f32e77}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a946b340138f8d53ae394980251f32e77} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!name@{name}}
+\index{name@{name}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily const std\+::string\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Track\textquotesingle{}s particle name. 
+
+
+
+Definition at line 96 of file Geant4\+Track\+Handler.\+h.
+
+
+
+References track\+Def().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Escape\+Counter\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a372a2c1b761fe31bb51f29a195a787d0}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a372a2c1b761fe31bb51f29a195a787d0} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!next\+Touchable@{next\+Touchable}}
+\index{next\+Touchable@{next\+Touchable}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{next\+Touchable()}{nextTouchable()}}
+{\footnotesize\ttfamily const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a7db438397a8ccd838ba7bf5fe1b75bdb}{Touchable}\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::next\+Touchable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Next touchable of the track. 
 
-Definition at line 159 of file Geant4TrackHandler.h.
 
-References track.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ab1fc24b8386fe9c128724f40ff10eea0}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!nextVol@{nextVol}}
-\index{nextVol@{nextVol}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{nextVol}]{\setlength{\rightskip}{0pt plus 5cm}G4VPhysicalVolume$\ast$ DD4hep::Simulation::Geant4TrackHandler::nextVol () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ab1fc24b8386fe9c128724f40ff10eea0}
+
+Definition at line 159 of file Geant4\+Track\+Handler.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ad00d99a8dbf18835de9b4cc52a50061b}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ad00d99a8dbf18835de9b4cc52a50061b} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!next\+Vol@{next\+Vol}}
+\index{next\+Vol@{next\+Vol}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{next\+Vol()}{nextVol()}}
+{\footnotesize\ttfamily G4\+V\+Physical\+Volume$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::next\+Vol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Next physical volume of the track. 
 
-Definition at line 147 of file Geant4TrackHandler.h.
-
-References track.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a4f2fd4751ba0b7ee7d8339b1b0c7ec04}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!operator const G4Track $\ast$@{operator const G4Track $\ast$}}
-\index{operator const G4Track $\ast$@{operator const G4Track $\ast$}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{operator const G4Track $\ast$}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4TrackHandler::operator const G4Track $\ast$ () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a4f2fd4751ba0b7ee7d8339b1b0c7ec04}
 
 
-Conversion to G4Track. 
+Definition at line 147 of file Geant4\+Track\+Handler.\+h.
 
-Definition at line 80 of file Geant4TrackHandler.h.
-
-References track.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ad41774cc4b314a21030145ed342ff234}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!parent@{parent}}
-\index{parent@{parent}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}int DD4hep::Simulation::Geant4TrackHandler::parent () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ad41774cc4b314a21030145ed342ff234}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a6a8487e74ce467e4792ec60cf9846f9e}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a6a8487e74ce467e4792ec60cf9846f9e} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!operator const G4\+Track $\ast$@{operator const G4\+Track $\ast$}}
+\index{operator const G4\+Track $\ast$@{operator const G4\+Track $\ast$}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{operator const G4\+Track $\ast$()}{operator const G4Track *()}}
+{\footnotesize\ttfamily D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::operator const G4\+Track $\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
-Track's parent identifier. 
 
-Definition at line 88 of file Geant4TrackHandler.h.
+Conversion to G4\+Track. 
+
+
+
+Definition at line 80 of file Geant4\+Track\+Handler.\+h.
+
+
 
 References track.
 
-Referenced by DD4hep::Simulation::Geant4ParticleHandler::begin().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a929075b1a75bdab50f4e69a19d5b6931}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!pdgID@{pdgID}}
-\index{pdgID@{pdgID}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{pdgID}]{\setlength{\rightskip}{0pt plus 5cm}int DD4hep::Simulation::Geant4TrackHandler::pdgID () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a929075b1a75bdab50f4e69a19d5b6931}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a9af21d940686e7a243eebea3676b0cca}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a9af21d940686e7a243eebea3676b0cca} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!parent@{parent}}
+\index{parent@{parent}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{parent()}{parent()}}
+{\footnotesize\ttfamily int D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
-Access the PDG particle identification. 
 
-Definition at line 189 of file Geant4TrackHandler.h.
-
-References trackDef().
-
-Referenced by DD4hep::Simulation::Geant4EscapeCounter::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ad859295b60042a38265402f242442bd7}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!position@{position}}
-\index{position@{position}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}const G4ThreeVector\& DD4hep::Simulation::Geant4TrackHandler::position () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ad859295b60042a38265402f242442bd7}
+Track\textquotesingle{}s parent identifier. 
 
 
-Track's position. 
 
-Definition at line 104 of file Geant4TrackHandler.h.
-
-References track.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a62a4f0316aff9faca83efe0f86e35793}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!primary@{primary}}
-\index{primary@{primary}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{primary}]{\setlength{\rightskip}{0pt plus 5cm}const G4PrimaryParticle$\ast$ DD4hep::Simulation::Geant4TrackHandler::primary () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a62a4f0316aff9faca83efe0f86e35793}
+Definition at line 88 of file Geant4\+Track\+Handler.\+h.
 
 
-Access the primary particle of the track object (if present). 
 
-Definition at line 198 of file Geant4TrackHandler.h.
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::begin().
 
-References track.
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a7211bc51d66addbea6e1f1185b59d270}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a7211bc51d66addbea6e1f1185b59d270} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!pdg\+ID@{pdg\+ID}}
+\index{pdg\+ID@{pdg\+ID}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{pdg\+I\+D()}{pdgID()}}
+{\footnotesize\ttfamily int D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::pdg\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-Referenced by DD4hep::Simulation::Geant4ParticleHandler::begin().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a13a89fbc1343bbb75d0a77386f8cfc65}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!properTime@{properTime}}
-\index{properTime@{properTime}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{properTime}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::Simulation::Geant4TrackHandler::properTime () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a13a89fbc1343bbb75d0a77386f8cfc65}
+
+
+Access the P\+DG particle identification. 
+
+
+
+Definition at line 189 of file Geant4\+Track\+Handler.\+h.
+
+
+
+References track\+Def().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Escape\+Counter\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a03fa77009e7a4af92b45457be799baa5}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a03fa77009e7a4af92b45457be799baa5} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!position@{position}}
+\index{position@{position}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{position()}{position()}}
+{\footnotesize\ttfamily const G4\+Three\+Vector\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Track\textquotesingle{}s position. 
+
+
+
+Definition at line 104 of file Geant4\+Track\+Handler.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_afb8ea564a87f821b18d3a5ae9e09bf70}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_afb8ea564a87f821b18d3a5ae9e09bf70} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!primary@{primary}}
+\index{primary@{primary}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{primary()}{primary()}}
+{\footnotesize\ttfamily const G4\+Primary\+Particle$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::primary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the primary particle of the track object (if present) 
+
+
+
+Definition at line 198 of file Geant4\+Track\+Handler.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::begin().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a48e9356a58f172abf33d1410d3aa61c2}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a48e9356a58f172abf33d1410d3aa61c2} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!proper\+Time@{proper\+Time}}
+\index{proper\+Time@{proper\+Time}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{proper\+Time()}{properTime()}}
+{\footnotesize\ttfamily double D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::proper\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Track proper time. 
 
-Definition at line 116 of file Geant4TrackHandler.h.
-
-References track.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ad3d5910f752a3d4c0c97e1ef9fd3f4d2}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!statusName@{statusName}}
-\index{statusName@{statusName}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{statusName}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ DD4hep::Simulation::Geant4TrackHandler::statusName () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ad3d5910f752a3d4c0c97e1ef9fd3f4d2}
 
 
-Definition at line 67 of file Geant4TrackHandler.h.
+Definition at line 116 of file Geant4\+Track\+Handler.\+h.
 
-References track.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a751a9e1a533202afb900064702e76e61}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!step@{step}}
-\index{step@{step}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{step}]{\setlength{\rightskip}{0pt plus 5cm}const G4Step$\ast$ DD4hep::Simulation::Geant4TrackHandler::step () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a751a9e1a533202afb900064702e76e61}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a402c1436c1bbd21912b4eec241825d32}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a402c1436c1bbd21912b4eec241825d32} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!status\+Name@{status\+Name}}
+\index{status\+Name@{status\+Name}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{status\+Name()}{statusName()}}
+{\footnotesize\ttfamily const char$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::status\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 67 of file Geant4\+Track\+Handler.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a5d49e7ad72048dbfcdfd209c88d6d252}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a5d49e7ad72048dbfcdfd209c88d6d252} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!step@{step}}
+\index{step@{step}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{step()}{step()}}
+{\footnotesize\ttfamily const G4\+Step$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Step information. 
 
-Definition at line 181 of file Geant4TrackHandler.h.
 
-References track.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_aa9746a4283a024869e1cdedf62231926}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!stepNumber@{stepNumber}}
-\index{stepNumber@{stepNumber}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{stepNumber}]{\setlength{\rightskip}{0pt plus 5cm}G4int DD4hep::Simulation::Geant4TrackHandler::stepNumber () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_aa9746a4283a024869e1cdedf62231926}
+
+Definition at line 181 of file Geant4\+Track\+Handler.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_af3908966bb8fcc2549d7fa206d587758}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_af3908966bb8fcc2549d7fa206d587758} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!step\+Number@{step\+Number}}
+\index{step\+Number@{step\+Number}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{step\+Number()}{stepNumber()}}
+{\footnotesize\ttfamily G4int D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::step\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Step number. 
 
-Definition at line 185 of file Geant4TrackHandler.h.
 
-References track.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_af8197965eb41bea4f5653a334fca2b7d}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!time@{time}}
-\index{time@{time}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{time}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::Simulation::Geant4TrackHandler::time () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_af8197965eb41bea4f5653a334fca2b7d}
+
+Definition at line 185 of file Geant4\+Track\+Handler.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_aaa1df8165c645a9aae1f959d77a191ce}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_aaa1df8165c645a9aae1f959d77a191ce} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!time@{time}}
+\index{time@{time}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{time()}{time()}}
+{\footnotesize\ttfamily double D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Track time. 
 
-Definition at line 136 of file Geant4TrackHandler.h.
 
-References track.
 
-Referenced by DD4hep::Simulation::Geant4EscapeCounter::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a5ed6c27f8de4cbfe76f4213c06bd72b3}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!touchable@{touchable}}
-\index{touchable@{touchable}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{touchable}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Touchable}\& DD4hep::Simulation::Geant4TrackHandler::touchable () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a5ed6c27f8de4cbfe76f4213c06bd72b3}
+Definition at line 136 of file Geant4\+Track\+Handler.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Escape\+Counter\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_aa092449d256643f453e7339ad7fa4417}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_aa092449d256643f453e7339ad7fa4417} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!touchable@{touchable}}
+\index{touchable@{touchable}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{touchable()}{touchable()}}
+{\footnotesize\ttfamily const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a7db438397a8ccd838ba7bf5fe1b75bdb}{Touchable}\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::touchable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Touchable of the track. 
 
-Definition at line 155 of file Geant4TrackHandler.h.
-
-References track.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a3b1eb4da3634e8d0e912837732c00bdd}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!trackDef@{trackDef}}
-\index{trackDef@{trackDef}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{trackDef}]{\setlength{\rightskip}{0pt plus 5cm}G4ParticleDefinition$\ast$ DD4hep::Simulation::Geant4TrackHandler::trackDef () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a3b1eb4da3634e8d0e912837732c00bdd}
 
 
-Track's particle definition. 
+Definition at line 155 of file Geant4\+Track\+Handler.\+h.
 
-Definition at line 92 of file Geant4TrackHandler.h.
-
-References track.
-
-Referenced by DD4hep::Simulation::Geant4ParticleHandler::begin(), name(), pdgID(), and type().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a9083ce32805aafb9f95d1bdf53cfc440}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!type@{type}}
-\index{type@{type}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}const std::string\& DD4hep::Simulation::Geant4TrackHandler::type () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a9083ce32805aafb9f95d1bdf53cfc440}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ac6cfe20cc38d006243a07e9f9b8c198f}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_ac6cfe20cc38d006243a07e9f9b8c198f} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!track\+Def@{track\+Def}}
+\index{track\+Def@{track\+Def}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{track\+Def()}{trackDef()}}
+{\footnotesize\ttfamily G4\+Particle\+Definition$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::track\+Def (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
-Track's particle type. 
 
-Definition at line 100 of file Geant4TrackHandler.h.
+Track\textquotesingle{}s particle definition. 
 
-References trackDef().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_afb2d00560f0fda5d1b9b1323e56adefb}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!userInfo@{userInfo}}
-\index{userInfo@{userInfo}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{userInfo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Info}$\ast$ DD4hep::Simulation::Geant4TrackHandler::userInfo () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_afb2d00560f0fda5d1b9b1323e56adefb}
+
+
+Definition at line 92 of file Geant4\+Track\+Handler.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::begin(), name(), pdg\+I\+D(), and type().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a619850c062c24f0c3dc6138aae3ffbcb}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a619850c062c24f0c3dc6138aae3ffbcb} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!type@{type}}
+\index{type@{type}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily const std\+::string\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Track\textquotesingle{}s particle type. 
+
+
+
+Definition at line 100 of file Geant4\+Track\+Handler.\+h.
+
+
+
+References track\+Def().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a66ccd67b8130fe0311e38a21699d9b72}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a66ccd67b8130fe0311e38a21699d9b72} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!user\+Info@{user\+Info}}
+\index{user\+Info@{user\+Info}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{user\+Info()}{userInfo()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a0db29f37f6c64822f75c656ac27c03b4}{Info}$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::user\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 User information block. 
 
-Definition at line 173 of file Geant4TrackHandler.h.
 
-References track.
 
-Referenced by info().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a48537f6a5370efc3246fa3656412a677}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!velocity@{velocity}}
-\index{velocity@{velocity}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{velocity}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::Simulation::Geant4TrackHandler::velocity () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a48537f6a5370efc3246fa3656412a677}
+Definition at line 173 of file Geant4\+Track\+Handler.\+h.
+
+
+
+Referenced by info().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_aa190c53d0eebac9b69ec9112b6c23492}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_aa190c53d0eebac9b69ec9112b6c23492} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!velocity@{velocity}}
+\index{velocity@{velocity}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{velocity()}{velocity()}}
+{\footnotesize\ttfamily double D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Track velocity. 
 
-Definition at line 128 of file Geant4TrackHandler.h.
-
-References track.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a2cfe782eee6aa47c77510395f5fe65f4}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!vertex@{vertex}}
-\index{vertex@{vertex}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{vertex}]{\setlength{\rightskip}{0pt plus 5cm}const G4ThreeVector\& DD4hep::Simulation::Geant4TrackHandler::vertex () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a2cfe782eee6aa47c77510395f5fe65f4}
 
 
-Track's vertex position, where the track was created. 
+Definition at line 128 of file Geant4\+Track\+Handler.\+h.
 
-Definition at line 108 of file Geant4TrackHandler.h.
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a170e1d49e624b26b540485e0aa3f5549}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a170e1d49e624b26b540485e0aa3f5549} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!vertex@{vertex}}
+\index{vertex@{vertex}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{vertex()}{vertex()}}
+{\footnotesize\ttfamily const G4\+Three\+Vector\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::vertex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-References track.
 
-Referenced by DD4hep::Simulation::Geant4ParticleHandler::begin().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_af5209e28628bd58a99d0ca28299d94e9}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!vertexVol@{vertexVol}}
-\index{vertexVol@{vertexVol}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{vertexVol}]{\setlength{\rightskip}{0pt plus 5cm}const G4LogicalVolume$\ast$ DD4hep::Simulation::Geant4TrackHandler::vertexVol () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_af5209e28628bd58a99d0ca28299d94e9}
+
+Track\textquotesingle{}s vertex position, where the track was created. 
+
+
+
+Definition at line 108 of file Geant4\+Track\+Handler.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::begin().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a9a21433f606d817747006d54d3d9ef74}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a9a21433f606d817747006d54d3d9ef74} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!vertex\+Vol@{vertex\+Vol}}
+\index{vertex\+Vol@{vertex\+Vol}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{vertex\+Vol()}{vertexVol()}}
+{\footnotesize\ttfamily const G4\+Logical\+Volume$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::vertex\+Vol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Logical volume of the origine vertex. 
 
-Definition at line 151 of file Geant4TrackHandler.h.
 
-References track.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_abd177f86afc0aa606d25ddb60e7766d4}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!vol@{vol}}
-\index{vol@{vol}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{vol}]{\setlength{\rightskip}{0pt plus 5cm}G4VPhysicalVolume$\ast$ DD4hep::Simulation::Geant4TrackHandler::vol () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_abd177f86afc0aa606d25ddb60e7766d4}
+
+Definition at line 151 of file Geant4\+Track\+Handler.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a454676baecb2ae344dcf491ba8a15090}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a454676baecb2ae344dcf491ba8a15090} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!vol@{vol}}
+\index{vol@{vol}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{vol()}{vol()}}
+{\footnotesize\ttfamily G4\+V\+Physical\+Volume$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::vol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Physical (original) volume of the track. 
 
-Definition at line 140 of file Geant4TrackHandler.h.
 
-References track.
+
+Definition at line 140 of file Geant4\+Track\+Handler.\+h.
+
+
 
 \subsection{Member Data Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a40a5ac7eb61ca69314a64f9f3c5a0f0b}{
-\index{DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}!track@{track}}
-\index{track@{track}!DD4hep::Simulation::Geant4TrackHandler@{DD4hep::Simulation::Geant4TrackHandler}}
-\subsubsection[{track}]{\setlength{\rightskip}{0pt plus 5cm}const G4Track$\ast$ {\bf DD4hep::Simulation::Geant4TrackHandler::track}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a40a5ac7eb61ca69314a64f9f3c5a0f0b}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a40a5ac7eb61ca69314a64f9f3c5a0f0b}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_track_handler_a40a5ac7eb61ca69314a64f9f3c5a0f0b} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}!track@{track}}
+\index{track@{track}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler}}
+\subsubsection{\texorpdfstring{track}{track}}
+{\footnotesize\ttfamily const G4\+Track$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Track\+Handler\+::track}
+
 
 
 Reference to the track object. 
 
-Definition at line 58 of file Geant4TrackHandler.h.
 
-Referenced by creatorProcess(), dynamic(), energy(), globalTime(), id(), kineticEnergy(), length(), momentum(), nextTouchable(), nextVol(), operator const G4Track $\ast$(), parent(), position(), primary(), properTime(), statusName(), step(), stepNumber(), time(), touchable(), trackDef(), userInfo(), velocity(), vertex(), vertexVol(), and vol().
 
-The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+Definition at line 58 of file Geant4\+Track\+Handler.\+h.
+
+
+
+Referenced by operator const G4\+Track $\ast$().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_track_handler_8h}{Geant4TrackHandler.h}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/include/\+D\+D\+G4/\hyperlink{_geant4_track_handler_8h}{Geant4\+Track\+Handler.\+h}\end{DoxyCompactItemize}

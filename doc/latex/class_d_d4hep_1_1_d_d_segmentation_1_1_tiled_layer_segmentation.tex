@@ -1,429 +1,645 @@
-\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation}{
-\section{DD4hep::DDSegmentation::TiledLayerSegmentation Class Reference}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation}\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-}
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation}{}\section{D\+D4hep\+:\+:D\+D\+Segmentation\+:\+:Tiled\+Layer\+Segmentation Class Reference}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation}\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
 
 
-{\ttfamily \#include $<$TiledLayerSegmentation.h$>$}Inheritance diagram for DD4hep::DDSegmentation::TiledLayerSegmentation::\begin{figure}[H]
+{\ttfamily \#include $<$Tiled\+Layer\+Segmentation.\+h$>$}
+
+Inheritance diagram for D\+D4hep\+:\+:D\+D\+Segmentation\+:\+:Tiled\+Layer\+Segmentation\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2cm]{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation}
+\includegraphics[height=2.000000cm]{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation}
 \end{center}
 \end{figure}
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_1_1_layer_dimensions}{LayerDimensions}
-\begin{DoxyCompactList}\small\item\em Helper class to store x and y dimensions of a layer. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+struct \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_1_1_layer_dimensions}{Layer\+Dimensions}
+\begin{DoxyCompactList}\small\item\em Helper class to store x and y dimensions of a layer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a9f5fb19402d8d5bfbfb6d3db886bdfe3}{TiledLayerSegmentation} (const std::string \&cellEncoding=\char`\"{}\char`\"{})
-\begin{DoxyCompactList}\small\item\em Default constructor passing the encoding string. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ade81bfe57661f1faf98877b6e4de725e}{TiledLayerSegmentation} (\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field64}{BitField64} $\ast$decoder)
-\begin{DoxyCompactList}\small\item\em Default constructor used by derived classes passing an existing decoder. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ac4a4730758ab96a1215fb55999503af2}{$\sim$TiledLayerSegmentation} ()
-\begin{DoxyCompactList}\small\item\em destructor \item\end{DoxyCompactList}\item 
-virtual \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a4e29a7791d15e076601c3edd0e350fd0}{position} (const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{CellID} \&cellID) const 
-\begin{DoxyCompactList}\small\item\em determine the position based on the cell ID \item\end{DoxyCompactList}\item 
-virtual \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{CellID} \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a481dd2415b1b931234efbca27617f1dd}{cellID} (const \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \&localPosition, const \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \&globalPosition, const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_a61a6833a18d1800bdef176595f83e3ba}{VolumeID} \&volumeID) const 
-\begin{DoxyCompactList}\small\item\em determine the cell ID based on the position \item\end{DoxyCompactList}\item 
-double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a259da236fc6000191d8501aeeb2fa0de}{gridSizeX} () const 
-\begin{DoxyCompactList}\small\item\em access the default grid size in X \item\end{DoxyCompactList}\item 
-double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a3319e4007ffe0ea34721e3dcfd5fb4fd}{gridSizeY} () const 
-\begin{DoxyCompactList}\small\item\em access the default grid size in Y \item\end{DoxyCompactList}\item 
-double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a4e1ba517985d9b161705c9defef89640}{layerGridSizeX} (int layerIndex) const 
-\begin{DoxyCompactList}\small\item\em access the actual grid size in X for a given layer \item\end{DoxyCompactList}\item 
-double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ae7faae312b547313ca0e139bc8973149}{layerGridSizeY} (int layerIndex) const 
-\begin{DoxyCompactList}\small\item\em access the actual grid size in Y for a given layer \item\end{DoxyCompactList}\item 
-const std::string \& \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_aaa6a75aa2ebbb603f8a0cf4d843c8211}{identifierX} () const 
-\begin{DoxyCompactList}\small\item\em access the encoding field name used for X \item\end{DoxyCompactList}\item 
-const std::string \& \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a75781ecca4bd534b4fa4d8bcd50089db}{identifierY} () const 
-\begin{DoxyCompactList}\small\item\em access the encoding field name used for Y \item\end{DoxyCompactList}\item 
-const std::string \& \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_acc2b11119a4e51ea4667e36fb4db6ef3}{identifierLayer} () const 
-\begin{DoxyCompactList}\small\item\em access the encoding field name used for Y \item\end{DoxyCompactList}\item 
-\hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_1_1_layer_dimensions}{LayerDimensions} \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a9eed70ede18e3595af6330f70cdcb60f}{layerDimensions} (int layerIndex) const 
-\begin{DoxyCompactList}\small\item\em access to the dimensions of the given layer \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_aeb24630c5ce6f0510d516affa3fd798f}{setGridSizeX} (double cellSize)
-\begin{DoxyCompactList}\small\item\em set the default grid size in X \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a1d3f9e083551c3a67500d7da77d33684}{setGridSizeY} (double cellSize)
-\begin{DoxyCompactList}\small\item\em set the default grid size in Y \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_adab12f13ca0d94e18e8d2ef82c8115cb}{setIdentifierX} (const std::string \&fieldName)
-\begin{DoxyCompactList}\small\item\em set the encoding field name used for X \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ab9a0cd946f996399d9cabfecc4223abd}{setIdentifierY} (const std::string \&fieldName)
-\begin{DoxyCompactList}\small\item\em set the encoding field name used for Y \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a3fed8d866ede1df684ec06344725b72c}{setIdentifierLayer} (const std::string \&fieldName)
-\begin{DoxyCompactList}\small\item\em set the encoding field name used for layer \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a579736d34689d340d8d4dba0b30da4ba}{setLayerDimensions} (int layerIndex, double x, double y)
-\begin{DoxyCompactList}\small\item\em set the dimensions of the given layer \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a9f5fb19402d8d5bfbfb6d3db886bdfe3}{Tiled\+Layer\+Segmentation} (const std\+::string \&cell\+Encoding=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Default constructor passing the encoding string. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ade81bfe57661f1faf98877b6e4de725e}{Tiled\+Layer\+Segmentation} (\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field64}{Bit\+Field64} $\ast$\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_abec3489982d0fe91ef4b142d9d755576}{decoder})
+\begin{DoxyCompactList}\small\item\em Default constructor used by derived classes passing an existing decoder. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ac4a4730758ab96a1215fb55999503af2}{$\sim$\+Tiled\+Layer\+Segmentation} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+virtual \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_acc4571d3ad2ac352f1cfb7fc45d1f2b7}{position} (const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{Cell\+ID} \&\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_acda10c2ad2f498c9b3b580baefe9a8cd}{cell\+ID}) const
+\begin{DoxyCompactList}\small\item\em determine the position based on the cell ID \end{DoxyCompactList}\item 
+virtual \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{Cell\+ID} \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_acda10c2ad2f498c9b3b580baefe9a8cd}{cell\+ID} (const \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \&local\+Position, const \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \&global\+Position, const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_a61a6833a18d1800bdef176595f83e3ba}{Volume\+ID} \&\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a43c0e9648e3b7cded015847c0802f757}{volume\+ID}) const
+\begin{DoxyCompactList}\small\item\em determine the cell ID based on the position \end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_aaf31f761a41c419918eea054b6a11cb8}{grid\+SizeX} () const
+\begin{DoxyCompactList}\small\item\em access the default grid size in X \end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_aac9ed479ad94dbe1b8dc1328f3c3f894}{grid\+SizeY} () const
+\begin{DoxyCompactList}\small\item\em access the default grid size in Y \end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ad41cd4eaa02089ec707a7893d8f0845d}{layer\+Grid\+SizeX} (int layer\+Index) const
+\begin{DoxyCompactList}\small\item\em access the actual grid size in X for a given layer \end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a70bc0631f65102abda8962823ae90e1a}{layer\+Grid\+SizeY} (int layer\+Index) const
+\begin{DoxyCompactList}\small\item\em access the actual grid size in Y for a given layer \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_aa9741a6cd5fa2e89e992315f65529fd9}{identifierX} () const
+\begin{DoxyCompactList}\small\item\em access the encoding field name used for X \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a005f04e6ac9dd696ff6cf0b6096114bd}{identifierY} () const
+\begin{DoxyCompactList}\small\item\em access the encoding field name used for Y \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a3255d9d66a2d205dab49072c079dfaf1}{identifier\+Layer} () const
+\begin{DoxyCompactList}\small\item\em access the encoding field name used for Y \end{DoxyCompactList}\item 
+\hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_1_1_layer_dimensions}{Layer\+Dimensions} \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a815d2b95bc2d5a3efceb9f4ad96df7ad}{layer\+Dimensions} (int layer\+Index) const
+\begin{DoxyCompactList}\small\item\em access to the dimensions of the given layer \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_aeb24630c5ce6f0510d516affa3fd798f}{set\+Grid\+SizeX} (double cell\+Size)
+\begin{DoxyCompactList}\small\item\em set the default grid size in X \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a1d3f9e083551c3a67500d7da77d33684}{set\+Grid\+SizeY} (double cell\+Size)
+\begin{DoxyCompactList}\small\item\em set the default grid size in Y \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_adab12f13ca0d94e18e8d2ef82c8115cb}{set\+IdentifierX} (const std\+::string \&field\+Name)
+\begin{DoxyCompactList}\small\item\em set the encoding field name used for X \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ab9a0cd946f996399d9cabfecc4223abd}{set\+IdentifierY} (const std\+::string \&field\+Name)
+\begin{DoxyCompactList}\small\item\em set the encoding field name used for Y \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a3fed8d866ede1df684ec06344725b72c}{set\+Identifier\+Layer} (const std\+::string \&field\+Name)
+\begin{DoxyCompactList}\small\item\em set the encoding field name used for layer \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a579736d34689d340d8d4dba0b30da4ba}{set\+Layer\+Dimensions} (int layer\+Index, double x, double y)
+\begin{DoxyCompactList}\small\item\em set the dimensions of the given layer \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a3cbdc472b5f800c0a1fc99080f1fd72d}{calculateOptimalCellSize} (double nominalCellSize, double totalSize)
-\begin{DoxyCompactList}\small\item\em list of layer y dimensions \item\end{DoxyCompactList}\item 
-static double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a7c5f4fe56bec27c51187a8413fe96d38}{calculateOffset} (double cellSize, double totalSize)
-\begin{DoxyCompactList}\small\item\em helper method to calculate offset of bin 0 based on the total size \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+static double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a3cbdc472b5f800c0a1fc99080f1fd72d}{calculate\+Optimal\+Cell\+Size} (double nominal\+Cell\+Size, double total\+Size)
+\begin{DoxyCompactList}\small\item\em list of layer y dimensions \end{DoxyCompactList}\item 
+static double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a7c5f4fe56bec27c51187a8413fe96d38}{calculate\+Offset} (double cell\+Size, double total\+Size)
+\begin{DoxyCompactList}\small\item\em helper method to calculate offset of bin 0 based on the total size \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a8e60c82ed47b0b33c4c7918baea38296}{\_\-gridSizeX}
+double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a8e60c82ed47b0b33c4c7918baea38296}{\+\_\+grid\+SizeX}
 \item 
-double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a71e5e4524b30002b118f464626558c39}{\_\-gridSizeY}
-\begin{DoxyCompactList}\small\item\em default grid size in X \item\end{DoxyCompactList}\item 
-std::string \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ac79fffb5bdd56134ef2824ebb10ac1de}{\_\-identifierX}
-\begin{DoxyCompactList}\small\item\em default grid size in Y \item\end{DoxyCompactList}\item 
-std::string \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_af157c59a13254572f336a345463e993d}{\_\-identifierY}
-\begin{DoxyCompactList}\small\item\em encoding field used for X \item\end{DoxyCompactList}\item 
-std::string \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a83e95ac7e65a186e5b15c4b72e57e1c6}{\_\-identifierLayer}
-\begin{DoxyCompactList}\small\item\em encoding field used for Y \item\end{DoxyCompactList}\item 
-std::vector$<$ int $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a1988abb223b228480310aaf061d9210e}{\_\-layerIndices}
-\begin{DoxyCompactList}\small\item\em encoding field used for the layer \item\end{DoxyCompactList}\item 
-std::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_afd897bc752982287d6184099d6badede}{\_\-layerDimensionsX}
-\begin{DoxyCompactList}\small\item\em list of valid layer identifiers \item\end{DoxyCompactList}\item 
-std::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a48d863dc32788c26ddb770d88bb89f96}{\_\-layerDimensionsY}
-\begin{DoxyCompactList}\small\item\em list of layer x dimensions \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+double \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a71e5e4524b30002b118f464626558c39}{\+\_\+grid\+SizeY}
+\begin{DoxyCompactList}\small\item\em default grid size in X \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ac79fffb5bdd56134ef2824ebb10ac1de}{\+\_\+identifierX}
+\begin{DoxyCompactList}\small\item\em default grid size in Y \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_af157c59a13254572f336a345463e993d}{\+\_\+identifierY}
+\begin{DoxyCompactList}\small\item\em encoding field used for X \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a83e95ac7e65a186e5b15c4b72e57e1c6}{\+\_\+identifier\+Layer}
+\begin{DoxyCompactList}\small\item\em encoding field used for Y \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a1988abb223b228480310aaf061d9210e}{\+\_\+layer\+Indices}
+\begin{DoxyCompactList}\small\item\em encoding field used for the layer \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_afd897bc752982287d6184099d6badede}{\+\_\+layer\+DimensionsX}
+\begin{DoxyCompactList}\small\item\em list of valid layer identifiers \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a48d863dc32788c26ddb770d88bb89f96}{\+\_\+layer\+DimensionsY}
+\begin{DoxyCompactList}\small\item\em list of layer x dimensions \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
 
 
-Definition at line 20 of file TiledLayerSegmentation.h.
+Definition at line 20 of file Tiled\+Layer\+Segmentation.\+h.
+
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a9f5fb19402d8d5bfbfb6d3db886bdfe3}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!TiledLayerSegmentation@{TiledLayerSegmentation}}
-\index{TiledLayerSegmentation@{TiledLayerSegmentation}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{TiledLayerSegmentation}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDSegmentation::TiledLayerSegmentation::TiledLayerSegmentation (const std::string \& {\em cellEncoding} = {\ttfamily \char`\"{}\char`\"{}})}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a9f5fb19402d8d5bfbfb6d3db886bdfe3}
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a9f5fb19402d8d5bfbfb6d3db886bdfe3}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a9f5fb19402d8d5bfbfb6d3db886bdfe3} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!Tiled\+Layer\+Segmentation@{Tiled\+Layer\+Segmentation}}
+\index{Tiled\+Layer\+Segmentation@{Tiled\+Layer\+Segmentation}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{Tiled\+Layer\+Segmentation()}{TiledLayerSegmentation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::\+Tiled\+Layer\+Segmentation (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{cell\+Encoding = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
 
 
 Default constructor passing the encoding string. 
 
-Definition at line 23 of file TiledLayerSegmentation.cpp.
 
-References DD4hep::DDSegmentation::Segmentation::\_\-description, \_\-gridSizeX, \_\-gridSizeY, \_\-identifierLayer, \_\-identifierX, \_\-identifierY, \_\-layerDimensionsX, \_\-layerDimensionsY, \_\-layerIndices, DD4hep::DDSegmentation::Segmentation::\_\-type, DD4hep::DDSegmentation::SegmentationParameter::LengthUnit, DD4hep::DDSegmentation::SegmentationParameter::NoUnit, DD4hep::DDSegmentation::Segmentation::registerIdentifier(), and DD4hep::DDSegmentation::Segmentation::registerParameter().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ade81bfe57661f1faf98877b6e4de725e}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!TiledLayerSegmentation@{TiledLayerSegmentation}}
-\index{TiledLayerSegmentation@{TiledLayerSegmentation}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{TiledLayerSegmentation}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDSegmentation::TiledLayerSegmentation::TiledLayerSegmentation ({\bf BitField64} $\ast$ {\em decoder})}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ade81bfe57661f1faf98877b6e4de725e}
+
+Definition at line 23 of file Tiled\+Layer\+Segmentation.\+cpp.
+
+
+
+References D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::\+\_\+description, \+\_\+grid\+SizeX, \+\_\+grid\+SizeY, \+\_\+identifier\+Layer, \+\_\+identifierX, \+\_\+identifierY, \+\_\+layer\+DimensionsX, \+\_\+layer\+DimensionsY, \+\_\+layer\+Indices, D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::\+\_\+type, D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+Parameter\+::\+Length\+Unit, D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+Parameter\+::\+No\+Unit, D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::register\+Identifier(), and D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::register\+Parameter().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ade81bfe57661f1faf98877b6e4de725e}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ade81bfe57661f1faf98877b6e4de725e} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!Tiled\+Layer\+Segmentation@{Tiled\+Layer\+Segmentation}}
+\index{Tiled\+Layer\+Segmentation@{Tiled\+Layer\+Segmentation}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{Tiled\+Layer\+Segmentation()}{TiledLayerSegmentation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::\+Tiled\+Layer\+Segmentation (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field64}{Bit\+Field64} $\ast$}]{decoder }\end{DoxyParamCaption})}
+
 
 
 Default constructor used by derived classes passing an existing decoder. 
 
-Definition at line 45 of file TiledLayerSegmentation.cpp.
 
-References DD4hep::DDSegmentation::Segmentation::\_\-description, \_\-gridSizeX, \_\-gridSizeY, \_\-identifierLayer, \_\-identifierX, \_\-identifierY, \_\-layerDimensionsX, \_\-layerDimensionsY, \_\-layerIndices, DD4hep::DDSegmentation::Segmentation::\_\-type, DD4hep::DDSegmentation::SegmentationParameter::LengthUnit, DD4hep::DDSegmentation::SegmentationParameter::NoUnit, DD4hep::DDSegmentation::Segmentation::registerIdentifier(), and DD4hep::DDSegmentation::Segmentation::registerParameter().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ac4a4730758ab96a1215fb55999503af2}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!$\sim$TiledLayerSegmentation@{$\sim$TiledLayerSegmentation}}
-\index{$\sim$TiledLayerSegmentation@{$\sim$TiledLayerSegmentation}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{$\sim$TiledLayerSegmentation}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDSegmentation::TiledLayerSegmentation::$\sim$TiledLayerSegmentation ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ac4a4730758ab96a1215fb55999503af2}
+
+Definition at line 45 of file Tiled\+Layer\+Segmentation.\+cpp.
+
+
+
+References D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::\+\_\+description, \+\_\+grid\+SizeX, \+\_\+grid\+SizeY, \+\_\+identifier\+Layer, \+\_\+identifierX, \+\_\+identifierY, \+\_\+layer\+DimensionsX, \+\_\+layer\+DimensionsY, \+\_\+layer\+Indices, D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::\+\_\+type, D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+Parameter\+::\+Length\+Unit, D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+Parameter\+::\+No\+Unit, D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::register\+Identifier(), and D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::register\+Parameter().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ac4a4730758ab96a1215fb55999503af2}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ac4a4730758ab96a1215fb55999503af2} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!````~Tiled\+Layer\+Segmentation@{$\sim$\+Tiled\+Layer\+Segmentation}}
+\index{````~Tiled\+Layer\+Segmentation@{$\sim$\+Tiled\+Layer\+Segmentation}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{$\sim$\+Tiled\+Layer\+Segmentation()}{~TiledLayerSegmentation()}}
+{\footnotesize\ttfamily D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::$\sim$\+Tiled\+Layer\+Segmentation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 destructor 
 
-Definition at line 65 of file TiledLayerSegmentation.cpp.
+
+
+Definition at line 65 of file Tiled\+Layer\+Segmentation.\+cpp.
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a7c5f4fe56bec27c51187a8413fe96d38}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!calculateOffset@{calculateOffset}}
-\index{calculateOffset@{calculateOffset}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{calculateOffset}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::DDSegmentation::TiledLayerSegmentation::calculateOffset (double {\em cellSize}, \/  double {\em totalSize})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a7c5f4fe56bec27c51187a8413fe96d38}
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a7c5f4fe56bec27c51187a8413fe96d38}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a7c5f4fe56bec27c51187a8413fe96d38} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!calculate\+Offset@{calculate\+Offset}}
+\index{calculate\+Offset@{calculate\+Offset}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{calculate\+Offset()}{calculateOffset()}}
+{\footnotesize\ttfamily double D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::calculate\+Offset (\begin{DoxyParamCaption}\item[{double}]{cell\+Size,  }\item[{double}]{total\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
 
 
 helper method to calculate offset of bin 0 based on the total size 
 
-Definition at line 152 of file TiledLayerSegmentation.cpp.
-
-Referenced by cellID(), and position().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a3cbdc472b5f800c0a1fc99080f1fd72d}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!calculateOptimalCellSize@{calculateOptimalCellSize}}
-\index{calculateOptimalCellSize@{calculateOptimalCellSize}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{calculateOptimalCellSize}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::DDSegmentation::TiledLayerSegmentation::calculateOptimalCellSize (double {\em nominalCellSize}, \/  double {\em totalSize})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a3cbdc472b5f800c0a1fc99080f1fd72d}
 
 
-list of layer y dimensions helper method to calculate optimal cell size based on total size 
+Definition at line 152 of file Tiled\+Layer\+Segmentation.\+cpp.
 
-Definition at line 146 of file TiledLayerSegmentation.cpp.
 
-Referenced by layerGridSizeX(), and layerGridSizeY().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a481dd2415b1b931234efbca27617f1dd}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!cellID@{cellID}}
-\index{cellID@{cellID}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{cellID}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CellID} DD4hep::DDSegmentation::TiledLayerSegmentation::cellID (const {\bf Vector3D} \& {\em localPosition}, \/  const {\bf Vector3D} \& {\em globalPosition}, \/  const {\bf VolumeID} \& {\em volumeID}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a481dd2415b1b931234efbca27617f1dd}
+
+Referenced by cell\+I\+D(), and position().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a3cbdc472b5f800c0a1fc99080f1fd72d}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a3cbdc472b5f800c0a1fc99080f1fd72d} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!calculate\+Optimal\+Cell\+Size@{calculate\+Optimal\+Cell\+Size}}
+\index{calculate\+Optimal\+Cell\+Size@{calculate\+Optimal\+Cell\+Size}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{calculate\+Optimal\+Cell\+Size()}{calculateOptimalCellSize()}}
+{\footnotesize\ttfamily double D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::calculate\+Optimal\+Cell\+Size (\begin{DoxyParamCaption}\item[{double}]{nominal\+Cell\+Size,  }\item[{double}]{total\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+list of layer y dimensions 
+
+helper method to calculate optimal cell size based on total size 
+
+Definition at line 146 of file Tiled\+Layer\+Segmentation.\+cpp.
+
+
+
+Referenced by layer\+Grid\+Size\+X(), and layer\+Grid\+Size\+Y().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_acda10c2ad2f498c9b3b580baefe9a8cd}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_acda10c2ad2f498c9b3b580baefe9a8cd} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!cell\+ID@{cell\+ID}}
+\index{cell\+ID@{cell\+ID}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{cell\+I\+D()}{cellID()}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{Cell\+ID} D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::cell\+ID (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \&}]{local\+Position,  }\item[{const \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \&}]{global\+Position,  }\item[{const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_a61a6833a18d1800bdef176595f83e3ba}{Volume\+ID} \&}]{volume\+ID }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 determine the cell ID based on the position 
 
-Implements \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ad5a60953d96d409850d8192f64f8ce3c}{DD4hep::DDSegmentation::Segmentation}.
 
-Definition at line 131 of file TiledLayerSegmentation.cpp.
 
-References DD4hep::DDSegmentation::Segmentation::\_\-decoder, \_\-identifierLayer, \_\-identifierX, \_\-identifierY, calculateOffset(), layerDimensions(), layerGridSizeX(), layerGridSizeY(), DD4hep::DDSegmentation::Segmentation::positionToBin(), DD4hep::DDSegmentation::BitField64::setValue(), DD4hep::DDSegmentation::Vector3D::x(), DD4hep::DDSegmentation::TiledLayerSegmentation::LayerDimensions::x, DD4hep::DDSegmentation::Vector3D::y(), and DD4hep::DDSegmentation::TiledLayerSegmentation::LayerDimensions::y.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a259da236fc6000191d8501aeeb2fa0de}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!gridSizeX@{gridSizeX}}
-\index{gridSizeX@{gridSizeX}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{gridSizeX}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::DDSegmentation::TiledLayerSegmentation::gridSizeX () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a259da236fc6000191d8501aeeb2fa0de}
+Implements \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ad5a60953d96d409850d8192f64f8ce3c}{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation}.
+
+
+
+Definition at line 131 of file Tiled\+Layer\+Segmentation.\+cpp.
+
+
+
+References D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::\+\_\+decoder, \+\_\+identifier\+Layer, \+\_\+identifierX, \+\_\+identifierY, calculate\+Offset(), layer\+Dimensions(), layer\+Grid\+Size\+X(), layer\+Grid\+Size\+Y(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::position\+To\+Bin(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Bit\+Field64\+::set\+Value(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::\+Layer\+Dimensions\+::x, D\+D4hep\+::\+D\+D\+Segmentation\+::\+Vector3\+D\+::x(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::\+Layer\+Dimensions\+::y, and D\+D4hep\+::\+D\+D\+Segmentation\+::\+Vector3\+D\+::y().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_aaf31f761a41c419918eea054b6a11cb8}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_aaf31f761a41c419918eea054b6a11cb8} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!grid\+SizeX@{grid\+SizeX}}
+\index{grid\+SizeX@{grid\+SizeX}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{grid\+Size\+X()}{gridSizeX()}}
+{\footnotesize\ttfamily double D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::grid\+SizeX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 access the default grid size in X 
 
-Definition at line 43 of file TiledLayerSegmentation.h.
 
-References \_\-gridSizeX.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a3319e4007ffe0ea34721e3dcfd5fb4fd}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!gridSizeY@{gridSizeY}}
-\index{gridSizeY@{gridSizeY}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{gridSizeY}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::DDSegmentation::TiledLayerSegmentation::gridSizeY () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a3319e4007ffe0ea34721e3dcfd5fb4fd}
+
+Definition at line 43 of file Tiled\+Layer\+Segmentation.\+h.
+
+
+
+References \+\_\+grid\+SizeX.
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_aac9ed479ad94dbe1b8dc1328f3c3f894}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_aac9ed479ad94dbe1b8dc1328f3c3f894} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!grid\+SizeY@{grid\+SizeY}}
+\index{grid\+SizeY@{grid\+SizeY}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{grid\+Size\+Y()}{gridSizeY()}}
+{\footnotesize\ttfamily double D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::grid\+SizeY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 access the default grid size in Y 
 
-Definition at line 47 of file TiledLayerSegmentation.h.
 
-References \_\-gridSizeY.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_acc2b11119a4e51ea4667e36fb4db6ef3}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!identifierLayer@{identifierLayer}}
-\index{identifierLayer@{identifierLayer}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{identifierLayer}]{\setlength{\rightskip}{0pt plus 5cm}const std::string\& DD4hep::DDSegmentation::TiledLayerSegmentation::identifierLayer () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_acc2b11119a4e51ea4667e36fb4db6ef3}
+
+Definition at line 47 of file Tiled\+Layer\+Segmentation.\+h.
+
+
+
+References \+\_\+grid\+SizeY, layer\+Grid\+Size\+X(), and layer\+Grid\+Size\+Y().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a3255d9d66a2d205dab49072c079dfaf1}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a3255d9d66a2d205dab49072c079dfaf1} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!identifier\+Layer@{identifier\+Layer}}
+\index{identifier\+Layer@{identifier\+Layer}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{identifier\+Layer()}{identifierLayer()}}
+{\footnotesize\ttfamily const std\+::string\& D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::identifier\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 access the encoding field name used for Y 
 
-Definition at line 65 of file TiledLayerSegmentation.h.
 
-References \_\-identifierLayer.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_aaa6a75aa2ebbb603f8a0cf4d843c8211}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!identifierX@{identifierX}}
-\index{identifierX@{identifierX}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{identifierX}]{\setlength{\rightskip}{0pt plus 5cm}const std::string\& DD4hep::DDSegmentation::TiledLayerSegmentation::identifierX () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_aaa6a75aa2ebbb603f8a0cf4d843c8211}
+
+Definition at line 65 of file Tiled\+Layer\+Segmentation.\+h.
+
+
+
+References \+\_\+identifier\+Layer, and layer\+Dimensions().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_aa9741a6cd5fa2e89e992315f65529fd9}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_aa9741a6cd5fa2e89e992315f65529fd9} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!identifierX@{identifierX}}
+\index{identifierX@{identifierX}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{identifier\+X()}{identifierX()}}
+{\footnotesize\ttfamily const std\+::string\& D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::identifierX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 access the encoding field name used for X 
 
-Definition at line 57 of file TiledLayerSegmentation.h.
 
-References \_\-identifierX.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a75781ecca4bd534b4fa4d8bcd50089db}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!identifierY@{identifierY}}
-\index{identifierY@{identifierY}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{identifierY}]{\setlength{\rightskip}{0pt plus 5cm}const std::string\& DD4hep::DDSegmentation::TiledLayerSegmentation::identifierY () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a75781ecca4bd534b4fa4d8bcd50089db}
+
+Definition at line 57 of file Tiled\+Layer\+Segmentation.\+h.
+
+
+
+References \+\_\+identifierX.
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a005f04e6ac9dd696ff6cf0b6096114bd}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a005f04e6ac9dd696ff6cf0b6096114bd} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!identifierY@{identifierY}}
+\index{identifierY@{identifierY}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{identifier\+Y()}{identifierY()}}
+{\footnotesize\ttfamily const std\+::string\& D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::identifierY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 access the encoding field name used for Y 
 
-Definition at line 61 of file TiledLayerSegmentation.h.
 
-References \_\-identifierY.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a9eed70ede18e3595af6330f70cdcb60f}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!layerDimensions@{layerDimensions}}
-\index{layerDimensions@{layerDimensions}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{layerDimensions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf TiledLayerSegmentation::LayerDimensions} DD4hep::DDSegmentation::TiledLayerSegmentation::layerDimensions (int {\em layerIndex}) const}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a9eed70ede18e3595af6330f70cdcb60f}
+
+Definition at line 61 of file Tiled\+Layer\+Segmentation.\+h.
+
+
+
+References \+\_\+identifierY.
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a815d2b95bc2d5a3efceb9f4ad96df7ad}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a815d2b95bc2d5a3efceb9f4ad96df7ad} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!layer\+Dimensions@{layer\+Dimensions}}
+\index{layer\+Dimensions@{layer\+Dimensions}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{layer\+Dimensions()}{layerDimensions()}}
+{\footnotesize\ttfamily \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_1_1_layer_dimensions}{Tiled\+Layer\+Segmentation\+::\+Layer\+Dimensions} D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::layer\+Dimensions (\begin{DoxyParamCaption}\item[{int}]{layer\+Index }\end{DoxyParamCaption}) const}
+
 
 
 access to the dimensions of the given layer 
 
-Definition at line 100 of file TiledLayerSegmentation.cpp.
 
-References \_\-layerDimensionsX, \_\-layerDimensionsY, \_\-layerIndices, and find().
 
-Referenced by cellID(), layerGridSizeX(), layerGridSizeY(), and position().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a4e1ba517985d9b161705c9defef89640}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!layerGridSizeX@{layerGridSizeX}}
-\index{layerGridSizeX@{layerGridSizeX}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{layerGridSizeX}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::DDSegmentation::TiledLayerSegmentation::layerGridSizeX (int {\em layerIndex}) const}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a4e1ba517985d9b161705c9defef89640}
+Definition at line 100 of file Tiled\+Layer\+Segmentation.\+cpp.
+
+
+
+References \+\_\+layer\+DimensionsX, \+\_\+layer\+DimensionsY, \+\_\+layer\+Indices, and find().
+
+
+
+Referenced by cell\+I\+D(), identifier\+Layer(), layer\+Grid\+Size\+X(), layer\+Grid\+Size\+Y(), and position().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ad41cd4eaa02089ec707a7893d8f0845d}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ad41cd4eaa02089ec707a7893d8f0845d} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!layer\+Grid\+SizeX@{layer\+Grid\+SizeX}}
+\index{layer\+Grid\+SizeX@{layer\+Grid\+SizeX}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{layer\+Grid\+Size\+X()}{layerGridSizeX()}}
+{\footnotesize\ttfamily double D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::layer\+Grid\+SizeX (\begin{DoxyParamCaption}\item[{int}]{layer\+Index }\end{DoxyParamCaption}) const}
+
 
 
 access the actual grid size in X for a given layer 
 
-Definition at line 69 of file TiledLayerSegmentation.cpp.
 
-References \_\-gridSizeX, calculateOptimalCellSize(), and layerDimensions().
 
-Referenced by cellID(), and position().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ae7faae312b547313ca0e139bc8973149}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!layerGridSizeY@{layerGridSizeY}}
-\index{layerGridSizeY@{layerGridSizeY}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{layerGridSizeY}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::DDSegmentation::TiledLayerSegmentation::layerGridSizeY (int {\em layerIndex}) const}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ae7faae312b547313ca0e139bc8973149}
+Definition at line 69 of file Tiled\+Layer\+Segmentation.\+cpp.
+
+
+
+References \+\_\+grid\+SizeX, calculate\+Optimal\+Cell\+Size(), and layer\+Dimensions().
+
+
+
+Referenced by cell\+I\+D(), grid\+Size\+Y(), and position().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a70bc0631f65102abda8962823ae90e1a}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a70bc0631f65102abda8962823ae90e1a} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!layer\+Grid\+SizeY@{layer\+Grid\+SizeY}}
+\index{layer\+Grid\+SizeY@{layer\+Grid\+SizeY}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{layer\+Grid\+Size\+Y()}{layerGridSizeY()}}
+{\footnotesize\ttfamily double D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::layer\+Grid\+SizeY (\begin{DoxyParamCaption}\item[{int}]{layer\+Index }\end{DoxyParamCaption}) const}
+
 
 
 access the actual grid size in Y for a given layer 
 
-Definition at line 75 of file TiledLayerSegmentation.cpp.
 
-References \_\-gridSizeY, calculateOptimalCellSize(), and layerDimensions().
 
-Referenced by cellID(), and position().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a4e29a7791d15e076601c3edd0e350fd0}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!position@{position}}
-\index{position@{position}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector3D} DD4hep::DDSegmentation::TiledLayerSegmentation::position (const {\bf CellID} \& {\em cellID}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a4e29a7791d15e076601c3edd0e350fd0}
+Definition at line 75 of file Tiled\+Layer\+Segmentation.\+cpp.
+
+
+
+References \+\_\+grid\+SizeY, calculate\+Optimal\+Cell\+Size(), and layer\+Dimensions().
+
+
+
+Referenced by cell\+I\+D(), grid\+Size\+Y(), and position().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_acc4571d3ad2ac352f1cfb7fc45d1f2b7}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_acc4571d3ad2ac352f1cfb7fc45d1f2b7} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!position@{position}}
+\index{position@{position}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{position()}{position()}}
+{\footnotesize\ttfamily \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::position (\begin{DoxyParamCaption}\item[{const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{Cell\+ID} \&}]{cell\+ID }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 determine the position based on the cell ID 
 
-Implements \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a594fe6d78667415855858d083b64acad}{DD4hep::DDSegmentation::Segmentation}.
 
-Definition at line 118 of file TiledLayerSegmentation.cpp.
 
-References DD4hep::DDSegmentation::Segmentation::\_\-decoder, \_\-identifierLayer, \_\-identifierX, \_\-identifierY, DD4hep::DDSegmentation::Segmentation::binToPosition(), calculateOffset(), layerDimensions(), layerGridSizeX(), layerGridSizeY(), DD4hep::DDSegmentation::BitField64::setValue(), DD4hep::DDSegmentation::TiledLayerSegmentation::LayerDimensions::x, and DD4hep::DDSegmentation::TiledLayerSegmentation::LayerDimensions::y.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_aeb24630c5ce6f0510d516affa3fd798f}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!setGridSizeX@{setGridSizeX}}
-\index{setGridSizeX@{setGridSizeX}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{setGridSizeX}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::TiledLayerSegmentation::setGridSizeX (double {\em cellSize})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_aeb24630c5ce6f0510d516affa3fd798f}
+Implements \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a594fe6d78667415855858d083b64acad}{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation}.
+
+
+
+Definition at line 118 of file Tiled\+Layer\+Segmentation.\+cpp.
+
+
+
+References D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::\+\_\+decoder, \+\_\+identifier\+Layer, \+\_\+identifierX, \+\_\+identifierY, D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::bin\+To\+Position(), calculate\+Offset(), layer\+Dimensions(), layer\+Grid\+Size\+X(), layer\+Grid\+Size\+Y(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Bit\+Field64\+::set\+Value(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::\+Layer\+Dimensions\+::x, and D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::\+Layer\+Dimensions\+::y.
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_aeb24630c5ce6f0510d516affa3fd798f}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_aeb24630c5ce6f0510d516affa3fd798f} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!set\+Grid\+SizeX@{set\+Grid\+SizeX}}
+\index{set\+Grid\+SizeX@{set\+Grid\+SizeX}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{set\+Grid\+Size\+X()}{setGridSizeX()}}
+{\footnotesize\ttfamily void D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::set\+Grid\+SizeX (\begin{DoxyParamCaption}\item[{double}]{cell\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 set the default grid size in X 
 
-Definition at line 73 of file TiledLayerSegmentation.h.
 
-References \_\-gridSizeX.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a1d3f9e083551c3a67500d7da77d33684}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!setGridSizeY@{setGridSizeY}}
-\index{setGridSizeY@{setGridSizeY}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{setGridSizeY}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::TiledLayerSegmentation::setGridSizeY (double {\em cellSize})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a1d3f9e083551c3a67500d7da77d33684}
+
+Definition at line 73 of file Tiled\+Layer\+Segmentation.\+h.
+
+
+
+References \+\_\+grid\+SizeX.
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a1d3f9e083551c3a67500d7da77d33684}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a1d3f9e083551c3a67500d7da77d33684} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!set\+Grid\+SizeY@{set\+Grid\+SizeY}}
+\index{set\+Grid\+SizeY@{set\+Grid\+SizeY}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{set\+Grid\+Size\+Y()}{setGridSizeY()}}
+{\footnotesize\ttfamily void D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::set\+Grid\+SizeY (\begin{DoxyParamCaption}\item[{double}]{cell\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 set the default grid size in Y 
 
-Definition at line 77 of file TiledLayerSegmentation.h.
 
-References \_\-gridSizeY.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a3fed8d866ede1df684ec06344725b72c}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!setIdentifierLayer@{setIdentifierLayer}}
-\index{setIdentifierLayer@{setIdentifierLayer}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{setIdentifierLayer}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::TiledLayerSegmentation::setIdentifierLayer (const std::string \& {\em fieldName})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a3fed8d866ede1df684ec06344725b72c}
+
+Definition at line 77 of file Tiled\+Layer\+Segmentation.\+h.
+
+
+
+References \+\_\+grid\+SizeY.
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a3fed8d866ede1df684ec06344725b72c}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a3fed8d866ede1df684ec06344725b72c} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!set\+Identifier\+Layer@{set\+Identifier\+Layer}}
+\index{set\+Identifier\+Layer@{set\+Identifier\+Layer}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{set\+Identifier\+Layer()}{setIdentifierLayer()}}
+{\footnotesize\ttfamily void D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::set\+Identifier\+Layer (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{field\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 set the encoding field name used for layer 
 
-Definition at line 90 of file TiledLayerSegmentation.h.
 
-References \_\-identifierLayer.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_adab12f13ca0d94e18e8d2ef82c8115cb}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!setIdentifierX@{setIdentifierX}}
-\index{setIdentifierX@{setIdentifierX}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{setIdentifierX}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::TiledLayerSegmentation::setIdentifierX (const std::string \& {\em fieldName})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_adab12f13ca0d94e18e8d2ef82c8115cb}
+
+Definition at line 90 of file Tiled\+Layer\+Segmentation.\+h.
+
+
+
+References \+\_\+identifier\+Layer, set\+Layer\+Dimensions(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::\+Layer\+Dimensions\+::x, and D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::\+Layer\+Dimensions\+::y.
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_adab12f13ca0d94e18e8d2ef82c8115cb}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_adab12f13ca0d94e18e8d2ef82c8115cb} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!set\+IdentifierX@{set\+IdentifierX}}
+\index{set\+IdentifierX@{set\+IdentifierX}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{set\+Identifier\+X()}{setIdentifierX()}}
+{\footnotesize\ttfamily void D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::set\+IdentifierX (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{field\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 set the encoding field name used for X 
 
-Definition at line 82 of file TiledLayerSegmentation.h.
 
-References \_\-identifierX.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ab9a0cd946f996399d9cabfecc4223abd}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!setIdentifierY@{setIdentifierY}}
-\index{setIdentifierY@{setIdentifierY}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{setIdentifierY}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::TiledLayerSegmentation::setIdentifierY (const std::string \& {\em fieldName})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ab9a0cd946f996399d9cabfecc4223abd}
+
+Definition at line 82 of file Tiled\+Layer\+Segmentation.\+h.
+
+
+
+References \+\_\+identifierX.
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ab9a0cd946f996399d9cabfecc4223abd}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ab9a0cd946f996399d9cabfecc4223abd} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!set\+IdentifierY@{set\+IdentifierY}}
+\index{set\+IdentifierY@{set\+IdentifierY}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{set\+Identifier\+Y()}{setIdentifierY()}}
+{\footnotesize\ttfamily void D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::set\+IdentifierY (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{field\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 set the encoding field name used for Y 
 
-Definition at line 86 of file TiledLayerSegmentation.h.
 
-References \_\-identifierY.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a579736d34689d340d8d4dba0b30da4ba}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!setLayerDimensions@{setLayerDimensions}}
-\index{setLayerDimensions@{setLayerDimensions}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{setLayerDimensions}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::TiledLayerSegmentation::setLayerDimensions (int {\em layerIndex}, \/  double {\em x}, \/  double {\em y})}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a579736d34689d340d8d4dba0b30da4ba}
+
+Definition at line 86 of file Tiled\+Layer\+Segmentation.\+h.
+
+
+
+References \+\_\+identifierY.
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a579736d34689d340d8d4dba0b30da4ba}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a579736d34689d340d8d4dba0b30da4ba} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!set\+Layer\+Dimensions@{set\+Layer\+Dimensions}}
+\index{set\+Layer\+Dimensions@{set\+Layer\+Dimensions}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{set\+Layer\+Dimensions()}{setLayerDimensions()}}
+{\footnotesize\ttfamily void D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::set\+Layer\+Dimensions (\begin{DoxyParamCaption}\item[{int}]{layer\+Index,  }\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
 
 
 set the dimensions of the given layer 
 
-Definition at line 81 of file TiledLayerSegmentation.cpp.
 
-References \_\-layerDimensionsX, \_\-layerDimensionsY, \_\-layerIndices, and find().
+
+Definition at line 81 of file Tiled\+Layer\+Segmentation.\+cpp.
+
+
+
+References \+\_\+layer\+DimensionsX, \+\_\+layer\+DimensionsY, \+\_\+layer\+Indices, and find().
+
+
+
+Referenced by set\+Identifier\+Layer().
+
+
 
 \subsection{Member Data Documentation}
-\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a8e60c82ed47b0b33c4c7918baea38296}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!\_\-gridSizeX@{\_\-gridSizeX}}
-\index{\_\-gridSizeX@{\_\-gridSizeX}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{\_\-gridSizeX}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::DDSegmentation::TiledLayerSegmentation::\_\-gridSizeX}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a8e60c82ed47b0b33c4c7918baea38296}
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a8e60c82ed47b0b33c4c7918baea38296}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a8e60c82ed47b0b33c4c7918baea38296} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!\+\_\+grid\+SizeX@{\+\_\+grid\+SizeX}}
+\index{\+\_\+grid\+SizeX@{\+\_\+grid\+SizeX}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{\+\_\+grid\+SizeX}{\_gridSizeX}}
+{\footnotesize\ttfamily double D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::\+\_\+grid\+SizeX\hspace{0.3cm}{\ttfamily [protected]}}
 
 
-Definition at line 100 of file TiledLayerSegmentation.h.
 
-Referenced by gridSizeX(), layerGridSizeX(), setGridSizeX(), and TiledLayerSegmentation().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a71e5e4524b30002b118f464626558c39}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!\_\-gridSizeY@{\_\-gridSizeY}}
-\index{\_\-gridSizeY@{\_\-gridSizeY}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{\_\-gridSizeY}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::DDSegmentation::TiledLayerSegmentation::\_\-gridSizeY}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a71e5e4524b30002b118f464626558c39}
+Definition at line 100 of file Tiled\+Layer\+Segmentation.\+h.
+
+
+
+Referenced by grid\+Size\+X(), layer\+Grid\+Size\+X(), set\+Grid\+Size\+X(), and Tiled\+Layer\+Segmentation().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a71e5e4524b30002b118f464626558c39}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a71e5e4524b30002b118f464626558c39} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!\+\_\+grid\+SizeY@{\+\_\+grid\+SizeY}}
+\index{\+\_\+grid\+SizeY@{\+\_\+grid\+SizeY}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{\+\_\+grid\+SizeY}{\_gridSizeY}}
+{\footnotesize\ttfamily double D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::\+\_\+grid\+SizeY\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 default grid size in X 
 
-Definition at line 101 of file TiledLayerSegmentation.h.
 
-Referenced by gridSizeY(), layerGridSizeY(), setGridSizeY(), and TiledLayerSegmentation().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a83e95ac7e65a186e5b15c4b72e57e1c6}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!\_\-identifierLayer@{\_\-identifierLayer}}
-\index{\_\-identifierLayer@{\_\-identifierLayer}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{\_\-identifierLayer}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::DDSegmentation::TiledLayerSegmentation::\_\-identifierLayer}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a83e95ac7e65a186e5b15c4b72e57e1c6}
+
+Definition at line 101 of file Tiled\+Layer\+Segmentation.\+h.
+
+
+
+Referenced by grid\+Size\+Y(), layer\+Grid\+Size\+Y(), set\+Grid\+Size\+Y(), and Tiled\+Layer\+Segmentation().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a83e95ac7e65a186e5b15c4b72e57e1c6}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a83e95ac7e65a186e5b15c4b72e57e1c6} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!\+\_\+identifier\+Layer@{\+\_\+identifier\+Layer}}
+\index{\+\_\+identifier\+Layer@{\+\_\+identifier\+Layer}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{\+\_\+identifier\+Layer}{\_identifierLayer}}
+{\footnotesize\ttfamily std\+::string D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::\+\_\+identifier\+Layer\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 encoding field used for Y 
 
-Definition at line 104 of file TiledLayerSegmentation.h.
 
-Referenced by cellID(), identifierLayer(), position(), setIdentifierLayer(), and TiledLayerSegmentation().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ac79fffb5bdd56134ef2824ebb10ac1de}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!\_\-identifierX@{\_\-identifierX}}
-\index{\_\-identifierX@{\_\-identifierX}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{\_\-identifierX}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::DDSegmentation::TiledLayerSegmentation::\_\-identifierX}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ac79fffb5bdd56134ef2824ebb10ac1de}
+
+Definition at line 104 of file Tiled\+Layer\+Segmentation.\+h.
+
+
+
+Referenced by cell\+I\+D(), identifier\+Layer(), position(), set\+Identifier\+Layer(), and Tiled\+Layer\+Segmentation().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ac79fffb5bdd56134ef2824ebb10ac1de}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_ac79fffb5bdd56134ef2824ebb10ac1de} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!\+\_\+identifierX@{\+\_\+identifierX}}
+\index{\+\_\+identifierX@{\+\_\+identifierX}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{\+\_\+identifierX}{\_identifierX}}
+{\footnotesize\ttfamily std\+::string D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::\+\_\+identifierX\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 default grid size in Y 
 
-Definition at line 102 of file TiledLayerSegmentation.h.
 
-Referenced by cellID(), identifierX(), position(), setIdentifierX(), and TiledLayerSegmentation().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_af157c59a13254572f336a345463e993d}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!\_\-identifierY@{\_\-identifierY}}
-\index{\_\-identifierY@{\_\-identifierY}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{\_\-identifierY}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::DDSegmentation::TiledLayerSegmentation::\_\-identifierY}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_af157c59a13254572f336a345463e993d}
+
+Definition at line 102 of file Tiled\+Layer\+Segmentation.\+h.
+
+
+
+Referenced by cell\+I\+D(), identifier\+X(), position(), set\+Identifier\+X(), and Tiled\+Layer\+Segmentation().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_af157c59a13254572f336a345463e993d}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_af157c59a13254572f336a345463e993d} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!\+\_\+identifierY@{\+\_\+identifierY}}
+\index{\+\_\+identifierY@{\+\_\+identifierY}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{\+\_\+identifierY}{\_identifierY}}
+{\footnotesize\ttfamily std\+::string D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::\+\_\+identifierY\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 encoding field used for X 
 
-Definition at line 103 of file TiledLayerSegmentation.h.
 
-Referenced by cellID(), identifierY(), position(), setIdentifierY(), and TiledLayerSegmentation().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_afd897bc752982287d6184099d6badede}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!\_\-layerDimensionsX@{\_\-layerDimensionsX}}
-\index{\_\-layerDimensionsX@{\_\-layerDimensionsX}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{\_\-layerDimensionsX}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$double$>$ {\bf DD4hep::DDSegmentation::TiledLayerSegmentation::\_\-layerDimensionsX}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_afd897bc752982287d6184099d6badede}
+
+Definition at line 103 of file Tiled\+Layer\+Segmentation.\+h.
+
+
+
+Referenced by cell\+I\+D(), identifier\+Y(), position(), set\+Identifier\+Y(), and Tiled\+Layer\+Segmentation().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_afd897bc752982287d6184099d6badede}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_afd897bc752982287d6184099d6badede} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!\+\_\+layer\+DimensionsX@{\+\_\+layer\+DimensionsX}}
+\index{\+\_\+layer\+DimensionsX@{\+\_\+layer\+DimensionsX}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{\+\_\+layer\+DimensionsX}{\_layerDimensionsX}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::\+\_\+layer\+DimensionsX\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 list of valid layer identifiers 
 
-Definition at line 106 of file TiledLayerSegmentation.h.
 
-Referenced by layerDimensions(), setLayerDimensions(), and TiledLayerSegmentation().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a48d863dc32788c26ddb770d88bb89f96}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!\_\-layerDimensionsY@{\_\-layerDimensionsY}}
-\index{\_\-layerDimensionsY@{\_\-layerDimensionsY}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{\_\-layerDimensionsY}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$double$>$ {\bf DD4hep::DDSegmentation::TiledLayerSegmentation::\_\-layerDimensionsY}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a48d863dc32788c26ddb770d88bb89f96}
+
+Definition at line 106 of file Tiled\+Layer\+Segmentation.\+h.
+
+
+
+Referenced by layer\+Dimensions(), set\+Layer\+Dimensions(), and Tiled\+Layer\+Segmentation().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a48d863dc32788c26ddb770d88bb89f96}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a48d863dc32788c26ddb770d88bb89f96} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!\+\_\+layer\+DimensionsY@{\+\_\+layer\+DimensionsY}}
+\index{\+\_\+layer\+DimensionsY@{\+\_\+layer\+DimensionsY}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{\+\_\+layer\+DimensionsY}{\_layerDimensionsY}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::\+\_\+layer\+DimensionsY\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 list of layer x dimensions 
 
-Definition at line 107 of file TiledLayerSegmentation.h.
 
-Referenced by layerDimensions(), setLayerDimensions(), and TiledLayerSegmentation().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a1988abb223b228480310aaf061d9210e}{
-\index{DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}!\_\-layerIndices@{\_\-layerIndices}}
-\index{\_\-layerIndices@{\_\-layerIndices}!DD4hep::DDSegmentation::TiledLayerSegmentation@{DD4hep::DDSegmentation::TiledLayerSegmentation}}
-\subsubsection[{\_\-layerIndices}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$int$>$ {\bf DD4hep::DDSegmentation::TiledLayerSegmentation::\_\-layerIndices}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a1988abb223b228480310aaf061d9210e}
+
+Definition at line 107 of file Tiled\+Layer\+Segmentation.\+h.
+
+
+
+Referenced by layer\+Dimensions(), set\+Layer\+Dimensions(), and Tiled\+Layer\+Segmentation().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a1988abb223b228480310aaf061d9210e}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_tiled_layer_segmentation_a1988abb223b228480310aaf061d9210e} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}!\+\_\+layer\+Indices@{\+\_\+layer\+Indices}}
+\index{\+\_\+layer\+Indices@{\+\_\+layer\+Indices}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation}}
+\subsubsection{\texorpdfstring{\+\_\+layer\+Indices}{\_layerIndices}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ D\+D4hep\+::\+D\+D\+Segmentation\+::\+Tiled\+Layer\+Segmentation\+::\+\_\+layer\+Indices\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 encoding field used for the layer 
 
-Definition at line 105 of file TiledLayerSegmentation.h.
 
-Referenced by layerDimensions(), setLayerDimensions(), and TiledLayerSegmentation().
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+Definition at line 105 of file Tiled\+Layer\+Segmentation.\+h.
+
+
+
+Referenced by layer\+Dimensions(), set\+Layer\+Dimensions(), and Tiled\+Layer\+Segmentation().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDSegmentation/include/DDSegmentation/\hyperlink{_tiled_layer_segmentation_8h}{TiledLayerSegmentation.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDSegmentation/src/\hyperlink{_tiled_layer_segmentation_8cpp}{TiledLayerSegmentation.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Segmentation/include/\+D\+D\+Segmentation/\hyperlink{_tiled_layer_segmentation_8h}{Tiled\+Layer\+Segmentation.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Segmentation/src/\hyperlink{_tiled_layer_segmentation_8cpp}{Tiled\+Layer\+Segmentation.\+cpp}\end{DoxyCompactItemize}

@@ -1,95 +1,116 @@
-\hypertarget{_x_m_l_child_value_8cpp}{
-\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/XML/XMLChildValue.cpp File Reference}
-\label{_x_m_l_child_value_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/XML/XMLChildValue.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/XML/XMLChildValue.cpp}}
-}
-{\ttfamily \#include \char`\"{}XML/XMLChildValue.h\char`\"{}}\par
-\subsection*{Defines}
+\hypertarget{_x_m_l_child_value_8cpp}{}\section{/afs/cern.ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\+X\+M\+L/\+X\+M\+L\+Child\+Value.cpp File Reference}
+\label{_x_m_l_child_value_8cpp}\index{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\+X\+M\+L/\+X\+M\+L\+Child\+Value.\+cpp@{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\+X\+M\+L/\+X\+M\+L\+Child\+Value.\+cpp}}
+{\ttfamily \#include \char`\"{}X\+M\+L/\+X\+M\+L\+Child\+Value.\+h\char`\"{}}\newline
+\subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{_x_m_l_child_value_8cpp_aa75c4bd51529a044ed87deb228a4066d}{childValue}(name, type)~m\_\-element.child(Unicode\_\-\#\#name).attr$<$type$>$(Unicode\_\-value)
+\#define \hyperlink{_x_m_l_child_value_8cpp_aa75c4bd51529a044ed87deb228a4066d}{child\+Value}(name,  type)~m\+\_\+element.\+child(Unicode\+\_\+\#\#name).attr$<$type$>$(Unicode\+\_\+value)
 \item 
-\#define \hyperlink{_x_m_l_child_value_8cpp_a04195618517294eca8873855aab7ff98}{childValueDefault}(name, type, def)
+\#define \hyperlink{_x_m_l_child_value_8cpp_a04195618517294eca8873855aab7ff98}{child\+Value\+Default}(name,  type,  def)
 \item 
-\#define \hyperlink{_x_m_l_child_value_8cpp_accabcb0a0a37bcff066b1281c9814553}{XML\_\-ATTR\_\-ACCESSOR}(type, name)~type ChildValue::name() const \{ return childValue(name,type); \}
+\#define \hyperlink{_x_m_l_child_value_8cpp_accabcb0a0a37bcff066b1281c9814553}{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+OR}(type,  name)~type Child\+Value\+::name() const \{ return \hyperlink{_x_m_l_child_value_8cpp_aa75c4bd51529a044ed87deb228a4066d}{child\+Value}(name,type); \}
 \item 
-\#define \hyperlink{_x_m_l_child_value_8cpp_a5329c32158716b05939bad5ab5e572df}{XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT}(name, type, dressing)
+\#define \hyperlink{_x_m_l_child_value_8cpp_a5329c32158716b05939bad5ab5e572df}{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+D\+E\+F\+A\+U\+LT}(name,  type,  dressing)
 \item 
-\#define \hyperlink{_x_m_l_child_value_8cpp_a3b2602f2e6cdf903b4d9acd047d61b12}{XML\_\-ATTR\_\-ACCESSOR\_\-DOUBLE}(name)~XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT(name,double,\_\-toDouble)
+\#define \hyperlink{_x_m_l_child_value_8cpp_a3b2602f2e6cdf903b4d9acd047d61b12}{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+D\+O\+U\+B\+LE}(name)~\hyperlink{_x_m_l_dimension_8inl_a5329c32158716b05939bad5ab5e572df}{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+D\+E\+F\+A\+U\+LT}(name,double,\+\_\+to\+Double)
 \item 
-\#define \hyperlink{_x_m_l_child_value_8cpp_aa9f53a44681848d2aeda1c5cdac2efb8}{XML\_\-ATTR\_\-ACCESSOR\_\-INT}(name)~XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT(name,int,\_\-toInt)
+\#define \hyperlink{_x_m_l_child_value_8cpp_aa9f53a44681848d2aeda1c5cdac2efb8}{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+I\+NT}(name)~\hyperlink{_x_m_l_dimension_8inl_a5329c32158716b05939bad5ab5e572df}{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+D\+E\+F\+A\+U\+LT}(name,int,\+\_\+to\+Int)
 \item 
-\#define \hyperlink{_x_m_l_child_value_8cpp_a8efa1be16815f59e7b049cab22c08a21}{XML\_\-ATTR\_\-ACCESSOR\_\-BOOL}(name)~XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT(name,bool,\_\-toBool)
+\#define \hyperlink{_x_m_l_child_value_8cpp_a8efa1be16815f59e7b049cab22c08a21}{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+B\+O\+OL}(name)~\hyperlink{_x_m_l_dimension_8inl_a5329c32158716b05939bad5ab5e572df}{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+D\+E\+F\+A\+U\+LT}(name,bool,\+\_\+to\+Bool)
 \end{DoxyCompactItemize}
 
 
-\subsection{Define Documentation}
-\hypertarget{_x_m_l_child_value_8cpp_aa75c4bd51529a044ed87deb228a4066d}{
-\index{XMLChildValue.cpp@{XMLChildValue.cpp}!childValue@{childValue}}
-\index{childValue@{childValue}!XMLChildValue.cpp@{XMLChildValue.cpp}}
-\subsubsection[{childValue}]{\setlength{\rightskip}{0pt plus 5cm}\#define childValue(name, \/  type)~m\_\-element.child(Unicode\_\-\#\#name).attr$<$type$>$(Unicode\_\-value)}}
-\label{_x_m_l_child_value_8cpp_aa75c4bd51529a044ed87deb228a4066d}
+\subsection{Macro Definition Documentation}
+\hypertarget{_x_m_l_child_value_8cpp_aa75c4bd51529a044ed87deb228a4066d}{}\label{_x_m_l_child_value_8cpp_aa75c4bd51529a044ed87deb228a4066d} 
+\index{X\+M\+L\+Child\+Value.\+cpp@{X\+M\+L\+Child\+Value.\+cpp}!child\+Value@{child\+Value}}
+\index{child\+Value@{child\+Value}!X\+M\+L\+Child\+Value.\+cpp@{X\+M\+L\+Child\+Value.\+cpp}}
+\subsubsection{\texorpdfstring{child\+Value}{childValue}}
+{\footnotesize\ttfamily \#define child\+Value(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{type }\end{DoxyParamCaption})~m\+\_\+element.\+child(Unicode\+\_\+\#\#name).attr$<$type$>$(Unicode\+\_\+value)}
 
 
-Definition at line 21 of file XMLChildValue.cpp.
 
-Referenced by DD4hep::XML::ChildValue::nameStr(), DD4hep::XML::ChildValue::padType(), DD4hep::XML::ChildValue::refStr(), DD4hep::XML::ChildValue::typeStr(), and DD4hep::XML::ChildValue::valueStr().\hypertarget{_x_m_l_child_value_8cpp_a04195618517294eca8873855aab7ff98}{
-\index{XMLChildValue.cpp@{XMLChildValue.cpp}!childValueDefault@{childValueDefault}}
-\index{childValueDefault@{childValueDefault}!XMLChildValue.cpp@{XMLChildValue.cpp}}
-\subsubsection[{childValueDefault}]{\setlength{\rightskip}{0pt plus 5cm}\#define childValueDefault(name, \/  type, \/  def)}}
-\label{_x_m_l_child_value_8cpp_a04195618517294eca8873855aab7ff98}
-{\bfseries Value:}
+Definition at line 21 of file X\+M\+L\+Child\+Value.\+cpp.
+
+
+
+Referenced by D\+D4hep\+::\+X\+M\+L\+::\+Child\+Value\+::name\+Str(), D\+D4hep\+::\+X\+M\+L\+::\+Child\+Value\+::pad\+Type(), D\+D4hep\+::\+X\+M\+L\+::\+Child\+Value\+::ref\+Str(), D\+D4hep\+::\+X\+M\+L\+::\+Child\+Value\+::type\+Str(), and D\+D4hep\+::\+X\+M\+L\+::\+Child\+Value\+::value\+Str().
+
+\hypertarget{_x_m_l_child_value_8cpp_a04195618517294eca8873855aab7ff98}{}\label{_x_m_l_child_value_8cpp_a04195618517294eca8873855aab7ff98} 
+\index{X\+M\+L\+Child\+Value.\+cpp@{X\+M\+L\+Child\+Value.\+cpp}!child\+Value\+Default@{child\+Value\+Default}}
+\index{child\+Value\+Default@{child\+Value\+Default}!X\+M\+L\+Child\+Value.\+cpp@{X\+M\+L\+Child\+Value.\+cpp}}
+\subsubsection{\texorpdfstring{child\+Value\+Default}{childValueDefault}}
+{\footnotesize\ttfamily \#define child\+Value\+Default(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{type,  }\item[{}]{def }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
 \begin{DoxyCode}
-Handle_t __h = m_element.child(Unicode_##name,false);                 \
-  if ( __h.ptr() && __h.hasAttr(Unicode_value) ) return __h.attr < type > (Unicod
-      e_value); \
+\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_handle__t}{Handle\_t} \_\_h = m\_element.\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_handle__t_aba89b01b45f745b58bf27c9463f05742}{child}(Unicode\_##name,\textcolor{keyword}{false});                 \(\backslash\)
+  if ( \_\_h.\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_handle__t_a7b454a7c9cee6df653be043c17e31cde}{ptr}() && \_\_h.\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_handle__t_a2b621bfdadc91b393c47791306890ef7}{hasAttr}(Unicode\_value) ) \textcolor{keywordflow}{return} \_\_h.\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_handle__t_a5b116e138ee498803385f9ec503395c3}{attr} < type > (Unicode\_value); \(\backslash\)
   return def;
 \end{DoxyCode}
 
 
-Definition at line 23 of file XMLChildValue.cpp.
-
-Referenced by DD4hep::XML::ChildValue::limitsStr(), DD4hep::XML::ChildValue::moduleStr(), DD4hep::XML::ChildValue::readoutStr(), DD4hep::XML::ChildValue::regionStr(), and DD4hep::XML::ChildValue::visStr().\hypertarget{_x_m_l_child_value_8cpp_accabcb0a0a37bcff066b1281c9814553}{
-\index{XMLChildValue.cpp@{XMLChildValue.cpp}!XML\_\-ATTR\_\-ACCESSOR@{XML\_\-ATTR\_\-ACCESSOR}}
-\index{XML\_\-ATTR\_\-ACCESSOR@{XML\_\-ATTR\_\-ACCESSOR}!XMLChildValue.cpp@{XMLChildValue.cpp}}
-\subsubsection[{XML\_\-ATTR\_\-ACCESSOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define XML\_\-ATTR\_\-ACCESSOR(type, \/  name)~type ChildValue::name() const \{ return childValue(name,type); \}}}
-\label{_x_m_l_child_value_8cpp_accabcb0a0a37bcff066b1281c9814553}
+Definition at line 23 of file X\+M\+L\+Child\+Value.\+cpp.
 
 
-Definition at line 28 of file XMLChildValue.cpp.\hypertarget{_x_m_l_child_value_8cpp_a8efa1be16815f59e7b049cab22c08a21}{
-\index{XMLChildValue.cpp@{XMLChildValue.cpp}!XML\_\-ATTR\_\-ACCESSOR\_\-BOOL@{XML\_\-ATTR\_\-ACCESSOR\_\-BOOL}}
-\index{XML\_\-ATTR\_\-ACCESSOR\_\-BOOL@{XML\_\-ATTR\_\-ACCESSOR\_\-BOOL}!XMLChildValue.cpp@{XMLChildValue.cpp}}
-\subsubsection[{XML\_\-ATTR\_\-ACCESSOR\_\-BOOL}]{\setlength{\rightskip}{0pt plus 5cm}\#define XML\_\-ATTR\_\-ACCESSOR\_\-BOOL(name)~XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT(name,bool,\_\-toBool)}}
-\label{_x_m_l_child_value_8cpp_a8efa1be16815f59e7b049cab22c08a21}
+
+Referenced by D\+D4hep\+::\+X\+M\+L\+::\+Child\+Value\+::limits\+Str(), D\+D4hep\+::\+X\+M\+L\+::\+Child\+Value\+::module\+Str(), D\+D4hep\+::\+X\+M\+L\+::\+Child\+Value\+::readout\+Str(), D\+D4hep\+::\+X\+M\+L\+::\+Child\+Value\+::region\+Str(), and D\+D4hep\+::\+X\+M\+L\+::\+Child\+Value\+::vis\+Str().
+
+\hypertarget{_x_m_l_child_value_8cpp_accabcb0a0a37bcff066b1281c9814553}{}\label{_x_m_l_child_value_8cpp_accabcb0a0a37bcff066b1281c9814553} 
+\index{X\+M\+L\+Child\+Value.\+cpp@{X\+M\+L\+Child\+Value.\+cpp}!X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+OR@{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+OR}}
+\index{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+OR@{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+OR}!X\+M\+L\+Child\+Value.\+cpp@{X\+M\+L\+Child\+Value.\+cpp}}
+\subsubsection{\texorpdfstring{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+OR}{XML\_ATTR\_ACCESSOR}}
+{\footnotesize\ttfamily \#define X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+OR(\begin{DoxyParamCaption}\item[{}]{type,  }\item[{}]{name }\end{DoxyParamCaption})~type Child\+Value\+::name() const \{ return \hyperlink{_x_m_l_child_value_8cpp_aa75c4bd51529a044ed87deb228a4066d}{child\+Value}(name,type); \}}
 
 
-Definition at line 39 of file XMLChildValue.cpp.\hypertarget{_x_m_l_child_value_8cpp_a5329c32158716b05939bad5ab5e572df}{
-\index{XMLChildValue.cpp@{XMLChildValue.cpp}!XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT@{XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT}}
-\index{XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT@{XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT}!XMLChildValue.cpp@{XMLChildValue.cpp}}
-\subsubsection[{XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT}]{\setlength{\rightskip}{0pt plus 5cm}\#define XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT(name, \/  type, \/  dressing)}}
-\label{_x_m_l_child_value_8cpp_a5329c32158716b05939bad5ab5e572df}
-{\bfseries Value:}
+
+Definition at line 28 of file X\+M\+L\+Child\+Value.\+cpp.
+
+\hypertarget{_x_m_l_child_value_8cpp_a8efa1be16815f59e7b049cab22c08a21}{}\label{_x_m_l_child_value_8cpp_a8efa1be16815f59e7b049cab22c08a21} 
+\index{X\+M\+L\+Child\+Value.\+cpp@{X\+M\+L\+Child\+Value.\+cpp}!X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+B\+O\+OL@{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+B\+O\+OL}}
+\index{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+B\+O\+OL@{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+B\+O\+OL}!X\+M\+L\+Child\+Value.\+cpp@{X\+M\+L\+Child\+Value.\+cpp}}
+\subsubsection{\texorpdfstring{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+B\+O\+OL}{XML\_ATTR\_ACCESSOR\_BOOL}}
+{\footnotesize\ttfamily \#define X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+B\+O\+OL(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\hyperlink{_x_m_l_dimension_8inl_a5329c32158716b05939bad5ab5e572df}{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+D\+E\+F\+A\+U\+LT}(name,bool,\+\_\+to\+Bool)}
+
+
+
+Definition at line 39 of file X\+M\+L\+Child\+Value.\+cpp.
+
+\hypertarget{_x_m_l_child_value_8cpp_a5329c32158716b05939bad5ab5e572df}{}\label{_x_m_l_child_value_8cpp_a5329c32158716b05939bad5ab5e572df} 
+\index{X\+M\+L\+Child\+Value.\+cpp@{X\+M\+L\+Child\+Value.\+cpp}!X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+D\+E\+F\+A\+U\+LT@{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+D\+E\+F\+A\+U\+LT}}
+\index{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+D\+E\+F\+A\+U\+LT@{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+D\+E\+F\+A\+U\+LT}!X\+M\+L\+Child\+Value.\+cpp@{X\+M\+L\+Child\+Value.\+cpp}}
+\subsubsection{\texorpdfstring{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+D\+E\+F\+A\+U\+LT}{XML\_ATTR\_ACCESSOR\_DEFAULT}}
+{\footnotesize\ttfamily \#define X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+D\+E\+F\+A\+U\+LT(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{type,  }\item[{}]{dressing }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
 \begin{DoxyCode}
-type ChildValue::name(type default_val) const {                 \
-    Handle_t __h = m_element.child(Unicode_##name,false);         \
-    if ( __h.ptr() )  {                                           \
-      const XmlChar* val = __h.attr_value_nothrow(Unicode_value); \
-      return val ? dressing(val) : default_val; }                 \
-    return default_val; }
+type ChildValue::name(type default\_val)\textcolor{keyword}{ const }\{                 \(\backslash\)
+    Handle\_t \_\_h = \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_element_aa79a832ef142a29be556a3ec21c4e36d}{m\_element}.\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_handle__t_aba89b01b45f745b58bf27c9463f05742}{child}(Unicode\_##name,\textcolor{keyword}{false});         \(\backslash\)
+    if ( \_\_h.ptr() )  \{                                           \(\backslash\)
+      const \hyperlink{namespace_d_d4hep_1_1_x_m_l_a09e5d9cc86ed782f6826dfe0778c1815}{XmlChar}* val = \_\_h.\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_handle__t_a690047ce386db6a1a783dcb419ec39c1}{attr\_value\_nothrow}(Unicode\_value); \(\backslash\)
+      return val ? dressing(val) : default\_val; \}                 \(\backslash\)
+    return default\_val; \}
 \end{DoxyCode}
 
 
-Definition at line 29 of file XMLChildValue.cpp.\hypertarget{_x_m_l_child_value_8cpp_a3b2602f2e6cdf903b4d9acd047d61b12}{
-\index{XMLChildValue.cpp@{XMLChildValue.cpp}!XML\_\-ATTR\_\-ACCESSOR\_\-DOUBLE@{XML\_\-ATTR\_\-ACCESSOR\_\-DOUBLE}}
-\index{XML\_\-ATTR\_\-ACCESSOR\_\-DOUBLE@{XML\_\-ATTR\_\-ACCESSOR\_\-DOUBLE}!XMLChildValue.cpp@{XMLChildValue.cpp}}
-\subsubsection[{XML\_\-ATTR\_\-ACCESSOR\_\-DOUBLE}]{\setlength{\rightskip}{0pt plus 5cm}\#define XML\_\-ATTR\_\-ACCESSOR\_\-DOUBLE(name)~XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT(name,double,\_\-toDouble)}}
-\label{_x_m_l_child_value_8cpp_a3b2602f2e6cdf903b4d9acd047d61b12}
+Definition at line 29 of file X\+M\+L\+Child\+Value.\+cpp.
+
+\hypertarget{_x_m_l_child_value_8cpp_a3b2602f2e6cdf903b4d9acd047d61b12}{}\label{_x_m_l_child_value_8cpp_a3b2602f2e6cdf903b4d9acd047d61b12} 
+\index{X\+M\+L\+Child\+Value.\+cpp@{X\+M\+L\+Child\+Value.\+cpp}!X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+D\+O\+U\+B\+LE@{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+D\+O\+U\+B\+LE}}
+\index{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+D\+O\+U\+B\+LE@{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+D\+O\+U\+B\+LE}!X\+M\+L\+Child\+Value.\+cpp@{X\+M\+L\+Child\+Value.\+cpp}}
+\subsubsection{\texorpdfstring{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+D\+O\+U\+B\+LE}{XML\_ATTR\_ACCESSOR\_DOUBLE}}
+{\footnotesize\ttfamily \#define X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+D\+O\+U\+B\+LE(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\hyperlink{_x_m_l_dimension_8inl_a5329c32158716b05939bad5ab5e572df}{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+D\+E\+F\+A\+U\+LT}(name,double,\+\_\+to\+Double)}
 
 
-Definition at line 37 of file XMLChildValue.cpp.\hypertarget{_x_m_l_child_value_8cpp_aa9f53a44681848d2aeda1c5cdac2efb8}{
-\index{XMLChildValue.cpp@{XMLChildValue.cpp}!XML\_\-ATTR\_\-ACCESSOR\_\-INT@{XML\_\-ATTR\_\-ACCESSOR\_\-INT}}
-\index{XML\_\-ATTR\_\-ACCESSOR\_\-INT@{XML\_\-ATTR\_\-ACCESSOR\_\-INT}!XMLChildValue.cpp@{XMLChildValue.cpp}}
-\subsubsection[{XML\_\-ATTR\_\-ACCESSOR\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define XML\_\-ATTR\_\-ACCESSOR\_\-INT(name)~XML\_\-ATTR\_\-ACCESSOR\_\-DEFAULT(name,int,\_\-toInt)}}
-\label{_x_m_l_child_value_8cpp_aa9f53a44681848d2aeda1c5cdac2efb8}
+
+Definition at line 37 of file X\+M\+L\+Child\+Value.\+cpp.
+
+\hypertarget{_x_m_l_child_value_8cpp_aa9f53a44681848d2aeda1c5cdac2efb8}{}\label{_x_m_l_child_value_8cpp_aa9f53a44681848d2aeda1c5cdac2efb8} 
+\index{X\+M\+L\+Child\+Value.\+cpp@{X\+M\+L\+Child\+Value.\+cpp}!X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+I\+NT@{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+I\+NT}}
+\index{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+I\+NT@{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+I\+NT}!X\+M\+L\+Child\+Value.\+cpp@{X\+M\+L\+Child\+Value.\+cpp}}
+\subsubsection{\texorpdfstring{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+I\+NT}{XML\_ATTR\_ACCESSOR\_INT}}
+{\footnotesize\ttfamily \#define X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+I\+NT(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\hyperlink{_x_m_l_dimension_8inl_a5329c32158716b05939bad5ab5e572df}{X\+M\+L\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+\_\+\+D\+E\+F\+A\+U\+LT}(name,int,\+\_\+to\+Int)}
 
 
-Definition at line 38 of file XMLChildValue.cpp.
+
+Definition at line 38 of file X\+M\+L\+Child\+Value.\+cpp.
+

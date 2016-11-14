@@ -1,252 +1,381 @@
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence}{
-\section{DD4hep::Simulation::Geant4EventActionSequence Class Reference}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence}\index{DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}}
-}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence}{}\section{D\+D4hep\+:\+:Simulation\+:\+:Geant4\+Event\+Action\+Sequence Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence}\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}}
 
 
 Concrete implementation of the Geant4 event action sequence.  
 
 
-{\ttfamily \#include $<$Geant4EventAction.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4EventActionSequence::\begin{figure}[H]
+
+
+{\ttfamily \#include $<$Geant4\+Event\+Action.\+h$>$}
+
+Inheritance diagram for D\+D4hep\+:\+:Simulation\+:\+:Geant4\+Event\+Action\+Sequence\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2cm]{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence}
+\includegraphics[height=2.000000cm]{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_ad77330c1ed08133eaf312eca7a7ffe79}{Geant4EventActionSequence} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$context, const std::string \&nam)
-\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_af5bbb63ed3aceb9249cbba78c47fd241}{$\sim$Geant4EventActionSequence} ()
-\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a26291513e94aec2a01464d0121532999}{updateContext} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$ctxt)
-\begin{DoxyCompactList}\small\item\em Set or update client context. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a552fac0ec8632b417f81453b4d79e0c4}{configureFiber} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$thread\_\-context)
-\begin{DoxyCompactList}\small\item\em Set or update client for the use in a new thread fiber. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action}{Geant4EventAction} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a3c02fae6b8cad1aa2d663716fd19af53}{get} (const std::string \&name) const 
-\begin{DoxyCompactList}\small\item\em Get an action by name. \item\end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Q , typename T $>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a83518f996c88a12e92e52446fc4a868b}{callAtBegin} (Q $\ast$p, void(T::$\ast$f)(const G4Event $\ast$))
-\begin{DoxyCompactList}\small\item\em Register begin-\/of-\/event callback. \item\end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Q , typename T $>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a8d53a540711a752831ac7ef62a42e3f3}{callAtEnd} (Q $\ast$p, void(T::$\ast$f)(const G4Event $\ast$))
-\begin{DoxyCompactList}\small\item\em Register end-\/of-\/event callback. \item\end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Q , typename T $>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_ae7a55dcc337b690ff07f86614416a8d5}{callAtFinal} (Q $\ast$p, void(T::$\ast$f)(const G4Event $\ast$))
-\begin{DoxyCompactList}\small\item\em Register event-\/cleanup callback (after end-\/of-\/event callback -\/-\/ unordered). \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a21013600fd6c11994991e76878fb0896}{adopt} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action}{Geant4EventAction} $\ast$action)
-\begin{DoxyCompactList}\small\item\em Add an actor responding to all callbacks. Sequence takes ownership. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a77375888d2519a2095ded294c540ebec}{begin} (const G4Event $\ast$event)
-\begin{DoxyCompactList}\small\item\em Begin-\/of-\/event callback. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a5815e04637704ceddb2abd2677e1522b}{end} (const G4Event $\ast$event)
-\begin{DoxyCompactList}\small\item\em End-\/of-\/event callback. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_aae9103fd1f5de6027adf6f9d652423f9}{Geant4\+Event\+Action\+Sequence} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4\+Context} $\ast$\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_aa9d87f0ec2a72b7fc2591b18f98d75cf}{context}, const std\+::string \&nam)
+\begin{DoxyCompactList}\small\item\em Standard constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_af5bbb63ed3aceb9249cbba78c47fd241}{$\sim$\+Geant4\+Event\+Action\+Sequence} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a26291513e94aec2a01464d0121532999}{update\+Context} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4\+Context} $\ast$ctxt)
+\begin{DoxyCompactList}\small\item\em Set or update client context. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a552fac0ec8632b417f81453b4d79e0c4}{configure\+Fiber} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4\+Context} $\ast$thread\+\_\+context)
+\begin{DoxyCompactList}\small\item\em Set or update client for the use in a new thread fiber. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action}{Geant4\+Event\+Action} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a6ea64e0a8834b3ce73b66191d8055c81}{get} (const std\+::string \&\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_af374e70b014d16afb81dd9d77cc3894b}{name}) const
+\begin{DoxyCompactList}\small\item\em Get an action by name. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q , typename T $>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a84e628e9ef517fc1c0b16b19a876ba32}{call\+At\+Begin} (Q $\ast$p, void(T\+::$\ast$f)(const G4\+Event $\ast$))
+\begin{DoxyCompactList}\small\item\em Register begin-\/of-\/event callback. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q , typename T $>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a136505d70b13db82a9339135330bda6a}{call\+At\+End} (Q $\ast$p, void(T\+::$\ast$f)(const G4\+Event $\ast$))
+\begin{DoxyCompactList}\small\item\em Register end-\/of-\/event callback. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q , typename T $>$ }\\void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_afeb7603fa772b6a776fafd81dc287171}{call\+At\+Final} (Q $\ast$p, void(T\+::$\ast$f)(const G4\+Event $\ast$))
+\begin{DoxyCompactList}\small\item\em Register event-\/cleanup callback (after end-\/of-\/event callback -- unordered) \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a21013600fd6c11994991e76878fb0896}{adopt} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action}{Geant4\+Event\+Action} $\ast$action)
+\begin{DoxyCompactList}\small\item\em Add an actor responding to all callbacks. Sequence takes ownership. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a77375888d2519a2095ded294c540ebec}{begin} (const G4\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Begin-\/of-\/event callback. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a5815e04637704ceddb2abd2677e1522b}{end} (const G4\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em End-\/of-\/event callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{struct_d_d4hep_1_1_callback_sequence}{CallbackSequence} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a59a49de5aff7aac8379f5325e2584ad6}{m\_\-begin}
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence for event initialization action. \item\end{DoxyCompactList}\item 
-\hyperlink{struct_d_d4hep_1_1_callback_sequence}{CallbackSequence} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_ae633e2bffea90162cc1081deca8c395c}{m\_\-end}
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence for event finalization action. \item\end{DoxyCompactList}\item 
-\hyperlink{struct_d_d4hep_1_1_callback_sequence}{CallbackSequence} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_af2e1129997fe4ef05c0bf2e16f29cbca}{m\_\-final}
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence for event finalization action. \item\end{DoxyCompactList}\item 
-Actors$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action}{Geant4EventAction} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a6b3b349d21a34103e1e070a6488bb0e5}{m\_\-actors}
-\begin{DoxyCompactList}\small\item\em The list of action objects to be called. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{struct_d_d4hep_1_1_callback_sequence}{Callback\+Sequence} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a59a49de5aff7aac8379f5325e2584ad6}{m\+\_\+begin}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence for event initialization action. \end{DoxyCompactList}\item 
+\hyperlink{struct_d_d4hep_1_1_callback_sequence}{Callback\+Sequence} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_ae633e2bffea90162cc1081deca8c395c}{m\+\_\+end}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence for event finalization action. \end{DoxyCompactList}\item 
+\hyperlink{struct_d_d4hep_1_1_callback_sequence}{Callback\+Sequence} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_af2e1129997fe4ef05c0bf2e16f29cbca}{m\+\_\+final}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence for event finalization action. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_1_1_actors}{Actors}$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action}{Geant4\+Event\+Action} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a6b3b349d21a34103e1e070a6488bb0e5}{m\+\_\+actors}
+\begin{DoxyCompactList}\small\item\em The list of action objects to be called. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
-Concrete implementation of the Geant4 event action sequence. The sequence dispatches the callbacks at the beginning and the and of an event to all registered \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action}{Geant4EventAction} members and all registered callbacks.
+Concrete implementation of the Geant4 event action sequence. 
 
-Note Multi-\/Threading issue: Neither callbacks not the action list is protected against multiple threads calling the Geant4 callbacks! These must be protected in the user actions themselves.
+The sequence dispatches the callbacks at the beginning and the and of an event to all registered \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action}{Geant4\+Event\+Action} members and all registered callbacks.
+
+Note Multi-\/\+Threading issue\+: Neither callbacks not the action list is protected against multiple threads calling the Geant4 callbacks! These must be protected in the user actions themselves.
 
 \begin{DoxyAuthor}{Author}
-M.Frank 
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
-Definition at line 115 of file Geant4EventAction.h.
+Definition at line 115 of file Geant4\+Event\+Action.\+h.
+
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_ad77330c1ed08133eaf312eca7a7ffe79}{
-\index{DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}!Geant4EventActionSequence@{Geant4EventActionSequence}}
-\index{Geant4EventActionSequence@{Geant4EventActionSequence}!DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}}
-\subsubsection[{Geant4EventActionSequence}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4EventActionSequence::Geant4EventActionSequence ({\bf Geant4Context} $\ast$ {\em context}, \/  const std::string \& {\em nam})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_ad77330c1ed08133eaf312eca7a7ffe79}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_aae9103fd1f5de6027adf6f9d652423f9}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_aae9103fd1f5de6027adf6f9d652423f9} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}!Geant4\+Event\+Action\+Sequence@{Geant4\+Event\+Action\+Sequence}}
+\index{Geant4\+Event\+Action\+Sequence@{Geant4\+Event\+Action\+Sequence}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}}
+\subsubsection{\texorpdfstring{Geant4\+Event\+Action\+Sequence()}{Geant4EventActionSequence()}}
+{\footnotesize\ttfamily Geant4\+Event\+Action\+Sequence\+::\+Geant4\+Event\+Action\+Sequence (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4\+Context} $\ast$}]{context,  }\item[{const std\+::string \&}]{nam }\end{DoxyParamCaption})}
 
 
-Standard constructor. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_af5bbb63ed3aceb9249cbba78c47fd241}{
-\index{DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}!$\sim$Geant4EventActionSequence@{$\sim$Geant4EventActionSequence}}
-\index{$\sim$Geant4EventActionSequence@{$\sim$Geant4EventActionSequence}!DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}}
-\subsubsection[{$\sim$Geant4EventActionSequence}]{\setlength{\rightskip}{0pt plus 5cm}Geant4EventActionSequence::$\sim$Geant4EventActionSequence ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_af5bbb63ed3aceb9249cbba78c47fd241}
+
+Standard constructor. 
+
+
+
+Definition at line 101 of file Geant4\+Event\+Action.\+cpp.
+
+
+
+References D\+D4hep\+::\+Instance\+Count\+::increment(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::m\+\_\+needs\+Control.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_af5bbb63ed3aceb9249cbba78c47fd241}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_af5bbb63ed3aceb9249cbba78c47fd241} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}!````~Geant4\+Event\+Action\+Sequence@{$\sim$\+Geant4\+Event\+Action\+Sequence}}
+\index{````~Geant4\+Event\+Action\+Sequence@{$\sim$\+Geant4\+Event\+Action\+Sequence}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}}
+\subsubsection{\texorpdfstring{$\sim$\+Geant4\+Event\+Action\+Sequence()}{~Geant4EventActionSequence()}}
+{\footnotesize\ttfamily Geant4\+Event\+Action\+Sequence\+::$\sim$\+Geant4\+Event\+Action\+Sequence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Default destructor. 
 
-Definition at line 108 of file Geant4EventAction.cpp.
 
-References DD4hep::CallbackSequence::clear(), DD4hep::InstanceCount::decrement(), m\_\-actors, m\_\-begin, m\_\-end, m\_\-final, and DD4hep::Simulation::Geant4Action::release().
+
+Definition at line 108 of file Geant4\+Event\+Action.\+cpp.
+
+
+
+References D\+D4hep\+::\+Callback\+Sequence\+::clear(), D\+D4hep\+::\+Instance\+Count\+::decrement(), m\+\_\+actors, m\+\_\+begin, m\+\_\+end, m\+\_\+final, and D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::release().
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a21013600fd6c11994991e76878fb0896}{
-\index{DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}!adopt@{adopt}}
-\index{adopt@{adopt}!DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}}
-\subsubsection[{adopt}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4EventActionSequence::adopt ({\bf Geant4EventAction} $\ast$ {\em action})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a21013600fd6c11994991e76878fb0896}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a21013600fd6c11994991e76878fb0896}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a21013600fd6c11994991e76878fb0896} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}!adopt@{adopt}}
+\index{adopt@{adopt}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}}
+\subsubsection{\texorpdfstring{adopt()}{adopt()}}
+{\footnotesize\ttfamily void Geant4\+Event\+Action\+Sequence\+::adopt (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action}{Geant4\+Event\+Action} $\ast$}]{action }\end{DoxyParamCaption})}
+
 
 
 Add an actor responding to all callbacks. Sequence takes ownership. 
 
-Definition at line 134 of file Geant4EventAction.cpp.
-
-References DD4hep::Simulation::Geant4Action::addRef(), and m\_\-actors.
-
-Referenced by DD4hep::Converter$<$ T, ARG $>$::operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a77375888d2519a2095ded294c540ebec}{
-\index{DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}!begin@{begin}}
-\index{begin@{begin}!DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}}
-\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4EventActionSequence::begin (const G4Event $\ast$ {\em event})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a77375888d2519a2095ded294c540ebec}
 
 
-Begin-\/of-\/event callback. Pre-\/track action callback. 
+Definition at line 134 of file Geant4\+Event\+Action.\+cpp.
 
-Definition at line 145 of file Geant4EventAction.cpp.
 
-References DD4hep::Simulation::Geant4EventAction::begin(), m\_\-actors, and m\_\-begin.
 
-Referenced by DD4hep::Simulation::Geant4UserEventAction::BeginOfEventAction().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a83518f996c88a12e92e52446fc4a868b}{
-\index{DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}!callAtBegin@{callAtBegin}}
-\index{callAtBegin@{callAtBegin}!DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}}
-\subsubsection[{callAtBegin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q , typename T $>$ void DD4hep::Simulation::Geant4EventActionSequence::callAtBegin (Q $\ast$ {\em p}, \/  void(T::$\ast$)(const G4Event $\ast$) {\em f})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a83518f996c88a12e92e52446fc4a868b}
+References D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::add\+Ref(), and m\+\_\+actors.
+
+
+
+Referenced by D\+D4hep\+::\+Converter$<$ T, A\+R\+G $>$\+::operator()().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a77375888d2519a2095ded294c540ebec}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a77375888d2519a2095ded294c540ebec} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}!begin@{begin}}
+\index{begin@{begin}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}}
+\subsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void Geant4\+Event\+Action\+Sequence\+::begin (\begin{DoxyParamCaption}\item[{const G4\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Begin-\/of-\/event callback. 
+
+Pre-\/track action callback. 
+
+Definition at line 145 of file Geant4\+Event\+Action.\+cpp.
+
+
+
+References D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+::begin(), m\+\_\+actors, and m\+\_\+begin.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a84e628e9ef517fc1c0b16b19a876ba32}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a84e628e9ef517fc1c0b16b19a876ba32} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}!call\+At\+Begin@{call\+At\+Begin}}
+\index{call\+At\+Begin@{call\+At\+Begin}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}}
+\subsubsection{\texorpdfstring{call\+At\+Begin()}{callAtBegin()}}
+{\footnotesize\ttfamily template$<$typename Q , typename T $>$ \\
+void D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence\+::call\+At\+Begin (\begin{DoxyParamCaption}\item[{Q $\ast$}]{p,  }\item[{void(T\+::$\ast$)(const G4\+Event $\ast$)}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Register begin-\/of-\/event callback. 
 
-Definition at line 138 of file Geant4EventAction.h.
 
-References DD4hep::CallbackSequence::add(), and m\_\-begin.
 
-Referenced by DD4hep::Simulation::Geant4EventSeed::Geant4EventSeed(), and DD4hep::Converter$<$ T, ARG $>$::operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a8d53a540711a752831ac7ef62a42e3f3}{
-\index{DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}!callAtEnd@{callAtEnd}}
-\index{callAtEnd@{callAtEnd}!DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}}
-\subsubsection[{callAtEnd}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q , typename T $>$ void DD4hep::Simulation::Geant4EventActionSequence::callAtEnd (Q $\ast$ {\em p}, \/  void(T::$\ast$)(const G4Event $\ast$) {\em f})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a8d53a540711a752831ac7ef62a42e3f3}
+Definition at line 138 of file Geant4\+Event\+Action.\+h.
+
+
+
+References D\+D4hep\+::\+Callback\+Sequence\+::add().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Seed\+::\+Geant4\+Event\+Seed(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Material\+Scanner\+::\+Geant4\+Material\+Scanner(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::\+Geant4\+Particle\+Handler(), and D\+D4hep\+::\+Converter$<$ T, A\+R\+G $>$\+::operator()().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a136505d70b13db82a9339135330bda6a}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a136505d70b13db82a9339135330bda6a} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}!call\+At\+End@{call\+At\+End}}
+\index{call\+At\+End@{call\+At\+End}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}}
+\subsubsection{\texorpdfstring{call\+At\+End()}{callAtEnd()}}
+{\footnotesize\ttfamily template$<$typename Q , typename T $>$ \\
+void D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence\+::call\+At\+End (\begin{DoxyParamCaption}\item[{Q $\ast$}]{p,  }\item[{void(T\+::$\ast$)(const G4\+Event $\ast$)}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Register end-\/of-\/event callback. 
 
-Definition at line 143 of file Geant4EventAction.h.
-
-References DD4hep::CallbackSequence::add(), and m\_\-end.
-
-Referenced by DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::initialize(), and DD4hep::Converter$<$ T, ARG $>$::operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_ae7a55dcc337b690ff07f86614416a8d5}{
-\index{DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}!callAtFinal@{callAtFinal}}
-\index{callAtFinal@{callAtFinal}!DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}}
-\subsubsection[{callAtFinal}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q , typename T $>$ void DD4hep::Simulation::Geant4EventActionSequence::callAtFinal (Q $\ast$ {\em p}, \/  void(T::$\ast$)(const G4Event $\ast$) {\em f})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_ae7a55dcc337b690ff07f86614416a8d5}
 
 
-Register event-\/cleanup callback (after end-\/of-\/event callback -\/-\/ unordered). 
+Definition at line 143 of file Geant4\+Event\+Action.\+h.
 
-Definition at line 148 of file Geant4EventAction.h.
 
-References DD4hep::CallbackSequence::add(), and m\_\-final.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a552fac0ec8632b417f81453b4d79e0c4}{
-\index{DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}!configureFiber@{configureFiber}}
-\index{configureFiber@{configureFiber}!DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}}
-\subsubsection[{configureFiber}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4EventActionSequence::configureFiber ({\bf Geant4Context} $\ast$ {\em thread\_\-context})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a552fac0ec8632b417f81453b4d79e0c4}
+
+References D\+D4hep\+::\+Callback\+Sequence\+::add().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::\+Geant4\+Particle\+Handler(), and D\+D4hep\+::\+Converter$<$ T, A\+R\+G $>$\+::operator()().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_afeb7603fa772b6a776fafd81dc287171}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_afeb7603fa772b6a776fafd81dc287171} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}!call\+At\+Final@{call\+At\+Final}}
+\index{call\+At\+Final@{call\+At\+Final}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}}
+\subsubsection{\texorpdfstring{call\+At\+Final()}{callAtFinal()}}
+{\footnotesize\ttfamily template$<$typename Q , typename T $>$ \\
+void D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence\+::call\+At\+Final (\begin{DoxyParamCaption}\item[{Q $\ast$}]{p,  }\item[{void(T\+::$\ast$)(const G4\+Event $\ast$)}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Register event-\/cleanup callback (after end-\/of-\/event callback -- unordered) 
+
+
+
+Definition at line 148 of file Geant4\+Event\+Action.\+h.
+
+
+
+References D\+D4hep\+::\+Callback\+Sequence\+::add(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+::begin(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+::end().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a552fac0ec8632b417f81453b4d79e0c4}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a552fac0ec8632b417f81453b4d79e0c4} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}!configure\+Fiber@{configure\+Fiber}}
+\index{configure\+Fiber@{configure\+Fiber}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}}
+\subsubsection{\texorpdfstring{configure\+Fiber()}{configureFiber()}}
+{\footnotesize\ttfamily void Geant4\+Event\+Action\+Sequence\+::configure\+Fiber (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4\+Context} $\ast$}]{thread\+\_\+context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Set or update client for the use in a new thread fiber. 
 
-Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a6adc7138508303e4e417cb48a737ab19}{DD4hep::Simulation::Geant4Action}.
-
-Definition at line 124 of file Geant4EventAction.cpp.
-
-References DD4hep::Simulation::Geant4Action::configureFiber(), and m\_\-actors.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a5815e04637704ceddb2abd2677e1522b}{
-\index{DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}!end@{end}}
-\index{end@{end}!DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}}
-\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4EventActionSequence::end (const G4Event $\ast$ {\em event})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a5815e04637704ceddb2abd2677e1522b}
 
 
-End-\/of-\/event callback. Post-\/track action callback. 
-
-Definition at line 151 of file Geant4EventAction.cpp.
-
-References DD4hep::Simulation::Geant4EventAction::end(), m\_\-actors, m\_\-end, and m\_\-final.
-
-Referenced by DD4hep::Simulation::Geant4UserEventAction::EndOfEventAction().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a3c02fae6b8cad1aa2d663716fd19af53}{
-\index{DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}!get@{get}}
-\index{get@{get}!DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}}
-\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4EventAction}$\ast$ DD4hep::Simulation::Geant4EventActionSequence::get (const std::string \& {\em name}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a3c02fae6b8cad1aa2d663716fd19af53}
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a6adc7138508303e4e417cb48a737ab19}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}.
 
 
-Get an action by name. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a26291513e94aec2a01464d0121532999}{
-\index{DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}!updateContext@{updateContext}}
-\index{updateContext@{updateContext}!DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}}
-\subsubsection[{updateContext}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4EventActionSequence::updateContext ({\bf Geant4Context} $\ast$ {\em ctxt})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a26291513e94aec2a01464d0121532999}
+
+Definition at line 124 of file Geant4\+Event\+Action.\+cpp.
+
+
+
+References D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::configure\+Fiber(), and m\+\_\+actors.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a5815e04637704ceddb2abd2677e1522b}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a5815e04637704ceddb2abd2677e1522b} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}!end@{end}}
+\index{end@{end}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}}
+\subsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily void Geant4\+Event\+Action\+Sequence\+::end (\begin{DoxyParamCaption}\item[{const G4\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+End-\/of-\/event callback. 
+
+Post-\/track action callback. 
+
+Definition at line 151 of file Geant4\+Event\+Action.\+cpp.
+
+
+
+References D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+::end(), m\+\_\+actors, m\+\_\+end, and m\+\_\+final.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a6ea64e0a8834b3ce73b66191d8055c81}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a6ea64e0a8834b3ce73b66191d8055c81} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}!get@{get}}
+\index{get@{get}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action}{Geant4\+Event\+Action} $\ast$ Geant4\+Event\+Action\+Sequence\+::get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Get an action by name. 
+
+
+
+Definition at line 129 of file Geant4\+Event\+Action.\+cpp.
+
+
+
+References m\+\_\+actors, dd4hep\+::second, and D\+D4hep\+::\+Simulation\+::\+Type\+Name\+::split().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a26291513e94aec2a01464d0121532999}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a26291513e94aec2a01464d0121532999} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}!update\+Context@{update\+Context}}
+\index{update\+Context@{update\+Context}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}}
+\subsubsection{\texorpdfstring{update\+Context()}{updateContext()}}
+{\footnotesize\ttfamily void Geant4\+Event\+Action\+Sequence\+::update\+Context (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4\+Context} $\ast$}]{ctxt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Set or update client context. 
 
-Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae3b9daf2af881df956c46568c0743313}{DD4hep::Simulation::Geant4Action}.
 
-Definition at line 118 of file Geant4EventAction.cpp.
 
-References m\_\-actors, and DD4hep::Simulation::Geant4Action::m\_\-context.
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae3b9daf2af881df956c46568c0743313}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}.
+
+
+
+Definition at line 118 of file Geant4\+Event\+Action.\+cpp.
+
+
+
+References m\+\_\+actors, and D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::m\+\_\+context.
+
+
 
 \subsection{Member Data Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a6b3b349d21a34103e1e070a6488bb0e5}{
-\index{DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}!m\_\-actors@{m\_\-actors}}
-\index{m\_\-actors@{m\_\-actors}!DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}}
-\subsubsection[{m\_\-actors}]{\setlength{\rightskip}{0pt plus 5cm}Actors$<${\bf Geant4EventAction}$>$ {\bf DD4hep::Simulation::Geant4EventActionSequence::m\_\-actors}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a6b3b349d21a34103e1e070a6488bb0e5}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a6b3b349d21a34103e1e070a6488bb0e5}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a6b3b349d21a34103e1e070a6488bb0e5} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}!m\+\_\+actors@{m\+\_\+actors}}
+\index{m\+\_\+actors@{m\+\_\+actors}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}}
+\subsubsection{\texorpdfstring{m\+\_\+actors}{m\_actors}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_1_1_actors}{Actors}$<$\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action}{Geant4\+Event\+Action}$>$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence\+::m\+\_\+actors\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 The list of action objects to be called. 
 
-Definition at line 124 of file Geant4EventAction.h.
 
-Referenced by adopt(), begin(), configureFiber(), end(), updateContext(), and $\sim$Geant4EventActionSequence().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a59a49de5aff7aac8379f5325e2584ad6}{
-\index{DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}!m\_\-begin@{m\_\-begin}}
-\index{m\_\-begin@{m\_\-begin}!DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}}
-\subsubsection[{m\_\-begin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CallbackSequence} {\bf DD4hep::Simulation::Geant4EventActionSequence::m\_\-begin}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a59a49de5aff7aac8379f5325e2584ad6}
+
+Definition at line 124 of file Geant4\+Event\+Action.\+h.
+
+
+
+Referenced by adopt(), begin(), configure\+Fiber(), end(), get(), update\+Context(), and $\sim$\+Geant4\+Event\+Action\+Sequence().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a59a49de5aff7aac8379f5325e2584ad6}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a59a49de5aff7aac8379f5325e2584ad6} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}!m\+\_\+begin@{m\+\_\+begin}}
+\index{m\+\_\+begin@{m\+\_\+begin}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}}
+\subsubsection{\texorpdfstring{m\+\_\+begin}{m\_begin}}
+{\footnotesize\ttfamily \hyperlink{struct_d_d4hep_1_1_callback_sequence}{Callback\+Sequence} D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence\+::m\+\_\+begin\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 \hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence for event initialization action. 
 
-Definition at line 118 of file Geant4EventAction.h.
-
-Referenced by begin(), callAtBegin(), and $\sim$Geant4EventActionSequence().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_ae633e2bffea90162cc1081deca8c395c}{
-\index{DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}!m\_\-end@{m\_\-end}}
-\index{m\_\-end@{m\_\-end}!DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}}
-\subsubsection[{m\_\-end}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CallbackSequence} {\bf DD4hep::Simulation::Geant4EventActionSequence::m\_\-end}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_ae633e2bffea90162cc1081deca8c395c}
 
 
-\hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence for event finalization action. 
+Definition at line 118 of file Geant4\+Event\+Action.\+h.
 
-Definition at line 120 of file Geant4EventAction.h.
 
-Referenced by callAtEnd(), end(), and $\sim$Geant4EventActionSequence().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_af2e1129997fe4ef05c0bf2e16f29cbca}{
-\index{DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}!m\_\-final@{m\_\-final}}
-\index{m\_\-final@{m\_\-final}!DD4hep::Simulation::Geant4EventActionSequence@{DD4hep::Simulation::Geant4EventActionSequence}}
-\subsubsection[{m\_\-final}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CallbackSequence} {\bf DD4hep::Simulation::Geant4EventActionSequence::m\_\-final}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_af2e1129997fe4ef05c0bf2e16f29cbca}
+
+Referenced by begin(), and $\sim$\+Geant4\+Event\+Action\+Sequence().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_ae633e2bffea90162cc1081deca8c395c}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_ae633e2bffea90162cc1081deca8c395c} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}!m\+\_\+end@{m\+\_\+end}}
+\index{m\+\_\+end@{m\+\_\+end}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}}
+\subsubsection{\texorpdfstring{m\+\_\+end}{m\_end}}
+{\footnotesize\ttfamily \hyperlink{struct_d_d4hep_1_1_callback_sequence}{Callback\+Sequence} D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence\+::m\+\_\+end\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 \hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence for event finalization action. 
 
-Definition at line 122 of file Geant4EventAction.h.
 
-Referenced by callAtFinal(), end(), and $\sim$Geant4EventActionSequence().
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+Definition at line 120 of file Geant4\+Event\+Action.\+h.
+
+
+
+Referenced by end(), and $\sim$\+Geant4\+Event\+Action\+Sequence().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_af2e1129997fe4ef05c0bf2e16f29cbca}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_af2e1129997fe4ef05c0bf2e16f29cbca} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}!m\+\_\+final@{m\+\_\+final}}
+\index{m\+\_\+final@{m\+\_\+final}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}}
+\subsubsection{\texorpdfstring{m\+\_\+final}{m\_final}}
+{\footnotesize\ttfamily \hyperlink{struct_d_d4hep_1_1_callback_sequence}{Callback\+Sequence} D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence\+::m\+\_\+final\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} sequence for event finalization action. 
+
+
+
+Definition at line 122 of file Geant4\+Event\+Action.\+h.
+
+
+
+Referenced by end(), and $\sim$\+Geant4\+Event\+Action\+Sequence().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_event_action_8h}{Geant4EventAction.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_event_action_8cpp}{Geant4EventAction.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/include/\+D\+D\+G4/\hyperlink{_geant4_event_action_8h}{Geant4\+Event\+Action.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/src/\hyperlink{_geant4_event_action_8cpp}{Geant4\+Event\+Action.\+cpp}\end{DoxyCompactItemize}

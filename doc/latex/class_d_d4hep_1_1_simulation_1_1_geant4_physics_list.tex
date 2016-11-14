@@ -1,392 +1,605 @@
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list}{
-\section{DD4hep::Simulation::Geant4PhysicsList Class Reference}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list}\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list}{}\section{D\+D4hep\+:\+:Simulation\+:\+:Geant4\+Physics\+List Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list}\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
 
 
 Concrete basic implementation of a Geant4 physics list action.  
 
 
-{\ttfamily \#include $<$Geant4PhysicsList.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4PhysicsList::\begin{figure}[H]
+
+
+{\ttfamily \#include $<$Geant4\+Physics\+List.\+h$>$}
+
+Inheritance diagram for D\+D4hep\+:\+:Simulation\+:\+:Geant4\+Physics\+List\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.92982cm]{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list}
+\includegraphics[height=3.929825cm]{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list}
 \end{center}
 \end{figure}
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_particle_constructor}{ParticleConstructor}
-\begin{DoxyCompactList}\small\item\em Structure describing a G4 particle constructor. \item\end{DoxyCompactList}\item 
-class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_physics_constructor}{PhysicsConstructor}
-\begin{DoxyCompactList}\small\item\em Structure describing a G4 physics constructor. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_particle_constructor}{Particle\+Constructor}
+\begin{DoxyCompactList}\small\item\em Structure describing a G4 particle constructor. \end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_physics_constructor}{Physics\+Constructor}
+\begin{DoxyCompactList}\small\item\em Structure describing a G4 physics constructor. \end{DoxyCompactList}\item 
 class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_process}{Process}
-\begin{DoxyCompactList}\small\item\em Structure describing a G4 process. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Structure describing a G4 process. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_process}{Process} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_adf5c4ae6ed4befac883cf5f253f4220e}{ParticleProcesses}
+typedef std\+::vector$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_process}{Process} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_adf5c4ae6ed4befac883cf5f253f4220e}{Particle\+Processes}
 \item 
-typedef std::map$<$ std::string, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_adf5c4ae6ed4befac883cf5f253f4220e}{ParticleProcesses} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ab41e55687c9d57878fe2e6847a31f19a}{PhysicsProcesses}
+typedef std\+::map$<$ std\+::string, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_adf5c4ae6ed4befac883cf5f253f4220e}{Particle\+Processes} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ab41e55687c9d57878fe2e6847a31f19a}{Physics\+Processes}
 \item 
-typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_particle_constructor}{ParticleConstructor} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afaee3763aea79b299830be37f9642342}{ParticleConstructors}
+typedef std\+::vector$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_particle_constructor}{Particle\+Constructor} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afaee3763aea79b299830be37f9642342}{Particle\+Constructors}
 \item 
-typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_physics_constructor}{PhysicsConstructor} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a5953826b626c21fa4b26ab9a07f3b8ad}{PhysicsConstructors}
+typedef std\+::vector$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_physics_constructor}{Physics\+Constructor} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a5953826b626c21fa4b26ab9a07f3b8ad}{Physics\+Constructors}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_aeadd72c30287f2dfc804c893f976ac9d}{Geant4PhysicsList} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$context, const std::string \&nam)
-\begin{DoxyCompactList}\small\item\em Standard constructor with initailization parameters. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a224e107987da2017407996766e9bd445}{$\sim$Geant4PhysicsList} ()
-\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a31c0d4c050c773be8cf95ac34a06eab7}{Geant4\+Physics\+List} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4\+Context} $\ast$\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_aa9d87f0ec2a72b7fc2591b18f98d75cf}{context}, const std\+::string \&nam)
+\begin{DoxyCompactList}\small\item\em Standard constructor with initailization parameters. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a224e107987da2017407996766e9bd445}{$\sim$\+Geant4\+Physics\+List} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
 void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a938fd59bb0072ba9c304828aeb6e267b}{dump} ()
-\begin{DoxyCompactList}\small\item\em Dump content to stdout. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_af18b7d6454f56d0aa6e55a2046cff019}{installCommandMessenger} ()
-\begin{DoxyCompactList}\small\item\em Install command control messenger if wanted. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ab41e55687c9d57878fe2e6847a31f19a}{PhysicsProcesses} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_abd2fd72a935c5a809d216026b503e154}{processes} ()
-\begin{DoxyCompactList}\small\item\em Access all physics processes. \item\end{DoxyCompactList}\item 
-const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ab41e55687c9d57878fe2e6847a31f19a}{PhysicsProcesses} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ae57b43dcb9dcc62d3fe83764a4956f5c}{processes} () const 
-\begin{DoxyCompactList}\small\item\em Access all physics processes. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_adf5c4ae6ed4befac883cf5f253f4220e}{ParticleProcesses} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a5ab9bb1ab768d100453ab9fa528be067}{processes} (const std::string \&part\_\-name)
-\begin{DoxyCompactList}\small\item\em Access processes for one particle type. \item\end{DoxyCompactList}\item 
-const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_adf5c4ae6ed4befac883cf5f253f4220e}{ParticleProcesses} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a04db5f0353e6f8188c8c2a3e21396a3d}{processes} (const std::string \&part\_\-name) const 
-\begin{DoxyCompactList}\small\item\em Access processes for one particle type (CONST). \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afaee3763aea79b299830be37f9642342}{ParticleConstructors} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a273a6db05b6ea5a2b9a8a2491fbd2d7a}{particles} ()
-\begin{DoxyCompactList}\small\item\em Access all physics particles. \item\end{DoxyCompactList}\item 
-const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afaee3763aea79b299830be37f9642342}{ParticleConstructors} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_aa145cac6ebeb2a51d34df83762f612e1}{particles} () const 
-\begin{DoxyCompactList}\small\item\em Access all physics particles. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a5953826b626c21fa4b26ab9a07f3b8ad}{PhysicsConstructors} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a02c18b4acdacd390c3c1b1c4609f1c7b}{physics} ()
-\begin{DoxyCompactList}\small\item\em Access all physics constructors. \item\end{DoxyCompactList}\item 
-const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a5953826b626c21fa4b26ab9a07f3b8ad}{PhysicsConstructors} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_aff2be21114872cdd3f1450b6fcf9996f}{physics} () const 
-\begin{DoxyCompactList}\small\item\em Access all physics constructors. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ac4d76361cc1b439b42dc144a1e7fa988}{addParticleConstructor} (const std::string \&part\_\-name)
-\begin{DoxyCompactList}\small\item\em Add physics particle constructor by name. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a8c689c3ac8a923ff713c4389b5b502b4}{addParticleProcess} (const std::string \&part\_\-name, const std::string \&proc\_\-name, int ordAtRestDoIt, int ordAlongSteptDoIt, int ordPostStepDoIt)
-\begin{DoxyCompactList}\small\item\em Add particle process by name with arguments. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_af9405b117100861f7e365e8362a35fa4}{addPhysicsConstructor} (const std::string \&physics\_\-name)
-\begin{DoxyCompactList}\small\item\em Add \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_physics_constructor}{PhysicsConstructor} by name. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a36fe7b7937ffd99c7300c63983d625eb}{adoptPhysicsConstructor} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} $\ast$action)
-\begin{DoxyCompactList}\small\item\em Add \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_physics_constructor}{PhysicsConstructor} as \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} object. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ac930c930b12719772ec5119cdec72ef1}{constructPhysics} (G4VModularPhysicsList $\ast$physics)
-\begin{DoxyCompactList}\small\item\em constructPhysics callback \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ab9ccc4c7870b757576312feb8674236a}{constructParticles} (G4VUserPhysicsList $\ast$physics)
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} to construct particles. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ae769a12f86a3cb785c1e040c5a32d8fb}{constructProcesses} (G4VUserPhysicsList $\ast$physics)
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} to construct processes (uses the G4 particle table). \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Dump content to stdout. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_af18b7d6454f56d0aa6e55a2046cff019}{install\+Command\+Messenger} ()
+\begin{DoxyCompactList}\small\item\em Install command control messenger if wanted. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ab41e55687c9d57878fe2e6847a31f19a}{Physics\+Processes} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_abd2fd72a935c5a809d216026b503e154}{processes} ()
+\begin{DoxyCompactList}\small\item\em Access all physics processes. \end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ab41e55687c9d57878fe2e6847a31f19a}{Physics\+Processes} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a962da5929e1e970352b314f9e937ac84}{processes} () const
+\begin{DoxyCompactList}\small\item\em Access all physics processes. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_adf5c4ae6ed4befac883cf5f253f4220e}{Particle\+Processes} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afb286f542ca7d94a0eb1831dd340c846}{processes} (const std\+::string \&part\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Access processes for one particle type. \end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_adf5c4ae6ed4befac883cf5f253f4220e}{Particle\+Processes} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a761f0e6fcc0e3c9ab8e7c4895d6c0aa0}{processes} (const std\+::string \&part\+\_\+name) const
+\begin{DoxyCompactList}\small\item\em Access processes for one particle type (C\+O\+N\+ST) \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afaee3763aea79b299830be37f9642342}{Particle\+Constructors} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a273a6db05b6ea5a2b9a8a2491fbd2d7a}{particles} ()
+\begin{DoxyCompactList}\small\item\em Access all physics particles. \end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afaee3763aea79b299830be37f9642342}{Particle\+Constructors} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a605e059b518909ab446396fd5a8035cb}{particles} () const
+\begin{DoxyCompactList}\small\item\em Access all physics particles. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a5953826b626c21fa4b26ab9a07f3b8ad}{Physics\+Constructors} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a02c18b4acdacd390c3c1b1c4609f1c7b}{physics} ()
+\begin{DoxyCompactList}\small\item\em Access all physics constructors. \end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a5953826b626c21fa4b26ab9a07f3b8ad}{Physics\+Constructors} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a9c7a312e78c18be81425089986eb540f}{physics} () const
+\begin{DoxyCompactList}\small\item\em Access all physics constructors. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ac4d76361cc1b439b42dc144a1e7fa988}{add\+Particle\+Constructor} (const std\+::string \&part\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Add physics particle constructor by name. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a8c689c3ac8a923ff713c4389b5b502b4}{add\+Particle\+Process} (const std\+::string \&part\+\_\+name, const std\+::string \&proc\+\_\+name, int ord\+At\+Rest\+Do\+It, int ord\+Along\+Stept\+Do\+It, int ord\+Post\+Step\+Do\+It)
+\begin{DoxyCompactList}\small\item\em Add particle process by name with arguments. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_af9405b117100861f7e365e8362a35fa4}{add\+Physics\+Constructor} (const std\+::string \&physics\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Add \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_physics_constructor}{Physics\+Constructor} by name. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a36fe7b7937ffd99c7300c63983d625eb}{adopt\+Physics\+Constructor} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} $\ast$action)
+\begin{DoxyCompactList}\small\item\em Add \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_physics_constructor}{Physics\+Constructor} as \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} object. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ac930c930b12719772ec5119cdec72ef1}{construct\+Physics} (G4\+V\+Modular\+Physics\+List $\ast$\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a02c18b4acdacd390c3c1b1c4609f1c7b}{physics})
+\begin{DoxyCompactList}\small\item\em construct\+Physics callback \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ab9ccc4c7870b757576312feb8674236a}{construct\+Particles} (G4\+V\+User\+Physics\+List $\ast$\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a02c18b4acdacd390c3c1b1c4609f1c7b}{physics})
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} to construct particles. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ae769a12f86a3cb785c1e040c5a32d8fb}{construct\+Processes} (G4\+V\+User\+Physics\+List $\ast$\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a02c18b4acdacd390c3c1b1c4609f1c7b}{physics})
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} to construct processes (uses the G4 particle table) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ab41e55687c9d57878fe2e6847a31f19a}{PhysicsProcesses} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_af3a8295fc76fdab16b92a9cff9b07b56}{m\_\-processes}
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ab41e55687c9d57878fe2e6847a31f19a}{Physics\+Processes} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_af3a8295fc76fdab16b92a9cff9b07b56}{m\+\_\+processes}
 \item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afaee3763aea79b299830be37f9642342}{ParticleConstructors} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afb427bf428aa0c62f79717a598f60de7}{m\_\-particles}
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afaee3763aea79b299830be37f9642342}{Particle\+Constructors} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afb427bf428aa0c62f79717a598f60de7}{m\+\_\+particles}
 \item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a5953826b626c21fa4b26ab9a07f3b8ad}{PhysicsConstructors} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a7b5de6ccab6cd1083de316546cdba96e}{m\_\-physics}
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a5953826b626c21fa4b26ab9a07f3b8ad}{Physics\+Constructors} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a7b5de6ccab6cd1083de316546cdba96e}{m\+\_\+physics}
 \end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
-Concrete basic implementation of a Geant4 physics list action. \begin{DoxyAuthor}{Author}
-M.Frank 
+Concrete basic implementation of a Geant4 physics list action. 
+
+\begin{DoxyAuthor}{Author}
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
-Definition at line 42 of file Geant4PhysicsList.h.
+Definition at line 42 of file Geant4\+Physics\+List.\+h.
+
+
 
 \subsection{Member Typedef Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afaee3763aea79b299830be37f9642342}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!ParticleConstructors@{ParticleConstructors}}
-\index{ParticleConstructors@{ParticleConstructors}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{ParticleConstructors}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf ParticleConstructor}$>$ {\bf DD4hep::Simulation::Geant4PhysicsList::ParticleConstructors}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afaee3763aea79b299830be37f9642342}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afaee3763aea79b299830be37f9642342}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afaee3763aea79b299830be37f9642342} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!Particle\+Constructors@{Particle\+Constructors}}
+\index{Particle\+Constructors@{Particle\+Constructors}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{Particle\+Constructors}{ParticleConstructors}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_particle_constructor}{Particle\+Constructor}$>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afaee3763aea79b299830be37f9642342}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::\+Particle\+Constructors}}
 
 
-Definition at line 81 of file Geant4PhysicsList.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_adf5c4ae6ed4befac883cf5f253f4220e}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!ParticleProcesses@{ParticleProcesses}}
-\index{ParticleProcesses@{ParticleProcesses}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{ParticleProcesses}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf Process}$>$ {\bf DD4hep::Simulation::Geant4PhysicsList::ParticleProcesses}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_adf5c4ae6ed4befac883cf5f253f4220e}
+
+Definition at line 81 of file Geant4\+Physics\+List.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_adf5c4ae6ed4befac883cf5f253f4220e}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_adf5c4ae6ed4befac883cf5f253f4220e} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!Particle\+Processes@{Particle\+Processes}}
+\index{Particle\+Processes@{Particle\+Processes}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{Particle\+Processes}{ParticleProcesses}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_process}{Process}$>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_adf5c4ae6ed4befac883cf5f253f4220e}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::\+Particle\+Processes}}
 
 
-Definition at line 65 of file Geant4PhysicsList.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a5953826b626c21fa4b26ab9a07f3b8ad}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!PhysicsConstructors@{PhysicsConstructors}}
-\index{PhysicsConstructors@{PhysicsConstructors}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{PhysicsConstructors}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf PhysicsConstructor}$>$ {\bf DD4hep::Simulation::Geant4PhysicsList::PhysicsConstructors}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a5953826b626c21fa4b26ab9a07f3b8ad}
+
+Definition at line 65 of file Geant4\+Physics\+List.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a5953826b626c21fa4b26ab9a07f3b8ad}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a5953826b626c21fa4b26ab9a07f3b8ad} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!Physics\+Constructors@{Physics\+Constructors}}
+\index{Physics\+Constructors@{Physics\+Constructors}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{Physics\+Constructors}{PhysicsConstructors}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_physics_constructor}{Physics\+Constructor}$>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a5953826b626c21fa4b26ab9a07f3b8ad}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::\+Physics\+Constructors}}
 
 
-Definition at line 106 of file Geant4PhysicsList.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ab41e55687c9d57878fe2e6847a31f19a}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!PhysicsProcesses@{PhysicsProcesses}}
-\index{PhysicsProcesses@{PhysicsProcesses}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{PhysicsProcesses}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$std::string, {\bf ParticleProcesses}$>$ {\bf DD4hep::Simulation::Geant4PhysicsList::PhysicsProcesses}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ab41e55687c9d57878fe2e6847a31f19a}
+
+Definition at line 106 of file Geant4\+Physics\+List.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ab41e55687c9d57878fe2e6847a31f19a}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ab41e55687c9d57878fe2e6847a31f19a} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!Physics\+Processes@{Physics\+Processes}}
+\index{Physics\+Processes@{Physics\+Processes}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{Physics\+Processes}{PhysicsProcesses}}
+{\footnotesize\ttfamily typedef std\+::map$<$std\+::string, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_adf5c4ae6ed4befac883cf5f253f4220e}{Particle\+Processes}$>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ab41e55687c9d57878fe2e6847a31f19a}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::\+Physics\+Processes}}
 
 
-Definition at line 66 of file Geant4PhysicsList.h.
+
+Definition at line 66 of file Geant4\+Physics\+List.\+h.
+
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_aeadd72c30287f2dfc804c893f976ac9d}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!Geant4PhysicsList@{Geant4PhysicsList}}
-\index{Geant4PhysicsList@{Geant4PhysicsList}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{Geant4PhysicsList}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4PhysicsList::Geant4PhysicsList ({\bf Geant4Context} $\ast$ {\em context}, \/  const std::string \& {\em nam})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_aeadd72c30287f2dfc804c893f976ac9d}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a31c0d4c050c773be8cf95ac34a06eab7}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a31c0d4c050c773be8cf95ac34a06eab7} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!Geant4\+Physics\+List@{Geant4\+Physics\+List}}
+\index{Geant4\+Physics\+List@{Geant4\+Physics\+List}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{Geant4\+Physics\+List()}{Geant4PhysicsList()}}
+{\footnotesize\ttfamily Geant4\+Physics\+List\+::\+Geant4\+Physics\+List (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4\+Context} $\ast$}]{context,  }\item[{const std\+::string \&}]{nam }\end{DoxyParamCaption})}
 
 
-Standard constructor with initailization parameters. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a224e107987da2017407996766e9bd445}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!$\sim$Geant4PhysicsList@{$\sim$Geant4PhysicsList}}
-\index{$\sim$Geant4PhysicsList@{$\sim$Geant4PhysicsList}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{$\sim$Geant4PhysicsList}]{\setlength{\rightskip}{0pt plus 5cm}Geant4PhysicsList::$\sim$Geant4PhysicsList ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a224e107987da2017407996766e9bd445}
+
+Standard constructor with initailization parameters. 
+
+Standard constructor. 
+
+Definition at line 118 of file Geant4\+Physics\+List.\+cpp.
+
+
+
+References D\+D4hep\+::\+Instance\+Count\+::increment().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a224e107987da2017407996766e9bd445}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a224e107987da2017407996766e9bd445} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!````~Geant4\+Physics\+List@{$\sim$\+Geant4\+Physics\+List}}
+\index{````~Geant4\+Physics\+List@{$\sim$\+Geant4\+Physics\+List}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{$\sim$\+Geant4\+Physics\+List()}{~Geant4PhysicsList()}}
+{\footnotesize\ttfamily Geant4\+Physics\+List\+::$\sim$\+Geant4\+Physics\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Default destructor. 
 
-Definition at line 124 of file Geant4PhysicsList.cpp.
 
-References DD4hep::InstanceCount::decrement().
+
+Definition at line 124 of file Geant4\+Physics\+List.\+cpp.
+
+
+
+References D\+D4hep\+::\+Instance\+Count\+::decrement().
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ac4d76361cc1b439b42dc144a1e7fa988}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!addParticleConstructor@{addParticleConstructor}}
-\index{addParticleConstructor@{addParticleConstructor}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{addParticleConstructor}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4PhysicsList::addParticleConstructor (const std::string \& {\em part\_\-name})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ac4d76361cc1b439b42dc144a1e7fa988}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ac4d76361cc1b439b42dc144a1e7fa988}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ac4d76361cc1b439b42dc144a1e7fa988} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!add\+Particle\+Constructor@{add\+Particle\+Constructor}}
+\index{add\+Particle\+Constructor@{add\+Particle\+Constructor}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{add\+Particle\+Constructor()}{addParticleConstructor()}}
+{\footnotesize\ttfamily void Geant4\+Physics\+List\+::add\+Particle\+Constructor (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{part\+\_\+name }\end{DoxyParamCaption})}
+
 
 
 Add physics particle constructor by name. 
 
-Definition at line 155 of file Geant4PhysicsList.cpp.
 
-References particles().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a8c689c3ac8a923ff713c4389b5b502b4}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!addParticleProcess@{addParticleProcess}}
-\index{addParticleProcess@{addParticleProcess}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{addParticleProcess}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4PhysicsList::addParticleProcess (const std::string \& {\em part\_\-name}, \/  const std::string \& {\em proc\_\-name}, \/  int {\em ordAtRestDoIt}, \/  int {\em ordAlongSteptDoIt}, \/  int {\em ordPostStepDoIt})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a8c689c3ac8a923ff713c4389b5b502b4}
+
+Definition at line 155 of file Geant4\+Physics\+List.\+cpp.
+
+
+
+References particles().
+
+
+
+Referenced by physics().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a8c689c3ac8a923ff713c4389b5b502b4}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a8c689c3ac8a923ff713c4389b5b502b4} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!add\+Particle\+Process@{add\+Particle\+Process}}
+\index{add\+Particle\+Process@{add\+Particle\+Process}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{add\+Particle\+Process()}{addParticleProcess()}}
+{\footnotesize\ttfamily void Geant4\+Physics\+List\+::add\+Particle\+Process (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{part\+\_\+name,  }\item[{const std\+::string \&}]{proc\+\_\+name,  }\item[{int}]{ord\+At\+Rest\+Do\+It,  }\item[{int}]{ord\+Along\+Stept\+Do\+It,  }\item[{int}]{ord\+Post\+Step\+Do\+It }\end{DoxyParamCaption})}
+
 
 
 Add particle process by name with arguments. 
 
-Definition at line 160 of file Geant4PhysicsList.cpp.
-
-References DD4hep::Simulation::Geant4PhysicsList::Process::name, DD4hep::Simulation::Geant4PhysicsList::Process::ordAlongSteptDoIt, DD4hep::Simulation::Geant4PhysicsList::Process::ordAtRestDoIt, DD4hep::Simulation::Geant4PhysicsList::Process::ordPostStepDoIt, and processes().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_af9405b117100861f7e365e8362a35fa4}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!addPhysicsConstructor@{addPhysicsConstructor}}
-\index{addPhysicsConstructor@{addPhysicsConstructor}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{addPhysicsConstructor}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4PhysicsList::addPhysicsConstructor (const std::string \& {\em physics\_\-name})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_af9405b117100861f7e365e8362a35fa4}
 
 
-Add \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_physics_constructor}{PhysicsConstructor} by name. This constructor is used for intrinsic Geant4 defined physics constructors. Such physics constructors are only created by the factory and attached to the physics list object. 
-
-Definition at line 175 of file Geant4PhysicsList.cpp.
-
-References physics().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a36fe7b7937ffd99c7300c63983d625eb}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!adoptPhysicsConstructor@{adoptPhysicsConstructor}}
-\index{adoptPhysicsConstructor@{adoptPhysicsConstructor}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{adoptPhysicsConstructor}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4PhysicsList::adoptPhysicsConstructor ({\bf Geant4Action} $\ast$ {\em action})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a36fe7b7937ffd99c7300c63983d625eb}
+Definition at line 160 of file Geant4\+Physics\+List.\+cpp.
 
 
-Add \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_physics_constructor}{PhysicsConstructor} as \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} object. Add \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_physics_constructor}{PhysicsConstructor} by name.
 
-The action object must bve a sub-\/class of type \hyperlink{class_g4_v_physics_constructor}{G4VPhysicsConstructor}. -\/-\/ The \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} object to supports properties. -\/-\/ Specific user actions may be implemented in the base class calls to 'ConstructParticle' or 'ConstructProcess'. Both calls are invoked by the framework when the physics list is configured for the use in the run-\/manager. 
-
-Definition at line 200 of file Geant4PhysicsList.cpp.
-
-References DD4hep::Simulation::Geant4Action::addRef(), DD4hep::Simulation::Geant4Action::c\_\-name(), DD4hep::Simulation::Geant4Action::except(), m\_\-physics, and DD4hep::Simulation::Geant4Action::name().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ab9ccc4c7870b757576312feb8674236a}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!constructParticles@{constructParticles}}
-\index{constructParticles@{constructParticles}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{constructParticles}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4PhysicsList::constructParticles (G4VUserPhysicsList $\ast$ {\em physics})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ab9ccc4c7870b757576312feb8674236a}
+References D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::\+Process\+::name, D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::\+Process\+::ord\+Along\+Stept\+Do\+It, D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::\+Process\+::ord\+At\+Rest\+Do\+It, D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::\+Process\+::ord\+Post\+Step\+Do\+It, and processes().
 
 
-\hyperlink{class_d_d4hep_1_1_callback}{Callback} to construct particles. constructParticle callback 
 
-Now define all particles
+Referenced by physics().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_af9405b117100861f7e365e8362a35fa4}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_af9405b117100861f7e365e8362a35fa4} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!add\+Physics\+Constructor@{add\+Physics\+Constructor}}
+\index{add\+Physics\+Constructor@{add\+Physics\+Constructor}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{add\+Physics\+Constructor()}{addPhysicsConstructor()}}
+{\footnotesize\ttfamily void Geant4\+Physics\+List\+::add\+Physics\+Constructor (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{physics\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Add \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_physics_constructor}{Physics\+Constructor} by name. 
+
+This constructor is used for intrinsic Geant4 defined physics constructors. Such physics constructors are only created by the factory and attached to the physics list object. 
+
+Definition at line 175 of file Geant4\+Physics\+List.\+cpp.
+
+
+
+References physics().
+
+
+
+Referenced by physics().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a36fe7b7937ffd99c7300c63983d625eb}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a36fe7b7937ffd99c7300c63983d625eb} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!adopt\+Physics\+Constructor@{adopt\+Physics\+Constructor}}
+\index{adopt\+Physics\+Constructor@{adopt\+Physics\+Constructor}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{adopt\+Physics\+Constructor()}{adoptPhysicsConstructor()}}
+{\footnotesize\ttfamily void Geant4\+Physics\+List\+::adopt\+Physics\+Constructor (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} $\ast$}]{action }\end{DoxyParamCaption})}
+
+
+
+Add \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_physics_constructor}{Physics\+Constructor} as \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} object. 
+
+Add \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_1_1_physics_constructor}{Physics\+Constructor} by name.
+
+The action object must bve a sub-\/class of type \hyperlink{class_g4_v_physics_constructor}{G4\+V\+Physics\+Constructor}. -- The \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} object to supports properties. -- Specific user actions may be implemented in the base class calls to \textquotesingle{}Construct\+Particle\textquotesingle{} or \textquotesingle{}Construct\+Process\textquotesingle{}. Both calls are invoked by the framework when the physics list is configured for the use in the run-\/manager. 
+
+Definition at line 200 of file Geant4\+Physics\+List.\+cpp.
+
+
+
+References D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::add\+Ref(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::c\+\_\+name(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::except(), m\+\_\+physics, D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::name(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::\+Physics\+Constructor\+::pointer.
+
+
+
+Referenced by physics().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ab9ccc4c7870b757576312feb8674236a}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ab9ccc4c7870b757576312feb8674236a} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!construct\+Particles@{construct\+Particles}}
+\index{construct\+Particles@{construct\+Particles}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{construct\+Particles()}{constructParticles()}}
+{\footnotesize\ttfamily void Geant4\+Physics\+List\+::construct\+Particles (\begin{DoxyParamCaption}\item[{G4\+V\+User\+Physics\+List $\ast$}]{physics }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} to construct particles. 
+
+construct\+Particle callback Now define all particles
 
 Check if we have here a particle group constructor 
 
-Definition at line 234 of file Geant4PhysicsList.cpp.
-
-References DD4hep::Simulation::Geant4Action::debug(), DD4hep::Simulation::Geant4Action::except(), DD4hep::Simulation::Geant4Action::info(), and m\_\-particles.
-
-Referenced by DD4hep::Simulation::Geant4PhysicsListActionSequence::constructParticles().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ac930c930b12719772ec5119cdec72ef1}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!constructPhysics@{constructPhysics}}
-\index{constructPhysics@{constructPhysics}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{constructPhysics}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4PhysicsList::constructPhysics (G4VModularPhysicsList $\ast$ {\em physics})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ac930c930b12719772ec5119cdec72ef1}
+Definition at line 234 of file Geant4\+Physics\+List.\+cpp.
 
 
-constructPhysics callback \hyperlink{class_d_d4hep_1_1_callback}{Callback} to construct particle decays. 
 
-Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_constructor_a97b80e1316943ae5805d8d006fa4f1b5}{DD4hep::Simulation::Geant4PhysicsConstructor}.
-
-Definition at line 216 of file Geant4PhysicsList.cpp.
-
-References DD4hep::Simulation::Geant4Action::debug(), DD4hep::Simulation::Geant4Action::except(), DD4hep::Simulation::Geant4Action::info(), and m\_\-physics.
-
-Referenced by DD4hep::Simulation::Geant4PhysicsListActionSequence::constructPhysics().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ae769a12f86a3cb785c1e040c5a32d8fb}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!constructProcesses@{constructProcesses}}
-\index{constructProcesses@{constructProcesses}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{constructProcesses}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4PhysicsList::constructProcesses (G4VUserPhysicsList $\ast$ {\em physics})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ae769a12f86a3cb785c1e040c5a32d8fb}
+References D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::debug(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::except(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::info(), and m\+\_\+particles.
 
 
-\hyperlink{class_d_d4hep_1_1_callback}{Callback} to construct processes (uses the G4 particle table). 
 
-Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_default_range_cut_a5625f1bf8f0c47bb6b29c73ce3e590eb}{DD4hep::Simulation::Geant4DefaultRangeCut}.
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+Action\+Sequence\+::construct\+Particle(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+Action\+Sequence\+::construct\+Particles(), and physics().
 
-Definition at line 252 of file Geant4PhysicsList.cpp.
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ac930c930b12719772ec5119cdec72ef1}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ac930c930b12719772ec5119cdec72ef1} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!construct\+Physics@{construct\+Physics}}
+\index{construct\+Physics@{construct\+Physics}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{construct\+Physics()}{constructPhysics()}}
+{\footnotesize\ttfamily void Geant4\+Physics\+List\+::construct\+Physics (\begin{DoxyParamCaption}\item[{G4\+V\+Modular\+Physics\+List $\ast$}]{physics }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-References DD4hep::Simulation::Geant4Action::debug(), DD4hep::Simulation::Geant4Action::except(), DD4hep::Simulation::Geant4Action::info(), m\_\-processes, DD4hep::Simulation::Geant4PhysicsList::Process::name, DD4hep::Simulation::Geant4PhysicsList::Process::ordAlongSteptDoIt, DD4hep::Simulation::Geant4PhysicsList::Process::ordAtRestDoIt, and DD4hep::Simulation::Geant4PhysicsList::Process::ordPostStepDoIt.
 
-Referenced by DD4hep::Simulation::Geant4PhysicsListActionSequence::constructProcesses().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a938fd59bb0072ba9c304828aeb6e267b}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!dump@{dump}}
-\index{dump@{dump}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{dump}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4PhysicsList::dump ()}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a938fd59bb0072ba9c304828aeb6e267b}
+
+construct\+Physics callback 
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} to construct particle decays. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_constructor_a97b80e1316943ae5805d8d006fa4f1b5}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+Constructor}.
+
+
+
+Definition at line 216 of file Geant4\+Physics\+List.\+cpp.
+
+
+
+References D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::debug(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::except(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::info(), and m\+\_\+physics.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+Action\+Sequence\+::construct\+Particle(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+Action\+Sequence\+::construct\+Physics(), and physics().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ae769a12f86a3cb785c1e040c5a32d8fb}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ae769a12f86a3cb785c1e040c5a32d8fb} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!construct\+Processes@{construct\+Processes}}
+\index{construct\+Processes@{construct\+Processes}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{construct\+Processes()}{constructProcesses()}}
+{\footnotesize\ttfamily void Geant4\+Physics\+List\+::construct\+Processes (\begin{DoxyParamCaption}\item[{G4\+V\+User\+Physics\+List $\ast$}]{physics }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} to construct processes (uses the G4 particle table) 
+
+
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_default_range_cut_a5625f1bf8f0c47bb6b29c73ce3e590eb}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Default\+Range\+Cut}.
+
+
+
+Definition at line 252 of file Geant4\+Physics\+List.\+cpp.
+
+
+
+References D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::debug(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::except(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::info(), m\+\_\+processes, D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::\+Process\+::name, D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::\+Process\+::ord\+Along\+Stept\+Do\+It, D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::\+Process\+::ord\+At\+Rest\+Do\+It, and D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::\+Process\+::ord\+Post\+Step\+Do\+It.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+Action\+Sequence\+::construct\+Particle(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+Action\+Sequence\+::construct\+Processes(), and physics().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a938fd59bb0072ba9c304828aeb6e267b}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a938fd59bb0072ba9c304828aeb6e267b} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!dump@{dump}}
+\index{dump@{dump}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily void Geant4\+Physics\+List\+::dump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 
 
 Dump content to stdout. 
 
-Definition at line 134 of file Geant4PhysicsList.cpp.
 
-References DD4hep::ALWAYS, m\_\-particles, m\_\-physics, m\_\-processes, DD4hep::Simulation::Geant4PhysicsList::Process::name, DD4hep::Simulation::Geant4Action::name(), DD4hep::Simulation::Geant4PhysicsList::Process::ordAlongSteptDoIt, DD4hep::Simulation::Geant4PhysicsList::Process::ordAtRestDoIt, DD4hep::Simulation::Geant4PhysicsList::Process::ordPostStepDoIt, and DD4hep::printout().
 
-Referenced by DD4hep::Simulation::Geant4PhysicsListActionSequence::dump(), and installCommandMessenger().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_af18b7d6454f56d0aa6e55a2046cff019}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!installCommandMessenger@{installCommandMessenger}}
-\index{installCommandMessenger@{installCommandMessenger}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{installCommandMessenger}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4PhysicsList::installCommandMessenger ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_af18b7d6454f56d0aa6e55a2046cff019}
+Definition at line 134 of file Geant4\+Physics\+List.\+cpp.
+
+
+
+References D\+D4hep\+::\+A\+L\+W\+A\+YS, m\+\_\+particles, m\+\_\+physics, m\+\_\+processes, D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::\+Process\+::name, D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::name(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::\+Process\+::ord\+Along\+Stept\+Do\+It, D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::\+Process\+::ord\+At\+Rest\+Do\+It, D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::\+Process\+::ord\+Post\+Step\+Do\+It, and D\+D4hep\+::printout().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+Action\+Sequence\+::dump(), and install\+Command\+Messenger().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_af18b7d6454f56d0aa6e55a2046cff019}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_af18b7d6454f56d0aa6e55a2046cff019} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!install\+Command\+Messenger@{install\+Command\+Messenger}}
+\index{install\+Command\+Messenger@{install\+Command\+Messenger}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{install\+Command\+Messenger()}{installCommandMessenger()}}
+{\footnotesize\ttfamily void Geant4\+Physics\+List\+::install\+Command\+Messenger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Install command control messenger if wanted. 
 
-Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_aaaa0718b7d4f52e4c31e982b91c0eeda}{DD4hep::Simulation::Geant4Action}.
-
-Definition at line 129 of file Geant4PhysicsList.cpp.
-
-References DD4hep::Simulation::Geant4UIMessenger::addCall(), DD4hep::Simulation::Geant4Action::control(), dump(), and DD4hep::Simulation::Geant4Action::name().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_aa145cac6ebeb2a51d34df83762f612e1}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!particles@{particles}}
-\index{particles@{particles}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{particles}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf ParticleConstructors}\& DD4hep::Simulation::Geant4PhysicsList::particles () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_aa145cac6ebeb2a51d34df83762f612e1}
 
 
-Access all physics particles. 
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_aaaa0718b7d4f52e4c31e982b91c0eeda}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}.
 
-Definition at line 138 of file Geant4PhysicsList.h.
 
-References m\_\-particles.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a273a6db05b6ea5a2b9a8a2491fbd2d7a}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!particles@{particles}}
-\index{particles@{particles}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{particles}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ParticleConstructors}\& DD4hep::Simulation::Geant4PhysicsList::particles ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a273a6db05b6ea5a2b9a8a2491fbd2d7a}
+
+Definition at line 129 of file Geant4\+Physics\+List.\+cpp.
+
+
+
+References D\+D4hep\+::\+Simulation\+::\+Geant4\+U\+I\+Messenger\+::add\+Call(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::control(), dump(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::name().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a273a6db05b6ea5a2b9a8a2491fbd2d7a}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a273a6db05b6ea5a2b9a8a2491fbd2d7a} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!particles@{particles}}
+\index{particles@{particles}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{particles()}{particles()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afaee3763aea79b299830be37f9642342}{Particle\+Constructors}\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::particles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Access all physics particles. 
 
-Definition at line 134 of file Geant4PhysicsList.h.
 
-References m\_\-particles.
 
-Referenced by addParticleConstructor().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_aff2be21114872cdd3f1450b6fcf9996f}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!physics@{physics}}
-\index{physics@{physics}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{physics}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf PhysicsConstructors}\& DD4hep::Simulation::Geant4PhysicsList::physics () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_aff2be21114872cdd3f1450b6fcf9996f}
+Definition at line 134 of file Geant4\+Physics\+List.\+h.
+
+
+
+References m\+\_\+particles.
+
+
+
+Referenced by add\+Particle\+Constructor().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a605e059b518909ab446396fd5a8035cb}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a605e059b518909ab446396fd5a8035cb} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!particles@{particles}}
+\index{particles@{particles}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{particles()}{particles()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afaee3763aea79b299830be37f9642342}{Particle\+Constructors}\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::particles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access all physics particles. 
+
+
+
+Definition at line 138 of file Geant4\+Physics\+List.\+h.
+
+
+
+References m\+\_\+particles.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a02c18b4acdacd390c3c1b1c4609f1c7b}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a02c18b4acdacd390c3c1b1c4609f1c7b} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!physics@{physics}}
+\index{physics@{physics}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{physics()}{physics()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a5953826b626c21fa4b26ab9a07f3b8ad}{Physics\+Constructors}\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::physics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Access all physics constructors. 
 
-Definition at line 146 of file Geant4PhysicsList.h.
 
-References m\_\-physics.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a02c18b4acdacd390c3c1b1c4609f1c7b}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!physics@{physics}}
-\index{physics@{physics}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{physics}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PhysicsConstructors}\& DD4hep::Simulation::Geant4PhysicsList::physics ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a02c18b4acdacd390c3c1b1c4609f1c7b}
+
+Definition at line 142 of file Geant4\+Physics\+List.\+h.
+
+
+
+References m\+\_\+physics.
+
+
+
+Referenced by add\+Physics\+Constructor(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+Action\+Sequence\+::construct\+Particle(), and physics().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a9c7a312e78c18be81425089986eb540f}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a9c7a312e78c18be81425089986eb540f} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!physics@{physics}}
+\index{physics@{physics}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{physics()}{physics()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a5953826b626c21fa4b26ab9a07f3b8ad}{Physics\+Constructors}\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::physics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Access all physics constructors. 
 
-Definition at line 142 of file Geant4PhysicsList.h.
-
-References m\_\-physics.
-
-Referenced by addPhysicsConstructor().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a04db5f0353e6f8188c8c2a3e21396a3d}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!processes@{processes}}
-\index{processes@{processes}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{processes}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf ParticleProcesses}\& DD4hep::Simulation::Geant4PhysicsList::processes (const std::string \& {\em part\_\-name}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a04db5f0353e6f8188c8c2a3e21396a3d}
 
 
-Access processes for one particle type (CONST). \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a5ab9bb1ab768d100453ab9fa528be067}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!processes@{processes}}
-\index{processes@{processes}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{processes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ParticleProcesses}\& DD4hep::Simulation::Geant4PhysicsList::processes (const std::string \& {\em part\_\-name})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a5ab9bb1ab768d100453ab9fa528be067}
+Definition at line 146 of file Geant4\+Physics\+List.\+h.
 
 
-Access processes for one particle type. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ae57b43dcb9dcc62d3fe83764a4956f5c}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!processes@{processes}}
-\index{processes@{processes}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{processes}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf PhysicsProcesses}\& DD4hep::Simulation::Geant4PhysicsList::processes () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ae57b43dcb9dcc62d3fe83764a4956f5c}
+
+References add\+Particle\+Constructor(), add\+Particle\+Process(), add\+Physics\+Constructor(), adopt\+Physics\+Constructor(), construct\+Particles(), construct\+Physics(), construct\+Processes(), m\+\_\+physics, D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::\+Process\+::ord\+Along\+Stept\+Do\+It, D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::\+Process\+::ord\+At\+Rest\+Do\+It, D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::\+Process\+::ord\+Post\+Step\+Do\+It, and physics().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_abd2fd72a935c5a809d216026b503e154}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_abd2fd72a935c5a809d216026b503e154} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!processes@{processes}}
+\index{processes@{processes}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{processes()}{processes()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ab41e55687c9d57878fe2e6847a31f19a}{Physics\+Processes}\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::processes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Access all physics processes. 
 
-Definition at line 126 of file Geant4PhysicsList.h.
 
-References m\_\-processes.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_abd2fd72a935c5a809d216026b503e154}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!processes@{processes}}
-\index{processes@{processes}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{processes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PhysicsProcesses}\& DD4hep::Simulation::Geant4PhysicsList::processes ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_abd2fd72a935c5a809d216026b503e154}
+
+Definition at line 122 of file Geant4\+Physics\+List.\+h.
+
+
+
+References m\+\_\+processes.
+
+
+
+Referenced by add\+Particle\+Process(), and processes().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a962da5929e1e970352b314f9e937ac84}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a962da5929e1e970352b314f9e937ac84} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!processes@{processes}}
+\index{processes@{processes}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{processes()}{processes()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ab41e55687c9d57878fe2e6847a31f19a}{Physics\+Processes}\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::processes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Access all physics processes. 
 
-Definition at line 122 of file Geant4PhysicsList.h.
 
-References m\_\-processes.
 
-Referenced by addParticleProcess().
+Definition at line 126 of file Geant4\+Physics\+List.\+h.
+
+
+
+References m\+\_\+processes, and processes().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afb286f542ca7d94a0eb1831dd340c846}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afb286f542ca7d94a0eb1831dd340c846} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!processes@{processes}}
+\index{processes@{processes}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{processes()}{processes()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_adf5c4ae6ed4befac883cf5f253f4220e}{Geant4\+Physics\+List\+::\+Particle\+Processes} \& Geant4\+Physics\+List\+::processes (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{part\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Access processes for one particle type. 
+
+
+
+Definition at line 180 of file Geant4\+Physics\+List.\+cpp.
+
+
+
+References m\+\_\+processes.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a761f0e6fcc0e3c9ab8e7c4895d6c0aa0}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a761f0e6fcc0e3c9ab8e7c4895d6c0aa0} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!processes@{processes}}
+\index{processes@{processes}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{processes()}{processes()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_adf5c4ae6ed4befac883cf5f253f4220e}{Geant4\+Physics\+List\+::\+Particle\+Processes} \& Geant4\+Physics\+List\+::processes (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{part\+\_\+name }\end{DoxyParamCaption}) const}
+
+
+
+Access processes for one particle type (C\+O\+N\+ST) 
+
+
+
+Definition at line 190 of file Geant4\+Physics\+List.\+cpp.
+
+
+
+References D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::except(), and m\+\_\+processes.
+
+
 
 \subsection{Member Data Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afb427bf428aa0c62f79717a598f60de7}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!m\_\-particles@{m\_\-particles}}
-\index{m\_\-particles@{m\_\-particles}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{m\_\-particles}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ParticleConstructors} {\bf DD4hep::Simulation::Geant4PhysicsList::m\_\-particles}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afb427bf428aa0c62f79717a598f60de7}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afb427bf428aa0c62f79717a598f60de7}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afb427bf428aa0c62f79717a598f60de7} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!m\+\_\+particles@{m\+\_\+particles}}
+\index{m\+\_\+particles@{m\+\_\+particles}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{m\+\_\+particles}{m\_particles}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_afaee3763aea79b299830be37f9642342}{Particle\+Constructors} D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::m\+\_\+particles}
 
 
-Definition at line 109 of file Geant4PhysicsList.h.
 
-Referenced by constructParticles(), dump(), and particles().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a7b5de6ccab6cd1083de316546cdba96e}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!m\_\-physics@{m\_\-physics}}
-\index{m\_\-physics@{m\_\-physics}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{m\_\-physics}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PhysicsConstructors} {\bf DD4hep::Simulation::Geant4PhysicsList::m\_\-physics}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a7b5de6ccab6cd1083de316546cdba96e}
+Definition at line 109 of file Geant4\+Physics\+List.\+h.
 
 
-Definition at line 110 of file Geant4PhysicsList.h.
 
-Referenced by adoptPhysicsConstructor(), constructPhysics(), dump(), and physics().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_af3a8295fc76fdab16b92a9cff9b07b56}{
-\index{DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}!m\_\-processes@{m\_\-processes}}
-\index{m\_\-processes@{m\_\-processes}!DD4hep::Simulation::Geant4PhysicsList@{DD4hep::Simulation::Geant4PhysicsList}}
-\subsubsection[{m\_\-processes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PhysicsProcesses} {\bf DD4hep::Simulation::Geant4PhysicsList::m\_\-processes}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_af3a8295fc76fdab16b92a9cff9b07b56}
+Referenced by construct\+Particles(), dump(), and particles().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a7b5de6ccab6cd1083de316546cdba96e}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a7b5de6ccab6cd1083de316546cdba96e} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!m\+\_\+physics@{m\+\_\+physics}}
+\index{m\+\_\+physics@{m\+\_\+physics}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{m\+\_\+physics}{m\_physics}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_a5953826b626c21fa4b26ab9a07f3b8ad}{Physics\+Constructors} D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::m\+\_\+physics}
 
 
-Definition at line 108 of file Geant4PhysicsList.h.
 
-Referenced by constructProcesses(), dump(), and processes().
+Definition at line 110 of file Geant4\+Physics\+List.\+h.
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+
+
+Referenced by adopt\+Physics\+Constructor(), construct\+Physics(), dump(), and physics().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_af3a8295fc76fdab16b92a9cff9b07b56}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_af3a8295fc76fdab16b92a9cff9b07b56} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}!m\+\_\+processes@{m\+\_\+processes}}
+\index{m\+\_\+processes@{m\+\_\+processes}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}}
+\subsubsection{\texorpdfstring{m\+\_\+processes}{m\_processes}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_ab41e55687c9d57878fe2e6847a31f19a}{Physics\+Processes} D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::m\+\_\+processes}
+
+
+
+Definition at line 108 of file Geant4\+Physics\+List.\+h.
+
+
+
+Referenced by construct\+Processes(), dump(), and processes().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_physics_list_8h}{Geant4PhysicsList.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_physics_list_8cpp}{Geant4PhysicsList.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/include/\+D\+D\+G4/\hyperlink{_geant4_physics_list_8h}{Geant4\+Physics\+List.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/src/\hyperlink{_geant4_physics_list_8cpp}{Geant4\+Physics\+List.\+cpp}\end{DoxyCompactItemize}

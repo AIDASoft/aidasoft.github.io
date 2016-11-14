@@ -1,57 +1,59 @@
-\hypertarget{_display_8cpp}{
-\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDEve/src/Display.cpp File Reference}
-\label{_display_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDEve/src/Display.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDEve/src/Display.cpp}}
-}
-{\ttfamily \#include \char`\"{}DDEve/View.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDEve/Display.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDEve/ViewMenu.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDEve/DD4hepMenu.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDEve/ElementList.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDEve/GenericEventHandler.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDEve/EveShapeContextMenu.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDEve/EvePgonSetProjectedContextMenu.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDEve/Utilities.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDEve/DDEveEventData.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDEve/HitActors.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDEve/ParticleActors.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/LCDD.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/LCDDData.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/Printout.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TH2.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TFile.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TSystem.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGTab.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGMsgBox.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGClient.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGFileDialog.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TEveScene.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TEveBrowser.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TEveManager.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TEveCaloData.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TEveCalo.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TEveViewer.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TEveCompound.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TEveBoxSet.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TEvePointSet.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TEveTrackPropagator.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoManager.h\char`\"{}}\par
-{\ttfamily \#include $<$stdexcept$>$}\par
-{\ttfamily \#include $<$climits$>$}\par
+\hypertarget{_display_8cpp}{}\section{/afs/cern.ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Eve/src/\+Display.cpp File Reference}
+\label{_display_8cpp}\index{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Eve/src/\+Display.\+cpp@{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Eve/src/\+Display.\+cpp}}
+{\ttfamily \#include \char`\"{}D\+D\+Eve/\+View.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Eve/\+Display.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Eve/\+View\+Menu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Eve/\+D\+D4hep\+Menu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Eve/\+Element\+List.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Eve/\+Generic\+Event\+Handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Eve/\+Eve\+Shape\+Context\+Menu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Eve/\+Eve\+Pgon\+Set\+Projected\+Context\+Menu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Eve/\+Utilities.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Eve/\+D\+D\+Eve\+Event\+Data.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Eve/\+Hit\+Actors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Eve/\+Particle\+Actors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+L\+C\+D\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+L\+C\+D\+D\+Data.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Printout.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+H2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+File.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+System.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+G\+Tab.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+G\+Msg\+Box.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+G\+Client.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+G\+File\+Dialog.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Eve\+Scene.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Eve\+Browser.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Eve\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Eve\+Calo\+Data.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Eve\+Calo.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Eve\+Viewer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Eve\+Compound.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Eve\+Box\+Set.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Eve\+Point\+Set.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Eve\+Track\+Propagator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$climits$>$}\newline
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{_display_8cpp_ad386424b000c357258a5198cc6378acf}{ClassImp} (\hyperlink{class_d_d4hep_1_1_display}{Display}) namespace DD4hep
+\hyperlink{_display_8cpp_ad386424b000c357258a5198cc6378acf}{Class\+Imp} (\hyperlink{class_d_d4hep_1_1_display}{Display}) namespace D\+D4hep
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{_display_8cpp_ad386424b000c357258a5198cc6378acf}{
-\index{Display.cpp@{Display.cpp}!ClassImp@{ClassImp}}
-\index{ClassImp@{ClassImp}!Display.cpp@{Display.cpp}}
-\subsubsection[{ClassImp}]{\setlength{\rightskip}{0pt plus 5cm}ClassImp ({\bf Display})}}
-\label{_display_8cpp_ad386424b000c357258a5198cc6378acf}
+\hypertarget{_display_8cpp_ad386424b000c357258a5198cc6378acf}{}\label{_display_8cpp_ad386424b000c357258a5198cc6378acf} 
+\index{Display.\+cpp@{Display.\+cpp}!Class\+Imp@{Class\+Imp}}
+\index{Class\+Imp@{Class\+Imp}!Display.\+cpp@{Display.\+cpp}}
+\subsubsection{\texorpdfstring{Class\+Imp()}{ClassImp()}}
+{\footnotesize\ttfamily Class\+Imp (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_display}{Display}}]{ }\end{DoxyParamCaption})}
 
 
-Definition at line 62 of file Display.cpp.
 
-References DD4hep::Display::ChooseGeometry(), DD4hep::EveDisplay(), DD4hep::Display::eventHandler(), DD4hep::Display::getEventHandlerName(), DD4hep::INFO, DD4hep::Display::LoadXML(), DD4hep::Display::MessageBox(), and DD4hep::GenericEventHandler::Open().
+Definition at line 62 of file Display.\+cpp.
+
+
+
+References D\+D4hep\+::\+Display\+::\+Choose\+Geometry(), D\+D4hep\+::\+Eve\+Display(), D\+D4hep\+::\+Display\+::event\+Handler(), D\+D4hep\+::\+Display\+::get\+Event\+Handler\+Name(), D\+D4hep\+::\+I\+N\+FO, D\+D4hep\+::\+Display\+::\+Load\+X\+M\+L(), D\+D4hep\+::\+Display\+::\+Message\+Box(), and D\+D4hep\+::\+Generic\+Event\+Handler\+::\+Open().
+

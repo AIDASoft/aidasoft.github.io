@@ -1,32 +1,35 @@
-\hypertarget{_layering_extension_plugin_8cpp}{
-\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDDetectors/src/LayeringExtensionPlugin.cpp File Reference}
-\label{_layering_extension_plugin_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDDetectors/src/LayeringExtensionPlugin.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDDetectors/src/LayeringExtensionPlugin.cpp}}
-}
-{\ttfamily \#include $<$map$>$}\par
-{\ttfamily \#include \char`\"{}DDRec/Extensions/LayeringExtensionImpl.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/SurfaceInstaller.h\char`\"{}}\par
-\subsection*{Defines}
+\hypertarget{_layering_extension_plugin_8cpp}{}\section{/afs/cern.ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Detectors/src/\+Layering\+Extension\+Plugin.cpp File Reference}
+\label{_layering_extension_plugin_8cpp}\index{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Detectors/src/\+Layering\+Extension\+Plugin.\+cpp@{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Detectors/src/\+Layering\+Extension\+Plugin.\+cpp}}
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Rec/\+Extensions/\+Layering\+Extension\+Impl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Surface\+Installer.\+h\char`\"{}}\newline
+\subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{_layering_extension_plugin_8cpp_a3bb2d97abddd75977a30dfcaf97a1c88}{SURFACEINSTALLER\_\-DATA}~LayeringContext
+\#define \hyperlink{_layering_extension_plugin_8cpp_a3bb2d97abddd75977a30dfcaf97a1c88}{S\+U\+R\+F\+A\+C\+E\+I\+N\+S\+T\+A\+L\+L\+E\+R\+\_\+\+D\+A\+TA}~Layering\+Context
 \item 
-\#define \hyperlink{_layering_extension_plugin_8cpp_a5dacc57b33b14509fb56b887c496b0d5}{DD4HEP\_\-USE\_\-SURFACEINSTALL\_\-HELPER}~LayeringExtensionPlugin
+\#define \hyperlink{_layering_extension_plugin_8cpp_a5dacc57b33b14509fb56b887c496b0d5}{D\+D4\+H\+E\+P\+\_\+\+U\+S\+E\+\_\+\+S\+U\+R\+F\+A\+C\+E\+I\+N\+S\+T\+A\+L\+L\+\_\+\+H\+E\+L\+P\+ER}~Layering\+Extension\+Plugin
 \end{DoxyCompactItemize}
 
 
-\subsection{Define Documentation}
-\hypertarget{_layering_extension_plugin_8cpp_a5dacc57b33b14509fb56b887c496b0d5}{
-\index{LayeringExtensionPlugin.cpp@{LayeringExtensionPlugin.cpp}!DD4HEP\_\-USE\_\-SURFACEINSTALL\_\-HELPER@{DD4HEP\_\-USE\_\-SURFACEINSTALL\_\-HELPER}}
-\index{DD4HEP\_\-USE\_\-SURFACEINSTALL\_\-HELPER@{DD4HEP\_\-USE\_\-SURFACEINSTALL\_\-HELPER}!LayeringExtensionPlugin.cpp@{LayeringExtensionPlugin.cpp}}
-\subsubsection[{DD4HEP\_\-USE\_\-SURFACEINSTALL\_\-HELPER}]{\setlength{\rightskip}{0pt plus 5cm}\#define DD4HEP\_\-USE\_\-SURFACEINSTALL\_\-HELPER~LayeringExtensionPlugin}}
-\label{_layering_extension_plugin_8cpp_a5dacc57b33b14509fb56b887c496b0d5}
+\subsection{Macro Definition Documentation}
+\hypertarget{_layering_extension_plugin_8cpp_a5dacc57b33b14509fb56b887c496b0d5}{}\label{_layering_extension_plugin_8cpp_a5dacc57b33b14509fb56b887c496b0d5} 
+\index{Layering\+Extension\+Plugin.\+cpp@{Layering\+Extension\+Plugin.\+cpp}!D\+D4\+H\+E\+P\+\_\+\+U\+S\+E\+\_\+\+S\+U\+R\+F\+A\+C\+E\+I\+N\+S\+T\+A\+L\+L\+\_\+\+H\+E\+L\+P\+ER@{D\+D4\+H\+E\+P\+\_\+\+U\+S\+E\+\_\+\+S\+U\+R\+F\+A\+C\+E\+I\+N\+S\+T\+A\+L\+L\+\_\+\+H\+E\+L\+P\+ER}}
+\index{D\+D4\+H\+E\+P\+\_\+\+U\+S\+E\+\_\+\+S\+U\+R\+F\+A\+C\+E\+I\+N\+S\+T\+A\+L\+L\+\_\+\+H\+E\+L\+P\+ER@{D\+D4\+H\+E\+P\+\_\+\+U\+S\+E\+\_\+\+S\+U\+R\+F\+A\+C\+E\+I\+N\+S\+T\+A\+L\+L\+\_\+\+H\+E\+L\+P\+ER}!Layering\+Extension\+Plugin.\+cpp@{Layering\+Extension\+Plugin.\+cpp}}
+\subsubsection{\texorpdfstring{D\+D4\+H\+E\+P\+\_\+\+U\+S\+E\+\_\+\+S\+U\+R\+F\+A\+C\+E\+I\+N\+S\+T\+A\+L\+L\+\_\+\+H\+E\+L\+P\+ER}{DD4HEP\_USE\_SURFACEINSTALL\_HELPER}}
+{\footnotesize\ttfamily \#define D\+D4\+H\+E\+P\+\_\+\+U\+S\+E\+\_\+\+S\+U\+R\+F\+A\+C\+E\+I\+N\+S\+T\+A\+L\+L\+\_\+\+H\+E\+L\+P\+ER~Layering\+Extension\+Plugin}
 
 
-Definition at line 44 of file LayeringExtensionPlugin.cpp.\hypertarget{_layering_extension_plugin_8cpp_a3bb2d97abddd75977a30dfcaf97a1c88}{
-\index{LayeringExtensionPlugin.cpp@{LayeringExtensionPlugin.cpp}!SURFACEINSTALLER\_\-DATA@{SURFACEINSTALLER\_\-DATA}}
-\index{SURFACEINSTALLER\_\-DATA@{SURFACEINSTALLER\_\-DATA}!LayeringExtensionPlugin.cpp@{LayeringExtensionPlugin.cpp}}
-\subsubsection[{SURFACEINSTALLER\_\-DATA}]{\setlength{\rightskip}{0pt plus 5cm}\#define SURFACEINSTALLER\_\-DATA~LayeringContext}}
-\label{_layering_extension_plugin_8cpp_a3bb2d97abddd75977a30dfcaf97a1c88}
+
+Definition at line 44 of file Layering\+Extension\+Plugin.\+cpp.
+
+\hypertarget{_layering_extension_plugin_8cpp_a3bb2d97abddd75977a30dfcaf97a1c88}{}\label{_layering_extension_plugin_8cpp_a3bb2d97abddd75977a30dfcaf97a1c88} 
+\index{Layering\+Extension\+Plugin.\+cpp@{Layering\+Extension\+Plugin.\+cpp}!S\+U\+R\+F\+A\+C\+E\+I\+N\+S\+T\+A\+L\+L\+E\+R\+\_\+\+D\+A\+TA@{S\+U\+R\+F\+A\+C\+E\+I\+N\+S\+T\+A\+L\+L\+E\+R\+\_\+\+D\+A\+TA}}
+\index{S\+U\+R\+F\+A\+C\+E\+I\+N\+S\+T\+A\+L\+L\+E\+R\+\_\+\+D\+A\+TA@{S\+U\+R\+F\+A\+C\+E\+I\+N\+S\+T\+A\+L\+L\+E\+R\+\_\+\+D\+A\+TA}!Layering\+Extension\+Plugin.\+cpp@{Layering\+Extension\+Plugin.\+cpp}}
+\subsubsection{\texorpdfstring{S\+U\+R\+F\+A\+C\+E\+I\+N\+S\+T\+A\+L\+L\+E\+R\+\_\+\+D\+A\+TA}{SURFACEINSTALLER\_DATA}}
+{\footnotesize\ttfamily \#define S\+U\+R\+F\+A\+C\+E\+I\+N\+S\+T\+A\+L\+L\+E\+R\+\_\+\+D\+A\+TA~Layering\+Context}
 
 
-Definition at line 43 of file LayeringExtensionPlugin.cpp.
+
+Definition at line 43 of file Layering\+Extension\+Plugin.\+cpp.
+

@@ -1,358 +1,536 @@
-\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools}{
-\section{DD4hep::Geometry::DetectorTools Namespace Reference}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools}\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-}
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools}{}\section{D\+D4hep\+:\+:Geometry\+:\+:Detector\+Tools Namespace Reference}
+\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools}\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
 
 
 Helper namespace used to answer detector element specific questons.  
+
+
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} $>$ \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57c8f37a975258fd84676a69e74c56ab}{ElementPath}
+typedef std\+::vector$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} $>$ \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57c8f37a975258fd84676a69e74c56ab}{Element\+Path}
 \item 
-typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} $>$ \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{PlacementPath}
+typedef std\+::vector$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} $>$ \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-std::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57debfb96b86738cbde272df6791a644}{elementPath} (const \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{PlacementPath} \&nodes, bool reverse)
-\begin{DoxyCompactList}\small\item\em Assemble the path of the \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} selection. \item\end{DoxyCompactList}\item 
-void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a33429898caa7f3ec3083fe50f04d01bc}{elementPath} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} parent, \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} elt, \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57c8f37a975258fd84676a69e74c56ab}{ElementPath} \&detectors)
-\begin{DoxyCompactList}\small\item\em Collect detector elements to any parent detector element. \item\end{DoxyCompactList}\item 
-void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a2788bc98d530b548cab41a422c67b48b}{elementPath} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} elt, \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{PlacementPath} \&nodes)
-\begin{DoxyCompactList}\small\item\em Collect detector elements placements to the top detector element (world) \mbox{[}fast, but may have holes!\mbox{]}. \item\end{DoxyCompactList}\item 
-void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a1855be34405c9ce43c236cfba6914850}{elementPath} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} parent, \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} element, \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{PlacementPath} \&nodes)
-\begin{DoxyCompactList}\small\item\em Collect detector elements placements to the parent detector element \mbox{[}no holes!\mbox{]}. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a70cde605976780186eb6b226731ed380}{findElement} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \&lcdd, const std::string \&path)
-\begin{DoxyCompactList}\small\item\em Find \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} as child of the top level volume by it's absolute path. \item\end{DoxyCompactList}\item 
-bool \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a1bb51943ab0395ee0b1e4441b6a6b92a}{findChild} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} parent, \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} child, \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{PlacementPath} \&path)
-\begin{DoxyCompactList}\small\item\em Find Child of \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} and assemble on the fly the path of PlacedVolumes. \item\end{DoxyCompactList}\item 
-static void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_adc948b938f4fbbdc46ad6f47f35059a0}{makePlacementPath} (\hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{PlacementPath} det\_\-nodes, \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{PlacementPath} \&all\_\-nodes)
+std\+::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57debfb96b86738cbde272df6791a644}{element\+Path} (const \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path} \&nodes, bool reverse)
+\begin{DoxyCompactList}\small\item\em Assemble the path of the \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} selection. \end{DoxyCompactList}\item 
+void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a33429898caa7f3ec3083fe50f04d01bc}{element\+Path} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} parent, \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} elt, \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57c8f37a975258fd84676a69e74c56ab}{Element\+Path} \&detectors)
+\begin{DoxyCompactList}\small\item\em Collect detector elements to any parent detector element. \end{DoxyCompactList}\item 
+void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a2788bc98d530b548cab41a422c67b48b}{element\+Path} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} elt, \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path} \&nodes)
+\begin{DoxyCompactList}\small\item\em Collect detector elements placements to the top detector element (world) \mbox{[}fast, but may have holes!\mbox{]}. \end{DoxyCompactList}\item 
+void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a1855be34405c9ce43c236cfba6914850}{element\+Path} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} parent, \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} element, \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path} \&nodes)
+\begin{DoxyCompactList}\small\item\em Collect detector elements placements to the parent detector element \mbox{[}no holes!\mbox{]}. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a70cde605976780186eb6b226731ed380}{find\+Element} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{L\+C\+DD} \&lcdd, const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Find \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} as child of the top level volume by it\textquotesingle{}s absolute path. \end{DoxyCompactList}\item 
+bool \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a1bb51943ab0395ee0b1e4441b6a6b92a}{find\+Child} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} parent, \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} child, \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path} \&path)
+\begin{DoxyCompactList}\small\item\em Find Child of \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} and assemble on the fly the path of Placed\+Volumes. \end{DoxyCompactList}\item 
+static void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_adc948b938f4fbbdc46ad6f47f35059a0}{make\+Placement\+Path} (\hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path} det\+\_\+nodes, \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path} \&all\+\_\+nodes)
 \item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_aa2a3cf3ac7fbdabef840f02eb0d60d91}{topElement} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} child)
-\begin{DoxyCompactList}\small\item\em Determine top level element (=world) for any element walking up the detector element tree. \item\end{DoxyCompactList}\item 
-std::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_aa236d3ca69ed2eb4d7777db7c080216b}{elementPath} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} element)
-\begin{DoxyCompactList}\small\item\em Assemble the path of a particular detector element. \item\end{DoxyCompactList}\item 
-std::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a67f5a1f1c0ed6ca5698a3323fc660379}{elementPath} (const \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57c8f37a975258fd84676a69e74c56ab}{ElementPath} \&nodes, bool reverse=true)
-\begin{DoxyCompactList}\small\item\em Assemble the path of the \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} selection. \item\end{DoxyCompactList}\item 
-void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a10418f7d98665f48f0dcb14a02919fea}{elementPath} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} elt, \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57c8f37a975258fd84676a69e74c56ab}{ElementPath} \&detectors)
-\begin{DoxyCompactList}\small\item\em Collect detector elements to the top detector element (world). \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a142393e7b88829aee063f35a8e7cb984}{findDaughterElement} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} parent, const std::string \&subpath)
-\begin{DoxyCompactList}\small\item\em Find \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} as child of a parent by it's relative or absolute path. \item\end{DoxyCompactList}\item 
-bool \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a9e02ef062540b4e9c0d284f50106f203}{isParentElement} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} parent, \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} child)
-\begin{DoxyCompactList}\small\item\em Find path between the child element and the parent element. \item\end{DoxyCompactList}\item 
-std::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a1ca0d88ab941b6dde4776c6b3b893fb6}{placementPath} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} element)
-\begin{DoxyCompactList}\small\item\em Assemble the placement path from a given detector element to the world volume. \item\end{DoxyCompactList}\item 
-std::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a792502fe2b1afaa030b9697151824452}{placementPath} (const \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{PlacementPath} \&nodes, bool reverse=true)
-\begin{DoxyCompactList}\small\item\em Assemble the path of the \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} selection. \item\end{DoxyCompactList}\item 
-std::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_ad25502414dd3799806729e2d72f9a34a}{placementPath} (const std::vector$<$ const TGeoNode $\ast$ $>$ \&nodes, bool reverse=true)
-\begin{DoxyCompactList}\small\item\em Assemble the path of the \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} selection. \item\end{DoxyCompactList}\item 
-void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a4643e9605448f9652b2c95e6ef5619c3}{placementPath} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} elt, \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{PlacementPath} \&nodes)
-\begin{DoxyCompactList}\small\item\em Collect detector elements placements to the top detector element (world) \mbox{[}no holes!\mbox{]}. \item\end{DoxyCompactList}\item 
-void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_ae4ebaffda73014e393cf33ea3bfe0870}{placementPath} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} parent, \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} child, \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{PlacementPath} \&nodes)
-\begin{DoxyCompactList}\small\item\em Collect detector elements placements to the parent detector element \mbox{[}no holes!\mbox{]}. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a82d2f181b2755d1fbd749c30b7dd21c1}{findNode} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} top\_\-place, const std::string \&place)
-\begin{DoxyCompactList}\small\item\em Find a given node in the hierarchy starting from the top node (absolute placement!). \item\end{DoxyCompactList}\item 
-void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a08fe6233324d561934a33569d4548435}{placementTrafo} (const \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{PlacementPath} \&nodes, bool inverse, TGeoHMatrix $\ast$\&mat)
-\begin{DoxyCompactList}\small\item\em Update cached matrix to transform to positions to an upper level Placement. \item\end{DoxyCompactList}\item 
-void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a33a0bf01d4cc18da281b63e2e865c97a}{placementTrafo} (const \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{PlacementPath} \&nodes, bool inverse, TGeoHMatrix \&mat)
-\begin{DoxyCompactList}\small\item\em Update cached matrix to transform to positions to an upper level Placement. \item\end{DoxyCompactList}\item 
-std::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_accc8aeaf883652cfb64beae7479b9f11}{toString} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume_extension_1_1_vol_i_ds}{PlacedVolume::VolIDs} \&ids)
-\begin{DoxyCompactList}\small\item\em Convert VolumeID to string. \item\end{DoxyCompactList}\item 
-std::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_ae5de1f83490fd1476f7663078ffc08c7}{toString} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor}{IDDescriptor} \&dsc, const \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume_extension_1_1_vol_i_ds}{PlacedVolume::VolIDs} \&ids, VolumeID code)
-\begin{DoxyCompactList}\small\item\em Convert VolumeID to string. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_aa2a3cf3ac7fbdabef840f02eb0d60d91}{top\+Element} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} child)
+\begin{DoxyCompactList}\small\item\em Determine top level element (=world) for any element walking up the detector element tree. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_aa236d3ca69ed2eb4d7777db7c080216b}{element\+Path} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} element)
+\begin{DoxyCompactList}\small\item\em Assemble the path of a particular detector element. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a67f5a1f1c0ed6ca5698a3323fc660379}{element\+Path} (const \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57c8f37a975258fd84676a69e74c56ab}{Element\+Path} \&nodes, bool reverse=true)
+\begin{DoxyCompactList}\small\item\em Assemble the path of the \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} selection. \end{DoxyCompactList}\item 
+void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a10418f7d98665f48f0dcb14a02919fea}{element\+Path} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} elt, \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57c8f37a975258fd84676a69e74c56ab}{Element\+Path} \&detectors)
+\begin{DoxyCompactList}\small\item\em Collect detector elements to the top detector element (world) \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a142393e7b88829aee063f35a8e7cb984}{find\+Daughter\+Element} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} parent, const std\+::string \&subpath)
+\begin{DoxyCompactList}\small\item\em Find \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} as child of a parent by it\textquotesingle{}s relative or absolute path. \end{DoxyCompactList}\item 
+bool \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a9e02ef062540b4e9c0d284f50106f203}{is\+Parent\+Element} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} parent, \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} child)
+\begin{DoxyCompactList}\small\item\em Find path between the child element and the parent element. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a1ca0d88ab941b6dde4776c6b3b893fb6}{placement\+Path} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} element)
+\begin{DoxyCompactList}\small\item\em Assemble the placement path from a given detector element to the world volume. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a792502fe2b1afaa030b9697151824452}{placement\+Path} (const \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path} \&nodes, bool reverse=true)
+\begin{DoxyCompactList}\small\item\em Assemble the path of the \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} selection. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a766410c432f7324f634be04ec0b16857}{placement\+Path} (const std\+::vector$<$ const T\+Geo\+Node $\ast$$>$ \&nodes, bool reverse=true)
+\begin{DoxyCompactList}\small\item\em Assemble the path of the \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} selection. \end{DoxyCompactList}\item 
+void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a4643e9605448f9652b2c95e6ef5619c3}{placement\+Path} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} elt, \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path} \&nodes)
+\begin{DoxyCompactList}\small\item\em Collect detector elements placements to the top detector element (world) \mbox{[}no holes!\mbox{]}. \end{DoxyCompactList}\item 
+void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_ae4ebaffda73014e393cf33ea3bfe0870}{placement\+Path} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} parent, \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} child, \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path} \&nodes)
+\begin{DoxyCompactList}\small\item\em Collect detector elements placements to the parent detector element \mbox{[}no holes!\mbox{]}. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a82d2f181b2755d1fbd749c30b7dd21c1}{find\+Node} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} top\+\_\+place, const std\+::string \&place)
+\begin{DoxyCompactList}\small\item\em Find a given node in the hierarchy starting from the top node (absolute placement!) \end{DoxyCompactList}\item 
+void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a08fe6233324d561934a33569d4548435}{placement\+Trafo} (const \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path} \&nodes, bool inverse, T\+Geo\+H\+Matrix $\ast$\&mat)
+\begin{DoxyCompactList}\small\item\em Update cached matrix to transform to positions to an upper level Placement. \end{DoxyCompactList}\item 
+void \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a33a0bf01d4cc18da281b63e2e865c97a}{placement\+Trafo} (const \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path} \&nodes, bool inverse, T\+Geo\+H\+Matrix \&mat)
+\begin{DoxyCompactList}\small\item\em Update cached matrix to transform to positions to an upper level Placement. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_accc8aeaf883652cfb64beae7479b9f11}{to\+String} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume_a4383991fbc94adc2997ef98c9d30d9a6}{Placed\+Volume\+::\+Vol\+I\+Ds} \&ids)
+\begin{DoxyCompactList}\small\item\em Convert Volume\+ID to string. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_ae5de1f83490fd1476f7663078ffc08c7}{to\+String} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor}{I\+D\+Descriptor} \&dsc, const \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume_a4383991fbc94adc2997ef98c9d30d9a6}{Placed\+Volume\+::\+Vol\+I\+Ds} \&ids, Volume\+ID code)
+\begin{DoxyCompactList}\small\item\em Convert Volume\+ID to string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Helper namespace used to answer detector element specific questons. \begin{DoxyAuthor}{Author}
-M.Frank 
+Helper namespace used to answer detector element specific questons. 
+
+\begin{DoxyAuthor}{Author}
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0
+1.\+0
 \end{DoxyVersion}
 \begin{DoxyAuthor}{Author}
-M.Frank 
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
 \subsection{Typedef Documentation}
-\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57c8f37a975258fd84676a69e74c56ab}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!ElementPath@{ElementPath}}
-\index{ElementPath@{ElementPath}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{ElementPath}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf DetElement}$>$ {\bf DD4hep::Geometry::DetectorTools::ElementPath}}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57c8f37a975258fd84676a69e74c56ab}
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57c8f37a975258fd84676a69e74c56ab}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57c8f37a975258fd84676a69e74c56ab} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!Element\+Path@{Element\+Path}}
+\index{Element\+Path@{Element\+Path}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{Element\+Path}{ElementPath}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}$>$ \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57c8f37a975258fd84676a69e74c56ab}{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::\+Element\+Path}}
 
 
-Definition at line 40 of file DetectorTools.h.\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!PlacementPath@{PlacementPath}}
-\index{PlacementPath@{PlacementPath}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{PlacementPath}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf PlacedVolume}$>$ {\bf DD4hep::Geometry::DetectorTools::PlacementPath}}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}
+
+Definition at line 40 of file Detector\+Tools.\+h.
+
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!Placement\+Path@{Placement\+Path}}
+\index{Placement\+Path@{Placement\+Path}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{Placement\+Path}{PlacementPath}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume}$>$ \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::\+Placement\+Path}}
 
 
-Definition at line 41 of file DetectorTools.h.
+
+Definition at line 41 of file Detector\+Tools.\+h.
+
+
 
 \subsection{Function Documentation}
-\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a10418f7d98665f48f0dcb14a02919fea}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!elementPath@{elementPath}}
-\index{elementPath@{elementPath}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{elementPath}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Geometry::DetectorTools::elementPath ({\bf DetElement} {\em elt}, \/  {\bf ElementPath} \& {\em detectors})}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a10418f7d98665f48f0dcb14a02919fea}
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57debfb96b86738cbde272df6791a644}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57debfb96b86738cbde272df6791a644} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!element\+Path@{element\+Path}}
+\index{element\+Path@{element\+Path}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{element\+Path()}{elementPath()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily std\+::string D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::element\+Path (\begin{DoxyParamCaption}\item[{const \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path} \&}]{nodes,  }\item[{bool}]{reverse }\end{DoxyParamCaption})}
 
 
-Collect detector elements to the top detector element (world). 
 
-Definition at line 139 of file DetectorTools.cpp.
-
-References DD4hep::Handle$<$ T $>$::isValid().\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a67f5a1f1c0ed6ca5698a3323fc660379}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!elementPath@{elementPath}}
-\index{elementPath@{elementPath}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{elementPath}]{\setlength{\rightskip}{0pt plus 5cm}std::string DD4hep::Geometry::DetectorTools::elementPath (const {\bf ElementPath} \& {\em nodes}, \/  bool {\em reverse} = {\ttfamily true})}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a67f5a1f1c0ed6ca5698a3323fc660379}
+Assemble the path of the \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} selection. 
 
 
-Assemble the path of the \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} selection. 
 
-Definition at line 202 of file DetectorTools.cpp.
-
-References s.\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_aa236d3ca69ed2eb4d7777db7c080216b}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!elementPath@{elementPath}}
-\index{elementPath@{elementPath}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{elementPath}]{\setlength{\rightskip}{0pt plus 5cm}std::string DD4hep::Geometry::DetectorTools::elementPath ({\bf DetElement} {\em element})}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_aa236d3ca69ed2eb4d7777db7c080216b}
+Definition at line 188 of file Detector\+Tools.\+cpp.
 
 
-Assemble the path of a particular detector element. 
 
-Definition at line 216 of file DetectorTools.cpp.
-
-References elementPath().\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a1855be34405c9ce43c236cfba6914850}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!elementPath@{elementPath}}
-\index{elementPath@{elementPath}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{elementPath}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Geometry::DetectorTools::elementPath ({\bf DetElement} {\em parent}, \/  {\bf DetElement} {\em element}, \/  {\bf PlacementPath} \& {\em nodes})}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a1855be34405c9ce43c236cfba6914850}
+References s.
 
 
-Collect detector elements placements to the parent detector element \mbox{[}no holes!\mbox{]}. Collect detector elements placements to the top detector element (world) \mbox{[}fast, but may have holes!\mbox{]}. 
 
-Definition at line 166 of file DetectorTools.cpp.
+Referenced by element\+Path(), D\+D4hep\+::\+Surface\+Installer\+::install(), and placement\+Path().
 
-References DD4hep::Handle$<$ T $>$::isValid(), DD4hep::Handle$<$ T $>$::name(), and DD4hep::Handle$<$ T $>$::ptr().\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a2788bc98d530b548cab41a422c67b48b}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!elementPath@{elementPath}}
-\index{elementPath@{elementPath}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{elementPath}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Geometry::DetectorTools::elementPath ({\bf DetElement} {\em elt}, \/  {\bf PlacementPath} \& {\em nodes})}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a2788bc98d530b548cab41a422c67b48b}
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a33429898caa7f3ec3083fe50f04d01bc}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a33429898caa7f3ec3083fe50f04d01bc} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!element\+Path@{element\+Path}}
+\index{element\+Path@{element\+Path}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{element\+Path()}{elementPath()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily void D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::element\+Path (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}}]{parent,  }\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}}]{elt,  }\item[{\hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57c8f37a975258fd84676a69e74c56ab}{Element\+Path} \&}]{detectors }\end{DoxyParamCaption})}
 
-
-Collect detector elements placements to the top detector element (world) \mbox{[}fast, but may have holes!\mbox{]}. 
-
-Definition at line 178 of file DetectorTools.cpp.
-
-References DD4hep::Handle$<$ T $>$::isValid().\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a33429898caa7f3ec3083fe50f04d01bc}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!elementPath@{elementPath}}
-\index{elementPath@{elementPath}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{elementPath}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Geometry::DetectorTools::elementPath ({\bf DetElement} {\em parent}, \/  {\bf DetElement} {\em elt}, \/  {\bf ElementPath} \& {\em detectors})}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a33429898caa7f3ec3083fe50f04d01bc}
 
 
 Collect detector elements to any parent detector element. 
 
-Definition at line 145 of file DetectorTools.cpp.
-
-References DD4hep::Handle$<$ T $>$::isValid(), DD4hep::Handle$<$ T $>$::name(), and DD4hep::Handle$<$ T $>$::ptr().\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57debfb96b86738cbde272df6791a644}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!elementPath@{elementPath}}
-\index{elementPath@{elementPath}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{elementPath}]{\setlength{\rightskip}{0pt plus 5cm}std::string DD4hep::Geometry::DetectorTools::elementPath (const {\bf PlacementPath} \& {\em nodes}, \/  bool {\em reverse})}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57debfb96b86738cbde272df6791a644}
 
 
-Assemble the path of the \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} selection. 
-
-Definition at line 188 of file DetectorTools.cpp.
-
-References s.
-
-Referenced by elementPath(), DD4hep::SurfaceInstaller::install(), and placementPath().\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a1bb51943ab0395ee0b1e4441b6a6b92a}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!findChild@{findChild}}
-\index{findChild@{findChild}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{findChild}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Geometry::DetectorTools::findChild ({\bf PlacedVolume} {\em parent}, \/  {\bf PlacedVolume} {\em child}, \/  {\bf PlacementPath} \& {\em path})}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a1bb51943ab0395ee0b1e4441b6a6b92a}
+Definition at line 145 of file Detector\+Tools.\+cpp.
 
 
-Find Child of \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} and assemble on the fly the path of PlacedVolumes. 
 
-Definition at line 77 of file DetectorTools.cpp.
+References D\+D4hep\+::\+Handle$<$ T $>$\+::is\+Valid(), D\+D4hep\+::\+Handle$<$ T $>$\+::name(), and D\+D4hep\+::\+Handle$<$ T $>$\+::ptr().
 
-References DD4hep::Handle$<$ T $>$::isValid(), and DD4hep::Handle$<$ T $>$::ptr().\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a142393e7b88829aee063f35a8e7cb984}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!findDaughterElement@{findDaughterElement}}
-\index{findDaughterElement@{findDaughterElement}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{findDaughterElement}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} DD4hep::Geometry::DetectorTools::findDaughterElement ({\bf DetElement} {\em parent}, \/  const std::string \& {\em subpath})}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a142393e7b88829aee063f35a8e7cb984}
-
-
-Find \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} as child of a parent by it's relative or absolute path. 
-
-Definition at line 228 of file DetectorTools.cpp.
-
-References DD4hep::Geometry::DetElement::child(), DD4hep::Handle$<$ T $>$::isValid(), DD4hep::Geometry::DetElement::path(), and topElement().
-
-Referenced by findElement().\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a70cde605976780186eb6b226731ed380}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!findElement@{findElement}}
-\index{findElement@{findElement}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{findElement}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} DD4hep::Geometry::DetectorTools::findElement ({\bf LCDD} \& {\em lcdd}, \/  const std::string \& {\em path})}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a70cde605976780186eb6b226731ed380}
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a2788bc98d530b548cab41a422c67b48b}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a2788bc98d530b548cab41a422c67b48b} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!element\+Path@{element\+Path}}
+\index{element\+Path@{element\+Path}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{element\+Path()}{elementPath()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily void D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::element\+Path (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}}]{elt,  }\item[{\hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path} \&}]{nodes }\end{DoxyParamCaption})}
 
 
-Find \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} as child of the top level volume by it's absolute path. 
 
-Definition at line 223 of file DetectorTools.cpp.
-
-References findDaughterElement(), and DD4hep::Geometry::LCDD::world().\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a82d2f181b2755d1fbd749c30b7dd21c1}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!findNode@{findNode}}
-\index{findNode@{findNode}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{findNode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PlacedVolume} DD4hep::Geometry::DetectorTools::findNode ({\bf PlacedVolume} {\em top\_\-place}, \/  const std::string \& {\em place})}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a82d2f181b2755d1fbd749c30b7dd21c1}
+Collect detector elements placements to the top detector element (world) \mbox{[}fast, but may have holes!\mbox{]}. 
 
 
-Find a given node in the hierarchy starting from the top node (absolute placement!). 
 
-Definition at line 338 of file DetectorTools.cpp.
-
-References DD4hep::Handle$<$ T $>$::ptr().
-
-Referenced by DD4hep::Geometry::DetElementObject::revalidate().\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a9e02ef062540b4e9c0d284f50106f203}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!isParentElement@{isParentElement}}
-\index{isParentElement@{isParentElement}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{isParentElement}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Geometry::DetectorTools::isParentElement ({\bf DetElement} {\em parent}, \/  {\bf DetElement} {\em child})}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a9e02ef062540b4e9c0d284f50106f203}
+Definition at line 178 of file Detector\+Tools.\+cpp.
 
 
-Find path between the child element and the parent element. 
 
-Definition at line 66 of file DetectorTools.cpp.
+References D\+D4hep\+::\+Handle$<$ T $>$\+::is\+Valid().
 
-References DD4hep::Handle$<$ T $>$::isValid(), and DD4hep::Handle$<$ T $>$::ptr().
-
-Referenced by DD4hep::Geometry::DetElementObject::referenceTransformation().\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_adc948b938f4fbbdc46ad6f47f35059a0}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!makePlacementPath@{makePlacementPath}}
-\index{makePlacementPath@{makePlacementPath}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{makePlacementPath}]{\setlength{\rightskip}{0pt plus 5cm}static void DD4hep::Geometry::DetectorTools::makePlacementPath ({\bf PlacementPath} {\em det\_\-nodes}, \/  {\bf PlacementPath} \& {\em all\_\-nodes})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_adc948b938f4fbbdc46ad6f47f35059a0}
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_aa236d3ca69ed2eb4d7777db7c080216b}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_aa236d3ca69ed2eb4d7777db7c080216b} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!element\+Path@{element\+Path}}
+\index{element\+Path@{element\+Path}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{element\+Path()}{elementPath()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily std\+::string D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::element\+Path (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}}]{element }\end{DoxyParamCaption})}
 
 
-Definition at line 258 of file DetectorTools.cpp.
 
-References findChildByName().
+Assemble the path of a particular detector element. 
 
-Referenced by placementPath().\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_ae4ebaffda73014e393cf33ea3bfe0870}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!placementPath@{placementPath}}
-\index{placementPath@{placementPath}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{placementPath}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Geometry::DetectorTools::placementPath ({\bf DetElement} {\em parent}, \/  {\bf DetElement} {\em child}, \/  {\bf PlacementPath} \& {\em nodes})}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_ae4ebaffda73014e393cf33ea3bfe0870}
+
+
+Definition at line 216 of file Detector\+Tools.\+cpp.
+
+
+
+References element\+Path().
+
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a1855be34405c9ce43c236cfba6914850}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a1855be34405c9ce43c236cfba6914850} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!element\+Path@{element\+Path}}
+\index{element\+Path@{element\+Path}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{element\+Path()}{elementPath()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily void D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::element\+Path (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}}]{parent,  }\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}}]{element,  }\item[{\hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path} \&}]{nodes }\end{DoxyParamCaption})}
+
 
 
 Collect detector elements placements to the parent detector element \mbox{[}no holes!\mbox{]}. 
 
-Definition at line 278 of file DetectorTools.cpp.
+Collect detector elements placements to the top detector element (world) \mbox{[}fast, but may have holes!\mbox{]}. 
 
-References elementPath(), and makePlacementPath().\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a4643e9605448f9652b2c95e6ef5619c3}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!placementPath@{placementPath}}
-\index{placementPath@{placementPath}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{placementPath}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Geometry::DetectorTools::placementPath ({\bf DetElement} {\em elt}, \/  {\bf PlacementPath} \& {\em nodes})}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a4643e9605448f9652b2c95e6ef5619c3}
+Definition at line 166 of file Detector\+Tools.\+cpp.
+
+
+
+References D\+D4hep\+::\+Handle$<$ T $>$\+::is\+Valid(), D\+D4hep\+::\+Handle$<$ T $>$\+::name(), and D\+D4hep\+::\+Handle$<$ T $>$\+::ptr().
+
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a67f5a1f1c0ed6ca5698a3323fc660379}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a67f5a1f1c0ed6ca5698a3323fc660379} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!element\+Path@{element\+Path}}
+\index{element\+Path@{element\+Path}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{element\+Path()}{elementPath()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily std\+::string D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::element\+Path (\begin{DoxyParamCaption}\item[{const \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57c8f37a975258fd84676a69e74c56ab}{Element\+Path} \&}]{nodes,  }\item[{bool}]{reverse = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Assemble the path of the \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} selection. 
+
+
+
+Definition at line 202 of file Detector\+Tools.\+cpp.
+
+
+
+References s.
+
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a10418f7d98665f48f0dcb14a02919fea}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a10418f7d98665f48f0dcb14a02919fea} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!element\+Path@{element\+Path}}
+\index{element\+Path@{element\+Path}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{element\+Path()}{elementPath()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily void D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::element\+Path (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}}]{elt,  }\item[{\hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a57c8f37a975258fd84676a69e74c56ab}{Element\+Path} \&}]{detectors }\end{DoxyParamCaption})}
+
+
+
+Collect detector elements to the top detector element (world) 
+
+
+
+Definition at line 139 of file Detector\+Tools.\+cpp.
+
+
+
+References D\+D4hep\+::\+Handle$<$ T $>$\+::is\+Valid().
+
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a1bb51943ab0395ee0b1e4441b6a6b92a}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a1bb51943ab0395ee0b1e4441b6a6b92a} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!find\+Child@{find\+Child}}
+\index{find\+Child@{find\+Child}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{find\+Child()}{findChild()}}
+{\footnotesize\ttfamily bool D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::find\+Child (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume}}]{parent,  }\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume}}]{child,  }\item[{\hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path} \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Find Child of \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} and assemble on the fly the path of Placed\+Volumes. 
+
+
+
+Definition at line 77 of file Detector\+Tools.\+cpp.
+
+
+
+References D\+D4hep\+::\+Handle$<$ T $>$\+::is\+Valid(), and D\+D4hep\+::\+Handle$<$ T $>$\+::ptr().
+
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a142393e7b88829aee063f35a8e7cb984}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a142393e7b88829aee063f35a8e7cb984} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!find\+Daughter\+Element@{find\+Daughter\+Element}}
+\index{find\+Daughter\+Element@{find\+Daughter\+Element}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{find\+Daughter\+Element()}{findDaughterElement()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::find\+Daughter\+Element (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}}]{parent,  }\item[{const std\+::string \&}]{subpath }\end{DoxyParamCaption})}
+
+
+
+Find \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} as child of a parent by it\textquotesingle{}s relative or absolute path. 
+
+
+
+Definition at line 228 of file Detector\+Tools.\+cpp.
+
+
+
+References D\+D4hep\+::\+Geometry\+::\+Det\+Element\+::child(), D\+D4hep\+::\+Handle$<$ T $>$\+::is\+Valid(), D\+D4hep\+::\+Geometry\+::\+Det\+Element\+::path(), and top\+Element().
+
+
+
+Referenced by D\+D4hep\+::\+Conditions\+::\+Test\+::\+Test\+Env\+::daughter(), and find\+Element().
+
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a70cde605976780186eb6b226731ed380}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a70cde605976780186eb6b226731ed380} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!find\+Element@{find\+Element}}
+\index{find\+Element@{find\+Element}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{find\+Element()}{findElement()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::find\+Element (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{L\+C\+DD} \&}]{lcdd,  }\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Find \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} as child of the top level volume by it\textquotesingle{}s absolute path. 
+
+
+
+Definition at line 223 of file Detector\+Tools.\+cpp.
+
+
+
+References find\+Daughter\+Element(), and D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+::world().
+
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a82d2f181b2755d1fbd749c30b7dd21c1}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a82d2f181b2755d1fbd749c30b7dd21c1} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!find\+Node@{find\+Node}}
+\index{find\+Node@{find\+Node}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{find\+Node()}{findNode()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::find\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume}}]{top\+\_\+place,  }\item[{const std\+::string \&}]{place }\end{DoxyParamCaption})}
+
+
+
+Find a given node in the hierarchy starting from the top node (absolute placement!) 
+
+
+
+Definition at line 338 of file Detector\+Tools.\+cpp.
+
+
+
+References D\+D4hep\+::\+Handle$<$ T $>$\+::ptr().
+
+
+
+Referenced by D\+D4hep\+::\+Geometry\+::\+Det\+Element\+Object\+::revalidate().
+
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a9e02ef062540b4e9c0d284f50106f203}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a9e02ef062540b4e9c0d284f50106f203} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!is\+Parent\+Element@{is\+Parent\+Element}}
+\index{is\+Parent\+Element@{is\+Parent\+Element}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{is\+Parent\+Element()}{isParentElement()}}
+{\footnotesize\ttfamily bool D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::is\+Parent\+Element (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}}]{parent,  }\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}}]{child }\end{DoxyParamCaption})}
+
+
+
+Find path between the child element and the parent element. 
+
+
+
+Definition at line 66 of file Detector\+Tools.\+cpp.
+
+
+
+References D\+D4hep\+::\+Handle$<$ T $>$\+::is\+Valid(), and D\+D4hep\+::\+Handle$<$ T $>$\+::ptr().
+
+
+
+Referenced by D\+D4hep\+::\+Geometry\+::\+Det\+Element\+Object\+::reference\+Transformation().
+
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_adc948b938f4fbbdc46ad6f47f35059a0}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_adc948b938f4fbbdc46ad6f47f35059a0} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!make\+Placement\+Path@{make\+Placement\+Path}}
+\index{make\+Placement\+Path@{make\+Placement\+Path}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{make\+Placement\+Path()}{makePlacementPath()}}
+{\footnotesize\ttfamily static void D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::make\+Placement\+Path (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path}}]{det\+\_\+nodes,  }\item[{\hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path} \&}]{all\+\_\+nodes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 258 of file Detector\+Tools.\+cpp.
+
+
+
+References find\+Child\+By\+Name().
+
+
+
+Referenced by placement\+Path().
+
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a1ca0d88ab941b6dde4776c6b3b893fb6}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a1ca0d88ab941b6dde4776c6b3b893fb6} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!placement\+Path@{placement\+Path}}
+\index{placement\+Path@{placement\+Path}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{placement\+Path()}{placementPath()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily std\+::string D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::placement\+Path (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}}]{element }\end{DoxyParamCaption})}
+
+
+
+Assemble the placement path from a given detector element to the world volume. 
+
+Assemble the path of the \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} selection. 
+
+Definition at line 285 of file Detector\+Tools.\+cpp.
+
+
+
+Referenced by D\+D4hep\+::\+Geometry\+::\+Det\+Element\+::call\+At\+Update(), D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment\+::collect\+Nodes(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::compute\+Ideal(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::compute\+Survey(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Assembly\+Volume\+::imprint(), D\+D4hep\+::\+Surface\+Installer\+::install(), D\+D4hep\+::\+Geometry\+::\+Det\+Element\+Object\+::parent\+Transformation(), D\+D4hep\+::\+Geometry\+::\+Det\+Element\+::placement\+Path(), D\+D4hep\+::\+Geometry\+::\+Det\+Element\+Object\+::reference\+Transformation(), D\+D4hep\+::\+Geometry\+::\+Det\+Element\+Object\+::revalidate(), and D\+D4hep\+::\+Geometry\+::\+Det\+Element\+Object\+::world\+Transformation().
+
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a792502fe2b1afaa030b9697151824452}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a792502fe2b1afaa030b9697151824452} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!placement\+Path@{placement\+Path}}
+\index{placement\+Path@{placement\+Path}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{placement\+Path()}{placementPath()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily std\+::string D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::placement\+Path (\begin{DoxyParamCaption}\item[{const \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path} \&}]{nodes,  }\item[{bool}]{reverse = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Assemble the path of the \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} selection. 
+
+
+
+Definition at line 292 of file Detector\+Tools.\+cpp.
+
+
+
+References s.
+
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a766410c432f7324f634be04ec0b16857}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a766410c432f7324f634be04ec0b16857} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!placement\+Path@{placement\+Path}}
+\index{placement\+Path@{placement\+Path}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{placement\+Path()}{placementPath()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily std\+::string D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::placement\+Path (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ const T\+Geo\+Node $\ast$$>$ \&}]{nodes,  }\item[{bool}]{reverse = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Assemble the path of the \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} selection. 
+
+
+
+Definition at line 306 of file Detector\+Tools.\+cpp.
+
+
+
+References s.
+
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a4643e9605448f9652b2c95e6ef5619c3}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a4643e9605448f9652b2c95e6ef5619c3} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!placement\+Path@{placement\+Path}}
+\index{placement\+Path@{placement\+Path}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{placement\+Path()}{placementPath()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily void D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::placement\+Path (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}}]{elt,  }\item[{\hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path} \&}]{nodes }\end{DoxyParamCaption})}
+
 
 
 Collect detector elements placements to the top detector element (world) \mbox{[}no holes!\mbox{]}. 
 
-Definition at line 271 of file DetectorTools.cpp.
-
-References elementPath(), and makePlacementPath().\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_ad25502414dd3799806729e2d72f9a34a}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!placementPath@{placementPath}}
-\index{placementPath@{placementPath}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{placementPath}]{\setlength{\rightskip}{0pt plus 5cm}std::string DD4hep::Geometry::DetectorTools::placementPath (const std::vector$<$ const TGeoNode $\ast$ $>$ \& {\em nodes}, \/  bool {\em reverse} = {\ttfamily true})}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_ad25502414dd3799806729e2d72f9a34a}
 
 
-Assemble the path of the \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} selection. 
-
-Definition at line 306 of file DetectorTools.cpp.
-
-References s.\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a792502fe2b1afaa030b9697151824452}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!placementPath@{placementPath}}
-\index{placementPath@{placementPath}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{placementPath}]{\setlength{\rightskip}{0pt plus 5cm}std::string DD4hep::Geometry::DetectorTools::placementPath (const {\bf PlacementPath} \& {\em nodes}, \/  bool {\em reverse} = {\ttfamily true})}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a792502fe2b1afaa030b9697151824452}
+Definition at line 271 of file Detector\+Tools.\+cpp.
 
 
-Assemble the path of the \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} selection. 
 
-Definition at line 292 of file DetectorTools.cpp.
+References element\+Path(), and make\+Placement\+Path().
 
-References s.\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a1ca0d88ab941b6dde4776c6b3b893fb6}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!placementPath@{placementPath}}
-\index{placementPath@{placementPath}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{placementPath}]{\setlength{\rightskip}{0pt plus 5cm}std::string DD4hep::Geometry::DetectorTools::placementPath ({\bf DetElement} {\em element})}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a1ca0d88ab941b6dde4776c6b3b893fb6}
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_ae4ebaffda73014e393cf33ea3bfe0870}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_ae4ebaffda73014e393cf33ea3bfe0870} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!placement\+Path@{placement\+Path}}
+\index{placement\+Path@{placement\+Path}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{placement\+Path()}{placementPath()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily void D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::placement\+Path (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}}]{parent,  }\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}}]{child,  }\item[{\hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path} \&}]{nodes }\end{DoxyParamCaption})}
 
 
-Assemble the placement path from a given detector element to the world volume. Assemble the path of the \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} selection. 
 
-Definition at line 285 of file DetectorTools.cpp.
+Collect detector elements placements to the parent detector element \mbox{[}no holes!\mbox{]}. 
 
-Referenced by DD4hep::Alignments::AlignmentTools::computeIdeal(), DD4hep::Alignments::AlignmentTools::computeSurvey(), DD4hep::Simulation::Geant4AssemblyVolume::imprint(), and DD4hep::SurfaceInstaller::install().\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a33a0bf01d4cc18da281b63e2e865c97a}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!placementTrafo@{placementTrafo}}
-\index{placementTrafo@{placementTrafo}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{placementTrafo}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Geometry::DetectorTools::placementTrafo (const {\bf PlacementPath} \& {\em nodes}, \/  bool {\em inverse}, \/  TGeoHMatrix \& {\em mat})}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a33a0bf01d4cc18da281b63e2e865c97a}
+
+
+Definition at line 278 of file Detector\+Tools.\+cpp.
+
+
+
+References element\+Path(), and make\+Placement\+Path().
+
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a08fe6233324d561934a33569d4548435}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a08fe6233324d561934a33569d4548435} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!placement\+Trafo@{placement\+Trafo}}
+\index{placement\+Trafo@{placement\+Trafo}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{placement\+Trafo()}{placementTrafo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::placement\+Trafo (\begin{DoxyParamCaption}\item[{const \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path} \&}]{nodes,  }\item[{bool}]{inverse,  }\item[{T\+Geo\+H\+Matrix $\ast$\&}]{mat }\end{DoxyParamCaption})}
+
 
 
 Update cached matrix to transform to positions to an upper level Placement. 
 
-Definition at line 326 of file DetectorTools.cpp.\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a08fe6233324d561934a33569d4548435}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!placementTrafo@{placementTrafo}}
-\index{placementTrafo@{placementTrafo}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{placementTrafo}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Geometry::DetectorTools::placementTrafo (const {\bf PlacementPath} \& {\em nodes}, \/  bool {\em inverse}, \/  TGeoHMatrix $\ast$\& {\em mat})}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a08fe6233324d561934a33569d4548435}
+
+
+Definition at line 320 of file Detector\+Tools.\+cpp.
+
+
+
+Referenced by D\+D4hep\+::\+Geometry\+::\+Det\+Element\+Object\+::parent\+Transformation(), D\+D4hep\+::\+Geometry\+::\+Det\+Element\+Object\+::reference\+Transformation(), D\+D4hep\+::\+Geometry\+::\+Det\+Element\+Object\+::revalidate(), and D\+D4hep\+::\+Geometry\+::\+Det\+Element\+Object\+::world\+Transformation().
+
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a33a0bf01d4cc18da281b63e2e865c97a}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a33a0bf01d4cc18da281b63e2e865c97a} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!placement\+Trafo@{placement\+Trafo}}
+\index{placement\+Trafo@{placement\+Trafo}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{placement\+Trafo()}{placementTrafo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::placement\+Trafo (\begin{DoxyParamCaption}\item[{const \hyperlink{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_a6cc33285199e04dd336a33e6e62925e6}{Placement\+Path} \&}]{nodes,  }\item[{bool}]{inverse,  }\item[{T\+Geo\+H\+Matrix \&}]{mat }\end{DoxyParamCaption})}
+
 
 
 Update cached matrix to transform to positions to an upper level Placement. 
 
-Definition at line 320 of file DetectorTools.cpp.
 
-Referenced by DD4hep::Geometry::DetElementObject::parentTransformation(), DD4hep::Geometry::DetElementObject::referenceTransformation(), DD4hep::Geometry::DetElementObject::revalidate(), and DD4hep::Geometry::DetElementObject::worldTransformation().\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_aa2a3cf3ac7fbdabef840f02eb0d60d91}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!topElement@{topElement}}
-\index{topElement@{topElement}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{topElement}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} DD4hep::Geometry::DetectorTools::topElement ({\bf DetElement} {\em child})}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_aa2a3cf3ac7fbdabef840f02eb0d60d91}
+
+Definition at line 326 of file Detector\+Tools.\+cpp.
+
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_aa2a3cf3ac7fbdabef840f02eb0d60d91}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_aa2a3cf3ac7fbdabef840f02eb0d60d91} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!top\+Element@{top\+Element}}
+\index{top\+Element@{top\+Element}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{top\+Element()}{topElement()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::top\+Element (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}}]{child }\end{DoxyParamCaption})}
+
 
 
 Determine top level element (=world) for any element walking up the detector element tree. 
 
-Definition at line 249 of file DetectorTools.cpp.
-
-References DD4hep::Handle$<$ T $>$::isValid(), and DD4hep::Geometry::DetElement::parent().
-
-Referenced by findDaughterElement().\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_ae5de1f83490fd1476f7663078ffc08c7}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!toString@{toString}}
-\index{toString@{toString}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{toString}]{\setlength{\rightskip}{0pt plus 5cm}std::string DD4hep::Geometry::DetectorTools::toString (const {\bf IDDescriptor} \& {\em dsc}, \/  const {\bf PlacedVolume::VolIDs} \& {\em ids}, \/  VolumeID {\em code})}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_ae5de1f83490fd1476f7663078ffc08c7}
 
 
-Convert VolumeID to string. 
-
-Definition at line 396 of file DetectorTools.cpp.
-
-References DD4hep::Geometry::IDDescriptor::field().\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_accc8aeaf883652cfb64beae7479b9f11}{
-\index{DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}!toString@{toString}}
-\index{toString@{toString}!DD4hep::Geometry::DetectorTools@{DD4hep::Geometry::DetectorTools}}
-\subsubsection[{toString}]{\setlength{\rightskip}{0pt plus 5cm}std::string DD4hep::Geometry::DetectorTools::toString (const {\bf PlacedVolume::VolIDs} \& {\em ids})}}
-\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_accc8aeaf883652cfb64beae7479b9f11}
+Definition at line 249 of file Detector\+Tools.\+cpp.
 
 
-Convert VolumeID to string. 
 
-Definition at line 388 of file DetectorTools.cpp.
+References D\+D4hep\+::\+Handle$<$ T $>$\+::is\+Valid(), and D\+D4hep\+::\+Geometry\+::\+Det\+Element\+::parent().
+
+
+
+Referenced by find\+Daughter\+Element().
+
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_accc8aeaf883652cfb64beae7479b9f11}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_accc8aeaf883652cfb64beae7479b9f11} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::to\+String (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume_a4383991fbc94adc2997ef98c9d30d9a6}{Placed\+Volume\+::\+Vol\+I\+Ds} \&}]{ids }\end{DoxyParamCaption})}
+
+
+
+Convert Volume\+ID to string. 
+
+
+
+Definition at line 388 of file Detector\+Tools.\+cpp.
+
+
+
+Referenced by D\+D4hep\+::\+Geometry\+::\+Constant\+::\+Constant(), D\+D4hep\+::\+Geometry\+::\+Limit\+::\+Limit(), D\+D4hep\+::\+Geometry\+::\+Material\+::\+Material(), D\+D4hep\+::\+Geometry\+::\+Placed\+Volume\+::operator=(), D\+D4hep\+::\+Geometry\+::\+Vis\+Attr\+::operator=(), and D\+D4hep\+::\+Primitive$<$ T $>$\+::type\+\_\+name().
+
+\hypertarget{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_ae5de1f83490fd1476f7663078ffc08c7}{}\label{namespace_d_d4hep_1_1_geometry_1_1_detector_tools_ae5de1f83490fd1476f7663078ffc08c7} 
+\index{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!D\+D4hep\+::\+Geometry\+::\+Detector\+Tools@{D\+D4hep\+::\+Geometry\+::\+Detector\+Tools}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::to\+String (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor}{I\+D\+Descriptor} \&}]{dsc,  }\item[{const \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume_a4383991fbc94adc2997ef98c9d30d9a6}{Placed\+Volume\+::\+Vol\+I\+Ds} \&}]{ids,  }\item[{Volume\+ID}]{code }\end{DoxyParamCaption})}
+
+
+
+Convert Volume\+ID to string. 
+
+
+
+Definition at line 396 of file Detector\+Tools.\+cpp.
+
+
+
+References D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor\+::field(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Bit\+Field\+Value\+::offset(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Bit\+Field\+Value\+::value(), and D\+D4hep\+::\+D\+D\+Segmentation\+::\+Bit\+Field\+Value\+::width().
+

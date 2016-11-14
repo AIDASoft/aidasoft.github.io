@@ -1,66 +1,78 @@
-\hypertarget{_conditions_text_repository_8cpp}{
-\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCond/src/ConditionsTextRepository.cpp File Reference}
-\label{_conditions_text_repository_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCond/src/ConditionsTextRepository.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCond/src/ConditionsTextRepository.cpp}}
-}
-{\ttfamily \#include \char`\"{}DDCond/ConditionsTextRepository.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDCond/ConditionsIOVPool.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDCond/ConditionsTags.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/Printout.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}XML/DocumentHandler.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}XML/XMLTags.h\char`\"{}}\par
-{\ttfamily \#include $<$fstream$>$}\par
-{\ttfamily \#include $<$climits$>$}\par
-{\ttfamily \#include $<$cerrno$>$}\par
-{\ttfamily \#include $<$map$>$}\par
+\hypertarget{_conditions_text_repository_8cpp}{}\section{/afs/cern.ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Cond/src/\+Conditions\+Text\+Repository.cpp File Reference}
+\label{_conditions_text_repository_8cpp}\index{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Cond/src/\+Conditions\+Text\+Repository.\+cpp@{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Cond/src/\+Conditions\+Text\+Repository.\+cpp}}
+{\ttfamily \#include \char`\"{}D\+D\+Cond/\+Conditions\+Text\+Repository.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Cond/\+Conditions\+I\+O\+V\+Pool.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Cond/\+Conditions\+Tags.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Printout.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}X\+M\+L/\+Document\+Handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}X\+M\+L/\+X\+M\+L\+Tags.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$climits$>$}\newline
+{\ttfamily \#include $<$cerrno$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_handle__t}{XML::Handle\_\-t} \hyperlink{_conditions_text_repository_8cpp_ae26a930890d6dce181abebce5a4280b8}{xml\_\-h}
+typedef \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_handle__t}{X\+M\+L\+::\+Handle\+\_\+t} \hyperlink{_conditions_text_repository_8cpp_ae26a930890d6dce181abebce5a4280b8}{xml\+\_\+h}
 \item 
-typedef \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_element}{XML::Element} \hyperlink{_conditions_text_repository_8cpp_aa4442278fec64446d1160e0c6ed886d0}{xml\_\-elt\_\-t}
+typedef \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_element}{X\+M\+L\+::\+Element} \hyperlink{_conditions_text_repository_8cpp_aa4442278fec64446d1160e0c6ed886d0}{xml\+\_\+elt\+\_\+t}
 \item 
-typedef \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_document}{XML::Document} \hyperlink{_conditions_text_repository_8cpp_a0f3e679dcd12dc1dccacf1454c9d6948}{xml\_\-doc\_\-t}
+typedef \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_document}{X\+M\+L\+::\+Document} \hyperlink{_conditions_text_repository_8cpp_a0f3e679dcd12dc1dccacf1454c9d6948}{xml\+\_\+doc\+\_\+t}
 \item 
-typedef \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_collection__t}{XML::Collection\_\-t} \hyperlink{_conditions_text_repository_8cpp_a33f840d55fd2866ef20d167b7cc9fb3e}{xml\_\-coll\_\-t}
+typedef \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_collection__t}{X\+M\+L\+::\+Collection\+\_\+t} \hyperlink{_conditions_text_repository_8cpp_a33f840d55fd2866ef20d167b7cc9fb3e}{xml\+\_\+coll\+\_\+t}
 \item 
-typedef map$<$ Condition::key\_\-type, \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} $>$ \hyperlink{_conditions_text_repository_8cpp_ab9a1a48c745dcf869758cd772f1f31f6}{AllConditions}
+typedef map$<$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition\+::key\+\_\+type}, \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} $>$ \hyperlink{_conditions_text_repository_8cpp_ab9a1a48c745dcf869758cd772f1f31f6}{All\+Conditions}
 \end{DoxyCompactItemize}
 
 
 \subsection{Typedef Documentation}
-\hypertarget{_conditions_text_repository_8cpp_ab9a1a48c745dcf869758cd772f1f31f6}{
-\index{ConditionsTextRepository.cpp@{ConditionsTextRepository.cpp}!AllConditions@{AllConditions}}
-\index{AllConditions@{AllConditions}!ConditionsTextRepository.cpp@{ConditionsTextRepository.cpp}}
-\subsubsection[{AllConditions}]{\setlength{\rightskip}{0pt plus 5cm}typedef map$<$Condition::key\_\-type,{\bf Condition}$>$ {\bf AllConditions}}}
-\label{_conditions_text_repository_8cpp_ab9a1a48c745dcf869758cd772f1f31f6}
+\hypertarget{_conditions_text_repository_8cpp_ab9a1a48c745dcf869758cd772f1f31f6}{}\label{_conditions_text_repository_8cpp_ab9a1a48c745dcf869758cd772f1f31f6} 
+\index{Conditions\+Text\+Repository.\+cpp@{Conditions\+Text\+Repository.\+cpp}!All\+Conditions@{All\+Conditions}}
+\index{All\+Conditions@{All\+Conditions}!Conditions\+Text\+Repository.\+cpp@{Conditions\+Text\+Repository.\+cpp}}
+\subsubsection{\texorpdfstring{All\+Conditions}{AllConditions}}
+{\footnotesize\ttfamily typedef map$<$\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition\+::key\+\_\+type},\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition}$>$ \hyperlink{_conditions_repository_8cpp_ab9a1a48c745dcf869758cd772f1f31f6}{All\+Conditions}}
 
 
-Definition at line 37 of file ConditionsTextRepository.cpp.\hypertarget{_conditions_text_repository_8cpp_a33f840d55fd2866ef20d167b7cc9fb3e}{
-\index{ConditionsTextRepository.cpp@{ConditionsTextRepository.cpp}!xml\_\-coll\_\-t@{xml\_\-coll\_\-t}}
-\index{xml\_\-coll\_\-t@{xml\_\-coll\_\-t}!ConditionsTextRepository.cpp@{ConditionsTextRepository.cpp}}
-\subsubsection[{xml\_\-coll\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf XML::Collection\_\-t} {\bf xml\_\-coll\_\-t}}}
-\label{_conditions_text_repository_8cpp_a33f840d55fd2866ef20d167b7cc9fb3e}
+
+Definition at line 37 of file Conditions\+Text\+Repository.\+cpp.
+
+\hypertarget{_conditions_text_repository_8cpp_a33f840d55fd2866ef20d167b7cc9fb3e}{}\label{_conditions_text_repository_8cpp_a33f840d55fd2866ef20d167b7cc9fb3e} 
+\index{Conditions\+Text\+Repository.\+cpp@{Conditions\+Text\+Repository.\+cpp}!xml\+\_\+coll\+\_\+t@{xml\+\_\+coll\+\_\+t}}
+\index{xml\+\_\+coll\+\_\+t@{xml\+\_\+coll\+\_\+t}!Conditions\+Text\+Repository.\+cpp@{Conditions\+Text\+Repository.\+cpp}}
+\subsubsection{\texorpdfstring{xml\+\_\+coll\+\_\+t}{xml\_coll\_t}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_collection__t}{X\+M\+L\+::\+Collection\+\_\+t} \hyperlink{_det_factory_helper_8h_a8ed5d21ce63df10f59d94c43e72e8d83}{xml\+\_\+coll\+\_\+t}}
 
 
-Definition at line 35 of file ConditionsTextRepository.cpp.\hypertarget{_conditions_text_repository_8cpp_a0f3e679dcd12dc1dccacf1454c9d6948}{
-\index{ConditionsTextRepository.cpp@{ConditionsTextRepository.cpp}!xml\_\-doc\_\-t@{xml\_\-doc\_\-t}}
-\index{xml\_\-doc\_\-t@{xml\_\-doc\_\-t}!ConditionsTextRepository.cpp@{ConditionsTextRepository.cpp}}
-\subsubsection[{xml\_\-doc\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf XML::Document} {\bf xml\_\-doc\_\-t}}}
-\label{_conditions_text_repository_8cpp_a0f3e679dcd12dc1dccacf1454c9d6948}
+
+Definition at line 35 of file Conditions\+Text\+Repository.\+cpp.
+
+\hypertarget{_conditions_text_repository_8cpp_a0f3e679dcd12dc1dccacf1454c9d6948}{}\label{_conditions_text_repository_8cpp_a0f3e679dcd12dc1dccacf1454c9d6948} 
+\index{Conditions\+Text\+Repository.\+cpp@{Conditions\+Text\+Repository.\+cpp}!xml\+\_\+doc\+\_\+t@{xml\+\_\+doc\+\_\+t}}
+\index{xml\+\_\+doc\+\_\+t@{xml\+\_\+doc\+\_\+t}!Conditions\+Text\+Repository.\+cpp@{Conditions\+Text\+Repository.\+cpp}}
+\subsubsection{\texorpdfstring{xml\+\_\+doc\+\_\+t}{xml\_doc\_t}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_document}{X\+M\+L\+::\+Document} \hyperlink{_det_factory_helper_8h_aa6dcaa93fcb55d9c1feea69a08c9d6a9}{xml\+\_\+doc\+\_\+t}}
 
 
-Definition at line 34 of file ConditionsTextRepository.cpp.\hypertarget{_conditions_text_repository_8cpp_aa4442278fec64446d1160e0c6ed886d0}{
-\index{ConditionsTextRepository.cpp@{ConditionsTextRepository.cpp}!xml\_\-elt\_\-t@{xml\_\-elt\_\-t}}
-\index{xml\_\-elt\_\-t@{xml\_\-elt\_\-t}!ConditionsTextRepository.cpp@{ConditionsTextRepository.cpp}}
-\subsubsection[{xml\_\-elt\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf XML::Element} {\bf xml\_\-elt\_\-t}}}
-\label{_conditions_text_repository_8cpp_aa4442278fec64446d1160e0c6ed886d0}
+
+Definition at line 34 of file Conditions\+Text\+Repository.\+cpp.
+
+\hypertarget{_conditions_text_repository_8cpp_aa4442278fec64446d1160e0c6ed886d0}{}\label{_conditions_text_repository_8cpp_aa4442278fec64446d1160e0c6ed886d0} 
+\index{Conditions\+Text\+Repository.\+cpp@{Conditions\+Text\+Repository.\+cpp}!xml\+\_\+elt\+\_\+t@{xml\+\_\+elt\+\_\+t}}
+\index{xml\+\_\+elt\+\_\+t@{xml\+\_\+elt\+\_\+t}!Conditions\+Text\+Repository.\+cpp@{Conditions\+Text\+Repository.\+cpp}}
+\subsubsection{\texorpdfstring{xml\+\_\+elt\+\_\+t}{xml\_elt\_t}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_element}{X\+M\+L\+::\+Element} \hyperlink{_det_factory_helper_8h_afceebeb841b67ebcff7d4c467cf25034}{xml\+\_\+elt\+\_\+t}}
 
 
-Definition at line 33 of file ConditionsTextRepository.cpp.\hypertarget{_conditions_text_repository_8cpp_ae26a930890d6dce181abebce5a4280b8}{
-\index{ConditionsTextRepository.cpp@{ConditionsTextRepository.cpp}!xml\_\-h@{xml\_\-h}}
-\index{xml\_\-h@{xml\_\-h}!ConditionsTextRepository.cpp@{ConditionsTextRepository.cpp}}
-\subsubsection[{xml\_\-h}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf XML::Handle\_\-t} {\bf xml\_\-h}}}
-\label{_conditions_text_repository_8cpp_ae26a930890d6dce181abebce5a4280b8}
+
+Definition at line 33 of file Conditions\+Text\+Repository.\+cpp.
+
+\hypertarget{_conditions_text_repository_8cpp_ae26a930890d6dce181abebce5a4280b8}{}\label{_conditions_text_repository_8cpp_ae26a930890d6dce181abebce5a4280b8} 
+\index{Conditions\+Text\+Repository.\+cpp@{Conditions\+Text\+Repository.\+cpp}!xml\+\_\+h@{xml\+\_\+h}}
+\index{xml\+\_\+h@{xml\+\_\+h}!Conditions\+Text\+Repository.\+cpp@{Conditions\+Text\+Repository.\+cpp}}
+\subsubsection{\texorpdfstring{xml\+\_\+h}{xml\_h}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_handle__t}{X\+M\+L\+::\+Handle\+\_\+t} \hyperlink{_det_factory_helper_8h_ac13b3c79d2bc9214ff0cf5b8dc43dda6}{xml\+\_\+h}}
 
 
-Definition at line 32 of file ConditionsTextRepository.cpp.
+
+Definition at line 32 of file Conditions\+Text\+Repository.\+cpp.
+

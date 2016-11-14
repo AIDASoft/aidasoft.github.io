@@ -1,86 +1,97 @@
-\hypertarget{_d_d_cond_2src_2_conditions_interna_8cpp}{
-\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCond/src/ConditionsInterna.cpp File Reference}
-\label{_d_d_cond_2src_2_conditions_interna_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCond/src/ConditionsInterna.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCond/src/ConditionsInterna.cpp}}
-}
-{\ttfamily \#include \char`\"{}DD4hep/LCDD.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/Errors.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/Plugins.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/Printout.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/World.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/Handle.inl\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/DetectorTools.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/InstanceCount.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/PluginCreators.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/DetFactoryHelper.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/objects/DetectorInterna.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/objects/ConditionsInterna.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/objects/AlignmentsInterna.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDCond/ConditionsPool.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDCond/ConditionsEntry.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDCond/ConditionsManager.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDCond/ConditionsDataLoader.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDCond/ConditionsInterna.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDCond/ConditionsListener.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDCond/ConditionsLoaderImp.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDCond/AlignmentsLoaderImp.h\char`\"{}}\par
-\subsection*{Defines}
+\hypertarget{_d_d_cond_2src_2_conditions_interna_8cpp}{}\section{/afs/cern.ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Cond/src/\+Conditions\+Interna.cpp File Reference}
+\label{_d_d_cond_2src_2_conditions_interna_8cpp}\index{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Cond/src/\+Conditions\+Interna.\+cpp@{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Cond/src/\+Conditions\+Interna.\+cpp}}
+{\ttfamily \#include \char`\"{}D\+D4hep/\+L\+C\+D\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Errors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Plugins.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Printout.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+World.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Handle.\+inl\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Detector\+Tools.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Instance\+Count.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Plugin\+Creators.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Det\+Factory\+Helper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/objects/\+Detector\+Interna.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/objects/\+Conditions\+Interna.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/objects/\+Alignments\+Interna.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Cond/\+Conditions\+Pool.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Cond/\+Conditions\+Entry.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Cond/\+Conditions\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Cond/\+Conditions\+Data\+Loader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Cond/\+Conditions\+Interna.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Cond/\+Conditions\+Listener.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Cond/\+Conditions\+Loader\+Imp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Cond/\+Alignments\+Loader\+Imp.\+h\char`\"{}}\newline
+\subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{_d_d_cond_2src_2_conditions_interna_8cpp_aa689d1f92db6113c8874a7dcd8bd7388}{NO\_\-AGE}~0
+\#define \hyperlink{_d_d_cond_2src_2_conditions_interna_8cpp_aa689d1f92db6113c8874a7dcd8bd7388}{N\+O\+\_\+\+A\+GE}~0
 \end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignments_loader}{Alignments::AlignmentsLoader} \hyperlink{_d_d_cond_2src_2_conditions_interna_8cpp_ac09a1fb44c9ab0363a450f118f567286}{AlignmentsLoader}
+typedef \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignments_loader}{Alignments\+::\+Alignments\+Loader} \hyperlink{_d_d_cond_2src_2_conditions_interna_8cpp_ac09a1fb44c9ab0363a450f118f567286}{Alignments\+Loader}
 \item 
-typedef UpdatePool::UpdateEntries \hyperlink{_d_d_cond_2src_2_conditions_interna_8cpp_a4577998655a70ab228539800babb9642}{Updates}
+typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_update_pool_a1a578a7a025ded412da474be106dc780}{Update\+Pool\+::\+Update\+Entries} \hyperlink{_d_d_cond_2src_2_conditions_interna_8cpp_a4577998655a70ab228539800babb9642}{Updates}
 \item 
-typedef RangeConditions \hyperlink{_d_d_cond_2src_2_conditions_interna_8cpp_a71e82ba4bbbab6ac54ac7b08c37ef076}{RC}
+typedef \hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{Range\+Conditions} \hyperlink{_d_d_cond_2src_2_conditions_interna_8cpp_a71e82ba4bbbab6ac54ac7b08c37ef076}{RC}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{_d_d_cond_2src_2_conditions_interna_8cpp_a86df914ba3a429dc91963585567a4feb}{DD4HEP\_\-INSTANTIATE\_\-HANDLE\_\-NAMED} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object}{ConditionsManagerObject})
+\hyperlink{_d_d_cond_2src_2_conditions_interna_8cpp_a86df914ba3a429dc91963585567a4feb}{D\+D4\+H\+E\+P\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+N\+A\+M\+ED} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object}{Conditions\+Manager\+Object})
 \end{DoxyCompactItemize}
 
 
-\subsection{Define Documentation}
-\hypertarget{_d_d_cond_2src_2_conditions_interna_8cpp_aa689d1f92db6113c8874a7dcd8bd7388}{
-\index{DDCond/src/ConditionsInterna.cpp@{DDCond/src/ConditionsInterna.cpp}!NO\_\-AGE@{NO\_\-AGE}}
-\index{NO\_\-AGE@{NO\_\-AGE}!DDCond/src/ConditionsInterna.cpp@{DDCond/src/ConditionsInterna.cpp}}
-\subsubsection[{NO\_\-AGE}]{\setlength{\rightskip}{0pt plus 5cm}\#define NO\_\-AGE~0}}
-\label{_d_d_cond_2src_2_conditions_interna_8cpp_aa689d1f92db6113c8874a7dcd8bd7388}
+\subsection{Macro Definition Documentation}
+\hypertarget{_d_d_cond_2src_2_conditions_interna_8cpp_aa689d1f92db6113c8874a7dcd8bd7388}{}\label{_d_d_cond_2src_2_conditions_interna_8cpp_aa689d1f92db6113c8874a7dcd8bd7388} 
+\index{D\+D\+Cond/src/\+Conditions\+Interna.\+cpp@{D\+D\+Cond/src/\+Conditions\+Interna.\+cpp}!N\+O\+\_\+\+A\+GE@{N\+O\+\_\+\+A\+GE}}
+\index{N\+O\+\_\+\+A\+GE@{N\+O\+\_\+\+A\+GE}!D\+D\+Cond/src/\+Conditions\+Interna.\+cpp@{D\+D\+Cond/src/\+Conditions\+Interna.\+cpp}}
+\subsubsection{\texorpdfstring{N\+O\+\_\+\+A\+GE}{NO\_AGE}}
+{\footnotesize\ttfamily \#define N\+O\+\_\+\+A\+GE~0}
 
 
-Definition at line 49 of file ConditionsInterna.cpp.
+
+Definition at line 49 of file Conditions\+Interna.\+cpp.
+
+
 
 \subsection{Typedef Documentation}
-\hypertarget{_d_d_cond_2src_2_conditions_interna_8cpp_ac09a1fb44c9ab0363a450f118f567286}{
-\index{DDCond/src/ConditionsInterna.cpp@{DDCond/src/ConditionsInterna.cpp}!AlignmentsLoader@{AlignmentsLoader}}
-\index{AlignmentsLoader@{AlignmentsLoader}!DDCond/src/ConditionsInterna.cpp@{DDCond/src/ConditionsInterna.cpp}}
-\subsubsection[{AlignmentsLoader}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Alignments::AlignmentsLoader} {\bf AlignmentsLoader}}}
-\label{_d_d_cond_2src_2_conditions_interna_8cpp_ac09a1fb44c9ab0363a450f118f567286}
+\hypertarget{_d_d_cond_2src_2_conditions_interna_8cpp_ac09a1fb44c9ab0363a450f118f567286}{}\label{_d_d_cond_2src_2_conditions_interna_8cpp_ac09a1fb44c9ab0363a450f118f567286} 
+\index{D\+D\+Cond/src/\+Conditions\+Interna.\+cpp@{D\+D\+Cond/src/\+Conditions\+Interna.\+cpp}!Alignments\+Loader@{Alignments\+Loader}}
+\index{Alignments\+Loader@{Alignments\+Loader}!D\+D\+Cond/src/\+Conditions\+Interna.\+cpp@{D\+D\+Cond/src/\+Conditions\+Interna.\+cpp}}
+\subsubsection{\texorpdfstring{Alignments\+Loader}{AlignmentsLoader}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignments_loader}{Alignments\+::\+Alignments\+Loader} \hyperlink{_d_d_cond_2src_2_conditions_interna_8cpp_ac09a1fb44c9ab0363a450f118f567286}{Alignments\+Loader}}
 
 
-Definition at line 43 of file ConditionsInterna.cpp.\hypertarget{_d_d_cond_2src_2_conditions_interna_8cpp_a71e82ba4bbbab6ac54ac7b08c37ef076}{
-\index{DDCond/src/ConditionsInterna.cpp@{DDCond/src/ConditionsInterna.cpp}!RC@{RC}}
-\index{RC@{RC}!DDCond/src/ConditionsInterna.cpp@{DDCond/src/ConditionsInterna.cpp}}
-\subsubsection[{RC}]{\setlength{\rightskip}{0pt plus 5cm}typedef RangeConditions {\bf RC}}}
-\label{_d_d_cond_2src_2_conditions_interna_8cpp_a71e82ba4bbbab6ac54ac7b08c37ef076}
+
+Definition at line 43 of file Conditions\+Interna.\+cpp.
+
+\hypertarget{_d_d_cond_2src_2_conditions_interna_8cpp_a71e82ba4bbbab6ac54ac7b08c37ef076}{}\label{_d_d_cond_2src_2_conditions_interna_8cpp_a71e82ba4bbbab6ac54ac7b08c37ef076} 
+\index{D\+D\+Cond/src/\+Conditions\+Interna.\+cpp@{D\+D\+Cond/src/\+Conditions\+Interna.\+cpp}!RC@{RC}}
+\index{RC@{RC}!D\+D\+Cond/src/\+Conditions\+Interna.\+cpp@{D\+D\+Cond/src/\+Conditions\+Interna.\+cpp}}
+\subsubsection{\texorpdfstring{RC}{RC}}
+{\footnotesize\ttfamily typedef \hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{Range\+Conditions} \hyperlink{_d_d_cond_2src_2_conditions_interna_8cpp_a71e82ba4bbbab6ac54ac7b08c37ef076}{RC}}
 
 
-Definition at line 45 of file ConditionsInterna.cpp.\hypertarget{_d_d_cond_2src_2_conditions_interna_8cpp_a4577998655a70ab228539800babb9642}{
-\index{DDCond/src/ConditionsInterna.cpp@{DDCond/src/ConditionsInterna.cpp}!Updates@{Updates}}
-\index{Updates@{Updates}!DDCond/src/ConditionsInterna.cpp@{DDCond/src/ConditionsInterna.cpp}}
-\subsubsection[{Updates}]{\setlength{\rightskip}{0pt plus 5cm}typedef UpdatePool::UpdateEntries {\bf Updates}}}
-\label{_d_d_cond_2src_2_conditions_interna_8cpp_a4577998655a70ab228539800babb9642}
+
+Definition at line 45 of file Conditions\+Interna.\+cpp.
+
+\hypertarget{_d_d_cond_2src_2_conditions_interna_8cpp_a4577998655a70ab228539800babb9642}{}\label{_d_d_cond_2src_2_conditions_interna_8cpp_a4577998655a70ab228539800babb9642} 
+\index{D\+D\+Cond/src/\+Conditions\+Interna.\+cpp@{D\+D\+Cond/src/\+Conditions\+Interna.\+cpp}!Updates@{Updates}}
+\index{Updates@{Updates}!D\+D\+Cond/src/\+Conditions\+Interna.\+cpp@{D\+D\+Cond/src/\+Conditions\+Interna.\+cpp}}
+\subsubsection{\texorpdfstring{Updates}{Updates}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_update_pool_a1a578a7a025ded412da474be106dc780}{Update\+Pool\+::\+Update\+Entries} \hyperlink{_d_d_cond_2src_2_conditions_interna_8cpp_a4577998655a70ab228539800babb9642}{Updates}}
 
 
-Definition at line 44 of file ConditionsInterna.cpp.
+
+Definition at line 44 of file Conditions\+Interna.\+cpp.
+
+
 
 \subsection{Function Documentation}
-\hypertarget{_d_d_cond_2src_2_conditions_interna_8cpp_a86df914ba3a429dc91963585567a4feb}{
-\index{DDCond/src/ConditionsInterna.cpp@{DDCond/src/ConditionsInterna.cpp}!DD4HEP\_\-INSTANTIATE\_\-HANDLE\_\-NAMED@{DD4HEP\_\-INSTANTIATE\_\-HANDLE\_\-NAMED}}
-\index{DD4HEP\_\-INSTANTIATE\_\-HANDLE\_\-NAMED@{DD4HEP\_\-INSTANTIATE\_\-HANDLE\_\-NAMED}!DDCond/src/ConditionsInterna.cpp@{DDCond/src/ConditionsInterna.cpp}}
-\subsubsection[{DD4HEP\_\-INSTANTIATE\_\-HANDLE\_\-NAMED}]{\setlength{\rightskip}{0pt plus 5cm}DD4HEP\_\-INSTANTIATE\_\-HANDLE\_\-NAMED ({\bf ConditionsManagerObject})}}
-\label{_d_d_cond_2src_2_conditions_interna_8cpp_a86df914ba3a429dc91963585567a4feb}
+\hypertarget{_d_d_cond_2src_2_conditions_interna_8cpp_a86df914ba3a429dc91963585567a4feb}{}\label{_d_d_cond_2src_2_conditions_interna_8cpp_a86df914ba3a429dc91963585567a4feb} 
+\index{D\+D\+Cond/src/\+Conditions\+Interna.\+cpp@{D\+D\+Cond/src/\+Conditions\+Interna.\+cpp}!D\+D4\+H\+E\+P\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+N\+A\+M\+ED@{D\+D4\+H\+E\+P\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+N\+A\+M\+ED}}
+\index{D\+D4\+H\+E\+P\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+N\+A\+M\+ED@{D\+D4\+H\+E\+P\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+N\+A\+M\+ED}!D\+D\+Cond/src/\+Conditions\+Interna.\+cpp@{D\+D\+Cond/src/\+Conditions\+Interna.\+cpp}}
+\subsubsection{\texorpdfstring{D\+D4\+H\+E\+P\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+N\+A\+M\+E\+D()}{DD4HEP\_INSTANTIATE\_HANDLE\_NAMED()}}
+{\footnotesize\ttfamily D\+D4\+H\+E\+P\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+N\+A\+M\+ED (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object}{Conditions\+Manager\+Object}}]{ }\end{DoxyParamCaption})}
+

@@ -1,1077 +1,1673 @@
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{
-\section{DD4hep::Simulation::Geant4Kernel Class Reference}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{}\section{D\+D4hep\+:\+:Simulation\+:\+:Geant4\+Kernel Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
 
 
-Class, which allows all \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} derivatives to access the DDG4 kernel structures.  
+Class, which allows all \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} derivatives to access the D\+D\+G4 kernel structures.  
 
 
-{\ttfamily \#include $<$Geant4Kernel.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4Kernel::\begin{figure}[H]
+
+
+{\ttfamily \#include $<$Geant4\+Kernel.\+h$>$}
+
+Inheritance diagram for D\+D4hep\+:\+:Simulation\+:\+:Geant4\+Kernel\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2cm]{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}
+\includegraphics[height=2.000000cm]{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}
 \end{center}
 \end{figure}
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_1_1_phase_selector}{PhaseSelector}
-\begin{DoxyCompactList}\small\item\em Embedded helper class to facilitate map access to the phases. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_1_1_phase_selector}{Phase\+Selector}
+\begin{DoxyCompactList}\small\item\em Embedded helper class to facilitate map access to the phases. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ab0de90f94bc8898e60c2ca6cef292d92}{State} \{ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ab0de90f94bc8898e60c2ca6cef292d92ad9e96c644ab9e3980c3c72ffb02cdefc}{SETTING\_\-UP}, 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ab0de90f94bc8898e60c2ca6cef292d92a0d9e793dd29116f95a10525a25f9701a}{INITIALIZED}
+enum \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ab0de90f94bc8898e60c2ca6cef292d92}{State} \{ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ab0de90f94bc8898e60c2ca6cef292d92ad9e96c644ab9e3980c3c72ffb02cdefc}{S\+E\+T\+T\+I\+N\+G\+\_\+\+UP}, 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ab0de90f94bc8898e60c2ca6cef292d92a0d9e793dd29116f95a10525a25f9701a}{I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}
  \}
 \item 
-typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{DD4hep::Geometry::LCDD} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a190e652b62ebce3db3372c4265ffa5a3}{LCDD}
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{D\+D4hep\+::\+Geometry\+::\+L\+C\+DD} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a190e652b62ebce3db3372c4265ffa5a3}{L\+C\+DD}
 \item 
-typedef std::map$<$ unsigned long, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4Kernel} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae9fdf26cda88a6f822f060558e85d797}{Workers}
+typedef std\+::map$<$ unsigned long, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae9fdf26cda88a6f822f060558e85d797}{Workers}
 \item 
-typedef std::map$<$ std::string, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}{Geant4ActionPhase} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae28985781d4226ece4c3fffe8827b400}{Phases}
+typedef std\+::map$<$ std\+::string, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}{Geant4\+Action\+Phase} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae28985781d4226ece4c3fffe8827b400}{Phases}
 \item 
-typedef std::map$<$ std::string, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9cd070dfd06f049aa11b56688faaa643}{GlobalActions}
+typedef std\+::map$<$ std\+::string, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9cd070dfd06f049aa11b56688faaa643}{Global\+Actions}
 \item 
-typedef std::map$<$ std::string, int $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a259066f5e9a56bdbfc9718a2b42b8b06}{ClientOutputLevels}
+typedef std\+::map$<$ std\+::string, int $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a259066f5e9a56bdbfc9718a2b42b8b06}{Client\+Output\+Levels}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_afa28c3122a6607f3641d22f1c1602786}{Geant4Kernel} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \&lcdd)
-\begin{DoxyCompactList}\small\item\em Standard constructor for the master instance. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4Kernel} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a38ec8e1c3c5469aceaf178973386ddfc}{master} () const 
-\begin{DoxyCompactList}\small\item\em Thread's master context. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4Kernel} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aaa64984b672200e290612ccfef93f162}{shared} () const 
-\begin{DoxyCompactList}\small\item\em Shared action context. \item\end{DoxyCompactList}\item 
-bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a053a94be9966b7851bf25fdafb9a9d01}{isMultiThreaded} () const 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_afa28c3122a6607f3641d22f1c1602786}{Geant4\+Kernel} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a190e652b62ebce3db3372c4265ffa5a3}{L\+C\+DD} \&\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad58adb3734f2701198b8915a80cf4cdc}{lcdd})
+\begin{DoxyCompactList}\small\item\em Standard constructor for the master instance. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad717838179751e34f857c1108ae6607b}{master} () const
+\begin{DoxyCompactList}\small\item\em Thread\textquotesingle{}s master context. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a70f423a6ae5211c76f90e8fb7561bdcf}{shared} () const
+\begin{DoxyCompactList}\small\item\em Shared action context. \end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a7bd105526c0873bd9b24d3de41052d88}{is\+Multi\+Threaded} () const
 \item 
-virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a57dadf34909a60f7771fa15d4b7501d4}{$\sim$Geant4Kernel} ()
-\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
-const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae28985781d4226ece4c3fffe8827b400}{Phases} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_abebf51658a09e2e47dda6cd46e803ee0}{phases} () const 
-\begin{DoxyCompactList}\small\item\em Access phase phases. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a172f416447f9f1aa4a1a166b0df902a3}{lcdd} () const 
-\begin{DoxyCompactList}\small\item\em Access to detector description. \item\end{DoxyCompactList}\item 
-G4TrackingManager $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a4cef97fec68194bc070962cefc05d17c}{trackMgr} () const 
-\begin{DoxyCompactList}\small\item\em Access the tracking manager. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa5d1173163b58ade76d90a6a449b2357}{setTrackMgr} (G4TrackingManager $\ast$mgr)
-\begin{DoxyCompactList}\small\item\em Access the tracking manager. \item\end{DoxyCompactList}\item 
-const std::string \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa30888e16596794250fb32e545ff78bb}{directoryName} () const 
-\begin{DoxyCompactList}\small\item\em Access the command directory. \item\end{DoxyCompactList}\item 
-unsigned long \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac15d27b4d51308d7eeab4c18702513d1}{id} () const 
-\begin{DoxyCompactList}\small\item\em Access worker identifier. \item\end{DoxyCompactList}\item 
-G4RunManager \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa01093467efb9b3a4f9179ba22ac7899}{runManager} ()
-\begin{DoxyCompactList}\small\item\em Access to the Geant4 run manager. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_property_manager}{PropertyManager} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a39d0b3dcebed9c0ec950410df346710b}{properties} ()
-\begin{DoxyCompactList}\small\item\em Access to the properties of the object. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a2a2e31125a2bf5f5a40dd132f00d35d1}{printProperties} () const 
-\begin{DoxyCompactList}\small\item\em Print the property values. \item\end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4Kernel} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aadb88423f1b7ae7d5cc9e8cfab93c425}{declareProperty} (const std::string \&nam, \hyperlink{class_t}{T} \&val)
-\begin{DoxyCompactList}\small\item\em Declare property. \item\end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4Kernel} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa9f02684c5f94b400f6d2fbe47d3cb55}{declareProperty} (const char $\ast$nam, \hyperlink{class_t}{T} \&val)
-\begin{DoxyCompactList}\small\item\em Declare property. \item\end{DoxyCompactList}\item 
-bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a615765e129ae5076af6f58e40540c977}{hasProperty} (const std::string \&name) const 
-\begin{DoxyCompactList}\small\item\em Check property for existence. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_property}{Property} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a51c2d757b81b0c8ee31be77515d4d622}{property} (const std::string \&name)
-\begin{DoxyCompactList}\small\item\em Access single property. \item\end{DoxyCompactList}\item 
-\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{PrintLevel} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a36af85f213b7ded85d93621bdeacf09c}{outputLevel} () const 
-\begin{DoxyCompactList}\small\item\em Access the output level. \item\end{DoxyCompactList}\item 
-\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{PrintLevel} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_abf3fb3881f4e504ab8c4b14aa17ac7c8}{setOutputLevel} (\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{PrintLevel} new\_\-level)
-\begin{DoxyCompactList}\small\item\em Set the global output level of the kernel object; returns previous value. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa2a86e9223fa508132a57669fab477d5}{setOutputLevel} (const std::string object, \hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{PrintLevel} new\_\-level)
-\begin{DoxyCompactList}\small\item\em Fill cache with the global output level of a named object. Must be set before instantiation. \item\end{DoxyCompactList}\item 
-\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{PrintLevel} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a0b9efcb33597d3a7191f3067c2691473}{getOutputLevel} (const std::string object) const 
-\begin{DoxyCompactList}\small\item\em Retrieve the global output level of a named object. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4Kernel} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a8792d3d0db403a52fe6495456b45c97a}{registerGlobalAction} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} $\ast$action)
-\begin{DoxyCompactList}\small\item\em Register action by name to be retrieved when setting up and connecting action objects. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9142233acf94a391ef926eee86b04c26}{globalAction} (const std::string \&action\_\-name, bool throw\_\-if\_\-not\_\-present=true)
-\begin{DoxyCompactList}\small\item\em Retrieve action from repository. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4Kernel} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a0690ca4b44a14133f0c8562eebac9613}{registerGlobalFilter} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} $\ast$filter)
-\begin{DoxyCompactList}\small\item\em Register filter by name to be retrieved when setting up and connecting filter objects. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad6b6f410f168992639e4fe3fa9fc2c73}{globalFilter} (const std::string \&filter\_\-name, bool throw\_\-if\_\-not\_\-present=true)
-\begin{DoxyCompactList}\small\item\em Retrieve filter from repository. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}{Geant4ActionPhase} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ada608fd803fba670ab573da9a7a012eb}{getPhase} (const std::string \&name)
-\begin{DoxyCompactList}\small\item\em Access phase by name. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}{Geant4ActionPhase} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad6e24016ebe31a06417ffac7f6e93818}{addSimplePhase} (const std::string \&name, bool throw\_\-on\_\-exist)
-\begin{DoxyCompactList}\small\item\em Add a new phase to the phase. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}{Geant4ActionPhase} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a7b04d88f6257e121268032dfe2bdc2d4}{addPhase} (const std::string \&name, const std::type\_\-info \&arg1, const std::type\_\-info \&arg2, const std::type\_\-info \&arg3, bool throw\_\-on\_\-exist)
-\begin{DoxyCompactList}\small\item\em Add a new phase to the phase. \item\end{DoxyCompactList}\item 
-{\footnotesize template$<$typename A0 $>$ }\\\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}{Geant4ActionPhase} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3f0e8487909e620f5d7a74153c4aa418}{addPhase} (const std::string \&name, bool throw\_\-on\_\-exist=true)
-\begin{DoxyCompactList}\small\item\em Add a new phase to the phase. \item\end{DoxyCompactList}\item 
-{\footnotesize template$<$typename A0 , typename A1 $>$ }\\\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}{Geant4ActionPhase} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3f0e8487909e620f5d7a74153c4aa418}{addPhase} (const std::string \&name, bool throw\_\-on\_\-exist=true)
-\begin{DoxyCompactList}\small\item\em Add a new phase to the phase. \item\end{DoxyCompactList}\item 
-{\footnotesize template$<$typename A0 , typename A1 , typename A2 $>$ }\\\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}{Geant4ActionPhase} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3f0e8487909e620f5d7a74153c4aa418}{addPhase} (const std::string \&name, bool throw\_\-on\_\-exist=true)
-\begin{DoxyCompactList}\small\item\em Add a new phase to the phase. \item\end{DoxyCompactList}\item 
-virtual bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3d2e1d38ae072b26c0a9124268065fbc}{removePhase} (const std::string \&name)
-\begin{DoxyCompactList}\small\item\em Remove an existing phase from the phase. If not existing returns false. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_af8c01fc03cdb8db95fafe071eee0ba5a}{destroyPhases} ()
-\begin{DoxyCompactList}\small\item\em Destroy all phases. To be called only at shutdown. \item\end{DoxyCompactList}\item 
-virtual bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9fbb49abf09139f19d21a5d5d83f2590}{executePhase} (const std::string \&name, const void $\ast$$\ast$args) const 
-\begin{DoxyCompactList}\small\item\em Execute phase action if it exists. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_afe27ed5e3415cd381df461a28015ff81}{loadGeometry} (const std::string \&compact\_\-file)
-\begin{DoxyCompactList}\small\item\em Construct detector geometry using lcdd plugin. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aaaab733198f5e548e23c5b97dfd0aa32}{loadXML} (const char $\ast$fname)
-\begin{DoxyCompactList}\small\item\em Load \hyperlink{namespace_d_d4hep_1_1_x_m_l}{XML} file. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4Kernel} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a8d5bfc7d22e12f711950bd1c64173b74}{createWorker} ()
-\begin{DoxyCompactList}\small\item\em Create identified worker instance. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4Kernel} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac503376a3f593e2c97dcf78fb289fe49}{worker} (unsigned long thread\_\-identifier, bool create\_\-if=false)
-\begin{DoxyCompactList}\small\item\em Access worker instance by it's identifier. \item\end{DoxyCompactList}\item 
-int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad3f634c51b845742578eaae0933cf3ef}{numWorkers} () const 
-\begin{DoxyCompactList}\small\item\em Access number of workers. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a57dadf34909a60f7771fa15d4b7501d4}{$\sim$\+Geant4\+Kernel} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae28985781d4226ece4c3fffe8827b400}{Phases} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a94a98c5bbbd6cca43e9aecfaa135ef65}{phases} () const
+\begin{DoxyCompactList}\small\item\em Access phase phases. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a190e652b62ebce3db3372c4265ffa5a3}{L\+C\+DD} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad58adb3734f2701198b8915a80cf4cdc}{lcdd} () const
+\begin{DoxyCompactList}\small\item\em Access to detector description. \end{DoxyCompactList}\item 
+G4\+Tracking\+Manager $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aad8ca2fc43ef4a468bd64ed1e0b164f1}{track\+Mgr} () const
+\begin{DoxyCompactList}\small\item\em Access the tracking manager. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa5d1173163b58ade76d90a6a449b2357}{set\+Track\+Mgr} (G4\+Tracking\+Manager $\ast$mgr)
+\begin{DoxyCompactList}\small\item\em Access the tracking manager. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad922e8f9b10efb7503fad89764d98612}{directory\+Name} () const
+\begin{DoxyCompactList}\small\item\em Access the command directory. \end{DoxyCompactList}\item 
+unsigned long \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a65e6428708ccaa9e0c4545b57437246d}{id} () const
+\begin{DoxyCompactList}\small\item\em Access worker identifier. \end{DoxyCompactList}\item 
+G4\+Run\+Manager \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa01093467efb9b3a4f9179ba22ac7899}{run\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Access to the Geant4 run manager. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_property_manager}{Property\+Manager} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a39d0b3dcebed9c0ec950410df346710b}{properties} ()
+\begin{DoxyCompactList}\small\item\em Access to the properties of the object. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3a4988323078c97accc89fcc5e5f5750}{print\+Properties} () const
+\begin{DoxyCompactList}\small\item\em Print the property values. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac267696721115fda0d13cc9a4337214e}{declare\+Property} (const std\+::string \&nam, \hyperlink{class_t}{T} \&val)
+\begin{DoxyCompactList}\small\item\em Declare property. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a7729a86ca944cc34f9e42447650905f1}{declare\+Property} (const char $\ast$nam, \hyperlink{class_t}{T} \&val)
+\begin{DoxyCompactList}\small\item\em Declare property. \end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_af867ef6ab82942e84625c5ebb9a06c3c}{has\+Property} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Check property for existence. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_property}{Property} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a51c2d757b81b0c8ee31be77515d4d622}{property} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Access single property. \end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{Print\+Level} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aaaddf1d35de3dcb63d569e4ec8a7e4c6}{output\+Level} () const
+\begin{DoxyCompactList}\small\item\em Access the output level. \end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{Print\+Level} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_abf3fb3881f4e504ab8c4b14aa17ac7c8}{set\+Output\+Level} (\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{Print\+Level} new\+\_\+level)
+\begin{DoxyCompactList}\small\item\em Set the global output level of the kernel object; returns previous value. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa2a86e9223fa508132a57669fab477d5}{set\+Output\+Level} (const std\+::string object, \hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{Print\+Level} new\+\_\+level)
+\begin{DoxyCompactList}\small\item\em Fill cache with the global output level of a named object. Must be set before instantiation. \end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{Print\+Level} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_adcf47e98a5cff7d2ddf235753f907a63}{get\+Output\+Level} (const std\+::string object) const
+\begin{DoxyCompactList}\small\item\em Retrieve the global output level of a named object. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a8792d3d0db403a52fe6495456b45c97a}{register\+Global\+Action} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} $\ast$action)
+\begin{DoxyCompactList}\small\item\em Register action by name to be retrieved when setting up and connecting action objects. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9142233acf94a391ef926eee86b04c26}{global\+Action} (const std\+::string \&action\+\_\+name, bool throw\+\_\+if\+\_\+not\+\_\+present=true)
+\begin{DoxyCompactList}\small\item\em Retrieve action from repository. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a0690ca4b44a14133f0c8562eebac9613}{register\+Global\+Filter} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} $\ast$filter)
+\begin{DoxyCompactList}\small\item\em Register filter by name to be retrieved when setting up and connecting filter objects. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad6b6f410f168992639e4fe3fa9fc2c73}{global\+Filter} (const std\+::string \&filter\+\_\+name, bool throw\+\_\+if\+\_\+not\+\_\+present=true)
+\begin{DoxyCompactList}\small\item\em Retrieve filter from repository. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}{Geant4\+Action\+Phase} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ada608fd803fba670ab573da9a7a012eb}{get\+Phase} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Access phase by name. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}{Geant4\+Action\+Phase} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad6e24016ebe31a06417ffac7f6e93818}{add\+Simple\+Phase} (const std\+::string \&name, bool throw\+\_\+on\+\_\+exist)
+\begin{DoxyCompactList}\small\item\em Add a new phase to the phase. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}{Geant4\+Action\+Phase} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a7b04d88f6257e121268032dfe2bdc2d4}{add\+Phase} (const std\+::string \&name, const std\+::type\+\_\+info \&arg1, const std\+::type\+\_\+info \&arg2, const std\+::type\+\_\+info \&arg3, bool throw\+\_\+on\+\_\+exist)
+\begin{DoxyCompactList}\small\item\em Add a new phase to the phase. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename A0 $>$ }\\\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}{Geant4\+Action\+Phase} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9911ca521ebd05a1126fb04adbf3f0b2}{add\+Phase} (const std\+::string \&name, bool throw\+\_\+on\+\_\+exist=true)
+\begin{DoxyCompactList}\small\item\em Add a new phase to the phase. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename A0 , typename A1 $>$ }\\\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}{Geant4\+Action\+Phase} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a7b0facce444f94e34bf9828d8b418e44}{add\+Phase} (const std\+::string \&name, bool throw\+\_\+on\+\_\+exist=true)
+\begin{DoxyCompactList}\small\item\em Add a new phase to the phase. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename A0 , typename A1 , typename A2 $>$ }\\\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}{Geant4\+Action\+Phase} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_afc77080c02b923ee7ba39519e7d73acb}{add\+Phase} (const std\+::string \&name, bool throw\+\_\+on\+\_\+exist=true)
+\begin{DoxyCompactList}\small\item\em Add a new phase to the phase. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3d2e1d38ae072b26c0a9124268065fbc}{remove\+Phase} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Remove an existing phase from the phase. If not existing returns false. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_af8c01fc03cdb8db95fafe071eee0ba5a}{destroy\+Phases} ()
+\begin{DoxyCompactList}\small\item\em Destroy all phases. To be called only at shutdown. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a372116bbf95a9e9c63beb0906d8f222b}{execute\+Phase} (const std\+::string \&name, const void $\ast$$\ast$args) const
+\begin{DoxyCompactList}\small\item\em Execute phase action if it exists. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_afe27ed5e3415cd381df461a28015ff81}{load\+Geometry} (const std\+::string \&compact\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Construct detector geometry using lcdd plugin. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aaaab733198f5e548e23c5b97dfd0aa32}{load\+X\+ML} (const char $\ast$fname)
+\begin{DoxyCompactList}\small\item\em Load \hyperlink{namespace_d_d4hep_1_1_x_m_l}{X\+ML} file. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a8d5bfc7d22e12f711950bd1c64173b74}{create\+Worker} ()
+\begin{DoxyCompactList}\small\item\em Create identified worker instance. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac503376a3f593e2c97dcf78fb289fe49}{worker} (unsigned long thread\+\_\+identifier, bool create\+\_\+if=false)
+\begin{DoxyCompactList}\small\item\em Access worker instance by it\textquotesingle{}s identifier. \end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a2ea8899db4b10255c32f7e2e09ad2430}{num\+Workers} () const
+\begin{DoxyCompactList}\small\item\em Access number of workers. \end{DoxyCompactList}\item 
 virtual int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae48b44218f1a8115d8c7c105db17c43f}{configure} ()
-\begin{DoxyCompactList}\small\item\em Run the simulation: Configure Geant4. \item\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Run the simulation\+: Configure Geant4. \end{DoxyCompactList}\item 
 virtual int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_add7a520dbd9824819e75cf9ea3725882}{initialize} ()
-\begin{DoxyCompactList}\small\item\em Run the simulation: Initialize Geant4. \item\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Run the simulation\+: Initialize Geant4. \end{DoxyCompactList}\item 
 virtual int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad04026c76cad51506b859ccefffffba8}{run} ()
-\begin{DoxyCompactList}\small\item\em Run the simulation: Simulate the number of events given by the property \char`\"{}NumEvents\char`\"{}. \item\end{DoxyCompactList}\item 
-virtual int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a0ce3dec62c67dbaf72748238983bb898}{runEvents} (int num\_\-events)
-\begin{DoxyCompactList}\small\item\em Run the simulation: Simulate the number of events \char`\"{}num\_\-events\char`\"{} and modify the property \char`\"{}NumEvents\char`\"{}. \item\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Run the simulation\+: Simulate the number of events given by the property \char`\"{}\+Num\+Events\char`\"{}. \end{DoxyCompactList}\item 
+virtual int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a0ce3dec62c67dbaf72748238983bb898}{run\+Events} (int num\+\_\+events)
+\begin{DoxyCompactList}\small\item\em Run the simulation\+: Simulate the number of events \char`\"{}num\+\_\+events\char`\"{} and modify the property \char`\"{}\+Num\+Events\char`\"{}. \end{DoxyCompactList}\item 
 virtual int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae73e828fed81e3343fe49f08701d3ac3}{terminate} ()
-\begin{DoxyCompactList}\small\item\em Run the simulation: Terminate Geant4. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Run the simulation\+: Terminate Geant4. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static unsigned long int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a6f7fb6760f8432658a837a65bb557fe5}{thread\_\-self} ()
-\begin{DoxyCompactList}\small\item\em Access thread identifier. \item\end{DoxyCompactList}\item 
-static \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4Kernel} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a791f6c4b8f9257f98d453457655870de}{instance} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \&lcdd)
-\begin{DoxyCompactList}\small\item\em Instance accessor. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+static unsigned long int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a6f7fb6760f8432658a837a65bb557fe5}{thread\+\_\+self} ()
+\begin{DoxyCompactList}\small\item\em Access thread identifier. \end{DoxyCompactList}\item 
+static \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a791f6c4b8f9257f98d453457655870de}{instance} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a190e652b62ebce3db3372c4265ffa5a3}{L\+C\+DD} \&\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad58adb3734f2701198b8915a80cf4cdc}{lcdd})
+\begin{DoxyCompactList}\small\item\em Instance accessor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_1_1_phase_selector}{DD4hep::Simulation::Geant4Kernel::PhaseSelector} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae7d402daf48f3cd062f1617c5a7ee429}{phase}
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_1_1_phase_selector}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::\+Phase\+Selector} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae7d402daf48f3cd062f1617c5a7ee429}{phase}
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad6a2eb75792e2420a3e1e0fb45222d50}{isMaster} () const 
+bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a7913e7e64c2adfdc06339feab56e606f}{is\+Master} () const
 \item 
-bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a44d5244fccf150aa23c93989bd332128}{isWorker} () const 
+bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a08022ebde7100ab9d1b4d7bbd9520d62}{is\+Worker} () const
 \item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad73b43c4abdbae6586b77ffdb06492d1}{Geant4Kernel} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4Kernel} $\ast$m, unsigned long identifier)
-\begin{DoxyCompactList}\small\item\em Standard constructor for workers. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad73b43c4abdbae6586b77ffdb06492d1}{Geant4\+Kernel} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel} $\ast$\hyperlink{_volumes_8cpp_a6fc379aaec47ce424b00d8ffda2a6c59}{m}, unsigned long identifier)
+\begin{DoxyCompactList}\small\item\em Standard constructor for workers. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-G4RunManager $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3680634351832865b7df33095adf8ef7}{m\_\-runManager}
-\begin{DoxyCompactList}\small\item\em Reference to the run manager. \item\end{DoxyCompactList}\item 
-G4UIdirectory $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a1b097ce042c194b7fc041c3457868c2c}{m\_\-control}
-\begin{DoxyCompactList}\small\item\em Top level control directory. \item\end{DoxyCompactList}\item 
-G4TrackingManager $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a4bd577a1215149f49a745aa75b652565}{m\_\-trackMgr}
-\begin{DoxyCompactList}\small\item\em Reference to Geant4 track manager. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a0181177a7c4b6862a83b3a34a64a3ce9}{m\_\-lcdd}
-\begin{DoxyCompactList}\small\item\em Detector description object. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_property_manager}{PropertyManager} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac69e53b910f7ce956e684c4e2ccedc9f}{m\_\-properties}
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property} pool. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae28985781d4226ece4c3fffe8827b400}{Phases} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa1357848649b7fccb42bbaa0c5f88f58}{m\_\-phases}
-\begin{DoxyCompactList}\small\item\em Action phases. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae9fdf26cda88a6f822f060558e85d797}{Workers} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a8957db5b08d92dcd7b7c4ef63ea743b6}{m\_\-workers}
-\begin{DoxyCompactList}\small\item\em Worker threads. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9cd070dfd06f049aa11b56688faaa643}{GlobalActions} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a23bac03e5a169b5fc9446e574ad034ac}{m\_\-globalActions}
-\begin{DoxyCompactList}\small\item\em Globally registered actions. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9cd070dfd06f049aa11b56688faaa643}{GlobalActions} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_afab7f53720ce6b7255ff54d777c4ff4e}{m\_\-globalFilters}
-\begin{DoxyCompactList}\small\item\em Globally registered filters of sensitive detectors. \item\end{DoxyCompactList}\item 
-std::string \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a1019ec87b302f798f36361dd9be8b40a}{m\_\-controlName}
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: Name of the G4UI command tree. \item\end{DoxyCompactList}\item 
-std::string \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aea869c039be9e0818e4f80afbab1e47c}{m\_\-uiName}
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: Name of the UI action. Must be member of the global actions. \item\end{DoxyCompactList}\item 
-long \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a5786c0e6c67534e109595f568df489a9}{m\_\-numEvent}
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: Number of events to be executed in batch mode. \item\end{DoxyCompactList}\item 
-int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a419eed43ed023a0b43a2ddc44f474708}{m\_\-outputLevel}
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: Output level. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a259066f5e9a56bdbfc9718a2b42b8b06}{ClientOutputLevels} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a6693f4923ea60f878c15f665edf79de2}{m\_\-clientLevels}
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: Client output levels. \item\end{DoxyCompactList}\item 
-int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a402cfabce5a04002713b4e35569911d7}{m\_\-numThreads}
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}: Running in multi threaded context. \item\end{DoxyCompactList}\item 
-unsigned long \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad9fa311cf783a581dc24b158b754f3bc}{m\_\-id}
-\begin{DoxyCompactList}\small\item\em Flag: Master instance (id$<$0) or worker (id $>$= 0). \item\end{DoxyCompactList}\item 
-unsigned long \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac7d95e62b3a0cb5180bdb3c20bd79a1d}{m\_\-ident}
+G4\+Run\+Manager $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3680634351832865b7df33095adf8ef7}{m\+\_\+run\+Manager}
+\begin{DoxyCompactList}\small\item\em Reference to the run manager. \end{DoxyCompactList}\item 
+G4\+U\+Idirectory $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a1b097ce042c194b7fc041c3457868c2c}{m\+\_\+control}
+\begin{DoxyCompactList}\small\item\em Top level control directory. \end{DoxyCompactList}\item 
+G4\+Tracking\+Manager $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a4bd577a1215149f49a745aa75b652565}{m\+\_\+track\+Mgr}
+\begin{DoxyCompactList}\small\item\em Reference to Geant4 track manager. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a190e652b62ebce3db3372c4265ffa5a3}{L\+C\+DD} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a0181177a7c4b6862a83b3a34a64a3ce9}{m\+\_\+lcdd}
+\begin{DoxyCompactList}\small\item\em Detector description object. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_property_manager}{Property\+Manager} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac69e53b910f7ce956e684c4e2ccedc9f}{m\+\_\+properties}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property} pool. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae28985781d4226ece4c3fffe8827b400}{Phases} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa1357848649b7fccb42bbaa0c5f88f58}{m\+\_\+phases}
+\begin{DoxyCompactList}\small\item\em Action phases. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae9fdf26cda88a6f822f060558e85d797}{Workers} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a8957db5b08d92dcd7b7c4ef63ea743b6}{m\+\_\+workers}
+\begin{DoxyCompactList}\small\item\em Worker threads. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9cd070dfd06f049aa11b56688faaa643}{Global\+Actions} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a23bac03e5a169b5fc9446e574ad034ac}{m\+\_\+global\+Actions}
+\begin{DoxyCompactList}\small\item\em Globally registered actions. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9cd070dfd06f049aa11b56688faaa643}{Global\+Actions} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_afab7f53720ce6b7255ff54d777c4ff4e}{m\+\_\+global\+Filters}
+\begin{DoxyCompactList}\small\item\em Globally registered filters of sensitive detectors. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a1019ec87b302f798f36361dd9be8b40a}{m\+\_\+control\+Name}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}\+: Name of the G4\+UI command tree. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aea869c039be9e0818e4f80afbab1e47c}{m\+\_\+ui\+Name}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}\+: Name of the UI action. Must be member of the global actions. \end{DoxyCompactList}\item 
+long \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a5786c0e6c67534e109595f568df489a9}{m\+\_\+num\+Event}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}\+: Number of events to be executed in batch mode. \end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a419eed43ed023a0b43a2ddc44f474708}{m\+\_\+output\+Level}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}\+: Output level. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a259066f5e9a56bdbfc9718a2b42b8b06}{Client\+Output\+Levels} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a6693f4923ea60f878c15f665edf79de2}{m\+\_\+client\+Levels}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}\+: Client output levels. \end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a402cfabce5a04002713b4e35569911d7}{m\+\_\+num\+Threads}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property}\+: Running in multi threaded context. \end{DoxyCompactList}\item 
+unsigned long \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad9fa311cf783a581dc24b158b754f3bc}{m\+\_\+id}
+\begin{DoxyCompactList}\small\item\em Flag\+: Master instance (id$<$0) or worker (id $>$= 0) \end{DoxyCompactList}\item 
+unsigned long \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac7d95e62b3a0cb5180bdb3c20bd79a1d}{m\+\_\+ident}
 \item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4Kernel} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a5d1ef9677e88ba8fc503d1cb70b84cf8}{m\_\-master}
-\begin{DoxyCompactList}\small\item\em Parent reference. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4Kernel} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a47da20469676a2497cbf580428984362}{m\_\-shared}
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a5d1ef9677e88ba8fc503d1cb70b84cf8}{m\+\_\+master}
+\begin{DoxyCompactList}\small\item\em Parent reference. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a47da20469676a2497cbf580428984362}{m\+\_\+shared}
 \item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a774c57eb5d21094d0ecca5db90f24998}{m\_\-threadContext}
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4\+Context} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a774c57eb5d21094d0ecca5db90f24998}{m\+\_\+thread\+Context}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Class, which allows all \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} derivatives to access the DDG4 kernel structures. \begin{DoxyAuthor}{Author}
-M.Frank 
+Class, which allows all \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} derivatives to access the D\+D\+G4 kernel structures. 
+
+\begin{DoxyAuthor}{Author}
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
-Definition at line 43 of file Geant4Kernel.h.
+Definition at line 43 of file Geant4\+Kernel.\+h.
+
+
 
 \subsection{Member Typedef Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a259066f5e9a56bdbfc9718a2b42b8b06}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!ClientOutputLevels@{ClientOutputLevels}}
-\index{ClientOutputLevels@{ClientOutputLevels}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{ClientOutputLevels}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$std::string,int$>$ {\bf DD4hep::Simulation::Geant4Kernel::ClientOutputLevels}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a259066f5e9a56bdbfc9718a2b42b8b06}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a259066f5e9a56bdbfc9718a2b42b8b06}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a259066f5e9a56bdbfc9718a2b42b8b06} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!Client\+Output\+Levels@{Client\+Output\+Levels}}
+\index{Client\+Output\+Levels@{Client\+Output\+Levels}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{Client\+Output\+Levels}{ClientOutputLevels}}
+{\footnotesize\ttfamily typedef std\+::map$<$std\+::string,int$>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a259066f5e9a56bdbfc9718a2b42b8b06}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::\+Client\+Output\+Levels}}
 
 
-Definition at line 49 of file Geant4Kernel.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9cd070dfd06f049aa11b56688faaa643}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!GlobalActions@{GlobalActions}}
-\index{GlobalActions@{GlobalActions}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{GlobalActions}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$std::string, {\bf Geant4Action}$\ast$$>$ {\bf DD4hep::Simulation::Geant4Kernel::GlobalActions}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9cd070dfd06f049aa11b56688faaa643}
+
+Definition at line 49 of file Geant4\+Kernel.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9cd070dfd06f049aa11b56688faaa643}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9cd070dfd06f049aa11b56688faaa643} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!Global\+Actions@{Global\+Actions}}
+\index{Global\+Actions@{Global\+Actions}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{Global\+Actions}{GlobalActions}}
+{\footnotesize\ttfamily typedef std\+::map$<$std\+::string, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action}$\ast$$>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9cd070dfd06f049aa11b56688faaa643}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::\+Global\+Actions}}
 
 
-Definition at line 48 of file Geant4Kernel.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a190e652b62ebce3db3372c4265ffa5a3}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!LCDD@{LCDD}}
-\index{LCDD@{LCDD}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{LCDD}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf DD4hep::Geometry::LCDD} {\bf DD4hep::Simulation::Geant4Kernel::LCDD}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a190e652b62ebce3db3372c4265ffa5a3}
+
+Definition at line 48 of file Geant4\+Kernel.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a190e652b62ebce3db3372c4265ffa5a3}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a190e652b62ebce3db3372c4265ffa5a3} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!L\+C\+DD@{L\+C\+DD}}
+\index{L\+C\+DD@{L\+C\+DD}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{L\+C\+DD}{LCDD}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{D\+D4hep\+::\+Geometry\+::\+L\+C\+DD} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a190e652b62ebce3db3372c4265ffa5a3}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::\+L\+C\+DD}}
 
 
-Definition at line 45 of file Geant4Kernel.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae28985781d4226ece4c3fffe8827b400}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!Phases@{Phases}}
-\index{Phases@{Phases}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{Phases}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$std::string, {\bf Geant4ActionPhase}$\ast$$>$ {\bf DD4hep::Simulation::Geant4Kernel::Phases}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae28985781d4226ece4c3fffe8827b400}
+
+Definition at line 45 of file Geant4\+Kernel.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae28985781d4226ece4c3fffe8827b400}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae28985781d4226ece4c3fffe8827b400} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!Phases@{Phases}}
+\index{Phases@{Phases}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{Phases}{Phases}}
+{\footnotesize\ttfamily typedef std\+::map$<$std\+::string, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}{Geant4\+Action\+Phase}$\ast$$>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae28985781d4226ece4c3fffe8827b400}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::\+Phases}}
 
 
-Definition at line 47 of file Geant4Kernel.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae9fdf26cda88a6f822f060558e85d797}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!Workers@{Workers}}
-\index{Workers@{Workers}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{Workers}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$unsigned long, {\bf Geant4Kernel}$\ast$$>$ {\bf DD4hep::Simulation::Geant4Kernel::Workers}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae9fdf26cda88a6f822f060558e85d797}
+
+Definition at line 47 of file Geant4\+Kernel.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae9fdf26cda88a6f822f060558e85d797}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae9fdf26cda88a6f822f060558e85d797} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!Workers@{Workers}}
+\index{Workers@{Workers}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{Workers}{Workers}}
+{\footnotesize\ttfamily typedef std\+::map$<$unsigned long, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel}$\ast$$>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae9fdf26cda88a6f822f060558e85d797}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::\+Workers}}
 
 
-Definition at line 46 of file Geant4Kernel.h.
+
+Definition at line 46 of file Geant4\+Kernel.\+h.
+
+
 
 \subsection{Member Enumeration Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ab0de90f94bc8898e60c2ca6cef292d92}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!State@{State}}
-\index{State@{State}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DD4hep::Simulation::Geant4Kernel::State}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ab0de90f94bc8898e60c2ca6cef292d92}
-\begin{Desc}
-\item[Enumerator: ]\par
-\begin{description}
-\index{SETTING\_\-UP@{SETTING\_\-UP}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!SETTING\_\-UP@{SETTING\_\-UP}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ab0de90f94bc8898e60c2ca6cef292d92ad9e96c644ab9e3980c3c72ffb02cdefc}{
-SETTING\_\-UP}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ab0de90f94bc8898e60c2ca6cef292d92ad9e96c644ab9e3980c3c72ffb02cdefc}
-}]\index{INITIALIZED@{INITIALIZED}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!INITIALIZED@{INITIALIZED}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ab0de90f94bc8898e60c2ca6cef292d92a0d9e793dd29116f95a10525a25f9701a}{
-INITIALIZED}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ab0de90f94bc8898e60c2ca6cef292d92a0d9e793dd29116f95a10525a25f9701a}
-}]\end{description}
-\end{Desc}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ab0de90f94bc8898e60c2ca6cef292d92}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ab0de90f94bc8898e60c2ca6cef292d92} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!State@{State}}
+\index{State@{State}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ab0de90f94bc8898e60c2ca6cef292d92}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::\+State}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+E\+T\+T\+I\+N\+G\+\_\+\+UP@{S\+E\+T\+T\+I\+N\+G\+\_\+\+UP}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!S\+E\+T\+T\+I\+N\+G\+\_\+\+UP@{S\+E\+T\+T\+I\+N\+G\+\_\+\+UP}}}\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ab0de90f94bc8898e60c2ca6cef292d92ad9e96c644ab9e3980c3c72ffb02cdefc}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ab0de90f94bc8898e60c2ca6cef292d92ad9e96c644ab9e3980c3c72ffb02cdefc} 
+S\+E\+T\+T\+I\+N\+G\+\_\+\+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED@{I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED@{I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}}}\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ab0de90f94bc8898e60c2ca6cef292d92a0d9e793dd29116f95a10525a25f9701a}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ab0de90f94bc8898e60c2ca6cef292d92a0d9e793dd29116f95a10525a25f9701a} 
+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED&\\
+\hline
+
+\end{DoxyEnumFields}
 
 
+Definition at line 140 of file Geant4\+Kernel.\+h.
 
-Definition at line 140 of file Geant4Kernel.h.
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad73b43c4abdbae6586b77ffdb06492d1}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!Geant4Kernel@{Geant4Kernel}}
-\index{Geant4Kernel@{Geant4Kernel}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{Geant4Kernel}]{\setlength{\rightskip}{0pt plus 5cm}Geant4Kernel::Geant4Kernel ({\bf Geant4Kernel} $\ast$ {\em m}, \/  unsigned long {\em identifier})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad73b43c4abdbae6586b77ffdb06492d1}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad73b43c4abdbae6586b77ffdb06492d1}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad73b43c4abdbae6586b77ffdb06492d1} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!Geant4\+Kernel@{Geant4\+Kernel}}
+\index{Geant4\+Kernel@{Geant4\+Kernel}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{Geant4\+Kernel()}{Geant4Kernel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Geant4\+Kernel\+::\+Geant4\+Kernel (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel} $\ast$}]{m,  }\item[{unsigned long}]{identifier }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
-Standard constructor for workers. Standard constructor. 
 
-Definition at line 98 of file Geant4Kernel.cpp.
+Standard constructor for workers. 
 
-References declareProperty(), DD4hep::InstanceCount::increment(), m\_\-clientLevels, m\_\-control, m\_\-controlName, m\_\-ident, m\_\-lcdd, m\_\-master, m\_\-outputLevel, m\_\-uiName, m\_\-workers, and DD4hep::Simulation::Geant4ActionContainer::setContext().
+Standard constructor. 
 
-Referenced by createWorker(), and instance().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_afa28c3122a6607f3641d22f1c1602786}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!Geant4Kernel@{Geant4Kernel}}
-\index{Geant4Kernel@{Geant4Kernel}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{Geant4Kernel}]{\setlength{\rightskip}{0pt plus 5cm}Geant4Kernel::Geant4Kernel ({\bf LCDD} \& {\em lcdd})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_afa28c3122a6607f3641d22f1c1602786}
+Definition at line 98 of file Geant4\+Kernel.\+cpp.
 
 
-Standard constructor for the master instance. Standard constructor. 
 
-Definition at line 78 of file Geant4Kernel.cpp.
+References declare\+Property(), D\+D4hep\+::\+Instance\+Count\+::increment(), m\+\_\+client\+Levels, m\+\_\+control, m\+\_\+control\+Name, m\+\_\+ident, m\+\_\+lcdd, m\+\_\+master, m\+\_\+output\+Level, m\+\_\+ui\+Name, m\+\_\+workers, and D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+Container\+::set\+Context().
 
-References DD4hep::Geometry::LCDD::addExtension(), DD4hep::DEBUG, declareProperty(), DD4hep::InstanceCount::increment(), m\_\-clientLevels, m\_\-control, m\_\-controlName, m\_\-ident, m\_\-lcdd, m\_\-numEvent, m\_\-numThreads, m\_\-outputLevel, m\_\-uiName, and DD4hep::Simulation::Geant4ActionContainer::setContext().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a57dadf34909a60f7771fa15d4b7501d4}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!$\sim$Geant4Kernel@{$\sim$Geant4Kernel}}
-\index{$\sim$Geant4Kernel@{$\sim$Geant4Kernel}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{$\sim$Geant4Kernel}]{\setlength{\rightskip}{0pt plus 5cm}Geant4Kernel::$\sim$Geant4Kernel ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a57dadf34909a60f7771fa15d4b7501d4}
+
+
+Referenced by create\+Worker(), instance(), and is\+Worker().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_afa28c3122a6607f3641d22f1c1602786}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_afa28c3122a6607f3641d22f1c1602786} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!Geant4\+Kernel@{Geant4\+Kernel}}
+\index{Geant4\+Kernel@{Geant4\+Kernel}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{Geant4\+Kernel()}{Geant4Kernel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Geant4\+Kernel\+::\+Geant4\+Kernel (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a190e652b62ebce3db3372c4265ffa5a3}{L\+C\+DD} \&}]{lcdd }\end{DoxyParamCaption})}
+
+
+
+Standard constructor for the master instance. 
+
+Standard constructor. 
+
+Definition at line 78 of file Geant4\+Kernel.\+cpp.
+
+
+
+References D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+::add\+Extension(), D\+D4hep\+::\+D\+E\+B\+UG, declare\+Property(), D\+D4hep\+::\+Instance\+Count\+::increment(), m\+\_\+client\+Levels, m\+\_\+control, m\+\_\+control\+Name, m\+\_\+ident, m\+\_\+lcdd, m\+\_\+num\+Event, m\+\_\+num\+Threads, m\+\_\+output\+Level, m\+\_\+ui\+Name, and D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+Container\+::set\+Context().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a57dadf34909a60f7771fa15d4b7501d4}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a57dadf34909a60f7771fa15d4b7501d4} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!````~Geant4\+Kernel@{$\sim$\+Geant4\+Kernel}}
+\index{````~Geant4\+Kernel@{$\sim$\+Geant4\+Kernel}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{$\sim$\+Geant4\+Kernel()}{~Geant4Kernel()}}
+{\footnotesize\ttfamily Geant4\+Kernel\+::$\sim$\+Geant4\+Kernel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Default destructor. 
 
-Definition at line 117 of file Geant4Kernel.cpp.
 
-References DD4hep::InstanceCount::decrement(), DD4hep::deletePtr(), DD4hep::Geometry::LCDD::destroyInstance(), DD4hep::destroyObjects(), destroyPhases(), isMaster(), m\_\-globalActions, m\_\-globalFilters, m\_\-lcdd, m\_\-runManager, m\_\-workers, DD4hep::releaseObjects(), DD4hep::Geometry::LCDD::removeExtension(), and terminate().
+
+Definition at line 117 of file Geant4\+Kernel.\+cpp.
+
+
+
+References D\+D4hep\+::\+Instance\+Count\+::decrement(), D\+D4hep\+::delete\+Ptr(), D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+::destroy\+Instance(), D\+D4hep\+::destroy\+Objects(), destroy\+Phases(), is\+Master(), m\+\_\+global\+Actions, m\+\_\+global\+Filters, m\+\_\+lcdd, m\+\_\+run\+Manager, m\+\_\+workers, D\+D4hep\+::release\+Objects(), D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+::remove\+Extension(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+Container\+::terminate().
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3f0e8487909e620f5d7a74153c4aa418}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!addPhase@{addPhase}}
-\index{addPhase@{addPhase}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{addPhase}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename A0 , typename A1 , typename A2 $>$ {\bf Geant4ActionPhase}$\ast$ DD4hep::Simulation::Geant4Kernel::addPhase (const std::string \& {\em name}, \/  bool {\em throw\_\-on\_\-exist} = {\ttfamily true})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3f0e8487909e620f5d7a74153c4aa418}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a7b04d88f6257e121268032dfe2bdc2d4}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a7b04d88f6257e121268032dfe2bdc2d4} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!add\+Phase@{add\+Phase}}
+\index{add\+Phase@{add\+Phase}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{add\+Phase()}{addPhase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}{Geant4\+Action\+Phase}$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::add\+Phase (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::type\+\_\+info \&}]{arg1,  }\item[{const std\+::type\+\_\+info \&}]{arg2,  }\item[{const std\+::type\+\_\+info \&}]{arg3,  }\item[{bool}]{throw\+\_\+on\+\_\+exist }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-
-Add a new phase to the phase. 
-
-Definition at line 226 of file Geant4Kernel.h.
-
-References addPhase().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3f0e8487909e620f5d7a74153c4aa418}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!addPhase@{addPhase}}
-\index{addPhase@{addPhase}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{addPhase}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename A0 , typename A1 $>$ {\bf Geant4ActionPhase}$\ast$ DD4hep::Simulation::Geant4Kernel::addPhase (const std::string \& {\em name}, \/  bool {\em throw\_\-on\_\-exist} = {\ttfamily true})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3f0e8487909e620f5d7a74153c4aa418}
 
 
 Add a new phase to the phase. 
 
-Definition at line 221 of file Geant4Kernel.h.
-
-References addPhase().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3f0e8487909e620f5d7a74153c4aa418}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!addPhase@{addPhase}}
-\index{addPhase@{addPhase}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{addPhase}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename A0 $>$ {\bf Geant4ActionPhase}$\ast$ DD4hep::Simulation::Geant4Kernel::addPhase (const std::string \& {\em name}, \/  bool {\em throw\_\-on\_\-exist} = {\ttfamily true})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3f0e8487909e620f5d7a74153c4aa418}
 
 
-Add a new phase to the phase. 
+Referenced by add\+Phase(), add\+Simple\+Phase(), id(), and D\+D4hep\+::\+Converter$<$ T, A\+R\+G $>$\+::operator()().
 
-Definition at line 216 of file Geant4Kernel.h.
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9911ca521ebd05a1126fb04adbf3f0b2}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9911ca521ebd05a1126fb04adbf3f0b2} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!add\+Phase@{add\+Phase}}
+\index{add\+Phase@{add\+Phase}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{add\+Phase()}{addPhase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename A0 $>$ \\
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}{Geant4\+Action\+Phase}$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::add\+Phase (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{bool}]{throw\+\_\+on\+\_\+exist = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-References addPhase().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a7b04d88f6257e121268032dfe2bdc2d4}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!addPhase@{addPhase}}
-\index{addPhase@{addPhase}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{addPhase}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Geant4ActionPhase}$\ast$ DD4hep::Simulation::Geant4Kernel::addPhase (const std::string \& {\em name}, \/  const std::type\_\-info \& {\em arg1}, \/  const std::type\_\-info \& {\em arg2}, \/  const std::type\_\-info \& {\em arg3}, \/  bool {\em throw\_\-on\_\-exist})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a7b04d88f6257e121268032dfe2bdc2d4}
 
 
 Add a new phase to the phase. 
 
-Referenced by addPhase(), addSimplePhase(), and DD4hep::Converter$<$ T, ARG $>$::operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad6e24016ebe31a06417ffac7f6e93818}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!addSimplePhase@{addSimplePhase}}
-\index{addSimplePhase@{addSimplePhase}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{addSimplePhase}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4ActionPhase} $\ast$ Geant4Kernel::addSimplePhase (const std::string \& {\em name}, \/  bool {\em throw\_\-on\_\-exist})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad6e24016ebe31a06417ffac7f6e93818}
+
+
+Definition at line 216 of file Geant4\+Kernel.\+h.
+
+
+
+References add\+Phase().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a7b0facce444f94e34bf9828d8b418e44}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a7b0facce444f94e34bf9828d8b418e44} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!add\+Phase@{add\+Phase}}
+\index{add\+Phase@{add\+Phase}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{add\+Phase()}{addPhase()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename A0 , typename A1 $>$ \\
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}{Geant4\+Action\+Phase}$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::add\+Phase (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{bool}]{throw\+\_\+on\+\_\+exist = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Add a new phase to the phase. 
 
-Definition at line 415 of file Geant4Kernel.cpp.
-
-References addPhase().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae48b44218f1a8115d8c7c105db17c43f}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!configure@{configure}}
-\index{configure@{configure}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{configure}]{\setlength{\rightskip}{0pt plus 5cm}int Geant4Kernel::configure ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae48b44218f1a8115d8c7c105db17c43f}
 
 
-Run the simulation: Configure Geant4. 
-
-Definition at line 277 of file Geant4Kernel.cpp.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a8d5bfc7d22e12f711950bd1c64173b74}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!createWorker@{createWorker}}
-\index{createWorker@{createWorker}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{createWorker}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Kernel} \& Geant4Kernel::createWorker ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a8d5bfc7d22e12f711950bd1c64173b74}
+Definition at line 221 of file Geant4\+Kernel.\+h.
 
 
-Create identified worker instance. Geant4 Multi threading support 
 
-Definition at line 160 of file Geant4Kernel.cpp.
+References add\+Phase().
 
-References DD4hep::format(), Geant4Kernel(), DD4hep::INFO, isMaster(), m\_\-workers, DD4hep::printout(), and thread\_\-self().
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_afc77080c02b923ee7ba39519e7d73acb}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_afc77080c02b923ee7ba39519e7d73acb} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!add\+Phase@{add\+Phase}}
+\index{add\+Phase@{add\+Phase}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{add\+Phase()}{addPhase()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename A0 , typename A1 , typename A2 $>$ \\
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}{Geant4\+Action\+Phase}$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::add\+Phase (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{bool}]{throw\+\_\+on\+\_\+exist = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Referenced by worker().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa9f02684c5f94b400f6d2fbe47d3cb55}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!declareProperty@{declareProperty}}
-\index{declareProperty@{declareProperty}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{declareProperty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Geant4Kernel} \& DD4hep::Simulation::Geant4Kernel::declareProperty (const char $\ast$ {\em nam}, \/  {\bf T} \& {\em val})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa9f02684c5f94b400f6d2fbe47d3cb55}
+
+
+Add a new phase to the phase. 
+
+
+
+Definition at line 226 of file Geant4\+Kernel.\+h.
+
+
+
+References add\+Phase(), configure(), create\+Worker(), destroy\+Phases(), execute\+Phase(), initialize(), load\+Geometry(), load\+X\+M\+L(), num\+Workers(), remove\+Phase(), run(), run\+Events(), terminate(), and worker().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad6e24016ebe31a06417ffac7f6e93818}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad6e24016ebe31a06417ffac7f6e93818} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!add\+Simple\+Phase@{add\+Simple\+Phase}}
+\index{add\+Simple\+Phase@{add\+Simple\+Phase}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{add\+Simple\+Phase()}{addSimplePhase()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}{Geant4\+Action\+Phase} $\ast$ Geant4\+Kernel\+::add\+Simple\+Phase (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{bool}]{throw\+\_\+on\+\_\+exist }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Add a new phase to the phase. 
+
+
+
+Definition at line 415 of file Geant4\+Kernel.\+cpp.
+
+
+
+References add\+Phase(), D\+D4hep\+::format(), m\+\_\+phases, and D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+Container\+::worker\+Context().
+
+
+
+Referenced by id().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae48b44218f1a8115d8c7c105db17c43f}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae48b44218f1a8115d8c7c105db17c43f} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!configure@{configure}}
+\index{configure@{configure}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily int Geant4\+Kernel\+::configure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Run the simulation\+: Configure Geant4. 
+
+
+
+Definition at line 277 of file Geant4\+Kernel.\+cpp.
+
+
+
+References D\+D4hep\+::\+Simulation\+::\+Geant4\+Exec\+::configure().
+
+
+
+Referenced by add\+Phase().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a8d5bfc7d22e12f711950bd1c64173b74}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a8d5bfc7d22e12f711950bd1c64173b74} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!create\+Worker@{create\+Worker}}
+\index{create\+Worker@{create\+Worker}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{create\+Worker()}{createWorker()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel} \& Geant4\+Kernel\+::create\+Worker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Create identified worker instance. 
+
+Geant4 Multi threading support 
+
+Definition at line 160 of file Geant4\+Kernel.\+cpp.
+
+
+
+References D\+D4hep\+::format(), Geant4\+Kernel(), D\+D4hep\+::\+I\+N\+FO, is\+Master(), m\+\_\+workers, D\+D4hep\+::printout(), and thread\+\_\+self().
+
+
+
+Referenced by add\+Phase(), and worker().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac267696721115fda0d13cc9a4337214e}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac267696721115fda0d13cc9a4337214e} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!declare\+Property@{declare\+Property}}
+\index{declare\+Property@{declare\+Property}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{declare\+Property()}{declareProperty()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel} \& D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::declare\+Property (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nam,  }\item[{\hyperlink{class_t}{T} \&}]{val }\end{DoxyParamCaption})}
+
 
 
 Declare property. 
 
-Definition at line 268 of file Geant4Kernel.h.
 
-References DD4hep::PropertyManager::add(), and m\_\-properties.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aadb88423f1b7ae7d5cc9e8cfab93c425}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!declareProperty@{declareProperty}}
-\index{declareProperty@{declareProperty}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{declareProperty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Geant4Kernel} \& DD4hep::Simulation::Geant4Kernel::declareProperty (const std::string \& {\em nam}, \/  {\bf T} \& {\em val})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aadb88423f1b7ae7d5cc9e8cfab93c425}
+
+Definition at line 262 of file Geant4\+Kernel.\+h.
+
+
+
+References D\+D4hep\+::\+Property\+Manager\+::add(), and m\+\_\+properties.
+
+
+
+Referenced by Geant4\+Kernel(), and id().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a7729a86ca944cc34f9e42447650905f1}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a7729a86ca944cc34f9e42447650905f1} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!declare\+Property@{declare\+Property}}
+\index{declare\+Property@{declare\+Property}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{declare\+Property()}{declareProperty()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel} \& D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::declare\+Property (\begin{DoxyParamCaption}\item[{const char $\ast$}]{nam,  }\item[{\hyperlink{class_t}{T} \&}]{val }\end{DoxyParamCaption})}
+
 
 
 Declare property. 
 
-Definition at line 262 of file Geant4Kernel.h.
 
-References DD4hep::PropertyManager::add(), and m\_\-properties.
 
-Referenced by Geant4Kernel().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_af8c01fc03cdb8db95fafe071eee0ba5a}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!destroyPhases@{destroyPhases}}
-\index{destroyPhases@{destroyPhases}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{destroyPhases}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Kernel::destroyPhases ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_af8c01fc03cdb8db95fafe071eee0ba5a}
+Definition at line 268 of file Geant4\+Kernel.\+h.
+
+
+
+References D\+D4hep\+::\+Property\+Manager\+::add(), and m\+\_\+properties.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_af8c01fc03cdb8db95fafe071eee0ba5a}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_af8c01fc03cdb8db95fafe071eee0ba5a} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!destroy\+Phases@{destroy\+Phases}}
+\index{destroy\+Phases@{destroy\+Phases}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{destroy\+Phases()}{destroyPhases()}}
+{\footnotesize\ttfamily void Geant4\+Kernel\+::destroy\+Phases (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Destroy all phases. To be called only at shutdown. 
 
-Definition at line 447 of file Geant4Kernel.cpp.
 
-References DD4hep::destroyObjects(), and m\_\-phases.
 
-Referenced by terminate(), and $\sim$Geant4Kernel().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa30888e16596794250fb32e545ff78bb}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!directoryName@{directoryName}}
-\index{directoryName@{directoryName}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{directoryName}]{\setlength{\rightskip}{0pt plus 5cm}const std::string\& DD4hep::Simulation::Geant4Kernel::directoryName () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa30888e16596794250fb32e545ff78bb}
+Definition at line 447 of file Geant4\+Kernel.\+cpp.
+
+
+
+References D\+D4hep\+::destroy\+Objects(), and m\+\_\+phases.
+
+
+
+Referenced by add\+Phase(), terminate(), and $\sim$\+Geant4\+Kernel().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad922e8f9b10efb7503fad89764d98612}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad922e8f9b10efb7503fad89764d98612} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!directory\+Name@{directory\+Name}}
+\index{directory\+Name@{directory\+Name}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{directory\+Name()}{directoryName()}}
+{\footnotesize\ttfamily const std\+::string\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::directory\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Access the command directory. 
 
-Definition at line 159 of file Geant4Kernel.h.
 
-Referenced by DD4hep::Simulation::Geant4Action::installMessengers().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9fbb49abf09139f19d21a5d5d83f2590}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!executePhase@{executePhase}}
-\index{executePhase@{executePhase}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{executePhase}]{\setlength{\rightskip}{0pt plus 5cm}bool Geant4Kernel::executePhase (const std::string \& {\em name}, \/  const void $\ast$$\ast$ {\em args}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9fbb49abf09139f19d21a5d5d83f2590}
+
+Definition at line 159 of file Geant4\+Kernel.\+h.
+
+
+
+References m\+\_\+control\+Name.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a372116bbf95a9e9c63beb0906d8f222b}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a372116bbf95a9e9c63beb0906d8f222b} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!execute\+Phase@{execute\+Phase}}
+\index{execute\+Phase@{execute\+Phase}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{execute\+Phase()}{executePhase()}}
+{\footnotesize\ttfamily bool Geant4\+Kernel\+::execute\+Phase (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const void $\ast$$\ast$}]{args }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Execute phase action if it exists. 
 
-Definition at line 395 of file Geant4Kernel.cpp.
 
-References m\_\-phases.
 
-Referenced by DD4hep::Simulation::Geant4UserEventAction::BeginOfEventAction(), DD4hep::Simulation::Geant4UserRunAction::BeginOfRunAction(), DD4hep::Simulation::Geant4Exec::configure(), DD4hep::Simulation::Geant4UserEventAction::EndOfEventAction(), DD4hep::Simulation::Geant4UserRunAction::EndOfRunAction(), DD4hep::Simulation::Geant4Exec::initialize(), DD4hep::Simulation::Geant4Exec::run(), and DD4hep::Simulation::Geant4Exec::terminate().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a0b9efcb33597d3a7191f3067c2691473}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!getOutputLevel@{getOutputLevel}}
-\index{getOutputLevel@{getOutputLevel}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{getOutputLevel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DD4hep::PrintLevel} Geant4Kernel::getOutputLevel (const std::string {\em object}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a0b9efcb33597d3a7191f3067c2691473}
+Definition at line 395 of file Geant4\+Kernel.\+cpp.
+
+
+
+References m\+\_\+phases.
+
+
+
+Referenced by add\+Phase(), D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Event\+Action\+::\+Begin\+Of\+Event\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Run\+Action\+::\+Begin\+Of\+Run\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Exec\+::configure(), D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Event\+Action\+::\+End\+Of\+Event\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Run\+Action\+::\+End\+Of\+Run\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Exec\+::initialize(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Exec\+::run(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Exec\+::terminate().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_adcf47e98a5cff7d2ddf235753f907a63}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_adcf47e98a5cff7d2ddf235753f907a63} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!get\+Output\+Level@{get\+Output\+Level}}
+\index{get\+Output\+Level@{get\+Output\+Level}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{get\+Output\+Level()}{getOutputLevel()}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{D\+D4hep\+::\+Print\+Level} Geant4\+Kernel\+::get\+Output\+Level (\begin{DoxyParamCaption}\item[{const std\+::string}]{object }\end{DoxyParamCaption}) const}
+
 
 
 Retrieve the global output level of a named object. 
 
-Definition at line 223 of file Geant4Kernel.cpp.
 
-References m\_\-clientLevels, and DD4hep::printLevel().
 
-Referenced by DD4hep::Simulation::Geant4SensDet::Geant4SensDet().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ada608fd803fba670ab573da9a7a012eb}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!getPhase@{getPhase}}
-\index{getPhase@{getPhase}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{getPhase}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4ActionPhase} $\ast$ Geant4Kernel::getPhase (const std::string \& {\em name})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ada608fd803fba670ab573da9a7a012eb}
+Definition at line 223 of file Geant4\+Kernel.\+cpp.
+
+
+
+References m\+\_\+client\+Levels, and D\+D4hep\+::print\+Level().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+::\+Geant4\+Sens\+Det(), id(), and D\+D4hep\+::\+Simulation\+::\+Type\+Name\+::split().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ada608fd803fba670ab573da9a7a012eb}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ada608fd803fba670ab573da9a7a012eb} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!get\+Phase@{get\+Phase}}
+\index{get\+Phase@{get\+Phase}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{get\+Phase()}{getPhase()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_phase}{Geant4\+Action\+Phase} $\ast$ Geant4\+Kernel\+::get\+Phase (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
 
 
 Access phase by name. 
 
-Definition at line 405 of file Geant4Kernel.cpp.
 
-References DD4hep::format(), and m\_\-phases.
 
-Referenced by DD4hep::Simulation::Geant4Kernel::PhaseSelector::operator\mbox{[}$\,$\mbox{]}().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9142233acf94a391ef926eee86b04c26}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!globalAction@{globalAction}}
-\index{globalAction@{globalAction}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{globalAction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Action} $\ast$ Geant4Kernel::globalAction (const std::string \& {\em action\_\-name}, \/  bool {\em throw\_\-if\_\-not\_\-present} = {\ttfamily true})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9142233acf94a391ef926eee86b04c26}
+Definition at line 405 of file Geant4\+Kernel.\+cpp.
+
+
+
+References D\+D4hep\+::format(), and m\+\_\+phases.
+
+
+
+Referenced by id(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::\+Phase\+Selector\+::operator\mbox{[}$\,$\mbox{]}().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9142233acf94a391ef926eee86b04c26}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9142233acf94a391ef926eee86b04c26} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!global\+Action@{global\+Action}}
+\index{global\+Action@{global\+Action}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{global\+Action()}{globalAction()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} $\ast$ Geant4\+Kernel\+::global\+Action (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{action\+\_\+name,  }\item[{bool}]{throw\+\_\+if\+\_\+not\+\_\+present = {\ttfamily true} }\end{DoxyParamCaption})}
+
 
 
 Retrieve action from repository. 
 
-Definition at line 348 of file Geant4Kernel.cpp.
 
-References DD4hep::format(), and m\_\-globalActions.
 
-Referenced by DD4hep::Simulation::\_\-convertAction(), DD4hep::Simulation::\_\-createAction(), and DD4hep::Simulation::Geant4Exec::run().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad6b6f410f168992639e4fe3fa9fc2c73}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!globalFilter@{globalFilter}}
-\index{globalFilter@{globalFilter}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{globalFilter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Action} $\ast$ Geant4Kernel::globalFilter (const std::string \& {\em filter\_\-name}, \/  bool {\em throw\_\-if\_\-not\_\-present} = {\ttfamily true})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad6b6f410f168992639e4fe3fa9fc2c73}
+Definition at line 348 of file Geant4\+Kernel.\+cpp.
+
+
+
+References D\+D4hep\+::format(), and m\+\_\+global\+Actions.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+\_\+convert\+Action(), D\+D4hep\+::\+Simulation\+::\+\_\+create\+Action(), id(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Exec\+::run().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad6b6f410f168992639e4fe3fa9fc2c73}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad6b6f410f168992639e4fe3fa9fc2c73} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!global\+Filter@{global\+Filter}}
+\index{global\+Filter@{global\+Filter}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{global\+Filter()}{globalFilter()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} $\ast$ Geant4\+Kernel\+::global\+Filter (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filter\+\_\+name,  }\item[{bool}]{throw\+\_\+if\+\_\+not\+\_\+present = {\ttfamily true} }\end{DoxyParamCaption})}
+
 
 
 Retrieve filter from repository. 
 
-Definition at line 382 of file Geant4Kernel.cpp.
 
-References DD4hep::format(), and m\_\-globalFilters.
 
-Referenced by DD4hep::Simulation::\_\-convertSensitive(), and DD4hep::Simulation::\_\-createAction().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a615765e129ae5076af6f58e40540c977}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!hasProperty@{hasProperty}}
-\index{hasProperty@{hasProperty}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{hasProperty}]{\setlength{\rightskip}{0pt plus 5cm}bool Geant4Kernel::hasProperty (const std::string \& {\em name}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a615765e129ae5076af6f58e40540c977}
+Definition at line 382 of file Geant4\+Kernel.\+cpp.
+
+
+
+References D\+D4hep\+::format(), and m\+\_\+global\+Filters.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+\_\+convert\+Sensitive(), D\+D4hep\+::\+Simulation\+::\+\_\+create\+Action(), and id().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_af867ef6ab82942e84625c5ebb9a06c3c}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_af867ef6ab82942e84625c5ebb9a06c3c} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!has\+Property@{has\+Property}}
+\index{has\+Property@{has\+Property}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{has\+Property()}{hasProperty()}}
+{\footnotesize\ttfamily bool Geant4\+Kernel\+::has\+Property (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
 
 
 Check property for existence. 
 
-Definition at line 208 of file Geant4Kernel.cpp.
 
-References DD4hep::PropertyManager::exists(), and m\_\-properties.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac15d27b4d51308d7eeab4c18702513d1}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!id@{id}}
-\index{id@{id}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long DD4hep::Simulation::Geant4Kernel::id () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac15d27b4d51308d7eeab4c18702513d1}
+
+Definition at line 208 of file Geant4\+Kernel.\+cpp.
+
+
+
+References D\+D4hep\+::\+Property\+Manager\+::exists(), and m\+\_\+properties.
+
+
+
+Referenced by id().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a65e6428708ccaa9e0c4545b57437246d}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a65e6428708ccaa9e0c4545b57437246d} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!id@{id}}
+\index{id@{id}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily unsigned long D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Access worker identifier. 
 
-Definition at line 161 of file Geant4Kernel.h.
-
-Referenced by DD4hep::Simulation::Geant4UserActionInitialization::Build().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_add7a520dbd9824819e75cf9ea3725882}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!initialize@{initialize}}
-\index{initialize@{initialize}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}int Geant4Kernel::initialize ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_add7a520dbd9824819e75cf9ea3725882}
 
 
-Run the simulation: Initialize Geant4. 
+Definition at line 161 of file Geant4\+Kernel.\+h.
 
-Definition at line 281 of file Geant4Kernel.cpp.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a791f6c4b8f9257f98d453457655870de}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!instance@{instance}}
-\index{instance@{instance}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Kernel} \& Geant4Kernel::instance ({\bf LCDD} \& {\em lcdd})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a791f6c4b8f9257f98d453457655870de}
+
+
+References add\+Phase(), add\+Simple\+Phase(), declare\+Property(), get\+Output\+Level(), get\+Phase(), global\+Action(), global\+Filter(), has\+Property(), m\+\_\+ident, m\+\_\+output\+Level, m\+\_\+properties, output\+Level(), print\+Properties(), properties(), property(), register\+Global\+Action(), register\+Global\+Filter(), run\+Manager(), and set\+Output\+Level().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Action\+Initialization\+::\+Build().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_add7a520dbd9824819e75cf9ea3725882}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_add7a520dbd9824819e75cf9ea3725882} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!initialize@{initialize}}
+\index{initialize@{initialize}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily int Geant4\+Kernel\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Run the simulation\+: Initialize Geant4. 
+
+
+
+Definition at line 281 of file Geant4\+Kernel.\+cpp.
+
+
+
+References D\+D4hep\+::\+Simulation\+::\+Geant4\+Exec\+::initialize().
+
+
+
+Referenced by add\+Phase().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a791f6c4b8f9257f98d453457655870de}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a791f6c4b8f9257f98d453457655870de} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!instance@{instance}}
+\index{instance@{instance}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel} \& Geant4\+Kernel\+::instance (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a190e652b62ebce3db3372c4265ffa5a3}{L\+C\+DD} \&}]{lcdd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
 
 
 Instance accessor. 
 
-Definition at line 142 of file Geant4Kernel.cpp.
-
-References Geant4Kernel().
-
-Referenced by DD4hep::Simulation::\_\-convertAction(), DD4hep::Simulation::\_\-convertSensitive(), DD4hep::Simulation::\_\-createAction(), DD4hep::Simulation::Geant4SensDet::Geant4SensDet(), DD4hep::Simulation::KernelHandle::KernelHandle(), and DD4hep::Converter$<$ T, ARG $>$::operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad6a2eb75792e2420a3e1e0fb45222d50}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!isMaster@{isMaster}}
-\index{isMaster@{isMaster}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{isMaster}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Simulation::Geant4Kernel::isMaster () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad6a2eb75792e2420a3e1e0fb45222d50}
 
 
-Definition at line 94 of file Geant4Kernel.h.
-
-References m\_\-master.
-
-Referenced by createWorker(), runManager(), and $\sim$Geant4Kernel().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a053a94be9966b7851bf25fdafb9a9d01}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!isMultiThreaded@{isMultiThreaded}}
-\index{isMultiThreaded@{isMultiThreaded}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{isMultiThreaded}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Simulation::Geant4Kernel::isMultiThreaded () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a053a94be9966b7851bf25fdafb9a9d01}
+Definition at line 142 of file Geant4\+Kernel.\+cpp.
 
 
-Definition at line 113 of file Geant4Kernel.h.
 
-References m\_\-numThreads.
-
-Referenced by DD4hep::Simulation::\_\-create\_\-share(), DD4hep::Simulation::Geant4Exec::configure(), and worker().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a44d5244fccf150aa23c93989bd332128}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!isWorker@{isWorker}}
-\index{isWorker@{isWorker}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{isWorker}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Simulation::Geant4Kernel::isWorker () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a44d5244fccf150aa23c93989bd332128}
+References Geant4\+Kernel().
 
 
-Definition at line 95 of file Geant4Kernel.h.
 
-References m\_\-master.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a172f416447f9f1aa4a1a166b0df902a3}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!lcdd@{lcdd}}
-\index{lcdd@{lcdd}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{lcdd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LCDD}\& DD4hep::Simulation::Geant4Kernel::lcdd () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a172f416447f9f1aa4a1a166b0df902a3}
+Referenced by D\+D4hep\+::\+Simulation\+::\+\_\+convert\+Action(), D\+D4hep\+::\+Simulation\+::\+\_\+convert\+Sensitive(), D\+D4hep\+::\+Simulation\+::\+\_\+create\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+::\+Geant4\+Sens\+Det(), D\+D4hep\+::\+Simulation\+::\+Kernel\+Handle\+::\+Kernel\+Handle(), and D\+D4hep\+::\+Converter$<$ T, A\+R\+G $>$\+::operator()().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a7913e7e64c2adfdc06339feab56e606f}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a7913e7e64c2adfdc06339feab56e606f} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!is\+Master@{is\+Master}}
+\index{is\+Master@{is\+Master}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{is\+Master()}{isMaster()}}
+{\footnotesize\ttfamily bool D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::is\+Master (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 94 of file Geant4\+Kernel.\+h.
+
+
+
+References m\+\_\+master.
+
+
+
+Referenced by create\+Worker(), run\+Manager(), and $\sim$\+Geant4\+Kernel().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a7bd105526c0873bd9b24d3de41052d88}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a7bd105526c0873bd9b24d3de41052d88} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!is\+Multi\+Threaded@{is\+Multi\+Threaded}}
+\index{is\+Multi\+Threaded@{is\+Multi\+Threaded}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{is\+Multi\+Threaded()}{isMultiThreaded()}}
+{\footnotesize\ttfamily bool D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::is\+Multi\+Threaded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 113 of file Geant4\+Kernel.\+h.
+
+
+
+References thread\+\_\+self().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+\_\+create\+\_\+share(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Exec\+::configure(), and worker().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a08022ebde7100ab9d1b4d7bbd9520d62}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a08022ebde7100ab9d1b4d7bbd9520d62} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!is\+Worker@{is\+Worker}}
+\index{is\+Worker@{is\+Worker}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{is\+Worker()}{isWorker()}}
+{\footnotesize\ttfamily bool D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::is\+Worker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 95 of file Geant4\+Kernel.\+h.
+
+
+
+References Geant4\+Kernel(), lcdd(), m, and m\+\_\+master.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad58adb3734f2701198b8915a80cf4cdc}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad58adb3734f2701198b8915a80cf4cdc} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!lcdd@{lcdd}}
+\index{lcdd@{lcdd}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{lcdd()}{lcdd()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a190e652b62ebce3db3372c4265ffa5a3}{L\+C\+DD}\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::lcdd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Access to detector description. 
 
-Definition at line 153 of file Geant4Kernel.h.
 
-Referenced by DD4hep::Simulation::Geant4Exec::configure(), DD4hep::Simulation::Geant4Handle$<$ TYPE $>$::Geant4Handle(), and DD4hep::Simulation::Geant4Context::lcdd().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_afe27ed5e3415cd381df461a28015ff81}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!loadGeometry@{loadGeometry}}
-\index{loadGeometry@{loadGeometry}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{loadGeometry}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Kernel::loadGeometry (const std::string \& {\em compact\_\-file})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_afe27ed5e3415cd381df461a28015ff81}
+
+Definition at line 153 of file Geant4\+Kernel.\+h.
+
+
+
+References m\+\_\+lcdd.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Exec\+::configure(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Handle$<$ T\+Y\+P\+E $>$\+::\+Geant4\+Handle(), is\+Worker(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Context\+::lcdd().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_afe27ed5e3415cd381df461a28015ff81}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_afe27ed5e3415cd381df461a28015ff81} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!load\+Geometry@{load\+Geometry}}
+\index{load\+Geometry@{load\+Geometry}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{load\+Geometry()}{loadGeometry()}}
+{\footnotesize\ttfamily void Geant4\+Kernel\+::load\+Geometry (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{compact\+\_\+file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Construct detector geometry using lcdd plugin. 
 
-Definition at line 265 of file Geant4Kernel.cpp.
-
-References DD4hep::Geometry::LCDD::apply(), and m\_\-lcdd.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aaaab733198f5e548e23c5b97dfd0aa32}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!loadXML@{loadXML}}
-\index{loadXML@{loadXML}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{loadXML}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Kernel::loadXML (const char $\ast$ {\em fname})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aaaab733198f5e548e23c5b97dfd0aa32}
 
 
-Load \hyperlink{namespace_d_d4hep_1_1_x_m_l}{XML} file. 
-
-Definition at line 272 of file Geant4Kernel.cpp.
-
-References DD4hep::Geometry::LCDD::apply(), and m\_\-lcdd.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a38ec8e1c3c5469aceaf178973386ddfc}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!master@{master}}
-\index{master@{master}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{master}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Kernel}\& DD4hep::Simulation::Geant4Kernel::master () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a38ec8e1c3c5469aceaf178973386ddfc}
+Definition at line 265 of file Geant4\+Kernel.\+cpp.
 
 
-Thread's master context. 
 
-Definition at line 107 of file Geant4Kernel.h.
+References D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+::apply(), and m\+\_\+lcdd.
 
-References m\_\-master.
 
-Referenced by DD4hep::Simulation::\_\-create\_\-share().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad3f634c51b845742578eaae0933cf3ef}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!numWorkers@{numWorkers}}
-\index{numWorkers@{numWorkers}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{numWorkers}]{\setlength{\rightskip}{0pt plus 5cm}int Geant4Kernel::numWorkers () const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad3f634c51b845742578eaae0933cf3ef}
+
+Referenced by add\+Phase().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aaaab733198f5e548e23c5b97dfd0aa32}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aaaab733198f5e548e23c5b97dfd0aa32} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!load\+X\+ML@{load\+X\+ML}}
+\index{load\+X\+ML@{load\+X\+ML}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{load\+X\+M\+L()}{loadXML()}}
+{\footnotesize\ttfamily void Geant4\+Kernel\+::load\+X\+ML (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Load \hyperlink{namespace_d_d4hep_1_1_x_m_l}{X\+ML} file. 
+
+
+
+Definition at line 272 of file Geant4\+Kernel.\+cpp.
+
+
+
+References D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+::apply(), and m\+\_\+lcdd.
+
+
+
+Referenced by add\+Phase().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad717838179751e34f857c1108ae6607b}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad717838179751e34f857c1108ae6607b} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!master@{master}}
+\index{master@{master}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{master()}{master()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel}\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::master (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Thread\textquotesingle{}s master context. 
+
+
+
+Definition at line 107 of file Geant4\+Kernel.\+h.
+
+
+
+References m\+\_\+master.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+\_\+create\+\_\+share().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a2ea8899db4b10255c32f7e2e09ad2430}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a2ea8899db4b10255c32f7e2e09ad2430} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!num\+Workers@{num\+Workers}}
+\index{num\+Workers@{num\+Workers}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{num\+Workers()}{numWorkers()}}
+{\footnotesize\ttfamily int Geant4\+Kernel\+::num\+Workers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 
 
 Access number of workers. 
 
-Definition at line 193 of file Geant4Kernel.cpp.
-
-References m\_\-workers.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a36af85f213b7ded85d93621bdeacf09c}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!outputLevel@{outputLevel}}
-\index{outputLevel@{outputLevel}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{outputLevel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PrintLevel} DD4hep::Simulation::Geant4Kernel::outputLevel () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a36af85f213b7ded85d93621bdeacf09c}
 
 
-Access the output level. Output level settings 
+Definition at line 193 of file Geant4\+Kernel.\+cpp.
 
-Definition at line 181 of file Geant4Kernel.h.
 
-References m\_\-outputLevel.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_abebf51658a09e2e47dda6cd46e803ee0}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!phases@{phases}}
-\index{phases@{phases}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{phases}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Phases}\& DD4hep::Simulation::Geant4Kernel::phases () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_abebf51658a09e2e47dda6cd46e803ee0}
+
+References m\+\_\+workers.
+
+
+
+Referenced by add\+Phase().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aaaddf1d35de3dcb63d569e4ec8a7e4c6}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aaaddf1d35de3dcb63d569e4ec8a7e4c6} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!output\+Level@{output\+Level}}
+\index{output\+Level@{output\+Level}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{output\+Level()}{outputLevel()}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{Print\+Level} D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::output\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the output level. 
+
+Output level settings 
+
+Definition at line 181 of file Geant4\+Kernel.\+h.
+
+
+
+Referenced by id().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a94a98c5bbbd6cca43e9aecfaa135ef65}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a94a98c5bbbd6cca43e9aecfaa135ef65} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!phases@{phases}}
+\index{phases@{phases}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{phases()}{phases()}}
+{\footnotesize\ttfamily const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae28985781d4226ece4c3fffe8827b400}{Phases}\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::phases (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Access phase phases. 
 
-Definition at line 151 of file Geant4Kernel.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a2a2e31125a2bf5f5a40dd132f00d35d1}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!printProperties@{printProperties}}
-\index{printProperties@{printProperties}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{printProperties}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Kernel::printProperties () const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a2a2e31125a2bf5f5a40dd132f00d35d1}
+
+
+Definition at line 151 of file Geant4\+Kernel.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3a4988323078c97accc89fcc5e5f5750}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3a4988323078c97accc89fcc5e5f5750} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!print\+Properties@{print\+Properties}}
+\index{print\+Properties@{print\+Properties}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{print\+Properties()}{printProperties()}}
+{\footnotesize\ttfamily void Geant4\+Kernel\+::print\+Properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 
 
 Print the property values. 
 
-Definition at line 197 of file Geant4Kernel.cpp.
-
-References DD4hep::ALWAYS, m\_\-clientLevels, m\_\-numEvent, m\_\-numThreads, m\_\-outputLevel, m\_\-uiName, and DD4hep::printout().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a39d0b3dcebed9c0ec950410df346710b}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!properties@{properties}}
-\index{properties@{properties}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{properties}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PropertyManager}\& DD4hep::Simulation::Geant4Kernel::properties ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a39d0b3dcebed9c0ec950410df346710b}
 
 
-Access to the properties of the object. \hyperlink{class_d_d4hep_1_1_property}{Property} access 
+Definition at line 197 of file Geant4\+Kernel.\+cpp.
 
-Definition at line 167 of file Geant4Kernel.h.
 
-References m\_\-properties.
 
-Referenced by property().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a51c2d757b81b0c8ee31be77515d4d622}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!property@{property}}
-\index{property@{property}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{property}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DD4hep::Property} \& Geant4Kernel::property (const std::string \& {\em name})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a51c2d757b81b0c8ee31be77515d4d622}
+References D\+D4hep\+::\+A\+L\+W\+A\+YS, m\+\_\+client\+Levels, m\+\_\+num\+Event, m\+\_\+num\+Threads, m\+\_\+output\+Level, m\+\_\+ui\+Name, and D\+D4hep\+::printout().
+
+
+
+Referenced by id().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a39d0b3dcebed9c0ec950410df346710b}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a39d0b3dcebed9c0ec950410df346710b} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!properties@{properties}}
+\index{properties@{properties}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{properties()}{properties()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_property_manager}{Property\+Manager}\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access to the properties of the object. 
+
+\hyperlink{class_d_d4hep_1_1_property}{Property} access 
+
+Definition at line 167 of file Geant4\+Kernel.\+h.
+
+
+
+Referenced by id(), and property().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a51c2d757b81b0c8ee31be77515d4d622}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a51c2d757b81b0c8ee31be77515d4d622} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!property@{property}}
+\index{property@{property}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{property()}{property()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_property}{D\+D4hep\+::\+Property} \& Geant4\+Kernel\+::property (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
 
 
 Access single property. 
 
-Definition at line 213 of file Geant4Kernel.cpp.
+
+
+Definition at line 213 of file Geant4\+Kernel.\+cpp.
+
+
 
 References properties().
 
-Referenced by DD4hep::Converter$<$ T, ARG $>$::operator()(), DD4hep::Simulation::Geant4Exec::run(), and DD4hep::Simulation::Geant4UIManager::start().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a8792d3d0db403a52fe6495456b45c97a}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!registerGlobalAction@{registerGlobalAction}}
-\index{registerGlobalAction@{registerGlobalAction}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{registerGlobalAction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Kernel} \& Geant4Kernel::registerGlobalAction ({\bf Geant4Action} $\ast$ {\em action})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a8792d3d0db403a52fe6495456b45c97a}
 
 
-Register action by name to be retrieved when setting up and connecting action objects. Note: registered actions MUST be unique. However, not all actions need to registered.... Only register those, you later need to retrieve by name. 
+Referenced by id(), D\+D4hep\+::\+Converter$<$ T, A\+R\+G $>$\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Exec\+::run(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+U\+I\+Manager\+::start().
 
-Definition at line 329 of file Geant4Kernel.cpp.
-
-References DD4hep::Simulation::Geant4Action::addRef(), DD4hep::format(), DD4hep::INFO, m\_\-globalActions, DD4hep::Simulation::Geant4Action::name(), DD4hep::printout(), and DD4hep::typeName().
-
-Referenced by DD4hep::Converter$<$ T, ARG $>$::operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a0690ca4b44a14133f0c8562eebac9613}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!registerGlobalFilter@{registerGlobalFilter}}
-\index{registerGlobalFilter@{registerGlobalFilter}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{registerGlobalFilter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Kernel} \& Geant4Kernel::registerGlobalFilter ({\bf Geant4Action} $\ast$ {\em filter})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a0690ca4b44a14133f0c8562eebac9613}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a8792d3d0db403a52fe6495456b45c97a}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a8792d3d0db403a52fe6495456b45c97a} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!register\+Global\+Action@{register\+Global\+Action}}
+\index{register\+Global\+Action@{register\+Global\+Action}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{register\+Global\+Action()}{registerGlobalAction()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel} \& Geant4\+Kernel\+::register\+Global\+Action (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} $\ast$}]{action }\end{DoxyParamCaption})}
 
 
-Register filter by name to be retrieved when setting up and connecting filter objects. Note: registered filters MUST be unique. However, not all filters need to registered.... Only register those, you later need to retrieve by name. 
 
-Definition at line 365 of file Geant4Kernel.cpp.
+Register action by name to be retrieved when setting up and connecting action objects. 
 
-References DD4hep::Simulation::Geant4Action::addRef(), DD4hep::format(), m\_\-globalFilters, and DD4hep::Simulation::Geant4Action::name().
+Note\+: registered actions M\+U\+ST be unique. However, not all actions need to registered.... Only register those, you later need to retrieve by name. 
 
-Referenced by DD4hep::Converter$<$ T, ARG $>$::operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3d2e1d38ae072b26c0a9124268065fbc}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!removePhase@{removePhase}}
-\index{removePhase@{removePhase}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{removePhase}]{\setlength{\rightskip}{0pt plus 5cm}bool Geant4Kernel::removePhase (const std::string \& {\em name})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3d2e1d38ae072b26c0a9124268065fbc}
+Definition at line 329 of file Geant4\+Kernel.\+cpp.
+
+
+
+References D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::add\+Ref(), D\+D4hep\+::format(), D\+D4hep\+::\+I\+N\+FO, m\+\_\+global\+Actions, D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::name(), D\+D4hep\+::printout(), and D\+D4hep\+::type\+Name().
+
+
+
+Referenced by id(), and D\+D4hep\+::\+Converter$<$ T, A\+R\+G $>$\+::operator()().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a0690ca4b44a14133f0c8562eebac9613}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a0690ca4b44a14133f0c8562eebac9613} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!register\+Global\+Filter@{register\+Global\+Filter}}
+\index{register\+Global\+Filter@{register\+Global\+Filter}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{register\+Global\+Filter()}{registerGlobalFilter()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel} \& Geant4\+Kernel\+::register\+Global\+Filter (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} $\ast$}]{filter }\end{DoxyParamCaption})}
+
+
+
+Register filter by name to be retrieved when setting up and connecting filter objects. 
+
+Note\+: registered filters M\+U\+ST be unique. However, not all filters need to registered.... Only register those, you later need to retrieve by name. 
+
+Definition at line 365 of file Geant4\+Kernel.\+cpp.
+
+
+
+References D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::add\+Ref(), D\+D4hep\+::format(), m\+\_\+global\+Filters, and D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::name().
+
+
+
+Referenced by id(), and D\+D4hep\+::\+Converter$<$ T, A\+R\+G $>$\+::operator()().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3d2e1d38ae072b26c0a9124268065fbc}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3d2e1d38ae072b26c0a9124268065fbc} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!remove\+Phase@{remove\+Phase}}
+\index{remove\+Phase@{remove\+Phase}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{remove\+Phase()}{removePhase()}}
+{\footnotesize\ttfamily bool Geant4\+Kernel\+::remove\+Phase (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Remove an existing phase from the phase. If not existing returns false. 
 
-Definition at line 436 of file Geant4Kernel.cpp.
-
-References m\_\-phases.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad04026c76cad51506b859ccefffffba8}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!run@{run}}
-\index{run@{run}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}int Geant4Kernel::run ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad04026c76cad51506b859ccefffffba8}
 
 
-Run the simulation: Simulate the number of events given by the property \char`\"{}NumEvents\char`\"{}. 
-
-Definition at line 285 of file Geant4Kernel.cpp.
-
-References DD4hep::FATAL, and DD4hep::printout().
-
-Referenced by runEvents().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a0ce3dec62c67dbaf72748238983bb898}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!runEvents@{runEvents}}
-\index{runEvents@{runEvents}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{runEvents}]{\setlength{\rightskip}{0pt plus 5cm}int Geant4Kernel::runEvents (int {\em num\_\-events})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a0ce3dec62c67dbaf72748238983bb898}
+Definition at line 436 of file Geant4\+Kernel.\+cpp.
 
 
-Run the simulation: Simulate the number of events \char`\"{}num\_\-events\char`\"{} and modify the property \char`\"{}NumEvents\char`\"{}. 
 
-Definition at line 298 of file Geant4Kernel.cpp.
+References m\+\_\+phases.
 
-References m\_\-numEvent, and run().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa01093467efb9b3a4f9179ba22ac7899}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!runManager@{runManager}}
-\index{runManager@{runManager}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{runManager}]{\setlength{\rightskip}{0pt plus 5cm}G4RunManager \& Geant4Kernel::runManager ()}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa01093467efb9b3a4f9179ba22ac7899}
+
+
+Referenced by add\+Phase().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad04026c76cad51506b859ccefffffba8}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad04026c76cad51506b859ccefffffba8} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!run@{run}}
+\index{run@{run}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int Geant4\+Kernel\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Run the simulation\+: Simulate the number of events given by the property \char`\"{}\+Num\+Events\char`\"{}. 
+
+
+
+Definition at line 285 of file Geant4\+Kernel.\+cpp.
+
+
+
+References e, D\+D4hep\+::\+F\+A\+T\+AL, D\+D4hep\+::printout(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Exec\+::run().
+
+
+
+Referenced by add\+Phase().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a0ce3dec62c67dbaf72748238983bb898}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a0ce3dec62c67dbaf72748238983bb898} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!run\+Events@{run\+Events}}
+\index{run\+Events@{run\+Events}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{run\+Events()}{runEvents()}}
+{\footnotesize\ttfamily int Geant4\+Kernel\+::run\+Events (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Run the simulation\+: Simulate the number of events \char`\"{}num\+\_\+events\char`\"{} and modify the property \char`\"{}\+Num\+Events\char`\"{}. 
+
+
+
+Definition at line 298 of file Geant4\+Kernel.\+cpp.
+
+
+
+References m\+\_\+num\+Event, and D\+D4hep\+::\+Simulation\+::\+Geant4\+Exec\+::run().
+
+
+
+Referenced by add\+Phase().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa01093467efb9b3a4f9179ba22ac7899}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa01093467efb9b3a4f9179ba22ac7899} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!run\+Manager@{run\+Manager}}
+\index{run\+Manager@{run\+Manager}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{run\+Manager()}{runManager()}}
+{\footnotesize\ttfamily G4\+Run\+Manager \& Geant4\+Kernel\+::run\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 
 
 Access to the Geant4 run manager. 
 
-Definition at line 237 of file Geant4Kernel.cpp.
 
-References DD4hep::format(), isMaster(), m\_\-numThreads, m\_\-runManager, DD4hep::printout(), and DD4hep::WARNING.
 
-Referenced by DD4hep::Simulation::Geant4Exec::configure(), DD4hep::Simulation::Geant4Exec::initialize(), DD4hep::Simulation::Geant4Exec::run(), and DD4hep::Simulation::Geant4UIManager::start().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa2a86e9223fa508132a57669fab477d5}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!setOutputLevel@{setOutputLevel}}
-\index{setOutputLevel@{setOutputLevel}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{setOutputLevel}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Kernel::setOutputLevel (const std::string {\em object}, \/  {\bf PrintLevel} {\em new\_\-level})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa2a86e9223fa508132a57669fab477d5}
+Definition at line 237 of file Geant4\+Kernel.\+cpp.
+
+
+
+References D\+D4hep\+::format(), is\+Master(), m\+\_\+num\+Threads, m\+\_\+run\+Manager, D\+D4hep\+::printout(), and D\+D4hep\+::\+W\+A\+R\+N\+I\+NG.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Exec\+::configure(), id(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Exec\+::initialize(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Exec\+::run(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+U\+I\+Manager\+::start().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_abf3fb3881f4e504ab8c4b14aa17ac7c8}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_abf3fb3881f4e504ab8c4b14aa17ac7c8} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!set\+Output\+Level@{set\+Output\+Level}}
+\index{set\+Output\+Level@{set\+Output\+Level}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{set\+Output\+Level()}{setOutputLevel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{D\+D4hep\+::\+Print\+Level} Geant4\+Kernel\+::set\+Output\+Level (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{Print\+Level}}]{new\+\_\+level }\end{DoxyParamCaption})}
+
+
+
+Set the global output level of the kernel object; returns previous value. 
+
+Set the output level; returns previous value. 
+
+Definition at line 230 of file Geant4\+Kernel.\+cpp.
+
+
+
+References m\+\_\+output\+Level.
+
+
+
+Referenced by id().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa2a86e9223fa508132a57669fab477d5}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa2a86e9223fa508132a57669fab477d5} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!set\+Output\+Level@{set\+Output\+Level}}
+\index{set\+Output\+Level@{set\+Output\+Level}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{set\+Output\+Level()}{setOutputLevel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Geant4\+Kernel\+::set\+Output\+Level (\begin{DoxyParamCaption}\item[{const std\+::string}]{object,  }\item[{\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{Print\+Level}}]{new\+\_\+level }\end{DoxyParamCaption})}
+
 
 
 Fill cache with the global output level of a named object. Must be set before instantiation. 
 
-Definition at line 218 of file Geant4Kernel.cpp.
-
-References m\_\-clientLevels.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_abf3fb3881f4e504ab8c4b14aa17ac7c8}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!setOutputLevel@{setOutputLevel}}
-\index{setOutputLevel@{setOutputLevel}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{setOutputLevel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DD4hep::PrintLevel} Geant4Kernel::setOutputLevel ({\bf PrintLevel} {\em new\_\-level})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_abf3fb3881f4e504ab8c4b14aa17ac7c8}
 
 
-Set the global output level of the kernel object; returns previous value. Set the output level; returns previous value. 
+Definition at line 218 of file Geant4\+Kernel.\+cpp.
 
-Definition at line 230 of file Geant4Kernel.cpp.
 
-References m\_\-outputLevel.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa5d1173163b58ade76d90a6a449b2357}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!setTrackMgr@{setTrackMgr}}
-\index{setTrackMgr@{setTrackMgr}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{setTrackMgr}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Simulation::Geant4Kernel::setTrackMgr (G4TrackingManager $\ast$ {\em mgr})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa5d1173163b58ade76d90a6a449b2357}
+
+References m\+\_\+client\+Levels.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa5d1173163b58ade76d90a6a449b2357}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa5d1173163b58ade76d90a6a449b2357} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!set\+Track\+Mgr@{set\+Track\+Mgr}}
+\index{set\+Track\+Mgr@{set\+Track\+Mgr}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{set\+Track\+Mgr()}{setTrackMgr()}}
+{\footnotesize\ttfamily void D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::set\+Track\+Mgr (\begin{DoxyParamCaption}\item[{G4\+Tracking\+Manager $\ast$}]{mgr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Access the tracking manager. 
 
-Definition at line 157 of file Geant4Kernel.h.
 
-Referenced by DD4hep::Simulation::Geant4UserTrackingAction::PostUserTrackingAction(), and DD4hep::Simulation::Geant4UserTrackingAction::PreUserTrackingAction().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aaa64984b672200e290612ccfef93f162}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!shared@{shared}}
-\index{shared@{shared}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{shared}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Kernel}\& DD4hep::Simulation::Geant4Kernel::shared () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aaa64984b672200e290612ccfef93f162}
+
+Definition at line 157 of file Geant4\+Kernel.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a70f423a6ae5211c76f90e8fb7561bdcf}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a70f423a6ae5211c76f90e8fb7561bdcf} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!shared@{shared}}
+\index{shared@{shared}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{shared()}{shared()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel}\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::shared (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Shared action context. 
 
-Definition at line 110 of file Geant4Kernel.h.
-
-References m\_\-shared.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae73e828fed81e3343fe49f08701d3ac3}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!terminate@{terminate}}
-\index{terminate@{terminate}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{terminate}]{\setlength{\rightskip}{0pt plus 5cm}int Geant4Kernel::terminate ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae73e828fed81e3343fe49f08701d3ac3}
 
 
-Run the simulation: Terminate Geant4. 
+Definition at line 110 of file Geant4\+Kernel.\+h.
 
-Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_container_ad9cfc3e1bc35d384f5dbd4e8747ddf69}{DD4hep::Simulation::Geant4ActionContainer}.
 
-Definition at line 303 of file Geant4Kernel.cpp.
 
-References DD4hep::deletePtr(), DD4hep::Geometry::LCDD::destroyInstance(), destroyPhases(), DD4hep::INFO, m\_\-globalActions, m\_\-globalFilters, m\_\-lcdd, m\_\-runManager, DD4hep::printout(), DD4hep::releaseObjects(), and DD4hep::Geometry::LCDD::removeExtension().
+References m\+\_\+shared.
 
-Referenced by $\sim$Geant4Kernel().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a6f7fb6760f8432658a837a65bb557fe5}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!thread\_\-self@{thread\_\-self}}
-\index{thread\_\-self@{thread\_\-self}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{thread\_\-self}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long int Geant4Kernel::thread\_\-self ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a6f7fb6760f8432658a837a65bb557fe5}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae73e828fed81e3343fe49f08701d3ac3}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae73e828fed81e3343fe49f08701d3ac3} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!terminate@{terminate}}
+\index{terminate@{terminate}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{terminate()}{terminate()}}
+{\footnotesize\ttfamily int Geant4\+Kernel\+::terminate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Run the simulation\+: Terminate Geant4. 
+
+
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_container_ad9cfc3e1bc35d384f5dbd4e8747ddf69}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+Container}.
+
+
+
+Definition at line 303 of file Geant4\+Kernel.\+cpp.
+
+
+
+References D\+D4hep\+::delete\+Ptr(), D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+::destroy\+Instance(), destroy\+Phases(), D\+D4hep\+::\+I\+N\+FO, m\+\_\+global\+Actions, m\+\_\+global\+Filters, m\+\_\+lcdd, m\+\_\+run\+Manager, D\+D4hep\+::printout(), D\+D4hep\+::release\+Objects(), D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+::remove\+Extension(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+Container\+::terminate(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Exec\+::terminate().
+
+
+
+Referenced by add\+Phase().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a6f7fb6760f8432658a837a65bb557fe5}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a6f7fb6760f8432658a837a65bb557fe5} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!thread\+\_\+self@{thread\+\_\+self}}
+\index{thread\+\_\+self@{thread\+\_\+self}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{thread\+\_\+self()}{thread\_self()}}
+{\footnotesize\ttfamily unsigned long int Geant4\+Kernel\+::thread\+\_\+self (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
 
 
 Access thread identifier. 
 
-Definition at line 154 of file Geant4Kernel.cpp.
 
-Referenced by DD4hep::Simulation::Geant4UserActionInitialization::Build(), DD4hep::Simulation::Geant4UserDetectorConstruction::ConstructSDandField(), createWorker(), DD4hep::Simulation::Geant4SensDet::Geant4SensDet(), worker(), and DD4hep::Simulation::KernelHandle::worker().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a4cef97fec68194bc070962cefc05d17c}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!trackMgr@{trackMgr}}
-\index{trackMgr@{trackMgr}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{trackMgr}]{\setlength{\rightskip}{0pt plus 5cm}G4TrackingManager$\ast$ DD4hep::Simulation::Geant4Kernel::trackMgr () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a4cef97fec68194bc070962cefc05d17c}
+
+Definition at line 154 of file Geant4\+Kernel.\+cpp.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Action\+Initialization\+::\+Build(), D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Detector\+Construction\+::\+Construct\+S\+Dand\+Field(), create\+Worker(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+::\+Geant4\+Sens\+Det(), is\+Multi\+Threaded(), D\+D4hep\+::\+Simulation\+::\+Kernel\+Handle\+::worker(), and worker().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aad8ca2fc43ef4a468bd64ed1e0b164f1}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aad8ca2fc43ef4a468bd64ed1e0b164f1} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!track\+Mgr@{track\+Mgr}}
+\index{track\+Mgr@{track\+Mgr}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{track\+Mgr()}{trackMgr()}}
+{\footnotesize\ttfamily G4\+Tracking\+Manager$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::track\+Mgr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Access the tracking manager. 
 
-Definition at line 155 of file Geant4Kernel.h.
-
-Referenced by DD4hep::Simulation::Geant4Context::trackMgr().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac503376a3f593e2c97dcf78fb289fe49}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!worker@{worker}}
-\index{worker@{worker}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{worker}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Kernel} \& Geant4Kernel::worker (unsigned long {\em thread\_\-identifier}, \/  bool {\em create\_\-if} = {\ttfamily false})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac503376a3f593e2c97dcf78fb289fe49}
 
 
-Access worker instance by it's identifier. 
+Definition at line 155 of file Geant4\+Kernel.\+h.
 
-Definition at line 172 of file Geant4Kernel.cpp.
 
-References createWorker(), DD4hep::format(), isMultiThreaded(), m\_\-id, m\_\-workers, and thread\_\-self().
 
-Referenced by DD4hep::Simulation::Geant4UserActionInitialization::Build(), DD4hep::Simulation::Geant4UserDetectorConstruction::ConstructSDandField(), DD4hep::Simulation::Geant4SensDet::Geant4SensDet(), and DD4hep::Simulation::KernelHandle::worker().
+References m\+\_\+track\+Mgr.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Context\+::track\+Mgr().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac503376a3f593e2c97dcf78fb289fe49}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac503376a3f593e2c97dcf78fb289fe49} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!worker@{worker}}
+\index{worker@{worker}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{worker()}{worker()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel} \& Geant4\+Kernel\+::worker (\begin{DoxyParamCaption}\item[{unsigned long}]{thread\+\_\+identifier,  }\item[{bool}]{create\+\_\+if = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Access worker instance by it\textquotesingle{}s identifier. 
+
+
+
+Definition at line 172 of file Geant4\+Kernel.\+cpp.
+
+
+
+References create\+Worker(), D\+D4hep\+::format(), is\+Multi\+Threaded(), m\+\_\+id, m\+\_\+workers, and thread\+\_\+self().
+
+
+
+Referenced by add\+Phase(), D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Action\+Initialization\+::\+Build(), D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Detector\+Construction\+::\+Construct\+S\+Dand\+Field(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+::\+Geant4\+Sens\+Det(), and D\+D4hep\+::\+Simulation\+::\+Kernel\+Handle\+::worker().
+
+
 
 \subsection{Member Data Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a6693f4923ea60f878c15f665edf79de2}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!m\_\-clientLevels@{m\_\-clientLevels}}
-\index{m\_\-clientLevels@{m\_\-clientLevels}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{m\_\-clientLevels}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ClientOutputLevels} {\bf DD4hep::Simulation::Geant4Kernel::m\_\-clientLevels}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a6693f4923ea60f878c15f665edf79de2}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a6693f4923ea60f878c15f665edf79de2}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a6693f4923ea60f878c15f665edf79de2} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!m\+\_\+client\+Levels@{m\+\_\+client\+Levels}}
+\index{m\+\_\+client\+Levels@{m\+\_\+client\+Levels}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{m\+\_\+client\+Levels}{m\_clientLevels}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a259066f5e9a56bdbfc9718a2b42b8b06}{Client\+Output\+Levels} D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::m\+\_\+client\+Levels\hspace{0.3cm}{\ttfamily [protected]}}
 
 
-\hyperlink{class_d_d4hep_1_1_property}{Property}: Client output levels. 
 
-Definition at line 81 of file Geant4Kernel.h.
+\hyperlink{class_d_d4hep_1_1_property}{Property}\+: Client output levels. 
 
-Referenced by Geant4Kernel(), getOutputLevel(), printProperties(), and setOutputLevel().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a1b097ce042c194b7fc041c3457868c2c}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!m\_\-control@{m\_\-control}}
-\index{m\_\-control@{m\_\-control}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{m\_\-control}]{\setlength{\rightskip}{0pt plus 5cm}G4UIdirectory$\ast$ {\bf DD4hep::Simulation::Geant4Kernel::m\_\-control}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a1b097ce042c194b7fc041c3457868c2c}
+
+
+Definition at line 81 of file Geant4\+Kernel.\+h.
+
+
+
+Referenced by Geant4\+Kernel(), get\+Output\+Level(), print\+Properties(), and set\+Output\+Level().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a1b097ce042c194b7fc041c3457868c2c}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a1b097ce042c194b7fc041c3457868c2c} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!m\+\_\+control@{m\+\_\+control}}
+\index{m\+\_\+control@{m\+\_\+control}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{m\+\_\+control}{m\_control}}
+{\footnotesize\ttfamily G4\+U\+Idirectory$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::m\+\_\+control\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Top level control directory. 
 
-Definition at line 55 of file Geant4Kernel.h.
-
-Referenced by Geant4Kernel().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a1019ec87b302f798f36361dd9be8b40a}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!m\_\-controlName@{m\_\-controlName}}
-\index{m\_\-controlName@{m\_\-controlName}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{m\_\-controlName}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::Simulation::Geant4Kernel::m\_\-controlName}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a1019ec87b302f798f36361dd9be8b40a}
 
 
-\hyperlink{class_d_d4hep_1_1_property}{Property}: Name of the G4UI command tree. 
+Definition at line 55 of file Geant4\+Kernel.\+h.
 
-Definition at line 73 of file Geant4Kernel.h.
 
-Referenced by Geant4Kernel().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a23bac03e5a169b5fc9446e574ad034ac}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!m\_\-globalActions@{m\_\-globalActions}}
-\index{m\_\-globalActions@{m\_\-globalActions}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{m\_\-globalActions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalActions} {\bf DD4hep::Simulation::Geant4Kernel::m\_\-globalActions}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a23bac03e5a169b5fc9446e574ad034ac}
+
+Referenced by Geant4\+Kernel().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a1019ec87b302f798f36361dd9be8b40a}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a1019ec87b302f798f36361dd9be8b40a} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!m\+\_\+control\+Name@{m\+\_\+control\+Name}}
+\index{m\+\_\+control\+Name@{m\+\_\+control\+Name}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{m\+\_\+control\+Name}{m\_controlName}}
+{\footnotesize\ttfamily std\+::string D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::m\+\_\+control\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}\+: Name of the G4\+UI command tree. 
+
+
+
+Definition at line 73 of file Geant4\+Kernel.\+h.
+
+
+
+Referenced by directory\+Name(), and Geant4\+Kernel().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a23bac03e5a169b5fc9446e574ad034ac}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a23bac03e5a169b5fc9446e574ad034ac} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!m\+\_\+global\+Actions@{m\+\_\+global\+Actions}}
+\index{m\+\_\+global\+Actions@{m\+\_\+global\+Actions}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{m\+\_\+global\+Actions}{m\_globalActions}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9cd070dfd06f049aa11b56688faaa643}{Global\+Actions} D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::m\+\_\+global\+Actions\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Globally registered actions. 
 
-Definition at line 69 of file Geant4Kernel.h.
 
-Referenced by globalAction(), registerGlobalAction(), terminate(), and $\sim$Geant4Kernel().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_afab7f53720ce6b7255ff54d777c4ff4e}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!m\_\-globalFilters@{m\_\-globalFilters}}
-\index{m\_\-globalFilters@{m\_\-globalFilters}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{m\_\-globalFilters}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalActions} {\bf DD4hep::Simulation::Geant4Kernel::m\_\-globalFilters}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_afab7f53720ce6b7255ff54d777c4ff4e}
+
+Definition at line 69 of file Geant4\+Kernel.\+h.
+
+
+
+Referenced by global\+Action(), register\+Global\+Action(), terminate(), and $\sim$\+Geant4\+Kernel().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_afab7f53720ce6b7255ff54d777c4ff4e}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_afab7f53720ce6b7255ff54d777c4ff4e} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!m\+\_\+global\+Filters@{m\+\_\+global\+Filters}}
+\index{m\+\_\+global\+Filters@{m\+\_\+global\+Filters}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{m\+\_\+global\+Filters}{m\_globalFilters}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a9cd070dfd06f049aa11b56688faaa643}{Global\+Actions} D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::m\+\_\+global\+Filters\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Globally registered filters of sensitive detectors. 
 
-Definition at line 71 of file Geant4Kernel.h.
-
-Referenced by globalFilter(), registerGlobalFilter(), terminate(), and $\sim$Geant4Kernel().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad9fa311cf783a581dc24b158b754f3bc}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!m\_\-id@{m\_\-id}}
-\index{m\_\-id@{m\_\-id}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{m\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf DD4hep::Simulation::Geant4Kernel::m\_\-id}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad9fa311cf783a581dc24b158b754f3bc}
 
 
-Flag: Master instance (id$<$0) or worker (id $>$= 0). 
-
-Definition at line 88 of file Geant4Kernel.h.
-
-Referenced by worker().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac7d95e62b3a0cb5180bdb3c20bd79a1d}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!m\_\-ident@{m\_\-ident}}
-\index{m\_\-ident@{m\_\-ident}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{m\_\-ident}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf DD4hep::Simulation::Geant4Kernel::m\_\-ident}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac7d95e62b3a0cb5180bdb3c20bd79a1d}
+Definition at line 71 of file Geant4\+Kernel.\+h.
 
 
-Definition at line 88 of file Geant4Kernel.h.
 
-Referenced by Geant4Kernel().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a0181177a7c4b6862a83b3a34a64a3ce9}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!m\_\-lcdd@{m\_\-lcdd}}
-\index{m\_\-lcdd@{m\_\-lcdd}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{m\_\-lcdd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LCDD}$\ast$ {\bf DD4hep::Simulation::Geant4Kernel::m\_\-lcdd}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a0181177a7c4b6862a83b3a34a64a3ce9}
+Referenced by global\+Filter(), register\+Global\+Filter(), terminate(), and $\sim$\+Geant4\+Kernel().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad9fa311cf783a581dc24b158b754f3bc}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ad9fa311cf783a581dc24b158b754f3bc} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!m\+\_\+id@{m\+\_\+id}}
+\index{m\+\_\+id@{m\+\_\+id}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{m\+\_\+id}{m\_id}}
+{\footnotesize\ttfamily unsigned long D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::m\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Flag\+: Master instance (id$<$0) or worker (id $>$= 0) 
+
+
+
+Definition at line 88 of file Geant4\+Kernel.\+h.
+
+
+
+Referenced by worker().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac7d95e62b3a0cb5180bdb3c20bd79a1d}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac7d95e62b3a0cb5180bdb3c20bd79a1d} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!m\+\_\+ident@{m\+\_\+ident}}
+\index{m\+\_\+ident@{m\+\_\+ident}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{m\+\_\+ident}{m\_ident}}
+{\footnotesize\ttfamily unsigned long D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::m\+\_\+ident\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 88 of file Geant4\+Kernel.\+h.
+
+
+
+Referenced by Geant4\+Kernel(), and id().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a0181177a7c4b6862a83b3a34a64a3ce9}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a0181177a7c4b6862a83b3a34a64a3ce9} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!m\+\_\+lcdd@{m\+\_\+lcdd}}
+\index{m\+\_\+lcdd@{m\+\_\+lcdd}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{m\+\_\+lcdd}{m\_lcdd}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a190e652b62ebce3db3372c4265ffa5a3}{L\+C\+DD}$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::m\+\_\+lcdd\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Detector description object. 
 
-Definition at line 59 of file Geant4Kernel.h.
 
-Referenced by Geant4Kernel(), loadGeometry(), loadXML(), terminate(), and $\sim$Geant4Kernel().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a5d1ef9677e88ba8fc503d1cb70b84cf8}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!m\_\-master@{m\_\-master}}
-\index{m\_\-master@{m\_\-master}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{m\_\-master}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Kernel}$\ast$ {\bf DD4hep::Simulation::Geant4Kernel::m\_\-master}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a5d1ef9677e88ba8fc503d1cb70b84cf8}
+
+Definition at line 59 of file Geant4\+Kernel.\+h.
+
+
+
+Referenced by Geant4\+Kernel(), lcdd(), load\+Geometry(), load\+X\+M\+L(), terminate(), and $\sim$\+Geant4\+Kernel().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a5d1ef9677e88ba8fc503d1cb70b84cf8}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a5d1ef9677e88ba8fc503d1cb70b84cf8} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!m\+\_\+master@{m\+\_\+master}}
+\index{m\+\_\+master@{m\+\_\+master}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{m\+\_\+master}{m\_master}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel}$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::m\+\_\+master\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Parent reference. 
 
-Definition at line 90 of file Geant4Kernel.h.
-
-Referenced by Geant4Kernel(), isMaster(), isWorker(), and master().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a5786c0e6c67534e109595f568df489a9}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!m\_\-numEvent@{m\_\-numEvent}}
-\index{m\_\-numEvent@{m\_\-numEvent}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{m\_\-numEvent}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf DD4hep::Simulation::Geant4Kernel::m\_\-numEvent}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a5786c0e6c67534e109595f568df489a9}
 
 
-\hyperlink{class_d_d4hep_1_1_property}{Property}: Number of events to be executed in batch mode. 
-
-Definition at line 77 of file Geant4Kernel.h.
-
-Referenced by Geant4Kernel(), printProperties(), and runEvents().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a402cfabce5a04002713b4e35569911d7}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!m\_\-numThreads@{m\_\-numThreads}}
-\index{m\_\-numThreads@{m\_\-numThreads}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{m\_\-numThreads}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::Simulation::Geant4Kernel::m\_\-numThreads}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a402cfabce5a04002713b4e35569911d7}
+Definition at line 90 of file Geant4\+Kernel.\+h.
 
 
-\hyperlink{class_d_d4hep_1_1_property}{Property}: Running in multi threaded context. Master property: Number of execution threads in multi threaded mode. 
 
-Definition at line 86 of file Geant4Kernel.h.
+Referenced by Geant4\+Kernel(), is\+Master(), is\+Worker(), and master().
 
-Referenced by Geant4Kernel(), isMultiThreaded(), printProperties(), and runManager().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a419eed43ed023a0b43a2ddc44f474708}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!m\_\-outputLevel@{m\_\-outputLevel}}
-\index{m\_\-outputLevel@{m\_\-outputLevel}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{m\_\-outputLevel}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::Simulation::Geant4Kernel::m\_\-outputLevel}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a419eed43ed023a0b43a2ddc44f474708}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a5786c0e6c67534e109595f568df489a9}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a5786c0e6c67534e109595f568df489a9} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!m\+\_\+num\+Event@{m\+\_\+num\+Event}}
+\index{m\+\_\+num\+Event@{m\+\_\+num\+Event}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{m\+\_\+num\+Event}{m\_numEvent}}
+{\footnotesize\ttfamily long D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::m\+\_\+num\+Event\hspace{0.3cm}{\ttfamily [protected]}}
 
 
-\hyperlink{class_d_d4hep_1_1_property}{Property}: Output level. 
 
-Definition at line 79 of file Geant4Kernel.h.
+\hyperlink{class_d_d4hep_1_1_property}{Property}\+: Number of events to be executed in batch mode. 
 
-Referenced by Geant4Kernel(), outputLevel(), printProperties(), and setOutputLevel().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa1357848649b7fccb42bbaa0c5f88f58}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!m\_\-phases@{m\_\-phases}}
-\index{m\_\-phases@{m\_\-phases}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{m\_\-phases}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Phases} {\bf DD4hep::Simulation::Geant4Kernel::m\_\-phases}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa1357848649b7fccb42bbaa0c5f88f58}
+
+
+Definition at line 77 of file Geant4\+Kernel.\+h.
+
+
+
+Referenced by Geant4\+Kernel(), print\+Properties(), and run\+Events().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a402cfabce5a04002713b4e35569911d7}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a402cfabce5a04002713b4e35569911d7} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!m\+\_\+num\+Threads@{m\+\_\+num\+Threads}}
+\index{m\+\_\+num\+Threads@{m\+\_\+num\+Threads}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{m\+\_\+num\+Threads}{m\_numThreads}}
+{\footnotesize\ttfamily int D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::m\+\_\+num\+Threads\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}\+: Running in multi threaded context. 
+
+Master property\+: Number of execution threads in multi threaded mode. 
+
+Definition at line 86 of file Geant4\+Kernel.\+h.
+
+
+
+Referenced by Geant4\+Kernel(), print\+Properties(), and run\+Manager().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a419eed43ed023a0b43a2ddc44f474708}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a419eed43ed023a0b43a2ddc44f474708} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!m\+\_\+output\+Level@{m\+\_\+output\+Level}}
+\index{m\+\_\+output\+Level@{m\+\_\+output\+Level}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{m\+\_\+output\+Level}{m\_outputLevel}}
+{\footnotesize\ttfamily int D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::m\+\_\+output\+Level\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}\+: Output level. 
+
+
+
+Definition at line 79 of file Geant4\+Kernel.\+h.
+
+
+
+Referenced by Geant4\+Kernel(), id(), print\+Properties(), and set\+Output\+Level().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa1357848649b7fccb42bbaa0c5f88f58}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aa1357848649b7fccb42bbaa0c5f88f58} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!m\+\_\+phases@{m\+\_\+phases}}
+\index{m\+\_\+phases@{m\+\_\+phases}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{m\+\_\+phases}{m\_phases}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae28985781d4226ece4c3fffe8827b400}{Phases} D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::m\+\_\+phases\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Action phases. 
 
-Definition at line 65 of file Geant4Kernel.h.
 
-Referenced by destroyPhases(), executePhase(), getPhase(), and removePhase().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac69e53b910f7ce956e684c4e2ccedc9f}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!m\_\-properties@{m\_\-properties}}
-\index{m\_\-properties@{m\_\-properties}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{m\_\-properties}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PropertyManager} {\bf DD4hep::Simulation::Geant4Kernel::m\_\-properties}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac69e53b910f7ce956e684c4e2ccedc9f}
+
+Definition at line 65 of file Geant4\+Kernel.\+h.
+
+
+
+Referenced by add\+Simple\+Phase(), destroy\+Phases(), execute\+Phase(), get\+Phase(), and remove\+Phase().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac69e53b910f7ce956e684c4e2ccedc9f}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ac69e53b910f7ce956e684c4e2ccedc9f} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!m\+\_\+properties@{m\+\_\+properties}}
+\index{m\+\_\+properties@{m\+\_\+properties}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{m\+\_\+properties}{m\_properties}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_property_manager}{Property\+Manager} D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::m\+\_\+properties\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 \hyperlink{class_d_d4hep_1_1_property}{Property} pool. 
 
-Definition at line 61 of file Geant4Kernel.h.
 
-Referenced by declareProperty(), hasProperty(), and properties().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3680634351832865b7df33095adf8ef7}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!m\_\-runManager@{m\_\-runManager}}
-\index{m\_\-runManager@{m\_\-runManager}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{m\_\-runManager}]{\setlength{\rightskip}{0pt plus 5cm}G4RunManager$\ast$ {\bf DD4hep::Simulation::Geant4Kernel::m\_\-runManager}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3680634351832865b7df33095adf8ef7}
+
+Definition at line 61 of file Geant4\+Kernel.\+h.
+
+
+
+Referenced by declare\+Property(), has\+Property(), and id().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3680634351832865b7df33095adf8ef7}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a3680634351832865b7df33095adf8ef7} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!m\+\_\+run\+Manager@{m\+\_\+run\+Manager}}
+\index{m\+\_\+run\+Manager@{m\+\_\+run\+Manager}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{m\+\_\+run\+Manager}{m\_runManager}}
+{\footnotesize\ttfamily G4\+Run\+Manager$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::m\+\_\+run\+Manager\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Reference to the run manager. 
 
-Definition at line 53 of file Geant4Kernel.h.
-
-Referenced by runManager(), terminate(), and $\sim$Geant4Kernel().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a47da20469676a2497cbf580428984362}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!m\_\-shared@{m\_\-shared}}
-\index{m\_\-shared@{m\_\-shared}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{m\_\-shared}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Kernel}$\ast$ {\bf DD4hep::Simulation::Geant4Kernel::m\_\-shared}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a47da20469676a2497cbf580428984362}
 
 
-Definition at line 91 of file Geant4Kernel.h.
-
-Referenced by shared().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a774c57eb5d21094d0ecca5db90f24998}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!m\_\-threadContext@{m\_\-threadContext}}
-\index{m\_\-threadContext@{m\_\-threadContext}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{m\_\-threadContext}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Context}$\ast$ {\bf DD4hep::Simulation::Geant4Kernel::m\_\-threadContext}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a774c57eb5d21094d0ecca5db90f24998}
+Definition at line 53 of file Geant4\+Kernel.\+h.
 
 
-Definition at line 92 of file Geant4Kernel.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a4bd577a1215149f49a745aa75b652565}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!m\_\-trackMgr@{m\_\-trackMgr}}
-\index{m\_\-trackMgr@{m\_\-trackMgr}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{m\_\-trackMgr}]{\setlength{\rightskip}{0pt plus 5cm}G4TrackingManager$\ast$ {\bf DD4hep::Simulation::Geant4Kernel::m\_\-trackMgr}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a4bd577a1215149f49a745aa75b652565}
+
+Referenced by run\+Manager(), terminate(), and $\sim$\+Geant4\+Kernel().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a47da20469676a2497cbf580428984362}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a47da20469676a2497cbf580428984362} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!m\+\_\+shared@{m\+\_\+shared}}
+\index{m\+\_\+shared@{m\+\_\+shared}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{m\+\_\+shared}{m\_shared}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel}{Geant4\+Kernel}$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::m\+\_\+shared\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 91 of file Geant4\+Kernel.\+h.
+
+
+
+Referenced by shared().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a774c57eb5d21094d0ecca5db90f24998}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a774c57eb5d21094d0ecca5db90f24998} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!m\+\_\+thread\+Context@{m\+\_\+thread\+Context}}
+\index{m\+\_\+thread\+Context@{m\+\_\+thread\+Context}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{m\+\_\+thread\+Context}{m\_threadContext}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4\+Context}$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::m\+\_\+thread\+Context\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 92 of file Geant4\+Kernel.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a4bd577a1215149f49a745aa75b652565}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a4bd577a1215149f49a745aa75b652565} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!m\+\_\+track\+Mgr@{m\+\_\+track\+Mgr}}
+\index{m\+\_\+track\+Mgr@{m\+\_\+track\+Mgr}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{m\+\_\+track\+Mgr}{m\_trackMgr}}
+{\footnotesize\ttfamily G4\+Tracking\+Manager$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::m\+\_\+track\+Mgr\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Reference to Geant4 track manager. 
 
-Definition at line 57 of file Geant4Kernel.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aea869c039be9e0818e4f80afbab1e47c}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!m\_\-uiName@{m\_\-uiName}}
-\index{m\_\-uiName@{m\_\-uiName}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{m\_\-uiName}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::Simulation::Geant4Kernel::m\_\-uiName}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aea869c039be9e0818e4f80afbab1e47c}
 
 
-\hyperlink{class_d_d4hep_1_1_property}{Property}: Name of the UI action. Must be member of the global actions. 
+Definition at line 57 of file Geant4\+Kernel.\+h.
 
-Definition at line 75 of file Geant4Kernel.h.
 
-Referenced by Geant4Kernel(), and printProperties().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a8957db5b08d92dcd7b7c4ef63ea743b6}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!m\_\-workers@{m\_\-workers}}
-\index{m\_\-workers@{m\_\-workers}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{m\_\-workers}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Workers} {\bf DD4hep::Simulation::Geant4Kernel::m\_\-workers}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a8957db5b08d92dcd7b7c4ef63ea743b6}
+
+Referenced by track\+Mgr().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aea869c039be9e0818e4f80afbab1e47c}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_aea869c039be9e0818e4f80afbab1e47c} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!m\+\_\+ui\+Name@{m\+\_\+ui\+Name}}
+\index{m\+\_\+ui\+Name@{m\+\_\+ui\+Name}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{m\+\_\+ui\+Name}{m\_uiName}}
+{\footnotesize\ttfamily std\+::string D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::m\+\_\+ui\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\hyperlink{class_d_d4hep_1_1_property}{Property}\+: Name of the UI action. Must be member of the global actions. 
+
+
+
+Definition at line 75 of file Geant4\+Kernel.\+h.
+
+
+
+Referenced by Geant4\+Kernel(), and print\+Properties().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a8957db5b08d92dcd7b7c4ef63ea743b6}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_a8957db5b08d92dcd7b7c4ef63ea743b6} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!m\+\_\+workers@{m\+\_\+workers}}
+\index{m\+\_\+workers@{m\+\_\+workers}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{m\+\_\+workers}{m\_workers}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae9fdf26cda88a6f822f060558e85d797}{Workers} D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::m\+\_\+workers\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Worker threads. 
 
-Definition at line 67 of file Geant4Kernel.h.
-
-Referenced by createWorker(), Geant4Kernel(), numWorkers(), worker(), and $\sim$Geant4Kernel().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae7d402daf48f3cd062f1617c5a7ee429}{
-\index{DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}!phase@{phase}}
-\index{phase@{phase}!DD4hep::Simulation::Geant4Kernel@{DD4hep::Simulation::Geant4Kernel}}
-\subsubsection[{phase}]{\setlength{\rightskip}{0pt plus 5cm}class {\bf DD4hep::Simulation::Geant4Kernel::PhaseSelector}  {\bf DD4hep::Simulation::Geant4Kernel::phase}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae7d402daf48f3cd062f1617c5a7ee429}
 
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+Definition at line 67 of file Geant4\+Kernel.\+h.
+
+
+
+Referenced by create\+Worker(), Geant4\+Kernel(), num\+Workers(), worker(), and $\sim$\+Geant4\+Kernel().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae7d402daf48f3cd062f1617c5a7ee429}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_ae7d402daf48f3cd062f1617c5a7ee429} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}!phase@{phase}}
+\index{phase@{phase}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel}}
+\subsubsection{\texorpdfstring{phase}{phase}}
+{\footnotesize\ttfamily class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_kernel_1_1_phase_selector}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::\+Phase\+Selector}  D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::phase}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_kernel_8h}{Geant4Kernel.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_kernel_8cpp}{Geant4Kernel.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/include/\+D\+D\+G4/\hyperlink{_geant4_kernel_8h}{Geant4\+Kernel.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/src/\hyperlink{_geant4_kernel_8cpp}{Geant4\+Kernel.\+cpp}\end{DoxyCompactItemize}

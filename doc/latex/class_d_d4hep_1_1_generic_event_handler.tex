@@ -1,337 +1,483 @@
-\hypertarget{class_d_d4hep_1_1_generic_event_handler}{
-\section{DD4hep::GenericEventHandler Class Reference}
-\label{class_d_d4hep_1_1_generic_event_handler}\index{DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}}
-}
+\hypertarget{class_d_d4hep_1_1_generic_event_handler}{}\section{D\+D4hep\+:\+:Generic\+Event\+Handler Class Reference}
+\label{class_d_d4hep_1_1_generic_event_handler}\index{D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}}
 
 
-Event handler base class. Interface to all \hyperlink{struct_d_d4hep_1_1_d_d_eve}{DDEve} I/O actions.  
+Event handler base class. Interface to all \hyperlink{struct_d_d4hep_1_1_d_d_eve}{D\+D\+Eve} I/O actions.  
 
 
-{\ttfamily \#include $<$GenericEventHandler.h$>$}Inheritance diagram for DD4hep::GenericEventHandler::\begin{figure}[H]
+
+
+{\ttfamily \#include $<$Generic\+Event\+Handler.\+h$>$}
+
+Inheritance diagram for D\+D4hep\+:\+:Generic\+Event\+Handler\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2cm]{class_d_d4hep_1_1_generic_event_handler}
+\includegraphics[height=2.000000cm]{class_d_d4hep_1_1_generic_event_handler}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_generic_event_handler_aef493617474019a953be658fdec60edc}{GenericEventHandler} ()
-\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{class_d_d4hep_1_1_generic_event_handler_a2e5420d14f01ae34c9a0a670a374cf71}{$\sim$GenericEventHandler} ()
-\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
-virtual const \hyperlink{class_d_d4hep_1_1_event_handler_a4d441ff8a824b1e2f278e8b7a6391af3}{TypedEventCollections} \& \hyperlink{class_d_d4hep_1_1_generic_event_handler_aa1e4452bde1823d4592d4c61f6a62fcc}{data} () const 
-\begin{DoxyCompactList}\small\item\em Access the map of simulation data collections. \item\end{DoxyCompactList}\item 
-virtual long \hyperlink{class_d_d4hep_1_1_generic_event_handler_a48f6771f5f90bd353e7b242f247a91cb}{numEvents} () const 
-\begin{DoxyCompactList}\small\item\em Access the number of events on the current input data source (-\/1 if no data source connected). \item\end{DoxyCompactList}\item 
-virtual std::string \hyperlink{class_d_d4hep_1_1_generic_event_handler_a9049182126476c4af50c72d15c120471}{datasourceName} () const 
-\begin{DoxyCompactList}\small\item\em Access the data source name. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254}{CollectionType} \hyperlink{class_d_d4hep_1_1_generic_event_handler_ae0471fce8b637f5825d3dab70537bdcd}{collectionType} (const std::string \&collection) const 
-\begin{DoxyCompactList}\small\item\em Access to the collection type by name. \item\end{DoxyCompactList}\item 
-virtual size\_\-t \hyperlink{class_d_d4hep_1_1_generic_event_handler_ad521db17296b0abb05294f61f83b2019}{collectionLoop} (const std::string \&collection, \hyperlink{struct_d_d4hep_1_1_d_d_eve_hit_actor}{DDEveHitActor} \&actor)
-\begin{DoxyCompactList}\small\item\em Loop over collection and extract data. \item\end{DoxyCompactList}\item 
-virtual size\_\-t \hyperlink{class_d_d4hep_1_1_generic_event_handler_a401b32a86d996b71baa133c4f4b00709}{collectionLoop} (const std::string \&collection, \hyperlink{struct_d_d4hep_1_1_d_d_eve_particle_actor}{DDEveParticleActor} \&actor)
-\begin{DoxyCompactList}\small\item\em Loop over collection and extract particle data. \item\end{DoxyCompactList}\item 
-virtual bool \hyperlink{class_d_d4hep_1_1_generic_event_handler_a2ad81c03ef6feac9bf399ccd5928da41}{Open} (const std::string \&type, const std::string \&file\_\-name)
-\begin{DoxyCompactList}\small\item\em Open a new event data file. \item\end{DoxyCompactList}\item 
-virtual bool \hyperlink{class_d_d4hep_1_1_generic_event_handler_a0dc8d4d5dde63d3278f67da79e86b590}{NextEvent} ()
-\begin{DoxyCompactList}\small\item\em Load the next event. \item\end{DoxyCompactList}\item 
-virtual bool \hyperlink{class_d_d4hep_1_1_generic_event_handler_a4b833d9537c7c29b0bfb0d567f98d0a3}{PreviousEvent} ()
-\begin{DoxyCompactList}\small\item\em User overloadable function: Load the previous event. \item\end{DoxyCompactList}\item 
-virtual bool \hyperlink{class_d_d4hep_1_1_generic_event_handler_a7a7c4d1592e5b2d467a426058aa1a44b}{GotoEvent} (long event\_\-number)
-\begin{DoxyCompactList}\small\item\em Goto a specified event in the file. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_generic_event_handler_a8065b0b0f095783b7daf38ff19660cf7}{Subscribe} (\hyperlink{class_d_d4hep_1_1_event_consumer}{EventConsumer} $\ast$display)
-\begin{DoxyCompactList}\small\item\em Subscribe to notification of new data present. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_generic_event_handler_a030cffac2446e410dba9dec87802e035}{Unsubscribe} (\hyperlink{class_d_d4hep_1_1_event_consumer}{EventConsumer} $\ast$display)
-\begin{DoxyCompactList}\small\item\em Unsubscribe from notification of new data present. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_generic_event_handler_a01e7a0bdb965b93d5a3b0ba8f9ccb85e}{NotifySubscribers} (void(EventConsumer::$\ast$pmf)(\hyperlink{class_d_d4hep_1_1_event_handler}{EventHandler} $\ast$))
-\begin{DoxyCompactList}\small\item\em Notfy all subscribers. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_generic_event_handler_abbb82b5fc62720e45ed6c2ff03ae526d}{ClassDef} (\hyperlink{class_d_d4hep_1_1_generic_event_handler}{GenericEventHandler}, 0)
+\hyperlink{class_d_d4hep_1_1_generic_event_handler_aef493617474019a953be658fdec60edc}{Generic\+Event\+Handler} ()
+\begin{DoxyCompactList}\small\item\em Standard constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_generic_event_handler_a2e5420d14f01ae34c9a0a670a374cf71}{$\sim$\+Generic\+Event\+Handler} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+virtual const \hyperlink{class_d_d4hep_1_1_event_handler_a4d441ff8a824b1e2f278e8b7a6391af3}{Typed\+Event\+Collections} \& \hyperlink{class_d_d4hep_1_1_generic_event_handler_ad4d0029a1db989c61a3bbb72f299f12e}{data} () const
+\begin{DoxyCompactList}\small\item\em Access the map of simulation data collections. \end{DoxyCompactList}\item 
+virtual long \hyperlink{class_d_d4hep_1_1_generic_event_handler_a05d0623b58211c6d941aea1377771a2b}{num\+Events} () const
+\begin{DoxyCompactList}\small\item\em Access the number of events on the current input data source (-\/1 if no data source connected) \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{class_d_d4hep_1_1_generic_event_handler_a3d99aeaf1bcd8aa421ecab3bcf5fabe0}{datasource\+Name} () const
+\begin{DoxyCompactList}\small\item\em Access the data source name. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254}{Collection\+Type} \hyperlink{class_d_d4hep_1_1_generic_event_handler_aeb30b8fc7e8e850fa7472fc70443b817}{collection\+Type} (const std\+::string \&collection) const
+\begin{DoxyCompactList}\small\item\em Access to the collection type by name. \end{DoxyCompactList}\item 
+virtual size\+\_\+t \hyperlink{class_d_d4hep_1_1_generic_event_handler_a1186d6415d8d7e01f51993e204d5931f}{collection\+Loop} (const std\+::string \&collection, \hyperlink{struct_d_d4hep_1_1_d_d_eve_hit_actor}{D\+D\+Eve\+Hit\+Actor} \&actor)
+\begin{DoxyCompactList}\small\item\em Loop over collection and extract data. \end{DoxyCompactList}\item 
+virtual size\+\_\+t \hyperlink{class_d_d4hep_1_1_generic_event_handler_aa733b6de00ba09d05b2c4e33b0cd3232}{collection\+Loop} (const std\+::string \&collection, \hyperlink{struct_d_d4hep_1_1_d_d_eve_particle_actor}{D\+D\+Eve\+Particle\+Actor} \&actor)
+\begin{DoxyCompactList}\small\item\em Loop over collection and extract particle data. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_generic_event_handler_ab1a4e53010cf2aafdef02f8ceafc6ef0}{Open} (const std\+::string \&type, const std\+::string \&file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Open a new event data file. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_generic_event_handler_a0dc8d4d5dde63d3278f67da79e86b590}{Next\+Event} ()
+\begin{DoxyCompactList}\small\item\em Load the next event. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_generic_event_handler_a4b833d9537c7c29b0bfb0d567f98d0a3}{Previous\+Event} ()
+\begin{DoxyCompactList}\small\item\em User overloadable function\+: Load the previous event. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_generic_event_handler_a7a7c4d1592e5b2d467a426058aa1a44b}{Goto\+Event} (long event\+\_\+number)
+\begin{DoxyCompactList}\small\item\em Goto a specified event in the file. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_generic_event_handler_a8065b0b0f095783b7daf38ff19660cf7}{Subscribe} (\hyperlink{class_d_d4hep_1_1_event_consumer}{Event\+Consumer} $\ast$display)
+\begin{DoxyCompactList}\small\item\em Subscribe to notification of new data present. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_generic_event_handler_a030cffac2446e410dba9dec87802e035}{Unsubscribe} (\hyperlink{class_d_d4hep_1_1_event_consumer}{Event\+Consumer} $\ast$display)
+\begin{DoxyCompactList}\small\item\em Unsubscribe from notification of new data present. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_generic_event_handler_a01e7a0bdb965b93d5a3b0ba8f9ccb85e}{Notify\+Subscribers} (void(Event\+Consumer\+::$\ast$pmf)(\hyperlink{class_d_d4hep_1_1_event_handler}{Event\+Handler} $\ast$))
+\begin{DoxyCompactList}\small\item\em Notfy all subscribers. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_generic_event_handler_abbb82b5fc62720e45ed6c2ff03ae526d}{Class\+Def} (\hyperlink{class_d_d4hep_1_1_generic_event_handler}{Generic\+Event\+Handler}, 0)
 \end{DoxyCompactItemize}
 \subsection*{Protected Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef std::set$<$ \hyperlink{class_d_d4hep_1_1_event_consumer}{EventConsumer} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_generic_event_handler_a4b7fd1ba9fc0adab2fa1885162e69076}{Subscriptions}
-\begin{DoxyCompactList}\small\item\em Subscriber set. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+typedef std\+::set$<$ \hyperlink{class_d_d4hep_1_1_event_consumer}{Event\+Consumer} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_generic_event_handler_a4b7fd1ba9fc0adab2fa1885162e69076}{Subscriptions}
+\begin{DoxyCompactList}\small\item\em Subscriber set. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_event_handler}{EventHandler} $\ast$ \hyperlink{class_d_d4hep_1_1_generic_event_handler_a2d8d22b68acdb36e966f20bb5cb4b825}{current} () const 
+\hyperlink{class_d_d4hep_1_1_event_handler}{Event\+Handler} $\ast$ \hyperlink{class_d_d4hep_1_1_generic_event_handler_a4270bee117c5e39703a6f29e3e31d029}{current} () const
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std::map$<$ std::string, \hyperlink{class_d_d4hep_1_1_event_handler}{EventHandler} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_generic_event_handler_ac699842a86c41b3b4e3424571d83790c}{m\_\-handlers}
+std\+::map$<$ std\+::string, \hyperlink{class_d_d4hep_1_1_event_handler}{Event\+Handler} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_generic_event_handler_ac699842a86c41b3b4e3424571d83790c}{m\+\_\+handlers}
 \item 
-\hyperlink{class_d_d4hep_1_1_event_handler}{EventHandler} $\ast$ \hyperlink{class_d_d4hep_1_1_generic_event_handler_a63ec98dd603fe8124e8afde68f36e37a}{m\_\-current}
+\hyperlink{class_d_d4hep_1_1_event_handler}{Event\+Handler} $\ast$ \hyperlink{class_d_d4hep_1_1_generic_event_handler_a63ec98dd603fe8124e8afde68f36e37a}{m\+\_\+current}
 \item 
-\hyperlink{class_d_d4hep_1_1_generic_event_handler_a4b7fd1ba9fc0adab2fa1885162e69076}{Subscriptions} \hyperlink{class_d_d4hep_1_1_generic_event_handler_a3401232a3e8f43d779111f456176a3ba}{m\_\-subscriptions}
-\begin{DoxyCompactList}\small\item\em Data subscriptions (unordered). \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_d_d4hep_1_1_generic_event_handler_a4b7fd1ba9fc0adab2fa1885162e69076}{Subscriptions} \hyperlink{class_d_d4hep_1_1_generic_event_handler_a3401232a3e8f43d779111f456176a3ba}{m\+\_\+subscriptions}
+\begin{DoxyCompactList}\small\item\em Data subscriptions (unordered) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
-Event handler base class. Interface to all \hyperlink{struct_d_d4hep_1_1_d_d_eve}{DDEve} I/O actions. \begin{DoxyAuthor}{Author}
-M.Frank 
+Event handler base class. Interface to all \hyperlink{struct_d_d4hep_1_1_d_d_eve}{D\+D\+Eve} I/O actions. 
+
+\begin{DoxyAuthor}{Author}
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
-Definition at line 31 of file GenericEventHandler.h.
+Definition at line 31 of file Generic\+Event\+Handler.\+h.
+
+
 
 \subsection{Member Typedef Documentation}
-\hypertarget{class_d_d4hep_1_1_generic_event_handler_a4b7fd1ba9fc0adab2fa1885162e69076}{
-\index{DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}!Subscriptions@{Subscriptions}}
-\index{Subscriptions@{Subscriptions}!DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}}
-\subsubsection[{Subscriptions}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::set$<${\bf EventConsumer}$\ast$$>$ {\bf DD4hep::GenericEventHandler::Subscriptions}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_generic_event_handler_a4b7fd1ba9fc0adab2fa1885162e69076}
+\hypertarget{class_d_d4hep_1_1_generic_event_handler_a4b7fd1ba9fc0adab2fa1885162e69076}{}\label{class_d_d4hep_1_1_generic_event_handler_a4b7fd1ba9fc0adab2fa1885162e69076} 
+\index{D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}!Subscriptions@{Subscriptions}}
+\index{Subscriptions@{Subscriptions}!D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Subscriptions}{Subscriptions}}
+{\footnotesize\ttfamily typedef std\+::set$<$\hyperlink{class_d_d4hep_1_1_event_consumer}{Event\+Consumer}$\ast$$>$ \hyperlink{class_d_d4hep_1_1_generic_event_handler_a4b7fd1ba9fc0adab2fa1885162e69076}{D\+D4hep\+::\+Generic\+Event\+Handler\+::\+Subscriptions}\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Subscriber set. 
 
-Definition at line 34 of file GenericEventHandler.h.
+
+
+Definition at line 34 of file Generic\+Event\+Handler.\+h.
+
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_generic_event_handler_aef493617474019a953be658fdec60edc}{
-\index{DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}!GenericEventHandler@{GenericEventHandler}}
-\index{GenericEventHandler@{GenericEventHandler}!DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}}
-\subsubsection[{GenericEventHandler}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::GenericEventHandler::GenericEventHandler ()}}
-\label{class_d_d4hep_1_1_generic_event_handler_aef493617474019a953be658fdec60edc}
+\hypertarget{class_d_d4hep_1_1_generic_event_handler_aef493617474019a953be658fdec60edc}{}\label{class_d_d4hep_1_1_generic_event_handler_aef493617474019a953be658fdec60edc} 
+\index{D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}!Generic\+Event\+Handler@{Generic\+Event\+Handler}}
+\index{Generic\+Event\+Handler@{Generic\+Event\+Handler}!D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Generic\+Event\+Handler()}{GenericEventHandler()}}
+{\footnotesize\ttfamily D\+D4hep\+::\+Generic\+Event\+Handler\+::\+Generic\+Event\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
-Standard constructor. \hypertarget{class_d_d4hep_1_1_generic_event_handler_a2e5420d14f01ae34c9a0a670a374cf71}{
-\index{DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}!$\sim$GenericEventHandler@{$\sim$GenericEventHandler}}
-\index{$\sim$GenericEventHandler@{$\sim$GenericEventHandler}!DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}}
-\subsubsection[{$\sim$GenericEventHandler}]{\setlength{\rightskip}{0pt plus 5cm}GenericEventHandler::$\sim$GenericEventHandler ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_generic_event_handler_a2e5420d14f01ae34c9a0a670a374cf71}
+
+Standard constructor. 
+
+\hypertarget{class_d_d4hep_1_1_generic_event_handler_a2e5420d14f01ae34c9a0a670a374cf71}{}\label{class_d_d4hep_1_1_generic_event_handler_a2e5420d14f01ae34c9a0a670a374cf71} 
+\index{D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}!````~Generic\+Event\+Handler@{$\sim$\+Generic\+Event\+Handler}}
+\index{````~Generic\+Event\+Handler@{$\sim$\+Generic\+Event\+Handler}!D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}}
+\subsubsection{\texorpdfstring{$\sim$\+Generic\+Event\+Handler()}{~GenericEventHandler()}}
+{\footnotesize\ttfamily Generic\+Event\+Handler\+::$\sim$\+Generic\+Event\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Default destructor. 
 
-Definition at line 37 of file GenericEventHandler.cpp.
 
-References DD4hep::deletePtr(), m\_\-current, and m\_\-subscriptions.
+
+Definition at line 37 of file Generic\+Event\+Handler.\+cpp.
+
+
+
+References D\+D4hep\+::delete\+Ptr().
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_generic_event_handler_abbb82b5fc62720e45ed6c2ff03ae526d}{
-\index{DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}!ClassDef@{ClassDef}}
-\index{ClassDef@{ClassDef}!DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}}
-\subsubsection[{ClassDef}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::GenericEventHandler::ClassDef ({\bf GenericEventHandler}, \/  0)}}
-\label{class_d_d4hep_1_1_generic_event_handler_abbb82b5fc62720e45ed6c2ff03ae526d}
+\hypertarget{class_d_d4hep_1_1_generic_event_handler_abbb82b5fc62720e45ed6c2ff03ae526d}{}\label{class_d_d4hep_1_1_generic_event_handler_abbb82b5fc62720e45ed6c2ff03ae526d} 
+\index{D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}!Class\+Def@{Class\+Def}}
+\index{Class\+Def@{Class\+Def}!D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Class\+Def()}{ClassDef()}}
+{\footnotesize\ttfamily D\+D4hep\+::\+Generic\+Event\+Handler\+::\+Class\+Def (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_generic_event_handler}{Generic\+Event\+Handler}}]{,  }\item[{0}]{ }\end{DoxyParamCaption})}
 
 
-Reimplemented from \hyperlink{class_d_d4hep_1_1_event_handler_a44c310a4296693f09e62adbac3fbe2c6}{DD4hep::EventHandler}.\hypertarget{class_d_d4hep_1_1_generic_event_handler_a401b32a86d996b71baa133c4f4b00709}{
-\index{DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}!collectionLoop@{collectionLoop}}
-\index{collectionLoop@{collectionLoop}!DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}}
-\subsubsection[{collectionLoop}]{\setlength{\rightskip}{0pt plus 5cm}virtual size\_\-t DD4hep::GenericEventHandler::collectionLoop (const std::string \& {\em collection}, \/  {\bf DDEveParticleActor} \& {\em actor})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_generic_event_handler_a401b32a86d996b71baa133c4f4b00709}
 
+Referenced by data().
 
-Loop over collection and extract particle data. 
+\hypertarget{class_d_d4hep_1_1_generic_event_handler_a1186d6415d8d7e01f51993e204d5931f}{}\label{class_d_d4hep_1_1_generic_event_handler_a1186d6415d8d7e01f51993e204d5931f} 
+\index{D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}!collection\+Loop@{collection\+Loop}}
+\index{collection\+Loop@{collection\+Loop}!D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}}
+\subsubsection{\texorpdfstring{collection\+Loop()}{collectionLoop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily size\+\_\+t Generic\+Event\+Handler\+::collection\+Loop (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{collection,  }\item[{\hyperlink{struct_d_d4hep_1_1_d_d_eve_hit_actor}{D\+D\+Eve\+Hit\+Actor} \&}]{actor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-Implements \hyperlink{class_d_d4hep_1_1_event_handler_ae43595c2760736a7ca628183a2c91ec2}{DD4hep::EventHandler}.\hypertarget{class_d_d4hep_1_1_generic_event_handler_ad521db17296b0abb05294f61f83b2019}{
-\index{DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}!collectionLoop@{collectionLoop}}
-\index{collectionLoop@{collectionLoop}!DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}}
-\subsubsection[{collectionLoop}]{\setlength{\rightskip}{0pt plus 5cm}virtual size\_\-t DD4hep::GenericEventHandler::collectionLoop (const std::string \& {\em collection}, \/  {\bf DDEveHitActor} \& {\em actor})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_generic_event_handler_ad521db17296b0abb05294f61f83b2019}
 
 
 Loop over collection and extract data. 
 
-Implements \hyperlink{class_d_d4hep_1_1_event_handler_a454baeb81b675f3ebd8bb4293064b787}{DD4hep::EventHandler}.
 
-Referenced by DD4hep::Display::OnNewEvent().\hypertarget{class_d_d4hep_1_1_generic_event_handler_ae0471fce8b637f5825d3dab70537bdcd}{
-\index{DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}!collectionType@{collectionType}}
-\index{collectionType@{collectionType}!DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}}
-\subsubsection[{collectionType}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf CollectionType} DD4hep::GenericEventHandler::collectionType (const std::string \& {\em collection}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_generic_event_handler_ae0471fce8b637f5825d3dab70537bdcd}
+
+Implements \hyperlink{class_d_d4hep_1_1_event_handler_a454baeb81b675f3ebd8bb4293064b787}{D\+D4hep\+::\+Event\+Handler}.
+
+
+
+Definition at line 85 of file Generic\+Event\+Handler.\+cpp.
+
+
+
+Referenced by data(), D\+D4hep\+::\+Display\+::\+Get\+Calo\+Histogram(), and D\+D4hep\+::\+Display\+::\+On\+New\+Event().
+
+\hypertarget{class_d_d4hep_1_1_generic_event_handler_aa733b6de00ba09d05b2c4e33b0cd3232}{}\label{class_d_d4hep_1_1_generic_event_handler_aa733b6de00ba09d05b2c4e33b0cd3232} 
+\index{D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}!collection\+Loop@{collection\+Loop}}
+\index{collection\+Loop@{collection\+Loop}!D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}}
+\subsubsection{\texorpdfstring{collection\+Loop()}{collectionLoop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily size\+\_\+t Generic\+Event\+Handler\+::collection\+Loop (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{collection,  }\item[{\hyperlink{struct_d_d4hep_1_1_d_d_eve_particle_actor}{D\+D\+Eve\+Particle\+Actor} \&}]{actor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Loop over collection and extract particle data. 
+
+
+
+Implements \hyperlink{class_d_d4hep_1_1_event_handler_ae43595c2760736a7ca628183a2c91ec2}{D\+D4hep\+::\+Event\+Handler}.
+
+
+
+Definition at line 93 of file Generic\+Event\+Handler.\+cpp.
+
+\hypertarget{class_d_d4hep_1_1_generic_event_handler_aeb30b8fc7e8e850fa7472fc70443b817}{}\label{class_d_d4hep_1_1_generic_event_handler_aeb30b8fc7e8e850fa7472fc70443b817} 
+\index{D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}!collection\+Type@{collection\+Type}}
+\index{collection\+Type@{collection\+Type}!D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}}
+\subsubsection{\texorpdfstring{collection\+Type()}{collectionType()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254}{Event\+Handler\+::\+Collection\+Type} Generic\+Event\+Handler\+::collection\+Type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{collection }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Access to the collection type by name. 
 
-Implements \hyperlink{class_d_d4hep_1_1_event_handler_a8424ffc2056b0e23d69c81ab2496cd51}{DD4hep::EventHandler}.\hypertarget{class_d_d4hep_1_1_generic_event_handler_a2d8d22b68acdb36e966f20bb5cb4b825}{
-\index{DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}!current@{current}}
-\index{current@{current}!DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}}
-\subsubsection[{current}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EventHandler} $\ast$ GenericEventHandler::current () const\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_generic_event_handler_a2d8d22b68acdb36e966f20bb5cb4b825}
 
 
-Definition at line 42 of file GenericEventHandler.cpp.
+Implements \hyperlink{class_d_d4hep_1_1_event_handler_a8424ffc2056b0e23d69c81ab2496cd51}{D\+D4hep\+::\+Event\+Handler}.
 
-References m\_\-current.
 
-Referenced by data(), datasourceName(), GotoEvent(), NextEvent(), numEvents(), and PreviousEvent().\hypertarget{class_d_d4hep_1_1_generic_event_handler_aa1e4452bde1823d4592d4c61f6a62fcc}{
-\index{DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}!data@{data}}
-\index{data@{data}!DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}}
-\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf TypedEventCollections}\& DD4hep::GenericEventHandler::data () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_generic_event_handler_aa1e4452bde1823d4592d4c61f6a62fcc}
+
+Definition at line 77 of file Generic\+Event\+Handler.\+cpp.
+
+
+
+Referenced by data().
+
+\hypertarget{class_d_d4hep_1_1_generic_event_handler_a4270bee117c5e39703a6f29e3e31d029}{}\label{class_d_d4hep_1_1_generic_event_handler_a4270bee117c5e39703a6f29e3e31d029} 
+\index{D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}!current@{current}}
+\index{current@{current}!D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}}
+\subsubsection{\texorpdfstring{current()}{current()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_event_handler}{Event\+Handler} $\ast$ Generic\+Event\+Handler\+::current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 42 of file Generic\+Event\+Handler.\+cpp.
+
+
+
+Referenced by data().
+
+\hypertarget{class_d_d4hep_1_1_generic_event_handler_ad4d0029a1db989c61a3bbb72f299f12e}{}\label{class_d_d4hep_1_1_generic_event_handler_ad4d0029a1db989c61a3bbb72f299f12e} 
+\index{D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}!data@{data}}
+\index{data@{data}!D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}}
+\subsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily virtual const \hyperlink{class_d_d4hep_1_1_event_handler_a4d441ff8a824b1e2f278e8b7a6391af3}{Typed\+Event\+Collections}\& D\+D4hep\+::\+Generic\+Event\+Handler\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 Access the map of simulation data collections. 
 
-Implements \hyperlink{class_d_d4hep_1_1_event_handler_a263d136331d72994bcbf537d4aa16d4f}{DD4hep::EventHandler}.
 
-Definition at line 47 of file GenericEventHandler.h.
 
-References current(), and DD4hep::EventHandler::data().\hypertarget{class_d_d4hep_1_1_generic_event_handler_a9049182126476c4af50c72d15c120471}{
-\index{DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}!datasourceName@{datasourceName}}
-\index{datasourceName@{datasourceName}!DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}}
-\subsubsection[{datasourceName}]{\setlength{\rightskip}{0pt plus 5cm}{\bf string} GenericEventHandler::datasourceName () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_generic_event_handler_a9049182126476c4af50c72d15c120471}
+Implements \hyperlink{class_d_d4hep_1_1_event_handler_a263d136331d72994bcbf537d4aa16d4f}{D\+D4hep\+::\+Event\+Handler}.
+
+
+
+Definition at line 47 of file Generic\+Event\+Handler.\+h.
+
+
+
+References Class\+Def(), collection\+Loop(), collection\+Type(), current(), D\+D4hep\+::\+Event\+Handler\+::data(), datasource\+Name(), Goto\+Event(), Next\+Event(), Notify\+Subscribers(), num\+Events(), Open(), Previous\+Event(), Subscribe(), and Unsubscribe().
+
+\hypertarget{class_d_d4hep_1_1_generic_event_handler_a3d99aeaf1bcd8aa421ecab3bcf5fabe0}{}\label{class_d_d4hep_1_1_generic_event_handler_a3d99aeaf1bcd8aa421ecab3bcf5fabe0} 
+\index{D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}!datasource\+Name@{datasource\+Name}}
+\index{datasource\+Name@{datasource\+Name}!D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}}
+\subsubsection{\texorpdfstring{datasource\+Name()}{datasourceName()}}
+{\footnotesize\ttfamily string Generic\+Event\+Handler\+::datasource\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Access the data source name. 
 
-Implements \hyperlink{class_d_d4hep_1_1_event_handler_a5fa231363a787ba7edf520b5a99f294e}{DD4hep::EventHandler}.
 
-Definition at line 72 of file GenericEventHandler.cpp.
 
-References current(), and DD4hep::EventHandler::datasourceName().
+Implements \hyperlink{class_d_d4hep_1_1_event_handler_a5fa231363a787ba7edf520b5a99f294e}{D\+D4hep\+::\+Event\+Handler}.
 
-Referenced by DD4hep::EventControl::OnBuild().\hypertarget{class_d_d4hep_1_1_generic_event_handler_a7a7c4d1592e5b2d467a426058aa1a44b}{
-\index{DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}!GotoEvent@{GotoEvent}}
-\index{GotoEvent@{GotoEvent}!DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}}
-\subsubsection[{GotoEvent}]{\setlength{\rightskip}{0pt plus 5cm}bool GenericEventHandler::GotoEvent (long {\em event\_\-number})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_generic_event_handler_a7a7c4d1592e5b2d467a426058aa1a44b}
+
+
+Definition at line 72 of file Generic\+Event\+Handler.\+cpp.
+
+
+
+Referenced by data().
+
+\hypertarget{class_d_d4hep_1_1_generic_event_handler_a7a7c4d1592e5b2d467a426058aa1a44b}{}\label{class_d_d4hep_1_1_generic_event_handler_a7a7c4d1592e5b2d467a426058aa1a44b} 
+\index{D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}!Goto\+Event@{Goto\+Event}}
+\index{Goto\+Event@{Goto\+Event}!D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Goto\+Event()}{GotoEvent()}}
+{\footnotesize\ttfamily bool Generic\+Event\+Handler\+::\+Goto\+Event (\begin{DoxyParamCaption}\item[{long}]{event\+\_\+number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Goto a specified event in the file. 
 
-Implements \hyperlink{class_d_d4hep_1_1_event_handler_a09c40b0b753455c1e3df7c561ff6b069}{DD4hep::EventHandler}.
 
-Definition at line 183 of file GenericEventHandler.cpp.
 
-References current(), DD4hep::EventHandler::m\_\-hasEvent, DD4hep::EventHandler::m\_\-hasFile, NotifySubscribers(), and DD4hep::EventConsumer::OnNewEvent().
+Implements \hyperlink{class_d_d4hep_1_1_event_handler_a09c40b0b753455c1e3df7c561ff6b069}{D\+D4hep\+::\+Event\+Handler}.
 
-Referenced by DD4hep::EventControl::GotoEvent().\hypertarget{class_d_d4hep_1_1_generic_event_handler_a0dc8d4d5dde63d3278f67da79e86b590}{
-\index{DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}!NextEvent@{NextEvent}}
-\index{NextEvent@{NextEvent}!DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}}
-\subsubsection[{NextEvent}]{\setlength{\rightskip}{0pt plus 5cm}bool GenericEventHandler::NextEvent ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_generic_event_handler_a0dc8d4d5dde63d3278f67da79e86b590}
+
+
+Definition at line 183 of file Generic\+Event\+Handler.\+cpp.
+
+
+
+Referenced by data().
+
+\hypertarget{class_d_d4hep_1_1_generic_event_handler_a0dc8d4d5dde63d3278f67da79e86b590}{}\label{class_d_d4hep_1_1_generic_event_handler_a0dc8d4d5dde63d3278f67da79e86b590} 
+\index{D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}!Next\+Event@{Next\+Event}}
+\index{Next\+Event@{Next\+Event}!D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Next\+Event()}{NextEvent()}}
+{\footnotesize\ttfamily bool Generic\+Event\+Handler\+::\+Next\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Load the next event. 
 
-Implements \hyperlink{class_d_d4hep_1_1_event_handler_ac2360791d3a44f4cef0987f9a7ec51ce}{DD4hep::EventHandler}.
 
-Definition at line 148 of file GenericEventHandler.cpp.
 
-References current(), DD4hep::EventHandler::m\_\-hasEvent, DD4hep::EventHandler::m\_\-hasFile, NotifySubscribers(), and DD4hep::EventConsumer::OnNewEvent().
+Implements \hyperlink{class_d_d4hep_1_1_event_handler_ac2360791d3a44f4cef0987f9a7ec51ce}{D\+D4hep\+::\+Event\+Handler}.
 
-Referenced by DD4hep::EventControl::NextEvent(), and DD4hep::DD4hepMenu::OnNextEvent().\hypertarget{class_d_d4hep_1_1_generic_event_handler_a01e7a0bdb965b93d5a3b0ba8f9ccb85e}{
-\index{DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}!NotifySubscribers@{NotifySubscribers}}
-\index{NotifySubscribers@{NotifySubscribers}!DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}}
-\subsubsection[{NotifySubscribers}]{\setlength{\rightskip}{0pt plus 5cm}void GenericEventHandler::NotifySubscribers (void(EventConsumer::$\ast$)({\bf EventHandler} $\ast$) {\em pmf})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_generic_event_handler_a01e7a0bdb965b93d5a3b0ba8f9ccb85e}
+
+
+Definition at line 148 of file Generic\+Event\+Handler.\+cpp.
+
+
+
+References e.
+
+
+
+Referenced by data().
+
+\hypertarget{class_d_d4hep_1_1_generic_event_handler_a01e7a0bdb965b93d5a3b0ba8f9ccb85e}{}\label{class_d_d4hep_1_1_generic_event_handler_a01e7a0bdb965b93d5a3b0ba8f9ccb85e} 
+\index{D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}!Notify\+Subscribers@{Notify\+Subscribers}}
+\index{Notify\+Subscribers@{Notify\+Subscribers}!D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Notify\+Subscribers()}{NotifySubscribers()}}
+{\footnotesize\ttfamily void Generic\+Event\+Handler\+::\+Notify\+Subscribers (\begin{DoxyParamCaption}\item[{void(Event\+Consumer\+::$\ast$)(\hyperlink{class_d_d4hep_1_1_event_handler}{Event\+Handler} $\ast$)}]{pmf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Notfy all subscribers. 
 
-Definition at line 50 of file GenericEventHandler.cpp.
-
-References m\_\-subscriptions.
-
-Referenced by GotoEvent(), NextEvent(), and PreviousEvent().\hypertarget{class_d_d4hep_1_1_generic_event_handler_a48f6771f5f90bd353e7b242f247a91cb}{
-\index{DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}!numEvents@{numEvents}}
-\index{numEvents@{numEvents}!DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}}
-\subsubsection[{numEvents}]{\setlength{\rightskip}{0pt plus 5cm}long GenericEventHandler::numEvents () const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_generic_event_handler_a48f6771f5f90bd353e7b242f247a91cb}
 
 
-Access the number of events on the current input data source (-\/1 if no data source connected). 
+Definition at line 50 of file Generic\+Event\+Handler.\+cpp.
 
-Implements \hyperlink{class_d_d4hep_1_1_event_handler_a005436bba029439b513645485e3c0ff5}{DD4hep::EventHandler}.
 
-Definition at line 67 of file GenericEventHandler.cpp.
 
-References current(), and DD4hep::EventHandler::numEvents().
+Referenced by data().
 
-Referenced by DD4hep::EventControl::OnBuild().\hypertarget{class_d_d4hep_1_1_generic_event_handler_a2ad81c03ef6feac9bf399ccd5928da41}{
-\index{DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}!Open@{Open}}
-\index{Open@{Open}!DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}}
-\subsubsection[{Open}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool DD4hep::GenericEventHandler::Open (const std::string \& {\em type}, \/  const std::string \& {\em file\_\-name})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_generic_event_handler_a2ad81c03ef6feac9bf399ccd5928da41}
+\hypertarget{class_d_d4hep_1_1_generic_event_handler_a05d0623b58211c6d941aea1377771a2b}{}\label{class_d_d4hep_1_1_generic_event_handler_a05d0623b58211c6d941aea1377771a2b} 
+\index{D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}!num\+Events@{num\+Events}}
+\index{num\+Events@{num\+Events}!D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}}
+\subsubsection{\texorpdfstring{num\+Events()}{numEvents()}}
+{\footnotesize\ttfamily long Generic\+Event\+Handler\+::num\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Access the number of events on the current input data source (-\/1 if no data source connected) 
+
+
+
+Implements \hyperlink{class_d_d4hep_1_1_event_handler_a005436bba029439b513645485e3c0ff5}{D\+D4hep\+::\+Event\+Handler}.
+
+
+
+Definition at line 67 of file Generic\+Event\+Handler.\+cpp.
+
+
+
+Referenced by data().
+
+\hypertarget{class_d_d4hep_1_1_generic_event_handler_ab1a4e53010cf2aafdef02f8ceafc6ef0}{}\label{class_d_d4hep_1_1_generic_event_handler_ab1a4e53010cf2aafdef02f8ceafc6ef0} 
+\index{D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}!Open@{Open}}
+\index{Open@{Open}!D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Open()}{Open()}}
+{\footnotesize\ttfamily bool Generic\+Event\+Handler\+::\+Open (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type,  }\item[{const std\+::string \&}]{file\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Open a new event data file. 
 
-Implements \hyperlink{class_d_d4hep_1_1_event_handler_a90995d3b610beee9d9f7fafcc060626b}{DD4hep::EventHandler}.
-
-Referenced by ClassImp(), and DD4hep::EventControl::Open().\hypertarget{class_d_d4hep_1_1_generic_event_handler_a4b833d9537c7c29b0bfb0d567f98d0a3}{
-\index{DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}!PreviousEvent@{PreviousEvent}}
-\index{PreviousEvent@{PreviousEvent}!DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}}
-\subsubsection[{PreviousEvent}]{\setlength{\rightskip}{0pt plus 5cm}bool GenericEventHandler::PreviousEvent ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_generic_event_handler_a4b833d9537c7c29b0bfb0d567f98d0a3}
 
 
-User overloadable function: Load the previous event. 
+Implements \hyperlink{class_d_d4hep_1_1_event_handler_a90995d3b610beee9d9f7fafcc060626b}{D\+D4hep\+::\+Event\+Handler}.
 
-Implements \hyperlink{class_d_d4hep_1_1_event_handler_a0942608bebbdd107c9dedbdc7311791f}{DD4hep::EventHandler}.
 
-Definition at line 172 of file GenericEventHandler.cpp.
 
-References current(), DD4hep::EventHandler::m\_\-hasEvent, DD4hep::EventHandler::m\_\-hasFile, NotifySubscribers(), and DD4hep::EventConsumer::OnNewEvent().
+Definition at line 101 of file Generic\+Event\+Handler.\+cpp.
 
-Referenced by DD4hep::DD4hepMenu::OnPreviousEvent(), and DD4hep::EventControl::PreviousEvent().\hypertarget{class_d_d4hep_1_1_generic_event_handler_a8065b0b0f095783b7daf38ff19660cf7}{
-\index{DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}!Subscribe@{Subscribe}}
-\index{Subscribe@{Subscribe}!DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}}
-\subsubsection[{Subscribe}]{\setlength{\rightskip}{0pt plus 5cm}void GenericEventHandler::Subscribe ({\bf EventConsumer} $\ast$ {\em display})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_generic_event_handler_a8065b0b0f095783b7daf38ff19660cf7}
+
+
+References D\+D4hep\+::delete\+Ptr(), and e.
+
+
+
+Referenced by Class\+Imp(), and data().
+
+\hypertarget{class_d_d4hep_1_1_generic_event_handler_a4b833d9537c7c29b0bfb0d567f98d0a3}{}\label{class_d_d4hep_1_1_generic_event_handler_a4b833d9537c7c29b0bfb0d567f98d0a3} 
+\index{D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}!Previous\+Event@{Previous\+Event}}
+\index{Previous\+Event@{Previous\+Event}!D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Previous\+Event()}{PreviousEvent()}}
+{\footnotesize\ttfamily bool Generic\+Event\+Handler\+::\+Previous\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+User overloadable function\+: Load the previous event. 
+
+
+
+Implements \hyperlink{class_d_d4hep_1_1_event_handler_a0942608bebbdd107c9dedbdc7311791f}{D\+D4hep\+::\+Event\+Handler}.
+
+
+
+Definition at line 172 of file Generic\+Event\+Handler.\+cpp.
+
+
+
+Referenced by data().
+
+\hypertarget{class_d_d4hep_1_1_generic_event_handler_a8065b0b0f095783b7daf38ff19660cf7}{}\label{class_d_d4hep_1_1_generic_event_handler_a8065b0b0f095783b7daf38ff19660cf7} 
+\index{D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}!Subscribe@{Subscribe}}
+\index{Subscribe@{Subscribe}!D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Subscribe()}{Subscribe()}}
+{\footnotesize\ttfamily void Generic\+Event\+Handler\+::\+Subscribe (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_event_consumer}{Event\+Consumer} $\ast$}]{display }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Subscribe to notification of new data present. 
 
-Definition at line 56 of file GenericEventHandler.cpp.
 
-References m\_\-subscriptions.
 
-Referenced by DD4hep::Display::Display().\hypertarget{class_d_d4hep_1_1_generic_event_handler_a030cffac2446e410dba9dec87802e035}{
-\index{DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}!Unsubscribe@{Unsubscribe}}
-\index{Unsubscribe@{Unsubscribe}!DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}}
-\subsubsection[{Unsubscribe}]{\setlength{\rightskip}{0pt plus 5cm}void GenericEventHandler::Unsubscribe ({\bf EventConsumer} $\ast$ {\em display})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_generic_event_handler_a030cffac2446e410dba9dec87802e035}
+Definition at line 56 of file Generic\+Event\+Handler.\+cpp.
+
+
+
+Referenced by data(), and D\+D4hep\+::\+Display\+::\+Display().
+
+\hypertarget{class_d_d4hep_1_1_generic_event_handler_a030cffac2446e410dba9dec87802e035}{}\label{class_d_d4hep_1_1_generic_event_handler_a030cffac2446e410dba9dec87802e035} 
+\index{D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}!Unsubscribe@{Unsubscribe}}
+\index{Unsubscribe@{Unsubscribe}!D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Unsubscribe()}{Unsubscribe()}}
+{\footnotesize\ttfamily void Generic\+Event\+Handler\+::\+Unsubscribe (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_event_consumer}{Event\+Consumer} $\ast$}]{display }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Unsubscribe from notification of new data present. 
 
-Definition at line 61 of file GenericEventHandler.cpp.
 
-References m\_\-subscriptions.
 
-Referenced by DD4hep::EventControl::$\sim$EventControl().
+Definition at line 61 of file Generic\+Event\+Handler.\+cpp.
+
+
+
+Referenced by data().
+
+
 
 \subsection{Member Data Documentation}
-\hypertarget{class_d_d4hep_1_1_generic_event_handler_a63ec98dd603fe8124e8afde68f36e37a}{
-\index{DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}!m\_\-current@{m\_\-current}}
-\index{m\_\-current@{m\_\-current}!DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}}
-\subsubsection[{m\_\-current}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EventHandler}$\ast$ {\bf DD4hep::GenericEventHandler::m\_\-current}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_generic_event_handler_a63ec98dd603fe8124e8afde68f36e37a}
+\hypertarget{class_d_d4hep_1_1_generic_event_handler_a63ec98dd603fe8124e8afde68f36e37a}{}\label{class_d_d4hep_1_1_generic_event_handler_a63ec98dd603fe8124e8afde68f36e37a} 
+\index{D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}!m\+\_\+current@{m\+\_\+current}}
+\index{m\+\_\+current@{m\+\_\+current}!D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}}
+\subsubsection{\texorpdfstring{m\+\_\+current}{m\_current}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_event_handler}{Event\+Handler}$\ast$ D\+D4hep\+::\+Generic\+Event\+Handler\+::m\+\_\+current\hspace{0.3cm}{\ttfamily [protected]}}
 
 
-Definition at line 36 of file GenericEventHandler.h.
 
-Referenced by current(), and $\sim$GenericEventHandler().\hypertarget{class_d_d4hep_1_1_generic_event_handler_ac699842a86c41b3b4e3424571d83790c}{
-\index{DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}!m\_\-handlers@{m\_\-handlers}}
-\index{m\_\-handlers@{m\_\-handlers}!DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}}
-\subsubsection[{m\_\-handlers}]{\setlength{\rightskip}{0pt plus 5cm}std::map$<$std::string,{\bf EventHandler}$\ast$$>$ {\bf DD4hep::GenericEventHandler::m\_\-handlers}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_generic_event_handler_ac699842a86c41b3b4e3424571d83790c}
+Definition at line 36 of file Generic\+Event\+Handler.\+h.
 
-
-Definition at line 35 of file GenericEventHandler.h.\hypertarget{class_d_d4hep_1_1_generic_event_handler_a3401232a3e8f43d779111f456176a3ba}{
-\index{DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}!m\_\-subscriptions@{m\_\-subscriptions}}
-\index{m\_\-subscriptions@{m\_\-subscriptions}!DD4hep::GenericEventHandler@{DD4hep::GenericEventHandler}}
-\subsubsection[{m\_\-subscriptions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Subscriptions} {\bf DD4hep::GenericEventHandler::m\_\-subscriptions}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_generic_event_handler_a3401232a3e8f43d779111f456176a3ba}
+\hypertarget{class_d_d4hep_1_1_generic_event_handler_ac699842a86c41b3b4e3424571d83790c}{}\label{class_d_d4hep_1_1_generic_event_handler_ac699842a86c41b3b4e3424571d83790c} 
+\index{D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}!m\+\_\+handlers@{m\+\_\+handlers}}
+\index{m\+\_\+handlers@{m\+\_\+handlers}!D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}}
+\subsubsection{\texorpdfstring{m\+\_\+handlers}{m\_handlers}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string,\hyperlink{class_d_d4hep_1_1_event_handler}{Event\+Handler}$\ast$$>$ D\+D4hep\+::\+Generic\+Event\+Handler\+::m\+\_\+handlers\hspace{0.3cm}{\ttfamily [protected]}}
 
 
-Data subscriptions (unordered). 
 
-Definition at line 38 of file GenericEventHandler.h.
+Definition at line 35 of file Generic\+Event\+Handler.\+h.
 
-Referenced by NotifySubscribers(), Subscribe(), Unsubscribe(), and $\sim$GenericEventHandler().
+\hypertarget{class_d_d4hep_1_1_generic_event_handler_a3401232a3e8f43d779111f456176a3ba}{}\label{class_d_d4hep_1_1_generic_event_handler_a3401232a3e8f43d779111f456176a3ba} 
+\index{D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}!m\+\_\+subscriptions@{m\+\_\+subscriptions}}
+\index{m\+\_\+subscriptions@{m\+\_\+subscriptions}!D\+D4hep\+::\+Generic\+Event\+Handler@{D\+D4hep\+::\+Generic\+Event\+Handler}}
+\subsubsection{\texorpdfstring{m\+\_\+subscriptions}{m\_subscriptions}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_generic_event_handler_a4b7fd1ba9fc0adab2fa1885162e69076}{Subscriptions} D\+D4hep\+::\+Generic\+Event\+Handler\+::m\+\_\+subscriptions\hspace{0.3cm}{\ttfamily [protected]}}
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+
+
+Data subscriptions (unordered) 
+
+
+
+Definition at line 38 of file Generic\+Event\+Handler.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDEve/include/DDEve/\hyperlink{_generic_event_handler_8h}{GenericEventHandler.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDEve/src/\hyperlink{_generic_event_handler_8cpp}{GenericEventHandler.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Eve/include/\+D\+D\+Eve/\hyperlink{_generic_event_handler_8h}{Generic\+Event\+Handler.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Eve/src/\hyperlink{_generic_event_handler_8cpp}{Generic\+Event\+Handler.\+cpp}\end{DoxyCompactItemize}

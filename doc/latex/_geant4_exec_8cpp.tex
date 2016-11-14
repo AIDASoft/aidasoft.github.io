@@ -1,71 +1,65 @@
-\hypertarget{_geant4_exec_8cpp}{
-\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/Geant4Exec.cpp File Reference}
-\label{_geant4_exec_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/Geant4Exec.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/Geant4Exec.cpp}}
-}
-{\ttfamily \#include \char`\"{}DD4hep/Printout.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/Primitives.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/InstanceCount.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/Handle.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4RunAction.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4EventAction.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4SteppingAction.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4TrackingAction.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4StackingAction.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4GeneratorAction.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4UserInitialization.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4DetectorConstruction.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4PhysicsList.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4UIManager.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4Kernel.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4Random.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4Version.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4UserRunAction.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4UserEventAction.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4UserTrackingAction.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4UserStackingAction.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4UserSteppingAction.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4VUserPhysicsList.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4VModularPhysicsList.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4VUserPrimaryGeneratorAction.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4VUserActionInitialization.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4VUserDetectorConstruction.hh\char`\"{}}\par
-{\ttfamily \#include $<$memory$>$}\par
-{\ttfamily \#include $<$stdexcept$>$}\par
-{\ttfamily \#include \char`\"{}DD4hep/LCDD.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/Plugins.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4RunManager.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4PhysListFactory.hh\char`\"{}}\par
+\hypertarget{_geant4_exec_8cpp}{}\section{/afs/cern.ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/src/\+Geant4\+Exec.cpp File Reference}
+\label{_geant4_exec_8cpp}\index{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/src/\+Geant4\+Exec.\+cpp@{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/src/\+Geant4\+Exec.\+cpp}}
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Printout.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Primitives.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Instance\+Count.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Handle.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Run\+Action.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Event\+Action.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Stepping\+Action.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Tracking\+Action.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Stacking\+Action.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Generator\+Action.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+User\+Initialization.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Detector\+Construction.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Physics\+List.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+U\+I\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Kernel.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Random.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Version.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+User\+Run\+Action.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+User\+Event\+Action.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+User\+Tracking\+Action.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+User\+Stacking\+Action.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+User\+Stepping\+Action.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+V\+User\+Physics\+List.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+V\+Modular\+Physics\+List.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+V\+User\+Primary\+Generator\+Action.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+V\+User\+Action\+Initialization.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+V\+User\+Detector\+Construction.\+hh\char`\"{}}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+L\+C\+D\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Plugins.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Run\+Manager.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Phys\+List\+Factory.\+hh\char`\"{}}\newline
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{class_d_d4hep_1_1_simulation_1_1_sequence_hdl}{DD4hep::Simulation::SequenceHdl$<$ T $>$}
-\begin{DoxyCompactList}\small\item\em Sequence handler implementing common actions to all sequences. \item\end{DoxyCompactList}\item 
-class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_run_action}{DD4hep::Simulation::Geant4UserRunAction}
-\begin{DoxyCompactList}\small\item\em Concrete implementation of the Geant4 run action. \item\end{DoxyCompactList}\item 
-class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_event_action}{DD4hep::Simulation::Geant4UserEventAction}
-\begin{DoxyCompactList}\small\item\em Concrete implementation of the Geant4 event action. \item\end{DoxyCompactList}\item 
-class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_tracking_action}{DD4hep::Simulation::Geant4UserTrackingAction}
-\begin{DoxyCompactList}\small\item\em Concrete implementation of the Geant4 tracking action. \item\end{DoxyCompactList}\item 
-class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_stacking_action}{DD4hep::Simulation::Geant4UserStackingAction}
-\begin{DoxyCompactList}\small\item\em Concrete implementation of the Geant4 stacking action sequence. \item\end{DoxyCompactList}\item 
-class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_generator_action}{DD4hep::Simulation::Geant4UserGeneratorAction}
-\begin{DoxyCompactList}\small\item\em Concrete implementation of the Geant4 generator action. \item\end{DoxyCompactList}\item 
-class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_stepping_action}{DD4hep::Simulation::Geant4UserSteppingAction}
-\begin{DoxyCompactList}\small\item\em Concrete implementation of the Geant4 stepping action. \item\end{DoxyCompactList}\item 
-class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_detector_construction}{DD4hep::Simulation::Geant4UserDetectorConstruction}
-\begin{DoxyCompactList}\small\item\em Concrete implementation of the Geant4 user detector construction action sequence. \item\end{DoxyCompactList}\item 
-class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_action_initialization}{DD4hep::Simulation::Geant4UserActionInitialization}
-\begin{DoxyCompactList}\small\item\em Concrete implementation of the Geant4 user initialization action sequence. \item\end{DoxyCompactList}\item 
-class \hyperlink{class_geant4_compatibility}{Geant4Compatibility}
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_sequence_hdl}{D\+D4hep\+::\+Simulation\+::\+Sequence\+Hdl$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Sequence handler implementing common actions to all sequences. \end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_run_action}{D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Run\+Action}
+\begin{DoxyCompactList}\small\item\em Concrete implementation of the Geant4 run action. \end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_event_action}{D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Event\+Action}
+\begin{DoxyCompactList}\small\item\em Concrete implementation of the Geant4 event action. \end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_tracking_action}{D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Tracking\+Action}
+\begin{DoxyCompactList}\small\item\em Concrete implementation of the Geant4 tracking action. \end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_stacking_action}{D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Stacking\+Action}
+\begin{DoxyCompactList}\small\item\em Concrete implementation of the Geant4 stacking action sequence. \end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_generator_action}{D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Generator\+Action}
+\begin{DoxyCompactList}\small\item\em Concrete implementation of the Geant4 generator action. \end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_stepping_action}{D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Stepping\+Action}
+\begin{DoxyCompactList}\small\item\em Concrete implementation of the Geant4 stepping action. \end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_detector_construction}{D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Detector\+Construction}
+\begin{DoxyCompactList}\small\item\em Concrete implementation of the Geant4 user detector construction action sequence. \end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_action_initialization}{D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Action\+Initialization}
+\begin{DoxyCompactList}\small\item\em Concrete implementation of the Geant4 user initialization action sequence. \end{DoxyCompactList}\item 
+class \hyperlink{class_geant4_compatibility}{Geant4\+Compatibility}
 \end{DoxyCompactItemize}
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
-namespace \hyperlink{namespace_d_d4hep}{DD4hep}
-
-
-\begin{DoxyCompactList}\small\item\em Namespace for the AIDA detector description toolkit. \item\end{DoxyCompactList}\item 
-namespace \hyperlink{namespace_d_d4hep_1_1_simulation}{DD4hep::Simulation}
-
-
-\begin{DoxyCompactList}\small\item\em Namespace for the Geant4 based simulation part of the AIDA detector description toolkit. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+ \hyperlink{namespace_d_d4hep}{D\+D4hep}
+\begin{DoxyCompactList}\small\item\em Namespace for the A\+I\+DA detector description toolkit. \end{DoxyCompactList}\item 
+ \hyperlink{namespace_d_d4hep_1_1_simulation}{D\+D4hep\+::\+Simulation}
+\begin{DoxyCompactList}\small\item\em Namespace for the Geant4 based simulation part of the A\+I\+DA detector description toolkit. \end{DoxyCompactList}\end{DoxyCompactItemize}

@@ -1,182 +1,204 @@
-\hypertarget{_shapes_8cpp}{
-\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/Shapes.cpp File Reference}
-\label{_shapes_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/Shapes.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/Shapes.cpp}}
-}
-{\ttfamily \#include \char`\"{}DD4hep/LCDD.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/MatrixHelpers.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/DD4hepUnits.h\char`\"{}}\par
-{\ttfamily \#include $<$stdexcept$>$}\par
-{\ttfamily \#include \char`\"{}TClass.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoShape.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoHype.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoPcon.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoPgon.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoTube.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoEltu.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoTrd1.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoTrd2.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoArb8.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoCone.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoParaboloid.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoSphere.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoTorus.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoMatrix.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoHalfSpace.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoBoolNode.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoCompositeShape.h\char`\"{}}\par
-\subsection*{Defines}
+\hypertarget{_shapes_8cpp}{}\section{/afs/cern.ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\+Shapes.cpp File Reference}
+\label{_shapes_8cpp}\index{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\+Shapes.\+cpp@{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\+Shapes.\+cpp}}
+{\ttfamily \#include \char`\"{}D\+D4hep/\+L\+C\+D\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Matrix\+Helpers.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+D\+D4hep\+Units.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include \char`\"{}T\+Class.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Shape.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Hype.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Pcon.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Pgon.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Tube.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Eltu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Trd1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Trd2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Arb8.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Cone.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Paraboloid.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Sphere.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Torus.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Matrix.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Half\+Space.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Bool\+Node.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Composite\+Shape.\+h\char`\"{}}\newline
+\subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{_shapes_8cpp_a525335710b53cb064ca56b936120431e}{\_\-USE\_\-MATH\_\-DEFINES}
+\#define \hyperlink{_shapes_8cpp_a525335710b53cb064ca56b936120431e}{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+ES}
 \item 
-\#define \hyperlink{_shapes_8cpp_aa45a15366ebf61bf51468bdf50be9961}{INSTANTIATE}(X)~template class \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type}{DD4hep::Geometry::Solid\_\-type}$<$X$>$
+\#define \hyperlink{_shapes_8cpp_aa45a15366ebf61bf51468bdf50be9961}{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}(X)~template class \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type}{D\+D4hep\+::\+Geometry\+::\+Solid\+\_\+type}$<$X$>$
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{_shapes_8cpp_aba7f63a06255ddc9338e34c6a6e5d333}{INSTANTIATE} (TGeoShape)
+\hyperlink{_shapes_8cpp_aba7f63a06255ddc9338e34c6a6e5d333}{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE} (T\+Geo\+Shape)
 \item 
-\hyperlink{_shapes_8cpp_abe5a371b6f4083ec80c505bc62bc7784}{INSTANTIATE} (TGeoBBox)
+\hyperlink{_shapes_8cpp_abe5a371b6f4083ec80c505bc62bc7784}{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE} (T\+Geo\+B\+Box)
 \item 
-\hyperlink{_shapes_8cpp_a46f7b8686ff30dea5f2f8a19592bd1bf}{INSTANTIATE} (TGeoHalfSpace)
+\hyperlink{_shapes_8cpp_a46f7b8686ff30dea5f2f8a19592bd1bf}{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE} (T\+Geo\+Half\+Space)
 \item 
-\hyperlink{_shapes_8cpp_a6e0f6c08e7ff6aa31bbb7e38f85f6872}{INSTANTIATE} (TGeoCone)
+\hyperlink{_shapes_8cpp_a6e0f6c08e7ff6aa31bbb7e38f85f6872}{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE} (T\+Geo\+Cone)
 \item 
-\hyperlink{_shapes_8cpp_a24f84fe1779a831d1ec200e85a5b90f3}{INSTANTIATE} (\hyperlink{class_t_geo_cone_seg}{TGeoConeSeg})
+\hyperlink{_shapes_8cpp_a24f84fe1779a831d1ec200e85a5b90f3}{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE} (\hyperlink{class_t_geo_cone_seg}{T\+Geo\+Cone\+Seg})
 \item 
-\hyperlink{_shapes_8cpp_a8f2a8ff5247e89fb4b6df778f858b0cd}{INSTANTIATE} (TGeoParaboloid)
+\hyperlink{_shapes_8cpp_a8f2a8ff5247e89fb4b6df778f858b0cd}{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE} (T\+Geo\+Paraboloid)
 \item 
-\hyperlink{_shapes_8cpp_a48ad8c98f055915ef38910d993556a15}{INSTANTIATE} (TGeoPcon)
+\hyperlink{_shapes_8cpp_a48ad8c98f055915ef38910d993556a15}{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE} (T\+Geo\+Pcon)
 \item 
-\hyperlink{_shapes_8cpp_a93df3325d71e7a68c88068645a5db36d}{INSTANTIATE} (TGeoPgon)
+\hyperlink{_shapes_8cpp_a93df3325d71e7a68c88068645a5db36d}{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE} (T\+Geo\+Pgon)
 \item 
-\hyperlink{_shapes_8cpp_a9ccc814999a3fa3bcb56dd1ff24d87fd}{INSTANTIATE} (TGeoSphere)
+\hyperlink{_shapes_8cpp_a9ccc814999a3fa3bcb56dd1ff24d87fd}{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE} (T\+Geo\+Sphere)
 \item 
-\hyperlink{_shapes_8cpp_a96a4f3247afc636cd1b8539168e41900}{INSTANTIATE} (TGeoTorus)
+\hyperlink{_shapes_8cpp_a96a4f3247afc636cd1b8539168e41900}{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE} (T\+Geo\+Torus)
 \item 
-\hyperlink{_shapes_8cpp_a1cccfc3a2d05940175e68e84d5997df0}{INSTANTIATE} (TGeoTube)
+\hyperlink{_shapes_8cpp_a1cccfc3a2d05940175e68e84d5997df0}{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE} (T\+Geo\+Tube)
 \item 
-\hyperlink{_shapes_8cpp_aa91726445ad3b69cef2f058caa37edc6}{INSTANTIATE} (TGeoTubeSeg)
+\hyperlink{_shapes_8cpp_aa91726445ad3b69cef2f058caa37edc6}{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE} (T\+Geo\+Tube\+Seg)
 \item 
-\hyperlink{_shapes_8cpp_ab3c058eabcbe94ceb8fbb02bdf51a59f}{INSTANTIATE} (TGeoEltu)
+\hyperlink{_shapes_8cpp_ab3c058eabcbe94ceb8fbb02bdf51a59f}{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE} (T\+Geo\+Eltu)
 \item 
-\hyperlink{_shapes_8cpp_aa981af91db1ccd25e5167241120cabbe}{INSTANTIATE} (TGeoHype)
+\hyperlink{_shapes_8cpp_aa981af91db1ccd25e5167241120cabbe}{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE} (T\+Geo\+Hype)
 \item 
-\hyperlink{_shapes_8cpp_a4fdb3594208d3c8fc3182764e6eb8e2f}{INSTANTIATE} (TGeoTrap)
+\hyperlink{_shapes_8cpp_a4fdb3594208d3c8fc3182764e6eb8e2f}{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE} (T\+Geo\+Trap)
 \item 
-\hyperlink{_shapes_8cpp_a90d5d163de3e84fb5987ff2599383b97}{INSTANTIATE} (TGeoTrd1)
+\hyperlink{_shapes_8cpp_a90d5d163de3e84fb5987ff2599383b97}{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE} (T\+Geo\+Trd1)
 \item 
-\hyperlink{_shapes_8cpp_a743df142039a4379fc846728e608c750}{INSTANTIATE} (TGeoTrd2)
+\hyperlink{_shapes_8cpp_a743df142039a4379fc846728e608c750}{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE} (T\+Geo\+Trd2)
 \item 
-\hyperlink{_shapes_8cpp_a3f0fc043bf1fd89f0e09496a1dd097a2}{INSTANTIATE} (TGeoCompositeShape)
+\hyperlink{_shapes_8cpp_a3f0fc043bf1fd89f0e09496a1dd097a2}{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE} (T\+Geo\+Composite\+Shape)
 \end{DoxyCompactItemize}
 
 
-\subsection{Define Documentation}
-\hypertarget{_shapes_8cpp_a525335710b53cb064ca56b936120431e}{
-\index{Shapes.cpp@{Shapes.cpp}!\_\-USE\_\-MATH\_\-DEFINES@{\_\-USE\_\-MATH\_\-DEFINES}}
-\index{\_\-USE\_\-MATH\_\-DEFINES@{\_\-USE\_\-MATH\_\-DEFINES}!Shapes.cpp@{Shapes.cpp}}
-\subsubsection[{\_\-USE\_\-MATH\_\-DEFINES}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-USE\_\-MATH\_\-DEFINES}}
-\label{_shapes_8cpp_a525335710b53cb064ca56b936120431e}
+\subsection{Macro Definition Documentation}
+\hypertarget{_shapes_8cpp_a525335710b53cb064ca56b936120431e}{}\label{_shapes_8cpp_a525335710b53cb064ca56b936120431e} 
+\index{Shapes.\+cpp@{Shapes.\+cpp}!\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+ES@{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+ES}}
+\index{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+ES@{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+ES}!Shapes.\+cpp@{Shapes.\+cpp}}
+\subsubsection{\texorpdfstring{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+ES}{\_USE\_MATH\_DEFINES}}
+{\footnotesize\ttfamily \#define \+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+ES}
 
 
-Definition at line 15 of file Shapes.cpp.\hypertarget{_shapes_8cpp_aa45a15366ebf61bf51468bdf50be9961}{
-\index{Shapes.cpp@{Shapes.cpp}!INSTANTIATE@{INSTANTIATE}}
-\index{INSTANTIATE@{INSTANTIATE}!Shapes.cpp@{Shapes.cpp}}
-\subsubsection[{INSTANTIATE}]{\setlength{\rightskip}{0pt plus 5cm}\#define INSTANTIATE(X)~template class {\bf DD4hep::Geometry::Solid\_\-type}$<$X$>$}}
-\label{_shapes_8cpp_aa45a15366ebf61bf51468bdf50be9961}
+
+Definition at line 15 of file Shapes.\+cpp.
+
+\hypertarget{_shapes_8cpp_aa45a15366ebf61bf51468bdf50be9961}{}\label{_shapes_8cpp_aa45a15366ebf61bf51468bdf50be9961} 
+\index{Shapes.\+cpp@{Shapes.\+cpp}!I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}}
+\index{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}!Shapes.\+cpp@{Shapes.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}{INSTANTIATE}}
+{\footnotesize\ttfamily \#define I\+N\+S\+T\+A\+N\+T\+I\+A\+TE(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~template class \hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type}{D\+D4hep\+::\+Geometry\+::\+Solid\+\_\+type}$<$X$>$}
 
 
-Definition at line 523 of file Shapes.cpp.
+
+Definition at line 523 of file Shapes.\+cpp.
+
+
 
 \subsection{Function Documentation}
-\hypertarget{_shapes_8cpp_a3f0fc043bf1fd89f0e09496a1dd097a2}{
-\index{Shapes.cpp@{Shapes.cpp}!INSTANTIATE@{INSTANTIATE}}
-\index{INSTANTIATE@{INSTANTIATE}!Shapes.cpp@{Shapes.cpp}}
-\subsubsection[{INSTANTIATE}]{\setlength{\rightskip}{0pt plus 5cm}INSTANTIATE (TGeoCompositeShape)}}
-\label{_shapes_8cpp_a3f0fc043bf1fd89f0e09496a1dd097a2}
-\hypertarget{_shapes_8cpp_a743df142039a4379fc846728e608c750}{
-\index{Shapes.cpp@{Shapes.cpp}!INSTANTIATE@{INSTANTIATE}}
-\index{INSTANTIATE@{INSTANTIATE}!Shapes.cpp@{Shapes.cpp}}
-\subsubsection[{INSTANTIATE}]{\setlength{\rightskip}{0pt plus 5cm}INSTANTIATE (TGeoTrd2)}}
-\label{_shapes_8cpp_a743df142039a4379fc846728e608c750}
-\hypertarget{_shapes_8cpp_a90d5d163de3e84fb5987ff2599383b97}{
-\index{Shapes.cpp@{Shapes.cpp}!INSTANTIATE@{INSTANTIATE}}
-\index{INSTANTIATE@{INSTANTIATE}!Shapes.cpp@{Shapes.cpp}}
-\subsubsection[{INSTANTIATE}]{\setlength{\rightskip}{0pt plus 5cm}INSTANTIATE (TGeoTrd1)}}
-\label{_shapes_8cpp_a90d5d163de3e84fb5987ff2599383b97}
-\hypertarget{_shapes_8cpp_a4fdb3594208d3c8fc3182764e6eb8e2f}{
-\index{Shapes.cpp@{Shapes.cpp}!INSTANTIATE@{INSTANTIATE}}
-\index{INSTANTIATE@{INSTANTIATE}!Shapes.cpp@{Shapes.cpp}}
-\subsubsection[{INSTANTIATE}]{\setlength{\rightskip}{0pt plus 5cm}INSTANTIATE (TGeoTrap)}}
-\label{_shapes_8cpp_a4fdb3594208d3c8fc3182764e6eb8e2f}
-\hypertarget{_shapes_8cpp_aa981af91db1ccd25e5167241120cabbe}{
-\index{Shapes.cpp@{Shapes.cpp}!INSTANTIATE@{INSTANTIATE}}
-\index{INSTANTIATE@{INSTANTIATE}!Shapes.cpp@{Shapes.cpp}}
-\subsubsection[{INSTANTIATE}]{\setlength{\rightskip}{0pt plus 5cm}INSTANTIATE (TGeoHype)}}
-\label{_shapes_8cpp_aa981af91db1ccd25e5167241120cabbe}
-\hypertarget{_shapes_8cpp_ab3c058eabcbe94ceb8fbb02bdf51a59f}{
-\index{Shapes.cpp@{Shapes.cpp}!INSTANTIATE@{INSTANTIATE}}
-\index{INSTANTIATE@{INSTANTIATE}!Shapes.cpp@{Shapes.cpp}}
-\subsubsection[{INSTANTIATE}]{\setlength{\rightskip}{0pt plus 5cm}INSTANTIATE (TGeoEltu)}}
-\label{_shapes_8cpp_ab3c058eabcbe94ceb8fbb02bdf51a59f}
-\hypertarget{_shapes_8cpp_aa91726445ad3b69cef2f058caa37edc6}{
-\index{Shapes.cpp@{Shapes.cpp}!INSTANTIATE@{INSTANTIATE}}
-\index{INSTANTIATE@{INSTANTIATE}!Shapes.cpp@{Shapes.cpp}}
-\subsubsection[{INSTANTIATE}]{\setlength{\rightskip}{0pt plus 5cm}INSTANTIATE (TGeoTubeSeg)}}
-\label{_shapes_8cpp_aa91726445ad3b69cef2f058caa37edc6}
-\hypertarget{_shapes_8cpp_a1cccfc3a2d05940175e68e84d5997df0}{
-\index{Shapes.cpp@{Shapes.cpp}!INSTANTIATE@{INSTANTIATE}}
-\index{INSTANTIATE@{INSTANTIATE}!Shapes.cpp@{Shapes.cpp}}
-\subsubsection[{INSTANTIATE}]{\setlength{\rightskip}{0pt plus 5cm}INSTANTIATE (TGeoTube)}}
-\label{_shapes_8cpp_a1cccfc3a2d05940175e68e84d5997df0}
-\hypertarget{_shapes_8cpp_a96a4f3247afc636cd1b8539168e41900}{
-\index{Shapes.cpp@{Shapes.cpp}!INSTANTIATE@{INSTANTIATE}}
-\index{INSTANTIATE@{INSTANTIATE}!Shapes.cpp@{Shapes.cpp}}
-\subsubsection[{INSTANTIATE}]{\setlength{\rightskip}{0pt plus 5cm}INSTANTIATE (TGeoTorus)}}
-\label{_shapes_8cpp_a96a4f3247afc636cd1b8539168e41900}
-\hypertarget{_shapes_8cpp_a9ccc814999a3fa3bcb56dd1ff24d87fd}{
-\index{Shapes.cpp@{Shapes.cpp}!INSTANTIATE@{INSTANTIATE}}
-\index{INSTANTIATE@{INSTANTIATE}!Shapes.cpp@{Shapes.cpp}}
-\subsubsection[{INSTANTIATE}]{\setlength{\rightskip}{0pt plus 5cm}INSTANTIATE (TGeoSphere)}}
-\label{_shapes_8cpp_a9ccc814999a3fa3bcb56dd1ff24d87fd}
-\hypertarget{_shapes_8cpp_a93df3325d71e7a68c88068645a5db36d}{
-\index{Shapes.cpp@{Shapes.cpp}!INSTANTIATE@{INSTANTIATE}}
-\index{INSTANTIATE@{INSTANTIATE}!Shapes.cpp@{Shapes.cpp}}
-\subsubsection[{INSTANTIATE}]{\setlength{\rightskip}{0pt plus 5cm}INSTANTIATE (TGeoPgon)}}
-\label{_shapes_8cpp_a93df3325d71e7a68c88068645a5db36d}
-\hypertarget{_shapes_8cpp_a48ad8c98f055915ef38910d993556a15}{
-\index{Shapes.cpp@{Shapes.cpp}!INSTANTIATE@{INSTANTIATE}}
-\index{INSTANTIATE@{INSTANTIATE}!Shapes.cpp@{Shapes.cpp}}
-\subsubsection[{INSTANTIATE}]{\setlength{\rightskip}{0pt plus 5cm}INSTANTIATE (TGeoPcon)}}
-\label{_shapes_8cpp_a48ad8c98f055915ef38910d993556a15}
-\hypertarget{_shapes_8cpp_a8f2a8ff5247e89fb4b6df778f858b0cd}{
-\index{Shapes.cpp@{Shapes.cpp}!INSTANTIATE@{INSTANTIATE}}
-\index{INSTANTIATE@{INSTANTIATE}!Shapes.cpp@{Shapes.cpp}}
-\subsubsection[{INSTANTIATE}]{\setlength{\rightskip}{0pt plus 5cm}INSTANTIATE (TGeoParaboloid)}}
-\label{_shapes_8cpp_a8f2a8ff5247e89fb4b6df778f858b0cd}
-\hypertarget{_shapes_8cpp_a24f84fe1779a831d1ec200e85a5b90f3}{
-\index{Shapes.cpp@{Shapes.cpp}!INSTANTIATE@{INSTANTIATE}}
-\index{INSTANTIATE@{INSTANTIATE}!Shapes.cpp@{Shapes.cpp}}
-\subsubsection[{INSTANTIATE}]{\setlength{\rightskip}{0pt plus 5cm}INSTANTIATE ({\bf TGeoConeSeg})}}
-\label{_shapes_8cpp_a24f84fe1779a831d1ec200e85a5b90f3}
-\hypertarget{_shapes_8cpp_a6e0f6c08e7ff6aa31bbb7e38f85f6872}{
-\index{Shapes.cpp@{Shapes.cpp}!INSTANTIATE@{INSTANTIATE}}
-\index{INSTANTIATE@{INSTANTIATE}!Shapes.cpp@{Shapes.cpp}}
-\subsubsection[{INSTANTIATE}]{\setlength{\rightskip}{0pt plus 5cm}INSTANTIATE (TGeoCone)}}
-\label{_shapes_8cpp_a6e0f6c08e7ff6aa31bbb7e38f85f6872}
-\hypertarget{_shapes_8cpp_a46f7b8686ff30dea5f2f8a19592bd1bf}{
-\index{Shapes.cpp@{Shapes.cpp}!INSTANTIATE@{INSTANTIATE}}
-\index{INSTANTIATE@{INSTANTIATE}!Shapes.cpp@{Shapes.cpp}}
-\subsubsection[{INSTANTIATE}]{\setlength{\rightskip}{0pt plus 5cm}INSTANTIATE (TGeoHalfSpace)}}
-\label{_shapes_8cpp_a46f7b8686ff30dea5f2f8a19592bd1bf}
-\hypertarget{_shapes_8cpp_abe5a371b6f4083ec80c505bc62bc7784}{
-\index{Shapes.cpp@{Shapes.cpp}!INSTANTIATE@{INSTANTIATE}}
-\index{INSTANTIATE@{INSTANTIATE}!Shapes.cpp@{Shapes.cpp}}
-\subsubsection[{INSTANTIATE}]{\setlength{\rightskip}{0pt plus 5cm}INSTANTIATE (TGeoBBox)}}
-\label{_shapes_8cpp_abe5a371b6f4083ec80c505bc62bc7784}
-\hypertarget{_shapes_8cpp_aba7f63a06255ddc9338e34c6a6e5d333}{
-\index{Shapes.cpp@{Shapes.cpp}!INSTANTIATE@{INSTANTIATE}}
-\index{INSTANTIATE@{INSTANTIATE}!Shapes.cpp@{Shapes.cpp}}
-\subsubsection[{INSTANTIATE}]{\setlength{\rightskip}{0pt plus 5cm}INSTANTIATE (TGeoShape)}}
-\label{_shapes_8cpp_aba7f63a06255ddc9338e34c6a6e5d333}
+\hypertarget{_shapes_8cpp_aba7f63a06255ddc9338e34c6a6e5d333}{}\label{_shapes_8cpp_aba7f63a06255ddc9338e34c6a6e5d333} 
+\index{Shapes.\+cpp@{Shapes.\+cpp}!I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}}
+\index{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}!Shapes.\+cpp@{Shapes.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E()}{INSTANTIATE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/18]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+TE (\begin{DoxyParamCaption}\item[{T\+Geo\+Shape}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{_shapes_8cpp_abe5a371b6f4083ec80c505bc62bc7784}{}\label{_shapes_8cpp_abe5a371b6f4083ec80c505bc62bc7784} 
+\index{Shapes.\+cpp@{Shapes.\+cpp}!I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}}
+\index{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}!Shapes.\+cpp@{Shapes.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E()}{INSTANTIATE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/18]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+TE (\begin{DoxyParamCaption}\item[{T\+Geo\+B\+Box}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{_shapes_8cpp_a46f7b8686ff30dea5f2f8a19592bd1bf}{}\label{_shapes_8cpp_a46f7b8686ff30dea5f2f8a19592bd1bf} 
+\index{Shapes.\+cpp@{Shapes.\+cpp}!I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}}
+\index{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}!Shapes.\+cpp@{Shapes.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E()}{INSTANTIATE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/18]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+TE (\begin{DoxyParamCaption}\item[{T\+Geo\+Half\+Space}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{_shapes_8cpp_a6e0f6c08e7ff6aa31bbb7e38f85f6872}{}\label{_shapes_8cpp_a6e0f6c08e7ff6aa31bbb7e38f85f6872} 
+\index{Shapes.\+cpp@{Shapes.\+cpp}!I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}}
+\index{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}!Shapes.\+cpp@{Shapes.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E()}{INSTANTIATE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/18]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+TE (\begin{DoxyParamCaption}\item[{T\+Geo\+Cone}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{_shapes_8cpp_a24f84fe1779a831d1ec200e85a5b90f3}{}\label{_shapes_8cpp_a24f84fe1779a831d1ec200e85a5b90f3} 
+\index{Shapes.\+cpp@{Shapes.\+cpp}!I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}}
+\index{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}!Shapes.\+cpp@{Shapes.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E()}{INSTANTIATE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/18]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+TE (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_geo_cone_seg}{T\+Geo\+Cone\+Seg}}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{_shapes_8cpp_a8f2a8ff5247e89fb4b6df778f858b0cd}{}\label{_shapes_8cpp_a8f2a8ff5247e89fb4b6df778f858b0cd} 
+\index{Shapes.\+cpp@{Shapes.\+cpp}!I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}}
+\index{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}!Shapes.\+cpp@{Shapes.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E()}{INSTANTIATE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/18]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+TE (\begin{DoxyParamCaption}\item[{T\+Geo\+Paraboloid}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{_shapes_8cpp_a48ad8c98f055915ef38910d993556a15}{}\label{_shapes_8cpp_a48ad8c98f055915ef38910d993556a15} 
+\index{Shapes.\+cpp@{Shapes.\+cpp}!I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}}
+\index{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}!Shapes.\+cpp@{Shapes.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E()}{INSTANTIATE()}\hspace{0.1cm}{\footnotesize\ttfamily [7/18]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+TE (\begin{DoxyParamCaption}\item[{T\+Geo\+Pcon}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{_shapes_8cpp_a93df3325d71e7a68c88068645a5db36d}{}\label{_shapes_8cpp_a93df3325d71e7a68c88068645a5db36d} 
+\index{Shapes.\+cpp@{Shapes.\+cpp}!I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}}
+\index{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}!Shapes.\+cpp@{Shapes.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E()}{INSTANTIATE()}\hspace{0.1cm}{\footnotesize\ttfamily [8/18]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+TE (\begin{DoxyParamCaption}\item[{T\+Geo\+Pgon}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{_shapes_8cpp_a9ccc814999a3fa3bcb56dd1ff24d87fd}{}\label{_shapes_8cpp_a9ccc814999a3fa3bcb56dd1ff24d87fd} 
+\index{Shapes.\+cpp@{Shapes.\+cpp}!I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}}
+\index{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}!Shapes.\+cpp@{Shapes.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E()}{INSTANTIATE()}\hspace{0.1cm}{\footnotesize\ttfamily [9/18]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+TE (\begin{DoxyParamCaption}\item[{T\+Geo\+Sphere}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{_shapes_8cpp_a96a4f3247afc636cd1b8539168e41900}{}\label{_shapes_8cpp_a96a4f3247afc636cd1b8539168e41900} 
+\index{Shapes.\+cpp@{Shapes.\+cpp}!I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}}
+\index{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}!Shapes.\+cpp@{Shapes.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E()}{INSTANTIATE()}\hspace{0.1cm}{\footnotesize\ttfamily [10/18]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+TE (\begin{DoxyParamCaption}\item[{T\+Geo\+Torus}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{_shapes_8cpp_a1cccfc3a2d05940175e68e84d5997df0}{}\label{_shapes_8cpp_a1cccfc3a2d05940175e68e84d5997df0} 
+\index{Shapes.\+cpp@{Shapes.\+cpp}!I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}}
+\index{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}!Shapes.\+cpp@{Shapes.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E()}{INSTANTIATE()}\hspace{0.1cm}{\footnotesize\ttfamily [11/18]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+TE (\begin{DoxyParamCaption}\item[{T\+Geo\+Tube}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{_shapes_8cpp_aa91726445ad3b69cef2f058caa37edc6}{}\label{_shapes_8cpp_aa91726445ad3b69cef2f058caa37edc6} 
+\index{Shapes.\+cpp@{Shapes.\+cpp}!I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}}
+\index{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}!Shapes.\+cpp@{Shapes.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E()}{INSTANTIATE()}\hspace{0.1cm}{\footnotesize\ttfamily [12/18]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+TE (\begin{DoxyParamCaption}\item[{T\+Geo\+Tube\+Seg}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{_shapes_8cpp_ab3c058eabcbe94ceb8fbb02bdf51a59f}{}\label{_shapes_8cpp_ab3c058eabcbe94ceb8fbb02bdf51a59f} 
+\index{Shapes.\+cpp@{Shapes.\+cpp}!I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}}
+\index{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}!Shapes.\+cpp@{Shapes.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E()}{INSTANTIATE()}\hspace{0.1cm}{\footnotesize\ttfamily [13/18]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+TE (\begin{DoxyParamCaption}\item[{T\+Geo\+Eltu}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{_shapes_8cpp_aa981af91db1ccd25e5167241120cabbe}{}\label{_shapes_8cpp_aa981af91db1ccd25e5167241120cabbe} 
+\index{Shapes.\+cpp@{Shapes.\+cpp}!I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}}
+\index{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}!Shapes.\+cpp@{Shapes.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E()}{INSTANTIATE()}\hspace{0.1cm}{\footnotesize\ttfamily [14/18]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+TE (\begin{DoxyParamCaption}\item[{T\+Geo\+Hype}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{_shapes_8cpp_a4fdb3594208d3c8fc3182764e6eb8e2f}{}\label{_shapes_8cpp_a4fdb3594208d3c8fc3182764e6eb8e2f} 
+\index{Shapes.\+cpp@{Shapes.\+cpp}!I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}}
+\index{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}!Shapes.\+cpp@{Shapes.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E()}{INSTANTIATE()}\hspace{0.1cm}{\footnotesize\ttfamily [15/18]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+TE (\begin{DoxyParamCaption}\item[{T\+Geo\+Trap}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{_shapes_8cpp_a90d5d163de3e84fb5987ff2599383b97}{}\label{_shapes_8cpp_a90d5d163de3e84fb5987ff2599383b97} 
+\index{Shapes.\+cpp@{Shapes.\+cpp}!I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}}
+\index{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}!Shapes.\+cpp@{Shapes.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E()}{INSTANTIATE()}\hspace{0.1cm}{\footnotesize\ttfamily [16/18]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+TE (\begin{DoxyParamCaption}\item[{T\+Geo\+Trd1}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{_shapes_8cpp_a743df142039a4379fc846728e608c750}{}\label{_shapes_8cpp_a743df142039a4379fc846728e608c750} 
+\index{Shapes.\+cpp@{Shapes.\+cpp}!I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}}
+\index{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}!Shapes.\+cpp@{Shapes.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E()}{INSTANTIATE()}\hspace{0.1cm}{\footnotesize\ttfamily [17/18]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+TE (\begin{DoxyParamCaption}\item[{T\+Geo\+Trd2}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{_shapes_8cpp_a3f0fc043bf1fd89f0e09496a1dd097a2}{}\label{_shapes_8cpp_a3f0fc043bf1fd89f0e09496a1dd097a2} 
+\index{Shapes.\+cpp@{Shapes.\+cpp}!I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}}
+\index{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE@{I\+N\+S\+T\+A\+N\+T\+I\+A\+TE}!Shapes.\+cpp@{Shapes.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E()}{INSTANTIATE()}\hspace{0.1cm}{\footnotesize\ttfamily [18/18]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+TE (\begin{DoxyParamCaption}\item[{T\+Geo\+Composite\+Shape}]{ }\end{DoxyParamCaption})}
+

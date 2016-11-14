@@ -1,258 +1,386 @@
-\hypertarget{class_d_d4hep_1_1_property_manager}{
-\section{DD4hep::PropertyManager Class Reference}
-\label{class_d_d4hep_1_1_property_manager}\index{DD4hep::PropertyManager@{DD4hep::PropertyManager}}
-}
+\hypertarget{class_d_d4hep_1_1_property_manager}{}\section{D\+D4hep\+:\+:Property\+Manager Class Reference}
+\label{class_d_d4hep_1_1_property_manager}\index{D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}}
 
 
 Manager to ease the handling of groups of properties.  
 
 
-{\ttfamily \#include $<$ComponentProperties.h$>$}\subsection*{Public Types}
+
+
+{\ttfamily \#include $<$Component\+Properties.\+h$>$}
+
+\subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef std::map$<$ std::string, \hyperlink{class_d_d4hep_1_1_property}{Property} $>$ \hyperlink{class_d_d4hep_1_1_property_manager_af9bc1c909d5489219e0f9e97b16dab6f}{Properties}
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property} array definition. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+typedef std\+::map$<$ std\+::string, \hyperlink{class_d_d4hep_1_1_property}{Property} $>$ \hyperlink{class_d_d4hep_1_1_property_manager_af9bc1c909d5489219e0f9e97b16dab6f}{Properties}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property} array definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_property_manager_a3b65b75bae28db832e98a38aec5774c6}{PropertyManager} ()
-\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{class_d_d4hep_1_1_property_manager_aa16d7f0cb2a2baaa3b3afbe6239aac39}{$\sim$PropertyManager} ()
-\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
-bool \hyperlink{class_d_d4hep_1_1_property_manager_a148a4782a23d9dcbede328256a0e9a04}{exists} (const std::string \&name) const 
-\begin{DoxyCompactList}\small\item\em Check for existence. \item\end{DoxyCompactList}\item 
-const \hyperlink{class_d_d4hep_1_1_property}{Property} \& \hyperlink{class_d_d4hep_1_1_property_manager_a03ee7ad7c55e62d4185863d9cad797ac}{property} (const std::string \&name) const 
-\begin{DoxyCompactList}\small\item\em Access property by name (CONST). \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_property}{Property} \& \hyperlink{class_d_d4hep_1_1_property_manager_a801b559283e0815c2172ec832bb3adff}{property} (const std::string \&name)
-\begin{DoxyCompactList}\small\item\em Access property by name. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_property}{Property} \& \hyperlink{class_d_d4hep_1_1_property_manager_a808cecf05d76d3af17553e227130255e}{operator\mbox{[}$\,$\mbox{]}} (const std::string \&name)
-\begin{DoxyCompactList}\small\item\em Access property by name. \item\end{DoxyCompactList}\item 
-const \hyperlink{class_d_d4hep_1_1_property}{Property} \& \hyperlink{class_d_d4hep_1_1_property_manager_adcb0b79db1b2b16883ad5758b5869824}{operator\mbox{[}$\,$\mbox{]}} (const std::string \&name) const 
-\begin{DoxyCompactList}\small\item\em Access property by name. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_property_manager_a616e3114076118659daddb1dc826a3ed}{add} (const std::string \&name, const \hyperlink{class_d_d4hep_1_1_property}{Property} \&property)
-\begin{DoxyCompactList}\small\item\em Add a new property. \item\end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\void \hyperlink{class_d_d4hep_1_1_property_manager_a7c6b9ce5ed0c66ff6018b3ab1aad183a}{add} (const std::string \&name, \hyperlink{class_t}{T} \&value)
-\begin{DoxyCompactList}\small\item\em Add a new property. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_property_manager_a96ebaf0f57064e8fa2f00a42c360ddf8}{set} (const std::string \&component\_\-name, \hyperlink{class_d_d4hep_1_1_property_configurator}{PropertyConfigurator} \&setup)
-\begin{DoxyCompactList}\small\item\em Bulk set of all properties. \item\end{DoxyCompactList}\item 
-{\footnotesize template$<$typename FUNCTOR $>$ }\\void \hyperlink{class_d_d4hep_1_1_property_manager_a2a3c9803372155eca0b28efddb2fc5b7}{for\_\-each} (FUNCTOR \&func)
-\begin{DoxyCompactList}\small\item\em Apply functor on properties. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_property_manager_aaf21d1b86b833d99d004a77db1872141}{adopt} (const \hyperlink{class_d_d4hep_1_1_property_manager}{PropertyManager} \&copy)
-\begin{DoxyCompactList}\small\item\em Export properties of another instance. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_property_manager_a21f6decfbdbca30f65fa4ebae6da5468}{dump} () const 
-\begin{DoxyCompactList}\small\item\em Dump string values. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_d_d4hep_1_1_property_manager_a3b65b75bae28db832e98a38aec5774c6}{Property\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_property_manager_aa16d7f0cb2a2baaa3b3afbe6239aac39}{$\sim$\+Property\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_property_manager_a5b298c29e29a1a40237a8e5906a22ba4}{exists} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Check for existence. \end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_property}{Property} \& \hyperlink{class_d_d4hep_1_1_property_manager_af0214bbdd3a5ffb94dcdbc9528295990}{property} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Access property by name (C\+O\+N\+ST) \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_property}{Property} \& \hyperlink{class_d_d4hep_1_1_property_manager_aed8bdf063671e03ed7f5ef066e3ea959}{property} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Access property by name. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_property}{Property} \& \hyperlink{class_d_d4hep_1_1_property_manager_a42780898d22a908befe48f8137f7321e}{operator\mbox{[}$\,$\mbox{]}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Access property by name. \end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_property}{Property} \& \hyperlink{class_d_d4hep_1_1_property_manager_a125377ba1788d787d807f102dee9980e}{operator\mbox{[}$\,$\mbox{]}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Access property by name. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_property_manager_a22dd94fc144031932799c3e4fe431503}{add} (const std\+::string \&name, const \hyperlink{class_d_d4hep_1_1_property}{Property} \&\hyperlink{class_d_d4hep_1_1_property_manager_af0214bbdd3a5ffb94dcdbc9528295990}{property})
+\begin{DoxyCompactList}\small\item\em Add a new property. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{class_d_d4hep_1_1_property_manager_adca1582e1f5e71fcd8782d0503897289}{add} (const std\+::string \&name, \hyperlink{class_t}{T} \&value)
+\begin{DoxyCompactList}\small\item\em Add a new property. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_property_manager_aa1a25710c88d1c14bbe2c565f0a6957c}{set} (const std\+::string \&component\+\_\+name, \hyperlink{class_d_d4hep_1_1_property_configurator}{Property\+Configurator} \&setup)
+\begin{DoxyCompactList}\small\item\em Bulk set of all properties. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename F\+U\+N\+C\+T\+OR $>$ }\\void \hyperlink{class_d_d4hep_1_1_property_manager_ab13bf51cccabd287b45efc2f8b7584d2}{for\+\_\+each} (F\+U\+N\+C\+T\+OR \&func)
+\begin{DoxyCompactList}\small\item\em Apply functor on properties. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_property_manager_aaf21d1b86b833d99d004a77db1872141}{adopt} (const \hyperlink{class_d_d4hep_1_1_property_manager}{Property\+Manager} \&copy)
+\begin{DoxyCompactList}\small\item\em Export properties of another instance. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_property_manager_a0b1a0a2e6541ec8e191aa05194f5eac5}{dump} () const
+\begin{DoxyCompactList}\small\item\em Dump string values. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{class_d_d4hep_1_1_property_manager_a2175a64911355eb33720acbac096a789}{verifyNonExistence} (const std::string \&name) const 
-\begin{DoxyCompactList}\small\item\em Verify that this property does not exist (throw exception if the name was found). \item\end{DoxyCompactList}\item 
-Properties::iterator \hyperlink{class_d_d4hep_1_1_property_manager_a6c6a752bab81f32aeac935aa75270bbb}{verifyExistence} (const std::string \&name)
-\begin{DoxyCompactList}\small\item\em Verify that this property exists (throw exception if the name was not found). \item\end{DoxyCompactList}\item 
-Properties::const\_\-iterator \hyperlink{class_d_d4hep_1_1_property_manager_a47a4cd2669b54050491dc52ea688212c}{verifyExistence} (const std::string \&name) const 
-\begin{DoxyCompactList}\small\item\em Verify that this property exists (throw exception if the name was not found). \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{class_d_d4hep_1_1_property_manager_a3f9b2e806a1fc63f08e2cdff0039ac5c}{verify\+Non\+Existence} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Verify that this property does not exist (throw exception if the name was found) \end{DoxyCompactList}\item 
+Properties\+::iterator \hyperlink{class_d_d4hep_1_1_property_manager_a7a616dc476e887cb58420916af7d22a0}{verify\+Existence} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Verify that this property exists (throw exception if the name was not found) \end{DoxyCompactList}\item 
+Properties\+::const\+\_\+iterator \hyperlink{class_d_d4hep_1_1_property_manager_ae9ff33ccd648dec359cf4e0d3951b167}{verify\+Existence} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Verify that this property exists (throw exception if the name was not found) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_property_manager_af9bc1c909d5489219e0f9e97b16dab6f}{Properties} \hyperlink{class_d_d4hep_1_1_property_manager_af966b46276f15f24b36f7e88006bd098}{m\_\-properties}
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property} array/map. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_d_d4hep_1_1_property_manager_af9bc1c909d5489219e0f9e97b16dab6f}{Properties} \hyperlink{class_d_d4hep_1_1_property_manager_af966b46276f15f24b36f7e88006bd098}{m\+\_\+properties}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property} array/map. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Manager to ease the handling of groups of properties. \begin{DoxyAuthor}{Author}
-M.Frank 
+Manager to ease the handling of groups of properties. 
+
+\begin{DoxyAuthor}{Author}
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
-Definition at line 185 of file ComponentProperties.h.
+Definition at line 185 of file Component\+Properties.\+h.
+
+
 
 \subsection{Member Typedef Documentation}
-\hypertarget{class_d_d4hep_1_1_property_manager_af9bc1c909d5489219e0f9e97b16dab6f}{
-\index{DD4hep::PropertyManager@{DD4hep::PropertyManager}!Properties@{Properties}}
-\index{Properties@{Properties}!DD4hep::PropertyManager@{DD4hep::PropertyManager}}
-\subsubsection[{Properties}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$std::string, {\bf Property}$>$ {\bf DD4hep::PropertyManager::Properties}}}
-\label{class_d_d4hep_1_1_property_manager_af9bc1c909d5489219e0f9e97b16dab6f}
+\hypertarget{class_d_d4hep_1_1_property_manager_af9bc1c909d5489219e0f9e97b16dab6f}{}\label{class_d_d4hep_1_1_property_manager_af9bc1c909d5489219e0f9e97b16dab6f} 
+\index{D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}!Properties@{Properties}}
+\index{Properties@{Properties}!D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}}
+\subsubsection{\texorpdfstring{Properties}{Properties}}
+{\footnotesize\ttfamily typedef std\+::map$<$std\+::string, \hyperlink{class_d_d4hep_1_1_property}{Property}$>$ \hyperlink{class_d_d4hep_1_1_property_manager_af9bc1c909d5489219e0f9e97b16dab6f}{D\+D4hep\+::\+Property\+Manager\+::\+Properties}}
+
 
 
 \hyperlink{class_d_d4hep_1_1_property}{Property} array definition. 
 
-Definition at line 188 of file ComponentProperties.h.
+
+
+Definition at line 188 of file Component\+Properties.\+h.
+
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_property_manager_a3b65b75bae28db832e98a38aec5774c6}{
-\index{DD4hep::PropertyManager@{DD4hep::PropertyManager}!PropertyManager@{PropertyManager}}
-\index{PropertyManager@{PropertyManager}!DD4hep::PropertyManager@{DD4hep::PropertyManager}}
-\subsubsection[{PropertyManager}]{\setlength{\rightskip}{0pt plus 5cm}PropertyManager::PropertyManager ()}}
-\label{class_d_d4hep_1_1_property_manager_a3b65b75bae28db832e98a38aec5774c6}
+\hypertarget{class_d_d4hep_1_1_property_manager_a3b65b75bae28db832e98a38aec5774c6}{}\label{class_d_d4hep_1_1_property_manager_a3b65b75bae28db832e98a38aec5774c6} 
+\index{D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}!Property\+Manager@{Property\+Manager}}
+\index{Property\+Manager@{Property\+Manager}!D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}}
+\subsubsection{\texorpdfstring{Property\+Manager()}{PropertyManager()}}
+{\footnotesize\ttfamily Property\+Manager\+::\+Property\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 
 
 Default constructor. 
 
-Definition at line 134 of file ComponentProperties.cpp.\hypertarget{class_d_d4hep_1_1_property_manager_aa16d7f0cb2a2baaa3b3afbe6239aac39}{
-\index{DD4hep::PropertyManager@{DD4hep::PropertyManager}!$\sim$PropertyManager@{$\sim$PropertyManager}}
-\index{$\sim$PropertyManager@{$\sim$PropertyManager}!DD4hep::PropertyManager@{DD4hep::PropertyManager}}
-\subsubsection[{$\sim$PropertyManager}]{\setlength{\rightskip}{0pt plus 5cm}PropertyManager::$\sim$PropertyManager ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_property_manager_aa16d7f0cb2a2baaa3b3afbe6239aac39}
+
+
+Definition at line 134 of file Component\+Properties.\+cpp.
+
+\hypertarget{class_d_d4hep_1_1_property_manager_aa16d7f0cb2a2baaa3b3afbe6239aac39}{}\label{class_d_d4hep_1_1_property_manager_aa16d7f0cb2a2baaa3b3afbe6239aac39} 
+\index{D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}!````~Property\+Manager@{$\sim$\+Property\+Manager}}
+\index{````~Property\+Manager@{$\sim$\+Property\+Manager}!D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+Property\+Manager()}{~PropertyManager()}}
+{\footnotesize\ttfamily Property\+Manager\+::$\sim$\+Property\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Default destructor. 
 
-Definition at line 138 of file ComponentProperties.cpp.
 
-References m\_\-properties.
+
+Definition at line 138 of file Component\+Properties.\+cpp.
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_property_manager_a7c6b9ce5ed0c66ff6018b3ab1aad183a}{
-\index{DD4hep::PropertyManager@{DD4hep::PropertyManager}!add@{add}}
-\index{add@{add}!DD4hep::PropertyManager@{DD4hep::PropertyManager}}
-\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void DD4hep::PropertyManager::add (const std::string \& {\em name}, \/  {\bf T} \& {\em value})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_property_manager_a7c6b9ce5ed0c66ff6018b3ab1aad183a}
+\hypertarget{class_d_d4hep_1_1_property_manager_a22dd94fc144031932799c3e4fe431503}{}\label{class_d_d4hep_1_1_property_manager_a22dd94fc144031932799c3e4fe431503} 
+\index{D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}!add@{add}}
+\index{add@{add}!D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Property\+Manager\+::add (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const \hyperlink{class_d_d4hep_1_1_property}{Property} \&}]{property }\end{DoxyParamCaption})}
 
-
-Add a new property. 
-
-Definition at line 218 of file ComponentProperties.h.
-
-References add().\hypertarget{class_d_d4hep_1_1_property_manager_a616e3114076118659daddb1dc826a3ed}{
-\index{DD4hep::PropertyManager@{DD4hep::PropertyManager}!add@{add}}
-\index{add@{add}!DD4hep::PropertyManager@{DD4hep::PropertyManager}}
-\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::PropertyManager::add (const std::string \& {\em name}, \/  const {\bf Property} \& {\em property})}}
-\label{class_d_d4hep_1_1_property_manager_a616e3114076118659daddb1dc826a3ed}
 
 
 Add a new property. 
 
-Referenced by add(), DD4hep::Simulation::Geant4Kernel::declareProperty(), DD4hep::Simulation::Geant4Action::declareProperty(), and DD4hep::PropertyConfigurable::declareProperty().\hypertarget{class_d_d4hep_1_1_property_manager_aaf21d1b86b833d99d004a77db1872141}{
-\index{DD4hep::PropertyManager@{DD4hep::PropertyManager}!adopt@{adopt}}
-\index{adopt@{adopt}!DD4hep::PropertyManager@{DD4hep::PropertyManager}}
-\subsubsection[{adopt}]{\setlength{\rightskip}{0pt plus 5cm}void PropertyManager::adopt (const {\bf PropertyManager} \& {\em copy})}}
-\label{class_d_d4hep_1_1_property_manager_aaf21d1b86b833d99d004a77db1872141}
+
+
+Definition at line 198 of file Component\+Properties.\+cpp.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::declare\+Property(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::declare\+Property().
+
+\hypertarget{class_d_d4hep_1_1_property_manager_adca1582e1f5e71fcd8782d0503897289}{}\label{class_d_d4hep_1_1_property_manager_adca1582e1f5e71fcd8782d0503897289} 
+\index{D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}!add@{add}}
+\index{add@{add}!D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void D\+D4hep\+::\+Property\+Manager\+::add (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\hyperlink{class_t}{T} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a new property. 
+
+
+
+Definition at line 218 of file Component\+Properties.\+h.
+
+\hypertarget{class_d_d4hep_1_1_property_manager_aaf21d1b86b833d99d004a77db1872141}{}\label{class_d_d4hep_1_1_property_manager_aaf21d1b86b833d99d004a77db1872141} 
+\index{D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}!adopt@{adopt}}
+\index{adopt@{adopt}!D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}}
+\subsubsection{\texorpdfstring{adopt()}{adopt()}}
+{\footnotesize\ttfamily void Property\+Manager\+::adopt (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_property_manager}{Property\+Manager} \&}]{copy }\end{DoxyParamCaption})}
+
 
 
 Export properties of another instance. 
 
-Definition at line 143 of file ComponentProperties.cpp.
 
-References m\_\-properties.
 
-Referenced by DD4hep::Simulation::Geant4SharedTrackingAction::use(), DD4hep::Simulation::Geant4SharedSteppingAction::use(), DD4hep::Simulation::Geant4SharedStackingAction::use(), DD4hep::Simulation::Geant4SharedRunAction::use(), and DD4hep::Simulation::Geant4SharedEventAction::use().\hypertarget{class_d_d4hep_1_1_property_manager_a21f6decfbdbca30f65fa4ebae6da5468}{
-\index{DD4hep::PropertyManager@{DD4hep::PropertyManager}!dump@{dump}}
-\index{dump@{dump}!DD4hep::PropertyManager@{DD4hep::PropertyManager}}
-\subsubsection[{dump}]{\setlength{\rightskip}{0pt plus 5cm}void PropertyManager::dump () const}}
-\label{class_d_d4hep_1_1_property_manager_a21f6decfbdbca30f65fa4ebae6da5468}
+Definition at line 143 of file Component\+Properties.\+cpp.
+
+
+
+References m\+\_\+properties.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Stacking\+Action\+::use(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Stepping\+Action\+::use(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Run\+Action\+::use(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Tracking\+Action\+::use(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Event\+Action\+::use().
+
+\hypertarget{class_d_d4hep_1_1_property_manager_a0b1a0a2e6541ec8e191aa05194f5eac5}{}\label{class_d_d4hep_1_1_property_manager_a0b1a0a2e6541ec8e191aa05194f5eac5} 
+\index{D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}!dump@{dump}}
+\index{dump@{dump}!D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}}
+\subsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily void Property\+Manager\+::dump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 
 
 Dump string values. 
 
-Definition at line 212 of file ComponentProperties.cpp.
 
-References DD4hep::ALWAYS, m\_\-properties, DD4hep::printout(), and DD4hep::Property::str().
 
-Referenced by DD4hep::Simulation::Geant4UIMessenger::exportProperties(), and DD4hep::Converter$<$ T, ARG $>$::operator()().\hypertarget{class_d_d4hep_1_1_property_manager_a148a4782a23d9dcbede328256a0e9a04}{
-\index{DD4hep::PropertyManager@{DD4hep::PropertyManager}!exists@{exists}}
-\index{exists@{exists}!DD4hep::PropertyManager@{DD4hep::PropertyManager}}
-\subsubsection[{exists}]{\setlength{\rightskip}{0pt plus 5cm}bool PropertyManager::exists (const std::string \& {\em name}) const}}
-\label{class_d_d4hep_1_1_property_manager_a148a4782a23d9dcbede328256a0e9a04}
+Definition at line 212 of file Component\+Properties.\+cpp.
+
+
+
+References D\+D4hep\+::\+A\+L\+W\+A\+YS, D\+D4hep\+::printout(), and D\+D4hep\+::\+Property\+::str().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+U\+I\+Messenger\+::export\+Properties(), and D\+D4hep\+::\+Converter$<$ T, A\+R\+G $>$\+::operator()().
+
+\hypertarget{class_d_d4hep_1_1_property_manager_a5b298c29e29a1a40237a8e5906a22ba4}{}\label{class_d_d4hep_1_1_property_manager_a5b298c29e29a1a40237a8e5906a22ba4} 
+\index{D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}!exists@{exists}}
+\index{exists@{exists}!D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}}
+\subsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily bool Property\+Manager\+::exists (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
 
 
 Check for existence. 
 
-Definition at line 148 of file ComponentProperties.cpp.
 
-References m\_\-properties.
 
-Referenced by DD4hep::Simulation::Geant4Kernel::hasProperty().\hypertarget{class_d_d4hep_1_1_property_manager_a2a3c9803372155eca0b28efddb2fc5b7}{
-\index{DD4hep::PropertyManager@{DD4hep::PropertyManager}!for\_\-each@{for\_\-each}}
-\index{for\_\-each@{for\_\-each}!DD4hep::PropertyManager@{DD4hep::PropertyManager}}
-\subsubsection[{for\_\-each}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename FUNCTOR $>$ void DD4hep::PropertyManager::for\_\-each (FUNCTOR \& {\em func})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_property_manager_a2a3c9803372155eca0b28efddb2fc5b7}
+Definition at line 148 of file Component\+Properties.\+cpp.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::has\+Property().
+
+\hypertarget{class_d_d4hep_1_1_property_manager_ab13bf51cccabd287b45efc2f8b7584d2}{}\label{class_d_d4hep_1_1_property_manager_ab13bf51cccabd287b45efc2f8b7584d2} 
+\index{D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}!for\+\_\+each@{for\+\_\+each}}
+\index{for\+\_\+each@{for\+\_\+each}!D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}}
+\subsubsection{\texorpdfstring{for\+\_\+each()}{for\_each()}}
+{\footnotesize\ttfamily template$<$typename F\+U\+N\+C\+T\+OR $>$ \\
+void D\+D4hep\+::\+Property\+Manager\+::for\+\_\+each (\begin{DoxyParamCaption}\item[{F\+U\+N\+C\+T\+OR \&}]{func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Apply functor on properties. 
 
-Definition at line 224 of file ComponentProperties.h.
-
-References m\_\-properties.
-
-Referenced by DD4hep::Simulation::Geant4UIMessenger::exportProperties().\hypertarget{class_d_d4hep_1_1_property_manager_adcb0b79db1b2b16883ad5758b5869824}{
-\index{DD4hep::PropertyManager@{DD4hep::PropertyManager}!operator\mbox{[}\mbox{]}@{operator[]}}
-\index{operator\mbox{[}\mbox{]}@{operator[]}!DD4hep::PropertyManager@{DD4hep::PropertyManager}}
-\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Property}\& DD4hep::PropertyManager::operator\mbox{[}$\,$\mbox{]} (const std::string \& {\em name}) const}}
-\label{class_d_d4hep_1_1_property_manager_adcb0b79db1b2b16883ad5758b5869824}
 
 
-Access property by name. \hypertarget{class_d_d4hep_1_1_property_manager_a808cecf05d76d3af17553e227130255e}{
-\index{DD4hep::PropertyManager@{DD4hep::PropertyManager}!operator\mbox{[}\mbox{]}@{operator[]}}
-\index{operator\mbox{[}\mbox{]}@{operator[]}!DD4hep::PropertyManager@{DD4hep::PropertyManager}}
-\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Property}\& DD4hep::PropertyManager::operator\mbox{[}$\,$\mbox{]} (const std::string \& {\em name})}}
-\label{class_d_d4hep_1_1_property_manager_a808cecf05d76d3af17553e227130255e}
+Definition at line 224 of file Component\+Properties.\+h.
 
 
-Access property by name. \hypertarget{class_d_d4hep_1_1_property_manager_a801b559283e0815c2172ec832bb3adff}{
-\index{DD4hep::PropertyManager@{DD4hep::PropertyManager}!property@{property}}
-\index{property@{property}!DD4hep::PropertyManager@{DD4hep::PropertyManager}}
-\subsubsection[{property}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Property}\& DD4hep::PropertyManager::property (const std::string \& {\em name})}}
-\label{class_d_d4hep_1_1_property_manager_a801b559283e0815c2172ec832bb3adff}
+
+References D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::copy().
 
 
-Access property by name. \hypertarget{class_d_d4hep_1_1_property_manager_a03ee7ad7c55e62d4185863d9cad797ac}{
-\index{DD4hep::PropertyManager@{DD4hep::PropertyManager}!property@{property}}
-\index{property@{property}!DD4hep::PropertyManager@{DD4hep::PropertyManager}}
-\subsubsection[{property}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Property}\& DD4hep::PropertyManager::property (const std::string \& {\em name}) const}}
-\label{class_d_d4hep_1_1_property_manager_a03ee7ad7c55e62d4185863d9cad797ac}
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+U\+I\+Messenger\+::export\+Properties().
+
+\hypertarget{class_d_d4hep_1_1_property_manager_a42780898d22a908befe48f8137f7321e}{}\label{class_d_d4hep_1_1_property_manager_a42780898d22a908befe48f8137f7321e} 
+\index{D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_property}{Property} \& Property\+Manager\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
 
 
-Access property by name (CONST). 
 
-Referenced by DD4hep::Conditions::ConditionsManager::operator\mbox{[}$\,$\mbox{]}().\hypertarget{class_d_d4hep_1_1_property_manager_a96ebaf0f57064e8fa2f00a42c360ddf8}{
-\index{DD4hep::PropertyManager@{DD4hep::PropertyManager}!set@{set}}
-\index{set@{set}!DD4hep::PropertyManager@{DD4hep::PropertyManager}}
-\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::PropertyManager::set (const std::string \& {\em component\_\-name}, \/  {\bf PropertyConfigurator} \& {\em setup})}}
-\label{class_d_d4hep_1_1_property_manager_a96ebaf0f57064e8fa2f00a42c360ddf8}
+Access property by name. 
+
+
+
+Definition at line 188 of file Component\+Properties.\+cpp.
+
+\hypertarget{class_d_d4hep_1_1_property_manager_a125377ba1788d787d807f102dee9980e}{}\label{class_d_d4hep_1_1_property_manager_a125377ba1788d787d807f102dee9980e} 
+\index{D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{class_d_d4hep_1_1_property}{Property} \& Property\+Manager\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Access property by name. 
+
+
+
+Definition at line 193 of file Component\+Properties.\+cpp.
+
+\hypertarget{class_d_d4hep_1_1_property_manager_af0214bbdd3a5ffb94dcdbc9528295990}{}\label{class_d_d4hep_1_1_property_manager_af0214bbdd3a5ffb94dcdbc9528295990} 
+\index{D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}!property@{property}}
+\index{property@{property}!D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}}
+\subsubsection{\texorpdfstring{property()}{property()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \hyperlink{class_d_d4hep_1_1_property}{Property} \& Property\+Manager\+::property (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Access property by name (C\+O\+N\+ST) 
+
+Access property by name. 
+
+Definition at line 183 of file Component\+Properties.\+cpp.
+
+\hypertarget{class_d_d4hep_1_1_property_manager_aed8bdf063671e03ed7f5ef066e3ea959}{}\label{class_d_d4hep_1_1_property_manager_aed8bdf063671e03ed7f5ef066e3ea959} 
+\index{D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}!property@{property}}
+\index{property@{property}!D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}}
+\subsubsection{\texorpdfstring{property()}{property()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_property}{Property} \& Property\+Manager\+::property (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Access property by name. 
+
+Access property by name (C\+O\+N\+ST) 
+
+Definition at line 178 of file Component\+Properties.\+cpp.
+
+\hypertarget{class_d_d4hep_1_1_property_manager_aa1a25710c88d1c14bbe2c565f0a6957c}{}\label{class_d_d4hep_1_1_property_manager_aa1a25710c88d1c14bbe2c565f0a6957c} 
+\index{D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}!set@{set}}
+\index{set@{set}!D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}}
+\subsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void Property\+Manager\+::set (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{component\+\_\+name,  }\item[{\hyperlink{class_d_d4hep_1_1_property_configurator}{Property\+Configurator} \&}]{setup }\end{DoxyParamCaption})}
+
 
 
 Bulk set of all properties. 
 
-Referenced by DD4hep::Simulation::Geant4Action::setProperties().\hypertarget{class_d_d4hep_1_1_property_manager_a47a4cd2669b54050491dc52ea688212c}{
-\index{DD4hep::PropertyManager@{DD4hep::PropertyManager}!verifyExistence@{verifyExistence}}
-\index{verifyExistence@{verifyExistence}!DD4hep::PropertyManager@{DD4hep::PropertyManager}}
-\subsubsection[{verifyExistence}]{\setlength{\rightskip}{0pt plus 5cm}Properties::const\_\-iterator DD4hep::PropertyManager::verifyExistence (const std::string \& {\em name}) const\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_property_manager_a47a4cd2669b54050491dc52ea688212c}
 
 
-Verify that this property exists (throw exception if the name was not found). \hypertarget{class_d_d4hep_1_1_property_manager_a6c6a752bab81f32aeac935aa75270bbb}{
-\index{DD4hep::PropertyManager@{DD4hep::PropertyManager}!verifyExistence@{verifyExistence}}
-\index{verifyExistence@{verifyExistence}!DD4hep::PropertyManager@{DD4hep::PropertyManager}}
-\subsubsection[{verifyExistence}]{\setlength{\rightskip}{0pt plus 5cm}Properties::iterator DD4hep::PropertyManager::verifyExistence (const std::string \& {\em name})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_property_manager_a6c6a752bab81f32aeac935aa75270bbb}
+Definition at line 204 of file Component\+Properties.\+cpp.
 
 
-Verify that this property exists (throw exception if the name was not found). \hypertarget{class_d_d4hep_1_1_property_manager_a2175a64911355eb33720acbac096a789}{
-\index{DD4hep::PropertyManager@{DD4hep::PropertyManager}!verifyNonExistence@{verifyNonExistence}}
-\index{verifyNonExistence@{verifyNonExistence}!DD4hep::PropertyManager@{DD4hep::PropertyManager}}
-\subsubsection[{verifyNonExistence}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::PropertyManager::verifyNonExistence (const std::string \& {\em name}) const\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_property_manager_a2175a64911355eb33720acbac096a789}
+
+References D\+D4hep\+::\+Property\+::grammar(), D\+D4hep\+::\+Property\+::ptr(), and D\+D4hep\+::\+Property\+Configurator\+::set().
+
+\hypertarget{class_d_d4hep_1_1_property_manager_a7a616dc476e887cb58420916af7d22a0}{}\label{class_d_d4hep_1_1_property_manager_a7a616dc476e887cb58420916af7d22a0} 
+\index{D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}!verify\+Existence@{verify\+Existence}}
+\index{verify\+Existence@{verify\+Existence}!D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}}
+\subsubsection{\texorpdfstring{verify\+Existence()}{verifyExistence()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Property\+Manager\+::\+Properties\+::iterator Property\+Manager\+::verify\+Existence (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
-Verify that this property does not exist (throw exception if the name was found). 
+
+Verify that this property exists (throw exception if the name was not found) 
+
+
+
+Definition at line 170 of file Component\+Properties.\+cpp.
+
+\hypertarget{class_d_d4hep_1_1_property_manager_ae9ff33ccd648dec359cf4e0d3951b167}{}\label{class_d_d4hep_1_1_property_manager_ae9ff33ccd648dec359cf4e0d3951b167} 
+\index{D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}!verify\+Existence@{verify\+Existence}}
+\index{verify\+Existence@{verify\+Existence}!D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}}
+\subsubsection{\texorpdfstring{verify\+Existence()}{verifyExistence()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Property\+Manager\+::\+Properties\+::const\+\_\+iterator Property\+Manager\+::verify\+Existence (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Verify that this property exists (throw exception if the name was not found) 
+
+
+
+Definition at line 162 of file Component\+Properties.\+cpp.
+
+\hypertarget{class_d_d4hep_1_1_property_manager_a3f9b2e806a1fc63f08e2cdff0039ac5c}{}\label{class_d_d4hep_1_1_property_manager_a3f9b2e806a1fc63f08e2cdff0039ac5c} 
+\index{D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}!verify\+Non\+Existence@{verify\+Non\+Existence}}
+\index{verify\+Non\+Existence@{verify\+Non\+Existence}!D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}}
+\subsubsection{\texorpdfstring{verify\+Non\+Existence()}{verifyNonExistence()}}
+{\footnotesize\ttfamily void Property\+Manager\+::verify\+Non\+Existence (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Verify that this property does not exist (throw exception if the name was found) 
+
+
+
+Definition at line 154 of file Component\+Properties.\+cpp.
+
+
 
 \subsection{Member Data Documentation}
-\hypertarget{class_d_d4hep_1_1_property_manager_af966b46276f15f24b36f7e88006bd098}{
-\index{DD4hep::PropertyManager@{DD4hep::PropertyManager}!m\_\-properties@{m\_\-properties}}
-\index{m\_\-properties@{m\_\-properties}!DD4hep::PropertyManager@{DD4hep::PropertyManager}}
-\subsubsection[{m\_\-properties}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Properties} {\bf DD4hep::PropertyManager::m\_\-properties}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_property_manager_af966b46276f15f24b36f7e88006bd098}
+\hypertarget{class_d_d4hep_1_1_property_manager_af966b46276f15f24b36f7e88006bd098}{}\label{class_d_d4hep_1_1_property_manager_af966b46276f15f24b36f7e88006bd098} 
+\index{D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}!m\+\_\+properties@{m\+\_\+properties}}
+\index{m\+\_\+properties@{m\+\_\+properties}!D\+D4hep\+::\+Property\+Manager@{D\+D4hep\+::\+Property\+Manager}}
+\subsubsection{\texorpdfstring{m\+\_\+properties}{m\_properties}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_property_manager_af9bc1c909d5489219e0f9e97b16dab6f}{Properties} D\+D4hep\+::\+Property\+Manager\+::m\+\_\+properties\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 \hyperlink{class_d_d4hep_1_1_property}{Property} array/map. 
 
-Definition at line 191 of file ComponentProperties.h.
 
-Referenced by adopt(), dump(), exists(), for\_\-each(), and $\sim$PropertyManager().
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+Definition at line 191 of file Component\+Properties.\+h.
+
+
+
+Referenced by adopt().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_component_properties_8h}{ComponentProperties.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_component_properties_8cpp}{ComponentProperties.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/include/\+D\+D4hep/\hyperlink{_component_properties_8h}{Component\+Properties.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\hyperlink{_component_properties_8cpp}{Component\+Properties.\+cpp}\end{DoxyCompactItemize}

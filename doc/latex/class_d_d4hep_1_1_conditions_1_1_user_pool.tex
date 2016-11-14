@@ -1,296 +1,413 @@
-\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool}{
-\section{DD4hep::Conditions::UserPool Class Reference}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool}\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool}{}\section{D\+D4hep\+:\+:Conditions\+:\+:User\+Pool Class Reference}
+\label{class_d_d4hep_1_1_conditions_1_1_user_pool}\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
 
 
 Interface for conditions pool optimized to host conditions updates.  
 
 
-{\ttfamily \#include $<$ConditionsPool.h$>$}\subsection*{Public Types}
+
+
+{\ttfamily \#include $<$Conditions\+Pool.\+h$>$}
+
+\subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition::key\_\-type} \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_aa256cf1e22de1b9f2a84d39309b8bfa9}{key\_\-type}
-\begin{DoxyCompactList}\small\item\em Forward definition of the key type. \item\end{DoxyCompactList}\item 
-typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_a8dd76f9acef2c8d3b7970e266fe7eff6}{ConditionsManager::ConditionKeys} \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a6282d01af77401a4c20f08391d18cc95}{ConditionKeys}
-\begin{DoxyCompactList}\small\item\em Forward definition of the condition keys container. \item\end{DoxyCompactList}\item 
-typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection}{ConditionsManager::Dependencies} \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a0da9a8bee4190e4deebf83102902118d}{Dependencies}
-\begin{DoxyCompactList}\small\item\em Forward definition of the dependency container. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition\+::key\+\_\+type} \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_aa256cf1e22de1b9f2a84d39309b8bfa9}{key\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Forward definition of the key type. \end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_a8dd76f9acef2c8d3b7970e266fe7eff6}{Conditions\+Manager\+::\+Condition\+Keys} \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a6282d01af77401a4c20f08391d18cc95}{Condition\+Keys}
+\begin{DoxyCompactList}\small\item\em Forward definition of the condition keys container. \end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_aab778cfbe096ae8ad20a0bdbb047ad32}{Conditions\+Manager\+::\+Dependencies} \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a0da9a8bee4190e4deebf83102902118d}{Dependencies}
+\begin{DoxyCompactList}\small\item\em Forward definition of the dependency container. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a70dd3921967ca613fe912e90b3139494}{UserPool} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager}{ConditionsManager} mgr, \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool}{ConditionsIOVPool} $\ast$pool)
-\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_abc62b1465b8e6f40a57c5a2f9819d7eb}{$\sim$UserPool} ()
-\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
-const \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a2f7e5862cd4de0fee5a0a5d1283e2ccf}{validity} () const 
-\begin{DoxyCompactList}\small\item\em Access the interval of validity for this user pool. \item\end{DoxyCompactList}\item 
-const \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} $\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_abb6fba1bb29215a197f816507826bc00}{validityPtr} () const 
-\begin{DoxyCompactList}\small\item\em Access the interval of validity for this user pool. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_ab0496fbbd4a84368595d3bbd80c475e3}{print} (const std::string \&opt) const =0
-\begin{DoxyCompactList}\small\item\em Print pool content. \item\end{DoxyCompactList}\item 
-virtual size\_\-t \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_ac5f4c186c5037f379e3c12e2daa21a5e}{count} () const =0
-\begin{DoxyCompactList}\small\item\em Total entry count. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a70dd3921967ca613fe912e90b3139494}{User\+Pool} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager}{Conditions\+Manager} mgr, \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool}{Conditions\+I\+O\+V\+Pool} $\ast$pool)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_abc62b1465b8e6f40a57c5a2f9819d7eb}{$\sim$\+User\+Pool} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV} \& \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_ab434e53fd487793e21f376d7b7bac52c}{validity} () const
+\begin{DoxyCompactList}\small\item\em Access the interval of validity for this user pool. \end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV} $\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_abc7c3d3ff45771e4e20d5d8697b18020}{validity\+Ptr} () const
+\begin{DoxyCompactList}\small\item\em Access the interval of validity for this user pool. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_ab0496fbbd4a84368595d3bbd80c475e3}{print} (const std\+::string \&opt) const =0
+\begin{DoxyCompactList}\small\item\em Print pool content. \end{DoxyCompactList}\item 
+virtual size\+\_\+t \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_ac5f4c186c5037f379e3c12e2daa21a5e}{count} () const =0
+\begin{DoxyCompactList}\small\item\em Total entry count. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_aa1b208b96c66bee13ee9f2bd6b7aaac5}{clear} ()=0
-\begin{DoxyCompactList}\small\item\em Full cleanup of all managed conditions. \item\end{DoxyCompactList}\item 
-virtual bool \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_abe05e40f8f674ff18a525b27012aa8d4}{exists} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_aa256cf1e22de1b9f2a84d39309b8bfa9}{key\_\-type} key) const =0
-\begin{DoxyCompactList}\small\item\em Check a condition for existence. \item\end{DoxyCompactList}\item 
-virtual bool \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_af61d57de60db641dc8db117e2a03d3d7}{exists} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_key}{ConditionKey} \&key) const =0
-\begin{DoxyCompactList}\small\item\em Check a condition for existence. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_ad02d5ac6dfb83a6c9fa2b7a891ecde08}{get} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_aa256cf1e22de1b9f2a84d39309b8bfa9}{key\_\-type} key) const =0
-\begin{DoxyCompactList}\small\item\em Check if a condition exists in the pool and return it to the caller. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a1b03fc2a7215f2e88739d4ecfb4f073a}{get} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_key}{ConditionKey} \&key) const =0
-\begin{DoxyCompactList}\small\item\em Check if a condition exists in the pool and return it to the caller. \item\end{DoxyCompactList}\item 
-virtual bool \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_aeab574005dcfb99f8147b87d220f65f1}{remove} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_aa256cf1e22de1b9f2a84d39309b8bfa9}{key\_\-type} hash\_\-key)=0
-\begin{DoxyCompactList}\small\item\em Remove condition by key from pool. \item\end{DoxyCompactList}\item 
-virtual bool \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_ac8f9ef22b7ec455e7ab56d05dc43af77}{remove} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_key}{ConditionKey} \&key)=0
-\begin{DoxyCompactList}\small\item\em Remove condition by key from pool. \item\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Full cleanup of all managed conditions. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_abe05e40f8f674ff18a525b27012aa8d4}{exists} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_aa256cf1e22de1b9f2a84d39309b8bfa9}{key\+\_\+type} key) const =0
+\begin{DoxyCompactList}\small\item\em Check a condition for existence. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_af61d57de60db641dc8db117e2a03d3d7}{exists} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_key}{Condition\+Key} \&key) const =0
+\begin{DoxyCompactList}\small\item\em Check a condition for existence. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_ad02d5ac6dfb83a6c9fa2b7a891ecde08}{get} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_aa256cf1e22de1b9f2a84d39309b8bfa9}{key\+\_\+type} key) const =0
+\begin{DoxyCompactList}\small\item\em Check if a condition exists in the pool and return it to the caller. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a1b03fc2a7215f2e88739d4ecfb4f073a}{get} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_key}{Condition\+Key} \&key) const =0
+\begin{DoxyCompactList}\small\item\em Check if a condition exists in the pool and return it to the caller. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_aeab574005dcfb99f8147b87d220f65f1}{remove} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_aa256cf1e22de1b9f2a84d39309b8bfa9}{key\+\_\+type} hash\+\_\+key)=0
+\begin{DoxyCompactList}\small\item\em Remove condition by key from pool. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_ac8f9ef22b7ec455e7ab56d05dc43af77}{remove} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_key}{Condition\+Key} \&key)=0
+\begin{DoxyCompactList}\small\item\em Remove condition by key from pool. \end{DoxyCompactList}\item 
 virtual bool \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_af25760694df2897b8998fcf65ced5a18}{insert} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} cond)=0
-\begin{DoxyCompactList}\small\item\em Register a new condition to this pool. \item\end{DoxyCompactList}\item 
-virtual long \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_aebbb5c871d30372eb33955aef9bfcaf0}{prepare} (const \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \&required)=0
-\begin{DoxyCompactList}\small\item\em Prepare user pool for usage (load, fill etc.) according to required \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. \item\end{DoxyCompactList}\item 
-virtual long \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a91ce4579b205b59ef3012b8b97013abf}{prepare} (const \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \&required, const \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a6282d01af77401a4c20f08391d18cc95}{ConditionKeys} \&keys)=0
-\begin{DoxyCompactList}\small\item\em Prepare user pool for usage (load, fill etc.) according to required \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. \item\end{DoxyCompactList}\item 
-virtual long \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a117faa4219d68ba50835ac691b538b08}{compute} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_dependency_collection}{Dependencies} \&dependencies, void $\ast$user\_\-param=0)=0
-\begin{DoxyCompactList}\small\item\em Evaluate and register all derived conditions from the dependency list. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Register a new condition to this pool. \end{DoxyCompactList}\item 
+virtual long \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_aebbb5c871d30372eb33955aef9bfcaf0}{prepare} (const \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV} \&required)=0
+\begin{DoxyCompactList}\small\item\em Prepare user pool for usage (load, fill etc.) according to required \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV}. \end{DoxyCompactList}\item 
+virtual long \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a91ce4579b205b59ef3012b8b97013abf}{prepare} (const \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV} \&required, const \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a6282d01af77401a4c20f08391d18cc95}{Condition\+Keys} \&keys)=0
+\begin{DoxyCompactList}\small\item\em Prepare user pool for usage (load, fill etc.) according to required \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV}. \end{DoxyCompactList}\item 
+virtual long \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a117faa4219d68ba50835ac691b538b08}{compute} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a0da9a8bee4190e4deebf83102902118d}{Dependencies} \&dependencies, void $\ast$user\+\_\+param=0)=0
+\begin{DoxyCompactList}\small\item\em Evaluate and register all derived conditions from the dependency list. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a5d5c7664cba0150097ebb69b218d44f0}{m\_\-iov}
-\begin{DoxyCompactList}\small\item\em The pool's interval of validity. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager}{ConditionsManager} \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a92b13c15de8a8982e6ff8e4f5d24566a}{m\_\-manager}
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_handle}{Handle} to conditions manager object. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool}{ConditionsIOVPool} $\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a916051bc20a354a8c603be0bf0c54cac}{m\_\-iovPool}
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} Pool as data source. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV} \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a5d5c7664cba0150097ebb69b218d44f0}{m\+\_\+iov}
+\begin{DoxyCompactList}\small\item\em The pool\textquotesingle{}s interval of validity. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager}{Conditions\+Manager} \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a92b13c15de8a8982e6ff8e4f5d24566a}{m\+\_\+manager}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_handle}{Handle} to conditions manager object. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool}{Conditions\+I\+O\+V\+Pool} $\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a916051bc20a354a8c603be0bf0c54cac}{m\+\_\+iov\+Pool}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV} Pool as data source. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Interface for conditions pool optimized to host conditions updates. \begin{DoxyAuthor}{Author}
-M.Frank 
+Interface for conditions pool optimized to host conditions updates. 
+
+\begin{DoxyAuthor}{Author}
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
-Definition at line 133 of file ConditionsPool.h.
+Definition at line 133 of file Conditions\+Pool.\+h.
+
+
 
 \subsection{Member Typedef Documentation}
-\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_a6282d01af77401a4c20f08391d18cc95}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!ConditionKeys@{ConditionKeys}}
-\index{ConditionKeys@{ConditionKeys}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{ConditionKeys}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf ConditionsManager::ConditionKeys} {\bf DD4hep::Conditions::UserPool::ConditionKeys}}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_a6282d01af77401a4c20f08391d18cc95}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_a6282d01af77401a4c20f08391d18cc95}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_a6282d01af77401a4c20f08391d18cc95} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!Condition\+Keys@{Condition\+Keys}}
+\index{Condition\+Keys@{Condition\+Keys}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{Condition\+Keys}{ConditionKeys}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_a8dd76f9acef2c8d3b7970e266fe7eff6}{Conditions\+Manager\+::\+Condition\+Keys} \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a6282d01af77401a4c20f08391d18cc95}{D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::\+Condition\+Keys}}
+
 
 
 Forward definition of the condition keys container. 
 
-Definition at line 138 of file ConditionsPool.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_a0da9a8bee4190e4deebf83102902118d}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!Dependencies@{Dependencies}}
-\index{Dependencies@{Dependencies}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{Dependencies}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf ConditionsManager::Dependencies} {\bf DD4hep::Conditions::UserPool::Dependencies}}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_a0da9a8bee4190e4deebf83102902118d}
+
+
+Definition at line 138 of file Conditions\+Pool.\+h.
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_a0da9a8bee4190e4deebf83102902118d}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_a0da9a8bee4190e4deebf83102902118d} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!Dependencies@{Dependencies}}
+\index{Dependencies@{Dependencies}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{Dependencies}{Dependencies}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_aab778cfbe096ae8ad20a0bdbb047ad32}{Conditions\+Manager\+::\+Dependencies} \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a0da9a8bee4190e4deebf83102902118d}{D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::\+Dependencies}}
+
 
 
 Forward definition of the dependency container. 
 
-Definition at line 140 of file ConditionsPool.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_aa256cf1e22de1b9f2a84d39309b8bfa9}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!key\_\-type@{key\_\-type}}
-\index{key\_\-type@{key\_\-type}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{key\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Condition::key\_\-type} {\bf DD4hep::Conditions::UserPool::key\_\-type}}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_aa256cf1e22de1b9f2a84d39309b8bfa9}
+
+
+Definition at line 140 of file Conditions\+Pool.\+h.
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_aa256cf1e22de1b9f2a84d39309b8bfa9}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_aa256cf1e22de1b9f2a84d39309b8bfa9} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!key\+\_\+type@{key\+\_\+type}}
+\index{key\+\_\+type@{key\+\_\+type}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{key\+\_\+type}{key\_type}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition\+::key\+\_\+type} \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_aa256cf1e22de1b9f2a84d39309b8bfa9}{D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::key\+\_\+type}}
+
 
 
 Forward definition of the key type. 
 
-Definition at line 136 of file ConditionsPool.h.
+
+
+Definition at line 136 of file Conditions\+Pool.\+h.
+
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_a70dd3921967ca613fe912e90b3139494}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!UserPool@{UserPool}}
-\index{UserPool@{UserPool}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{UserPool}]{\setlength{\rightskip}{0pt plus 5cm}UserPool::UserPool ({\bf ConditionsManager} {\em mgr}, \/  {\bf ConditionsIOVPool} $\ast$ {\em pool})}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_a70dd3921967ca613fe912e90b3139494}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_a70dd3921967ca613fe912e90b3139494}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_a70dd3921967ca613fe912e90b3139494} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!User\+Pool@{User\+Pool}}
+\index{User\+Pool@{User\+Pool}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{User\+Pool()}{UserPool()}}
+{\footnotesize\ttfamily User\+Pool\+::\+User\+Pool (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager}{Conditions\+Manager}}]{mgr,  }\item[{\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool}{Conditions\+I\+O\+V\+Pool} $\ast$}]{pool }\end{DoxyParamCaption})}
+
 
 
 Default constructor. 
 
-Definition at line 67 of file ConditionsPool.cpp.
 
-References DD4hep::InstanceCount::increment().\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_abc62b1465b8e6f40a57c5a2f9819d7eb}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!$\sim$UserPool@{$\sim$UserPool}}
-\index{$\sim$UserPool@{$\sim$UserPool}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{$\sim$UserPool}]{\setlength{\rightskip}{0pt plus 5cm}UserPool::$\sim$UserPool ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_abc62b1465b8e6f40a57c5a2f9819d7eb}
+
+Definition at line 67 of file Conditions\+Pool.\+cpp.
+
+
+
+References D\+D4hep\+::\+Instance\+Count\+::increment().
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_abc62b1465b8e6f40a57c5a2f9819d7eb}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_abc62b1465b8e6f40a57c5a2f9819d7eb} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!````~User\+Pool@{$\sim$\+User\+Pool}}
+\index{````~User\+Pool@{$\sim$\+User\+Pool}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{$\sim$\+User\+Pool()}{~UserPool()}}
+{\footnotesize\ttfamily User\+Pool\+::$\sim$\+User\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Default destructor. 
 
-Definition at line 74 of file ConditionsPool.cpp.
 
-References DD4hep::InstanceCount::decrement().
+
+Definition at line 74 of file Conditions\+Pool.\+cpp.
+
+
+
+References D\+D4hep\+::\+Instance\+Count\+::decrement().
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_aa1b208b96c66bee13ee9f2bd6b7aaac5}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!clear@{clear}}
-\index{clear@{clear}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}virtual void DD4hep::Conditions::UserPool::clear ()\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_aa1b208b96c66bee13ee9f2bd6b7aaac5}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_aa1b208b96c66bee13ee9f2bd6b7aaac5}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_aa1b208b96c66bee13ee9f2bd6b7aaac5} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!clear@{clear}}
+\index{clear@{clear}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily virtual void D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
-Full cleanup of all managed conditions. \hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_a117faa4219d68ba50835ac691b538b08}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!compute@{compute}}
-\index{compute@{compute}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{compute}]{\setlength{\rightskip}{0pt plus 5cm}virtual long DD4hep::Conditions::UserPool::compute (const {\bf Dependencies} \& {\em dependencies}, \/  void $\ast$ {\em user\_\-param} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_a117faa4219d68ba50835ac691b538b08}
+
+Full cleanup of all managed conditions. 
 
 
-Evaluate and register all derived conditions from the dependency list. \hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_ac5f4c186c5037f379e3c12e2daa21a5e}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!count@{count}}
-\index{count@{count}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{count}]{\setlength{\rightskip}{0pt plus 5cm}virtual size\_\-t DD4hep::Conditions::UserPool::count () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_ac5f4c186c5037f379e3c12e2daa21a5e}
+
+Referenced by D\+D4hep\+::\+Conditions\+::\+Conditions\+Manager\+Object\+::push\+Updates().
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_a117faa4219d68ba50835ac691b538b08}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_a117faa4219d68ba50835ac691b538b08} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!compute@{compute}}
+\index{compute@{compute}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily virtual long D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::compute (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a0da9a8bee4190e4deebf83102902118d}{Dependencies} \&}]{dependencies,  }\item[{void $\ast$}]{user\+\_\+param = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
-Total entry count. \hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_af61d57de60db641dc8db117e2a03d3d7}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!exists@{exists}}
-\index{exists@{exists}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{exists}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool DD4hep::Conditions::UserPool::exists (const {\bf ConditionKey} \& {\em key}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_af61d57de60db641dc8db117e2a03d3d7}
+
+Evaluate and register all derived conditions from the dependency list. 
 
 
-Check a condition for existence. \hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_abe05e40f8f674ff18a525b27012aa8d4}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!exists@{exists}}
-\index{exists@{exists}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{exists}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool DD4hep::Conditions::UserPool::exists ({\bf key\_\-type} {\em key}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_abe05e40f8f674ff18a525b27012aa8d4}
+
+Referenced by D\+D4hep\+::\+Alignments\+::\+Alignments\+Manager\+Object\+::compute().
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_ac5f4c186c5037f379e3c12e2daa21a5e}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_ac5f4c186c5037f379e3c12e2daa21a5e} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!count@{count}}
+\index{count@{count}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily virtual size\+\_\+t D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
-Check a condition for existence. \hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_a1b03fc2a7215f2e88739d4ecfb4f073a}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!get@{get}}
-\index{get@{get}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Condition} DD4hep::Conditions::UserPool::get (const {\bf ConditionKey} \& {\em key}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_a1b03fc2a7215f2e88739d4ecfb4f073a}
+
+Total entry count. 
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_abe05e40f8f674ff18a525b27012aa8d4}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_abe05e40f8f674ff18a525b27012aa8d4} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!exists@{exists}}
+\index{exists@{exists}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{exists()}{exists()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::exists (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_aa256cf1e22de1b9f2a84d39309b8bfa9}{key\+\_\+type}}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
-Check if a condition exists in the pool and return it to the caller. \hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_ad02d5ac6dfb83a6c9fa2b7a891ecde08}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!get@{get}}
-\index{get@{get}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Condition} DD4hep::Conditions::UserPool::get ({\bf key\_\-type} {\em key}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_ad02d5ac6dfb83a6c9fa2b7a891ecde08}
+
+Check a condition for existence. 
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_af61d57de60db641dc8db117e2a03d3d7}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_af61d57de60db641dc8db117e2a03d3d7} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!exists@{exists}}
+\index{exists@{exists}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{exists()}{exists()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::exists (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_key}{Condition\+Key} \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Check a condition for existence. 
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_ad02d5ac6dfb83a6c9fa2b7a891ecde08}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_ad02d5ac6dfb83a6c9fa2b7a891ecde08} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!get@{get}}
+\index{get@{get}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::get (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_aa256cf1e22de1b9f2a84d39309b8bfa9}{key\+\_\+type}}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
 
 
 Check if a condition exists in the pool and return it to the caller. 
 
-Referenced by DD4hep::Conditions::ConditionsLoaderImp::get(), DD4hep::Conditions::ConditionsDependencyHandler::get(), and DD4hep::Conditions::AlignmentsLoaderImp::get().\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_af25760694df2897b8998fcf65ced5a18}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!insert@{insert}}
-\index{insert@{insert}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool DD4hep::Conditions::UserPool::insert ({\bf Condition} {\em cond})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_af25760694df2897b8998fcf65ced5a18}
+
+
+Referenced by D\+D4hep\+::\+Conditions\+::\+Conditions\+Loader\+Imp\+::get(), D\+D4hep\+::\+Conditions\+::\+Alignments\+Loader\+Imp\+::get(), D\+D4hep\+::\+Conditions\+::\+Conditions\+Dependency\+Handler\+::get(), and D\+D4hep\+::\+Alignments\+::\+Alignments\+Manager\+Object\+::to\+\_\+world().
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_a1b03fc2a7215f2e88739d4ecfb4f073a}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_a1b03fc2a7215f2e88739d4ecfb4f073a} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!get@{get}}
+\index{get@{get}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::get (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_key}{Condition\+Key} \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Check if a condition exists in the pool and return it to the caller. 
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_af25760694df2897b8998fcf65ced5a18}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_af25760694df2897b8998fcf65ced5a18} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!insert@{insert}}
+\index{insert@{insert}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily virtual bool D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::insert (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition}}]{cond }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
 
 
 Register a new condition to this pool. 
 
-Referenced by DD4hep::Conditions::ConditionsDependencyHandler::do\_\-callback(), and DD4hep::Conditions::ConditionsManagerObject::registerCondition().\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_a91ce4579b205b59ef3012b8b97013abf}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!prepare@{prepare}}
-\index{prepare@{prepare}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{prepare}]{\setlength{\rightskip}{0pt plus 5cm}virtual long DD4hep::Conditions::UserPool::prepare (const {\bf IOV} \& {\em required}, \/  const {\bf ConditionKeys} \& {\em keys})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_a91ce4579b205b59ef3012b8b97013abf}
 
 
-Prepare user pool for usage (load, fill etc.) according to required \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. \hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_aebbb5c871d30372eb33955aef9bfcaf0}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!prepare@{prepare}}
-\index{prepare@{prepare}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{prepare}]{\setlength{\rightskip}{0pt plus 5cm}virtual long DD4hep::Conditions::UserPool::prepare (const {\bf IOV} \& {\em required})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_aebbb5c871d30372eb33955aef9bfcaf0}
+Referenced by D\+D4hep\+::\+Conditions\+::\+Conditions\+Dependency\+Handler\+::do\+\_\+callback(), and D\+D4hep\+::\+Conditions\+::\+Conditions\+Manager\+Object\+::push\+Updates().
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_aebbb5c871d30372eb33955aef9bfcaf0}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_aebbb5c871d30372eb33955aef9bfcaf0} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!prepare@{prepare}}
+\index{prepare@{prepare}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{prepare()}{prepare()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual long D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::prepare (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV} \&}]{required }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
-Prepare user pool for usage (load, fill etc.) according to required \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV}. \hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_ab0496fbbd4a84368595d3bbd80c475e3}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!print@{print}}
-\index{print@{print}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}virtual void DD4hep::Conditions::UserPool::print (const std::string \& {\em opt}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_ab0496fbbd4a84368595d3bbd80c475e3}
+
+Prepare user pool for usage (load, fill etc.) according to required \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV}. 
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_a91ce4579b205b59ef3012b8b97013abf}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_a91ce4579b205b59ef3012b8b97013abf} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!prepare@{prepare}}
+\index{prepare@{prepare}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{prepare()}{prepare()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual long D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::prepare (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV} \&}]{required,  }\item[{const \hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_a6282d01af77401a4c20f08391d18cc95}{Condition\+Keys} \&}]{keys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Prepare user pool for usage (load, fill etc.) according to required \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV}. 
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_ab0496fbbd4a84368595d3bbd80c475e3}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_ab0496fbbd4a84368595d3bbd80c475e3} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!print@{print}}
+\index{print@{print}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily virtual void D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::print (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{opt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
 
 
 Print pool content. 
 
-Referenced by DD4hep::Conditions::ConditionsDependencyHandler::do\_\-callback().\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_ac8f9ef22b7ec455e7ab56d05dc43af77}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!remove@{remove}}
-\index{remove@{remove}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool DD4hep::Conditions::UserPool::remove (const {\bf ConditionKey} \& {\em key})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_ac8f9ef22b7ec455e7ab56d05dc43af77}
 
 
-Remove condition by key from pool. \hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_aeab574005dcfb99f8147b87d220f65f1}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!remove@{remove}}
-\index{remove@{remove}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool DD4hep::Conditions::UserPool::remove ({\bf key\_\-type} {\em hash\_\-key})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_aeab574005dcfb99f8147b87d220f65f1}
+Referenced by D\+D4hep\+::\+Conditions\+::\+Conditions\+Dependency\+Handler\+::do\+\_\+callback().
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_aeab574005dcfb99f8147b87d220f65f1}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_aeab574005dcfb99f8147b87d220f65f1} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!remove@{remove}}
+\index{remove@{remove}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::remove (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_conditions_1_1_user_pool_aa256cf1e22de1b9f2a84d39309b8bfa9}{key\+\_\+type}}]{hash\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
 
 
 Remove condition by key from pool. 
 
-Referenced by DD4hep::Conditions::ConditionsDependencyHandler::get().\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_a2f7e5862cd4de0fee5a0a5d1283e2ccf}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!validity@{validity}}
-\index{validity@{validity}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{validity}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf IOV}\& DD4hep::Conditions::UserPool::validity () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_a2f7e5862cd4de0fee5a0a5d1283e2ccf}
+
+
+Referenced by D\+D4hep\+::\+Conditions\+::\+Conditions\+Dependency\+Handler\+::get().
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_ac8f9ef22b7ec455e7ab56d05dc43af77}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_ac8f9ef22b7ec455e7ab56d05dc43af77} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!remove@{remove}}
+\index{remove@{remove}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::remove (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_key}{Condition\+Key} \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Remove condition by key from pool. 
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_ab434e53fd487793e21f376d7b7bac52c}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_ab434e53fd487793e21f376d7b7bac52c} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!validity@{validity}}
+\index{validity@{validity}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{validity()}{validity()}}
+{\footnotesize\ttfamily const \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV}\& D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::validity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Access the interval of validity for this user pool. 
 
-Definition at line 156 of file ConditionsPool.h.
 
-References m\_\-iov.
 
-Referenced by DD4hep::Conditions::ConditionsDependencyHandler::do\_\-callback(), DD4hep::Conditions::ConditionsDependencyHandler::get(), and DD4hep::Conditions::ConditionsDependencyHandler::requiredValidity().\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_abb6fba1bb29215a197f816507826bc00}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!validityPtr@{validityPtr}}
-\index{validityPtr@{validityPtr}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{validityPtr}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf IOV}$\ast$ DD4hep::Conditions::UserPool::validityPtr () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_abb6fba1bb29215a197f816507826bc00}
+Definition at line 156 of file Conditions\+Pool.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Conditions\+::\+Conditions\+Dependency\+Handler\+::do\+\_\+callback(), D\+D4hep\+::\+Conditions\+::\+Conditions\+Dependency\+Handler\+::get(), and D\+D4hep\+::\+Conditions\+::\+Conditions\+Dependency\+Handler\+::required\+Validity().
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_abc7c3d3ff45771e4e20d5d8697b18020}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_abc7c3d3ff45771e4e20d5d8697b18020} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!validity\+Ptr@{validity\+Ptr}}
+\index{validity\+Ptr@{validity\+Ptr}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{validity\+Ptr()}{validityPtr()}}
+{\footnotesize\ttfamily const \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV}$\ast$ D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::validity\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Access the interval of validity for this user pool. 
 
-Definition at line 158 of file ConditionsPool.h.
 
-References m\_\-iov.
 
-Referenced by DD4hep::Conditions::ConditionsDependencyHandler::do\_\-callback().
+Definition at line 158 of file Conditions\+Pool.\+h.
+
+
+
+References D\+D4hep\+::\+Conditions\+::\+Conditions\+Pool\+::clear(), D\+D4hep\+::\+Conditions\+::\+Conditions\+Pool\+::count(), D\+D4hep\+::\+Conditions\+::\+Conditions\+Pool\+::exists(), D\+D4hep\+::\+Conditions\+::\+Conditions\+Pool\+::insert(), and D\+D4hep\+::\+Conditions\+::\+Conditions\+Pool\+::print().
+
+
+
+Referenced by D\+D4hep\+::\+Conditions\+::\+Conditions\+Dependency\+Handler\+::do\+\_\+callback().
+
+
 
 \subsection{Member Data Documentation}
-\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_a5d5c7664cba0150097ebb69b218d44f0}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!m\_\-iov@{m\_\-iov}}
-\index{m\_\-iov@{m\_\-iov}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{m\_\-iov}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IOV} {\bf DD4hep::Conditions::UserPool::m\_\-iov}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_a5d5c7664cba0150097ebb69b218d44f0}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_a5d5c7664cba0150097ebb69b218d44f0}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_a5d5c7664cba0150097ebb69b218d44f0} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!m\+\_\+iov@{m\+\_\+iov}}
+\index{m\+\_\+iov@{m\+\_\+iov}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{m\+\_\+iov}{m\_iov}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV} D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::m\+\_\+iov\hspace{0.3cm}{\ttfamily [protected]}}
 
 
-The pool's interval of validity. 
 
-Definition at line 144 of file ConditionsPool.h.
-
-Referenced by validity(), and validityPtr().\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_a916051bc20a354a8c603be0bf0c54cac}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!m\_\-iovPool@{m\_\-iovPool}}
-\index{m\_\-iovPool@{m\_\-iovPool}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{m\_\-iovPool}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ConditionsIOVPool}$\ast$ {\bf DD4hep::Conditions::UserPool::m\_\-iovPool}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_a916051bc20a354a8c603be0bf0c54cac}
+The pool\textquotesingle{}s interval of validity. 
 
 
-\hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} Pool as data source. 
 
-Definition at line 148 of file ConditionsPool.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_a92b13c15de8a8982e6ff8e4f5d24566a}{
-\index{DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}!m\_\-manager@{m\_\-manager}}
-\index{m\_\-manager@{m\_\-manager}!DD4hep::Conditions::UserPool@{DD4hep::Conditions::UserPool}}
-\subsubsection[{m\_\-manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ConditionsManager} {\bf DD4hep::Conditions::UserPool::m\_\-manager}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_user_pool_a92b13c15de8a8982e6ff8e4f5d24566a}
+Definition at line 144 of file Conditions\+Pool.\+h.
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_a916051bc20a354a8c603be0bf0c54cac}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_a916051bc20a354a8c603be0bf0c54cac} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!m\+\_\+iov\+Pool@{m\+\_\+iov\+Pool}}
+\index{m\+\_\+iov\+Pool@{m\+\_\+iov\+Pool}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{m\+\_\+iov\+Pool}{m\_iovPool}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool}{Conditions\+I\+O\+V\+Pool}$\ast$ D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::m\+\_\+iov\+Pool\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV} Pool as data source. 
+
+
+
+Definition at line 148 of file Conditions\+Pool.\+h.
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_user_pool_a92b13c15de8a8982e6ff8e4f5d24566a}{}\label{class_d_d4hep_1_1_conditions_1_1_user_pool_a92b13c15de8a8982e6ff8e4f5d24566a} 
+\index{D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}!m\+\_\+manager@{m\+\_\+manager}}
+\index{m\+\_\+manager@{m\+\_\+manager}!D\+D4hep\+::\+Conditions\+::\+User\+Pool@{D\+D4hep\+::\+Conditions\+::\+User\+Pool}}
+\subsubsection{\texorpdfstring{m\+\_\+manager}{m\_manager}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager}{Conditions\+Manager} D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::m\+\_\+manager\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 \hyperlink{class_d_d4hep_1_1_handle}{Handle} to conditions manager object. 
 
-Definition at line 146 of file ConditionsPool.h.
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+
+Definition at line 146 of file Conditions\+Pool.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCond/include/DDCond/\hyperlink{_conditions_pool_8h}{ConditionsPool.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCond/src/\hyperlink{_conditions_pool_8cpp}{ConditionsPool.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Cond/include/\+D\+D\+Cond/\hyperlink{_conditions_pool_8h}{Conditions\+Pool.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Cond/src/\hyperlink{_conditions_pool_8cpp}{Conditions\+Pool.\+cpp}\end{DoxyCompactItemize}

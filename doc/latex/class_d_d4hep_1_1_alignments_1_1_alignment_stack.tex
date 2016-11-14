@@ -1,303 +1,419 @@
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack}{
-\section{DD4hep::Alignments::AlignmentStack Class Reference}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack}\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}
-}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack}{}\section{D\+D4hep\+:\+:Alignments\+:\+:Alignment\+Stack Class Reference}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack}\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}
 
 
 \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} Stack object definition.  
 
 
-{\ttfamily \#include $<$AlignmentStack.h$>$}\subsection*{Classes}
+
+
+{\ttfamily \#include $<$Alignment\+Stack.\+h$>$}
+
+\subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \hyperlink{struct_d_d4hep_1_1_alignments_1_1_alignment_stack_1_1_stack_entry}{StackEntry}
-\begin{DoxyCompactList}\small\item\em Stack entry definition. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+struct \hyperlink{struct_d_d4hep_1_1_alignments_1_1_alignment_stack_1_1_stack_entry}{Stack\+Entry}
+\begin{DoxyCompactList}\small\item\em Stack entry definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \{ \par
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a4033cb4255581775569f2e2f722aaa81}{OVERLAP\_\-DEFINED} =  1$<$$<$20, 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a01f610d083823850012566acef4ec42b}{MATRIX\_\-DEFINED} =  1$<$$<$21, 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569aee39f024ccc317ee886361ffbe1f011b}{CHECKOVL\_\-DEFINED} =  1$<$$<$22, 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a96646fe7ea980fd76a69495c22c271a4}{CHECKOVL\_\-VALUE} =  1$<$$<$23, 
-\par
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569ada369239b042e83f1b72c5a8885299ee}{RESET\_\-VALUE} =  1$<$$<$24, 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569aacd486a45b60924aec0660fa27eedb7f}{RESET\_\-CHILDREN} =  1$<$$<$25, 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a22cc90a28cfb915750adda75ed6bfc1d}{\_\-\_\-\_\-\_\-LLLAST} =  1$<$$<$31
+enum \{ \newline
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a4033cb4255581775569f2e2f722aaa81}{O\+V\+E\+R\+L\+A\+P\+\_\+\+D\+E\+F\+I\+N\+ED} = 1$<$$<$20, 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a01f610d083823850012566acef4ec42b}{M\+A\+T\+R\+I\+X\+\_\+\+D\+E\+F\+I\+N\+ED} = 1$<$$<$21, 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569aee39f024ccc317ee886361ffbe1f011b}{C\+H\+E\+C\+K\+O\+V\+L\+\_\+\+D\+E\+F\+I\+N\+ED} = 1$<$$<$22, 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a96646fe7ea980fd76a69495c22c271a4}{C\+H\+E\+C\+K\+O\+V\+L\+\_\+\+V\+A\+L\+UE} = 1$<$$<$23, 
+\newline
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569ada369239b042e83f1b72c5a8885299ee}{R\+E\+S\+E\+T\+\_\+\+V\+A\+L\+UE} = 1$<$$<$24, 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569aacd486a45b60924aec0660fa27eedb7f}{R\+E\+S\+E\+T\+\_\+\+C\+H\+I\+L\+D\+R\+EN} = 1$<$$<$25, 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a22cc90a28cfb915750adda75ed6bfc1d}{\+\_\+\+\_\+\+\_\+\+\_\+\+L\+L\+L\+A\+ST} = 1$<$$<$31
  \}
 \item 
-typedef std::map$<$ std::string, \hyperlink{struct_d_d4hep_1_1_alignments_1_1_alignment_stack_1_1_stack_entry}{StackEntry} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a14076338e30231119d5d291b5ac316ee}{Stack}
+typedef std\+::map$<$ std\+::string, \hyperlink{struct_d_d4hep_1_1_alignments_1_1_alignment_stack_1_1_stack_entry}{Stack\+Entry} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a14076338e30231119d5d291b5ac316ee}{Stack}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aaa0a50b4ba221d1591a3cdadbc06153c}{$\sim$AlignmentStack} ()
-\begin{DoxyCompactList}\small\item\em Default destructor. Careful with this one:. \item\end{DoxyCompactList}\item 
-bool \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a4525563586574e54ce55ced7feead363}{insert} (const std::string \&full\_\-path, \hyperlink{class_d_d4hep_1_1dd4hep__ptr}{dd4hep\_\-ptr}$<$ \hyperlink{struct_d_d4hep_1_1_alignments_1_1_alignment_stack_1_1_stack_entry}{StackEntry} $>$ \&new\_\-entry)
-\begin{DoxyCompactList}\small\item\em Add a new entry to the cache. The key is the placement path. \item\end{DoxyCompactList}\item 
-bool \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aefce20c233a0ad85d6a5c54ac2fb43b7}{insert} (\hyperlink{class_d_d4hep_1_1dd4hep__ptr}{dd4hep\_\-ptr}$<$ \hyperlink{struct_d_d4hep_1_1_alignments_1_1_alignment_stack_1_1_stack_entry}{StackEntry} $>$ \&new\_\-entry)
-\begin{DoxyCompactList}\small\item\em Add a new entry to the cache. The key is the placement path. The placement path must be set in the entry. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aaa0a50b4ba221d1591a3cdadbc06153c}{$\sim$\+Alignment\+Stack} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. Careful with this one\+: \end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a9970de258fa1c3ea148a70de782f2398}{insert} (const std\+::string \&full\+\_\+path, \hyperlink{class_d_d4hep_1_1dd4hep__ptr}{dd4hep\+\_\+ptr}$<$ \hyperlink{struct_d_d4hep_1_1_alignments_1_1_alignment_stack_1_1_stack_entry}{Stack\+Entry} $>$ \&new\+\_\+entry)
+\begin{DoxyCompactList}\small\item\em Add a new entry to the cache. The key is the placement path. \end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aefce20c233a0ad85d6a5c54ac2fb43b7}{insert} (\hyperlink{class_d_d4hep_1_1dd4hep__ptr}{dd4hep\+\_\+ptr}$<$ \hyperlink{struct_d_d4hep_1_1_alignments_1_1_alignment_stack_1_1_stack_entry}{Stack\+Entry} $>$ \&new\+\_\+entry)
+\begin{DoxyCompactList}\small\item\em Add a new entry to the cache. The key is the placement path. The placement path must be set in the entry. \end{DoxyCompactList}\item 
 void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aaf6353204aae5bda656bdda70d1161aa}{release} ()
-\begin{DoxyCompactList}\small\item\em Clear data content and remove the slignment stack. \item\end{DoxyCompactList}\item 
-size\_\-t \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_af852a095659b263e9a7e2a10b04e0854}{size} () const 
-\begin{DoxyCompactList}\small\item\em Access size of the alignment stack. \item\end{DoxyCompactList}\item 
-bool \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a16d69902ec4ebd8efe8c039d033f9e7b}{add} (\hyperlink{class_d_d4hep_1_1dd4hep__ptr}{dd4hep\_\-ptr}$<$ \hyperlink{struct_d_d4hep_1_1_alignments_1_1_alignment_stack_1_1_stack_entry}{StackEntry} $>$ \&new\_\-entry)
-\begin{DoxyCompactList}\small\item\em Add a new entry to the cache. The key is the placement path. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1dd4hep__ptr}{dd4hep\_\-ptr}$<$ \hyperlink{struct_d_d4hep_1_1_alignments_1_1_alignment_stack_1_1_stack_entry}{StackEntry} $>$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aa140239531cbb98a7dde1d8af1f69877}{pop} ()
-\begin{DoxyCompactList}\small\item\em Retrieve an alignment entry of the current stack. \item\end{DoxyCompactList}\item 
-std::vector$<$ const \hyperlink{struct_d_d4hep_1_1_alignments_1_1_alignment_stack_1_1_stack_entry}{StackEntry} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_abb950f98d95cf6c431ca7c8d3ca48fc0}{entries} () const 
-\begin{DoxyCompactList}\small\item\em Get all path entries to be aligned. Note: transient! \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Clear data content and remove the slignment stack. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a7329d94949d0105b0090cb5580bd59d0}{size} () const
+\begin{DoxyCompactList}\small\item\em Access size of the alignment stack. \end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a16d69902ec4ebd8efe8c039d033f9e7b}{add} (\hyperlink{class_d_d4hep_1_1dd4hep__ptr}{dd4hep\+\_\+ptr}$<$ \hyperlink{struct_d_d4hep_1_1_alignments_1_1_alignment_stack_1_1_stack_entry}{Stack\+Entry} $>$ \&new\+\_\+entry)
+\begin{DoxyCompactList}\small\item\em Add a new entry to the cache. The key is the placement path. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1dd4hep__ptr}{dd4hep\+\_\+ptr}$<$ \hyperlink{struct_d_d4hep_1_1_alignments_1_1_alignment_stack_1_1_stack_entry}{Stack\+Entry} $>$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aa140239531cbb98a7dde1d8af1f69877}{pop} ()
+\begin{DoxyCompactList}\small\item\em Retrieve an alignment entry of the current stack. \end{DoxyCompactList}\item 
+std\+::vector$<$ const \hyperlink{struct_d_d4hep_1_1_alignments_1_1_alignment_stack_1_1_stack_entry}{Stack\+Entry} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a57fcc9686b899679e7848b61e1baca72}{entries} () const
+\begin{DoxyCompactList}\small\item\em Get all path entries to be aligned. Note\+: transient! \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack}{AlignmentStack} \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aa39f02a46ed00baec0b3a09e42e3af1c}{get} ()
-\begin{DoxyCompactList}\small\item\em Static client accessor. \item\end{DoxyCompactList}\item 
+static \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack}{Alignment\+Stack} \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aa39f02a46ed00baec0b3a09e42e3af1c}{get} ()
+\begin{DoxyCompactList}\small\item\em Static client accessor. \end{DoxyCompactList}\item 
 static void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a1244b4fa8cde1f3991957f689810ae4c}{create} ()
-\begin{DoxyCompactList}\small\item\em Create an alignment stack instance. The creation of a second instance will be refused. \item\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Create an alignment stack instance. The creation of a second instance will be refused. \end{DoxyCompactList}\item 
 static bool \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aa2cbfdbfcd9a294c3f5487e5bf248b6a}{exists} ()
-\begin{DoxyCompactList}\small\item\em Check existence of alignment stack. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check existence of alignment stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-enum DD4hep::Alignments::AlignmentStack:: \{ ... \}  \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_acf79d8d4af7ef5666d1096280c8da3e8}{Flags}
+enum D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack\+:: \{ ... \}  \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_acf79d8d4af7ef5666d1096280c8da3e8}{Flags}
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_acc1d9b3831a66d74c6ef2adde3bc97c6}{AlignmentStack} ()
-\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_acc1d9b3831a66d74c6ef2adde3bc97c6}{Alignment\+Stack} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a14076338e30231119d5d291b5ac316ee}{Stack} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_ae6d6fe967fc507fc1275e15f5cbff876}{m\_\-stack}
-\begin{DoxyCompactList}\small\item\em The subdetector specific map of alignments caches. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a14076338e30231119d5d291b5ac316ee}{Stack} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_ae6d6fe967fc507fc1275e15f5cbff876}{m\+\_\+stack}
+\begin{DoxyCompactList}\small\item\em The subdetector specific map of alignments caches. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} Stack object definition. \begin{DoxyAuthor}{Author}
-M.Frank 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} Stack object definition. 
+
+\begin{DoxyAuthor}{Author}
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
-Definition at line 35 of file AlignmentStack.h.
+Definition at line 35 of file Alignment\+Stack.\+h.
+
+
 
 \subsection{Member Typedef Documentation}
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a14076338e30231119d5d291b5ac316ee}{
-\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}!Stack@{Stack}}
-\index{Stack@{Stack}!DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}
-\subsubsection[{Stack}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$std::string, {\bf StackEntry}$\ast$$>$ {\bf DD4hep::Alignments::AlignmentStack::Stack}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a14076338e30231119d5d291b5ac316ee}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a14076338e30231119d5d291b5ac316ee}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a14076338e30231119d5d291b5ac316ee} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}!Stack@{Stack}}
+\index{Stack@{Stack}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}
+\subsubsection{\texorpdfstring{Stack}{Stack}}
+{\footnotesize\ttfamily typedef std\+::map$<$std\+::string, \hyperlink{struct_d_d4hep_1_1_alignments_1_1_alignment_stack_1_1_stack_entry}{Stack\+Entry}$\ast$$>$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a14076338e30231119d5d291b5ac316ee}{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack\+::\+Stack}}
 
 
-Definition at line 95 of file AlignmentStack.h.
+
+Definition at line 95 of file Alignment\+Stack.\+h.
+
+
 
 \subsection{Member Enumeration Documentation}
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569}{
-\subsubsection[{"@15}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569}
-\begin{Desc}
-\item[Enumerator: ]\par
-\begin{description}
-\index{OVERLAP\_\-DEFINED@{OVERLAP\_\-DEFINED}!DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}!OVERLAP\_\-DEFINED@{OVERLAP\_\-DEFINED}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a4033cb4255581775569f2e2f722aaa81}{
-OVERLAP\_\-DEFINED}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a4033cb4255581775569f2e2f722aaa81}
-}]\index{MATRIX\_\-DEFINED@{MATRIX\_\-DEFINED}!DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}!MATRIX\_\-DEFINED@{MATRIX\_\-DEFINED}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a01f610d083823850012566acef4ec42b}{
-MATRIX\_\-DEFINED}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a01f610d083823850012566acef4ec42b}
-}]\index{CHECKOVL\_\-DEFINED@{CHECKOVL\_\-DEFINED}!DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}!CHECKOVL\_\-DEFINED@{CHECKOVL\_\-DEFINED}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569aee39f024ccc317ee886361ffbe1f011b}{
-CHECKOVL\_\-DEFINED}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569aee39f024ccc317ee886361ffbe1f011b}
-}]\index{CHECKOVL\_\-VALUE@{CHECKOVL\_\-VALUE}!DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}!CHECKOVL\_\-VALUE@{CHECKOVL\_\-VALUE}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a96646fe7ea980fd76a69495c22c271a4}{
-CHECKOVL\_\-VALUE}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a96646fe7ea980fd76a69495c22c271a4}
-}]\index{RESET\_\-VALUE@{RESET\_\-VALUE}!DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}!RESET\_\-VALUE@{RESET\_\-VALUE}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569ada369239b042e83f1b72c5a8885299ee}{
-RESET\_\-VALUE}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569ada369239b042e83f1b72c5a8885299ee}
-}]\index{RESET\_\-CHILDREN@{RESET\_\-CHILDREN}!DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}!RESET\_\-CHILDREN@{RESET\_\-CHILDREN}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569aacd486a45b60924aec0660fa27eedb7f}{
-RESET\_\-CHILDREN}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569aacd486a45b60924aec0660fa27eedb7f}
-}]\index{\_\-\_\-\_\-\_\-LLLAST@{\_\-\_\-\_\-\_\-LLLAST}!DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}!\_\-\_\-\_\-\_\-LLLAST@{\_\-\_\-\_\-\_\-LLLAST}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a22cc90a28cfb915750adda75ed6bfc1d}{
-\_\-\_\-\_\-\_\-LLLAST}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a22cc90a28cfb915750adda75ed6bfc1d}
-}]\end{description}
-\end{Desc}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+V\+E\+R\+L\+A\+P\+\_\+\+D\+E\+F\+I\+N\+ED@{O\+V\+E\+R\+L\+A\+P\+\_\+\+D\+E\+F\+I\+N\+ED}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}!O\+V\+E\+R\+L\+A\+P\+\_\+\+D\+E\+F\+I\+N\+ED@{O\+V\+E\+R\+L\+A\+P\+\_\+\+D\+E\+F\+I\+N\+ED}}}\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a4033cb4255581775569f2e2f722aaa81}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a4033cb4255581775569f2e2f722aaa81} 
+O\+V\+E\+R\+L\+A\+P\+\_\+\+D\+E\+F\+I\+N\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+A\+T\+R\+I\+X\+\_\+\+D\+E\+F\+I\+N\+ED@{M\+A\+T\+R\+I\+X\+\_\+\+D\+E\+F\+I\+N\+ED}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}!M\+A\+T\+R\+I\+X\+\_\+\+D\+E\+F\+I\+N\+ED@{M\+A\+T\+R\+I\+X\+\_\+\+D\+E\+F\+I\+N\+ED}}}\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a01f610d083823850012566acef4ec42b}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a01f610d083823850012566acef4ec42b} 
+M\+A\+T\+R\+I\+X\+\_\+\+D\+E\+F\+I\+N\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+H\+E\+C\+K\+O\+V\+L\+\_\+\+D\+E\+F\+I\+N\+ED@{C\+H\+E\+C\+K\+O\+V\+L\+\_\+\+D\+E\+F\+I\+N\+ED}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}!C\+H\+E\+C\+K\+O\+V\+L\+\_\+\+D\+E\+F\+I\+N\+ED@{C\+H\+E\+C\+K\+O\+V\+L\+\_\+\+D\+E\+F\+I\+N\+ED}}}\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569aee39f024ccc317ee886361ffbe1f011b}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569aee39f024ccc317ee886361ffbe1f011b} 
+C\+H\+E\+C\+K\+O\+V\+L\+\_\+\+D\+E\+F\+I\+N\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+H\+E\+C\+K\+O\+V\+L\+\_\+\+V\+A\+L\+UE@{C\+H\+E\+C\+K\+O\+V\+L\+\_\+\+V\+A\+L\+UE}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}!C\+H\+E\+C\+K\+O\+V\+L\+\_\+\+V\+A\+L\+UE@{C\+H\+E\+C\+K\+O\+V\+L\+\_\+\+V\+A\+L\+UE}}}\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a96646fe7ea980fd76a69495c22c271a4}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a96646fe7ea980fd76a69495c22c271a4} 
+C\+H\+E\+C\+K\+O\+V\+L\+\_\+\+V\+A\+L\+UE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+E\+S\+E\+T\+\_\+\+V\+A\+L\+UE@{R\+E\+S\+E\+T\+\_\+\+V\+A\+L\+UE}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}!R\+E\+S\+E\+T\+\_\+\+V\+A\+L\+UE@{R\+E\+S\+E\+T\+\_\+\+V\+A\+L\+UE}}}\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569ada369239b042e83f1b72c5a8885299ee}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569ada369239b042e83f1b72c5a8885299ee} 
+R\+E\+S\+E\+T\+\_\+\+V\+A\+L\+UE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+E\+S\+E\+T\+\_\+\+C\+H\+I\+L\+D\+R\+EN@{R\+E\+S\+E\+T\+\_\+\+C\+H\+I\+L\+D\+R\+EN}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}!R\+E\+S\+E\+T\+\_\+\+C\+H\+I\+L\+D\+R\+EN@{R\+E\+S\+E\+T\+\_\+\+C\+H\+I\+L\+D\+R\+EN}}}\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569aacd486a45b60924aec0660fa27eedb7f}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569aacd486a45b60924aec0660fa27eedb7f} 
+R\+E\+S\+E\+T\+\_\+\+C\+H\+I\+L\+D\+R\+EN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\+\_\+\+\_\+\+\_\+\+\_\+\+L\+L\+L\+A\+ST@{\+\_\+\+\_\+\+\_\+\+\_\+\+L\+L\+L\+A\+ST}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}!\+\_\+\+\_\+\+\_\+\+\_\+\+L\+L\+L\+A\+ST@{\+\_\+\+\_\+\+\_\+\+\_\+\+L\+L\+L\+A\+ST}}}\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a22cc90a28cfb915750adda75ed6bfc1d}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a52684bf45771fe0444855e41ae789569a22cc90a28cfb915750adda75ed6bfc1d} 
+\+\_\+\+\_\+\+\_\+\+\_\+\+L\+L\+L\+A\+ST&\\
+\hline
+
+\end{DoxyEnumFields}
 
 
+Definition at line 37 of file Alignment\+Stack.\+h.
 
-Definition at line 37 of file AlignmentStack.h.
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_acc1d9b3831a66d74c6ef2adde3bc97c6}{
-\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}!AlignmentStack@{AlignmentStack}}
-\index{AlignmentStack@{AlignmentStack}!DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}
-\subsubsection[{AlignmentStack}]{\setlength{\rightskip}{0pt plus 5cm}AlignmentStack::AlignmentStack ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_acc1d9b3831a66d74c6ef2adde3bc97c6}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_acc1d9b3831a66d74c6ef2adde3bc97c6}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_acc1d9b3831a66d74c6ef2adde3bc97c6} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}!Alignment\+Stack@{Alignment\+Stack}}
+\index{Alignment\+Stack@{Alignment\+Stack}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}
+\subsubsection{\texorpdfstring{Alignment\+Stack()}{AlignmentStack()}}
+{\footnotesize\ttfamily Alignment\+Stack\+::\+Alignment\+Stack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Default constructor. 
 
-Definition at line 96 of file AlignmentStack.cpp.
-
-References DD4hep::InstanceCount::increment().
-
-Referenced by create().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aaa0a50b4ba221d1591a3cdadbc06153c}{
-\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}!$\sim$AlignmentStack@{$\sim$AlignmentStack}}
-\index{$\sim$AlignmentStack@{$\sim$AlignmentStack}!DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}
-\subsubsection[{$\sim$AlignmentStack}]{\setlength{\rightskip}{0pt plus 5cm}AlignmentStack::$\sim$AlignmentStack ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aaa0a50b4ba221d1591a3cdadbc06153c}
 
 
-Default destructor. Careful with this one:. Default destructor. 
+Definition at line 96 of file Alignment\+Stack.\+cpp.
 
-Definition at line 102 of file AlignmentStack.cpp.
 
-References DD4hep::InstanceCount::decrement(), DD4hep::destroyObjects(), and m\_\-stack.
+
+References D\+D4hep\+::\+Instance\+Count\+::increment().
+
+
+
+Referenced by create().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aaa0a50b4ba221d1591a3cdadbc06153c}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aaa0a50b4ba221d1591a3cdadbc06153c} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}!````~Alignment\+Stack@{$\sim$\+Alignment\+Stack}}
+\index{````~Alignment\+Stack@{$\sim$\+Alignment\+Stack}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}
+\subsubsection{\texorpdfstring{$\sim$\+Alignment\+Stack()}{~AlignmentStack()}}
+{\footnotesize\ttfamily Alignment\+Stack\+::$\sim$\+Alignment\+Stack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Default destructor. Careful with this one\+: 
+
+Default destructor. 
+
+Definition at line 102 of file Alignment\+Stack.\+cpp.
+
+
+
+References D\+D4hep\+::\+Instance\+Count\+::decrement(), D\+D4hep\+::destroy\+Objects(), and m\+\_\+stack.
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a16d69902ec4ebd8efe8c039d033f9e7b}{
-\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}!add@{add}}
-\index{add@{add}!DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}
-\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}bool AlignmentStack::add ({\bf dd4hep\_\-ptr}$<$ {\bf StackEntry} $>$ \& {\em new\_\-entry})}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a16d69902ec4ebd8efe8c039d033f9e7b}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a16d69902ec4ebd8efe8c039d033f9e7b}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a16d69902ec4ebd8efe8c039d033f9e7b} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}!add@{add}}
+\index{add@{add}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily bool Alignment\+Stack\+::add (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1dd4hep__ptr}{dd4hep\+\_\+ptr}$<$ \hyperlink{struct_d_d4hep_1_1_alignments_1_1_alignment_stack_1_1_stack_entry}{Stack\+Entry} $>$ \&}]{new\+\_\+entry }\end{DoxyParamCaption})}
+
 
 
 Add a new entry to the cache. The key is the placement path. 
 
-Definition at line 150 of file AlignmentStack.cpp.
 
-References DD4hep::INFO, m\_\-stack, and DD4hep::printout().
 
-Referenced by insert().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a1244b4fa8cde1f3991957f689810ae4c}{
-\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}!create@{create}}
-\index{create@{create}!DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}
-\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}void AlignmentStack::create ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a1244b4fa8cde1f3991957f689810ae4c}
+Definition at line 150 of file Alignment\+Stack.\+cpp.
+
+
+
+References D\+D4hep\+::\+I\+N\+FO, m\+\_\+stack, and D\+D4hep\+::printout().
+
+
+
+Referenced by insert(), and size().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a1244b4fa8cde1f3991957f689810ae4c}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a1244b4fa8cde1f3991957f689810ae4c} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}!create@{create}}
+\index{create@{create}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}
+\subsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily void Alignment\+Stack\+::create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
 
 
 Create an alignment stack instance. The creation of a second instance will be refused. 
 
-Definition at line 114 of file AlignmentStack.cpp.
-
-References \_\-stack(), and AlignmentStack().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_abb950f98d95cf6c431ca7c8d3ca48fc0}{
-\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}!entries@{entries}}
-\index{entries@{entries}!DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}
-\subsubsection[{entries}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vector}$<$ const {\bf AlignmentStack::StackEntry} $\ast$ $>$ AlignmentStack::entries () const}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_abb950f98d95cf6c431ca7c8d3ca48fc0}
 
 
-Get all path entries to be aligned. Note: transient! Get all pathes to be aligned. 
+Definition at line 114 of file Alignment\+Stack.\+cpp.
 
-Definition at line 183 of file AlignmentStack.cpp.
 
-References m\_\-stack.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aa2cbfdbfcd9a294c3f5487e5bf248b6a}{
-\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}!exists@{exists}}
-\index{exists@{exists}!DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}
-\subsubsection[{exists}]{\setlength{\rightskip}{0pt plus 5cm}bool AlignmentStack::exists ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aa2cbfdbfcd9a294c3f5487e5bf248b6a}
+
+References \+\_\+stack(), and Alignment\+Stack().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a57fcc9686b899679e7848b61e1baca72}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a57fcc9686b899679e7848b61e1baca72} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}!entries@{entries}}
+\index{entries@{entries}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}
+\subsubsection{\texorpdfstring{entries()}{entries()}}
+{\footnotesize\ttfamily vector$<$ const \hyperlink{struct_d_d4hep_1_1_alignments_1_1_alignment_stack_1_1_stack_entry}{Alignment\+Stack\+::\+Stack\+Entry} $\ast$ $>$ Alignment\+Stack\+::entries (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get all path entries to be aligned. Note\+: transient! 
+
+Get all pathes to be aligned. 
+
+Definition at line 183 of file Alignment\+Stack.\+cpp.
+
+
+
+References m\+\_\+stack.
+
+
+
+Referenced by size().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aa2cbfdbfcd9a294c3f5487e5bf248b6a}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aa2cbfdbfcd9a294c3f5487e5bf248b6a} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}!exists@{exists}}
+\index{exists@{exists}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}
+\subsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily bool Alignment\+Stack\+::exists (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
 
 
 Check existence of alignment stack. 
 
-Definition at line 122 of file AlignmentStack.cpp.
 
-References \_\-stack().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aa39f02a46ed00baec0b3a09e42e3af1c}{
-\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}!get@{get}}
-\index{get@{get}!DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}
-\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf AlignmentStack} \& AlignmentStack::get ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aa39f02a46ed00baec0b3a09e42e3af1c}
+
+Definition at line 122 of file Alignment\+Stack.\+cpp.
+
+
+
+References \+\_\+stack().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aa39f02a46ed00baec0b3a09e42e3af1c}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aa39f02a46ed00baec0b3a09e42e3af1c} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}!get@{get}}
+\index{get@{get}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack}{Alignment\+Stack} \& Alignment\+Stack\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
 
 
 Static client accessor. 
 
-Definition at line 108 of file AlignmentStack.cpp.
-
-References \_\-stack().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aefce20c233a0ad85d6a5c54ac2fb43b7}{
-\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}!insert@{insert}}
-\index{insert@{insert}!DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}
-\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}bool AlignmentStack::insert ({\bf dd4hep\_\-ptr}$<$ {\bf StackEntry} $>$ \& {\em new\_\-entry})}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aefce20c233a0ad85d6a5c54ac2fb43b7}
 
 
-Add a new entry to the cache. The key is the placement path. The placement path must be set in the entry. Add a new entry to the cache. The key is the placement path. 
-
-Definition at line 145 of file AlignmentStack.cpp.
-
-References add().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a4525563586574e54ce55ced7feead363}{
-\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}!insert@{insert}}
-\index{insert@{insert}!DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}
-\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Alignments::AlignmentStack::insert (const std::string \& {\em full\_\-path}, \/  {\bf dd4hep\_\-ptr}$<$ {\bf StackEntry} $>$ \& {\em new\_\-entry})}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a4525563586574e54ce55ced7feead363}
+Definition at line 108 of file Alignment\+Stack.\+cpp.
 
 
-Add a new entry to the cache. The key is the placement path. \hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aa140239531cbb98a7dde1d8af1f69877}{
-\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}!pop@{pop}}
-\index{pop@{pop}!DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}
-\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf dd4hep\_\-ptr}$<$ {\bf AlignmentStack::StackEntry} $>$ AlignmentStack::pop ()}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aa140239531cbb98a7dde1d8af1f69877}
+
+References \+\_\+stack().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a9970de258fa1c3ea148a70de782f2398}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a9970de258fa1c3ea148a70de782f2398} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}!insert@{insert}}
+\index{insert@{insert}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}
+\subsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Alignment\+Stack\+::insert (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{full\+\_\+path,  }\item[{\hyperlink{class_d_d4hep_1_1dd4hep__ptr}{dd4hep\+\_\+ptr}$<$ \hyperlink{struct_d_d4hep_1_1_alignments_1_1_alignment_stack_1_1_stack_entry}{Stack\+Entry} $>$ \&}]{new\+\_\+entry }\end{DoxyParamCaption})}
+
+
+
+Add a new entry to the cache. The key is the placement path. 
+
+
+
+Definition at line 136 of file Alignment\+Stack.\+cpp.
+
+
+
+References add().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aefce20c233a0ad85d6a5c54ac2fb43b7}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aefce20c233a0ad85d6a5c54ac2fb43b7} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}!insert@{insert}}
+\index{insert@{insert}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}
+\subsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Alignment\+Stack\+::insert (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1dd4hep__ptr}{dd4hep\+\_\+ptr}$<$ \hyperlink{struct_d_d4hep_1_1_alignments_1_1_alignment_stack_1_1_stack_entry}{Stack\+Entry} $>$ \&}]{new\+\_\+entry }\end{DoxyParamCaption})}
+
+
+
+Add a new entry to the cache. The key is the placement path. The placement path must be set in the entry. 
+
+Add a new entry to the cache. The key is the placement path. 
+
+Definition at line 145 of file Alignment\+Stack.\+cpp.
+
+
+
+References add().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aa140239531cbb98a7dde1d8af1f69877}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aa140239531cbb98a7dde1d8af1f69877} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}!pop@{pop}}
+\index{pop@{pop}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}
+\subsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1dd4hep__ptr}{dd4hep\+\_\+ptr}$<$ \hyperlink{struct_d_d4hep_1_1_alignments_1_1_alignment_stack_1_1_stack_entry}{Alignment\+Stack\+::\+Stack\+Entry} $>$ Alignment\+Stack\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 
 
 Retrieve an alignment entry of the current stack. 
 
-Definition at line 171 of file AlignmentStack.cpp.
 
-References m\_\-stack.
 
-Referenced by DD4hep::Alignments::GlobalAlignmentCache::apply().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aaf6353204aae5bda656bdda70d1161aa}{
-\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}!release@{release}}
-\index{release@{release}!DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}
-\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}void AlignmentStack::release ()}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aaf6353204aae5bda656bdda70d1161aa}
+Definition at line 171 of file Alignment\+Stack.\+cpp.
+
+
+
+References e, and m\+\_\+stack.
+
+
+
+Referenced by D\+D4hep\+::\+Alignments\+::\+Global\+Alignment\+Cache\+::apply(), and size().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aaf6353204aae5bda656bdda70d1161aa}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_aaf6353204aae5bda656bdda70d1161aa} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}!release@{release}}
+\index{release@{release}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}
+\subsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily void Alignment\+Stack\+::release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 
 
 Clear data content and remove the slignment stack. 
 
-Definition at line 127 of file AlignmentStack.cpp.
 
-References \_\-stack().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_af852a095659b263e9a7e2a10b04e0854}{
-\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}!size@{size}}
-\index{size@{size}!DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}
-\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t DD4hep::Alignments::AlignmentStack::size () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_af852a095659b263e9a7e2a10b04e0854}
+
+Definition at line 127 of file Alignment\+Stack.\+cpp.
+
+
+
+References \+\_\+stack().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a7329d94949d0105b0090cb5580bd59d0}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a7329d94949d0105b0090cb5580bd59d0} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}!size@{size}}
+\index{size@{size}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Access size of the alignment stack. 
 
-Definition at line 121 of file AlignmentStack.h.
 
-References m\_\-stack.
 
-Referenced by DD4hep::Alignments::GlobalAlignmentCache::apply().
+Definition at line 121 of file Alignment\+Stack.\+h.
+
+
+
+References add(), entries(), and pop().
+
+
+
+Referenced by D\+D4hep\+::\+Alignments\+::\+Global\+Alignment\+Cache\+::apply().
+
+
 
 \subsection{Member Data Documentation}
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_acf79d8d4af7ef5666d1096280c8da3e8}{
-\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}!Flags@{Flags}}
-\index{Flags@{Flags}!DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}
-\subsubsection[{Flags}]{\setlength{\rightskip}{0pt plus 5cm}enum \{ ... \}   {\bf DD4hep::Alignments::AlignmentStack::Flags}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_acf79d8d4af7ef5666d1096280c8da3e8}
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_ae6d6fe967fc507fc1275e15f5cbff876}{
-\index{DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}!m\_\-stack@{m\_\-stack}}
-\index{m\_\-stack@{m\_\-stack}!DD4hep::Alignments::AlignmentStack@{DD4hep::Alignments::AlignmentStack}}
-\subsubsection[{m\_\-stack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Stack} {\bf DD4hep::Alignments::AlignmentStack::m\_\-stack}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_ae6d6fe967fc507fc1275e15f5cbff876}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_acf79d8d4af7ef5666d1096280c8da3e8}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_acf79d8d4af7ef5666d1096280c8da3e8} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}!Flags@{Flags}}
+\index{Flags@{Flags}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}
+\subsubsection{\texorpdfstring{Flags}{Flags}}
+{\footnotesize\ttfamily enum \{ ... \}   D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack\+::\+Flags}
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_stack_ae6d6fe967fc507fc1275e15f5cbff876}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_stack_ae6d6fe967fc507fc1275e15f5cbff876} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}!m\+\_\+stack@{m\+\_\+stack}}
+\index{m\+\_\+stack@{m\+\_\+stack}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack}}
+\subsubsection{\texorpdfstring{m\+\_\+stack}{m\_stack}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_stack_a14076338e30231119d5d291b5ac316ee}{Stack} D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack\+::m\+\_\+stack\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 The subdetector specific map of alignments caches. 
 
-Definition at line 99 of file AlignmentStack.h.
 
-Referenced by add(), entries(), pop(), size(), and $\sim$AlignmentStack().
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+Definition at line 99 of file Alignment\+Stack.\+h.
+
+
+
+Referenced by add(), entries(), pop(), and $\sim$\+Alignment\+Stack().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDAlign/include/DDAlign/\hyperlink{_alignment_stack_8h}{AlignmentStack.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDAlign/src/\hyperlink{_alignment_stack_8cpp}{AlignmentStack.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Align/include/\+D\+D\+Align/\hyperlink{_alignment_stack_8h}{Alignment\+Stack.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Align/src/\hyperlink{_alignment_stack_8cpp}{Alignment\+Stack.\+cpp}\end{DoxyCompactItemize}

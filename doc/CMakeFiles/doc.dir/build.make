@@ -55,7 +55,7 @@ include CMakeFiles/doc.dir/progress.make
 
 CMakeFiles/doc:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/afs/cern.ch/user/m/mpetric/nightly_cppcheck/dd4hep/doc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating API documentation with Doxygen"
-	/usr/bin/doxygen /afs/cern.ch/user/m/mpetric/nightly_cppcheck/dd4hep/doc/Doxyfile
+	/cvmfs/clicdp.cern.ch/software/Doxygen/1.8.12/x86_64-slc6-gcc62-opt/bin/doxygen /afs/cern.ch/user/m/mpetric/nightly_cppcheck/dd4hep/doc/Doxyfile
 
 doc: CMakeFiles/doc
 doc: CMakeFiles/doc.dir/build.make

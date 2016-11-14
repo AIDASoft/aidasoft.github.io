@@ -1,328 +1,424 @@
-\hypertarget{class_d_d4hep_1_1_event_handler}{
-\section{DD4hep::EventHandler Class Reference}
-\label{class_d_d4hep_1_1_event_handler}\index{DD4hep::EventHandler@{DD4hep::EventHandler}}
-}
+\hypertarget{class_d_d4hep_1_1_event_handler}{}\section{D\+D4hep\+:\+:Event\+Handler Class Reference}
+\label{class_d_d4hep_1_1_event_handler}\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}
 
 
-Event handler base class. Interface to all \hyperlink{struct_d_d4hep_1_1_d_d_eve}{DDEve} I/O actions.  
+Event handler base class. Interface to all \hyperlink{struct_d_d4hep_1_1_d_d_eve}{D\+D\+Eve} I/O actions.  
 
 
-{\ttfamily \#include $<$EventHandler.h$>$}Inheritance diagram for DD4hep::EventHandler::\begin{figure}[H]
+
+
+{\ttfamily \#include $<$Event\+Handler.\+h$>$}
+
+Inheritance diagram for D\+D4hep\+:\+:Event\+Handler\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=1.9244cm]{class_d_d4hep_1_1_event_handler}
+\includegraphics[height=1.924399cm]{class_d_d4hep_1_1_event_handler}
 \end{center}
 \end{figure}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254}{CollectionType} \{ \par
-\hyperlink{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a97cb7e022ec3a608b95e9c0f0395f875}{NO\_\-COLLECTION} = 1$<$$<$0, 
-\hyperlink{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a694c9a04628f4dd1ac5bae0697b6403b}{PARTICLE\_\-COLLECTION} = 1$<$$<$1, 
-\hyperlink{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a320d668d3b9972c63a98e2cbf788a6a4}{TRACK\_\-COLLECTION} = 1$<$$<$2, 
-\hyperlink{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254af204316bf52273227210419965b95b43}{CALO\_\-HIT\_\-COLLECTION} = 1$<$$<$3, 
-\par
-\hyperlink{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a157b5d4bcda403c48a5cb368d8671761}{TRACKER\_\-HIT\_\-COLLECTION} = 1$<$$<$4, 
-\hyperlink{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254acaedbfda8dbee1f6ab8d296b875dcb07}{HIT\_\-COLLECTION} = CALO\_\-HIT\_\-COLLECTION$|$TRACKER\_\-HIT\_\-COLLECTION
+enum \hyperlink{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254}{Collection\+Type} \{ \newline
+\hyperlink{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a97cb7e022ec3a608b95e9c0f0395f875}{N\+O\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON} =1$<$$<$0, 
+\hyperlink{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a694c9a04628f4dd1ac5bae0697b6403b}{P\+A\+R\+T\+I\+C\+L\+E\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON} =1$<$$<$1, 
+\hyperlink{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a320d668d3b9972c63a98e2cbf788a6a4}{T\+R\+A\+C\+K\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON} =1$<$$<$2, 
+\hyperlink{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254af204316bf52273227210419965b95b43}{C\+A\+L\+O\+\_\+\+H\+I\+T\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON} =1$<$$<$3, 
+\newline
+\hyperlink{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a157b5d4bcda403c48a5cb368d8671761}{T\+R\+A\+C\+K\+E\+R\+\_\+\+H\+I\+T\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON} =1$<$$<$4, 
+\hyperlink{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254acaedbfda8dbee1f6ab8d296b875dcb07}{H\+I\+T\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON} =C\+A\+L\+O\+\_\+\+H\+I\+T\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+O\+N$\vert$\+T\+R\+A\+C\+K\+E\+R\+\_\+\+H\+I\+T\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON
  \}
 \item 
-typedef std::pair$<$ const char $\ast$, size\_\-t $>$ \hyperlink{class_d_d4hep_1_1_event_handler_abc271087910b2013962fa4a83d4f349e}{Collection}
-\begin{DoxyCompactList}\small\item\em Collection definition: name, size. \item\end{DoxyCompactList}\item 
-typedef std::map$<$ std::string, std::vector$<$ \hyperlink{class_d_d4hep_1_1_event_handler_abc271087910b2013962fa4a83d4f349e}{Collection} $>$ $>$ \hyperlink{class_d_d4hep_1_1_event_handler_a4d441ff8a824b1e2f278e8b7a6391af3}{TypedEventCollections}
-\begin{DoxyCompactList}\small\item\em Types collection: collections are grouped by type (class name). \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+typedef std\+::pair$<$ const char $\ast$, size\+\_\+t $>$ \hyperlink{class_d_d4hep_1_1_event_handler_abc271087910b2013962fa4a83d4f349e}{Collection}
+\begin{DoxyCompactList}\small\item\em Collection definition\+: name, size. \end{DoxyCompactList}\item 
+typedef std\+::map$<$ std\+::string, std\+::vector$<$ \hyperlink{class_d_d4hep_1_1_event_handler_abc271087910b2013962fa4a83d4f349e}{Collection} $>$ $>$ \hyperlink{class_d_d4hep_1_1_event_handler_a4d441ff8a824b1e2f278e8b7a6391af3}{Typed\+Event\+Collections}
+\begin{DoxyCompactList}\small\item\em Types collection\+: collections are grouped by type (class name) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_event_handler_a83e36ed405cced9a1dab7414b2e0fe05}{EventHandler} ()
-\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{class_d_d4hep_1_1_event_handler_a3decb8cd88ba8af2b9b0b0f0f2fcd722}{$\sim$EventHandler} ()
-\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
-virtual bool \hyperlink{class_d_d4hep_1_1_event_handler_a43ded5dfb592a8119aee05f07ca7a95b}{hasEvent} () const 
-\begin{DoxyCompactList}\small\item\em Check if an event is present in memory. \item\end{DoxyCompactList}\item 
-virtual bool \hyperlink{class_d_d4hep_1_1_event_handler_ab1c6611119a3c90bd83bb3bc41159498}{hasFile} () const 
-\begin{DoxyCompactList}\small\item\em Check if a data file is connected to the handler. \item\end{DoxyCompactList}\item 
-virtual const \hyperlink{class_d_d4hep_1_1_event_handler_a4d441ff8a824b1e2f278e8b7a6391af3}{TypedEventCollections} \& \hyperlink{class_d_d4hep_1_1_event_handler_a263d136331d72994bcbf537d4aa16d4f}{data} () const =0
-\begin{DoxyCompactList}\small\item\em Access the map of simulation data collections. \item\end{DoxyCompactList}\item 
-virtual long \hyperlink{class_d_d4hep_1_1_event_handler_a005436bba029439b513645485e3c0ff5}{numEvents} () const =0
-\begin{DoxyCompactList}\small\item\em Access the number of events on the current input data source (-\/1 if no data source connected). \item\end{DoxyCompactList}\item 
-virtual std::string \hyperlink{class_d_d4hep_1_1_event_handler_a5fa231363a787ba7edf520b5a99f294e}{datasourceName} () const =0
-\begin{DoxyCompactList}\small\item\em Access the data source name. \item\end{DoxyCompactList}\item 
-virtual size\_\-t \hyperlink{class_d_d4hep_1_1_event_handler_a454baeb81b675f3ebd8bb4293064b787}{collectionLoop} (const std::string \&collection, \hyperlink{struct_d_d4hep_1_1_d_d_eve_hit_actor}{DDEveHitActor} \&actor)=0
-\begin{DoxyCompactList}\small\item\em Loop over collection and extract hit data. \item\end{DoxyCompactList}\item 
-virtual size\_\-t \hyperlink{class_d_d4hep_1_1_event_handler_ae43595c2760736a7ca628183a2c91ec2}{collectionLoop} (const std::string \&collection, \hyperlink{struct_d_d4hep_1_1_d_d_eve_particle_actor}{DDEveParticleActor} \&actor)=0
-\begin{DoxyCompactList}\small\item\em Loop over collection and extract particle data. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254}{CollectionType} \hyperlink{class_d_d4hep_1_1_event_handler_a8424ffc2056b0e23d69c81ab2496cd51}{collectionType} (const std::string \&collection) const =0
-\begin{DoxyCompactList}\small\item\em Access to the collection type by name. \item\end{DoxyCompactList}\item 
-virtual bool \hyperlink{class_d_d4hep_1_1_event_handler_a90995d3b610beee9d9f7fafcc060626b}{Open} (const std::string \&type, const std::string \&file\_\-name)=0
-\begin{DoxyCompactList}\small\item\em Open a new event data file. \item\end{DoxyCompactList}\item 
-virtual bool \hyperlink{class_d_d4hep_1_1_event_handler_ac2360791d3a44f4cef0987f9a7ec51ce}{NextEvent} ()=0
-\begin{DoxyCompactList}\small\item\em Load the next event. \item\end{DoxyCompactList}\item 
-virtual bool \hyperlink{class_d_d4hep_1_1_event_handler_a0942608bebbdd107c9dedbdc7311791f}{PreviousEvent} ()=0
-\begin{DoxyCompactList}\small\item\em User overloadable function: Load the previous event. \item\end{DoxyCompactList}\item 
-virtual bool \hyperlink{class_d_d4hep_1_1_event_handler_a09c40b0b753455c1e3df7c561ff6b069}{GotoEvent} (long event\_\-number)=0
-\begin{DoxyCompactList}\small\item\em Goto a specified event in the file. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_event_handler_a44c310a4296693f09e62adbac3fbe2c6}{ClassDef} (\hyperlink{class_d_d4hep_1_1_event_handler}{EventHandler}, 0)
+\hyperlink{class_d_d4hep_1_1_event_handler_a83e36ed405cced9a1dab7414b2e0fe05}{Event\+Handler} ()
+\begin{DoxyCompactList}\small\item\em Standard constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_event_handler_a3decb8cd88ba8af2b9b0b0f0f2fcd722}{$\sim$\+Event\+Handler} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_event_handler_ad07cc15bff3dc3fc70cf37d2deefe3b7}{has\+Event} () const
+\begin{DoxyCompactList}\small\item\em Check if an event is present in memory. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_event_handler_a13bdcc68a401f6f2a9b855c4bc4beb11}{has\+File} () const
+\begin{DoxyCompactList}\small\item\em Check if a data file is connected to the handler. \end{DoxyCompactList}\item 
+virtual const \hyperlink{class_d_d4hep_1_1_event_handler_a4d441ff8a824b1e2f278e8b7a6391af3}{Typed\+Event\+Collections} \& \hyperlink{class_d_d4hep_1_1_event_handler_a263d136331d72994bcbf537d4aa16d4f}{data} () const =0
+\begin{DoxyCompactList}\small\item\em Access the map of simulation data collections. \end{DoxyCompactList}\item 
+virtual long \hyperlink{class_d_d4hep_1_1_event_handler_a005436bba029439b513645485e3c0ff5}{num\+Events} () const =0
+\begin{DoxyCompactList}\small\item\em Access the number of events on the current input data source (-\/1 if no data source connected) \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{class_d_d4hep_1_1_event_handler_a5fa231363a787ba7edf520b5a99f294e}{datasource\+Name} () const =0
+\begin{DoxyCompactList}\small\item\em Access the data source name. \end{DoxyCompactList}\item 
+virtual size\+\_\+t \hyperlink{class_d_d4hep_1_1_event_handler_a454baeb81b675f3ebd8bb4293064b787}{collection\+Loop} (const std\+::string \&collection, \hyperlink{struct_d_d4hep_1_1_d_d_eve_hit_actor}{D\+D\+Eve\+Hit\+Actor} \&actor)=0
+\begin{DoxyCompactList}\small\item\em Loop over collection and extract hit data. \end{DoxyCompactList}\item 
+virtual size\+\_\+t \hyperlink{class_d_d4hep_1_1_event_handler_ae43595c2760736a7ca628183a2c91ec2}{collection\+Loop} (const std\+::string \&collection, \hyperlink{struct_d_d4hep_1_1_d_d_eve_particle_actor}{D\+D\+Eve\+Particle\+Actor} \&actor)=0
+\begin{DoxyCompactList}\small\item\em Loop over collection and extract particle data. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254}{Collection\+Type} \hyperlink{class_d_d4hep_1_1_event_handler_a8424ffc2056b0e23d69c81ab2496cd51}{collection\+Type} (const std\+::string \&collection) const =0
+\begin{DoxyCompactList}\small\item\em Access to the collection type by name. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_event_handler_a90995d3b610beee9d9f7fafcc060626b}{Open} (const std\+::string \&type, const std\+::string \&file\+\_\+name)=0
+\begin{DoxyCompactList}\small\item\em Open a new event data file. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_event_handler_ac2360791d3a44f4cef0987f9a7ec51ce}{Next\+Event} ()=0
+\begin{DoxyCompactList}\small\item\em Load the next event. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_event_handler_a0942608bebbdd107c9dedbdc7311791f}{Previous\+Event} ()=0
+\begin{DoxyCompactList}\small\item\em User overloadable function\+: Load the previous event. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_event_handler_a09c40b0b753455c1e3df7c561ff6b069}{Goto\+Event} (long event\+\_\+number)=0
+\begin{DoxyCompactList}\small\item\em Goto a specified event in the file. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_event_handler_a44c310a4296693f09e62adbac3fbe2c6}{Class\+Def} (\hyperlink{class_d_d4hep_1_1_event_handler}{Event\+Handler}, 0)
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-bool \hyperlink{class_d_d4hep_1_1_event_handler_acfb701f8f671fe75df92d46d846613d5}{m\_\-hasFile}
-\begin{DoxyCompactList}\small\item\em Flag to indicate that a file is opened. \item\end{DoxyCompactList}\item 
-bool \hyperlink{class_d_d4hep_1_1_event_handler_adccb4980638cdc1ed7792ae8583f1370}{m\_\-hasEvent}
-\begin{DoxyCompactList}\small\item\em Flag to indicate that an event is loaded. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+bool \hyperlink{class_d_d4hep_1_1_event_handler_acfb701f8f671fe75df92d46d846613d5}{m\+\_\+has\+File}
+\begin{DoxyCompactList}\small\item\em Flag to indicate that a file is opened. \end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_event_handler_adccb4980638cdc1ed7792ae8583f1370}{m\+\_\+has\+Event}
+\begin{DoxyCompactList}\small\item\em Flag to indicate that an event is loaded. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Event handler base class. Interface to all \hyperlink{struct_d_d4hep_1_1_d_d_eve}{DDEve} I/O actions. \begin{DoxyAuthor}{Author}
-M.Frank 
+Event handler base class. Interface to all \hyperlink{struct_d_d4hep_1_1_d_d_eve}{D\+D\+Eve} I/O actions. 
+
+\begin{DoxyAuthor}{Author}
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
-Definition at line 66 of file EventHandler.h.
+Definition at line 66 of file Event\+Handler.\+h.
+
+
 
 \subsection{Member Typedef Documentation}
-\hypertarget{class_d_d4hep_1_1_event_handler_abc271087910b2013962fa4a83d4f349e}{
-\index{DD4hep::EventHandler@{DD4hep::EventHandler}!Collection@{Collection}}
-\index{Collection@{Collection}!DD4hep::EventHandler@{DD4hep::EventHandler}}
-\subsubsection[{Collection}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::pair$<$const char$\ast$,size\_\-t$>$ {\bf DD4hep::EventHandler::Collection}}}
-\label{class_d_d4hep_1_1_event_handler_abc271087910b2013962fa4a83d4f349e}
+\hypertarget{class_d_d4hep_1_1_event_handler_abc271087910b2013962fa4a83d4f349e}{}\label{class_d_d4hep_1_1_event_handler_abc271087910b2013962fa4a83d4f349e} 
+\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!Collection@{Collection}}
+\index{Collection@{Collection}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Collection}{Collection}}
+{\footnotesize\ttfamily typedef std\+::pair$<$const char$\ast$,size\+\_\+t$>$ \hyperlink{class_d_d4hep_1_1_event_handler_abc271087910b2013962fa4a83d4f349e}{D\+D4hep\+::\+Event\+Handler\+::\+Collection}}
 
 
-Collection definition: name, size. 
 
-Definition at line 77 of file EventHandler.h.\hypertarget{class_d_d4hep_1_1_event_handler_a4d441ff8a824b1e2f278e8b7a6391af3}{
-\index{DD4hep::EventHandler@{DD4hep::EventHandler}!TypedEventCollections@{TypedEventCollections}}
-\index{TypedEventCollections@{TypedEventCollections}!DD4hep::EventHandler@{DD4hep::EventHandler}}
-\subsubsection[{TypedEventCollections}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$std::string,std::vector$<${\bf Collection}$>$ $>$ {\bf DD4hep::EventHandler::TypedEventCollections}}}
-\label{class_d_d4hep_1_1_event_handler_a4d441ff8a824b1e2f278e8b7a6391af3}
+Collection definition\+: name, size. 
 
 
-Types collection: collections are grouped by type (class name). 
 
-Definition at line 79 of file EventHandler.h.
+Definition at line 77 of file Event\+Handler.\+h.
+
+\hypertarget{class_d_d4hep_1_1_event_handler_a4d441ff8a824b1e2f278e8b7a6391af3}{}\label{class_d_d4hep_1_1_event_handler_a4d441ff8a824b1e2f278e8b7a6391af3} 
+\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!Typed\+Event\+Collections@{Typed\+Event\+Collections}}
+\index{Typed\+Event\+Collections@{Typed\+Event\+Collections}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Typed\+Event\+Collections}{TypedEventCollections}}
+{\footnotesize\ttfamily typedef std\+::map$<$std\+::string,std\+::vector$<$\hyperlink{class_d_d4hep_1_1_event_handler_abc271087910b2013962fa4a83d4f349e}{Collection}$>$ $>$ \hyperlink{class_d_d4hep_1_1_event_handler_a4d441ff8a824b1e2f278e8b7a6391af3}{D\+D4hep\+::\+Event\+Handler\+::\+Typed\+Event\+Collections}}
+
+
+
+Types collection\+: collections are grouped by type (class name) 
+
+
+
+Definition at line 79 of file Event\+Handler.\+h.
+
+
 
 \subsection{Member Enumeration Documentation}
-\hypertarget{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254}{
-\index{DD4hep::EventHandler@{DD4hep::EventHandler}!CollectionType@{CollectionType}}
-\index{CollectionType@{CollectionType}!DD4hep::EventHandler@{DD4hep::EventHandler}}
-\subsubsection[{CollectionType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DD4hep::EventHandler::CollectionType}}}
-\label{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254}
-\begin{Desc}
-\item[Enumerator: ]\par
-\begin{description}
-\index{NO\_\-COLLECTION@{NO\_\-COLLECTION}!DD4hep::EventHandler@{DD4hep::EventHandler}}\index{DD4hep::EventHandler@{DD4hep::EventHandler}!NO\_\-COLLECTION@{NO\_\-COLLECTION}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a97cb7e022ec3a608b95e9c0f0395f875}{
-NO\_\-COLLECTION}
-\label{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a97cb7e022ec3a608b95e9c0f0395f875}
-}]\index{PARTICLE\_\-COLLECTION@{PARTICLE\_\-COLLECTION}!DD4hep::EventHandler@{DD4hep::EventHandler}}\index{DD4hep::EventHandler@{DD4hep::EventHandler}!PARTICLE\_\-COLLECTION@{PARTICLE\_\-COLLECTION}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a694c9a04628f4dd1ac5bae0697b6403b}{
-PARTICLE\_\-COLLECTION}
-\label{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a694c9a04628f4dd1ac5bae0697b6403b}
-}]\index{TRACK\_\-COLLECTION@{TRACK\_\-COLLECTION}!DD4hep::EventHandler@{DD4hep::EventHandler}}\index{DD4hep::EventHandler@{DD4hep::EventHandler}!TRACK\_\-COLLECTION@{TRACK\_\-COLLECTION}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a320d668d3b9972c63a98e2cbf788a6a4}{
-TRACK\_\-COLLECTION}
-\label{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a320d668d3b9972c63a98e2cbf788a6a4}
-}]\index{CALO\_\-HIT\_\-COLLECTION@{CALO\_\-HIT\_\-COLLECTION}!DD4hep::EventHandler@{DD4hep::EventHandler}}\index{DD4hep::EventHandler@{DD4hep::EventHandler}!CALO\_\-HIT\_\-COLLECTION@{CALO\_\-HIT\_\-COLLECTION}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254af204316bf52273227210419965b95b43}{
-CALO\_\-HIT\_\-COLLECTION}
-\label{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254af204316bf52273227210419965b95b43}
-}]\index{TRACKER\_\-HIT\_\-COLLECTION@{TRACKER\_\-HIT\_\-COLLECTION}!DD4hep::EventHandler@{DD4hep::EventHandler}}\index{DD4hep::EventHandler@{DD4hep::EventHandler}!TRACKER\_\-HIT\_\-COLLECTION@{TRACKER\_\-HIT\_\-COLLECTION}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a157b5d4bcda403c48a5cb368d8671761}{
-TRACKER\_\-HIT\_\-COLLECTION}
-\label{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a157b5d4bcda403c48a5cb368d8671761}
-}]\index{HIT\_\-COLLECTION@{HIT\_\-COLLECTION}!DD4hep::EventHandler@{DD4hep::EventHandler}}\index{DD4hep::EventHandler@{DD4hep::EventHandler}!HIT\_\-COLLECTION@{HIT\_\-COLLECTION}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254acaedbfda8dbee1f6ab8d296b875dcb07}{
-HIT\_\-COLLECTION}
-\label{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254acaedbfda8dbee1f6ab8d296b875dcb07}
-}]\end{description}
-\end{Desc}
+\hypertarget{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254}{}\label{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254} 
+\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!Collection\+Type@{Collection\+Type}}
+\index{Collection\+Type@{Collection\+Type}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Collection\+Type}{CollectionType}}
+{\footnotesize\ttfamily enum \hyperlink{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254}{D\+D4hep\+::\+Event\+Handler\+::\+Collection\+Type}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON@{N\+O\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!N\+O\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON@{N\+O\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON}}}\hypertarget{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a97cb7e022ec3a608b95e9c0f0395f875}{}\label{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a97cb7e022ec3a608b95e9c0f0395f875} 
+N\+O\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+A\+R\+T\+I\+C\+L\+E\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON@{P\+A\+R\+T\+I\+C\+L\+E\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!P\+A\+R\+T\+I\+C\+L\+E\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON@{P\+A\+R\+T\+I\+C\+L\+E\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON}}}\hypertarget{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a694c9a04628f4dd1ac5bae0697b6403b}{}\label{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a694c9a04628f4dd1ac5bae0697b6403b} 
+P\+A\+R\+T\+I\+C\+L\+E\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+R\+A\+C\+K\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON@{T\+R\+A\+C\+K\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!T\+R\+A\+C\+K\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON@{T\+R\+A\+C\+K\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON}}}\hypertarget{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a320d668d3b9972c63a98e2cbf788a6a4}{}\label{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a320d668d3b9972c63a98e2cbf788a6a4} 
+T\+R\+A\+C\+K\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+A\+L\+O\+\_\+\+H\+I\+T\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON@{C\+A\+L\+O\+\_\+\+H\+I\+T\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!C\+A\+L\+O\+\_\+\+H\+I\+T\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON@{C\+A\+L\+O\+\_\+\+H\+I\+T\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON}}}\hypertarget{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254af204316bf52273227210419965b95b43}{}\label{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254af204316bf52273227210419965b95b43} 
+C\+A\+L\+O\+\_\+\+H\+I\+T\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+R\+A\+C\+K\+E\+R\+\_\+\+H\+I\+T\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON@{T\+R\+A\+C\+K\+E\+R\+\_\+\+H\+I\+T\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!T\+R\+A\+C\+K\+E\+R\+\_\+\+H\+I\+T\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON@{T\+R\+A\+C\+K\+E\+R\+\_\+\+H\+I\+T\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON}}}\hypertarget{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a157b5d4bcda403c48a5cb368d8671761}{}\label{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254a157b5d4bcda403c48a5cb368d8671761} 
+T\+R\+A\+C\+K\+E\+R\+\_\+\+H\+I\+T\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+I\+T\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON@{H\+I\+T\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!H\+I\+T\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON@{H\+I\+T\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON}}}\hypertarget{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254acaedbfda8dbee1f6ab8d296b875dcb07}{}\label{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254acaedbfda8dbee1f6ab8d296b875dcb07} 
+H\+I\+T\+\_\+\+C\+O\+L\+L\+E\+C\+T\+I\+ON&\\
+\hline
+
+\end{DoxyEnumFields}
 
 
+Definition at line 68 of file Event\+Handler.\+h.
 
-Definition at line 68 of file EventHandler.h.
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_event_handler_a83e36ed405cced9a1dab7414b2e0fe05}{
-\index{DD4hep::EventHandler@{DD4hep::EventHandler}!EventHandler@{EventHandler}}
-\index{EventHandler@{EventHandler}!DD4hep::EventHandler@{DD4hep::EventHandler}}
-\subsubsection[{EventHandler}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::EventHandler::EventHandler ()}}
-\label{class_d_d4hep_1_1_event_handler_a83e36ed405cced9a1dab7414b2e0fe05}
+\hypertarget{class_d_d4hep_1_1_event_handler_a83e36ed405cced9a1dab7414b2e0fe05}{}\label{class_d_d4hep_1_1_event_handler_a83e36ed405cced9a1dab7414b2e0fe05} 
+\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!Event\+Handler@{Event\+Handler}}
+\index{Event\+Handler@{Event\+Handler}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Event\+Handler()}{EventHandler()}}
+{\footnotesize\ttfamily D\+D4hep\+::\+Event\+Handler\+::\+Event\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
-Standard constructor. \hypertarget{class_d_d4hep_1_1_event_handler_a3decb8cd88ba8af2b9b0b0f0f2fcd722}{
-\index{DD4hep::EventHandler@{DD4hep::EventHandler}!$\sim$EventHandler@{$\sim$EventHandler}}
-\index{$\sim$EventHandler@{$\sim$EventHandler}!DD4hep::EventHandler@{DD4hep::EventHandler}}
-\subsubsection[{$\sim$EventHandler}]{\setlength{\rightskip}{0pt plus 5cm}EventHandler::$\sim$EventHandler ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_event_handler_a3decb8cd88ba8af2b9b0b0f0f2fcd722}
+
+Standard constructor. 
+
+\hypertarget{class_d_d4hep_1_1_event_handler_a3decb8cd88ba8af2b9b0b0f0f2fcd722}{}\label{class_d_d4hep_1_1_event_handler_a3decb8cd88ba8af2b9b0b0f0f2fcd722} 
+\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!````~Event\+Handler@{$\sim$\+Event\+Handler}}
+\index{````~Event\+Handler@{$\sim$\+Event\+Handler}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}
+\subsubsection{\texorpdfstring{$\sim$\+Event\+Handler()}{~EventHandler()}}
+{\footnotesize\ttfamily Event\+Handler\+::$\sim$\+Event\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Default destructor. 
 
-Definition at line 28 of file EventHandler.cpp.
+
+
+Definition at line 28 of file Event\+Handler.\+cpp.
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_event_handler_a44c310a4296693f09e62adbac3fbe2c6}{
-\index{DD4hep::EventHandler@{DD4hep::EventHandler}!ClassDef@{ClassDef}}
-\index{ClassDef@{ClassDef}!DD4hep::EventHandler@{DD4hep::EventHandler}}
-\subsubsection[{ClassDef}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::EventHandler::ClassDef ({\bf EventHandler}, \/  0)}}
-\label{class_d_d4hep_1_1_event_handler_a44c310a4296693f09e62adbac3fbe2c6}
+\hypertarget{class_d_d4hep_1_1_event_handler_a44c310a4296693f09e62adbac3fbe2c6}{}\label{class_d_d4hep_1_1_event_handler_a44c310a4296693f09e62adbac3fbe2c6} 
+\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!Class\+Def@{Class\+Def}}
+\index{Class\+Def@{Class\+Def}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Class\+Def()}{ClassDef()}}
+{\footnotesize\ttfamily D\+D4hep\+::\+Event\+Handler\+::\+Class\+Def (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_event_handler}{Event\+Handler}}]{,  }\item[{0}]{ }\end{DoxyParamCaption})}
 
+\hypertarget{class_d_d4hep_1_1_event_handler_a454baeb81b675f3ebd8bb4293064b787}{}\label{class_d_d4hep_1_1_event_handler_a454baeb81b675f3ebd8bb4293064b787} 
+\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!collection\+Loop@{collection\+Loop}}
+\index{collection\+Loop@{collection\+Loop}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}
+\subsubsection{\texorpdfstring{collection\+Loop()}{collectionLoop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual size\+\_\+t D\+D4hep\+::\+Event\+Handler\+::collection\+Loop (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{collection,  }\item[{\hyperlink{struct_d_d4hep_1_1_d_d_eve_hit_actor}{D\+D\+Eve\+Hit\+Actor} \&}]{actor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-Reimplemented in \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a0b89e00baf1f1e9a95f4f31517635e34}{DD4hep::DDG4EventHandler}, and \hyperlink{class_d_d4hep_1_1_generic_event_handler_abbb82b5fc62720e45ed6c2ff03ae526d}{DD4hep::GenericEventHandler}.\hypertarget{class_d_d4hep_1_1_event_handler_ae43595c2760736a7ca628183a2c91ec2}{
-\index{DD4hep::EventHandler@{DD4hep::EventHandler}!collectionLoop@{collectionLoop}}
-\index{collectionLoop@{collectionLoop}!DD4hep::EventHandler@{DD4hep::EventHandler}}
-\subsubsection[{collectionLoop}]{\setlength{\rightskip}{0pt plus 5cm}virtual size\_\-t DD4hep::EventHandler::collectionLoop (const std::string \& {\em collection}, \/  {\bf DDEveParticleActor} \& {\em actor})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_event_handler_ae43595c2760736a7ca628183a2c91ec2}
-
-
-Loop over collection and extract particle data. 
-
-Implemented in \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a9f45863ae9406f8d5ec1d309321c50d6}{DD4hep::DDG4EventHandler}, \hyperlink{class_d_d4hep_1_1_generic_event_handler_a401b32a86d996b71baa133c4f4b00709}{DD4hep::GenericEventHandler}, and \hyperlink{class_d_d4hep_1_1_l_c_i_o_event_handler_aa741ce2b60b3eddd4ddeb1fba6197a86}{DD4hep::LCIOEventHandler}.\hypertarget{class_d_d4hep_1_1_event_handler_a454baeb81b675f3ebd8bb4293064b787}{
-\index{DD4hep::EventHandler@{DD4hep::EventHandler}!collectionLoop@{collectionLoop}}
-\index{collectionLoop@{collectionLoop}!DD4hep::EventHandler@{DD4hep::EventHandler}}
-\subsubsection[{collectionLoop}]{\setlength{\rightskip}{0pt plus 5cm}virtual size\_\-t DD4hep::EventHandler::collectionLoop (const std::string \& {\em collection}, \/  {\bf DDEveHitActor} \& {\em actor})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_event_handler_a454baeb81b675f3ebd8bb4293064b787}
 
 
 Loop over collection and extract hit data. 
 
-Implemented in \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a65645df58f694dea050f7d57d353dff4}{DD4hep::DDG4EventHandler}, \hyperlink{class_d_d4hep_1_1_generic_event_handler_ad521db17296b0abb05294f61f83b2019}{DD4hep::GenericEventHandler}, and \hyperlink{class_d_d4hep_1_1_l_c_i_o_event_handler_adbb8d55fec6962d692f19730fc5224fb}{DD4hep::LCIOEventHandler}.
 
-Referenced by DD4hep::Display::OnNewEvent().\hypertarget{class_d_d4hep_1_1_event_handler_a8424ffc2056b0e23d69c81ab2496cd51}{
-\index{DD4hep::EventHandler@{DD4hep::EventHandler}!collectionType@{collectionType}}
-\index{collectionType@{collectionType}!DD4hep::EventHandler@{DD4hep::EventHandler}}
-\subsubsection[{collectionType}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf CollectionType} DD4hep::EventHandler::collectionType (const std::string \& {\em collection}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_event_handler_a8424ffc2056b0e23d69c81ab2496cd51}
+
+Implemented in \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a65645df58f694dea050f7d57d353dff4}{D\+D4hep\+::\+D\+D\+G4\+Event\+Handler}, \hyperlink{class_d_d4hep_1_1_l_c_i_o_event_handler_adbb8d55fec6962d692f19730fc5224fb}{D\+D4hep\+::\+L\+C\+I\+O\+Event\+Handler}, and \hyperlink{class_d_d4hep_1_1_generic_event_handler_a1186d6415d8d7e01f51993e204d5931f}{D\+D4hep\+::\+Generic\+Event\+Handler}.
+
+
+
+Referenced by D\+D4hep\+::\+Display\+::\+On\+New\+Event().
+
+\hypertarget{class_d_d4hep_1_1_event_handler_ae43595c2760736a7ca628183a2c91ec2}{}\label{class_d_d4hep_1_1_event_handler_ae43595c2760736a7ca628183a2c91ec2} 
+\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!collection\+Loop@{collection\+Loop}}
+\index{collection\+Loop@{collection\+Loop}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}
+\subsubsection{\texorpdfstring{collection\+Loop()}{collectionLoop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual size\+\_\+t D\+D4hep\+::\+Event\+Handler\+::collection\+Loop (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{collection,  }\item[{\hyperlink{struct_d_d4hep_1_1_d_d_eve_particle_actor}{D\+D\+Eve\+Particle\+Actor} \&}]{actor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Loop over collection and extract particle data. 
+
+
+
+Implemented in \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a9f45863ae9406f8d5ec1d309321c50d6}{D\+D4hep\+::\+D\+D\+G4\+Event\+Handler}, \hyperlink{class_d_d4hep_1_1_l_c_i_o_event_handler_aa741ce2b60b3eddd4ddeb1fba6197a86}{D\+D4hep\+::\+L\+C\+I\+O\+Event\+Handler}, and \hyperlink{class_d_d4hep_1_1_generic_event_handler_aa733b6de00ba09d05b2c4e33b0cd3232}{D\+D4hep\+::\+Generic\+Event\+Handler}.
+
+\hypertarget{class_d_d4hep_1_1_event_handler_a8424ffc2056b0e23d69c81ab2496cd51}{}\label{class_d_d4hep_1_1_event_handler_a8424ffc2056b0e23d69c81ab2496cd51} 
+\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!collection\+Type@{collection\+Type}}
+\index{collection\+Type@{collection\+Type}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}
+\subsubsection{\texorpdfstring{collection\+Type()}{collectionType()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_d_d4hep_1_1_event_handler_a0b22a141a019364495835317fad48254}{Collection\+Type} D\+D4hep\+::\+Event\+Handler\+::collection\+Type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{collection }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
 
 
 Access to the collection type by name. 
 
-Implemented in \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a598b723bc7b7783532343403d6b91ff2}{DD4hep::DDG4EventHandler}, \hyperlink{class_d_d4hep_1_1_generic_event_handler_ae0471fce8b637f5825d3dab70537bdcd}{DD4hep::GenericEventHandler}, and \hyperlink{class_d_d4hep_1_1_l_c_i_o_event_handler_a1bcb144db3e2bb4b5cfe9d54a6824211}{DD4hep::LCIOEventHandler}.
 
-Referenced by DD4hep::Display::OnNewEvent().\hypertarget{class_d_d4hep_1_1_event_handler_a263d136331d72994bcbf537d4aa16d4f}{
-\index{DD4hep::EventHandler@{DD4hep::EventHandler}!data@{data}}
-\index{data@{data}!DD4hep::EventHandler@{DD4hep::EventHandler}}
-\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf TypedEventCollections}\& DD4hep::EventHandler::data () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_event_handler_a263d136331d72994bcbf537d4aa16d4f}
+
+Implemented in \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_acc51cf7d3b3b338c6f5ae1f75582f708}{D\+D4hep\+::\+D\+D\+G4\+Event\+Handler}, \hyperlink{class_d_d4hep_1_1_l_c_i_o_event_handler_a7c3518a706040840f32c6f1323b2b8ca}{D\+D4hep\+::\+L\+C\+I\+O\+Event\+Handler}, and \hyperlink{class_d_d4hep_1_1_generic_event_handler_aeb30b8fc7e8e850fa7472fc70443b817}{D\+D4hep\+::\+Generic\+Event\+Handler}.
+
+
+
+Referenced by D\+D4hep\+::\+Display\+::\+On\+New\+Event().
+
+\hypertarget{class_d_d4hep_1_1_event_handler_a263d136331d72994bcbf537d4aa16d4f}{}\label{class_d_d4hep_1_1_event_handler_a263d136331d72994bcbf537d4aa16d4f} 
+\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!data@{data}}
+\index{data@{data}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}
+\subsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily virtual const \hyperlink{class_d_d4hep_1_1_event_handler_a4d441ff8a824b1e2f278e8b7a6391af3}{Typed\+Event\+Collections}\& D\+D4hep\+::\+Event\+Handler\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
 
 
 Access the map of simulation data collections. 
 
-Implemented in \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a066893cdf431bef4b398b58624aab22c}{DD4hep::DDG4EventHandler}, \hyperlink{class_d_d4hep_1_1_generic_event_handler_aa1e4452bde1823d4592d4c61f6a62fcc}{DD4hep::GenericEventHandler}, and \hyperlink{class_d_d4hep_1_1_l_c_i_o_event_handler_a7118606d31e1a2a3b988af04a6dbcc2d}{DD4hep::LCIOEventHandler}.
 
-Referenced by DD4hep::GenericEventHandler::data(), DD4hep::EventControl::OnNewEvent(), and DD4hep::Display::OnNewEvent().\hypertarget{class_d_d4hep_1_1_event_handler_a5fa231363a787ba7edf520b5a99f294e}{
-\index{DD4hep::EventHandler@{DD4hep::EventHandler}!datasourceName@{datasourceName}}
-\index{datasourceName@{datasourceName}!DD4hep::EventHandler@{DD4hep::EventHandler}}
-\subsubsection[{datasourceName}]{\setlength{\rightskip}{0pt plus 5cm}virtual std::string DD4hep::EventHandler::datasourceName () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_event_handler_a5fa231363a787ba7edf520b5a99f294e}
+
+Implemented in \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_aca1f9d6fca9322b89815c68529fac540}{D\+D4hep\+::\+D\+D\+G4\+Event\+Handler}, \hyperlink{class_d_d4hep_1_1_l_c_i_o_event_handler_af024dd8d16f2b4b686aa83708451522f}{D\+D4hep\+::\+L\+C\+I\+O\+Event\+Handler}, and \hyperlink{class_d_d4hep_1_1_generic_event_handler_ad4d0029a1db989c61a3bbb72f299f12e}{D\+D4hep\+::\+Generic\+Event\+Handler}.
+
+
+
+Referenced by D\+D4hep\+::\+Generic\+Event\+Handler\+::data(), D\+D4hep\+::\+Event\+Control\+::\+On\+New\+Event(), and D\+D4hep\+::\+Display\+::\+On\+New\+Event().
+
+\hypertarget{class_d_d4hep_1_1_event_handler_a5fa231363a787ba7edf520b5a99f294e}{}\label{class_d_d4hep_1_1_event_handler_a5fa231363a787ba7edf520b5a99f294e} 
+\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!datasource\+Name@{datasource\+Name}}
+\index{datasource\+Name@{datasource\+Name}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}
+\subsubsection{\texorpdfstring{datasource\+Name()}{datasourceName()}}
+{\footnotesize\ttfamily virtual std\+::string D\+D4hep\+::\+Event\+Handler\+::datasource\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
 
 
 Access the data source name. 
 
-Implemented in \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_ab5f21b250f691a4dae9b1a1deca61440}{DD4hep::DDG4EventHandler}, \hyperlink{class_d_d4hep_1_1_generic_event_handler_a9049182126476c4af50c72d15c120471}{DD4hep::GenericEventHandler}, and \hyperlink{class_d_d4hep_1_1_l_c_i_o_event_handler_a5be4ec13eea78675737c710f6505ac33}{DD4hep::LCIOEventHandler}.
 
-Referenced by DD4hep::GenericEventHandler::datasourceName(), and DD4hep::EventControl::OnFileOpen().\hypertarget{class_d_d4hep_1_1_event_handler_a09c40b0b753455c1e3df7c561ff6b069}{
-\index{DD4hep::EventHandler@{DD4hep::EventHandler}!GotoEvent@{GotoEvent}}
-\index{GotoEvent@{GotoEvent}!DD4hep::EventHandler@{DD4hep::EventHandler}}
-\subsubsection[{GotoEvent}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool DD4hep::EventHandler::GotoEvent (long {\em event\_\-number})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_event_handler_a09c40b0b753455c1e3df7c561ff6b069}
+
+Implemented in \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a8447b4fc24290d4f1539fbda65a0cbf3}{D\+D4hep\+::\+D\+D\+G4\+Event\+Handler}, \hyperlink{class_d_d4hep_1_1_l_c_i_o_event_handler_ace6d753b27597445ebfe9e77f1c1afcf}{D\+D4hep\+::\+L\+C\+I\+O\+Event\+Handler}, and \hyperlink{class_d_d4hep_1_1_generic_event_handler_a3d99aeaf1bcd8aa421ecab3bcf5fabe0}{D\+D4hep\+::\+Generic\+Event\+Handler}.
+
+
+
+Referenced by D\+D4hep\+::\+Event\+Control\+::\+On\+File\+Open().
+
+\hypertarget{class_d_d4hep_1_1_event_handler_a09c40b0b753455c1e3df7c561ff6b069}{}\label{class_d_d4hep_1_1_event_handler_a09c40b0b753455c1e3df7c561ff6b069} 
+\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!Goto\+Event@{Goto\+Event}}
+\index{Goto\+Event@{Goto\+Event}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Goto\+Event()}{GotoEvent()}}
+{\footnotesize\ttfamily virtual bool D\+D4hep\+::\+Event\+Handler\+::\+Goto\+Event (\begin{DoxyParamCaption}\item[{long}]{event\+\_\+number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
 
 
 Goto a specified event in the file. 
 
-Implemented in \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a3af4cf3191fabf450e81812e93d2502a}{DD4hep::DDG4EventHandler}, \hyperlink{class_d_d4hep_1_1_generic_event_handler_a7a7c4d1592e5b2d467a426058aa1a44b}{DD4hep::GenericEventHandler}, and \hyperlink{class_d_d4hep_1_1_l_c_i_o_event_handler_af7089e4660ace0f0a4da544bb39660e5}{DD4hep::LCIOEventHandler}.\hypertarget{class_d_d4hep_1_1_event_handler_a43ded5dfb592a8119aee05f07ca7a95b}{
-\index{DD4hep::EventHandler@{DD4hep::EventHandler}!hasEvent@{hasEvent}}
-\index{hasEvent@{hasEvent}!DD4hep::EventHandler@{DD4hep::EventHandler}}
-\subsubsection[{hasEvent}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool DD4hep::EventHandler::hasEvent () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_event_handler_a43ded5dfb592a8119aee05f07ca7a95b}
+
+
+Implemented in \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a3af4cf3191fabf450e81812e93d2502a}{D\+D4hep\+::\+D\+D\+G4\+Event\+Handler}, \hyperlink{class_d_d4hep_1_1_l_c_i_o_event_handler_af7089e4660ace0f0a4da544bb39660e5}{D\+D4hep\+::\+L\+C\+I\+O\+Event\+Handler}, and \hyperlink{class_d_d4hep_1_1_generic_event_handler_a7a7c4d1592e5b2d467a426058aa1a44b}{D\+D4hep\+::\+Generic\+Event\+Handler}.
+
+\hypertarget{class_d_d4hep_1_1_event_handler_ad07cc15bff3dc3fc70cf37d2deefe3b7}{}\label{class_d_d4hep_1_1_event_handler_ad07cc15bff3dc3fc70cf37d2deefe3b7} 
+\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!has\+Event@{has\+Event}}
+\index{has\+Event@{has\+Event}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}
+\subsubsection{\texorpdfstring{has\+Event()}{hasEvent()}}
+{\footnotesize\ttfamily virtual bool D\+D4hep\+::\+Event\+Handler\+::has\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 Check if an event is present in memory. 
 
-Definition at line 92 of file EventHandler.h.
 
-References m\_\-hasEvent.\hypertarget{class_d_d4hep_1_1_event_handler_ab1c6611119a3c90bd83bb3bc41159498}{
-\index{DD4hep::EventHandler@{DD4hep::EventHandler}!hasFile@{hasFile}}
-\index{hasFile@{hasFile}!DD4hep::EventHandler@{DD4hep::EventHandler}}
-\subsubsection[{hasFile}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool DD4hep::EventHandler::hasFile () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_event_handler_ab1c6611119a3c90bd83bb3bc41159498}
+
+Definition at line 92 of file Event\+Handler.\+h.
+
+\hypertarget{class_d_d4hep_1_1_event_handler_a13bdcc68a401f6f2a9b855c4bc4beb11}{}\label{class_d_d4hep_1_1_event_handler_a13bdcc68a401f6f2a9b855c4bc4beb11} 
+\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!has\+File@{has\+File}}
+\index{has\+File@{has\+File}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}
+\subsubsection{\texorpdfstring{has\+File()}{hasFile()}}
+{\footnotesize\ttfamily virtual bool D\+D4hep\+::\+Event\+Handler\+::has\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 Check if a data file is connected to the handler. 
 
-Definition at line 94 of file EventHandler.h.
 
-References m\_\-hasFile.
 
-Referenced by DD4hep::DDG4EventHandler::datasourceName(), DD4hep::LCIOEventHandler::datasourceName(), DD4hep::LCIOEventHandler::NextEvent(), DD4hep::DDG4EventHandler::numEvents(), DD4hep::LCIOEventHandler::numEvents(), DD4hep::EventControl::OnBuild(), DD4hep::EventControl::OnFileOpen(), and DD4hep::DDG4EventHandler::ReadEvent().\hypertarget{class_d_d4hep_1_1_event_handler_ac2360791d3a44f4cef0987f9a7ec51ce}{
-\index{DD4hep::EventHandler@{DD4hep::EventHandler}!NextEvent@{NextEvent}}
-\index{NextEvent@{NextEvent}!DD4hep::EventHandler@{DD4hep::EventHandler}}
-\subsubsection[{NextEvent}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool DD4hep::EventHandler::NextEvent ()\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_event_handler_ac2360791d3a44f4cef0987f9a7ec51ce}
+Definition at line 94 of file Event\+Handler.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+L\+C\+I\+O\+Event\+Handler\+::datasource\+Name(), and D\+D4hep\+::\+Event\+Control\+::\+On\+File\+Open().
+
+\hypertarget{class_d_d4hep_1_1_event_handler_ac2360791d3a44f4cef0987f9a7ec51ce}{}\label{class_d_d4hep_1_1_event_handler_ac2360791d3a44f4cef0987f9a7ec51ce} 
+\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!Next\+Event@{Next\+Event}}
+\index{Next\+Event@{Next\+Event}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Next\+Event()}{NextEvent()}}
+{\footnotesize\ttfamily virtual bool D\+D4hep\+::\+Event\+Handler\+::\+Next\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
 
 
 Load the next event. 
 
-Implemented in \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a02ecd0dfced58988ab84242cb9fdfd44}{DD4hep::DDG4EventHandler}, \hyperlink{class_d_d4hep_1_1_generic_event_handler_a0dc8d4d5dde63d3278f67da79e86b590}{DD4hep::GenericEventHandler}, and \hyperlink{class_d_d4hep_1_1_l_c_i_o_event_handler_a14966ef5f33d58b1f0f3b952a334d48f}{DD4hep::LCIOEventHandler}.\hypertarget{class_d_d4hep_1_1_event_handler_a005436bba029439b513645485e3c0ff5}{
-\index{DD4hep::EventHandler@{DD4hep::EventHandler}!numEvents@{numEvents}}
-\index{numEvents@{numEvents}!DD4hep::EventHandler@{DD4hep::EventHandler}}
-\subsubsection[{numEvents}]{\setlength{\rightskip}{0pt plus 5cm}virtual long DD4hep::EventHandler::numEvents () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_event_handler_a005436bba029439b513645485e3c0ff5}
 
 
-Access the number of events on the current input data source (-\/1 if no data source connected). 
+Implemented in \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a02ecd0dfced58988ab84242cb9fdfd44}{D\+D4hep\+::\+D\+D\+G4\+Event\+Handler}, \hyperlink{class_d_d4hep_1_1_l_c_i_o_event_handler_a14966ef5f33d58b1f0f3b952a334d48f}{D\+D4hep\+::\+L\+C\+I\+O\+Event\+Handler}, and \hyperlink{class_d_d4hep_1_1_generic_event_handler_a0dc8d4d5dde63d3278f67da79e86b590}{D\+D4hep\+::\+Generic\+Event\+Handler}.
 
-Implemented in \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a0c0858e77b1bb47621738694c31d5ed6}{DD4hep::DDG4EventHandler}, \hyperlink{class_d_d4hep_1_1_generic_event_handler_a48f6771f5f90bd353e7b242f247a91cb}{DD4hep::GenericEventHandler}, and \hyperlink{class_d_d4hep_1_1_l_c_i_o_event_handler_a922a7d225b2e0944c850965f9983758f}{DD4hep::LCIOEventHandler}.
+\hypertarget{class_d_d4hep_1_1_event_handler_a005436bba029439b513645485e3c0ff5}{}\label{class_d_d4hep_1_1_event_handler_a005436bba029439b513645485e3c0ff5} 
+\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!num\+Events@{num\+Events}}
+\index{num\+Events@{num\+Events}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}
+\subsubsection{\texorpdfstring{num\+Events()}{numEvents()}}
+{\footnotesize\ttfamily virtual long D\+D4hep\+::\+Event\+Handler\+::num\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-Referenced by DD4hep::GenericEventHandler::numEvents(), and DD4hep::EventControl::OnFileOpen().\hypertarget{class_d_d4hep_1_1_event_handler_a90995d3b610beee9d9f7fafcc060626b}{
-\index{DD4hep::EventHandler@{DD4hep::EventHandler}!Open@{Open}}
-\index{Open@{Open}!DD4hep::EventHandler@{DD4hep::EventHandler}}
-\subsubsection[{Open}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool DD4hep::EventHandler::Open (const std::string \& {\em type}, \/  const std::string \& {\em file\_\-name})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_event_handler_a90995d3b610beee9d9f7fafcc060626b}
+
+
+Access the number of events on the current input data source (-\/1 if no data source connected) 
+
+
+
+Implemented in \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_af8ae7a5a68752fa17aa83ab9f0a952fe}{D\+D4hep\+::\+D\+D\+G4\+Event\+Handler}, \hyperlink{class_d_d4hep_1_1_l_c_i_o_event_handler_a9fb0b8033c171dc3a41eab1a439547e8}{D\+D4hep\+::\+L\+C\+I\+O\+Event\+Handler}, and \hyperlink{class_d_d4hep_1_1_generic_event_handler_a05d0623b58211c6d941aea1377771a2b}{D\+D4hep\+::\+Generic\+Event\+Handler}.
+
+
+
+Referenced by D\+D4hep\+::\+Event\+Control\+::\+On\+File\+Open().
+
+\hypertarget{class_d_d4hep_1_1_event_handler_a90995d3b610beee9d9f7fafcc060626b}{}\label{class_d_d4hep_1_1_event_handler_a90995d3b610beee9d9f7fafcc060626b} 
+\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!Open@{Open}}
+\index{Open@{Open}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Open()}{Open()}}
+{\footnotesize\ttfamily virtual bool D\+D4hep\+::\+Event\+Handler\+::\+Open (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type,  }\item[{const std\+::string \&}]{file\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
 
 
 Open a new event data file. 
 
-Implemented in \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a110e487b2813985f56058382357f0754}{DD4hep::DDG4EventHandler}, \hyperlink{class_d_d4hep_1_1_generic_event_handler_a2ad81c03ef6feac9bf399ccd5928da41}{DD4hep::GenericEventHandler}, and \hyperlink{class_d_d4hep_1_1_l_c_i_o_event_handler_a67214b5a7675de7d634ac7c1d0cd2c7c}{DD4hep::LCIOEventHandler}.\hypertarget{class_d_d4hep_1_1_event_handler_a0942608bebbdd107c9dedbdc7311791f}{
-\index{DD4hep::EventHandler@{DD4hep::EventHandler}!PreviousEvent@{PreviousEvent}}
-\index{PreviousEvent@{PreviousEvent}!DD4hep::EventHandler@{DD4hep::EventHandler}}
-\subsubsection[{PreviousEvent}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool DD4hep::EventHandler::PreviousEvent ()\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_event_handler_a0942608bebbdd107c9dedbdc7311791f}
 
 
-User overloadable function: Load the previous event. 
+Implemented in \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a110e487b2813985f56058382357f0754}{D\+D4hep\+::\+D\+D\+G4\+Event\+Handler}, \hyperlink{class_d_d4hep_1_1_l_c_i_o_event_handler_a67214b5a7675de7d634ac7c1d0cd2c7c}{D\+D4hep\+::\+L\+C\+I\+O\+Event\+Handler}, and \hyperlink{class_d_d4hep_1_1_generic_event_handler_ab1a4e53010cf2aafdef02f8ceafc6ef0}{D\+D4hep\+::\+Generic\+Event\+Handler}.
 
-Implemented in \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a20cafa8eac655886d4a3d69338e7e947}{DD4hep::DDG4EventHandler}, \hyperlink{class_d_d4hep_1_1_generic_event_handler_a4b833d9537c7c29b0bfb0d567f98d0a3}{DD4hep::GenericEventHandler}, and \hyperlink{class_d_d4hep_1_1_l_c_i_o_event_handler_a178458d67dd58d3f5d701795fcadcd2e}{DD4hep::LCIOEventHandler}.
+\hypertarget{class_d_d4hep_1_1_event_handler_a0942608bebbdd107c9dedbdc7311791f}{}\label{class_d_d4hep_1_1_event_handler_a0942608bebbdd107c9dedbdc7311791f} 
+\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!Previous\+Event@{Previous\+Event}}
+\index{Previous\+Event@{Previous\+Event}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Previous\+Event()}{PreviousEvent()}}
+{\footnotesize\ttfamily virtual bool D\+D4hep\+::\+Event\+Handler\+::\+Previous\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+User overloadable function\+: Load the previous event. 
+
+
+
+Implemented in \hyperlink{class_d_d4hep_1_1_d_d_g4_event_handler_a20cafa8eac655886d4a3d69338e7e947}{D\+D4hep\+::\+D\+D\+G4\+Event\+Handler}, \hyperlink{class_d_d4hep_1_1_l_c_i_o_event_handler_a178458d67dd58d3f5d701795fcadcd2e}{D\+D4hep\+::\+L\+C\+I\+O\+Event\+Handler}, and \hyperlink{class_d_d4hep_1_1_generic_event_handler_a4b833d9537c7c29b0bfb0d567f98d0a3}{D\+D4hep\+::\+Generic\+Event\+Handler}.
+
+
 
 \subsection{Member Data Documentation}
-\hypertarget{class_d_d4hep_1_1_event_handler_adccb4980638cdc1ed7792ae8583f1370}{
-\index{DD4hep::EventHandler@{DD4hep::EventHandler}!m\_\-hasEvent@{m\_\-hasEvent}}
-\index{m\_\-hasEvent@{m\_\-hasEvent}!DD4hep::EventHandler@{DD4hep::EventHandler}}
-\subsubsection[{m\_\-hasEvent}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf DD4hep::EventHandler::m\_\-hasEvent}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_event_handler_adccb4980638cdc1ed7792ae8583f1370}
+\hypertarget{class_d_d4hep_1_1_event_handler_adccb4980638cdc1ed7792ae8583f1370}{}\label{class_d_d4hep_1_1_event_handler_adccb4980638cdc1ed7792ae8583f1370} 
+\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!m\+\_\+has\+Event@{m\+\_\+has\+Event}}
+\index{m\+\_\+has\+Event@{m\+\_\+has\+Event}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}
+\subsubsection{\texorpdfstring{m\+\_\+has\+Event}{m\_hasEvent}}
+{\footnotesize\ttfamily bool D\+D4hep\+::\+Event\+Handler\+::m\+\_\+has\+Event\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Flag to indicate that an event is loaded. 
 
-Definition at line 85 of file EventHandler.h.
 
-Referenced by DD4hep::GenericEventHandler::GotoEvent(), hasEvent(), DD4hep::GenericEventHandler::NextEvent(), DD4hep::LCIOEventHandler::NextEvent(), DD4hep::DDG4EventHandler::Open(), DD4hep::LCIOEventHandler::Open(), DD4hep::GenericEventHandler::PreviousEvent(), and DD4hep::DDG4EventHandler::ReadEvent().\hypertarget{class_d_d4hep_1_1_event_handler_acfb701f8f671fe75df92d46d846613d5}{
-\index{DD4hep::EventHandler@{DD4hep::EventHandler}!m\_\-hasFile@{m\_\-hasFile}}
-\index{m\_\-hasFile@{m\_\-hasFile}!DD4hep::EventHandler@{DD4hep::EventHandler}}
-\subsubsection[{m\_\-hasFile}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf DD4hep::EventHandler::m\_\-hasFile}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_event_handler_acfb701f8f671fe75df92d46d846613d5}
+
+Definition at line 85 of file Event\+Handler.\+h.
+
+\hypertarget{class_d_d4hep_1_1_event_handler_acfb701f8f671fe75df92d46d846613d5}{}\label{class_d_d4hep_1_1_event_handler_acfb701f8f671fe75df92d46d846613d5} 
+\index{D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}!m\+\_\+has\+File@{m\+\_\+has\+File}}
+\index{m\+\_\+has\+File@{m\+\_\+has\+File}!D\+D4hep\+::\+Event\+Handler@{D\+D4hep\+::\+Event\+Handler}}
+\subsubsection{\texorpdfstring{m\+\_\+has\+File}{m\_hasFile}}
+{\footnotesize\ttfamily bool D\+D4hep\+::\+Event\+Handler\+::m\+\_\+has\+File\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Flag to indicate that a file is opened. 
 
-Definition at line 83 of file EventHandler.h.
 
-Referenced by DD4hep::GenericEventHandler::GotoEvent(), hasFile(), DD4hep::GenericEventHandler::NextEvent(), DD4hep::DDG4EventHandler::Open(), DD4hep::LCIOEventHandler::Open(), and DD4hep::GenericEventHandler::PreviousEvent().
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+Definition at line 83 of file Event\+Handler.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDEve/include/DDEve/\hyperlink{_event_handler_8h}{EventHandler.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDEve/src/\hyperlink{_event_handler_8cpp}{EventHandler.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Eve/include/\+D\+D\+Eve/\hyperlink{_event_handler_8h}{Event\+Handler.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Eve/src/\hyperlink{_event_handler_8cpp}{Event\+Handler.\+cpp}\end{DoxyCompactItemize}

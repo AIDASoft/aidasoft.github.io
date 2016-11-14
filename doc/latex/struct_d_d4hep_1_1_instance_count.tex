@@ -1,311 +1,447 @@
-\hypertarget{struct_d_d4hep_1_1_instance_count}{
-\section{DD4hep::InstanceCount Struct Reference}
-\label{struct_d_d4hep_1_1_instance_count}\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}}
-}
+\hypertarget{struct_d_d4hep_1_1_instance_count}{}\section{D\+D4hep\+:\+:Instance\+Count Struct Reference}
+\label{struct_d_d4hep_1_1_instance_count}\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}
 
 
 Helper to support object counting when debugging memory leaks.  
 
 
-{\ttfamily \#include $<$InstanceCount.h$>$}\subsection*{Classes}
+
+
+{\ttfamily \#include $<$Instance\+Count.\+h$>$}
+
+\subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 class \hyperlink{class_d_d4hep_1_1_instance_count_1_1_counter}{Counter}
-\begin{DoxyCompactList}\small\item\em Internal class to could object constructions and destructions. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Internal class to could object constructions and destructions. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \{ \hyperlink{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca7ef09dfc0136f6756ab56b221b86115a}{NONE} =  1 $<$$<$ 0, 
-\hyperlink{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca62f53809ed03b36e645549bc7da959d3}{STRING} =  1 $<$$<$ 1, 
-\hyperlink{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca87ab47dcf03aaa78096e84a187544373}{TYPEINFO} =  1 $<$$<$ 2, 
-\hyperlink{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca948324c1e49c9a310b45c9f681b381a8}{ALL} =  STRING $|$ TYPEINFO
- \}
-\begin{DoxyCompactList}\small\item\em Enumeration to steer the output. \item\end{DoxyCompactList}\item 
-typedef long long int \hyperlink{struct_d_d4hep_1_1_instance_count_ae81dc0c76b135425e14b6dc38262a727}{counter\_\-t}
+enum \{ \hyperlink{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca7ef09dfc0136f6756ab56b221b86115a}{N\+O\+NE} = 1 $<$$<$ 0, 
+\hyperlink{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca62f53809ed03b36e645549bc7da959d3}{S\+T\+R\+I\+NG} = 1 $<$$<$ 1, 
+\hyperlink{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca87ab47dcf03aaa78096e84a187544373}{T\+Y\+P\+E\+I\+N\+FO} = 1 $<$$<$ 2, 
+\hyperlink{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca948324c1e49c9a310b45c9f681b381a8}{A\+LL} = S\+T\+R\+I\+NG $\vert$ T\+Y\+P\+E\+I\+N\+FO
+ \}\begin{DoxyCompactList}\small\item\em Enumeration to steer the output. \end{DoxyCompactList}
+\item 
+typedef long long int \hyperlink{struct_d_d4hep_1_1_instance_count_ae81dc0c76b135425e14b6dc38262a727}{counter\+\_\+t}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{struct_d_d4hep_1_1_instance_count_aa543483ba37302ae1a2059eceb12c798}{InstanceCount} ()
-\begin{DoxyCompactList}\small\item\em Standard Constructor -\/ No need to call explicitly. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{struct_d_d4hep_1_1_instance_count_a7d9ff65ecca8d6024f7275ea93058ad7}{$\sim$InstanceCount} ()
-\begin{DoxyCompactList}\small\item\em Standard Destructor -\/ No need to call explicitly. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{struct_d_d4hep_1_1_instance_count_aa543483ba37302ae1a2059eceb12c798}{Instance\+Count} ()
+\begin{DoxyCompactList}\small\item\em Standard Constructor -\/ No need to call explicitly. \end{DoxyCompactList}\item 
+virtual \hyperlink{struct_d_d4hep_1_1_instance_count_a7d9ff65ecca8d6024f7275ea93058ad7}{$\sim$\+Instance\+Count} ()
+\begin{DoxyCompactList}\small\item\em Standard Destructor -\/ No need to call explicitly. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \hyperlink{class_d_d4hep_1_1_instance_count_1_1_counter}{Counter} $\ast$ \hyperlink{struct_d_d4hep_1_1_instance_count_a439db48975fe6b4e193a7ff40bc96bc6}{getCounter} (const std::type\_\-info \&typ)
-\begin{DoxyCompactList}\small\item\em Access counter object for local caching on optimizations. \item\end{DoxyCompactList}\item 
-static \hyperlink{class_d_d4hep_1_1_instance_count_1_1_counter}{Counter} $\ast$ \hyperlink{struct_d_d4hep_1_1_instance_count_ace5ceb5f2e95cb4c2a48cbd9edc3e84c}{getCounter} (const std::string \&typ)
-\begin{DoxyCompactList}\small\item\em Access counter object for local caching on optimizations. \item\end{DoxyCompactList}\item 
-{\footnotesize template$<$class T $>$ }\\static void \hyperlink{struct_d_d4hep_1_1_instance_count_aff4313ae357c0c3bcf3ce210eee4c470}{increment} (\hyperlink{class_t}{T} $\ast$)
-\begin{DoxyCompactList}\small\item\em \hyperlink{struct_d_d4hep_1_1_increment}{Increment} count according to type information. \item\end{DoxyCompactList}\item 
-{\footnotesize template$<$class T $>$ }\\static void \hyperlink{struct_d_d4hep_1_1_instance_count_a13975237d7100dab59a87dec2f67dc73}{decrement} (\hyperlink{class_t}{T} $\ast$)
-\begin{DoxyCompactList}\small\item\em Decrement count according to type information. \item\end{DoxyCompactList}\item 
-{\footnotesize template$<$class T $>$ }\\static \hyperlink{struct_d_d4hep_1_1_instance_count_ae81dc0c76b135425e14b6dc38262a727}{counter\_\-t} \hyperlink{struct_d_d4hep_1_1_instance_count_afe779df8d58ccb3292c1011b869608bd}{get} (\hyperlink{class_t}{T} $\ast$)
-\begin{DoxyCompactList}\small\item\em Access current counter. \item\end{DoxyCompactList}\item 
-static void \hyperlink{struct_d_d4hep_1_1_instance_count_a615e3109fee2bdd67d047d4decca1c0f}{increment} (const std::type\_\-info \&typ)
-\begin{DoxyCompactList}\small\item\em \hyperlink{struct_d_d4hep_1_1_increment}{Increment} count according to type information. \item\end{DoxyCompactList}\item 
-static void \hyperlink{struct_d_d4hep_1_1_instance_count_a99ffc259c76fc693c83e8cc493ace1f6}{decrement} (const std::type\_\-info \&typ)
-\begin{DoxyCompactList}\small\item\em Decrement count according to type information. \item\end{DoxyCompactList}\item 
-static \hyperlink{struct_d_d4hep_1_1_instance_count_ae81dc0c76b135425e14b6dc38262a727}{counter\_\-t} \hyperlink{struct_d_d4hep_1_1_instance_count_a1b6de9faa3cda69498c13c07ea0f289c}{get} (const std::type\_\-info \&typ)
-\begin{DoxyCompactList}\small\item\em Access current counter. \item\end{DoxyCompactList}\item 
-static void \hyperlink{struct_d_d4hep_1_1_instance_count_a2a6c1324b3462dcd26a7916d6b1ece46}{increment} (const std::string \&typ)
-\begin{DoxyCompactList}\small\item\em \hyperlink{struct_d_d4hep_1_1_increment}{Increment} count according to string information. \item\end{DoxyCompactList}\item 
-static void \hyperlink{struct_d_d4hep_1_1_instance_count_a5c0cdd835f58abbd7f1d54069b5f04b2}{decrement} (const std::string \&typ)
-\begin{DoxyCompactList}\small\item\em Decrement count according to string information. \item\end{DoxyCompactList}\item 
-static \hyperlink{struct_d_d4hep_1_1_instance_count_ae81dc0c76b135425e14b6dc38262a727}{counter\_\-t} \hyperlink{struct_d_d4hep_1_1_instance_count_aecb1277df454b018fc8144635c3dcb24}{get} (const std::string \&typ)
-\begin{DoxyCompactList}\small\item\em Access current counter. \item\end{DoxyCompactList}\item 
-static void \hyperlink{struct_d_d4hep_1_1_instance_count_ae9cc6db5c9117d6451a3d817c55af8c1}{dump} (int which=ALL)
-\begin{DoxyCompactList}\small\item\em Dump list of instance counters. \item\end{DoxyCompactList}\item 
-static void \hyperlink{struct_d_d4hep_1_1_instance_count_a94bb311b134800236d5be147df616072}{clear} (int which=ALL)
-\begin{DoxyCompactList}\small\item\em Clear list of instance counters. \item\end{DoxyCompactList}\item 
-static bool \hyperlink{struct_d_d4hep_1_1_instance_count_afa4f90d11074c40ba3bde59bb5c59785}{doTrace} ()
-\begin{DoxyCompactList}\small\item\em Check if tracing is enabled. \item\end{DoxyCompactList}\item 
-static void \hyperlink{struct_d_d4hep_1_1_instance_count_a12dd0a7dd1f4a64ef784dec2eda4b96a}{doTracing} (bool value)
-\begin{DoxyCompactList}\small\item\em Enable/Disable tracing. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+static \hyperlink{class_d_d4hep_1_1_instance_count_1_1_counter}{Counter} $\ast$ \hyperlink{struct_d_d4hep_1_1_instance_count_a439db48975fe6b4e193a7ff40bc96bc6}{get\+Counter} (const std\+::type\+\_\+info \&typ)
+\begin{DoxyCompactList}\small\item\em Access counter object for local caching on optimizations. \end{DoxyCompactList}\item 
+static \hyperlink{class_d_d4hep_1_1_instance_count_1_1_counter}{Counter} $\ast$ \hyperlink{struct_d_d4hep_1_1_instance_count_ace5ceb5f2e95cb4c2a48cbd9edc3e84c}{get\+Counter} (const std\+::string \&typ)
+\begin{DoxyCompactList}\small\item\em Access counter object for local caching on optimizations. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static void \hyperlink{struct_d_d4hep_1_1_instance_count_aaaf8d46a477863acc69b65afbab96b22}{increment} (\hyperlink{class_t}{T} $\ast$)
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_d_d4hep_1_1_increment}{Increment} count according to type information. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static void \hyperlink{struct_d_d4hep_1_1_instance_count_a5053617b5c5083ea3b7d8f306c9a3933}{decrement} (\hyperlink{class_t}{T} $\ast$)
+\begin{DoxyCompactList}\small\item\em Decrement count according to type information. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \hyperlink{struct_d_d4hep_1_1_instance_count_ae81dc0c76b135425e14b6dc38262a727}{counter\+\_\+t} \hyperlink{struct_d_d4hep_1_1_instance_count_a072aeb0f2392224316c4aac3433f0068}{get} (\hyperlink{class_t}{T} $\ast$)
+\begin{DoxyCompactList}\small\item\em Access current counter. \end{DoxyCompactList}\item 
+static void \hyperlink{struct_d_d4hep_1_1_instance_count_a615e3109fee2bdd67d047d4decca1c0f}{increment} (const std\+::type\+\_\+info \&typ)
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_d_d4hep_1_1_increment}{Increment} count according to type information. \end{DoxyCompactList}\item 
+static void \hyperlink{struct_d_d4hep_1_1_instance_count_a99ffc259c76fc693c83e8cc493ace1f6}{decrement} (const std\+::type\+\_\+info \&typ)
+\begin{DoxyCompactList}\small\item\em Decrement count according to type information. \end{DoxyCompactList}\item 
+static \hyperlink{struct_d_d4hep_1_1_instance_count_ae81dc0c76b135425e14b6dc38262a727}{counter\+\_\+t} \hyperlink{struct_d_d4hep_1_1_instance_count_a1b6de9faa3cda69498c13c07ea0f289c}{get} (const std\+::type\+\_\+info \&typ)
+\begin{DoxyCompactList}\small\item\em Access current counter. \end{DoxyCompactList}\item 
+static void \hyperlink{struct_d_d4hep_1_1_instance_count_a2a6c1324b3462dcd26a7916d6b1ece46}{increment} (const std\+::string \&typ)
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_d_d4hep_1_1_increment}{Increment} count according to string information. \end{DoxyCompactList}\item 
+static void \hyperlink{struct_d_d4hep_1_1_instance_count_a5c0cdd835f58abbd7f1d54069b5f04b2}{decrement} (const std\+::string \&typ)
+\begin{DoxyCompactList}\small\item\em Decrement count according to string information. \end{DoxyCompactList}\item 
+static \hyperlink{struct_d_d4hep_1_1_instance_count_ae81dc0c76b135425e14b6dc38262a727}{counter\+\_\+t} \hyperlink{struct_d_d4hep_1_1_instance_count_aecb1277df454b018fc8144635c3dcb24}{get} (const std\+::string \&typ)
+\begin{DoxyCompactList}\small\item\em Access current counter. \end{DoxyCompactList}\item 
+static void \hyperlink{struct_d_d4hep_1_1_instance_count_ae9cc6db5c9117d6451a3d817c55af8c1}{dump} (int which=\hyperlink{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca948324c1e49c9a310b45c9f681b381a8}{A\+LL})
+\begin{DoxyCompactList}\small\item\em Dump list of instance counters. \end{DoxyCompactList}\item 
+static void \hyperlink{struct_d_d4hep_1_1_instance_count_a94bb311b134800236d5be147df616072}{clear} (int which=\hyperlink{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca948324c1e49c9a310b45c9f681b381a8}{A\+LL})
+\begin{DoxyCompactList}\small\item\em Clear list of instance counters. \end{DoxyCompactList}\item 
+static bool \hyperlink{struct_d_d4hep_1_1_instance_count_afa4f90d11074c40ba3bde59bb5c59785}{do\+Trace} ()
+\begin{DoxyCompactList}\small\item\em Check if tracing is enabled. \end{DoxyCompactList}\item 
+static void \hyperlink{struct_d_d4hep_1_1_instance_count_a12dd0a7dd1f4a64ef784dec2eda4b96a}{do\+Tracing} (bool value)
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable tracing. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Helper to support object counting when debugging memory leaks. Small class to enable object construction/destruction tracing
+Helper to support object counting when debugging memory leaks. 
+
+Small class to enable object construction/destruction tracing
 
 \begin{DoxyAuthor}{Author}
-M.Frank 
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
-Definition at line 31 of file InstanceCount.h.
+Definition at line 31 of file Instance\+Count.\+h.
+
+
 
 \subsection{Member Typedef Documentation}
-\hypertarget{struct_d_d4hep_1_1_instance_count_ae81dc0c76b135425e14b6dc38262a727}{
-\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}!counter\_\-t@{counter\_\-t}}
-\index{counter\_\-t@{counter\_\-t}!DD4hep::InstanceCount@{DD4hep::InstanceCount}}
-\subsubsection[{counter\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef long long int {\bf DD4hep::InstanceCount::counter\_\-t}}}
-\label{struct_d_d4hep_1_1_instance_count_ae81dc0c76b135425e14b6dc38262a727}
+\hypertarget{struct_d_d4hep_1_1_instance_count_ae81dc0c76b135425e14b6dc38262a727}{}\label{struct_d_d4hep_1_1_instance_count_ae81dc0c76b135425e14b6dc38262a727} 
+\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}!counter\+\_\+t@{counter\+\_\+t}}
+\index{counter\+\_\+t@{counter\+\_\+t}!D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}
+\subsubsection{\texorpdfstring{counter\+\_\+t}{counter\_t}}
+{\footnotesize\ttfamily typedef long long int \hyperlink{struct_d_d4hep_1_1_instance_count_ae81dc0c76b135425e14b6dc38262a727}{D\+D4hep\+::\+Instance\+Count\+::counter\+\_\+t}}
 
 
-Definition at line 33 of file InstanceCount.h.
+
+Definition at line 33 of file Instance\+Count.\+h.
+
+
 
 \subsection{Member Enumeration Documentation}
-\hypertarget{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947c}{
-\subsubsection[{"@2}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
-\label{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947c}
-
-
-Enumeration to steer the output. \begin{Desc}
-\item[Enumerator: ]\par
-\begin{description}
-\index{NONE@{NONE}!DD4hep::InstanceCount@{DD4hep::InstanceCount}}\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}!NONE@{NONE}}\item[{\em 
-\hypertarget{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca7ef09dfc0136f6756ab56b221b86115a}{
-NONE}
-\label{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca7ef09dfc0136f6756ab56b221b86115a}
-}]\index{STRING@{STRING}!DD4hep::InstanceCount@{DD4hep::InstanceCount}}\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}!STRING@{STRING}}\item[{\em 
-\hypertarget{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca62f53809ed03b36e645549bc7da959d3}{
-STRING}
-\label{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca62f53809ed03b36e645549bc7da959d3}
-}]\index{TYPEINFO@{TYPEINFO}!DD4hep::InstanceCount@{DD4hep::InstanceCount}}\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}!TYPEINFO@{TYPEINFO}}\item[{\em 
-\hypertarget{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca87ab47dcf03aaa78096e84a187544373}{
-TYPEINFO}
-\label{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca87ab47dcf03aaa78096e84a187544373}
-}]\index{ALL@{ALL}!DD4hep::InstanceCount@{DD4hep::InstanceCount}}\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}!ALL@{ALL}}\item[{\em 
-\hypertarget{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca948324c1e49c9a310b45c9f681b381a8}{
-ALL}
-\label{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca948324c1e49c9a310b45c9f681b381a8}
-}]\end{description}
-\end{Desc}
+\hypertarget{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947c}{}\label{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947c} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
 
 
 
-Definition at line 35 of file InstanceCount.h.
+Enumeration to steer the output. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}!N\+O\+NE@{N\+O\+NE}}}\hypertarget{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca7ef09dfc0136f6756ab56b221b86115a}{}\label{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca7ef09dfc0136f6756ab56b221b86115a} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+R\+I\+NG@{S\+T\+R\+I\+NG}!D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}!S\+T\+R\+I\+NG@{S\+T\+R\+I\+NG}}}\hypertarget{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca62f53809ed03b36e645549bc7da959d3}{}\label{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca62f53809ed03b36e645549bc7da959d3} 
+S\+T\+R\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+Y\+P\+E\+I\+N\+FO@{T\+Y\+P\+E\+I\+N\+FO}!D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}!T\+Y\+P\+E\+I\+N\+FO@{T\+Y\+P\+E\+I\+N\+FO}}}\hypertarget{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca87ab47dcf03aaa78096e84a187544373}{}\label{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca87ab47dcf03aaa78096e84a187544373} 
+T\+Y\+P\+E\+I\+N\+FO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+LL@{A\+LL}!D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}!A\+LL@{A\+LL}}}\hypertarget{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca948324c1e49c9a310b45c9f681b381a8}{}\label{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca948324c1e49c9a310b45c9f681b381a8} 
+A\+LL&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 35 of file Instance\+Count.\+h.
+
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{struct_d_d4hep_1_1_instance_count_aa543483ba37302ae1a2059eceb12c798}{
-\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}!InstanceCount@{InstanceCount}}
-\index{InstanceCount@{InstanceCount}!DD4hep::InstanceCount@{DD4hep::InstanceCount}}
-\subsubsection[{InstanceCount}]{\setlength{\rightskip}{0pt plus 5cm}InstanceCount::InstanceCount ()}}
-\label{struct_d_d4hep_1_1_instance_count_aa543483ba37302ae1a2059eceb12c798}
+\hypertarget{struct_d_d4hep_1_1_instance_count_aa543483ba37302ae1a2059eceb12c798}{}\label{struct_d_d4hep_1_1_instance_count_aa543483ba37302ae1a2059eceb12c798} 
+\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}!Instance\+Count@{Instance\+Count}}
+\index{Instance\+Count@{Instance\+Count}!D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}
+\subsubsection{\texorpdfstring{Instance\+Count()}{InstanceCount()}}
+{\footnotesize\ttfamily Instance\+Count\+::\+Instance\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
-Standard Constructor -\/ No need to call explicitly. Standard Constructor. 
 
-Definition at line 63 of file InstanceCount.cpp.
+Standard Constructor -\/ No need to call explicitly. 
 
-References DD4hep::InstanceCount::Counter::increment().\hypertarget{struct_d_d4hep_1_1_instance_count_a7d9ff65ecca8d6024f7275ea93058ad7}{
-\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}!$\sim$InstanceCount@{$\sim$InstanceCount}}
-\index{$\sim$InstanceCount@{$\sim$InstanceCount}!DD4hep::InstanceCount@{DD4hep::InstanceCount}}
-\subsubsection[{$\sim$InstanceCount}]{\setlength{\rightskip}{0pt plus 5cm}InstanceCount::$\sim$InstanceCount ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{struct_d_d4hep_1_1_instance_count_a7d9ff65ecca8d6024f7275ea93058ad7}
+Standard Constructor. 
+
+Definition at line 63 of file Instance\+Count.\+cpp.
 
 
-Standard Destructor -\/ No need to call explicitly. Standard destructor. 
 
-Definition at line 67 of file InstanceCount.cpp.
+References D\+D4hep\+::\+Instance\+Count\+::\+Counter\+::increment().
 
-References ALL, DD4hep::InstanceCount::Counter::decrement(), dump(), NONE, and DD4hep::InstanceCount::Counter::value().
+
+
+Referenced by D\+D4hep\+::\+Instance\+Count\+::\+Counter\+::maximum().
+
+\hypertarget{struct_d_d4hep_1_1_instance_count_a7d9ff65ecca8d6024f7275ea93058ad7}{}\label{struct_d_d4hep_1_1_instance_count_a7d9ff65ecca8d6024f7275ea93058ad7} 
+\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}!````~Instance\+Count@{$\sim$\+Instance\+Count}}
+\index{````~Instance\+Count@{$\sim$\+Instance\+Count}!D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}
+\subsubsection{\texorpdfstring{$\sim$\+Instance\+Count()}{~InstanceCount()}}
+{\footnotesize\ttfamily Instance\+Count\+::$\sim$\+Instance\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Standard Destructor -\/ No need to call explicitly. 
+
+Standard destructor. 
+
+Definition at line 67 of file Instance\+Count.\+cpp.
+
+
+
+References D\+D4hep\+::\+Instance\+Count\+::\+Counter\+::decrement(), and D\+D4hep\+::\+Instance\+Count\+::\+Counter\+::value().
+
+
+
+Referenced by D\+D4hep\+::\+Instance\+Count\+::\+Counter\+::maximum().
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{struct_d_d4hep_1_1_instance_count_a94bb311b134800236d5be147df616072}{
-\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}!clear@{clear}}
-\index{clear@{clear}!DD4hep::InstanceCount@{DD4hep::InstanceCount}}
-\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}static void DD4hep::InstanceCount::clear (int {\em which} = {\ttfamily ALL})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{struct_d_d4hep_1_1_instance_count_a94bb311b134800236d5be147df616072}
+\hypertarget{struct_d_d4hep_1_1_instance_count_a94bb311b134800236d5be147df616072}{}\label{struct_d_d4hep_1_1_instance_count_a94bb311b134800236d5be147df616072} 
+\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}!clear@{clear}}
+\index{clear@{clear}!D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily static void D\+D4hep\+::\+Instance\+Count\+::clear (\begin{DoxyParamCaption}\item[{int}]{which = {\ttfamily \hyperlink{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca948324c1e49c9a310b45c9f681b381a8}{A\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
-Clear list of instance counters. \hypertarget{struct_d_d4hep_1_1_instance_count_a5c0cdd835f58abbd7f1d54069b5f04b2}{
-\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}!decrement@{decrement}}
-\index{decrement@{decrement}!DD4hep::InstanceCount@{DD4hep::InstanceCount}}
-\subsubsection[{decrement}]{\setlength{\rightskip}{0pt plus 5cm}void InstanceCount::decrement (const std::string \& {\em typ})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{struct_d_d4hep_1_1_instance_count_a5c0cdd835f58abbd7f1d54069b5f04b2}
+
+Clear list of instance counters. 
+
+
+
+Referenced by get().
+
+\hypertarget{struct_d_d4hep_1_1_instance_count_a5053617b5c5083ea3b7d8f306c9a3933}{}\label{struct_d_d4hep_1_1_instance_count_a5053617b5c5083ea3b7d8f306c9a3933} 
+\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}!decrement@{decrement}}
+\index{decrement@{decrement}!D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}
+\subsubsection{\texorpdfstring{decrement()}{decrement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static void D\+D4hep\+::\+Instance\+Count\+::decrement (\begin{DoxyParamCaption}\item[{\hyperlink{class_t}{T} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Decrement count according to type information. 
+
+
+
+Definition at line 104 of file Instance\+Count.\+h.
+
+
+
+References D\+D4hep\+::\+Instance\+Count\+::\+Counter\+::decrement().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Ref\+Counted\+Sequence$<$ Geant4\+Sens\+Det\+Action\+Sequence $>$\+::\+\_\+release(), D\+D4hep\+::\+Simulation\+::\+Sequence\+Hdl$<$ Geant4\+Generator\+Action\+Sequence $>$\+::\+\_\+release(), D\+D4hep\+::\+Conditions\+::\+Abstract\+Map\+::$\sim$\+Abstract\+Map(), D\+D4hep\+::\+Alignments\+::\+Align\+Context\+::$\sim$\+Align\+Context(), D\+D4hep\+::\+Alignments\+::\+Interna\+::\+Alignment\+Condition\+Object\+::$\sim$\+Alignment\+Condition\+Object(), D\+D4hep\+::\+Alignments\+::\+Interna\+::\+Alignment\+Container\+::$\sim$\+Alignment\+Container(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::$\sim$\+Alignment\+Data(), D\+D4hep\+::\+Alignments\+::\+Alignments\+Manager\+Object\+::$\sim$\+Alignments\+Manager\+Object(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack\+::$\sim$\+Alignment\+Stack(), D\+D4hep\+::\+Annotation\+::$\sim$\+Annotation(), D\+D4hep\+::\+Calo3\+D\+Projection\+::$\sim$\+Calo3\+D\+Projection(), D\+D4hep\+::\+Conditions\+::\+Interna\+::\+Condition\+Container\+::$\sim$\+Condition\+Container(), D\+D4hep\+::\+Conditions\+::\+Condition\+Dependency\+::$\sim$\+Condition\+Dependency(), D\+D4hep\+::\+Conditions\+::\+Interna\+::\+Condition\+Object\+::$\sim$\+Condition\+Object(), D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool\+::$\sim$\+Conditions\+I\+O\+V\+Pool(), D\+D4hep\+::\+Conditions\+::\+Conditions\+Manager\+Object\+::$\sim$\+Conditions\+Manager\+Object(), D\+D4hep\+::\+Conditions\+::\+Conditions\+Pool\+::$\sim$\+Conditions\+Pool(), D\+D4hep\+::\+Geometry\+::\+Constant\+Object\+::$\sim$\+Constant\+Object(), D\+D4hep\+::\+Geometry\+::\+Det\+Element\+Object\+::$\sim$\+Det\+Element\+Object(), D\+D4hep\+::\+Element\+List\+::$\sim$\+Element\+List(), D\+D4hep\+::\+Simulation\+::\+Energy\+Deposit\+Minimum\+Cut\+::$\sim$\+Energy\+Deposit\+Minimum\+Cut(), D\+D4hep\+::\+Conditions\+::\+Entry\+::$\sim$\+Entry(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+Container\+::$\sim$\+Geant4\+Action\+Container(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+Phase\+::$\sim$\+Geant4\+Action\+Phase(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+S\+D\+::$\sim$\+Geant4\+Action\+S\+D(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Context\+::$\sim$\+Geant4\+Context(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Detector\+Construction\+Sequence\+::$\sim$\+Geant4\+Detector\+Construction\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Detector\+Geometry\+Construction\+::$\sim$\+Geant4\+Detector\+Geometry\+Construction(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Detector\+Sensitives\+Construction\+::$\sim$\+Geant4\+Detector\+Sensitives\+Construction(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Escape\+Counter\+::$\sim$\+Geant4\+Escape\+Counter(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+::$\sim$\+Geant4\+Event(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+::$\sim$\+Geant4\+Event\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence\+::$\sim$\+Geant4\+Event\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Seed\+::$\sim$\+Geant4\+Event\+Seed(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Filter\+::$\sim$\+Geant4\+Filter(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action\+::$\sim$\+Geant4\+Generator\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action\+Init\+::$\sim$\+Geant4\+Generator\+Action\+Init(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action\+Sequence\+::$\sim$\+Geant4\+Generator\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Wrapper\+::$\sim$\+Geant4\+Generator\+Wrapper(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Hit\+Collection\+::$\sim$\+Geant4\+Hit\+Collection(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Hit\+Data\+::$\sim$\+Geant4\+Hit\+Data(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Interaction\+Merger\+::$\sim$\+Geant4\+Interaction\+Merger(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Interaction\+Vertex\+Boost\+::$\sim$\+Geant4\+Interaction\+Vertex\+Boost(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Interaction\+Vertex\+Smear\+::$\sim$\+Geant4\+Interaction\+Vertex\+Smear(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Isotrope\+Generator\+::$\sim$\+Geant4\+Isotrope\+Generator(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::$\sim$\+Geant4\+Kernel(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Material\+Scanner\+::$\sim$\+Geant4\+Material\+Scanner(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Monte\+Carlo\+Truth\+::$\sim$\+Geant4\+Monte\+Carlo\+Truth(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Output2\+R\+O\+O\+T\+::$\sim$\+Geant4\+Output2\+R\+O\+O\+T(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Output\+Action\+::$\sim$\+Geant4\+Output\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+::$\sim$\+Geant4\+Particle(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Generator\+::$\sim$\+Geant4\+Particle\+Generator(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Gun\+::$\sim$\+Geant4\+Particle\+Gun(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::$\sim$\+Geant4\+Particle\+Handler(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Print\+::$\sim$\+Geant4\+Particle\+Print(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+Constructor\+::$\sim$\+Geant4\+Physics\+Constructor(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::$\sim$\+Geant4\+Physics\+List(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+Action\+Sequence\+::$\sim$\+Geant4\+Physics\+List\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Primary\+Handler\+::$\sim$\+Geant4\+Primary\+Handler(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Random\+::$\sim$\+Geant4\+Random(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Readout\+Volume\+Filter\+::$\sim$\+Geant4\+Readout\+Volume\+Filter(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Run\+::$\sim$\+Geant4\+Run(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Run\+Action\+::$\sim$\+Geant4\+Run\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Run\+Action\+Sequence\+::$\sim$\+Geant4\+Run\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+Action\+Sequence\+::$\sim$\+Geant4\+Sens\+Det\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+::$\sim$\+Geant4\+Sensitive(), Tests\+::\+Geant4\+Sensitive\+Action$<$ T $>$\+::$\sim$\+Geant4\+Sensitive\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Action$<$ T $>$\+::$\sim$\+Geant4\+Sensitive\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Event\+Action\+::$\sim$\+Geant4\+Shared\+Event\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Generator\+Action\+::$\sim$\+Geant4\+Shared\+Generator\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Run\+Action\+::$\sim$\+Geant4\+Shared\+Run\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Stacking\+Action\+::$\sim$\+Geant4\+Shared\+Stacking\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Stepping\+Action\+::$\sim$\+Geant4\+Shared\+Stepping\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Tracking\+Action\+::$\sim$\+Geant4\+Shared\+Tracking\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Stacking\+Action\+::$\sim$\+Geant4\+Stacking\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Stacking\+Action\+Sequence\+::$\sim$\+Geant4\+Stacking\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Stepping\+Action\+::$\sim$\+Geant4\+Stepping\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Stepping\+Action\+Sequence\+::$\sim$\+Geant4\+Stepping\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Base\+::$\sim$\+Geant4\+Test\+Base(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Event\+Action\+::$\sim$\+Geant4\+Test\+Event\+Action(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Generator\+Action\+::$\sim$\+Geant4\+Test\+Generator\+Action(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Run\+Action\+::$\sim$\+Geant4\+Test\+Run\+Action(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Sensitive\+::$\sim$\+Geant4\+Test\+Sensitive(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Step\+Action\+::$\sim$\+Geant4\+Test\+Step\+Action(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Track\+Action\+::$\sim$\+Geant4\+Test\+Track\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracking\+Action\+::$\sim$\+Geant4\+Tracking\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracking\+Action\+Sequence\+::$\sim$\+Geant4\+Tracking\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracking\+Post\+Action\+::$\sim$\+Geant4\+Tracking\+Post\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracking\+Pre\+Action\+::$\sim$\+Geant4\+Tracking\+Pre\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Initialization\+::$\sim$\+Geant4\+User\+Initialization(), D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Initialization\+Sequence\+::$\sim$\+Geant4\+User\+Initialization\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Particle\+Handler\+::$\sim$\+Geant4\+User\+Particle\+Handler(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Vertex\+::$\sim$\+Geant4\+Vertex(), D\+D4hep\+::\+Simulation\+::\+Geantino\+Reject\+Filter\+::$\sim$\+Geantino\+Reject\+Filter(), D\+D4hep\+::\+Geometry\+::\+Header\+Object\+::$\sim$\+Header\+Object(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracker\+::\+Hit\+::$\sim$\+Hit(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Calorimeter\+::\+Hit\+::$\sim$\+Hit(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Hit\+Wrapper\+::\+Hit\+Manipulator\+::$\sim$\+Hit\+Manipulator(), D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor\+Object\+::$\sim$\+I\+D\+Descriptor\+Object(), D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+Data\+::$\sim$\+L\+C\+D\+D\+Data(), D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+Imp\+::$\sim$\+L\+C\+D\+D\+Imp(), D\+D4hep\+::\+Geometry\+::\+Limit\+Set\+Object\+::$\sim$\+Limit\+Set\+Object(), D\+D4hep\+::\+Geometry\+::\+Cartesian\+Field\+::\+Object\+::$\sim$\+Object(), D\+D4hep\+::\+Geometry\+::\+Overlayed\+Field\+::\+Object\+::$\sim$\+Object(), D\+D4hep\+::\+Object\+Extensions\+::$\sim$\+Object\+Extensions(), D\+D4hep\+::\+Opaque\+Data\+Block\+::$\sim$\+Opaque\+Data\+Block(), D\+D4hep\+::\+Simulation\+::\+Particle\+Filter\+::$\sim$\+Particle\+Filter(), D\+D4hep\+::\+Simulation\+::\+Particle\+Reject\+Filter\+::$\sim$\+Particle\+Reject\+Filter(), D\+D4hep\+::\+Simulation\+::\+Particle\+Select\+Filter\+::$\sim$\+Particle\+Select\+Filter(), D\+D4hep\+::\+Popup\+Menu\+::$\sim$\+Popup\+Menu(), D\+D4hep\+::\+Geometry\+::\+Readout\+Object\+::$\sim$\+Readout\+Object(), D\+D4hep\+::\+Geometry\+::\+Region\+Object\+::$\sim$\+Region\+Object(), D\+D4hep\+::\+Geometry\+::\+Segmentation\+Object\+::$\sim$\+Segmentation\+Object(), D\+D4hep\+::\+Geometry\+::\+Sensitive\+Detector\+Object\+::$\sim$\+Sensitive\+Detector\+Object(), D\+D4hep\+::\+Simulation\+::\+Simple\+Event\+::$\sim$\+Simple\+Event(), D\+D4hep\+::\+Simulation\+::\+Simple\+Run\+::$\sim$\+Simple\+Run(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack\+::\+Stack\+Entry\+::$\sim$\+Stack\+Entry(), D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::$\sim$\+User\+Pool(), D\+D4hep\+::\+View\+::$\sim$\+View(), and D\+D4hep\+::\+Geometry\+::\+Vis\+Attr\+Object\+::$\sim$\+Vis\+Attr\+Object().
+
+\hypertarget{struct_d_d4hep_1_1_instance_count_a99ffc259c76fc693c83e8cc493ace1f6}{}\label{struct_d_d4hep_1_1_instance_count_a99ffc259c76fc693c83e8cc493ace1f6} 
+\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}!decrement@{decrement}}
+\index{decrement@{decrement}!D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}
+\subsubsection{\texorpdfstring{decrement()}{decrement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Instance\+Count\+::decrement (\begin{DoxyParamCaption}\item[{const std\+::type\+\_\+info \&}]{typ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Decrement count according to type information. 
+
+
+
+Definition at line 126 of file Instance\+Count.\+cpp.
+
+\hypertarget{struct_d_d4hep_1_1_instance_count_a5c0cdd835f58abbd7f1d54069b5f04b2}{}\label{struct_d_d4hep_1_1_instance_count_a5c0cdd835f58abbd7f1d54069b5f04b2} 
+\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}!decrement@{decrement}}
+\index{decrement@{decrement}!D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}
+\subsubsection{\texorpdfstring{decrement()}{decrement()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Instance\+Count\+::decrement (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{typ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
 
 
 Decrement count according to string information. 
 
-Definition at line 110 of file InstanceCount.cpp.
-
-References DD4hep::InstanceCount::Counter::decrement(), and getCounter().\hypertarget{struct_d_d4hep_1_1_instance_count_a99ffc259c76fc693c83e8cc493ace1f6}{
-\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}!decrement@{decrement}}
-\index{decrement@{decrement}!DD4hep::InstanceCount@{DD4hep::InstanceCount}}
-\subsubsection[{decrement}]{\setlength{\rightskip}{0pt plus 5cm}void InstanceCount::decrement (const std::type\_\-info \& {\em typ})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{struct_d_d4hep_1_1_instance_count_a99ffc259c76fc693c83e8cc493ace1f6}
 
 
-Decrement count according to type information. 
+Definition at line 110 of file Instance\+Count.\+cpp.
 
-Definition at line 126 of file InstanceCount.cpp.
+\hypertarget{struct_d_d4hep_1_1_instance_count_afa4f90d11074c40ba3bde59bb5c59785}{}\label{struct_d_d4hep_1_1_instance_count_afa4f90d11074c40ba3bde59bb5c59785} 
+\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}!do\+Trace@{do\+Trace}}
+\index{do\+Trace@{do\+Trace}!D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}
+\subsubsection{\texorpdfstring{do\+Trace()}{doTrace()}}
+{\footnotesize\ttfamily bool Instance\+Count\+::do\+Trace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-References DD4hep::InstanceCount::Counter::decrement(), and getCounter().\hypertarget{struct_d_d4hep_1_1_instance_count_a13975237d7100dab59a87dec2f67dc73}{
-\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}!decrement@{decrement}}
-\index{decrement@{decrement}!DD4hep::InstanceCount@{DD4hep::InstanceCount}}
-\subsubsection[{decrement}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ static void DD4hep::InstanceCount::decrement ({\bf T} $\ast$)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
-\label{struct_d_d4hep_1_1_instance_count_a13975237d7100dab59a87dec2f67dc73}
-
-
-Decrement count according to type information. 
-
-Definition at line 104 of file InstanceCount.h.
-
-Referenced by DD4hep::Simulation::SequenceHdl$<$ Geant4GeneratorActionSequence $>$::\_\-release(), DD4hep::Simulation::RefCountedSequence$<$ Geant4SensDetActionSequence $>$::\_\-release(), DD4hep::Conditions::AbstractMap::$\sim$AbstractMap(), DD4hep::Alignments::AlignContext::$\sim$AlignContext(), DD4hep::Alignments::Interna::AlignmentConditionObject::$\sim$AlignmentConditionObject(), DD4hep::Alignments::Interna::AlignmentContainer::$\sim$AlignmentContainer(), DD4hep::Alignments::AlignmentData::$\sim$AlignmentData(), DD4hep::Alignments::AlignmentsManagerObject::$\sim$AlignmentsManagerObject(), DD4hep::Alignments::AlignmentStack::$\sim$AlignmentStack(), DD4hep::Annotation::$\sim$Annotation(), DD4hep::Calo2DProjection::$\sim$Calo2DProjection(), DD4hep::Calo3DProjection::$\sim$Calo3DProjection(), DD4hep::CaloLego::$\sim$CaloLego(), DD4hep::Conditions::Interna::ConditionContainer::$\sim$ConditionContainer(), DD4hep::Conditions::ConditionDependency::$\sim$ConditionDependency(), DD4hep::Conditions::Interna::ConditionObject::$\sim$ConditionObject(), DD4hep::Conditions::ConditionsIOVPool::$\sim$ConditionsIOVPool(), DD4hep::Conditions::ConditionsManagerObject::$\sim$ConditionsManagerObject(), DD4hep::Conditions::ConditionsPool::$\sim$ConditionsPool(), DD4hep::Geometry::ConstantObject::$\sim$ConstantObject(), DD4hep::DD4hepMenu::$\sim$DD4hepMenu(), DD4hep::Geometry::DetElementObject::$\sim$DetElementObject(), DD4hep::ElementList::$\sim$ElementList(), DD4hep::Simulation::EnergyDepositMinimumCut::$\sim$EnergyDepositMinimumCut(), DD4hep::Conditions::Entry::$\sim$Entry(), DD4hep::EventControl::$\sim$EventControl(), DD4hep::Simulation::Geant4Action::$\sim$Geant4Action(), DD4hep::Simulation::Geant4ActionContainer::$\sim$Geant4ActionContainer(), DD4hep::Simulation::Geant4ActionPhase::$\sim$Geant4ActionPhase(), DD4hep::Simulation::Geant4ActionSD::$\sim$Geant4ActionSD(), DD4hep::Simulation::Geant4Context::$\sim$Geant4Context(), DD4hep::Simulation::Geant4DetectorConstructionSequence::$\sim$Geant4DetectorConstructionSequence(), DD4hep::Simulation::Geant4DetectorGeometryConstruction::$\sim$Geant4DetectorGeometryConstruction(), DD4hep::Simulation::Geant4DetectorSensitivesConstruction::$\sim$Geant4DetectorSensitivesConstruction(), DD4hep::Simulation::Geant4EscapeCounter::$\sim$Geant4EscapeCounter(), DD4hep::Simulation::Geant4Event::$\sim$Geant4Event(), DD4hep::Simulation::Geant4EventAction::$\sim$Geant4EventAction(), DD4hep::Simulation::Geant4EventActionSequence::$\sim$Geant4EventActionSequence(), DD4hep::Simulation::Geant4EventSeed::$\sim$Geant4EventSeed(), DD4hep::Simulation::Geant4Filter::$\sim$Geant4Filter(), DD4hep::Simulation::Geant4GeneratorAction::$\sim$Geant4GeneratorAction(), DD4hep::Simulation::Geant4GeneratorActionInit::$\sim$Geant4GeneratorActionInit(), DD4hep::Simulation::Geant4GeneratorActionSequence::$\sim$Geant4GeneratorActionSequence(), DD4hep::Simulation::Geant4GeneratorWrapper::$\sim$Geant4GeneratorWrapper(), DD4hep::Simulation::Geant4HitCollection::$\sim$Geant4HitCollection(), DD4hep::Simulation::Geant4HitData::$\sim$Geant4HitData(), DD4hep::Simulation::Geant4InteractionMerger::$\sim$Geant4InteractionMerger(), DD4hep::Simulation::Geant4InteractionVertexBoost::$\sim$Geant4InteractionVertexBoost(), DD4hep::Simulation::Geant4InteractionVertexSmear::$\sim$Geant4InteractionVertexSmear(), DD4hep::Simulation::Geant4IsotropeGenerator::$\sim$Geant4IsotropeGenerator(), DD4hep::Simulation::Geant4Kernel::$\sim$Geant4Kernel(), DD4hep::Simulation::Geant4MaterialScanner::$\sim$Geant4MaterialScanner(), DD4hep::Simulation::Geant4MonteCarloTruth::$\sim$Geant4MonteCarloTruth(), DD4hep::Simulation::Geant4Output2LCIO::$\sim$Geant4Output2LCIO(), DD4hep::Simulation::Geant4Output2ROOT::$\sim$Geant4Output2ROOT(), DD4hep::Simulation::Geant4OutputAction::$\sim$Geant4OutputAction(), DD4hep::Simulation::Geant4Particle::$\sim$Geant4Particle(), DD4hep::Simulation::Geant4ParticleGenerator::$\sim$Geant4ParticleGenerator(), DD4hep::Simulation::Geant4ParticleGun::$\sim$Geant4ParticleGun(), DD4hep::Simulation::Geant4ParticleHandler::$\sim$Geant4ParticleHandler(), DD4hep::Simulation::Geant4ParticlePrint::$\sim$Geant4ParticlePrint(), DD4hep::Simulation::Geant4PhysicsConstructor::$\sim$Geant4PhysicsConstructor(), DD4hep::Simulation::Geant4PhysicsList::$\sim$Geant4PhysicsList(), DD4hep::Simulation::Geant4PhysicsListActionSequence::$\sim$Geant4PhysicsListActionSequence(), DD4hep::Simulation::Geant4PrimaryHandler::$\sim$Geant4PrimaryHandler(), DD4hep::Simulation::Geant4Random::$\sim$Geant4Random(), DD4hep::Simulation::Geant4ReadoutVolumeFilter::$\sim$Geant4ReadoutVolumeFilter(), DD4hep::Simulation::Geant4Run::$\sim$Geant4Run(), DD4hep::Simulation::Geant4RunAction::$\sim$Geant4RunAction(), DD4hep::Simulation::Geant4RunActionSequence::$\sim$Geant4RunActionSequence(), DD4hep::Simulation::Geant4SensDetActionSequence::$\sim$Geant4SensDetActionSequence(), DD4hep::Simulation::Geant4Sensitive::$\sim$Geant4Sensitive(), DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::$\sim$Geant4SensitiveAction(), DD4hep::Simulation::Geant4SharedEventAction::$\sim$Geant4SharedEventAction(), DD4hep::Simulation::Geant4SharedGeneratorAction::$\sim$Geant4SharedGeneratorAction(), DD4hep::Simulation::Geant4SharedRunAction::$\sim$Geant4SharedRunAction(), DD4hep::Simulation::Geant4SharedStackingAction::$\sim$Geant4SharedStackingAction(), DD4hep::Simulation::Geant4SharedSteppingAction::$\sim$Geant4SharedSteppingAction(), DD4hep::Simulation::Geant4SharedTrackingAction::$\sim$Geant4SharedTrackingAction(), DD4hep::Simulation::Geant4StackingAction::$\sim$Geant4StackingAction(), DD4hep::Simulation::Geant4StackingActionSequence::$\sim$Geant4StackingActionSequence(), DD4hep::Simulation::Geant4SteppingAction::$\sim$Geant4SteppingAction(), DD4hep::Simulation::Geant4SteppingActionSequence::$\sim$Geant4SteppingActionSequence(), DD4hep::Simulation::Test::Geant4TestBase::$\sim$Geant4TestBase(), DD4hep::Simulation::Test::Geant4TestEventAction::$\sim$Geant4TestEventAction(), DD4hep::Simulation::Test::Geant4TestGeneratorAction::$\sim$Geant4TestGeneratorAction(), DD4hep::Simulation::Test::Geant4TestRunAction::$\sim$Geant4TestRunAction(), DD4hep::Simulation::Test::Geant4TestSensitive::$\sim$Geant4TestSensitive(), DD4hep::Simulation::Test::Geant4TestStepAction::$\sim$Geant4TestStepAction(), DD4hep::Simulation::Test::Geant4TestTrackAction::$\sim$Geant4TestTrackAction(), DD4hep::Simulation::Geant4TrackingAction::$\sim$Geant4TrackingAction(), DD4hep::Simulation::Geant4TrackingActionSequence::$\sim$Geant4TrackingActionSequence(), DD4hep::Simulation::Geant4TrackingPostAction::$\sim$Geant4TrackingPostAction(), DD4hep::Simulation::Geant4TrackingPreAction::$\sim$Geant4TrackingPreAction(), DD4hep::Simulation::Geant4UserInitialization::$\sim$Geant4UserInitialization(), DD4hep::Simulation::Geant4UserInitializationSequence::$\sim$Geant4UserInitializationSequence(), DD4hep::Simulation::Geant4UserParticleHandler::$\sim$Geant4UserParticleHandler(), DD4hep::Simulation::Geant4Vertex::$\sim$Geant4Vertex(), DD4hep::Simulation::GeantinoRejectFilter::$\sim$GeantinoRejectFilter(), DD4hep::Geometry::HeaderObject::$\sim$HeaderObject(), DD4hep::Simulation::Geant4Calorimeter::Hit::$\sim$Hit(), DD4hep::Simulation::Geant4Tracker::Hit::$\sim$Hit(), DD4hep::Simulation::Geant4HitWrapper::HitManipulator::$\sim$HitManipulator(), DD4hep::Geometry::IDDescriptorObject::$\sim$IDDescriptorObject(), DD4hep::Geometry::LCDDData::$\sim$LCDDData(), DD4hep::Geometry::LCDDImp::$\sim$LCDDImp(), DD4hep::Geometry::LimitSetObject::$\sim$LimitSetObject(), DD4hep::Geometry::OverlayedField::Object::$\sim$Object(), DD4hep::Geometry::CartesianField::Object::$\sim$Object(), DD4hep::ObjectExtensions::$\sim$ObjectExtensions(), DD4hep::OpaqueDataBlock::$\sim$OpaqueDataBlock(), DD4hep::Simulation::ParticleFilter::$\sim$ParticleFilter(), DD4hep::Simulation::ParticleRejectFilter::$\sim$ParticleRejectFilter(), DD4hep::Simulation::ParticleSelectFilter::$\sim$ParticleSelectFilter(), DD4hep::PopupMenu::$\sim$PopupMenu(), DD4hep::Geometry::ReadoutObject::$\sim$ReadoutObject(), DD4hep::Geometry::RegionObject::$\sim$RegionObject(), DD4hep::Geometry::SegmentationObject::$\sim$SegmentationObject(), DD4hep::Geometry::SensitiveDetectorObject::$\sim$SensitiveDetectorObject(), DD4hep::Simulation::SimpleEvent::$\sim$SimpleEvent(), DD4hep::Simulation::SimpleRun::$\sim$SimpleRun(), DD4hep::Alignments::AlignmentStack::StackEntry::$\sim$StackEntry(), DD4hep::Conditions::UserPool::$\sim$UserPool(), DD4hep::View::$\sim$View(), DD4hep::ViewMenu::$\sim$ViewMenu(), and DD4hep::Geometry::VisAttrObject::$\sim$VisAttrObject().\hypertarget{struct_d_d4hep_1_1_instance_count_afa4f90d11074c40ba3bde59bb5c59785}{
-\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}!doTrace@{doTrace}}
-\index{doTrace@{doTrace}!DD4hep::InstanceCount@{DD4hep::InstanceCount}}
-\subsubsection[{doTrace}]{\setlength{\rightskip}{0pt plus 5cm}bool InstanceCount::doTrace ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{struct_d_d4hep_1_1_instance_count_afa4f90d11074c40ba3bde59bb5c59785}
 
 
 Check if tracing is enabled. 
 
-Definition at line 82 of file InstanceCount.cpp.\hypertarget{struct_d_d4hep_1_1_instance_count_a12dd0a7dd1f4a64ef784dec2eda4b96a}{
-\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}!doTracing@{doTracing}}
-\index{doTracing@{doTracing}!DD4hep::InstanceCount@{DD4hep::InstanceCount}}
-\subsubsection[{doTracing}]{\setlength{\rightskip}{0pt plus 5cm}void InstanceCount::doTracing (bool {\em value})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{struct_d_d4hep_1_1_instance_count_a12dd0a7dd1f4a64ef784dec2eda4b96a}
 
 
-Enable/Disable tracing. 
-
-Definition at line 86 of file InstanceCount.cpp.\hypertarget{struct_d_d4hep_1_1_instance_count_ae9cc6db5c9117d6451a3d817c55af8c1}{
-\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}!dump@{dump}}
-\index{dump@{dump}!DD4hep::InstanceCount@{DD4hep::InstanceCount}}
-\subsubsection[{dump}]{\setlength{\rightskip}{0pt plus 5cm}void InstanceCount::dump (int {\em which} = {\ttfamily ALL})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{struct_d_d4hep_1_1_instance_count_ae9cc6db5c9117d6451a3d817c55af8c1}
+Definition at line 82 of file Instance\+Count.\+cpp.
 
 
-Dump list of instance counters. Force dump of counters. 
 
-Definition at line 134 of file InstanceCount.cpp.
+Referenced by get().
 
-References STRING, TYPEINFO, and DD4hep::typeName().
+\hypertarget{struct_d_d4hep_1_1_instance_count_a12dd0a7dd1f4a64ef784dec2eda4b96a}{}\label{struct_d_d4hep_1_1_instance_count_a12dd0a7dd1f4a64ef784dec2eda4b96a} 
+\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}!do\+Tracing@{do\+Tracing}}
+\index{do\+Tracing@{do\+Tracing}!D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}
+\subsubsection{\texorpdfstring{do\+Tracing()}{doTracing()}}
+{\footnotesize\ttfamily void Instance\+Count\+::do\+Tracing (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-Referenced by $\sim$InstanceCount().\hypertarget{struct_d_d4hep_1_1_instance_count_aecb1277df454b018fc8144635c3dcb24}{
-\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}!get@{get}}
-\index{get@{get}!DD4hep::InstanceCount@{DD4hep::InstanceCount}}
-\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf counter\_\-t} DD4hep::InstanceCount::get (const std::string \& {\em typ})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
-\label{struct_d_d4hep_1_1_instance_count_aecb1277df454b018fc8144635c3dcb24}
+
+
+Enable/\+Disable tracing. 
+
+
+
+Definition at line 86 of file Instance\+Count.\+cpp.
+
+
+
+Referenced by get().
+
+\hypertarget{struct_d_d4hep_1_1_instance_count_ae9cc6db5c9117d6451a3d817c55af8c1}{}\label{struct_d_d4hep_1_1_instance_count_ae9cc6db5c9117d6451a3d817c55af8c1} 
+\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}!dump@{dump}}
+\index{dump@{dump}!D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}
+\subsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily void Instance\+Count\+::dump (\begin{DoxyParamCaption}\item[{int}]{which = {\ttfamily \hyperlink{struct_d_d4hep_1_1_instance_count_ae1ac289e30ac5ae83640ae2ed97f947ca948324c1e49c9a310b45c9f681b381a8}{A\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Dump list of instance counters. 
+
+Force dump of counters. 
+
+Definition at line 134 of file Instance\+Count.\+cpp.
+
+
+
+References D\+D4hep\+::type\+Name().
+
+
+
+Referenced by get().
+
+\hypertarget{struct_d_d4hep_1_1_instance_count_a072aeb0f2392224316c4aac3433f0068}{}\label{struct_d_d4hep_1_1_instance_count_a072aeb0f2392224316c4aac3433f0068} 
+\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}!get@{get}}
+\index{get@{get}!D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}
+\subsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \hyperlink{struct_d_d4hep_1_1_instance_count_ae81dc0c76b135425e14b6dc38262a727}{counter\+\_\+t} D\+D4hep\+::\+Instance\+Count\+::get (\begin{DoxyParamCaption}\item[{\hyperlink{class_t}{T} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
 
 
 Access current counter. 
 
-Definition at line 124 of file InstanceCount.h.
-
-References getCounter(), and DD4hep::InstanceCount::Counter::value().\hypertarget{struct_d_d4hep_1_1_instance_count_a1b6de9faa3cda69498c13c07ea0f289c}{
-\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}!get@{get}}
-\index{get@{get}!DD4hep::InstanceCount@{DD4hep::InstanceCount}}
-\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf counter\_\-t} DD4hep::InstanceCount::get (const std::type\_\-info \& {\em typ})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
-\label{struct_d_d4hep_1_1_instance_count_a1b6de9faa3cda69498c13c07ea0f289c}
 
 
-Access current counter. 
+Definition at line 108 of file Instance\+Count.\+h.
 
-Definition at line 116 of file InstanceCount.h.
 
-References getCounter(), and DD4hep::InstanceCount::Counter::value().\hypertarget{struct_d_d4hep_1_1_instance_count_afe779df8d58ccb3292c1011b869608bd}{
-\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}!get@{get}}
-\index{get@{get}!DD4hep::InstanceCount@{DD4hep::InstanceCount}}
-\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ static {\bf counter\_\-t} DD4hep::InstanceCount::get ({\bf T} $\ast$)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
-\label{struct_d_d4hep_1_1_instance_count_afe779df8d58ccb3292c1011b869608bd}
+
+References D\+D4hep\+::\+Instance\+Count\+::\+Counter\+::decrement(), get\+Counter(), D\+D4hep\+::\+Instance\+Count\+::\+Counter\+::increment(), and D\+D4hep\+::\+Instance\+Count\+::\+Counter\+::value().
+
+\hypertarget{struct_d_d4hep_1_1_instance_count_a1b6de9faa3cda69498c13c07ea0f289c}{}\label{struct_d_d4hep_1_1_instance_count_a1b6de9faa3cda69498c13c07ea0f289c} 
+\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}!get@{get}}
+\index{get@{get}!D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}
+\subsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily static \hyperlink{struct_d_d4hep_1_1_instance_count_ae81dc0c76b135425e14b6dc38262a727}{counter\+\_\+t} D\+D4hep\+::\+Instance\+Count\+::get (\begin{DoxyParamCaption}\item[{const std\+::type\+\_\+info \&}]{typ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
 
 
 Access current counter. 
 
-Definition at line 108 of file InstanceCount.h.
 
-References getCounter(), and DD4hep::InstanceCount::Counter::value().\hypertarget{struct_d_d4hep_1_1_instance_count_ace5ceb5f2e95cb4c2a48cbd9edc3e84c}{
-\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}!getCounter@{getCounter}}
-\index{getCounter@{getCounter}!DD4hep::InstanceCount@{DD4hep::InstanceCount}}
-\subsubsection[{getCounter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf InstanceCount::Counter} $\ast$ InstanceCount::getCounter (const std::string \& {\em typ})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{struct_d_d4hep_1_1_instance_count_ace5ceb5f2e95cb4c2a48cbd9edc3e84c}
+
+Definition at line 116 of file Instance\+Count.\+h.
+
+
+
+References D\+D4hep\+::\+Instance\+Count\+::\+Counter\+::decrement(), get\+Counter(), D\+D4hep\+::\+Instance\+Count\+::\+Counter\+::increment(), and D\+D4hep\+::\+Instance\+Count\+::\+Counter\+::value().
+
+\hypertarget{struct_d_d4hep_1_1_instance_count_aecb1277df454b018fc8144635c3dcb24}{}\label{struct_d_d4hep_1_1_instance_count_aecb1277df454b018fc8144635c3dcb24} 
+\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}!get@{get}}
+\index{get@{get}!D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}
+\subsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily static \hyperlink{struct_d_d4hep_1_1_instance_count_ae81dc0c76b135425e14b6dc38262a727}{counter\+\_\+t} D\+D4hep\+::\+Instance\+Count\+::get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{typ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Access current counter. 
+
+
+
+Definition at line 124 of file Instance\+Count.\+h.
+
+
+
+References A\+LL, clear(), do\+Trace(), do\+Tracing(), dump(), get\+Counter(), and D\+D4hep\+::\+Instance\+Count\+::\+Counter\+::value().
+
+\hypertarget{struct_d_d4hep_1_1_instance_count_a439db48975fe6b4e193a7ff40bc96bc6}{}\label{struct_d_d4hep_1_1_instance_count_a439db48975fe6b4e193a7ff40bc96bc6} 
+\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}!get\+Counter@{get\+Counter}}
+\index{get\+Counter@{get\+Counter}!D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}
+\subsubsection{\texorpdfstring{get\+Counter()}{getCounter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_instance_count_1_1_counter}{Instance\+Count\+::\+Counter} $\ast$ Instance\+Count\+::get\+Counter (\begin{DoxyParamCaption}\item[{const std\+::type\+\_\+info \&}]{typ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
 
 
 Access counter object for local caching on optimizations. 
 
-Definition at line 96 of file InstanceCount.cpp.\hypertarget{struct_d_d4hep_1_1_instance_count_a439db48975fe6b4e193a7ff40bc96bc6}{
-\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}!getCounter@{getCounter}}
-\index{getCounter@{getCounter}!DD4hep::InstanceCount@{DD4hep::InstanceCount}}
-\subsubsection[{getCounter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf InstanceCount::Counter} $\ast$ InstanceCount::getCounter (const std::type\_\-info \& {\em typ})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{struct_d_d4hep_1_1_instance_count_a439db48975fe6b4e193a7ff40bc96bc6}
+
+
+Definition at line 90 of file Instance\+Count.\+cpp.
+
+
+
+Referenced by get(), and D\+D4hep\+::\+Instance\+Count\+::\+Counter\+::maximum().
+
+\hypertarget{struct_d_d4hep_1_1_instance_count_ace5ceb5f2e95cb4c2a48cbd9edc3e84c}{}\label{struct_d_d4hep_1_1_instance_count_ace5ceb5f2e95cb4c2a48cbd9edc3e84c} 
+\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}!get\+Counter@{get\+Counter}}
+\index{get\+Counter@{get\+Counter}!D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}
+\subsubsection{\texorpdfstring{get\+Counter()}{getCounter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_instance_count_1_1_counter}{Instance\+Count\+::\+Counter} $\ast$ Instance\+Count\+::get\+Counter (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{typ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
 
 
 Access counter object for local caching on optimizations. 
 
-Definition at line 90 of file InstanceCount.cpp.
 
-Referenced by decrement(), get(), and increment().\hypertarget{struct_d_d4hep_1_1_instance_count_a2a6c1324b3462dcd26a7916d6b1ece46}{
-\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}!increment@{increment}}
-\index{increment@{increment}!DD4hep::InstanceCount@{DD4hep::InstanceCount}}
-\subsubsection[{increment}]{\setlength{\rightskip}{0pt plus 5cm}void InstanceCount::increment (const std::string \& {\em typ})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{struct_d_d4hep_1_1_instance_count_a2a6c1324b3462dcd26a7916d6b1ece46}
+
+Definition at line 96 of file Instance\+Count.\+cpp.
+
+\hypertarget{struct_d_d4hep_1_1_instance_count_aaaf8d46a477863acc69b65afbab96b22}{}\label{struct_d_d4hep_1_1_instance_count_aaaf8d46a477863acc69b65afbab96b22} 
+\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}!increment@{increment}}
+\index{increment@{increment}!D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}
+\subsubsection{\texorpdfstring{increment()}{increment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static void D\+D4hep\+::\+Instance\+Count\+::increment (\begin{DoxyParamCaption}\item[{\hyperlink{class_t}{T} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\hyperlink{struct_d_d4hep_1_1_increment}{Increment} count according to type information. 
+
+
+
+Definition at line 100 of file Instance\+Count.\+h.
+
+
+
+References D\+D4hep\+::\+Instance\+Count\+::\+Counter\+::increment().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Ref\+Counted\+Sequence$<$ Geant4\+Sens\+Det\+Action\+Sequence $>$\+::\+\_\+aquire(), D\+D4hep\+::\+Simulation\+::\+Sequence\+Hdl$<$ Geant4\+Generator\+Action\+Sequence $>$\+::\+\_\+aquire(), D\+D4hep\+::\+Conditions\+::\+Abstract\+Map\+::\+Abstract\+Map(), D\+D4hep\+::\+Alignments\+::\+Align\+Context\+::\+Align\+Context(), D\+D4hep\+::\+Alignments\+::\+Interna\+::\+Alignment\+Condition\+Object\+::\+Alignment\+Condition\+Object(), D\+D4hep\+::\+Alignments\+::\+Interna\+::\+Alignment\+Container\+::\+Alignment\+Container(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::\+Alignment\+Data(), D\+D4hep\+::\+Alignments\+::\+Alignments\+Manager\+Object\+::\+Alignments\+Manager\+Object(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack\+::\+Alignment\+Stack(), Class\+Imp(), D\+D4hep\+::\+Conditions\+::\+Interna\+::\+Condition\+Container\+::\+Condition\+Container(), D\+D4hep\+::\+Conditions\+::\+Condition\+Dependency\+::\+Condition\+Dependency(), D\+D4hep\+::\+Conditions\+::\+Interna\+::\+Condition\+Object\+::\+Condition\+Object(), D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool\+::\+Conditions\+I\+O\+V\+Pool(), D\+D4hep\+::\+Conditions\+::\+Conditions\+Manager\+Object\+::\+Conditions\+Manager\+Object(), D\+D4hep\+::\+Conditions\+::\+Conditions\+Pool\+::\+Conditions\+Pool(), D\+D4hep\+::\+Geometry\+::\+Constant\+Object\+::\+Constant\+Object(), D\+D4hep\+::\+Geometry\+::\+Det\+Element\+Object\+::\+Det\+Element\+Object(), D\+D4hep\+::\+Element\+List\+::\+Element\+List(), D\+D4hep\+::\+Simulation\+::\+Energy\+Deposit\+Minimum\+Cut\+::\+Energy\+Deposit\+Minimum\+Cut(), D\+D4hep\+::\+Conditions\+::\+Entry\+::\+Entry(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+Container\+::\+Geant4\+Action\+Container(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+Phase\+::\+Geant4\+Action\+Phase(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+S\+D\+::\+Geant4\+Action\+S\+D(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Context\+::\+Geant4\+Context(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Detector\+Construction\+Sequence\+::\+Geant4\+Detector\+Construction\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Escape\+Counter\+::\+Geant4\+Escape\+Counter(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+::\+Geant4\+Event(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+::\+Geant4\+Event\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence\+::\+Geant4\+Event\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Seed\+::\+Geant4\+Event\+Seed(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Filter\+::\+Geant4\+Filter(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action\+::\+Geant4\+Generator\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action\+Init\+::\+Geant4\+Generator\+Action\+Init(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action\+Sequence\+::\+Geant4\+Generator\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Wrapper\+::\+Geant4\+Generator\+Wrapper(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Hit\+Data\+::\+Geant4\+Hit\+Data(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Interaction\+Merger\+::\+Geant4\+Interaction\+Merger(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Interaction\+Vertex\+Boost\+::\+Geant4\+Interaction\+Vertex\+Boost(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Interaction\+Vertex\+Smear\+::\+Geant4\+Interaction\+Vertex\+Smear(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Isotrope\+Generator\+::\+Geant4\+Isotrope\+Generator(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::\+Geant4\+Kernel(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Material\+Scanner\+::\+Geant4\+Material\+Scanner(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Monte\+Carlo\+Truth\+::\+Geant4\+Monte\+Carlo\+Truth(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Output2\+R\+O\+O\+T\+::\+Geant4\+Output2\+R\+O\+O\+T(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Output\+Action\+::\+Geant4\+Output\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+::\+Geant4\+Particle(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Generator\+::\+Geant4\+Particle\+Generator(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Gun\+::\+Geant4\+Particle\+Gun(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::\+Geant4\+Particle\+Handler(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Print\+::\+Geant4\+Particle\+Print(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+Constructor\+::\+Geant4\+Physics\+Constructor(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::\+Geant4\+Physics\+List(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+Action\+Sequence\+::\+Geant4\+Physics\+List\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Primary\+Handler\+::\+Geant4\+Primary\+Handler(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Random\+::\+Geant4\+Random(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Readout\+Volume\+Filter\+::\+Geant4\+Readout\+Volume\+Filter(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Run\+::\+Geant4\+Run(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Run\+Action\+::\+Geant4\+Run\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Run\+Action\+Sequence\+::\+Geant4\+Run\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+Action\+Sequence\+::\+Geant4\+Sens\+Det\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+::\+Geant4\+Sensitive(), Tests\+::\+Geant4\+Sensitive\+Action$<$ T $>$\+::\+Geant4\+Sensitive\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Action$<$ T $>$\+::\+Geant4\+Sensitive\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Event\+Action\+::\+Geant4\+Shared\+Event\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Generator\+Action\+::\+Geant4\+Shared\+Generator\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Run\+Action\+::\+Geant4\+Shared\+Run\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Stacking\+Action\+::\+Geant4\+Shared\+Stacking\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Stepping\+Action\+::\+Geant4\+Shared\+Stepping\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Tracking\+Action\+::\+Geant4\+Shared\+Tracking\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Stacking\+Action\+::\+Geant4\+Stacking\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Stacking\+Action\+Sequence\+::\+Geant4\+Stacking\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Stepping\+Action\+::\+Geant4\+Stepping\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Stepping\+Action\+Sequence\+::\+Geant4\+Stepping\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Base\+::\+Geant4\+Test\+Base(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Event\+Action\+::\+Geant4\+Test\+Event\+Action(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Generator\+Action\+::\+Geant4\+Test\+Generator\+Action(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Run\+Action\+::\+Geant4\+Test\+Run\+Action(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Sensitive\+::\+Geant4\+Test\+Sensitive(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Step\+Action\+::\+Geant4\+Test\+Step\+Action(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Track\+Action\+::\+Geant4\+Test\+Track\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracking\+Action\+::\+Geant4\+Tracking\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracking\+Action\+Sequence\+::\+Geant4\+Tracking\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracking\+Post\+Action\+::\+Geant4\+Tracking\+Post\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracking\+Pre\+Action\+::\+Geant4\+Tracking\+Pre\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Initialization\+::\+Geant4\+User\+Initialization(), D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Initialization\+Sequence\+::\+Geant4\+User\+Initialization\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Particle\+Handler\+::\+Geant4\+User\+Particle\+Handler(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Vertex\+::\+Geant4\+Vertex(), D\+D4hep\+::\+Simulation\+::\+Geantino\+Reject\+Filter\+::\+Geantino\+Reject\+Filter(), D\+D4hep\+::\+Geometry\+::\+Header\+Object\+::\+Header\+Object(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracker\+::\+Hit\+::\+Hit(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Calorimeter\+::\+Hit\+::\+Hit(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Hit\+Wrapper\+::\+Hit\+Manipulator\+::\+Hit\+Manipulator(), D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor\+Object\+::\+I\+D\+Descriptor\+Object(), D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+Data\+::\+L\+C\+D\+D\+Data(), D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+Imp\+::\+L\+C\+D\+D\+Imp(), D\+D4hep\+::\+Geometry\+::\+Limit\+Set\+Object\+::\+Limit\+Set\+Object(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Hit\+Collection\+::new\+Instance(), D\+D4hep\+::\+Geometry\+::\+Cartesian\+Field\+::\+Object\+::\+Object(), D\+D4hep\+::\+Geometry\+::\+Overlayed\+Field\+::\+Object\+::\+Object(), D\+D4hep\+::\+Object\+Extensions\+::\+Object\+Extensions(), D\+D4hep\+::\+Opaque\+Data\+Block\+::\+Opaque\+Data\+Block(), D\+D4hep\+::\+Simulation\+::\+Particle\+Filter\+::\+Particle\+Filter(), D\+D4hep\+::\+Simulation\+::\+Particle\+Reject\+Filter\+::\+Particle\+Reject\+Filter(), D\+D4hep\+::\+Simulation\+::\+Particle\+Select\+Filter\+::\+Particle\+Select\+Filter(), D\+D4hep\+::\+Geometry\+::\+Readout\+Object\+::\+Readout\+Object(), D\+D4hep\+::\+Geometry\+::\+Region\+Object\+::\+Region\+Object(), D\+D4hep\+::\+Geometry\+::\+Segmentation\+Object\+::\+Segmentation\+Object(), D\+D4hep\+::\+Geometry\+::\+Sensitive\+Detector\+Object\+::\+Sensitive\+Detector\+Object(), D\+D4hep\+::\+Simulation\+::\+Simple\+Event\+::\+Simple\+Event(), D\+D4hep\+::\+Simulation\+::\+Simple\+Run\+::\+Simple\+Run(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack\+::\+Stack\+Entry\+::\+Stack\+Entry(), D\+D4hep\+::\+Conditions\+::\+User\+Pool\+::\+User\+Pool(), D\+D4hep\+::\+View\+::\+View(), and D\+D4hep\+::\+Geometry\+::\+Vis\+Attr\+Object\+::\+Vis\+Attr\+Object().
+
+\hypertarget{struct_d_d4hep_1_1_instance_count_a615e3109fee2bdd67d047d4decca1c0f}{}\label{struct_d_d4hep_1_1_instance_count_a615e3109fee2bdd67d047d4decca1c0f} 
+\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}!increment@{increment}}
+\index{increment@{increment}!D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}
+\subsubsection{\texorpdfstring{increment()}{increment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Instance\+Count\+::increment (\begin{DoxyParamCaption}\item[{const std\+::type\+\_\+info \&}]{typ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\hyperlink{struct_d_d4hep_1_1_increment}{Increment} count according to type information. 
+
+
+
+Definition at line 118 of file Instance\+Count.\+cpp.
+
+\hypertarget{struct_d_d4hep_1_1_instance_count_a2a6c1324b3462dcd26a7916d6b1ece46}{}\label{struct_d_d4hep_1_1_instance_count_a2a6c1324b3462dcd26a7916d6b1ece46} 
+\index{D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}!increment@{increment}}
+\index{increment@{increment}!D\+D4hep\+::\+Instance\+Count@{D\+D4hep\+::\+Instance\+Count}}
+\subsubsection{\texorpdfstring{increment()}{increment()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Instance\+Count\+::increment (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{typ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
 
 
 \hyperlink{struct_d_d4hep_1_1_increment}{Increment} count according to string information. 
 
-Definition at line 102 of file InstanceCount.cpp.
-
-References getCounter(), and DD4hep::InstanceCount::Counter::increment().\hypertarget{struct_d_d4hep_1_1_instance_count_a615e3109fee2bdd67d047d4decca1c0f}{
-\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}!increment@{increment}}
-\index{increment@{increment}!DD4hep::InstanceCount@{DD4hep::InstanceCount}}
-\subsubsection[{increment}]{\setlength{\rightskip}{0pt plus 5cm}void InstanceCount::increment (const std::type\_\-info \& {\em typ})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{struct_d_d4hep_1_1_instance_count_a615e3109fee2bdd67d047d4decca1c0f}
 
 
-\hyperlink{struct_d_d4hep_1_1_increment}{Increment} count according to type information. 
-
-Definition at line 118 of file InstanceCount.cpp.
-
-References getCounter(), and DD4hep::InstanceCount::Counter::increment().\hypertarget{struct_d_d4hep_1_1_instance_count_aff4313ae357c0c3bcf3ce210eee4c470}{
-\index{DD4hep::InstanceCount@{DD4hep::InstanceCount}!increment@{increment}}
-\index{increment@{increment}!DD4hep::InstanceCount@{DD4hep::InstanceCount}}
-\subsubsection[{increment}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ static void DD4hep::InstanceCount::increment ({\bf T} $\ast$)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
-\label{struct_d_d4hep_1_1_instance_count_aff4313ae357c0c3bcf3ce210eee4c470}
+Definition at line 102 of file Instance\+Count.\+cpp.
 
 
-\hyperlink{struct_d_d4hep_1_1_increment}{Increment} count according to type information. 
 
-Definition at line 100 of file InstanceCount.h.
-
-Referenced by DD4hep::Simulation::SequenceHdl$<$ Geant4GeneratorActionSequence $>$::\_\-aquire(), DD4hep::Simulation::RefCountedSequence$<$ Geant4SensDetActionSequence $>$::\_\-aquire(), DD4hep::Conditions::AbstractMap::AbstractMap(), DD4hep::Alignments::AlignContext::AlignContext(), DD4hep::Alignments::Interna::AlignmentContainer::AlignmentContainer(), DD4hep::Alignments::AlignmentData::AlignmentData(), DD4hep::Alignments::AlignmentsManagerObject::AlignmentsManagerObject(), DD4hep::Alignments::AlignmentStack::AlignmentStack(), DD4hep::Conditions::Interna::ConditionContainer::ConditionContainer(), DD4hep::Conditions::ConditionDependency::ConditionDependency(), DD4hep::Conditions::ConditionsIOVPool::ConditionsIOVPool(), DD4hep::Conditions::ConditionsManagerObject::ConditionsManagerObject(), DD4hep::Conditions::ConditionsPool::ConditionsPool(), DD4hep::Geometry::DetElementObject::DetElementObject(), DD4hep::ElementList::ElementList(), DD4hep::Simulation::EnergyDepositMinimumCut::EnergyDepositMinimumCut(), DD4hep::Conditions::Entry::Entry(), DD4hep::Simulation::Geant4ActionContainer::Geant4ActionContainer(), DD4hep::Simulation::Geant4ActionSD::Geant4ActionSD(), DD4hep::Simulation::Geant4Context::Geant4Context(), DD4hep::Simulation::Geant4DetectorConstructionSequence::Geant4DetectorConstructionSequence(), DD4hep::Simulation::Geant4Event::Geant4Event(), DD4hep::Simulation::Geant4EventSeed::Geant4EventSeed(), DD4hep::Simulation::Geant4Filter::Geant4Filter(), DD4hep::Simulation::Geant4GeneratorActionInit::Geant4GeneratorActionInit(), DD4hep::Simulation::Geant4HitData::Geant4HitData(), DD4hep::Simulation::Geant4InteractionMerger::Geant4InteractionMerger(), DD4hep::Simulation::Geant4InteractionVertexBoost::Geant4InteractionVertexBoost(), DD4hep::Simulation::Geant4InteractionVertexSmear::Geant4InteractionVertexSmear(), DD4hep::Simulation::Geant4Kernel::Geant4Kernel(), DD4hep::Simulation::Geant4MonteCarloTruth::Geant4MonteCarloTruth(), DD4hep::Simulation::Geant4Particle::Geant4Particle(), DD4hep::Simulation::Geant4ParticlePrint::Geant4ParticlePrint(), DD4hep::Simulation::Geant4PhysicsConstructor::Geant4PhysicsConstructor(), DD4hep::Simulation::Geant4PrimaryHandler::Geant4PrimaryHandler(), DD4hep::Simulation::Geant4Random::Geant4Random(), DD4hep::Simulation::Geant4ReadoutVolumeFilter::Geant4ReadoutVolumeFilter(), DD4hep::Simulation::Geant4Run::Geant4Run(), DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::Geant4SensitiveAction(), DD4hep::Simulation::Test::Geant4TestBase::Geant4TestBase(), DD4hep::Simulation::Test::Geant4TestEventAction::Geant4TestEventAction(), DD4hep::Simulation::Test::Geant4TestGeneratorAction::Geant4TestGeneratorAction(), DD4hep::Simulation::Test::Geant4TestRunAction::Geant4TestRunAction(), DD4hep::Simulation::Test::Geant4TestSensitive::Geant4TestSensitive(), DD4hep::Simulation::Test::Geant4TestStepAction::Geant4TestStepAction(), DD4hep::Simulation::Test::Geant4TestTrackAction::Geant4TestTrackAction(), DD4hep::Simulation::Geant4TrackingPostAction::Geant4TrackingPostAction(), DD4hep::Simulation::Geant4TrackingPreAction::Geant4TrackingPreAction(), DD4hep::Simulation::Geant4UserParticleHandler::Geant4UserParticleHandler(), DD4hep::Simulation::Geant4Vertex::Geant4Vertex(), DD4hep::Simulation::GeantinoRejectFilter::GeantinoRejectFilter(), DD4hep::Geometry::HeaderObject::HeaderObject(), DD4hep::Simulation::Geant4Calorimeter::Hit::Hit(), DD4hep::Simulation::Geant4Tracker::Hit::Hit(), DD4hep::Simulation::Geant4HitWrapper::HitManipulator::HitManipulator(), DD4hep::Geometry::IDDescriptorObject::IDDescriptorObject(), DD4hep::Geometry::LCDDData::LCDDData(), DD4hep::Geometry::LCDDImp::LCDDImp(), DD4hep::Geometry::LimitSetObject::LimitSetObject(), DD4hep::Simulation::Geant4HitCollection::newInstance(), DD4hep::Geometry::OverlayedField::Object::Object(), DD4hep::Geometry::CartesianField::Object::Object(), DD4hep::ObjectExtensions::ObjectExtensions(), DD4hep::OpaqueDataBlock::OpaqueDataBlock(), DD4hep::Simulation::ParticleRejectFilter::ParticleRejectFilter(), DD4hep::Simulation::ParticleSelectFilter::ParticleSelectFilter(), DD4hep::Geometry::ReadoutObject::ReadoutObject(), DD4hep::Geometry::RegionObject::RegionObject(), DD4hep::Geometry::SegmentationObject::SegmentationObject(), DD4hep::Geometry::SensitiveDetectorObject::SensitiveDetectorObject(), DD4hep::Simulation::SimpleEvent::SimpleEvent(), DD4hep::Simulation::SimpleRun::SimpleRun(), DD4hep::Alignments::AlignmentStack::StackEntry::StackEntry(), DD4hep::Conditions::UserPool::UserPool(), and DD4hep::Geometry::VisAttrObject::VisAttrObject().
-
-The documentation for this struct was generated from the following files:\begin{DoxyCompactItemize}
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_instance_count_8h}{InstanceCount.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_instance_count_8cpp}{InstanceCount.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/include/\+D\+D4hep/\hyperlink{_instance_count_8h}{Instance\+Count.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\hyperlink{_instance_count_8cpp}{Instance\+Count.\+cpp}\end{DoxyCompactItemize}

@@ -1,110 +1,152 @@
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action}{
-\section{DD4hep::Simulation::Geant4GeneratorAction Class Reference}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action}\index{DD4hep::Simulation::Geant4GeneratorAction@{DD4hep::Simulation::Geant4GeneratorAction}}
-}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action}{}\section{D\+D4hep\+:\+:Simulation\+:\+:Geant4\+Generator\+Action Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action}\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action}}
 
 
 Concrete implementation of the Geant4 generator action base class.  
 
 
-{\ttfamily \#include $<$Geant4GeneratorAction.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4GeneratorAction::\begin{figure}[H]
+
+
+{\ttfamily \#include $<$Geant4\+Generator\+Action.\+h$>$}
+
+Inheritance diagram for D\+D4hep\+:\+:Simulation\+:\+:Geant4\+Generator\+Action\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=11.375cm]{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action}
+\includegraphics[height=11.375000cm]{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action}
 \end{center}
 \end{figure}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_generator_action}{Geant4SharedGeneratorAction} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_a21b579b261763b82cb86a001c8502c65}{shared\_\-type}
+typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_generator_action}{Geant4\+Shared\+Generator\+Action} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_a21b579b261763b82cb86a001c8502c65}{shared\+\_\+type}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_a38bd8b1993559039d35c8eb5c285b7c0}{Geant4GeneratorAction} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$context, const std::string \&name)
-\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_a4b70fe9a48775ddf6853ff699606430d}{$\sim$Geant4GeneratorAction} ()
-\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_ac5a1d2335a19e3f9d555081199e01801}{operator()} (G4Event $\ast$)
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} to generate primary particles. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_aa172a80d58e0f0c1d62bad456233fcf0}{Geant4\+Generator\+Action} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4\+Context} $\ast$\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_aa9d87f0ec2a72b7fc2591b18f98d75cf}{context}, const std\+::string \&\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_af374e70b014d16afb81dd9d77cc3894b}{name})
+\begin{DoxyCompactList}\small\item\em Standard constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_a4b70fe9a48775ddf6853ff699606430d}{$\sim$\+Geant4\+Generator\+Action} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_ac5a1d2335a19e3f9d555081199e01801}{operator()} (G4\+Event $\ast$)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_callback}{Callback} to generate primary particles. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_callback}{Callback} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_aa0b8787cbdd5dfefc992aac6dd1073c3}{m\_\-calls}
+\hyperlink{class_d_d4hep_1_1_callback}{Callback} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_aa0b8787cbdd5dfefc992aac6dd1073c3}{m\+\_\+calls}
 \end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
-Concrete implementation of the Geant4 generator action base class. The \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action}{Geant4GeneratorAction} is called for every event. During the callback all particles are created which form the microscopic kinematic action of the particle collision. This input may either origin directly from an event generator program or come from file.
+Concrete implementation of the Geant4 generator action base class. 
 
-The callback signature is: void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_ac5a1d2335a19e3f9d555081199e01801}{operator()(G4Event$\ast$ event)}
+The \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action}{Geant4\+Generator\+Action} is called for every event. During the callback all particles are created which form the microscopic kinematic action of the particle collision. This input may either origin directly from an event generator program or come from file.
+
+The callback signature is\+: void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_ac5a1d2335a19e3f9d555081199e01801}{operator()(\+G4\+Event$\ast$ event)}
 
 \begin{DoxyAuthor}{Author}
-M.Frank 
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
-Definition at line 48 of file Geant4GeneratorAction.h.
+Definition at line 48 of file Geant4\+Generator\+Action.\+h.
+
+
 
 \subsection{Member Typedef Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_a21b579b261763b82cb86a001c8502c65}{
-\index{DD4hep::Simulation::Geant4GeneratorAction@{DD4hep::Simulation::Geant4GeneratorAction}!shared\_\-type@{shared\_\-type}}
-\index{shared\_\-type@{shared\_\-type}!DD4hep::Simulation::Geant4GeneratorAction@{DD4hep::Simulation::Geant4GeneratorAction}}
-\subsubsection[{shared\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geant4SharedGeneratorAction} {\bf DD4hep::Simulation::Geant4GeneratorAction::shared\_\-type}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_a21b579b261763b82cb86a001c8502c65}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_a21b579b261763b82cb86a001c8502c65}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_a21b579b261763b82cb86a001c8502c65} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action}!shared\+\_\+type@{shared\+\_\+type}}
+\index{shared\+\_\+type@{shared\+\_\+type}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action}}
+\subsubsection{\texorpdfstring{shared\+\_\+type}{shared\_type}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_generator_action}{Geant4\+Shared\+Generator\+Action} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_a21b579b261763b82cb86a001c8502c65}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action\+::shared\+\_\+type}}
 
 
-Definition at line 50 of file Geant4GeneratorAction.h.
+
+Definition at line 50 of file Geant4\+Generator\+Action.\+h.
+
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_a38bd8b1993559039d35c8eb5c285b7c0}{
-\index{DD4hep::Simulation::Geant4GeneratorAction@{DD4hep::Simulation::Geant4GeneratorAction}!Geant4GeneratorAction@{Geant4GeneratorAction}}
-\index{Geant4GeneratorAction@{Geant4GeneratorAction}!DD4hep::Simulation::Geant4GeneratorAction@{DD4hep::Simulation::Geant4GeneratorAction}}
-\subsubsection[{Geant4GeneratorAction}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4GeneratorAction::Geant4GeneratorAction ({\bf Geant4Context} $\ast$ {\em context}, \/  const std::string \& {\em name})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_a38bd8b1993559039d35c8eb5c285b7c0}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_aa172a80d58e0f0c1d62bad456233fcf0}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_aa172a80d58e0f0c1d62bad456233fcf0} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action}!Geant4\+Generator\+Action@{Geant4\+Generator\+Action}}
+\index{Geant4\+Generator\+Action@{Geant4\+Generator\+Action}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action}}
+\subsubsection{\texorpdfstring{Geant4\+Generator\+Action()}{Geant4GeneratorAction()}}
+{\footnotesize\ttfamily Geant4\+Generator\+Action\+::\+Geant4\+Generator\+Action (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4\+Context} $\ast$}]{context,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
 
 
-Standard constructor. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_a4b70fe9a48775ddf6853ff699606430d}{
-\index{DD4hep::Simulation::Geant4GeneratorAction@{DD4hep::Simulation::Geant4GeneratorAction}!$\sim$Geant4GeneratorAction@{$\sim$Geant4GeneratorAction}}
-\index{$\sim$Geant4GeneratorAction@{$\sim$Geant4GeneratorAction}!DD4hep::Simulation::Geant4GeneratorAction@{DD4hep::Simulation::Geant4GeneratorAction}}
-\subsubsection[{$\sim$Geant4GeneratorAction}]{\setlength{\rightskip}{0pt plus 5cm}Geant4GeneratorAction::$\sim$Geant4GeneratorAction ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_a4b70fe9a48775ddf6853ff699606430d}
+
+Standard constructor. 
+
+
+
+Definition at line 32 of file Geant4\+Generator\+Action.\+cpp.
+
+
+
+References D\+D4hep\+::\+Instance\+Count\+::increment().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_a4b70fe9a48775ddf6853ff699606430d}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_a4b70fe9a48775ddf6853ff699606430d} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action}!````~Geant4\+Generator\+Action@{$\sim$\+Geant4\+Generator\+Action}}
+\index{````~Geant4\+Generator\+Action@{$\sim$\+Geant4\+Generator\+Action}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action}}
+\subsubsection{\texorpdfstring{$\sim$\+Geant4\+Generator\+Action()}{~Geant4GeneratorAction()}}
+{\footnotesize\ttfamily Geant4\+Generator\+Action\+::$\sim$\+Geant4\+Generator\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Default destructor. 
 
-Definition at line 38 of file Geant4GeneratorAction.cpp.
 
-References DD4hep::InstanceCount::decrement().
+
+Definition at line 38 of file Geant4\+Generator\+Action.\+cpp.
+
+
+
+References D\+D4hep\+::\+Instance\+Count\+::decrement().
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_ac5a1d2335a19e3f9d555081199e01801}{
-\index{DD4hep::Simulation::Geant4GeneratorAction@{DD4hep::Simulation::Geant4GeneratorAction}!operator()@{operator()}}
-\index{operator()@{operator()}!DD4hep::Simulation::Geant4GeneratorAction@{DD4hep::Simulation::Geant4GeneratorAction}}
-\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void DD4hep::Simulation::Geant4GeneratorAction::operator() (G4Event $\ast$)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_ac5a1d2335a19e3f9d555081199e01801}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_ac5a1d2335a19e3f9d555081199e01801}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_ac5a1d2335a19e3f9d555081199e01801} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action}!operator()@{operator()}}
+\index{operator()@{operator()}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily virtual void D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action\+::operator() (\begin{DoxyParamCaption}\item[{G4\+Event $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 \hyperlink{class_d_d4hep_1_1_callback}{Callback} to generate primary particles. 
 
-Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_generator_action_a21ff9d287af96c7bb0a3cf8975cac070}{DD4hep::Simulation::Geant4SharedGeneratorAction}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_adbcf087dfc4c0ac510b102dfd1f838b0}{DD4hep::Simulation::Geant4GeneratorActionInit}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_wrapper_a073ee3177fe624c0caf2bb5068d9d865}{DD4hep::Simulation::Geant4GeneratorWrapper}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_input_action_abda8423a68e04eec20eb52c01883c0ba}{DD4hep::Simulation::Geant4InputAction}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_interaction_merger_a5af2cee708859468f78130560ffa4a6e}{DD4hep::Simulation::Geant4InteractionMerger}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_interaction_vertex_boost_ab66ab43b06523e720a1e377ecd065a66}{DD4hep::Simulation::Geant4InteractionVertexBoost}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_interaction_vertex_smear_ada2914ca2a761ff0e1ccbbcc8bef578e}{DD4hep::Simulation::Geant4InteractionVertexSmear}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a4b7c8fdbc6fdc0c79efdf112c8ede315}{DD4hep::Simulation::Geant4ParticleGenerator}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_gun_a4e68905424d21f2386d24d3cbaf795f1}{DD4hep::Simulation::Geant4ParticleGun}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_handler_a239e9338d41588f5dcfc3ea012aba02a}{DD4hep::Simulation::Geant4ParticleHandler}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_handler_a54370e4749de14a101a248981f51864b}{DD4hep::Simulation::Geant4PrimaryHandler}, and \hyperlink{class_d_d4hep_1_1_simulation_1_1_test_1_1_geant4_test_generator_action_af50b716c4764ffa0bf42c4b01ee3d394}{DD4hep::Simulation::Test::Geant4TestGeneratorAction}.
 
-Definition at line 59 of file Geant4GeneratorAction.h.
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_input_action_abda8423a68e04eec20eb52c01883c0ba}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Input\+Action}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_handler_a239e9338d41588f5dcfc3ea012aba02a}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_generator_action_a21ff9d287af96c7bb0a3cf8975cac070}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Generator\+Action}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_generator_a4b7c8fdbc6fdc0c79efdf112c8ede315}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Generator}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_test_1_1_geant4_test_generator_action_af50b716c4764ffa0bf42c4b01ee3d394}{D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Generator\+Action}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_init_adbcf087dfc4c0ac510b102dfd1f838b0}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action\+Init}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_particle_gun_a4e68905424d21f2386d24d3cbaf795f1}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Gun}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_interaction_vertex_smear_ada2914ca2a761ff0e1ccbbcc8bef578e}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Interaction\+Vertex\+Smear}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_interaction_vertex_boost_ab66ab43b06523e720a1e377ecd065a66}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Interaction\+Vertex\+Boost}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_wrapper_a073ee3177fe624c0caf2bb5068d9d865}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Wrapper}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_interaction_merger_a5af2cee708859468f78130560ffa4a6e}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Interaction\+Merger}, and \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_primary_handler_a54370e4749de14a101a248981f51864b}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Primary\+Handler}.
+
+
+
+Definition at line 59 of file Geant4\+Generator\+Action.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action\+Sequence\+::call().
+
+
 
 \subsection{Member Data Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_aa0b8787cbdd5dfefc992aac6dd1073c3}{
-\index{DD4hep::Simulation::Geant4GeneratorAction@{DD4hep::Simulation::Geant4GeneratorAction}!m\_\-calls@{m\_\-calls}}
-\index{m\_\-calls@{m\_\-calls}!DD4hep::Simulation::Geant4GeneratorAction@{DD4hep::Simulation::Geant4GeneratorAction}}
-\subsubsection[{m\_\-calls}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Callback} {\bf DD4hep::Simulation::Geant4GeneratorAction::m\_\-calls}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_aa0b8787cbdd5dfefc992aac6dd1073c3}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_aa0b8787cbdd5dfefc992aac6dd1073c3}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_aa0b8787cbdd5dfefc992aac6dd1073c3} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action}!m\+\_\+calls@{m\+\_\+calls}}
+\index{m\+\_\+calls@{m\+\_\+calls}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action}}
+\subsubsection{\texorpdfstring{m\+\_\+calls}{m\_calls}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_callback}{Callback} D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action\+::m\+\_\+calls\hspace{0.3cm}{\ttfamily [protected]}}
 
 
-Definition at line 52 of file Geant4GeneratorAction.h.
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+Definition at line 52 of file Geant4\+Generator\+Action.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_generator_action_8h}{Geant4GeneratorAction.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_generator_action_8cpp}{Geant4GeneratorAction.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/include/\+D\+D\+G4/\hyperlink{_geant4_generator_action_8h}{Geant4\+Generator\+Action.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/src/\hyperlink{_geant4_generator_action_8cpp}{Geant4\+Generator\+Action.\+cpp}\end{DoxyCompactItemize}

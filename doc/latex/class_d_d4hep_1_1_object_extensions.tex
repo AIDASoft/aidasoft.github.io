@@ -1,319 +1,466 @@
-\hypertarget{class_d_d4hep_1_1_object_extensions}{
-\section{DD4hep::ObjectExtensions Class Reference}
-\label{class_d_d4hep_1_1_object_extensions}\index{DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}}
-}
+\hypertarget{class_d_d4hep_1_1_object_extensions}{}\section{D\+D4hep\+:\+:Object\+Extensions Class Reference}
+\label{class_d_d4hep_1_1_object_extensions}\index{D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}}
 
 
 Implementation of an object supporting arbitrary user extensions.  
 
 
-{\ttfamily \#include $<$ObjectExtensions.h$>$}Inheritance diagram for DD4hep::ObjectExtensions::\begin{figure}[H]
+
+
+{\ttfamily \#include $<$Object\+Extensions.\+h$>$}
+
+Inheritance diagram for D\+D4hep\+:\+:Object\+Extensions\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=1.1831cm]{class_d_d4hep_1_1_object_extensions}
+\includegraphics[height=1.183099cm]{class_d_d4hep_1_1_object_extensions}
 \end{center}
 \end{figure}
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{struct_d_d4hep_1_1_object_extensions_1_1_entry}{Entry}
-\begin{DoxyCompactList}\small\item\em Defintiion of the extension entry. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Defintiion of the extension entry. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef std::map$<$ const std::type\_\-info $\ast$, void $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_object_extensions_a882c1e22567a450f60d83eb735dd3532}{Extensions}
-\begin{DoxyCompactList}\small\item\em Definition of the extension type. \item\end{DoxyCompactList}\item 
-typedef void $\ast$($\ast$ \hyperlink{class_d_d4hep_1_1_object_extensions_ab58b60490186d1adc0c5585ad691a7c2}{copy\_\-t} )(const void $\ast$, void $\ast$arg)
-\begin{DoxyCompactList}\small\item\em Extensions copy constructor type. \item\end{DoxyCompactList}\item 
-typedef void($\ast$ \hyperlink{class_d_d4hep_1_1_object_extensions_af9ca2813f0d7fa65ac13d905d9721cdf}{destruct\_\-t} )(void $\ast$)
-\begin{DoxyCompactList}\small\item\em Extensions destructor type. \item\end{DoxyCompactList}\item 
-typedef std::map$<$ const std::type\_\-info $\ast$, \hyperlink{struct_d_d4hep_1_1_object_extensions_1_1_entry}{Entry} $>$ \hyperlink{class_d_d4hep_1_1_object_extensions_a22c0e42d5fdc9f3fda39c2c3bec14341}{ExtensionMap}
+typedef std\+::map$<$ const std\+::type\+\_\+info $\ast$, void $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_object_extensions_a882c1e22567a450f60d83eb735dd3532}{Extensions}
+\begin{DoxyCompactList}\small\item\em Definition of the extension type. \end{DoxyCompactList}\item 
+typedef void $\ast$($\ast$ \hyperlink{class_d_d4hep_1_1_object_extensions_afb8207da7e2d6d5e3018cc7b5c997f6d}{copy\+\_\+t}) (const void $\ast$, void $\ast$arg)
+\begin{DoxyCompactList}\small\item\em Extensions copy constructor type. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{class_d_d4hep_1_1_object_extensions_a705a3524f9097577069a83993a39a9b2}{destruct\+\_\+t}) (void $\ast$)
+\begin{DoxyCompactList}\small\item\em Extensions destructor type. \end{DoxyCompactList}\item 
+typedef std\+::map$<$ const std\+::type\+\_\+info $\ast$, \hyperlink{struct_d_d4hep_1_1_object_extensions_1_1_entry}{Entry} $>$ \hyperlink{class_d_d4hep_1_1_object_extensions_a22c0e42d5fdc9f3fda39c2c3bec14341}{Extension\+Map}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_object_extensions_adb8a89136b702583d0fa502218592696}{ObjectExtensions} (const std::type\_\-info \&parent\_\-type)
-\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_object_extensions_aabd85a7246f24434443c1bb739b6bdbc}{ObjectExtensions} (const \hyperlink{class_d_d4hep_1_1_object_extensions}{ObjectExtensions} \&copy)
-\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{class_d_d4hep_1_1_object_extensions_a95f9b15025fc24b02bbda235ed888f4d}{$\sim$ObjectExtensions} ()
-\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_object_extensions}{ObjectExtensions} \& \hyperlink{class_d_d4hep_1_1_object_extensions_a14ffdd10b622fdfebd42a45ca2fd42c0}{operator=} (const \hyperlink{class_d_d4hep_1_1_object_extensions}{ObjectExtensions} \&copy)
-\begin{DoxyCompactList}\small\item\em Assignment operator. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_object_extensions_ab7062b99ac80518aa1b70da47a5d001a}{move} (\hyperlink{class_d_d4hep_1_1_object_extensions}{ObjectExtensions} \&copy)
-\begin{DoxyCompactList}\small\item\em Move extensions to target object. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_object_extensions_adb8a89136b702583d0fa502218592696}{Object\+Extensions} (const std\+::type\+\_\+info \&parent\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_object_extensions_a886c0dbb21356036ebf0198e27950572}{Object\+Extensions} (const \hyperlink{class_d_d4hep_1_1_object_extensions}{Object\+Extensions} \&copy)=delete
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_object_extensions_a95f9b15025fc24b02bbda235ed888f4d}{$\sim$\+Object\+Extensions} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_object_extensions}{Object\+Extensions} \& \hyperlink{class_d_d4hep_1_1_object_extensions_adb53247f17183725f3fe2c5efd578d0d}{operator=} (const \hyperlink{class_d_d4hep_1_1_object_extensions}{Object\+Extensions} \&copy)=delete
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_object_extensions_ab7062b99ac80518aa1b70da47a5d001a}{move} (\hyperlink{class_d_d4hep_1_1_object_extensions}{Object\+Extensions} \&copy)
+\begin{DoxyCompactList}\small\item\em Move extensions to target object. \end{DoxyCompactList}\item 
 void \hyperlink{class_d_d4hep_1_1_object_extensions_a8f55762fa8f1701f8fda19a25b027168}{clear} (bool destroy=true)
-\begin{DoxyCompactList}\small\item\em Clear all extensions. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_object_extensions_a45c52f32737b70516b0ee96ddd3e14be}{copyFrom} (const \hyperlink{class_d_d4hep_1_1_object_extensions_a882c1e22567a450f60d83eb735dd3532}{Extensions} \&ext, void $\ast$arg)
-\begin{DoxyCompactList}\small\item\em Copy object extensions from another object. Hosting type must be identical! \item\end{DoxyCompactList}\item 
-void $\ast$ \hyperlink{class_d_d4hep_1_1_object_extensions_acfe9fe435a30ca5fedd0678b867732a0}{addExtension} (void $\ast$ptr, const std::type\_\-info \&info, \hyperlink{class_d_d4hep_1_1_object_extensions_ab58b60490186d1adc0c5585ad691a7c2}{copy\_\-t} ctor, \hyperlink{class_d_d4hep_1_1_object_extensions_af9ca2813f0d7fa65ac13d905d9721cdf}{destruct\_\-t} dtor)
-\begin{DoxyCompactList}\small\item\em Add an extension object to the detector element. \item\end{DoxyCompactList}\item 
-void $\ast$ \hyperlink{class_d_d4hep_1_1_object_extensions_a9e4010c2b9cbfda1455c10821a3cae85}{addExtension} (void $\ast$ptr, const std::type\_\-info \&info, \hyperlink{class_d_d4hep_1_1_object_extensions_af9ca2813f0d7fa65ac13d905d9721cdf}{destruct\_\-t} dtor)
-\begin{DoxyCompactList}\small\item\em Add an extension object to the detector element. \item\end{DoxyCompactList}\item 
-void $\ast$ \hyperlink{class_d_d4hep_1_1_object_extensions_a4ee557d0bcce3b57dd6f462a6967dd6b}{removeExtension} (const std::type\_\-info \&info, bool destroy)
-\begin{DoxyCompactList}\small\item\em Remove an existing extension object from the instance. \item\end{DoxyCompactList}\item 
-void $\ast$ \hyperlink{class_d_d4hep_1_1_object_extensions_ae1ea9d894574f33c63ea3d44427f4c0c}{extension} (const std::type\_\-info \&info, bool alert) const 
-\begin{DoxyCompactList}\small\item\em Access an existing extension object from the detector element. \item\end{DoxyCompactList}\item 
-void $\ast$ \hyperlink{class_d_d4hep_1_1_object_extensions_ae12b64d5f695d41e521d2d55711d4dfc}{extension} (const std::type\_\-info \&info) const 
-\begin{DoxyCompactList}\small\item\em Access an existing extension object from the detector element. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Clear all extensions. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_object_extensions_a45c52f32737b70516b0ee96ddd3e14be}{copy\+From} (const \hyperlink{class_d_d4hep_1_1_object_extensions_a882c1e22567a450f60d83eb735dd3532}{Extensions} \&ext, void $\ast$arg)
+\begin{DoxyCompactList}\small\item\em Copy object extensions from another object. Hosting type must be identical! \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{class_d_d4hep_1_1_object_extensions_acfe9fe435a30ca5fedd0678b867732a0}{add\+Extension} (void $\ast$ptr, const std\+::type\+\_\+info \&info, \hyperlink{class_d_d4hep_1_1_object_extensions_afb8207da7e2d6d5e3018cc7b5c997f6d}{copy\+\_\+t} ctor, \hyperlink{class_d_d4hep_1_1_object_extensions_a705a3524f9097577069a83993a39a9b2}{destruct\+\_\+t} dtor)
+\begin{DoxyCompactList}\small\item\em Add an extension object to the detector element. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{class_d_d4hep_1_1_object_extensions_a9e4010c2b9cbfda1455c10821a3cae85}{add\+Extension} (void $\ast$ptr, const std\+::type\+\_\+info \&info, \hyperlink{class_d_d4hep_1_1_object_extensions_a705a3524f9097577069a83993a39a9b2}{destruct\+\_\+t} dtor)
+\begin{DoxyCompactList}\small\item\em Add an extension object to the detector element. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{class_d_d4hep_1_1_object_extensions_a4ee557d0bcce3b57dd6f462a6967dd6b}{remove\+Extension} (const std\+::type\+\_\+info \&info, bool destroy)
+\begin{DoxyCompactList}\small\item\em Remove an existing extension object from the instance. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{class_d_d4hep_1_1_object_extensions_a99f915911010e0c716938e3ec848ff7b}{extension} (const std\+::type\+\_\+info \&info, bool alert) const
+\begin{DoxyCompactList}\small\item\em Access an existing extension object from the detector element. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{class_d_d4hep_1_1_object_extensions_a61c801252545f49ea1e0af177e7016eb}{extension} (const std\+::type\+\_\+info \&info) const
+\begin{DoxyCompactList}\small\item\em Access an existing extension object from the detector element. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \hyperlink{class_d_d4hep_1_1_object_extensions_a0c32fb2af89407102b494ab9c15f9eac}{\_\-noDelete} (void $\ast$)
-\begin{DoxyCompactList}\small\item\em Function to be passed as dtor if object should NOT be deleted! \item\end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\static void \hyperlink{class_d_d4hep_1_1_object_extensions_a558f472ce5f48a832f121a2313cbc70e}{\_\-delete} (void $\ast$ptr)
-\begin{DoxyCompactList}\small\item\em Templated destructor function. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+static void \hyperlink{class_d_d4hep_1_1_object_extensions_a0c32fb2af89407102b494ab9c15f9eac}{\+\_\+no\+Delete} (void $\ast$)
+\begin{DoxyCompactList}\small\item\em Function to be passed as dtor if object should N\+OT be deleted! \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static void \hyperlink{class_d_d4hep_1_1_object_extensions_a62415b453a6ea86769c2777c0609eb34}{\+\_\+delete} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Templated destructor function. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_d_d4hep_1_1_object_extensions_a882c1e22567a450f60d83eb735dd3532}{Extensions} \hyperlink{class_d_d4hep_1_1_object_extensions_ac96afa01e09dec7a795c88b67c054007}{extensions}
-\begin{DoxyCompactList}\small\item\em The extensions object. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_object_extensions_a22c0e42d5fdc9f3fda39c2c3bec14341}{ExtensionMap} $\ast$ \hyperlink{class_d_d4hep_1_1_object_extensions_a6f517da18e14dc6f4de73a48744e8262}{extensionMap}
-\begin{DoxyCompactList}\small\item\em Pointer to the extension map. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The extensions object. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_object_extensions_a22c0e42d5fdc9f3fda39c2c3bec14341}{Extension\+Map} $\ast$ \hyperlink{class_d_d4hep_1_1_object_extensions_a6f517da18e14dc6f4de73a48744e8262}{extension\+Map}
+\begin{DoxyCompactList}\small\item\em Pointer to the extension map. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Implementation of an object supporting arbitrary user extensions. Usage by inheritance of the client supporting the functionality
+Implementation of an object supporting arbitrary user extensions. 
+
+Usage by inheritance of the client supporting the functionality
 
 \begin{DoxyAuthor}{Author}
-M.Frank 
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
-Definition at line 31 of file ObjectExtensions.h.
+Definition at line 31 of file Object\+Extensions.\+h.
+
+
 
 \subsection{Member Typedef Documentation}
-\hypertarget{class_d_d4hep_1_1_object_extensions_ab58b60490186d1adc0c5585ad691a7c2}{
-\index{DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}!copy\_\-t@{copy\_\-t}}
-\index{copy\_\-t@{copy\_\-t}!DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}}
-\subsubsection[{copy\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$($\ast$ {\bf DD4hep::ObjectExtensions::copy\_\-t})(const void $\ast$, void $\ast$arg)}}
-\label{class_d_d4hep_1_1_object_extensions_ab58b60490186d1adc0c5585ad691a7c2}
+\hypertarget{class_d_d4hep_1_1_object_extensions_afb8207da7e2d6d5e3018cc7b5c997f6d}{}\label{class_d_d4hep_1_1_object_extensions_afb8207da7e2d6d5e3018cc7b5c997f6d} 
+\index{D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}!copy\+\_\+t@{copy\+\_\+t}}
+\index{copy\+\_\+t@{copy\+\_\+t}!D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}}
+\subsubsection{\texorpdfstring{copy\+\_\+t}{copy\_t}}
+{\footnotesize\ttfamily typedef void$\ast$($\ast$ D\+D4hep\+::\+Object\+Extensions\+::copy\+\_\+t) (const void $\ast$, void $\ast$arg)}
+
 
 
 Extensions copy constructor type. 
 
-Reimplemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_object_a2780058563d2399014b51afa789ebd21}{DD4hep::Geometry::DetElementObject}.
 
-Definition at line 36 of file ObjectExtensions.h.\hypertarget{class_d_d4hep_1_1_object_extensions_af9ca2813f0d7fa65ac13d905d9721cdf}{
-\index{DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}!destruct\_\-t@{destruct\_\-t}}
-\index{destruct\_\-t@{destruct\_\-t}!DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}}
-\subsubsection[{destruct\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ {\bf DD4hep::ObjectExtensions::destruct\_\-t})(void $\ast$)}}
-\label{class_d_d4hep_1_1_object_extensions_af9ca2813f0d7fa65ac13d905d9721cdf}
+
+Definition at line 36 of file Object\+Extensions.\+h.
+
+\hypertarget{class_d_d4hep_1_1_object_extensions_a705a3524f9097577069a83993a39a9b2}{}\label{class_d_d4hep_1_1_object_extensions_a705a3524f9097577069a83993a39a9b2} 
+\index{D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}!destruct\+\_\+t@{destruct\+\_\+t}}
+\index{destruct\+\_\+t@{destruct\+\_\+t}!D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}}
+\subsubsection{\texorpdfstring{destruct\+\_\+t}{destruct\_t}}
+{\footnotesize\ttfamily typedef void($\ast$ D\+D4hep\+::\+Object\+Extensions\+::destruct\+\_\+t) (void $\ast$)}
+
 
 
 Extensions destructor type. 
 
-Reimplemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_object_af4773c2a725fc7076297670a7ae1ac41}{DD4hep::Geometry::DetElementObject}.
-
-Definition at line 38 of file ObjectExtensions.h.\hypertarget{class_d_d4hep_1_1_object_extensions_a22c0e42d5fdc9f3fda39c2c3bec14341}{
-\index{DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}!ExtensionMap@{ExtensionMap}}
-\index{ExtensionMap@{ExtensionMap}!DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}}
-\subsubsection[{ExtensionMap}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$const std::type\_\-info$\ast$, {\bf Entry}$>$ {\bf DD4hep::ObjectExtensions::ExtensionMap}}}
-\label{class_d_d4hep_1_1_object_extensions_a22c0e42d5fdc9f3fda39c2c3bec14341}
 
 
-Definition at line 45 of file ObjectExtensions.h.\hypertarget{class_d_d4hep_1_1_object_extensions_a882c1e22567a450f60d83eb735dd3532}{
-\index{DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}!Extensions@{Extensions}}
-\index{Extensions@{Extensions}!DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}}
-\subsubsection[{Extensions}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$const std::type\_\-info$\ast$, void$\ast$$>$ {\bf DD4hep::ObjectExtensions::Extensions}}}
-\label{class_d_d4hep_1_1_object_extensions_a882c1e22567a450f60d83eb735dd3532}
+Definition at line 38 of file Object\+Extensions.\+h.
+
+\hypertarget{class_d_d4hep_1_1_object_extensions_a22c0e42d5fdc9f3fda39c2c3bec14341}{}\label{class_d_d4hep_1_1_object_extensions_a22c0e42d5fdc9f3fda39c2c3bec14341} 
+\index{D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}!Extension\+Map@{Extension\+Map}}
+\index{Extension\+Map@{Extension\+Map}!D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}}
+\subsubsection{\texorpdfstring{Extension\+Map}{ExtensionMap}}
+{\footnotesize\ttfamily typedef std\+::map$<$const std\+::type\+\_\+info$\ast$, \hyperlink{struct_d_d4hep_1_1_object_extensions_1_1_entry}{Entry}$>$ \hyperlink{class_d_d4hep_1_1_object_extensions_a22c0e42d5fdc9f3fda39c2c3bec14341}{D\+D4hep\+::\+Object\+Extensions\+::\+Extension\+Map}}
+
+
+
+Definition at line 45 of file Object\+Extensions.\+h.
+
+\hypertarget{class_d_d4hep_1_1_object_extensions_a882c1e22567a450f60d83eb735dd3532}{}\label{class_d_d4hep_1_1_object_extensions_a882c1e22567a450f60d83eb735dd3532} 
+\index{D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}!Extensions@{Extensions}}
+\index{Extensions@{Extensions}!D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}}
+\subsubsection{\texorpdfstring{Extensions}{Extensions}}
+{\footnotesize\ttfamily typedef std\+::map$<$const std\+::type\+\_\+info$\ast$, void$\ast$$>$ \hyperlink{class_d_d4hep_1_1_object_extensions_a882c1e22567a450f60d83eb735dd3532}{D\+D4hep\+::\+Object\+Extensions\+::\+Extensions}}
+
 
 
 Definition of the extension type. 
 
-Reimplemented in \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_object_ac74df66a49fc20d985f033a063b7dbab}{DD4hep::Geometry::DetElementObject}.
 
-Definition at line 34 of file ObjectExtensions.h.
+
+Definition at line 34 of file Object\+Extensions.\+h.
+
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_object_extensions_adb8a89136b702583d0fa502218592696}{
-\index{DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}!ObjectExtensions@{ObjectExtensions}}
-\index{ObjectExtensions@{ObjectExtensions}!DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}}
-\subsubsection[{ObjectExtensions}]{\setlength{\rightskip}{0pt plus 5cm}ObjectExtensions::ObjectExtensions (const std::type\_\-info \& {\em parent\_\-type})}}
-\label{class_d_d4hep_1_1_object_extensions_adb8a89136b702583d0fa502218592696}
+\hypertarget{class_d_d4hep_1_1_object_extensions_adb8a89136b702583d0fa502218592696}{}\label{class_d_d4hep_1_1_object_extensions_adb8a89136b702583d0fa502218592696} 
+\index{D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}!Object\+Extensions@{Object\+Extensions}}
+\index{Object\+Extensions@{Object\+Extensions}!D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}}
+\subsubsection{\texorpdfstring{Object\+Extensions()}{ObjectExtensions()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Object\+Extensions\+::\+Object\+Extensions (\begin{DoxyParamCaption}\item[{const std\+::type\+\_\+info \&}]{parent\+\_\+type }\end{DoxyParamCaption})}
+
 
 
 Default constructor. 
 
-Definition at line 34 of file ObjectExtensions.cpp.
-
-References extensionMap, and DD4hep::InstanceCount::increment().\hypertarget{class_d_d4hep_1_1_object_extensions_aabd85a7246f24434443c1bb739b6bdbc}{
-\index{DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}!ObjectExtensions@{ObjectExtensions}}
-\index{ObjectExtensions@{ObjectExtensions}!DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}}
-\subsubsection[{ObjectExtensions}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::ObjectExtensions::ObjectExtensions (const {\bf ObjectExtensions} \& {\em copy})}}
-\label{class_d_d4hep_1_1_object_extensions_aabd85a7246f24434443c1bb739b6bdbc}
 
 
-Copy constructor. \hypertarget{class_d_d4hep_1_1_object_extensions_a95f9b15025fc24b02bbda235ed888f4d}{
-\index{DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}!$\sim$ObjectExtensions@{$\sim$ObjectExtensions}}
-\index{$\sim$ObjectExtensions@{$\sim$ObjectExtensions}!DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}}
-\subsubsection[{$\sim$ObjectExtensions}]{\setlength{\rightskip}{0pt plus 5cm}ObjectExtensions::$\sim$ObjectExtensions ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_object_extensions_a95f9b15025fc24b02bbda235ed888f4d}
+Definition at line 34 of file Object\+Extensions.\+cpp.
+
+
+
+References extension\+Map, and D\+D4hep\+::\+Instance\+Count\+::increment().
+
+
+
+Referenced by \+\_\+delete().
+
+\hypertarget{class_d_d4hep_1_1_object_extensions_a886c0dbb21356036ebf0198e27950572}{}\label{class_d_d4hep_1_1_object_extensions_a886c0dbb21356036ebf0198e27950572} 
+\index{D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}!Object\+Extensions@{Object\+Extensions}}
+\index{Object\+Extensions@{Object\+Extensions}!D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}}
+\subsubsection{\texorpdfstring{Object\+Extensions()}{ObjectExtensions()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily D\+D4hep\+::\+Object\+Extensions\+::\+Object\+Extensions (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_object_extensions}{Object\+Extensions} \&}]{copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Copy constructor. 
+
+\hypertarget{class_d_d4hep_1_1_object_extensions_a95f9b15025fc24b02bbda235ed888f4d}{}\label{class_d_d4hep_1_1_object_extensions_a95f9b15025fc24b02bbda235ed888f4d} 
+\index{D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}!````~Object\+Extensions@{$\sim$\+Object\+Extensions}}
+\index{````~Object\+Extensions@{$\sim$\+Object\+Extensions}!D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}}
+\subsubsection{\texorpdfstring{$\sim$\+Object\+Extensions()}{~ObjectExtensions()}}
+{\footnotesize\ttfamily Object\+Extensions\+::$\sim$\+Object\+Extensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Default destructor. 
 
-Definition at line 40 of file ObjectExtensions.cpp.
 
-References clear(), and DD4hep::InstanceCount::decrement().
+
+Definition at line 40 of file Object\+Extensions.\+cpp.
+
+
+
+References clear(), and D\+D4hep\+::\+Instance\+Count\+::decrement().
+
+
+
+Referenced by \+\_\+delete().
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_object_extensions_a558f472ce5f48a832f121a2313cbc70e}{
-\index{DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}!\_\-delete@{\_\-delete}}
-\index{\_\-delete@{\_\-delete}!DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}}
-\subsubsection[{\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ static void DD4hep::ObjectExtensions::\_\-delete (void $\ast$ {\em ptr})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
-\label{class_d_d4hep_1_1_object_extensions_a558f472ce5f48a832f121a2313cbc70e}
+\hypertarget{class_d_d4hep_1_1_object_extensions_a62415b453a6ea86769c2777c0609eb34}{}\label{class_d_d4hep_1_1_object_extensions_a62415b453a6ea86769c2777c0609eb34} 
+\index{D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}!\+\_\+delete@{\+\_\+delete}}
+\index{\+\_\+delete@{\+\_\+delete}!D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}}
+\subsubsection{\texorpdfstring{\+\_\+delete()}{\_delete()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void D\+D4hep\+::\+Object\+Extensions\+::\+\_\+delete (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
 
 
 Templated destructor function. 
 
-Definition at line 56 of file ObjectExtensions.h.\hypertarget{class_d_d4hep_1_1_object_extensions_a0c32fb2af89407102b494ab9c15f9eac}{
-\index{DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}!\_\-noDelete@{\_\-noDelete}}
-\index{\_\-noDelete@{\_\-noDelete}!DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}}
-\subsubsection[{\_\-noDelete}]{\setlength{\rightskip}{0pt plus 5cm}static void DD4hep::ObjectExtensions::\_\-noDelete (void $\ast$)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
-\label{class_d_d4hep_1_1_object_extensions_a0c32fb2af89407102b494ab9c15f9eac}
 
 
-Function to be passed as dtor if object should NOT be deleted! 
+Definition at line 56 of file Object\+Extensions.\+h.
 
-Definition at line 53 of file ObjectExtensions.h.\hypertarget{class_d_d4hep_1_1_object_extensions_a9e4010c2b9cbfda1455c10821a3cae85}{
-\index{DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}!addExtension@{addExtension}}
-\index{addExtension@{addExtension}!DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}}
-\subsubsection[{addExtension}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ ObjectExtensions::addExtension (void $\ast$ {\em ptr}, \/  const std::type\_\-info \& {\em info}, \/  {\bf destruct\_\-t} {\em dtor})}}
-\label{class_d_d4hep_1_1_object_extensions_a9e4010c2b9cbfda1455c10821a3cae85}
+
+
+References add\+Extension(), clear(), D\+D4hep\+::\+Object\+Extensions\+::\+Entry\+::copy, copy\+From(), extension(), move(), Object\+Extensions(), operator=(), remove\+Extension(), and $\sim$\+Object\+Extensions().
+
+\hypertarget{class_d_d4hep_1_1_object_extensions_a0c32fb2af89407102b494ab9c15f9eac}{}\label{class_d_d4hep_1_1_object_extensions_a0c32fb2af89407102b494ab9c15f9eac} 
+\index{D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}!\+\_\+no\+Delete@{\+\_\+no\+Delete}}
+\index{\+\_\+no\+Delete@{\+\_\+no\+Delete}!D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}}
+\subsubsection{\texorpdfstring{\+\_\+no\+Delete()}{\_noDelete()}}
+{\footnotesize\ttfamily static void D\+D4hep\+::\+Object\+Extensions\+::\+\_\+no\+Delete (\begin{DoxyParamCaption}\item[{void $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Function to be passed as dtor if object should N\+OT be deleted! 
+
+
+
+Definition at line 53 of file Object\+Extensions.\+h.
+
+\hypertarget{class_d_d4hep_1_1_object_extensions_acfe9fe435a30ca5fedd0678b867732a0}{}\label{class_d_d4hep_1_1_object_extensions_acfe9fe435a30ca5fedd0678b867732a0} 
+\index{D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}!add\+Extension@{add\+Extension}}
+\index{add\+Extension@{add\+Extension}!D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}}
+\subsubsection{\texorpdfstring{add\+Extension()}{addExtension()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void $\ast$ Object\+Extensions\+::add\+Extension (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{const std\+::type\+\_\+info \&}]{info,  }\item[{\hyperlink{class_d_d4hep_1_1_object_extensions_afb8207da7e2d6d5e3018cc7b5c997f6d}{copy\+\_\+t}}]{ctor,  }\item[{\hyperlink{class_d_d4hep_1_1_object_extensions_a705a3524f9097577069a83993a39a9b2}{destruct\+\_\+t}}]{dtor }\end{DoxyParamCaption})}
+
 
 
 Add an extension object to the detector element. 
 
-Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_aa825451bec9637a51d98d46e23334b75}{DD4hep::Simulation::Geant4Run}, and \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_aee3baf75d103ea5fbb2e59230392c5d1}{DD4hep::Simulation::Geant4Event}.
 
-Definition at line 78 of file ObjectExtensions.cpp.
 
-References addExtension().\hypertarget{class_d_d4hep_1_1_object_extensions_acfe9fe435a30ca5fedd0678b867732a0}{
-\index{DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}!addExtension@{addExtension}}
-\index{addExtension@{addExtension}!DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}}
-\subsubsection[{addExtension}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ ObjectExtensions::addExtension (void $\ast$ {\em ptr}, \/  const std::type\_\-info \& {\em info}, \/  {\bf copy\_\-t} {\em ctor}, \/  {\bf destruct\_\-t} {\em dtor})}}
-\label{class_d_d4hep_1_1_object_extensions_acfe9fe435a30ca5fedd0678b867732a0}
+Definition at line 83 of file Object\+Extensions.\+cpp.
+
+
+
+References D\+D4hep\+::\+Object\+Extensions\+::\+Entry\+::copy, D\+D4hep\+::\+Object\+Extensions\+::\+Entry\+::destruct, extension\+Map, extensions, D\+D4hep\+::\+Object\+Extensions\+::\+Entry\+::id, and D\+D4hep\+::type\+Name().
+
+
+
+Referenced by \+\_\+delete(), add\+Extension(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Run\+::add\+Extension(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+::add\+Extension(), and D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+Imp\+::add\+User\+Extension().
+
+\hypertarget{class_d_d4hep_1_1_object_extensions_a9e4010c2b9cbfda1455c10821a3cae85}{}\label{class_d_d4hep_1_1_object_extensions_a9e4010c2b9cbfda1455c10821a3cae85} 
+\index{D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}!add\+Extension@{add\+Extension}}
+\index{add\+Extension@{add\+Extension}!D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}}
+\subsubsection{\texorpdfstring{add\+Extension()}{addExtension()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void $\ast$ Object\+Extensions\+::add\+Extension (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{const std\+::type\+\_\+info \&}]{info,  }\item[{\hyperlink{class_d_d4hep_1_1_object_extensions_a705a3524f9097577069a83993a39a9b2}{destruct\+\_\+t}}]{dtor }\end{DoxyParamCaption})}
+
 
 
 Add an extension object to the detector element. 
 
-Definition at line 83 of file ObjectExtensions.cpp.
-
-References DD4hep::ObjectExtensions::Entry::copy, DD4hep::ObjectExtensions::Entry::destruct, extensionMap, extensions, DD4hep::ObjectExtensions::Entry::id, and DD4hep::typeName().
-
-Referenced by addExtension(), and DD4hep::Geometry::LCDDImp::addUserExtension().\hypertarget{class_d_d4hep_1_1_object_extensions_a8f55762fa8f1701f8fda19a25b027168}{
-\index{DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}!clear@{clear}}
-\index{clear@{clear}!DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}}
-\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void ObjectExtensions::clear (bool {\em destroy} = {\ttfamily true})}}
-\label{class_d_d4hep_1_1_object_extensions_a8f55762fa8f1701f8fda19a25b027168}
 
 
-Clear all extensions. Internal object destructor: release extension object(s). 
-
-Definition at line 52 of file ObjectExtensions.cpp.
-
-References DD4hep::ObjectExtensions::Entry::destruct, extensionMap, and extensions.
-
-Referenced by DD4hep::Geometry::LCDDData::clearData(), DD4hep::Geometry::LCDDData::destroyData(), DD4hep::Geometry::DetElementObject::$\sim$DetElementObject(), DD4hep::Geometry::LCDDImp::$\sim$LCDDImp(), $\sim$ObjectExtensions(), and DD4hep::Geometry::SensitiveDetectorObject::$\sim$SensitiveDetectorObject().\hypertarget{class_d_d4hep_1_1_object_extensions_a45c52f32737b70516b0ee96ddd3e14be}{
-\index{DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}!copyFrom@{copyFrom}}
-\index{copyFrom@{copyFrom}!DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}}
-\subsubsection[{copyFrom}]{\setlength{\rightskip}{0pt plus 5cm}void ObjectExtensions::copyFrom (const {\bf Extensions} \& {\em ext}, \/  void $\ast$ {\em arg})}}
-\label{class_d_d4hep_1_1_object_extensions_a45c52f32737b70516b0ee96ddd3e14be}
+Definition at line 78 of file Object\+Extensions.\+cpp.
 
 
-Copy object extensions from another object. Hosting type must be identical! Copy object extensions from another object. 
 
-Definition at line 68 of file ObjectExtensions.cpp.
+References add\+Extension().
 
-References DD4hep::ObjectExtensions::Entry::copy, extensionMap, and extensions.\hypertarget{class_d_d4hep_1_1_object_extensions_ae12b64d5f695d41e521d2d55711d4dfc}{
-\index{DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}!extension@{extension}}
-\index{extension@{extension}!DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}}
-\subsubsection[{extension}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ ObjectExtensions::extension (const std::type\_\-info \& {\em info}) const}}
-\label{class_d_d4hep_1_1_object_extensions_ae12b64d5f695d41e521d2d55711d4dfc}
+\hypertarget{class_d_d4hep_1_1_object_extensions_a8f55762fa8f1701f8fda19a25b027168}{}\label{class_d_d4hep_1_1_object_extensions_a8f55762fa8f1701f8fda19a25b027168} 
+\index{D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}!clear@{clear}}
+\index{clear@{clear}!D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Object\+Extensions\+::clear (\begin{DoxyParamCaption}\item[{bool}]{destroy = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Clear all extensions. 
+
+Internal object destructor\+: release extension object(s) 
+
+Definition at line 52 of file Object\+Extensions.\+cpp.
+
+
+
+References D\+D4hep\+::\+Object\+Extensions\+::\+Entry\+::destruct, e, extension\+Map, and extensions.
+
+
+
+Referenced by \+\_\+delete(), D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+Data\+::clear\+Data(), D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+Data\+::destroy\+Data(), D\+D4hep\+::\+Geometry\+::\+Det\+Element\+Object\+::$\sim$\+Det\+Element\+Object(), D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+Imp\+::$\sim$\+L\+C\+D\+D\+Imp(), $\sim$\+Object\+Extensions(), and D\+D4hep\+::\+Geometry\+::\+Sensitive\+Detector\+Object\+::$\sim$\+Sensitive\+Detector\+Object().
+
+\hypertarget{class_d_d4hep_1_1_object_extensions_a45c52f32737b70516b0ee96ddd3e14be}{}\label{class_d_d4hep_1_1_object_extensions_a45c52f32737b70516b0ee96ddd3e14be} 
+\index{D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}!copy\+From@{copy\+From}}
+\index{copy\+From@{copy\+From}!D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}}
+\subsubsection{\texorpdfstring{copy\+From()}{copyFrom()}}
+{\footnotesize\ttfamily void Object\+Extensions\+::copy\+From (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_object_extensions_a882c1e22567a450f60d83eb735dd3532}{Extensions} \&}]{ext,  }\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+
+
+Copy object extensions from another object. Hosting type must be identical! 
+
+Copy object extensions from another object. 
+
+Definition at line 68 of file Object\+Extensions.\+cpp.
+
+
+
+References D\+D4hep\+::\+Object\+Extensions\+::\+Entry\+::copy, e, extension\+Map, and extensions.
+
+
+
+Referenced by \+\_\+delete().
+
+\hypertarget{class_d_d4hep_1_1_object_extensions_a99f915911010e0c716938e3ec848ff7b}{}\label{class_d_d4hep_1_1_object_extensions_a99f915911010e0c716938e3ec848ff7b} 
+\index{D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}!extension@{extension}}
+\index{extension@{extension}!D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}}
+\subsubsection{\texorpdfstring{extension()}{extension()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void $\ast$ Object\+Extensions\+::extension (\begin{DoxyParamCaption}\item[{const std\+::type\+\_\+info \&}]{info,  }\item[{bool}]{alert }\end{DoxyParamCaption}) const}
+
 
 
 Access an existing extension object from the detector element. 
 
-Definition at line 120 of file ObjectExtensions.cpp.
 
-References extensions, and DD4hep::typeName().\hypertarget{class_d_d4hep_1_1_object_extensions_ae1ea9d894574f33c63ea3d44427f4c0c}{
-\index{DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}!extension@{extension}}
-\index{extension@{extension}!DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}}
-\subsubsection[{extension}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ ObjectExtensions::extension (const std::type\_\-info \& {\em info}, \/  bool {\em alert}) const}}
-\label{class_d_d4hep_1_1_object_extensions_ae1ea9d894574f33c63ea3d44427f4c0c}
+
+Definition at line 129 of file Object\+Extensions.\+cpp.
+
+
+
+References extensions, and D\+D4hep\+::type\+Name().
+
+
+
+Referenced by \+\_\+delete(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Run\+::extension(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+::extension(), D\+D4hep\+::\+Conditions\+::\+Conditions\+Manager\+::from(), and D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+Imp\+::user\+Extension().
+
+\hypertarget{class_d_d4hep_1_1_object_extensions_a61c801252545f49ea1e0af177e7016eb}{}\label{class_d_d4hep_1_1_object_extensions_a61c801252545f49ea1e0af177e7016eb} 
+\index{D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}!extension@{extension}}
+\index{extension@{extension}!D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}}
+\subsubsection{\texorpdfstring{extension()}{extension()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void $\ast$ Object\+Extensions\+::extension (\begin{DoxyParamCaption}\item[{const std\+::type\+\_\+info \&}]{info }\end{DoxyParamCaption}) const}
+
 
 
 Access an existing extension object from the detector element. 
 
-Definition at line 129 of file ObjectExtensions.cpp.
 
-References extensions, and DD4hep::typeName().
 
-Referenced by DD4hep::Geometry::LCDDImp::userExtension().\hypertarget{class_d_d4hep_1_1_object_extensions_ab7062b99ac80518aa1b70da47a5d001a}{
-\index{DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}!move@{move}}
-\index{move@{move}!DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}}
-\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void ObjectExtensions::move ({\bf ObjectExtensions} \& {\em copy})}}
-\label{class_d_d4hep_1_1_object_extensions_ab7062b99ac80518aa1b70da47a5d001a}
+Definition at line 120 of file Object\+Extensions.\+cpp.
+
+
+
+References extensions, and D\+D4hep\+::type\+Name().
+
+\hypertarget{class_d_d4hep_1_1_object_extensions_ab7062b99ac80518aa1b70da47a5d001a}{}\label{class_d_d4hep_1_1_object_extensions_ab7062b99ac80518aa1b70da47a5d001a} 
+\index{D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}!move@{move}}
+\index{move@{move}!D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Object\+Extensions\+::move (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_object_extensions}{Object\+Extensions} \&}]{copy }\end{DoxyParamCaption})}
+
 
 
 Move extensions to target object. 
 
-Definition at line 46 of file ObjectExtensions.cpp.
+
+
+Definition at line 46 of file Object\+Extensions.\+cpp.
+
+
 
 References extensions.
 
-Referenced by DD4hep::Geometry::LCDDData::adoptData().\hypertarget{class_d_d4hep_1_1_object_extensions_a14ffdd10b622fdfebd42a45ca2fd42c0}{
-\index{DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}!operator=@{operator=}}
-\index{operator=@{operator=}!DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}}
-\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ObjectExtensions}\& DD4hep::ObjectExtensions::operator= (const {\bf ObjectExtensions} \& {\em copy})}}
-\label{class_d_d4hep_1_1_object_extensions_a14ffdd10b622fdfebd42a45ca2fd42c0}
 
 
-Assignment operator. \hypertarget{class_d_d4hep_1_1_object_extensions_a4ee557d0bcce3b57dd6f462a6967dd6b}{
-\index{DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}!removeExtension@{removeExtension}}
-\index{removeExtension@{removeExtension}!DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}}
-\subsubsection[{removeExtension}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ ObjectExtensions::removeExtension (const std::type\_\-info \& {\em info}, \/  bool {\em destroy})}}
-\label{class_d_d4hep_1_1_object_extensions_a4ee557d0bcce3b57dd6f462a6967dd6b}
+Referenced by \+\_\+delete(), and D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+Data\+::adopt\+Data().
+
+\hypertarget{class_d_d4hep_1_1_object_extensions_adb53247f17183725f3fe2c5efd578d0d}{}\label{class_d_d4hep_1_1_object_extensions_adb53247f17183725f3fe2c5efd578d0d} 
+\index{D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}!operator=@{operator=}}
+\index{operator=@{operator=}!D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_object_extensions}{Object\+Extensions}\& D\+D4hep\+::\+Object\+Extensions\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_object_extensions}{Object\+Extensions} \&}]{copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Assignment operator. 
+
+
+
+Referenced by \+\_\+delete().
+
+\hypertarget{class_d_d4hep_1_1_object_extensions_a4ee557d0bcce3b57dd6f462a6967dd6b}{}\label{class_d_d4hep_1_1_object_extensions_a4ee557d0bcce3b57dd6f462a6967dd6b} 
+\index{D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}!remove\+Extension@{remove\+Extension}}
+\index{remove\+Extension@{remove\+Extension}!D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}}
+\subsubsection{\texorpdfstring{remove\+Extension()}{removeExtension()}}
+{\footnotesize\ttfamily void $\ast$ Object\+Extensions\+::remove\+Extension (\begin{DoxyParamCaption}\item[{const std\+::type\+\_\+info \&}]{info,  }\item[{bool}]{destroy }\end{DoxyParamCaption})}
+
 
 
 Remove an existing extension object from the instance. 
 
-Definition at line 101 of file ObjectExtensions.cpp.
 
-References DD4hep::ObjectExtensions::Entry::destruct, extensionMap, extensions, and DD4hep::typeName().
 
-Referenced by DD4hep::Geometry::LCDDImp::removeUserExtension().
+Definition at line 101 of file Object\+Extensions.\+cpp.
+
+
+
+References D\+D4hep\+::\+Object\+Extensions\+::\+Entry\+::destruct, e, extension\+Map, extensions, and D\+D4hep\+::type\+Name().
+
+
+
+Referenced by \+\_\+delete(), and D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+Imp\+::remove\+User\+Extension().
+
+
 
 \subsection{Member Data Documentation}
-\hypertarget{class_d_d4hep_1_1_object_extensions_a6f517da18e14dc6f4de73a48744e8262}{
-\index{DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}!extensionMap@{extensionMap}}
-\index{extensionMap@{extensionMap}!DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}}
-\subsubsection[{extensionMap}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ExtensionMap}$\ast$ {\bf DD4hep::ObjectExtensions::extensionMap}}}
-\label{class_d_d4hep_1_1_object_extensions_a6f517da18e14dc6f4de73a48744e8262}
+\hypertarget{class_d_d4hep_1_1_object_extensions_a6f517da18e14dc6f4de73a48744e8262}{}\label{class_d_d4hep_1_1_object_extensions_a6f517da18e14dc6f4de73a48744e8262} 
+\index{D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}!extension\+Map@{extension\+Map}}
+\index{extension\+Map@{extension\+Map}!D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}}
+\subsubsection{\texorpdfstring{extension\+Map}{extensionMap}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_object_extensions_a22c0e42d5fdc9f3fda39c2c3bec14341}{Extension\+Map}$\ast$ D\+D4hep\+::\+Object\+Extensions\+::extension\+Map}
+
 
 
 Pointer to the extension map. 
 
-Definition at line 50 of file ObjectExtensions.h.
 
-Referenced by addExtension(), clear(), copyFrom(), ObjectExtensions(), and removeExtension().\hypertarget{class_d_d4hep_1_1_object_extensions_ac96afa01e09dec7a795c88b67c054007}{
-\index{DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}!extensions@{extensions}}
-\index{extensions@{extensions}!DD4hep::ObjectExtensions@{DD4hep::ObjectExtensions}}
-\subsubsection[{extensions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Extensions} {\bf DD4hep::ObjectExtensions::extensions}}}
-\label{class_d_d4hep_1_1_object_extensions_ac96afa01e09dec7a795c88b67c054007}
+
+Definition at line 50 of file Object\+Extensions.\+h.
+
+
+
+Referenced by add\+Extension(), clear(), copy\+From(), Object\+Extensions(), and remove\+Extension().
+
+\hypertarget{class_d_d4hep_1_1_object_extensions_ac96afa01e09dec7a795c88b67c054007}{}\label{class_d_d4hep_1_1_object_extensions_ac96afa01e09dec7a795c88b67c054007} 
+\index{D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}!extensions@{extensions}}
+\index{extensions@{extensions}!D\+D4hep\+::\+Object\+Extensions@{D\+D4hep\+::\+Object\+Extensions}}
+\subsubsection{\texorpdfstring{extensions}{extensions}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_object_extensions_a882c1e22567a450f60d83eb735dd3532}{Extensions} D\+D4hep\+::\+Object\+Extensions\+::extensions}
+
 
 
 The extensions object. 
 
-Definition at line 48 of file ObjectExtensions.h.
 
-Referenced by addExtension(), clear(), DD4hep::Geometry::DetElementObject::clone(), copyFrom(), extension(), move(), and removeExtension().
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+Definition at line 48 of file Object\+Extensions.\+h.
+
+
+
+Referenced by add\+Extension(), clear(), D\+D4hep\+::\+Geometry\+::\+Det\+Element\+Object\+::clone(), copy\+From(), extension(), move(), and remove\+Extension().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_object_extensions_8h}{ObjectExtensions.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_object_extensions_8cpp}{ObjectExtensions.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/include/\+D\+D4hep/\hyperlink{_object_extensions_8h}{Object\+Extensions.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\hyperlink{_object_extensions_8cpp}{Object\+Extensions.\+cpp}\end{DoxyCompactItemize}

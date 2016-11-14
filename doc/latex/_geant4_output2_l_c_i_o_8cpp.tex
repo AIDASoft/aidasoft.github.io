@@ -1,49 +1,61 @@
-\hypertarget{_geant4_output2_l_c_i_o_8cpp}{
-\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/lcio/Geant4Output2LCIO.cpp File Reference}
-\label{_geant4_output2_l_c_i_o_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/lcio/Geant4Output2LCIO.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/lcio/Geant4Output2LCIO.cpp}}
-}
-{\ttfamily \#include \char`\"{}DD4hep/VolumeManager.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4OutputAction.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4Threading.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4AutoLock.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/LCDD.h\char`\"{}}\par
-{\ttfamily \#include $<$G4Version.hh$>$}\par
-{\ttfamily \#include \char`\"{}lcio.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}IO/LCWriter.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}IMPL/LCEventImpl.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}IMPL/LCCollectionVec.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}EVENT/LCParameters.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/InstanceCount.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4HitCollection.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4DataConversion.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4Context.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4Particle.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4Data.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4Action.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4ParticleDefinition.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4VProcess.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4Event.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4Run.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}IMPL/LCRunHeaderImpl.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}IMPL/ClusterImpl.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}IMPL/SimTrackerHitImpl.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}IMPL/SimCalorimeterHitImpl.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}IMPL/MCParticleImpl.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}UTIL/ILDConf.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Factories.h\char`\"{}}\par
+\hypertarget{_geant4_output2_l_c_i_o_8cpp}{}\section{/afs/cern.ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/lcio/\+Geant4\+Output2\+L\+C\+IO.cpp File Reference}
+\label{_geant4_output2_l_c_i_o_8cpp}\index{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/lcio/\+Geant4\+Output2\+L\+C\+I\+O.\+cpp@{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/lcio/\+Geant4\+Output2\+L\+C\+I\+O.\+cpp}}
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Volume\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Output\+Action.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Threading.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Auto\+Lock.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+L\+C\+D\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$G4\+Version.\+hh$>$}\newline
+{\ttfamily \#include \char`\"{}lcio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}I\+O/\+L\+C\+Writer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}I\+M\+P\+L/\+L\+C\+Event\+Impl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}I\+M\+P\+L/\+L\+C\+Collection\+Vec.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}E\+V\+E\+N\+T/\+L\+C\+Parameters.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Instance\+Count.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Hit\+Collection.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Data\+Conversion.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Context.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Particle.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Data.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Action.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Particle\+Definition.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+V\+Process.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Event.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Run.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}I\+M\+P\+L/\+L\+C\+Run\+Header\+Impl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}I\+M\+P\+L/\+Cluster\+Impl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}I\+M\+P\+L/\+Sim\+Tracker\+Hit\+Impl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}I\+M\+P\+L/\+Sim\+Calorimeter\+Hit\+Impl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}I\+M\+P\+L/\+M\+C\+Particle\+Impl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}U\+T\+I\+L/\+I\+L\+D\+Conf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Factories.\+h\char`\"{}}\newline
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output2_l_c_i_o}{DD4hep::Simulation::Geant4Output2LCIO}
-\begin{DoxyCompactList}\small\item\em Base class to output Geant4 event data to media. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output2_l_c_i_o}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Output2\+L\+C\+IO}
+\begin{DoxyCompactList}\small\item\em Base class to output Geant4 event data to media. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
-namespace \hyperlink{namespace_d_d4hep}{DD4hep}
+ \hyperlink{namespace_d_d4hep}{D\+D4hep}
+\begin{DoxyCompactList}\small\item\em Namespace for the A\+I\+DA detector description toolkit. \end{DoxyCompactList}\item 
+ \hyperlink{namespace_d_d4hep_1_1_simulation}{D\+D4hep\+::\+Simulation}
+\begin{DoxyCompactList}\small\item\em Namespace for the Geant4 based simulation part of the A\+I\+DA detector description toolkit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_geant4_output2_l_c_i_o_8cpp_af20464640874f7632520d014b5217ef4}{D\+D4\+H\+E\+P\+\_\+\+D\+D\+G4\+\_\+\+G\+E\+A\+N\+T4\+O\+U\+T\+P\+U\+T2\+L\+C\+I\+O\+\_\+H}
+\end{DoxyCompactItemize}
 
 
-\begin{DoxyCompactList}\small\item\em Namespace for the AIDA detector description toolkit. \item\end{DoxyCompactList}\item 
-namespace \hyperlink{namespace_d_d4hep_1_1_simulation}{DD4hep::Simulation}
+\subsection{Macro Definition Documentation}
+\hypertarget{_geant4_output2_l_c_i_o_8cpp_af20464640874f7632520d014b5217ef4}{}\label{_geant4_output2_l_c_i_o_8cpp_af20464640874f7632520d014b5217ef4} 
+\index{Geant4\+Output2\+L\+C\+I\+O.\+cpp@{Geant4\+Output2\+L\+C\+I\+O.\+cpp}!D\+D4\+H\+E\+P\+\_\+\+D\+D\+G4\+\_\+\+G\+E\+A\+N\+T4\+O\+U\+T\+P\+U\+T2\+L\+C\+I\+O\+\_\+H@{D\+D4\+H\+E\+P\+\_\+\+D\+D\+G4\+\_\+\+G\+E\+A\+N\+T4\+O\+U\+T\+P\+U\+T2\+L\+C\+I\+O\+\_\+H}}
+\index{D\+D4\+H\+E\+P\+\_\+\+D\+D\+G4\+\_\+\+G\+E\+A\+N\+T4\+O\+U\+T\+P\+U\+T2\+L\+C\+I\+O\+\_\+H@{D\+D4\+H\+E\+P\+\_\+\+D\+D\+G4\+\_\+\+G\+E\+A\+N\+T4\+O\+U\+T\+P\+U\+T2\+L\+C\+I\+O\+\_\+H}!Geant4\+Output2\+L\+C\+I\+O.\+cpp@{Geant4\+Output2\+L\+C\+I\+O.\+cpp}}
+\subsubsection{\texorpdfstring{D\+D4\+H\+E\+P\+\_\+\+D\+D\+G4\+\_\+\+G\+E\+A\+N\+T4\+O\+U\+T\+P\+U\+T2\+L\+C\+I\+O\+\_\+H}{DD4HEP\_DDG4\_GEANT4OUTPUT2LCIO\_H}}
+{\footnotesize\ttfamily \#define D\+D4\+H\+E\+P\+\_\+\+D\+D\+G4\+\_\+\+G\+E\+A\+N\+T4\+O\+U\+T\+P\+U\+T2\+L\+C\+I\+O\+\_\+H}
 
 
-\begin{DoxyCompactList}\small\item\em Namespace for the Geant4 based simulation part of the AIDA detector description toolkit. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+Definition at line 16 of file Geant4\+Output2\+L\+C\+I\+O.\+cpp.
+

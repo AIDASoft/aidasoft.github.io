@@ -1,662 +1,901 @@
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data}{
-\section{DD4hep::Alignments::AlignmentData Class Reference}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data}\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data}{}\section{D\+D4hep\+:\+:Alignments\+:\+:Alignment\+Data Class Reference}
+\label{class_d_d4hep_1_1_alignments_1_1_alignment_data}\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
 
 
 Derived condition data-\/object definition.  
 
 
-{\ttfamily \#include $<$AlignmentData.h$>$}Inheritance diagram for DD4hep::Alignments::AlignmentData::\begin{figure}[H]
+
+
+{\ttfamily \#include $<$Alignment\+Data.\+h$>$}
+
+Inheritance diagram for D\+D4hep\+:\+:Alignments\+:\+:Alignment\+Data\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2cm]{class_d_d4hep_1_1_alignments_1_1_alignment_data}
+\includegraphics[height=2.000000cm]{class_d_d4hep_1_1_alignments_1_1_alignment_data}
 \end{center}
 \end{figure}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357}{AlignmentFlags} \{ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a39cb02a2920b8bdb2eedc7acb4850cb0}{HAVE\_\-NONE} =  0, 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a5313d8f5443b29d79e0a7224e792c77b}{HAVE\_\-WORLD\_\-TRAFO} =  1$<$$<$0, 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a826ef227187d7394b7b3e25de2a5b726}{HAVE\_\-PARENT\_\-TRAFO} =  1$<$$<$1, 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a2dad19301a6794d458d3fc73c39f19cd}{HAVE\_\-OTHER} =  1$<$$<$31
+enum \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357}{Alignment\+Flags} \{ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a39cb02a2920b8bdb2eedc7acb4850cb0}{H\+A\+V\+E\+\_\+\+N\+O\+NE} = 0, 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a5313d8f5443b29d79e0a7224e792c77b}{H\+A\+V\+E\+\_\+\+W\+O\+R\+L\+D\+\_\+\+T\+R\+A\+FO} = 1$<$$<$0, 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a826ef227187d7394b7b3e25de2a5b726}{H\+A\+V\+E\+\_\+\+P\+A\+R\+E\+N\+T\+\_\+\+T\+R\+A\+FO} = 1$<$$<$1, 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a2dad19301a6794d458d3fc73c39f19cd}{H\+A\+V\+E\+\_\+\+O\+T\+H\+ER} = 1$<$$<$31
  \}
 \item 
-enum \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bb}{DataType} \{ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bba048ee5fdb4e1df4ca23db3fe394b257b}{IDEAL} =  1$<$$<$10, 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bbaa17c5923f6fe305c0f1f0d99940d8d3a}{SURVEY} =  1$<$$<$11, 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bba35a70b0b654b7c0e05eb913790bd4fdc}{TIME\_\-STAMPED} =  1$<$$<$12
+enum \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bb}{Data\+Type} \{ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bba048ee5fdb4e1df4ca23db3fe394b257b}{I\+D\+E\+AL} = 1$<$$<$10, 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bbaa17c5923f6fe305c0f1f0d99940d8d3a}{S\+U\+R\+V\+EY} = 1$<$$<$11, 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bba35a70b0b654b7c0e05eb913790bd4fdc}{T\+I\+M\+E\+\_\+\+S\+T\+A\+M\+P\+ED} = 1$<$$<$12
  \}
 \item 
-typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Geometry::PlacedVolume} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aab2d43f5a4a4c2163e0a04905306525a}{PlacedVolume}
-\begin{DoxyCompactList}\small\item\em Forward definition of the geometry placement. \item\end{DoxyCompactList}\item 
-typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} $>$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3a667fd798d7523d75accee832d64521}{NodeList}
-\begin{DoxyCompactList}\small\item\em Forward definition of the nodelist leading to the world. \item\end{DoxyCompactList}\item 
-typedef \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta}{Alignments::Delta} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3e67a5cbb3449006e9552b0f7bd98d45}{Delta}
-\begin{DoxyCompactList}\small\item\em Forward definition of the alignment delta data. \item\end{DoxyCompactList}\item 
-typedef unsigned int \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_ab5c31f7e5512ca675be8323bc723b123}{BitMask}
-\begin{DoxyCompactList}\small\item\em Forward declaration of the utility bit mask. \item\end{DoxyCompactList}\item 
-typedef \hyperlink{class_d_d4hep_1_1_reference_bit_mask}{ReferenceBitMask}$<$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_ab5c31f7e5512ca675be8323bc723b123}{BitMask} $>$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a7eb85e9201294a4ae7a3c5fe6d913233}{MaskManipulator}
-\begin{DoxyCompactList}\small\item\em Forward declaration of the utility mask manipulator. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Geometry\+::\+Placed\+Volume} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aab2d43f5a4a4c2163e0a04905306525a}{Placed\+Volume}
+\begin{DoxyCompactList}\small\item\em Forward definition of the geometry placement. \end{DoxyCompactList}\item 
+typedef std\+::vector$<$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aab2d43f5a4a4c2163e0a04905306525a}{Placed\+Volume} $>$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3a667fd798d7523d75accee832d64521}{Node\+List}
+\begin{DoxyCompactList}\small\item\em Forward definition of the nodelist leading to the world. \end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta}{Alignments\+::\+Delta} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3e67a5cbb3449006e9552b0f7bd98d45}{Delta}
+\begin{DoxyCompactList}\small\item\em Forward definition of the alignment delta data. \end{DoxyCompactList}\item 
+typedef unsigned int \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_ab5c31f7e5512ca675be8323bc723b123}{Bit\+Mask}
+\begin{DoxyCompactList}\small\item\em Forward declaration of the utility bit mask. \end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_reference_bit_mask}{Reference\+Bit\+Mask}$<$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_ab5c31f7e5512ca675be8323bc723b123}{Bit\+Mask} $>$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a7eb85e9201294a4ae7a3c5fe6d913233}{Mask\+Manipulator}
+\begin{DoxyCompactList}\small\item\em Forward declaration of the utility mask manipulator. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a0147080f238040fbab7467bb22ade3dc}{AlignmentData} ()
-\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a5bb5d24d5baeef53da5feac655612362}{AlignmentData} (const \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data}{AlignmentData} \&copy)
-\begin{DoxyCompactList}\small\item\em Copy constructor. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a1bbd0f76cea046a48fdeee46396b6e5c}{$\sim$AlignmentData} ()
-\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data}{AlignmentData} \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a52c323f2dd5393ea5d9e77f8df11c6d0}{operator=} (const \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data}{AlignmentData} \&copy)
-\begin{DoxyCompactList}\small\item\em Assignment operator necessary due to copy constructor. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data}{AlignmentData} \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a9149a3648883a4d6d941e9b1270599b4}{data} ()
-\begin{DoxyCompactList}\small\item\em Data accessor for decorator. \item\end{DoxyCompactList}\item 
-bool \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a4ce9a61003981e6c9d39517eda97c5eb}{hasCondition} () const 
-\begin{DoxyCompactList}\small\item\em Accessor if a conditions object is behind. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a88f64b05b945fa57e6fc1ea030d4e2a1}{nominal} () const 
-\begin{DoxyCompactList}\small\item\em Access the ideal/nominal alignment/placement matrix. \item\end{DoxyCompactList}\item 
-const TGeoHMatrix \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_ab650514d7615e907409fa397e43989f7}{worldTransformation} () const 
-\begin{DoxyCompactList}\small\item\em Create cached matrix to transform to world coordinates. \item\end{DoxyCompactList}\item 
-const TGeoHMatrix \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a7a47470d3b311ac1eab5acd888718dbf}{detectorTransformation} () const 
-\begin{DoxyCompactList}\small\item\em Access the alignment/placement matrix with respect to the world. \item\end{DoxyCompactList}\item 
-const Transform3D \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a080a3e23e54dfdef742d4849d9b41b5d}{localToWorld} () const 
-\begin{DoxyCompactList}\small\item\em Access the currently applied alignment/placement matrix. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a84abb7a2397faef2d62cb1378f14e087}{localToWorld} (const Position \&local, Position \&global) const 
-\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the world system. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_ae0c2e7c631c7af81c54a4f75317120aa}{localToWorld} (const Double\_\-t local\mbox{[}3\mbox{]}, Double\_\-t global\mbox{[}3\mbox{]}) const 
-\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the world system. \item\end{DoxyCompactList}\item 
-Position \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_abd5ea2c3e08f510fb326a97eb3ec16bd}{localToWorld} (const Position \&local) const 
-\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the world system. \item\end{DoxyCompactList}\item 
-Position \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a9822d4b558f7c72aabf02ed2af16d2fb}{localToWorld} (const Double\_\-t local\mbox{[}3\mbox{]}) const 
-\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the world system. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_affd38849676e68e49f5455b003d0e9ad}{worldToLocal} (const Position \&global, Position \&local) const 
-\begin{DoxyCompactList}\small\item\em Transformation from world coordinates of the local placed volume coordinates. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aebb62803c8bd116274744701317271a5}{worldToLocal} (const Double\_\-t global\mbox{[}3\mbox{]}, Double\_\-t local\mbox{[}3\mbox{]}) const 
-\begin{DoxyCompactList}\small\item\em Transformation from world coordinates of the local placed volume coordinates. \item\end{DoxyCompactList}\item 
-Position \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_af0dad9165c3564024d6f61cd54209efd}{worldToLocal} (const Position \&global) const 
-\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the world system. \item\end{DoxyCompactList}\item 
-Position \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_af1900a9bf83d09f6719fa698d9db4f52}{worldToLocal} (const Double\_\-t global\mbox{[}3\mbox{]}) const 
-\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the world system. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a21619d7d8890ce83f5275eb3351bf141}{localToDetector} (const Position \&local, Position \&\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_abf7096d1f2d3ed307c361f2d6d03710e}{detector}) const 
-\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the detector system. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a12bb4ad691f7ae0585b177291916cfde}{localToDetector} (const Double\_\-t local\mbox{[}3\mbox{]}, Double\_\-t \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_abf7096d1f2d3ed307c361f2d6d03710e}{detector}\mbox{[}3\mbox{]}) const 
-\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the detector system. \item\end{DoxyCompactList}\item 
-Position \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a62df459217b36f04ddcae69e63cabdc2}{localToDetector} (const Position \&local) const 
-\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the world system. \item\end{DoxyCompactList}\item 
-Position \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_ad3c8fd50d266be9b24501058cddd920e}{localToDetector} (const Double\_\-t local\mbox{[}3\mbox{]}) const 
-\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the world system. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a8b451ea84d324b3c37f6569d6fd86062}{detectorToLocal} (const Position \&\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_abf7096d1f2d3ed307c361f2d6d03710e}{detector}, Position \&local) const 
-\begin{DoxyCompactList}\small\item\em Transformation from detector element coordinates to the local placed volume coordinates. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a09f3122d269494dd949cc20d141b3fd2}{detectorToLocal} (const Double\_\-t \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_abf7096d1f2d3ed307c361f2d6d03710e}{detector}\mbox{[}3\mbox{]}, Double\_\-t local\mbox{[}3\mbox{]}) const 
-\begin{DoxyCompactList}\small\item\em Transformation from detector element coordinates to the local placed volume coordinates. \item\end{DoxyCompactList}\item 
-Position \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aae374197c44e2d8040f3f3f400a95056}{detectorToLocal} (const Position \&\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_abf7096d1f2d3ed307c361f2d6d03710e}{detector}) const 
-\begin{DoxyCompactList}\small\item\em Transformation from detector element coordinates to the local placed volume coordinates. \item\end{DoxyCompactList}\item 
-Position \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aa86d5fc9e8c8046b2d42451f6911794f}{detectorToLocal} (const Double\_\-t det\mbox{[}3\mbox{]}) const 
-\begin{DoxyCompactList}\small\item\em Transformation from detector element coordinates to the local placed volume coordinates. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a0147080f238040fbab7467bb22ade3dc}{Alignment\+Data} ()
+\begin{DoxyCompactList}\small\item\em Standard constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a5bb5d24d5baeef53da5feac655612362}{Alignment\+Data} (const \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data}{Alignment\+Data} \&copy)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a1bbd0f76cea046a48fdeee46396b6e5c}{$\sim$\+Alignment\+Data} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data}{Alignment\+Data} \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a52c323f2dd5393ea5d9e77f8df11c6d0}{operator=} (const \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data}{Alignment\+Data} \&copy)
+\begin{DoxyCompactList}\small\item\em Assignment operator necessary due to copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data}{Alignment\+Data} \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a9149a3648883a4d6d941e9b1270599b4}{data} ()
+\begin{DoxyCompactList}\small\item\em Data accessor for decorator. \end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a6429a147760dfb958e1aea96a6501836}{has\+Condition} () const
+\begin{DoxyCompactList}\small\item\em Accessor if a conditions object is behind. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a1ad26965bc90bc605a93cbee82e9e773}{nominal} () const
+\begin{DoxyCompactList}\small\item\em Access the ideal/nominal alignment/placement matrix. \end{DoxyCompactList}\item 
+const T\+Geo\+H\+Matrix \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a2968ca6560efa496170adacb25f1c476}{world\+Transformation} () const
+\begin{DoxyCompactList}\small\item\em Create cached matrix to transform to world coordinates. \end{DoxyCompactList}\item 
+const T\+Geo\+H\+Matrix \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a0f974ebbad82f5f6af363063b65314d9}{detector\+Transformation} () const
+\begin{DoxyCompactList}\small\item\em Access the alignment/placement matrix with respect to the world. \end{DoxyCompactList}\item 
+const Transform3D \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_af24ecc77fdd725d3ab6a76848594fa95}{local\+To\+World} () const
+\begin{DoxyCompactList}\small\item\em Access the currently applied alignment/placement matrix. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a7e4879bde9e295fcfeb209c9dd721691}{local\+To\+World} (const Position \&local, Position \&global) const
+\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the world system. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aa8538578c348c8324770fbdef86c45fb}{local\+To\+World} (const Double\+\_\+t local\mbox{[}3\mbox{]}, Double\+\_\+t global\mbox{[}3\mbox{]}) const
+\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the world system. \end{DoxyCompactList}\item 
+Position \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a6576f66fc1a7edfa1330a1e176014acf}{local\+To\+World} (const Position \&local) const
+\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the world system. \end{DoxyCompactList}\item 
+Position \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a662ee0cd2932cadb2487e9ddf0f25e1f}{local\+To\+World} (const Double\+\_\+t local\mbox{[}3\mbox{]}) const
+\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the world system. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aa9a06d09e56fd93a48cce689a654884e}{world\+To\+Local} (const Position \&global, Position \&local) const
+\begin{DoxyCompactList}\small\item\em Transformation from world coordinates of the local placed volume coordinates. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_acfd97cb0ade9c1c6cc2a30784686e7ff}{world\+To\+Local} (const Double\+\_\+t global\mbox{[}3\mbox{]}, Double\+\_\+t local\mbox{[}3\mbox{]}) const
+\begin{DoxyCompactList}\small\item\em Transformation from world coordinates of the local placed volume coordinates. \end{DoxyCompactList}\item 
+Position \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a7ffad9495bb924203e294f96f20d9453}{world\+To\+Local} (const Position \&global) const
+\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the world system. \end{DoxyCompactList}\item 
+Position \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_af6e227ee69afb3dbf1d50463c12ec106}{world\+To\+Local} (const Double\+\_\+t global\mbox{[}3\mbox{]}) const
+\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the world system. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a10d03e4422709e54e030a04836f3c08d}{local\+To\+Detector} (const Position \&local, Position \&\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_abf7096d1f2d3ed307c361f2d6d03710e}{detector}) const
+\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the detector system. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_adc80cc9962e0e6209f0c7b9725123d94}{local\+To\+Detector} (const Double\+\_\+t local\mbox{[}3\mbox{]}, Double\+\_\+t \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_abf7096d1f2d3ed307c361f2d6d03710e}{detector}\mbox{[}3\mbox{]}) const
+\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the detector system. \end{DoxyCompactList}\item 
+Position \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a686b7c5193c1d01d812b6d72f9a73c83}{local\+To\+Detector} (const Position \&local) const
+\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the world system. \end{DoxyCompactList}\item 
+Position \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aa3d9d7b8ae5bf3cc2916a2fbd4d12cc4}{local\+To\+Detector} (const Double\+\_\+t local\mbox{[}3\mbox{]}) const
+\begin{DoxyCompactList}\small\item\em Transformation from local coordinates of the placed volume to the world system. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_ae82379c6de7ca0295a39a876303377b5}{detector\+To\+Local} (const Position \&\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_abf7096d1f2d3ed307c361f2d6d03710e}{detector}, Position \&local) const
+\begin{DoxyCompactList}\small\item\em Transformation from detector element coordinates to the local placed volume coordinates. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3cd2f3d20d1a277a1145a3257f2badf1}{detector\+To\+Local} (const Double\+\_\+t \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_abf7096d1f2d3ed307c361f2d6d03710e}{detector}\mbox{[}3\mbox{]}, Double\+\_\+t local\mbox{[}3\mbox{]}) const
+\begin{DoxyCompactList}\small\item\em Transformation from detector element coordinates to the local placed volume coordinates. \end{DoxyCompactList}\item 
+Position \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a50c1fafca870e727b494ac639a4ba419}{detector\+To\+Local} (const Position \&\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_abf7096d1f2d3ed307c361f2d6d03710e}{detector}) const
+\begin{DoxyCompactList}\small\item\em Transformation from detector element coordinates to the local placed volume coordinates. \end{DoxyCompactList}\item 
+Position \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_acb3d2cf0447ab891e095afe0c33dc388}{detector\+To\+Local} (const Double\+\_\+t det\mbox{[}3\mbox{]}) const
+\begin{DoxyCompactList}\small\item\em Transformation from detector element coordinates to the local placed volume coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_delta}{Delta} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_add24423a741867fc3d3954ee65ec3636}{delta}
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} changes. \item\end{DoxyCompactList}\item 
-TGeoHMatrix \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a87234aee58d8e087377b029de83ebcd8}{worldTrafo}
-\begin{DoxyCompactList}\small\item\em Intermediate buffer to store the transformation to the world coordination system. \item\end{DoxyCompactList}\item 
-TGeoHMatrix \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a7c01e8657259af3afa97d01c4d7d1733}{detectorTrafo}
-\begin{DoxyCompactList}\small\item\em Intermediate buffer to store the transformation to the parent detector element. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3a667fd798d7523d75accee832d64521}{NodeList} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_ae7f0952d17a85f1061aa0b2967aff0ab}{nodes}
-\begin{DoxyCompactList}\small\item\em The list of TGeoNodes (physical placements). \item\end{DoxyCompactList}\item 
-Transform3D \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a468b2dee055c6e6894ae65d37a53712e}{trToWorld}
-\begin{DoxyCompactList}\small\item\em Transformation from volume to the world. \item\end{DoxyCompactList}\item 
-\hyperlink{namespace_d_d4hep_a21dd977310ff183f61ca6ae14b59a989}{DetElement} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_abf7096d1f2d3ed307c361f2d6d03710e}{detector}
-\begin{DoxyCompactList}\small\item\em Reference to the next hosting detector element. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a0da8f92652a64d0ca69a1c884bd5b034}{placement}
-\begin{DoxyCompactList}\small\item\em The subdetector placement corresponding to the actual detector element's volume. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_handle}{Ref\_\-t} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aab00f6e7c9ac1f261f68440ade585cbb}{condition}
-\begin{DoxyCompactList}\small\item\em Reference to the original condition object (May not be present!). \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_ab5c31f7e5512ca675be8323bc723b123}{BitMask} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a49383dd1e10e850bfeb455440439dec2}{flag}
-\begin{DoxyCompactList}\small\item\em Flag to remember internally calculated quatities. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3e67a5cbb3449006e9552b0f7bd98d45}{Delta} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_add24423a741867fc3d3954ee65ec3636}{delta}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} changes. \end{DoxyCompactList}\item 
+T\+Geo\+H\+Matrix \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a87234aee58d8e087377b029de83ebcd8}{world\+Trafo}
+\begin{DoxyCompactList}\small\item\em Intermediate buffer to store the transformation to the world coordination system. \end{DoxyCompactList}\item 
+T\+Geo\+H\+Matrix \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a7c01e8657259af3afa97d01c4d7d1733}{detector\+Trafo}
+\begin{DoxyCompactList}\small\item\em Intermediate buffer to store the transformation to the parent detector element. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3a667fd798d7523d75accee832d64521}{Node\+List} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_ae7f0952d17a85f1061aa0b2967aff0ab}{nodes}
+\begin{DoxyCompactList}\small\item\em The list of T\+Geo\+Nodes (physical placements) \end{DoxyCompactList}\item 
+Transform3D \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a468b2dee055c6e6894ae65d37a53712e}{tr\+To\+World}
+\begin{DoxyCompactList}\small\item\em Transformation from volume to the world. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_abf7096d1f2d3ed307c361f2d6d03710e}{detector}
+\begin{DoxyCompactList}\small\item\em Reference to the next hosting detector element. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aab2d43f5a4a4c2163e0a04905306525a}{Placed\+Volume} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a0da8f92652a64d0ca69a1c884bd5b034}{placement}
+\begin{DoxyCompactList}\small\item\em The subdetector placement corresponding to the actual detector element\textquotesingle{}s volume. \end{DoxyCompactList}\item 
+\hyperlink{group___d_d4_h_e_p___g_e_o_m_e_t_r_y_ga40af83be6718bb8828a3d83dc7f8c930}{Ref\+\_\+t} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aab00f6e7c9ac1f261f68440ade585cbb}{condition}
+\begin{DoxyCompactList}\small\item\em Reference to the original condition object (May not be present!) \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_ab5c31f7e5512ca675be8323bc723b123}{Bit\+Mask} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a49383dd1e10e850bfeb455440439dec2}{flag}
+\begin{DoxyCompactList}\small\item\em Flag to remember internally calculated quatities. \end{DoxyCompactList}\item 
 unsigned int \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a52652c8211546dca391a248a6f4c422a}{magic}
-\begin{DoxyCompactList}\small\item\em Magic word to verify object if necessary. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Magic word to verify object if necessary. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Derived condition data-\/object definition. \begin{DoxyAuthor}{Author}
-M.Frank 
+Derived condition data-\/object definition. 
+
+\begin{DoxyAuthor}{Author}
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
-Definition at line 107 of file AlignmentData.h.
+Definition at line 107 of file Alignment\+Data.\+h.
+
+
 
 \subsection{Member Typedef Documentation}
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_ab5c31f7e5512ca675be8323bc723b123}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!BitMask@{BitMask}}
-\index{BitMask@{BitMask}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{BitMask}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf DD4hep::Alignments::AlignmentData::BitMask}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_ab5c31f7e5512ca675be8323bc723b123}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_ab5c31f7e5512ca675be8323bc723b123}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_ab5c31f7e5512ca675be8323bc723b123} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!Bit\+Mask@{Bit\+Mask}}
+\index{Bit\+Mask@{Bit\+Mask}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{Bit\+Mask}{BitMask}}
+{\footnotesize\ttfamily typedef unsigned int \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_ab5c31f7e5512ca675be8323bc723b123}{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::\+Bit\+Mask}}
+
 
 
 Forward declaration of the utility bit mask. 
 
-Definition at line 117 of file AlignmentData.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3e67a5cbb3449006e9552b0f7bd98d45}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!Delta@{Delta}}
-\index{Delta@{Delta}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{Delta}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Alignments::Delta} {\bf DD4hep::Alignments::AlignmentData::Delta}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3e67a5cbb3449006e9552b0f7bd98d45}
+
+
+Definition at line 117 of file Alignment\+Data.\+h.
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3e67a5cbb3449006e9552b0f7bd98d45}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3e67a5cbb3449006e9552b0f7bd98d45} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!Delta@{Delta}}
+\index{Delta@{Delta}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{Delta}{Delta}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_alignments_1_1_delta}{Alignments\+::\+Delta} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3e67a5cbb3449006e9552b0f7bd98d45}{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::\+Delta}}
+
 
 
 Forward definition of the alignment delta data. 
 
-Definition at line 115 of file AlignmentData.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a7eb85e9201294a4ae7a3c5fe6d913233}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!MaskManipulator@{MaskManipulator}}
-\index{MaskManipulator@{MaskManipulator}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{MaskManipulator}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf ReferenceBitMask}$<${\bf BitMask}$>$ {\bf DD4hep::Alignments::AlignmentData::MaskManipulator}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a7eb85e9201294a4ae7a3c5fe6d913233}
+
+
+Definition at line 115 of file Alignment\+Data.\+h.
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a7eb85e9201294a4ae7a3c5fe6d913233}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a7eb85e9201294a4ae7a3c5fe6d913233} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!Mask\+Manipulator@{Mask\+Manipulator}}
+\index{Mask\+Manipulator@{Mask\+Manipulator}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{Mask\+Manipulator}{MaskManipulator}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_reference_bit_mask}{Reference\+Bit\+Mask}$<$\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_ab5c31f7e5512ca675be8323bc723b123}{Bit\+Mask}$>$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a7eb85e9201294a4ae7a3c5fe6d913233}{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::\+Mask\+Manipulator}}
+
 
 
 Forward declaration of the utility mask manipulator. 
 
-Definition at line 119 of file AlignmentData.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3a667fd798d7523d75accee832d64521}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!NodeList@{NodeList}}
-\index{NodeList@{NodeList}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{NodeList}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf PlacedVolume}$>$ {\bf DD4hep::Alignments::AlignmentData::NodeList}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3a667fd798d7523d75accee832d64521}
+
+
+Definition at line 119 of file Alignment\+Data.\+h.
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3a667fd798d7523d75accee832d64521}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3a667fd798d7523d75accee832d64521} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!Node\+List@{Node\+List}}
+\index{Node\+List@{Node\+List}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{Node\+List}{NodeList}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aab2d43f5a4a4c2163e0a04905306525a}{Placed\+Volume}$>$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3a667fd798d7523d75accee832d64521}{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::\+Node\+List}}
+
 
 
 Forward definition of the nodelist leading to the world. 
 
-Definition at line 113 of file AlignmentData.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_aab2d43f5a4a4c2163e0a04905306525a}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!PlacedVolume@{PlacedVolume}}
-\index{PlacedVolume@{PlacedVolume}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{PlacedVolume}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::PlacedVolume} {\bf DD4hep::Alignments::AlignmentData::PlacedVolume}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_aab2d43f5a4a4c2163e0a04905306525a}
+
+
+Definition at line 113 of file Alignment\+Data.\+h.
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_aab2d43f5a4a4c2163e0a04905306525a}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_aab2d43f5a4a4c2163e0a04905306525a} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!Placed\+Volume@{Placed\+Volume}}
+\index{Placed\+Volume@{Placed\+Volume}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{Placed\+Volume}{PlacedVolume}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Geometry\+::\+Placed\+Volume} \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aab2d43f5a4a4c2163e0a04905306525a}{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::\+Placed\+Volume}}
+
 
 
 Forward definition of the geometry placement. 
 
-Definition at line 111 of file AlignmentData.h.
+
+
+Definition at line 111 of file Alignment\+Data.\+h.
+
+
 
 \subsection{Member Enumeration Documentation}
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!AlignmentFlags@{AlignmentFlags}}
-\index{AlignmentFlags@{AlignmentFlags}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{AlignmentFlags}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DD4hep::Alignments::AlignmentData::AlignmentFlags}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357}
-\begin{Desc}
-\item[Enumerator: ]\par
-\begin{description}
-\index{HAVE\_\-NONE@{HAVE\_\-NONE}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!HAVE\_\-NONE@{HAVE\_\-NONE}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a39cb02a2920b8bdb2eedc7acb4850cb0}{
-HAVE\_\-NONE}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a39cb02a2920b8bdb2eedc7acb4850cb0}
-}]\index{HAVE\_\-WORLD\_\-TRAFO@{HAVE\_\-WORLD\_\-TRAFO}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!HAVE\_\-WORLD\_\-TRAFO@{HAVE\_\-WORLD\_\-TRAFO}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a5313d8f5443b29d79e0a7224e792c77b}{
-HAVE\_\-WORLD\_\-TRAFO}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a5313d8f5443b29d79e0a7224e792c77b}
-}]\index{HAVE\_\-PARENT\_\-TRAFO@{HAVE\_\-PARENT\_\-TRAFO}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!HAVE\_\-PARENT\_\-TRAFO@{HAVE\_\-PARENT\_\-TRAFO}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a826ef227187d7394b7b3e25de2a5b726}{
-HAVE\_\-PARENT\_\-TRAFO}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a826ef227187d7394b7b3e25de2a5b726}
-}]\index{HAVE\_\-OTHER@{HAVE\_\-OTHER}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!HAVE\_\-OTHER@{HAVE\_\-OTHER}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a2dad19301a6794d458d3fc73c39f19cd}{
-HAVE\_\-OTHER}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a2dad19301a6794d458d3fc73c39f19cd}
-}]\end{description}
-\end{Desc}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!Alignment\+Flags@{Alignment\+Flags}}
+\index{Alignment\+Flags@{Alignment\+Flags}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{Alignment\+Flags}{AlignmentFlags}}
+{\footnotesize\ttfamily enum \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357}{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::\+Alignment\+Flags}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+A\+V\+E\+\_\+\+N\+O\+NE@{H\+A\+V\+E\+\_\+\+N\+O\+NE}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!H\+A\+V\+E\+\_\+\+N\+O\+NE@{H\+A\+V\+E\+\_\+\+N\+O\+NE}}}\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a39cb02a2920b8bdb2eedc7acb4850cb0}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a39cb02a2920b8bdb2eedc7acb4850cb0} 
+H\+A\+V\+E\+\_\+\+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+A\+V\+E\+\_\+\+W\+O\+R\+L\+D\+\_\+\+T\+R\+A\+FO@{H\+A\+V\+E\+\_\+\+W\+O\+R\+L\+D\+\_\+\+T\+R\+A\+FO}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!H\+A\+V\+E\+\_\+\+W\+O\+R\+L\+D\+\_\+\+T\+R\+A\+FO@{H\+A\+V\+E\+\_\+\+W\+O\+R\+L\+D\+\_\+\+T\+R\+A\+FO}}}\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a5313d8f5443b29d79e0a7224e792c77b}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a5313d8f5443b29d79e0a7224e792c77b} 
+H\+A\+V\+E\+\_\+\+W\+O\+R\+L\+D\+\_\+\+T\+R\+A\+FO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+A\+V\+E\+\_\+\+P\+A\+R\+E\+N\+T\+\_\+\+T\+R\+A\+FO@{H\+A\+V\+E\+\_\+\+P\+A\+R\+E\+N\+T\+\_\+\+T\+R\+A\+FO}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!H\+A\+V\+E\+\_\+\+P\+A\+R\+E\+N\+T\+\_\+\+T\+R\+A\+FO@{H\+A\+V\+E\+\_\+\+P\+A\+R\+E\+N\+T\+\_\+\+T\+R\+A\+FO}}}\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a826ef227187d7394b7b3e25de2a5b726}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a826ef227187d7394b7b3e25de2a5b726} 
+H\+A\+V\+E\+\_\+\+P\+A\+R\+E\+N\+T\+\_\+\+T\+R\+A\+FO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+A\+V\+E\+\_\+\+O\+T\+H\+ER@{H\+A\+V\+E\+\_\+\+O\+T\+H\+ER}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!H\+A\+V\+E\+\_\+\+O\+T\+H\+ER@{H\+A\+V\+E\+\_\+\+O\+T\+H\+ER}}}\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a2dad19301a6794d458d3fc73c39f19cd}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3fb06356abe173269ebc8fd920758357a2dad19301a6794d458d3fc73c39f19cd} 
+H\+A\+V\+E\+\_\+\+O\+T\+H\+ER&\\
+\hline
+
+\end{DoxyEnumFields}
 
 
+Definition at line 122 of file Alignment\+Data.\+h.
 
-Definition at line 122 of file AlignmentData.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bb}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!DataType@{DataType}}
-\index{DataType@{DataType}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{DataType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DD4hep::Alignments::AlignmentData::DataType}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bb}
-\begin{Desc}
-\item[Enumerator: ]\par
-\begin{description}
-\index{IDEAL@{IDEAL}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!IDEAL@{IDEAL}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bba048ee5fdb4e1df4ca23db3fe394b257b}{
-IDEAL}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bba048ee5fdb4e1df4ca23db3fe394b257b}
-}]\index{SURVEY@{SURVEY}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!SURVEY@{SURVEY}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bbaa17c5923f6fe305c0f1f0d99940d8d3a}{
-SURVEY}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bbaa17c5923f6fe305c0f1f0d99940d8d3a}
-}]\index{TIME\_\-STAMPED@{TIME\_\-STAMPED}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!TIME\_\-STAMPED@{TIME\_\-STAMPED}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bba35a70b0b654b7c0e05eb913790bd4fdc}{
-TIME\_\-STAMPED}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bba35a70b0b654b7c0e05eb913790bd4fdc}
-}]\end{description}
-\end{Desc}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bb}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bb} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!Data\+Type@{Data\+Type}}
+\index{Data\+Type@{Data\+Type}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{Data\+Type}{DataType}}
+{\footnotesize\ttfamily enum \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bb}{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::\+Data\+Type}}
 
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+D\+E\+AL@{I\+D\+E\+AL}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!I\+D\+E\+AL@{I\+D\+E\+AL}}}\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bba048ee5fdb4e1df4ca23db3fe394b257b}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bba048ee5fdb4e1df4ca23db3fe394b257b} 
+I\+D\+E\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+U\+R\+V\+EY@{S\+U\+R\+V\+EY}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!S\+U\+R\+V\+EY@{S\+U\+R\+V\+EY}}}\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bbaa17c5923f6fe305c0f1f0d99940d8d3a}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bbaa17c5923f6fe305c0f1f0d99940d8d3a} 
+S\+U\+R\+V\+EY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+M\+E\+\_\+\+S\+T\+A\+M\+P\+ED@{T\+I\+M\+E\+\_\+\+S\+T\+A\+M\+P\+ED}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!T\+I\+M\+E\+\_\+\+S\+T\+A\+M\+P\+ED@{T\+I\+M\+E\+\_\+\+S\+T\+A\+M\+P\+ED}}}\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bba35a70b0b654b7c0e05eb913790bd4fdc}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_aaa782eebf5973a2c4e62065aee0fb7bba35a70b0b654b7c0e05eb913790bd4fdc} 
+T\+I\+M\+E\+\_\+\+S\+T\+A\+M\+P\+ED&\\
+\hline
+
+\end{DoxyEnumFields}
 
 
-Definition at line 128 of file AlignmentData.h.
+Definition at line 128 of file Alignment\+Data.\+h.
+
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a0147080f238040fbab7467bb22ade3dc}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!AlignmentData@{AlignmentData}}
-\index{AlignmentData@{AlignmentData}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{AlignmentData}]{\setlength{\rightskip}{0pt plus 5cm}AlignmentData::AlignmentData ()}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a0147080f238040fbab7467bb22ade3dc}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a0147080f238040fbab7467bb22ade3dc}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a0147080f238040fbab7467bb22ade3dc} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!Alignment\+Data@{Alignment\+Data}}
+\index{Alignment\+Data@{Alignment\+Data}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{Alignment\+Data()}{AlignmentData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Alignment\+Data\+::\+Alignment\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 
 
 Standard constructor. 
 
-Definition at line 70 of file AlignmentData.cpp.
 
-References DD4hep::InstanceCount::increment().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a5bb5d24d5baeef53da5feac655612362}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!AlignmentData@{AlignmentData}}
-\index{AlignmentData@{AlignmentData}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{AlignmentData}]{\setlength{\rightskip}{0pt plus 5cm}AlignmentData::AlignmentData (const {\bf AlignmentData} \& {\em copy})}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a5bb5d24d5baeef53da5feac655612362}
+
+Definition at line 70 of file Alignment\+Data.\+cpp.
+
+
+
+References D\+D4hep\+::\+Instance\+Count\+::increment().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a5bb5d24d5baeef53da5feac655612362}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a5bb5d24d5baeef53da5feac655612362} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!Alignment\+Data@{Alignment\+Data}}
+\index{Alignment\+Data@{Alignment\+Data}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{Alignment\+Data()}{AlignmentData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Alignment\+Data\+::\+Alignment\+Data (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data}{Alignment\+Data} \&}]{copy }\end{DoxyParamCaption})}
+
 
 
 Copy constructor. 
 
-Definition at line 77 of file AlignmentData.cpp.
 
-References DD4hep::InstanceCount::increment().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a1bbd0f76cea046a48fdeee46396b6e5c}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!$\sim$AlignmentData@{$\sim$AlignmentData}}
-\index{$\sim$AlignmentData@{$\sim$AlignmentData}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{$\sim$AlignmentData}]{\setlength{\rightskip}{0pt plus 5cm}AlignmentData::$\sim$AlignmentData ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a1bbd0f76cea046a48fdeee46396b6e5c}
+
+Definition at line 77 of file Alignment\+Data.\+cpp.
+
+
+
+References D\+D4hep\+::\+Instance\+Count\+::increment().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a1bbd0f76cea046a48fdeee46396b6e5c}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a1bbd0f76cea046a48fdeee46396b6e5c} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!````~Alignment\+Data@{$\sim$\+Alignment\+Data}}
+\index{````~Alignment\+Data@{$\sim$\+Alignment\+Data}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{$\sim$\+Alignment\+Data()}{~AlignmentData()}}
+{\footnotesize\ttfamily Alignment\+Data\+::$\sim$\+Alignment\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Default destructor. 
 
-Definition at line 86 of file AlignmentData.cpp.
 
-References DD4hep::InstanceCount::decrement().
+
+Definition at line 86 of file Alignment\+Data.\+cpp.
+
+
+
+References D\+D4hep\+::\+Instance\+Count\+::decrement().
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a9149a3648883a4d6d941e9b1270599b4}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!data@{data}}
-\index{data@{data}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf AlignmentData}\& DD4hep::Alignments::AlignmentData::data ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a9149a3648883a4d6d941e9b1270599b4}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a9149a3648883a4d6d941e9b1270599b4}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a9149a3648883a4d6d941e9b1270599b4} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!data@{data}}
+\index{data@{data}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data}{Alignment\+Data}\& D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Data accessor for decorator. 
 
-Definition at line 165 of file AlignmentData.h.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_aa86d5fc9e8c8046b2d42451f6911794f}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!detectorToLocal@{detectorToLocal}}
-\index{detectorToLocal@{detectorToLocal}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{detectorToLocal}]{\setlength{\rightskip}{0pt plus 5cm}Position DD4hep::Alignments::AlignmentData::detectorToLocal (const Double\_\-t {\em det}\mbox{[}3\mbox{]}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_aa86d5fc9e8c8046b2d42451f6911794f}
 
 
-Transformation from detector element coordinates to the local placed volume coordinates. 
+Definition at line 165 of file Alignment\+Data.\+h.
 
-Definition at line 218 of file AlignmentData.h.
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_ae82379c6de7ca0295a39a876303377b5}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_ae82379c6de7ca0295a39a876303377b5} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!detector\+To\+Local@{detector\+To\+Local}}
+\index{detector\+To\+Local@{detector\+To\+Local}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{detector\+To\+Local()}{detectorToLocal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void Alignment\+Data\+::detector\+To\+Local (\begin{DoxyParamCaption}\item[{const Position \&}]{detector,  }\item[{Position \&}]{local }\end{DoxyParamCaption}) const}
 
-References detectorToLocal().
-
-Referenced by detectorToLocal().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_aae374197c44e2d8040f3f3f400a95056}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!detectorToLocal@{detectorToLocal}}
-\index{detectorToLocal@{detectorToLocal}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{detectorToLocal}]{\setlength{\rightskip}{0pt plus 5cm}Position AlignmentData::detectorToLocal (const Position \& {\em detector}) const}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_aae374197c44e2d8040f3f3f400a95056}
-
-
-Transformation from detector element coordinates to the local placed volume coordinates. Transform a point from local coordinates of the DetElement to global coordinates. 
-
-Definition at line 177 of file AlignmentData.cpp.
-
-References detectorTrafo.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a09f3122d269494dd949cc20d141b3fd2}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!detectorToLocal@{detectorToLocal}}
-\index{detectorToLocal@{detectorToLocal}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{detectorToLocal}]{\setlength{\rightskip}{0pt plus 5cm}void AlignmentData::detectorToLocal (const Double\_\-t {\em detector}\mbox{[}3\mbox{]}, \/  Double\_\-t {\em local}\mbox{[}3\mbox{]}) const}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a09f3122d269494dd949cc20d141b3fd2}
 
 
 Transformation from detector element coordinates to the local placed volume coordinates. 
 
-Definition at line 195 of file AlignmentData.cpp.
+Aliases for the transformation from the next Det\+Element to local coordinates 
 
-References detectorTrafo.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a8b451ea84d324b3c37f6569d6fd86062}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!detectorToLocal@{detectorToLocal}}
-\index{detectorToLocal@{detectorToLocal}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{detectorToLocal}]{\setlength{\rightskip}{0pt plus 5cm}void AlignmentData::detectorToLocal (const Position \& {\em detector}, \/  Position \& {\em local}) const}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a8b451ea84d324b3c37f6569d6fd86062}
+Definition at line 187 of file Alignment\+Data.\+cpp.
 
 
-Transformation from detector element coordinates to the local placed volume coordinates. Aliases for the transformation from the next DetElement to local coordinates 
 
-Definition at line 187 of file AlignmentData.cpp.
+References detector\+Trafo.
 
-References detectorTrafo.
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3cd2f3d20d1a277a1145a3257f2badf1}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3cd2f3d20d1a277a1145a3257f2badf1} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!detector\+To\+Local@{detector\+To\+Local}}
+\index{detector\+To\+Local@{detector\+To\+Local}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{detector\+To\+Local()}{detectorToLocal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void Alignment\+Data\+::detector\+To\+Local (\begin{DoxyParamCaption}\item[{const Double\+\_\+t}]{detector\mbox{[}3\mbox{]},  }\item[{Double\+\_\+t}]{local\mbox{[}3\mbox{]} }\end{DoxyParamCaption}) const}
 
-Referenced by DD4hep::Alignments::AlignmentDecorator$<$ T $>$::detectorToLocal().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a7a47470d3b311ac1eab5acd888718dbf}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!detectorTransformation@{detectorTransformation}}
-\index{detectorTransformation@{detectorTransformation}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{detectorTransformation}]{\setlength{\rightskip}{0pt plus 5cm}const TGeoHMatrix\& DD4hep::Alignments::AlignmentData::detectorTransformation () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a7a47470d3b311ac1eab5acd888718dbf}
+
+
+Transformation from detector element coordinates to the local placed volume coordinates. 
+
+
+
+Definition at line 195 of file Alignment\+Data.\+cpp.
+
+
+
+References detector\+Trafo.
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a50c1fafca870e727b494ac639a4ba419}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a50c1fafca870e727b494ac639a4ba419} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!detector\+To\+Local@{detector\+To\+Local}}
+\index{detector\+To\+Local@{detector\+To\+Local}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{detector\+To\+Local()}{detectorToLocal()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Position Alignment\+Data\+::detector\+To\+Local (\begin{DoxyParamCaption}\item[{const Position \&}]{detector }\end{DoxyParamCaption}) const}
+
+
+
+Transformation from detector element coordinates to the local placed volume coordinates. 
+
+Transform a point from local coordinates of the Det\+Element to global coordinates. 
+
+Definition at line 177 of file Alignment\+Data.\+cpp.
+
+
+
+References detector\+Trafo.
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_acb3d2cf0447ab891e095afe0c33dc388}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_acb3d2cf0447ab891e095afe0c33dc388} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!detector\+To\+Local@{detector\+To\+Local}}
+\index{detector\+To\+Local@{detector\+To\+Local}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{detector\+To\+Local()}{detectorToLocal()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Position D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::detector\+To\+Local (\begin{DoxyParamCaption}\item[{const Double\+\_\+t}]{det\mbox{[}3\mbox{]} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transformation from detector element coordinates to the local placed volume coordinates. 
+
+
+
+Definition at line 218 of file Alignment\+Data.\+h.
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a0f974ebbad82f5f6af363063b65314d9}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a0f974ebbad82f5f6af363063b65314d9} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!detector\+Transformation@{detector\+Transformation}}
+\index{detector\+Transformation@{detector\+Transformation}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{detector\+Transformation()}{detectorTransformation()}}
+{\footnotesize\ttfamily const T\+Geo\+H\+Matrix\& D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::detector\+Transformation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Access the alignment/placement matrix with respect to the world. 
 
-Definition at line 173 of file AlignmentData.h.
 
-References detectorTrafo.
 
-Referenced by computeDelta(), DD4hep::Alignments::AlignmentCondition::detectorTransformation(), DD4hep::Alignments::Alignment::detectorTransformation(), and DD4hep::Alignments::AlignmentDecorator$<$ T $>$::detectorTransformation().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a4ce9a61003981e6c9d39517eda97c5eb}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!hasCondition@{hasCondition}}
-\index{hasCondition@{hasCondition}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{hasCondition}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Alignments::AlignmentData::hasCondition () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a4ce9a61003981e6c9d39517eda97c5eb}
+Definition at line 173 of file Alignment\+Data.\+h.
+
+
+
+Referenced by compute\+Delta().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a6429a147760dfb958e1aea96a6501836}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a6429a147760dfb958e1aea96a6501836} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!has\+Condition@{has\+Condition}}
+\index{has\+Condition@{has\+Condition}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{has\+Condition()}{hasCondition()}}
+{\footnotesize\ttfamily bool D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::has\+Condition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Accessor if a conditions object is behind. 
 
-Definition at line 167 of file AlignmentData.h.
-
-References condition, and DD4hep::Handle$<$ T $>$::isValid().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_ad3c8fd50d266be9b24501058cddd920e}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!localToDetector@{localToDetector}}
-\index{localToDetector@{localToDetector}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{localToDetector}]{\setlength{\rightskip}{0pt plus 5cm}Position DD4hep::Alignments::AlignmentData::localToDetector (const Double\_\-t {\em local}\mbox{[}3\mbox{]}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_ad3c8fd50d266be9b24501058cddd920e}
 
 
-Transformation from local coordinates of the placed volume to the world system. 
-
-Definition at line 207 of file AlignmentData.h.
-
-References localToDetector().
-
-Referenced by localToDetector().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a62df459217b36f04ddcae69e63cabdc2}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!localToDetector@{localToDetector}}
-\index{localToDetector@{localToDetector}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{localToDetector}]{\setlength{\rightskip}{0pt plus 5cm}Position AlignmentData::localToDetector (const Position \& {\em local}) const}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a62df459217b36f04ddcae69e63cabdc2}
+Definition at line 167 of file Alignment\+Data.\+h.
 
 
-Transformation from local coordinates of the placed volume to the world system. Transform a point from local coordinates to the coordinates of the DetElement. 
 
-Definition at line 156 of file AlignmentData.cpp.
+References D\+D4hep\+::\+Handle$<$ T $>$\+::is\+Valid().
 
-References detectorTrafo.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a12bb4ad691f7ae0585b177291916cfde}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!localToDetector@{localToDetector}}
-\index{localToDetector@{localToDetector}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{localToDetector}]{\setlength{\rightskip}{0pt plus 5cm}void AlignmentData::localToDetector (const Double\_\-t {\em local}\mbox{[}3\mbox{]}, \/  Double\_\-t {\em detector}\mbox{[}3\mbox{]}) const}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a12bb4ad691f7ae0585b177291916cfde}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a10d03e4422709e54e030a04836f3c08d}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a10d03e4422709e54e030a04836f3c08d} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!local\+To\+Detector@{local\+To\+Detector}}
+\index{local\+To\+Detector@{local\+To\+Detector}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{local\+To\+Detector()}{localToDetector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void Alignment\+Data\+::local\+To\+Detector (\begin{DoxyParamCaption}\item[{const Position \&}]{local,  }\item[{Position \&}]{detector }\end{DoxyParamCaption}) const}
+
 
 
 Transformation from local coordinates of the placed volume to the detector system. 
 
-Definition at line 172 of file AlignmentData.cpp.
+Aliases for the transformation from local coordinates to the next Det\+Element system 
 
-References detectorTrafo.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a21619d7d8890ce83f5275eb3351bf141}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!localToDetector@{localToDetector}}
-\index{localToDetector@{localToDetector}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{localToDetector}]{\setlength{\rightskip}{0pt plus 5cm}void AlignmentData::localToDetector (const Position \& {\em local}, \/  Position \& {\em detector}) const}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a21619d7d8890ce83f5275eb3351bf141}
+Definition at line 165 of file Alignment\+Data.\+cpp.
 
 
-Transformation from local coordinates of the placed volume to the detector system. Aliases for the transformation from local coordinates to the next DetElement system 
 
-Definition at line 165 of file AlignmentData.cpp.
+References detector\+Trafo.
 
-References detectorTrafo.
-
-Referenced by DD4hep::Alignments::AlignmentDecorator$<$ T $>$::localToDetector().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a9822d4b558f7c72aabf02ed2af16d2fb}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!localToWorld@{localToWorld}}
-\index{localToWorld@{localToWorld}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{localToWorld}]{\setlength{\rightskip}{0pt plus 5cm}Position DD4hep::Alignments::AlignmentData::localToWorld (const Double\_\-t {\em local}\mbox{[}3\mbox{]}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a9822d4b558f7c72aabf02ed2af16d2fb}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_adc80cc9962e0e6209f0c7b9725123d94}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_adc80cc9962e0e6209f0c7b9725123d94} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!local\+To\+Detector@{local\+To\+Detector}}
+\index{local\+To\+Detector@{local\+To\+Detector}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{local\+To\+Detector()}{localToDetector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void Alignment\+Data\+::local\+To\+Detector (\begin{DoxyParamCaption}\item[{const Double\+\_\+t}]{local\mbox{[}3\mbox{]},  }\item[{Double\+\_\+t}]{detector\mbox{[}3\mbox{]} }\end{DoxyParamCaption}) const}
 
 
-Transformation from local coordinates of the placed volume to the world system. 
 
-Definition at line 185 of file AlignmentData.h.
-
-References localToWorld().
-
-Referenced by localToWorld().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_abd5ea2c3e08f510fb326a97eb3ec16bd}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!localToWorld@{localToWorld}}
-\index{localToWorld@{localToWorld}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{localToWorld}]{\setlength{\rightskip}{0pt plus 5cm}Position AlignmentData::localToWorld (const Position \& {\em local}) const}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_abd5ea2c3e08f510fb326a97eb3ec16bd}
+Transformation from local coordinates of the placed volume to the detector system. 
 
 
-Transformation from local coordinates of the placed volume to the world system. Transform a point from local coordinates of a given level to global coordinates. 
 
-Definition at line 113 of file AlignmentData.cpp.
+Definition at line 172 of file Alignment\+Data.\+cpp.
 
-References worldTrafo.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_ae0c2e7c631c7af81c54a4f75317120aa}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!localToWorld@{localToWorld}}
-\index{localToWorld@{localToWorld}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{localToWorld}]{\setlength{\rightskip}{0pt plus 5cm}void AlignmentData::localToWorld (const Double\_\-t {\em local}\mbox{[}3\mbox{]}, \/  Double\_\-t {\em global}\mbox{[}3\mbox{]}) const}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_ae0c2e7c631c7af81c54a4f75317120aa}
+
+
+References detector\+Trafo.
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a686b7c5193c1d01d812b6d72f9a73c83}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a686b7c5193c1d01d812b6d72f9a73c83} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!local\+To\+Detector@{local\+To\+Detector}}
+\index{local\+To\+Detector@{local\+To\+Detector}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{local\+To\+Detector()}{localToDetector()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Position Alignment\+Data\+::local\+To\+Detector (\begin{DoxyParamCaption}\item[{const Position \&}]{local }\end{DoxyParamCaption}) const}
+
 
 
 Transformation from local coordinates of the placed volume to the world system. 
 
-Definition at line 129 of file AlignmentData.cpp.
+Transform a point from local coordinates to the coordinates of the Det\+Element. 
 
-References worldTrafo.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a84abb7a2397faef2d62cb1378f14e087}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!localToWorld@{localToWorld}}
-\index{localToWorld@{localToWorld}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{localToWorld}]{\setlength{\rightskip}{0pt plus 5cm}void AlignmentData::localToWorld (const Position \& {\em local}, \/  Position \& {\em global}) const}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a84abb7a2397faef2d62cb1378f14e087}
+Definition at line 156 of file Alignment\+Data.\+cpp.
 
 
-Transformation from local coordinates of the placed volume to the world system. Aliases for the transformation from local coordinates to the world system 
 
-Definition at line 122 of file AlignmentData.cpp.
+References detector\+Trafo.
 
-References worldTrafo.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a080a3e23e54dfdef742d4849d9b41b5d}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!localToWorld@{localToWorld}}
-\index{localToWorld@{localToWorld}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{localToWorld}]{\setlength{\rightskip}{0pt plus 5cm}const Transform3D\& DD4hep::Alignments::AlignmentData::localToWorld () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a080a3e23e54dfdef742d4849d9b41b5d}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_aa3d9d7b8ae5bf3cc2916a2fbd4d12cc4}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_aa3d9d7b8ae5bf3cc2916a2fbd4d12cc4} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!local\+To\+Detector@{local\+To\+Detector}}
+\index{local\+To\+Detector@{local\+To\+Detector}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{local\+To\+Detector()}{localToDetector()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Position D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::local\+To\+Detector (\begin{DoxyParamCaption}\item[{const Double\+\_\+t}]{local\mbox{[}3\mbox{]} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transformation from local coordinates of the placed volume to the world system. 
+
+
+
+Definition at line 207 of file Alignment\+Data.\+h.
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_af24ecc77fdd725d3ab6a76848594fa95}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_af24ecc77fdd725d3ab6a76848594fa95} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!local\+To\+World@{local\+To\+World}}
+\index{local\+To\+World@{local\+To\+World}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{local\+To\+World()}{localToWorld()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily const Transform3D\& D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::local\+To\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Access the currently applied alignment/placement matrix. 
 
-Definition at line 175 of file AlignmentData.h.
-
-References trToWorld.
-
-Referenced by DD4hep::Alignments::AlignmentDecorator$<$ T $>$::localToWorld().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a88f64b05b945fa57e6fc1ea030d4e2a1}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!nominal@{nominal}}
-\index{nominal@{nominal}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{nominal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignment} AlignmentData::nominal () const}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a88f64b05b945fa57e6fc1ea030d4e2a1}
 
 
-Access the ideal/nominal alignment/placement matrix. 
+Definition at line 175 of file Alignment\+Data.\+h.
 
-Definition at line 200 of file AlignmentData.cpp.
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a7e4879bde9e295fcfeb209c9dd721691}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a7e4879bde9e295fcfeb209c9dd721691} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!local\+To\+World@{local\+To\+World}}
+\index{local\+To\+World@{local\+To\+World}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{local\+To\+World()}{localToWorld()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily void Alignment\+Data\+::local\+To\+World (\begin{DoxyParamCaption}\item[{const Position \&}]{local,  }\item[{Position \&}]{global }\end{DoxyParamCaption}) const}
 
-References detector.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a52c323f2dd5393ea5d9e77f8df11c6d0}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!operator=@{operator=}}
-\index{operator=@{operator=}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf AlignmentData} \& AlignmentData::operator= (const {\bf AlignmentData} \& {\em copy})}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a52c323f2dd5393ea5d9e77f8df11c6d0}
-
-
-Assignment operator necessary due to copy constructor. 
-
-Definition at line 91 of file AlignmentData.cpp.
-
-References delta, detector, detectorTrafo, flag, nodes, placement, trToWorld, and worldTrafo.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_af1900a9bf83d09f6719fa698d9db4f52}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!worldToLocal@{worldToLocal}}
-\index{worldToLocal@{worldToLocal}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{worldToLocal}]{\setlength{\rightskip}{0pt plus 5cm}Position DD4hep::Alignments::AlignmentData::worldToLocal (const Double\_\-t {\em global}\mbox{[}3\mbox{]}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_af1900a9bf83d09f6719fa698d9db4f52}
 
 
 Transformation from local coordinates of the placed volume to the world system. 
 
-Definition at line 196 of file AlignmentData.h.
+Aliases for the transformation from local coordinates to the world system 
 
-References worldToLocal().
-
-Referenced by worldToLocal().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_af0dad9165c3564024d6f61cd54209efd}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!worldToLocal@{worldToLocal}}
-\index{worldToLocal@{worldToLocal}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{worldToLocal}]{\setlength{\rightskip}{0pt plus 5cm}Position AlignmentData::worldToLocal (const Position \& {\em global}) const}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_af0dad9165c3564024d6f61cd54209efd}
+Definition at line 122 of file Alignment\+Data.\+cpp.
 
 
-Transformation from local coordinates of the placed volume to the world system. Transform a point from local coordinates of a given level to global coordinates. 
 
-Definition at line 134 of file AlignmentData.cpp.
+References world\+Trafo.
 
-References worldTrafo.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_aebb62803c8bd116274744701317271a5}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!worldToLocal@{worldToLocal}}
-\index{worldToLocal@{worldToLocal}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{worldToLocal}]{\setlength{\rightskip}{0pt plus 5cm}void AlignmentData::worldToLocal (const Double\_\-t {\em global}\mbox{[}3\mbox{]}, \/  Double\_\-t {\em local}\mbox{[}3\mbox{]}) const}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_aebb62803c8bd116274744701317271a5}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_aa8538578c348c8324770fbdef86c45fb}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_aa8538578c348c8324770fbdef86c45fb} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!local\+To\+World@{local\+To\+World}}
+\index{local\+To\+World@{local\+To\+World}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{local\+To\+World()}{localToWorld()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily void Alignment\+Data\+::local\+To\+World (\begin{DoxyParamCaption}\item[{const Double\+\_\+t}]{local\mbox{[}3\mbox{]},  }\item[{Double\+\_\+t}]{global\mbox{[}3\mbox{]} }\end{DoxyParamCaption}) const}
+
+
+
+Transformation from local coordinates of the placed volume to the world system. 
+
+
+
+Definition at line 129 of file Alignment\+Data.\+cpp.
+
+
+
+References world\+Trafo.
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a6576f66fc1a7edfa1330a1e176014acf}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a6576f66fc1a7edfa1330a1e176014acf} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!local\+To\+World@{local\+To\+World}}
+\index{local\+To\+World@{local\+To\+World}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{local\+To\+World()}{localToWorld()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily Position Alignment\+Data\+::local\+To\+World (\begin{DoxyParamCaption}\item[{const Position \&}]{local }\end{DoxyParamCaption}) const}
+
+
+
+Transformation from local coordinates of the placed volume to the world system. 
+
+Transform a point from local coordinates of a given level to global coordinates. 
+
+Definition at line 113 of file Alignment\+Data.\+cpp.
+
+
+
+References world\+Trafo.
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a662ee0cd2932cadb2487e9ddf0f25e1f}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a662ee0cd2932cadb2487e9ddf0f25e1f} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!local\+To\+World@{local\+To\+World}}
+\index{local\+To\+World@{local\+To\+World}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{local\+To\+World()}{localToWorld()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily Position D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::local\+To\+World (\begin{DoxyParamCaption}\item[{const Double\+\_\+t}]{local\mbox{[}3\mbox{]} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transformation from local coordinates of the placed volume to the world system. 
+
+
+
+Definition at line 185 of file Alignment\+Data.\+h.
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a1ad26965bc90bc605a93cbee82e9e773}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a1ad26965bc90bc605a93cbee82e9e773} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!nominal@{nominal}}
+\index{nominal@{nominal}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{nominal()}{nominal()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} Alignment\+Data\+::nominal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Access the ideal/nominal alignment/placement matrix. 
+
+
+
+Definition at line 200 of file Alignment\+Data.\+cpp.
+
+
+
+References D\+D4\+H\+E\+P\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+U\+M\+MY, D\+D4\+H\+E\+P\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+P\+A\+R\+S\+E\+R\+\_\+\+G\+R\+A\+M\+M\+AR, detector, and D\+D4hep\+::\+Geometry\+::\+Det\+Element\+::nominal().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a52c323f2dd5393ea5d9e77f8df11c6d0}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a52c323f2dd5393ea5d9e77f8df11c6d0} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!operator=@{operator=}}
+\index{operator=@{operator=}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data}{Alignment\+Data} \& Alignment\+Data\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data}{Alignment\+Data} \&}]{copy }\end{DoxyParamCaption})}
+
+
+
+Assignment operator necessary due to copy constructor. 
+
+
+
+Definition at line 91 of file Alignment\+Data.\+cpp.
+
+
+
+References delta, detector, detector\+Trafo, flag, nodes, placement, tr\+To\+World, and world\+Trafo.
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_aa9a06d09e56fd93a48cce689a654884e}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_aa9a06d09e56fd93a48cce689a654884e} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!world\+To\+Local@{world\+To\+Local}}
+\index{world\+To\+Local@{world\+To\+Local}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{world\+To\+Local()}{worldToLocal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void Alignment\+Data\+::world\+To\+Local (\begin{DoxyParamCaption}\item[{const Position \&}]{global,  }\item[{Position \&}]{local }\end{DoxyParamCaption}) const}
+
 
 
 Transformation from world coordinates of the local placed volume coordinates. 
 
-Definition at line 151 of file AlignmentData.cpp.
+Aliases for the transformation from world coordinates to the local volume 
 
-References worldTrafo.\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_affd38849676e68e49f5455b003d0e9ad}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!worldToLocal@{worldToLocal}}
-\index{worldToLocal@{worldToLocal}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{worldToLocal}]{\setlength{\rightskip}{0pt plus 5cm}void AlignmentData::worldToLocal (const Position \& {\em global}, \/  Position \& {\em local}) const}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_affd38849676e68e49f5455b003d0e9ad}
+Definition at line 144 of file Alignment\+Data.\+cpp.
 
 
-Transformation from world coordinates of the local placed volume coordinates. Aliases for the transformation from world coordinates to the local volume 
 
-Definition at line 144 of file AlignmentData.cpp.
+References world\+Trafo.
 
-References worldTrafo.
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_acfd97cb0ade9c1c6cc2a30784686e7ff}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_acfd97cb0ade9c1c6cc2a30784686e7ff} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!world\+To\+Local@{world\+To\+Local}}
+\index{world\+To\+Local@{world\+To\+Local}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{world\+To\+Local()}{worldToLocal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void Alignment\+Data\+::world\+To\+Local (\begin{DoxyParamCaption}\item[{const Double\+\_\+t}]{global\mbox{[}3\mbox{]},  }\item[{Double\+\_\+t}]{local\mbox{[}3\mbox{]} }\end{DoxyParamCaption}) const}
 
-Referenced by DD4hep::Alignments::AlignmentDecorator$<$ T $>$::worldToLocal().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_ab650514d7615e907409fa397e43989f7}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!worldTransformation@{worldTransformation}}
-\index{worldTransformation@{worldTransformation}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{worldTransformation}]{\setlength{\rightskip}{0pt plus 5cm}const TGeoHMatrix\& DD4hep::Alignments::AlignmentData::worldTransformation () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_ab650514d7615e907409fa397e43989f7}
+
+
+Transformation from world coordinates of the local placed volume coordinates. 
+
+
+
+Definition at line 151 of file Alignment\+Data.\+cpp.
+
+
+
+References world\+Trafo.
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a7ffad9495bb924203e294f96f20d9453}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a7ffad9495bb924203e294f96f20d9453} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!world\+To\+Local@{world\+To\+Local}}
+\index{world\+To\+Local@{world\+To\+Local}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{world\+To\+Local()}{worldToLocal()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Position Alignment\+Data\+::world\+To\+Local (\begin{DoxyParamCaption}\item[{const Position \&}]{global }\end{DoxyParamCaption}) const}
+
+
+
+Transformation from local coordinates of the placed volume to the world system. 
+
+Transform a point from local coordinates of a given level to global coordinates. 
+
+Definition at line 134 of file Alignment\+Data.\+cpp.
+
+
+
+References world\+Trafo.
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_af6e227ee69afb3dbf1d50463c12ec106}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_af6e227ee69afb3dbf1d50463c12ec106} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!world\+To\+Local@{world\+To\+Local}}
+\index{world\+To\+Local@{world\+To\+Local}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{world\+To\+Local()}{worldToLocal()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Position D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::world\+To\+Local (\begin{DoxyParamCaption}\item[{const Double\+\_\+t}]{global\mbox{[}3\mbox{]} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transformation from local coordinates of the placed volume to the world system. 
+
+
+
+Definition at line 196 of file Alignment\+Data.\+h.
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a2968ca6560efa496170adacb25f1c476}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a2968ca6560efa496170adacb25f1c476} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!world\+Transformation@{world\+Transformation}}
+\index{world\+Transformation@{world\+Transformation}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{world\+Transformation()}{worldTransformation()}}
+{\footnotesize\ttfamily const T\+Geo\+H\+Matrix\& D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::world\+Transformation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Create cached matrix to transform to world coordinates. 
 
-Definition at line 171 of file AlignmentData.h.
 
-References worldTrafo.
 
-Referenced by DD4hep::Alignments::AlignmentsManagerObject::to\_\-world(), DD4hep::Alignments::AlignmentCondition::worldTransformation(), DD4hep::Alignments::Alignment::worldTransformation(), and DD4hep::Alignments::AlignmentDecorator$<$ T $>$::worldTransformation().
+Definition at line 171 of file Alignment\+Data.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Alignments\+::\+Alignments\+Manager\+Object\+::to\+\_\+world().
+
+
 
 \subsection{Member Data Documentation}
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_aab00f6e7c9ac1f261f68440ade585cbb}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!condition@{condition}}
-\index{condition@{condition}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{condition}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ref\_\-t} {\bf DD4hep::Alignments::AlignmentData::condition}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_aab00f6e7c9ac1f261f68440ade585cbb}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_aab00f6e7c9ac1f261f68440ade585cbb}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_aab00f6e7c9ac1f261f68440ade585cbb} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!condition@{condition}}
+\index{condition@{condition}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{condition}{condition}}
+{\footnotesize\ttfamily \hyperlink{group___d_d4_h_e_p___g_e_o_m_e_t_r_y_ga40af83be6718bb8828a3d83dc7f8c930}{Ref\+\_\+t} D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::condition}
 
 
-Reference to the original condition object (May not be present!). 
 
-Definition at line 149 of file AlignmentData.h.
+Reference to the original condition object (May not be present!) 
 
-Referenced by DD4hep::Alignments::AlignmentCondition::data(), and hasCondition().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_add24423a741867fc3d3954ee65ec3636}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!delta@{delta}}
-\index{delta@{delta}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{delta}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Delta} {\bf DD4hep::Alignments::AlignmentData::delta}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_add24423a741867fc3d3954ee65ec3636}
+
+
+Definition at line 149 of file Alignment\+Data.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Alignments\+::\+Alignment\+Condition\+::data().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_add24423a741867fc3d3954ee65ec3636}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_add24423a741867fc3d3954ee65ec3636} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!delta@{delta}}
+\index{delta@{delta}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{delta}{delta}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3e67a5cbb3449006e9552b0f7bd98d45}{Delta} D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::delta}
+
 
 
 \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} changes. 
 
-Definition at line 135 of file AlignmentData.h.
 
-Referenced by computeDelta(), DD4hep::Alignments::AlignmentTools::copy(), DD4hep::Alignments::AlignmentDecorator$<$ T $>$::delta(), DD4hep::Alignments::AlignmentUpdateCall::handle(), operator$<$$<$(), operator=(), DD4hep::Alignments::AlignmentDecorator$<$ T $>$::setDelta(), and DD4hep::Alignments::AlignmentDecorator$<$ T $>$::setDeltaPivot().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_abf7096d1f2d3ed307c361f2d6d03710e}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!detector@{detector}}
-\index{detector@{detector}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{detector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} {\bf DD4hep::Alignments::AlignmentData::detector}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_abf7096d1f2d3ed307c361f2d6d03710e}
+
+Definition at line 135 of file Alignment\+Data.\+h.
+
+
+
+Referenced by compute\+Delta(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::copy(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Update\+Call\+::handle(), operator$<$$<$(), operator=(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Decorator$<$ T $>$\+::set\+Delta(), and D\+D4hep\+::\+Alignments\+::\+Alignment\+Decorator$<$ T $>$\+::set\+Delta\+Pivot().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_abf7096d1f2d3ed307c361f2d6d03710e}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_abf7096d1f2d3ed307c361f2d6d03710e} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!detector@{detector}}
+\index{detector@{detector}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{detector}{detector}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::detector}
+
 
 
 Reference to the next hosting detector element. 
 
-Definition at line 145 of file AlignmentData.h.
 
-Referenced by DD4hep::Alignments::AlignmentTools::computeIdeal(), DD4hep::Alignments::AlignmentTools::computeSurvey(), DD4hep::Alignments::AlignmentTools::copy(), DD4hep::Alignments::AlignmentDecorator$<$ T $>$::detector(), DD4hep::Alignments::AlignmentDecorator$<$ T $>$::detectorPlacement(), DD4hep::Alignments::AlignmentUpdateCall::handle(), nominal(), DD4hep::Alignments::AlignmentDecorator$<$ T $>$::nominal(), and operator=().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a7c01e8657259af3afa97d01c4d7d1733}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!detectorTrafo@{detectorTrafo}}
-\index{detectorTrafo@{detectorTrafo}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{detectorTrafo}]{\setlength{\rightskip}{0pt plus 5cm}TGeoHMatrix {\bf DD4hep::Alignments::AlignmentData::detectorTrafo}\hspace{0.3cm}{\ttfamily  \mbox{[}mutable\mbox{]}}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a7c01e8657259af3afa97d01c4d7d1733}
+
+Definition at line 145 of file Alignment\+Data.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::compute\+Ideal(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::compute\+Survey(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::copy(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Update\+Call\+::handle(), nominal(), and operator=().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a7c01e8657259af3afa97d01c4d7d1733}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a7c01e8657259af3afa97d01c4d7d1733} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!detector\+Trafo@{detector\+Trafo}}
+\index{detector\+Trafo@{detector\+Trafo}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{detector\+Trafo}{detectorTrafo}}
+{\footnotesize\ttfamily T\+Geo\+H\+Matrix D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::detector\+Trafo\hspace{0.3cm}{\ttfamily [mutable]}}
+
 
 
 Intermediate buffer to store the transformation to the parent detector element. 
 
-Definition at line 139 of file AlignmentData.h.
 
-Referenced by DD4hep::Alignments::Interna::AlignmentConditionObject::clear(), computeDelta(), DD4hep::Alignments::AlignmentTools::computeIdeal(), DD4hep::Alignments::AlignmentTools::computeSurvey(), DD4hep::Alignments::AlignmentTools::copy(), detectorToLocal(), detectorTransformation(), localToDetector(), and operator=().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a49383dd1e10e850bfeb455440439dec2}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!flag@{flag}}
-\index{flag@{flag}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{flag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BitMask} {\bf DD4hep::Alignments::AlignmentData::flag}\hspace{0.3cm}{\ttfamily  \mbox{[}mutable\mbox{]}}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a49383dd1e10e850bfeb455440439dec2}
+
+Definition at line 139 of file Alignment\+Data.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Alignments\+::\+Interna\+::\+Alignment\+Condition\+Object\+::clear(), compute\+Delta(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::compute\+Ideal(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::compute\+Survey(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::copy(), detector\+To\+Local(), local\+To\+Detector(), and operator=().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a49383dd1e10e850bfeb455440439dec2}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a49383dd1e10e850bfeb455440439dec2} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!flag@{flag}}
+\index{flag@{flag}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{flag}{flag}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_ab5c31f7e5512ca675be8323bc723b123}{Bit\+Mask} D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::flag\hspace{0.3cm}{\ttfamily [mutable]}}
+
 
 
 Flag to remember internally calculated quatities. 
 
-Definition at line 151 of file AlignmentData.h.
 
-Referenced by DD4hep::Alignments::AlignmentTools::computeIdeal(), DD4hep::Alignments::AlignmentTools::computeSurvey(), DD4hep::Alignments::AlignmentTools::copy(), DD4hep::Alignments::AlignmentUpdateCall::handle(), and operator=().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a52652c8211546dca391a248a6f4c422a}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!magic@{magic}}
-\index{magic@{magic}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{magic}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf DD4hep::Alignments::AlignmentData::magic}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a52652c8211546dca391a248a6f4c422a}
+
+Definition at line 151 of file Alignment\+Data.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::compute\+Ideal(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::compute\+Survey(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::copy(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Update\+Call\+::handle(), and operator=().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a52652c8211546dca391a248a6f4c422a}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a52652c8211546dca391a248a6f4c422a} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!magic@{magic}}
+\index{magic@{magic}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{magic}{magic}}
+{\footnotesize\ttfamily unsigned int D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::magic}
+
 
 
 Magic word to verify object if necessary. 
 
-Definition at line 153 of file AlignmentData.h.
-
-Referenced by DD4hep::Alignments::AlignmentTools::copy().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_ae7f0952d17a85f1061aa0b2967aff0ab}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!nodes@{nodes}}
-\index{nodes@{nodes}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{nodes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf NodeList} {\bf DD4hep::Alignments::AlignmentData::nodes}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_ae7f0952d17a85f1061aa0b2967aff0ab}
 
 
-The list of TGeoNodes (physical placements). 
-
-Definition at line 141 of file AlignmentData.h.
-
-Referenced by DD4hep::Alignments::Interna::AlignmentConditionObject::clear(), DD4hep::Alignments::AlignmentTools::computeIdeal(), DD4hep::Alignments::AlignmentTools::copy(), and operator=().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a0da8f92652a64d0ca69a1c884bd5b034}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!placement@{placement}}
-\index{placement@{placement}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{placement}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PlacedVolume} {\bf DD4hep::Alignments::AlignmentData::placement}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a0da8f92652a64d0ca69a1c884bd5b034}
+Definition at line 153 of file Alignment\+Data.\+h.
 
 
-The subdetector placement corresponding to the actual detector element's volume. 
 
-Definition at line 147 of file AlignmentData.h.
+Referenced by D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::copy().
 
-Referenced by DD4hep::Alignments::AlignmentTools::computeIdeal(), DD4hep::Alignments::AlignmentTools::computeSurvey(), DD4hep::Alignments::AlignmentTools::copy(), operator=(), and DD4hep::Alignments::AlignmentDecorator$<$ T $>$::placement().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a468b2dee055c6e6894ae65d37a53712e}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!trToWorld@{trToWorld}}
-\index{trToWorld@{trToWorld}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{trToWorld}]{\setlength{\rightskip}{0pt plus 5cm}Transform3D {\bf DD4hep::Alignments::AlignmentData::trToWorld}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a468b2dee055c6e6894ae65d37a53712e}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_ae7f0952d17a85f1061aa0b2967aff0ab}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_ae7f0952d17a85f1061aa0b2967aff0ab} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!nodes@{nodes}}
+\index{nodes@{nodes}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{nodes}{nodes}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_a3a667fd798d7523d75accee832d64521}{Node\+List} D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::nodes}
+
+
+
+The list of T\+Geo\+Nodes (physical placements) 
+
+
+
+Definition at line 141 of file Alignment\+Data.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Alignments\+::\+Interna\+::\+Alignment\+Condition\+Object\+::clear(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::compute\+Ideal(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::copy(), and operator=().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a0da8f92652a64d0ca69a1c884bd5b034}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a0da8f92652a64d0ca69a1c884bd5b034} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!placement@{placement}}
+\index{placement@{placement}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{placement}{placement}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment_data_aab2d43f5a4a4c2163e0a04905306525a}{Placed\+Volume} D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::placement}
+
+
+
+The subdetector placement corresponding to the actual detector element\textquotesingle{}s volume. 
+
+
+
+Definition at line 147 of file Alignment\+Data.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::compute\+Ideal(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::compute\+Survey(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::copy(), and operator=().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a468b2dee055c6e6894ae65d37a53712e}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a468b2dee055c6e6894ae65d37a53712e} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!tr\+To\+World@{tr\+To\+World}}
+\index{tr\+To\+World@{tr\+To\+World}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{tr\+To\+World}{trToWorld}}
+{\footnotesize\ttfamily Transform3D D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::tr\+To\+World}
+
 
 
 Transformation from volume to the world. 
 
-Definition at line 143 of file AlignmentData.h.
 
-Referenced by DD4hep::Alignments::Interna::AlignmentConditionObject::clear(), DD4hep::Alignments::AlignmentsManagerObject::compute(), DD4hep::Alignments::AlignmentTools::computeIdeal(), DD4hep::Alignments::AlignmentTools::computeSurvey(), DD4hep::Alignments::AlignmentTools::copy(), DD4hep::Alignments::AlignmentDecorator$<$ T $>$::localToWorld(), localToWorld(), and operator=().\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a87234aee58d8e087377b029de83ebcd8}{
-\index{DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}!worldTrafo@{worldTrafo}}
-\index{worldTrafo@{worldTrafo}!DD4hep::Alignments::AlignmentData@{DD4hep::Alignments::AlignmentData}}
-\subsubsection[{worldTrafo}]{\setlength{\rightskip}{0pt plus 5cm}TGeoHMatrix {\bf DD4hep::Alignments::AlignmentData::worldTrafo}\hspace{0.3cm}{\ttfamily  \mbox{[}mutable\mbox{]}}}}
-\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a87234aee58d8e087377b029de83ebcd8}
+
+Definition at line 143 of file Alignment\+Data.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Alignments\+::\+Interna\+::\+Alignment\+Condition\+Object\+::clear(), D\+D4hep\+::\+Alignments\+::\+Alignments\+Manager\+Object\+::compute(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::compute\+Ideal(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::compute\+Survey(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::copy(), and operator=().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_alignment_data_a87234aee58d8e087377b029de83ebcd8}{}\label{class_d_d4hep_1_1_alignments_1_1_alignment_data_a87234aee58d8e087377b029de83ebcd8} 
+\index{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}!world\+Trafo@{world\+Trafo}}
+\index{world\+Trafo@{world\+Trafo}!D\+D4hep\+::\+Alignments\+::\+Alignment\+Data@{D\+D4hep\+::\+Alignments\+::\+Alignment\+Data}}
+\subsubsection{\texorpdfstring{world\+Trafo}{worldTrafo}}
+{\footnotesize\ttfamily T\+Geo\+H\+Matrix D\+D4hep\+::\+Alignments\+::\+Alignment\+Data\+::world\+Trafo\hspace{0.3cm}{\ttfamily [mutable]}}
+
 
 
 Intermediate buffer to store the transformation to the world coordination system. 
 
-Definition at line 137 of file AlignmentData.h.
 
-Referenced by DD4hep::Alignments::Interna::AlignmentConditionObject::clear(), DD4hep::Alignments::AlignmentsManagerObject::compute(), computeDelta(), DD4hep::Alignments::AlignmentTools::computeIdeal(), DD4hep::Alignments::AlignmentTools::computeSurvey(), DD4hep::Alignments::AlignmentTools::copy(), localToWorld(), operator=(), worldToLocal(), and worldTransformation().
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+Definition at line 137 of file Alignment\+Data.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Alignments\+::\+Interna\+::\+Alignment\+Condition\+Object\+::clear(), D\+D4hep\+::\+Alignments\+::\+Alignments\+Manager\+Object\+::compute(), compute\+Delta(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::compute\+Ideal(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::compute\+Survey(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::copy(), local\+To\+World(), operator=(), and world\+To\+Local().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_alignment_data_8h}{AlignmentData.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_alignment_data_8cpp}{AlignmentData.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/include/\+D\+D4hep/\hyperlink{_alignment_data_8h}{Alignment\+Data.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\hyperlink{_alignment_data_8cpp}{Alignment\+Data.\+cpp}\end{DoxyCompactItemize}

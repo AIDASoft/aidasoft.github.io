@@ -1,93 +1,104 @@
-\hypertarget{_display_configuration_parser_8cpp}{
-\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDEve/src/DisplayConfigurationParser.cpp File Reference}
-\label{_display_configuration_parser_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDEve/src/DisplayConfigurationParser.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDEve/src/DisplayConfigurationParser.cpp}}
-}
-{\ttfamily \#include \char`\"{}DD4hep/LCDD.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/LCDDLoad.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/Printout.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}XML/Conversions.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}XML/XMLElements.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}XML/DocumentHandler.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/DetFactoryHelper.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDEve/Display.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDEve/DisplayConfiguration.h\char`\"{}}\par
-{\ttfamily \#include $<$stdexcept$>$}\par
-{\ttfamily \#include \char`\"{}TEveProjections.h\char`\"{}}\par
+\hypertarget{_display_configuration_parser_8cpp}{}\section{/afs/cern.ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Eve/src/\+Display\+Configuration\+Parser.cpp File Reference}
+\label{_display_configuration_parser_8cpp}\index{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Eve/src/\+Display\+Configuration\+Parser.\+cpp@{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Eve/src/\+Display\+Configuration\+Parser.\+cpp}}
+{\ttfamily \#include \char`\"{}D\+D4hep/\+L\+C\+D\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+L\+C\+D\+D\+Load.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Printout.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}X\+M\+L/\+Conversions.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}X\+M\+L/\+X\+M\+L\+Elements.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}X\+M\+L/\+Document\+Handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Det\+Factory\+Helper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Eve/\+Display.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Eve/\+Display\+Configuration.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include \char`\"{}T\+Eve\+Projections.\+h\char`\"{}}\newline
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
-namespace \hyperlink{namespace_d_d4hep}{DD4hep}
-
-
-\begin{DoxyCompactList}\small\item\em Namespace for the AIDA detector description toolkit. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Defines}
+ \hyperlink{namespace_d_d4hep}{D\+D4hep}
+\begin{DoxyCompactList}\small\item\em Namespace for the A\+I\+DA detector description toolkit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{_display_configuration_parser_8cpp_af011e3dd8a5f08aa4b15220b381e17e1}{DECL\_\-TAG}(x)~\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_strng__t}{XML::Strng\_\-t} u\_\-\#\#x(\#x)
+\#define \hyperlink{_display_configuration_parser_8cpp_af011e3dd8a5f08aa4b15220b381e17e1}{D\+E\+C\+L\+\_\+\+T\+AG}(x)~\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_strng__t}{X\+M\+L\+::\+Strng\+\_\+t} u\+\_\+\#\#x(\#x)
 \item 
-\#define \hyperlink{_display_configuration_parser_8cpp_a3f6206c4c73a0ae9c3af699dc59798db}{add\_\-root\_\-enum}(x)~XML::\_\-toDictionary(XML::Strng\_\-t(\#x),int(x))
+\#define \hyperlink{_display_configuration_parser_8cpp_a3f6206c4c73a0ae9c3af699dc59798db}{add\+\_\+root\+\_\+enum}(x)~X\+M\+L\+::\+\_\+to\+Dictionary(X\+M\+L\+::\+Strng\+\_\+t(\#x),int(x))
 \end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef DisplayConfiguration::Configurations \hyperlink{namespace_d_d4hep_a88b4bb8cba5bc194ed6da21bbb2e4787}{DD4hep::Configurations}
+typedef \hyperlink{class_d_d4hep_1_1_display_configuration_ac43586ae2c70f106cc9027d452d383d7}{Display\+Configuration\+::\+Configurations} \hyperlink{namespace_d_d4hep_a88b4bb8cba5bc194ed6da21bbb2e4787}{D\+D4hep\+::\+Configurations}
 \item 
-typedef DisplayConfiguration::ViewConfigurations \hyperlink{namespace_d_d4hep_a9c889ac82251df068ece7fbba1c2d1c0}{DD4hep::ViewConfigurations}
+typedef \hyperlink{class_d_d4hep_1_1_display_configuration_a38d6c82b57ac859a5d5cf67fe26f4920}{Display\+Configuration\+::\+View\+Configurations} \hyperlink{namespace_d_d4hep_a9c889ac82251df068ece7fbba1c2d1c0}{D\+D4hep\+::\+View\+Configurations}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \hyperlink{_display_configuration_parser_8cpp_a362cc8be7243b6aba32e188b359db533}{extract} (\hyperlink{class_d_d4hep_1_1_display_configuration_1_1_config}{DisplayConfiguration::Config} \&c, \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_handle__t}{xml\_\-h} e, int typ)
+static void \hyperlink{_display_configuration_parser_8cpp_a362cc8be7243b6aba32e188b359db533}{extract} (\hyperlink{class_d_d4hep_1_1_display_configuration_1_1_config}{Display\+Configuration\+::\+Config} \&c, \hyperlink{_det_factory_helper_8h_ac13b3c79d2bc9214ff0cf5b8dc43dda6}{xml\+\_\+h} \hyperlink{_volumes_8cpp_a8a9a1f93e9b09afccaec215310e64142}{e}, int typ)
 \item 
-static long \hyperlink{_display_configuration_parser_8cpp_a77c6fd79ca775f40667777decfd2d0fa}{setup\_\-DDEve} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{lcdd\_\-t} \&lcdd, const \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_handle__t}{xml\_\-h} \&e)
+static long \hyperlink{_display_configuration_parser_8cpp_a77c6fd79ca775f40667777decfd2d0fa}{setup\+\_\+\+D\+D\+Eve} (\hyperlink{_det_factory_helper_8h_a4412c5ae094c3d02833c4026ad178f7b}{lcdd\+\_\+t} \&lcdd, const \hyperlink{_det_factory_helper_8h_ac13b3c79d2bc9214ff0cf5b8dc43dda6}{xml\+\_\+h} \&\hyperlink{_volumes_8cpp_a8a9a1f93e9b09afccaec215310e64142}{e})
 \end{DoxyCompactItemize}
 
 
-\subsection{Define Documentation}
-\hypertarget{_display_configuration_parser_8cpp_a3f6206c4c73a0ae9c3af699dc59798db}{
-\index{DisplayConfigurationParser.cpp@{DisplayConfigurationParser.cpp}!add\_\-root\_\-enum@{add\_\-root\_\-enum}}
-\index{add\_\-root\_\-enum@{add\_\-root\_\-enum}!DisplayConfigurationParser.cpp@{DisplayConfigurationParser.cpp}}
-\subsubsection[{add\_\-root\_\-enum}]{\setlength{\rightskip}{0pt plus 5cm}\#define add\_\-root\_\-enum(x)~XML::\_\-toDictionary(XML::Strng\_\-t(\#x),int(x))}}
-\label{_display_configuration_parser_8cpp_a3f6206c4c73a0ae9c3af699dc59798db}
+\subsection{Macro Definition Documentation}
+\hypertarget{_display_configuration_parser_8cpp_a3f6206c4c73a0ae9c3af699dc59798db}{}\label{_display_configuration_parser_8cpp_a3f6206c4c73a0ae9c3af699dc59798db} 
+\index{Display\+Configuration\+Parser.\+cpp@{Display\+Configuration\+Parser.\+cpp}!add\+\_\+root\+\_\+enum@{add\+\_\+root\+\_\+enum}}
+\index{add\+\_\+root\+\_\+enum@{add\+\_\+root\+\_\+enum}!Display\+Configuration\+Parser.\+cpp@{Display\+Configuration\+Parser.\+cpp}}
+\subsubsection{\texorpdfstring{add\+\_\+root\+\_\+enum}{add\_root\_enum}}
+{\footnotesize\ttfamily \#define add\+\_\+root\+\_\+enum(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~X\+M\+L\+::\+\_\+to\+Dictionary(X\+M\+L\+::\+Strng\+\_\+t(\#x),int(x))}
 
 
-Referenced by setup\_\-DDEve().\hypertarget{_display_configuration_parser_8cpp_af011e3dd8a5f08aa4b15220b381e17e1}{
-\index{DisplayConfigurationParser.cpp@{DisplayConfigurationParser.cpp}!DECL\_\-TAG@{DECL\_\-TAG}}
-\index{DECL\_\-TAG@{DECL\_\-TAG}!DisplayConfigurationParser.cpp@{DisplayConfigurationParser.cpp}}
-\subsubsection[{DECL\_\-TAG}]{\setlength{\rightskip}{0pt plus 5cm}\#define DECL\_\-TAG(x)~{\bf XML::Strng\_\-t} u\_\-\#\#x(\#x)}}
-\label{_display_configuration_parser_8cpp_af011e3dd8a5f08aa4b15220b381e17e1}
+
+Referenced by setup\+\_\+\+D\+D\+Eve().
+
+\hypertarget{_display_configuration_parser_8cpp_af011e3dd8a5f08aa4b15220b381e17e1}{}\label{_display_configuration_parser_8cpp_af011e3dd8a5f08aa4b15220b381e17e1} 
+\index{Display\+Configuration\+Parser.\+cpp@{Display\+Configuration\+Parser.\+cpp}!D\+E\+C\+L\+\_\+\+T\+AG@{D\+E\+C\+L\+\_\+\+T\+AG}}
+\index{D\+E\+C\+L\+\_\+\+T\+AG@{D\+E\+C\+L\+\_\+\+T\+AG}!Display\+Configuration\+Parser.\+cpp@{Display\+Configuration\+Parser.\+cpp}}
+\subsubsection{\texorpdfstring{D\+E\+C\+L\+\_\+\+T\+AG}{DECL\_TAG}}
+{\footnotesize\ttfamily \#define D\+E\+C\+L\+\_\+\+T\+AG(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_strng__t}{X\+M\+L\+::\+Strng\+\_\+t} u\+\_\+\#\#x(\#x)}
 
 
-Definition at line 64 of file DisplayConfigurationParser.cpp.
+
+Definition at line 64 of file Display\+Configuration\+Parser.\+cpp.
+
+
 
 \subsection{Function Documentation}
-\hypertarget{_display_configuration_parser_8cpp_a362cc8be7243b6aba32e188b359db533}{
-\index{DisplayConfigurationParser.cpp@{DisplayConfigurationParser.cpp}!extract@{extract}}
-\index{extract@{extract}!DisplayConfigurationParser.cpp@{DisplayConfigurationParser.cpp}}
-\subsubsection[{extract}]{\setlength{\rightskip}{0pt plus 5cm}static void extract ({\bf DisplayConfiguration::Config} \& {\em c}, \/  {\bf xml\_\-h} {\em e}, \/  int {\em typ})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{_display_configuration_parser_8cpp_a362cc8be7243b6aba32e188b359db533}
+\hypertarget{_display_configuration_parser_8cpp_a362cc8be7243b6aba32e188b359db533}{}\label{_display_configuration_parser_8cpp_a362cc8be7243b6aba32e188b359db533} 
+\index{Display\+Configuration\+Parser.\+cpp@{Display\+Configuration\+Parser.\+cpp}!extract@{extract}}
+\index{extract@{extract}!Display\+Configuration\+Parser.\+cpp@{Display\+Configuration\+Parser.\+cpp}}
+\subsubsection{\texorpdfstring{extract()}{extract()}}
+{\footnotesize\ttfamily static void extract (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_display_configuration_1_1_config}{Display\+Configuration\+::\+Config} \&}]{c,  }\item[{\hyperlink{_det_factory_helper_8h_ac13b3c79d2bc9214ff0cf5b8dc43dda6}{xml\+\_\+h}}]{e,  }\item[{int}]{typ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
-Definition at line 84 of file DisplayConfigurationParser.cpp.
 
-References \_\-U, DD4hep::XML::Handle\_\-t::attr(), DD4hep::DisplayConfiguration::Config::Values::calo3d, DD4hep::DisplayConfiguration::Config::data, DD4hep::DisplayConfiguration::Config::Values::defaults, DD4hep::XML::Handle\_\-t::hasAttr(), DD4hep::DisplayConfiguration::Config::hits, DD4hep::DisplayConfiguration::Config::name, DD4hep::DisplayConfiguration::Config::type, and DD4hep::DisplayConfiguration::Config::use.\hypertarget{_display_configuration_parser_8cpp_a77c6fd79ca775f40667777decfd2d0fa}{
-\index{DisplayConfigurationParser.cpp@{DisplayConfigurationParser.cpp}!setup\_\-DDEve@{setup\_\-DDEve}}
-\index{setup\_\-DDEve@{setup\_\-DDEve}!DisplayConfigurationParser.cpp@{DisplayConfigurationParser.cpp}}
-\subsubsection[{setup\_\-DDEve}]{\setlength{\rightskip}{0pt plus 5cm}static long setup\_\-DDEve ({\bf lcdd\_\-t} \& {\em lcdd}, \/  const {\bf xml\_\-h} \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{_display_configuration_parser_8cpp_a77c6fd79ca775f40667777decfd2d0fa}
+Definition at line 84 of file Display\+Configuration\+Parser.\+cpp.
+
+
+
+References \+\_\+U, \+\_\+\+Unicode, D\+D4hep\+::\+Display\+Configuration\+::\+Defaults\+::alpha, D\+D4hep\+::\+X\+M\+L\+::\+Handle\+\_\+t\+::attr(), D\+D4hep\+::\+Display\+Configuration\+::\+Config\+::\+Values\+::calo3d, D\+D4hep\+::\+Display\+Configuration\+::\+Config\+::\+Values\+::calodata, D\+D4hep\+::\+Display\+Configuration\+::calodata, D\+D4hep\+::\+Display\+Configuration\+::collections, D\+D4hep\+::\+Display\+Configuration\+::\+Defaults\+::color, D\+D4hep\+::\+Display\+Configuration\+::\+Config\+::data, D\+D4hep\+::\+Display\+Configuration\+::\+Config\+::\+Values\+::defaults, D\+D4hep\+::\+Display\+Configuration\+::\+Calo3\+D\+::dz, D\+D4hep\+::\+Display\+Configuration\+::\+Calodata\+::dz, e, D\+D4hep\+::\+Display\+Configuration\+::\+Calo3\+D\+::emax, D\+D4hep\+::\+Display\+Configuration\+::\+Calodata\+::emax, D\+D4hep\+::\+Display\+Configuration\+::\+Hits\+::emax, D\+D4hep\+::\+Display\+Configuration\+::\+Calodata\+::eta\+\_\+max, D\+D4hep\+::\+Display\+Configuration\+::\+Calodata\+::eta\+\_\+min, D\+D4hep\+::\+X\+M\+L\+::\+Collection\+\_\+t\+::for\+\_\+each(), D\+D4hep\+::\+X\+M\+L\+::\+Handle\+\_\+t\+::has\+Attr(), D\+D4hep\+::\+Display\+Configuration\+::\+Config\+::\+Values\+::hits, D\+D4hep\+::\+Display\+Configuration\+::\+Config\+::hits, D\+D4hep\+::\+Display\+::\+Import\+Configuration(), D\+D4hep\+::\+I\+N\+FO, load(), D\+D4hep\+::\+Display\+Configuration\+::\+Defaults\+::load\+\_\+geo, D\+D4hep\+::\+Display\+Configuration\+::\+Calodata\+::n\+\_\+eta, D\+D4hep\+::\+Display\+Configuration\+::\+Calodata\+::n\+\_\+phi, D\+D4hep\+::\+Display\+Configuration\+::\+Config\+::name, D\+D4hep\+::\+Display\+Configuration\+::\+Calodata\+::phi\+\_\+max, D\+D4hep\+::\+Display\+Configuration\+::\+Calodata\+::phi\+\_\+min, D\+D4hep\+::printout(), D\+D4hep\+::\+L\+C\+D\+D\+Load\+::process\+X\+M\+L(), D\+D4hep\+::\+Display\+Configuration\+::\+Calo3\+D\+::rmin, D\+D4hep\+::\+Display\+Configuration\+::\+Calodata\+::rmin, D\+D4hep\+::\+Display\+::set\+Event\+Handler\+Name(), D\+D4hep\+::\+Display\+::set\+Load\+Level(), D\+D4hep\+::\+Display\+::set\+Vis\+Level(), D\+D4hep\+::\+Display\+Configuration\+::\+Defaults\+::show\+\_\+evt, D\+D4hep\+::\+Display\+Configuration\+::\+View\+Config\+::show\+\_\+sensitive, D\+D4hep\+::\+Display\+Configuration\+::\+View\+Config\+::show\+\_\+structure, D\+D4hep\+::\+Display\+Configuration\+::\+Hits\+::size, D\+D4hep\+::\+Display\+Configuration\+::\+View\+Config\+::subdetectors, D\+D4hep\+::\+Display\+Configuration\+::\+Calo3\+D\+::threshold, D\+D4hep\+::\+Display\+Configuration\+::\+Calodata\+::threshold, D\+D4hep\+::\+Display\+Configuration\+::\+Hits\+::threshold, D\+D4hep\+::\+Display\+Configuration\+::\+Calo3\+D\+::towerH, D\+D4hep\+::\+Display\+Configuration\+::\+Calodata\+::towerH, D\+D4hep\+::\+Display\+Configuration\+::\+Hits\+::towerH, D\+D4hep\+::\+Display\+Configuration\+::\+Hits\+::type, D\+D4hep\+::\+Display\+Configuration\+::\+Config\+::type, D\+D4hep\+::\+Display\+Configuration\+::\+View\+Config\+::type, D\+D4hep\+::\+Display\+Configuration\+::\+Config\+::use, D\+D4hep\+::\+Display\+Configuration\+::views, and D\+D4hep\+::\+Display\+Configuration\+::\+Hits\+::width.
+
+\hypertarget{_display_configuration_parser_8cpp_a77c6fd79ca775f40667777decfd2d0fa}{}\label{_display_configuration_parser_8cpp_a77c6fd79ca775f40667777decfd2d0fa} 
+\index{Display\+Configuration\+Parser.\+cpp@{Display\+Configuration\+Parser.\+cpp}!setup\+\_\+\+D\+D\+Eve@{setup\+\_\+\+D\+D\+Eve}}
+\index{setup\+\_\+\+D\+D\+Eve@{setup\+\_\+\+D\+D\+Eve}!Display\+Configuration\+Parser.\+cpp@{Display\+Configuration\+Parser.\+cpp}}
+\subsubsection{\texorpdfstring{setup\+\_\+\+D\+D\+Eve()}{setup\_DDEve()}}
+{\footnotesize\ttfamily static long setup\+\_\+\+D\+D\+Eve (\begin{DoxyParamCaption}\item[{\hyperlink{_det_factory_helper_8h_a4412c5ae094c3d02833c4026ad178f7b}{lcdd\+\_\+t} \&}]{lcdd,  }\item[{const \hyperlink{_det_factory_helper_8h_ac13b3c79d2bc9214ff0cf5b8dc43dda6}{xml\+\_\+h} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
 Basic entry point to read display configuration files
 
 \begin{DoxyAuthor}{Author}
-M.Frank 
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 \begin{DoxyDate}{Date}
 01/06/2014 
 \end{DoxyDate}
 
 
-Definition at line 301 of file DisplayConfigurationParser.cpp.
+Definition at line 301 of file Display\+Configuration\+Parser.\+cpp.
 
-References add\_\-root\_\-enum, and DD4hep::Geometry::LCDD::extension().
+
+
+References add\+\_\+root\+\_\+enum, D\+E\+C\+L\+A\+R\+E\+\_\+\+X\+M\+L\+\_\+\+D\+O\+C\+\_\+\+R\+E\+A\+D\+ER, e, and D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+::extension().
+

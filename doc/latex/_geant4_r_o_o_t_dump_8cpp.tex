@@ -1,89 +1,112 @@
-\hypertarget{_geant4_r_o_o_t_dump_8cpp}{
-\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/plugins/Geant4ROOTDump.cpp File Reference}
-\label{_geant4_r_o_o_t_dump_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/plugins/Geant4ROOTDump.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/plugins/Geant4ROOTDump.cpp}}
-}
-{\ttfamily \#include \char`\"{}DD4hep/LCDD.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/Factories.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/Primitives.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4DataDump.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4Particle.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TInterpreter.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TSystem.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TFile.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TTree.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TROOT.h\char`\"{}}\par
+\hypertarget{_geant4_r_o_o_t_dump_8cpp}{}\section{/afs/cern.ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/plugins/\+Geant4\+R\+O\+O\+T\+Dump.cpp File Reference}
+\label{_geant4_r_o_o_t_dump_8cpp}\index{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/plugins/\+Geant4\+R\+O\+O\+T\+Dump.\+cpp@{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/plugins/\+Geant4\+R\+O\+O\+T\+Dump.\+cpp}}
+{\ttfamily \#include \char`\"{}D\+D4hep/\+L\+C\+D\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Factories.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Primitives.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Data\+Dump.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Particle.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Interpreter.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+System.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+File.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Tree.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+R\+O\+O\+T.\+h\char`\"{}}\newline
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef \hyperlink{_geant4_r_o_o_t_dump_8cpp_a24e1766fcd30eeb6d44b2dd28b50afb6}{Geant4DataDump::Particles} \hyperlink{_geant4_r_o_o_t_dump_8cpp_a24e1766fcd30eeb6d44b2dd28b50afb6}{Particles}
+typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a78b5910af0db1442a14600ae8dfc2a92}{Geant4\+Data\+Dump\+::\+Particles} \hyperlink{_geant4_r_o_o_t_dump_8cpp_a24e1766fcd30eeb6d44b2dd28b50afb6}{Particles}
 \item 
-typedef \hyperlink{_geant4_r_o_o_t_dump_8cpp_ac4e87f4eb753093e1e7fcaf073df67e9}{Geant4DataDump::TrackerHits} \hyperlink{_geant4_r_o_o_t_dump_8cpp_ac4e87f4eb753093e1e7fcaf073df67e9}{TrackerHits}
+typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_aa71f3341672792aa15c10e82cdbeca4b}{Geant4\+Data\+Dump\+::\+Tracker\+Hits} \hyperlink{_geant4_r_o_o_t_dump_8cpp_ac4e87f4eb753093e1e7fcaf073df67e9}{Tracker\+Hits}
 \item 
-typedef \hyperlink{_geant4_r_o_o_t_dump_8cpp_aa7bb09ec387c0e4dbf528d38aa2b3a23}{Geant4DataDump::CalorimeterHits} \hyperlink{_geant4_r_o_o_t_dump_8cpp_aa7bb09ec387c0e4dbf528d38aa2b3a23}{CalorimeterHits}
+typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a405c85a9a72c4f1dc0164d4a61d98f75}{Geant4\+Data\+Dump\+::\+Calorimeter\+Hits} \hyperlink{_geant4_r_o_o_t_dump_8cpp_aa7bb09ec387c0e4dbf528d38aa2b3a23}{Calorimeter\+Hits}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 static long \hyperlink{_geant4_r_o_o_t_dump_8cpp_a89862f71924ba970cf58bd1315d6d5fd}{usage} ()
 \item 
-static \hyperlink{classstd_1_1pair}{pair}$<$ TClass $\ast$, void $\ast$ $>$ \hyperlink{_geant4_r_o_o_t_dump_8cpp_a391ba400ffea00dbdacec76ea2599583}{load} (TBranch $\ast$branch, int entry)
+static pair$<$ T\+Class $\ast$, void $\ast$ $>$ \hyperlink{_geant4_r_o_o_t_dump_8cpp_a391ba400ffea00dbdacec76ea2599583}{load} (T\+Branch $\ast$branch, int entry)
 \item 
-static long \hyperlink{_geant4_r_o_o_t_dump_8cpp_af821d36d5857cf3989b521b20c51faa7}{dump\_\-root} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{DD4hep::Geometry::LCDD} \&, int argc, char $\ast$$\ast$argv)
+static long \hyperlink{_geant4_r_o_o_t_dump_8cpp_af821d36d5857cf3989b521b20c51faa7}{dump\+\_\+root} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{D\+D4hep\+::\+Geometry\+::\+L\+C\+DD} \&, int argc, char $\ast$$\ast$argv)
 \end{DoxyCompactItemize}
 
 
 \subsection{Typedef Documentation}
-\hypertarget{_geant4_r_o_o_t_dump_8cpp_aa7bb09ec387c0e4dbf528d38aa2b3a23}{
-\index{Geant4ROOTDump.cpp@{Geant4ROOTDump.cpp}!CalorimeterHits@{CalorimeterHits}}
-\index{CalorimeterHits@{CalorimeterHits}!Geant4ROOTDump.cpp@{Geant4ROOTDump.cpp}}
-\subsubsection[{CalorimeterHits}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geant4DataDump::CalorimeterHits} {\bf CalorimeterHits}}}
-\label{_geant4_r_o_o_t_dump_8cpp_aa7bb09ec387c0e4dbf528d38aa2b3a23}
+\hypertarget{_geant4_r_o_o_t_dump_8cpp_aa7bb09ec387c0e4dbf528d38aa2b3a23}{}\label{_geant4_r_o_o_t_dump_8cpp_aa7bb09ec387c0e4dbf528d38aa2b3a23} 
+\index{Geant4\+R\+O\+O\+T\+Dump.\+cpp@{Geant4\+R\+O\+O\+T\+Dump.\+cpp}!Calorimeter\+Hits@{Calorimeter\+Hits}}
+\index{Calorimeter\+Hits@{Calorimeter\+Hits}!Geant4\+R\+O\+O\+T\+Dump.\+cpp@{Geant4\+R\+O\+O\+T\+Dump.\+cpp}}
+\subsubsection{\texorpdfstring{Calorimeter\+Hits}{CalorimeterHits}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a405c85a9a72c4f1dc0164d4a61d98f75}{Geant4\+Data\+Dump\+::\+Calorimeter\+Hits} \hyperlink{_geant4_r_o_o_t_dump_8cpp_aa7bb09ec387c0e4dbf528d38aa2b3a23}{Calorimeter\+Hits}}
 
 
-Definition at line 35 of file Geant4ROOTDump.cpp.\hypertarget{_geant4_r_o_o_t_dump_8cpp_a24e1766fcd30eeb6d44b2dd28b50afb6}{
-\index{Geant4ROOTDump.cpp@{Geant4ROOTDump.cpp}!Particles@{Particles}}
-\index{Particles@{Particles}!Geant4ROOTDump.cpp@{Geant4ROOTDump.cpp}}
-\subsubsection[{Particles}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geant4DataDump::Particles} {\bf Particles}}}
-\label{_geant4_r_o_o_t_dump_8cpp_a24e1766fcd30eeb6d44b2dd28b50afb6}
+
+Definition at line 35 of file Geant4\+R\+O\+O\+T\+Dump.\+cpp.
+
+\hypertarget{_geant4_r_o_o_t_dump_8cpp_a24e1766fcd30eeb6d44b2dd28b50afb6}{}\label{_geant4_r_o_o_t_dump_8cpp_a24e1766fcd30eeb6d44b2dd28b50afb6} 
+\index{Geant4\+R\+O\+O\+T\+Dump.\+cpp@{Geant4\+R\+O\+O\+T\+Dump.\+cpp}!Particles@{Particles}}
+\index{Particles@{Particles}!Geant4\+R\+O\+O\+T\+Dump.\+cpp@{Geant4\+R\+O\+O\+T\+Dump.\+cpp}}
+\subsubsection{\texorpdfstring{Particles}{Particles}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_a78b5910af0db1442a14600ae8dfc2a92}{Geant4\+Data\+Dump\+::\+Particles} \hyperlink{_geant4_r_o_o_t_dump_8cpp_a24e1766fcd30eeb6d44b2dd28b50afb6}{Particles}}
 
 
-Definition at line 33 of file Geant4ROOTDump.cpp.\hypertarget{_geant4_r_o_o_t_dump_8cpp_ac4e87f4eb753093e1e7fcaf073df67e9}{
-\index{Geant4ROOTDump.cpp@{Geant4ROOTDump.cpp}!TrackerHits@{TrackerHits}}
-\index{TrackerHits@{TrackerHits}!Geant4ROOTDump.cpp@{Geant4ROOTDump.cpp}}
-\subsubsection[{TrackerHits}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geant4DataDump::TrackerHits} {\bf TrackerHits}}}
-\label{_geant4_r_o_o_t_dump_8cpp_ac4e87f4eb753093e1e7fcaf073df67e9}
+
+Definition at line 33 of file Geant4\+R\+O\+O\+T\+Dump.\+cpp.
+
+\hypertarget{_geant4_r_o_o_t_dump_8cpp_ac4e87f4eb753093e1e7fcaf073df67e9}{}\label{_geant4_r_o_o_t_dump_8cpp_ac4e87f4eb753093e1e7fcaf073df67e9} 
+\index{Geant4\+R\+O\+O\+T\+Dump.\+cpp@{Geant4\+R\+O\+O\+T\+Dump.\+cpp}!Tracker\+Hits@{Tracker\+Hits}}
+\index{Tracker\+Hits@{Tracker\+Hits}!Geant4\+R\+O\+O\+T\+Dump.\+cpp@{Geant4\+R\+O\+O\+T\+Dump.\+cpp}}
+\subsubsection{\texorpdfstring{Tracker\+Hits}{TrackerHits}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_data_dump_aa71f3341672792aa15c10e82cdbeca4b}{Geant4\+Data\+Dump\+::\+Tracker\+Hits} \hyperlink{_geant4_r_o_o_t_dump_8cpp_ac4e87f4eb753093e1e7fcaf073df67e9}{Tracker\+Hits}}
 
 
-Definition at line 34 of file Geant4ROOTDump.cpp.
+
+Definition at line 34 of file Geant4\+R\+O\+O\+T\+Dump.\+cpp.
+
+
 
 \subsection{Function Documentation}
-\hypertarget{_geant4_r_o_o_t_dump_8cpp_af821d36d5857cf3989b521b20c51faa7}{
-\index{Geant4ROOTDump.cpp@{Geant4ROOTDump.cpp}!dump\_\-root@{dump\_\-root}}
-\index{dump\_\-root@{dump\_\-root}!Geant4ROOTDump.cpp@{Geant4ROOTDump.cpp}}
-\subsubsection[{dump\_\-root}]{\setlength{\rightskip}{0pt plus 5cm}static long dump\_\-root ({\bf DD4hep::Geometry::LCDD} \&, \/  int {\em argc}, \/  char $\ast$$\ast$ {\em argv})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{_geant4_r_o_o_t_dump_8cpp_af821d36d5857cf3989b521b20c51faa7}
+\hypertarget{_geant4_r_o_o_t_dump_8cpp_af821d36d5857cf3989b521b20c51faa7}{}\label{_geant4_r_o_o_t_dump_8cpp_af821d36d5857cf3989b521b20c51faa7} 
+\index{Geant4\+R\+O\+O\+T\+Dump.\+cpp@{Geant4\+R\+O\+O\+T\+Dump.\+cpp}!dump\+\_\+root@{dump\+\_\+root}}
+\index{dump\+\_\+root@{dump\+\_\+root}!Geant4\+R\+O\+O\+T\+Dump.\+cpp@{Geant4\+R\+O\+O\+T\+Dump.\+cpp}}
+\subsubsection{\texorpdfstring{dump\+\_\+root()}{dump\_root()}}
+{\footnotesize\ttfamily static long dump\+\_\+root (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{D\+D4hep\+::\+Geometry\+::\+L\+C\+DD} \&}]{,  }\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
-Definition at line 66 of file Geant4ROOTDump.cpp.
 
-References DD4hep::FATAL, DD4hep::INFO, load(), DD4hep::Simulation::Geant4DataDump::print(), DD4hep::printout(), and usage().\hypertarget{_geant4_r_o_o_t_dump_8cpp_a391ba400ffea00dbdacec76ea2599583}{
-\index{Geant4ROOTDump.cpp@{Geant4ROOTDump.cpp}!load@{load}}
-\index{load@{load}!Geant4ROOTDump.cpp@{Geant4ROOTDump.cpp}}
-\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf pair}$<$TClass$\ast$,void$\ast$$>$ load (TBranch $\ast$ {\em branch}, \/  int {\em entry})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{_geant4_r_o_o_t_dump_8cpp_a391ba400ffea00dbdacec76ea2599583}
+Definition at line 66 of file Geant4\+R\+O\+O\+T\+Dump.\+cpp.
 
 
-Definition at line 50 of file Geant4ROOTDump.cpp.
 
-Referenced by dump\_\-root().\hypertarget{_geant4_r_o_o_t_dump_8cpp_a89862f71924ba970cf58bd1315d6d5fd}{
-\index{Geant4ROOTDump.cpp@{Geant4ROOTDump.cpp}!usage@{usage}}
-\index{usage@{usage}!Geant4ROOTDump.cpp@{Geant4ROOTDump.cpp}}
-\subsubsection[{usage}]{\setlength{\rightskip}{0pt plus 5cm}static long usage ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{_geant4_r_o_o_t_dump_8cpp_a89862f71924ba970cf58bd1315d6d5fd}
+References D\+E\+C\+L\+A\+R\+E\+\_\+\+A\+P\+P\+LY, D\+D4hep\+::\+F\+A\+T\+AL, D\+D4hep\+::\+I\+N\+FO, load(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Data\+Dump\+::print(), D\+D4hep\+::printout(), and usage().
+
+\hypertarget{_geant4_r_o_o_t_dump_8cpp_a391ba400ffea00dbdacec76ea2599583}{}\label{_geant4_r_o_o_t_dump_8cpp_a391ba400ffea00dbdacec76ea2599583} 
+\index{Geant4\+R\+O\+O\+T\+Dump.\+cpp@{Geant4\+R\+O\+O\+T\+Dump.\+cpp}!load@{load}}
+\index{load@{load}!Geant4\+R\+O\+O\+T\+Dump.\+cpp@{Geant4\+R\+O\+O\+T\+Dump.\+cpp}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily static pair$<$T\+Class$\ast$,void$\ast$$>$ load (\begin{DoxyParamCaption}\item[{T\+Branch $\ast$}]{branch,  }\item[{int}]{entry }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
-Definition at line 37 of file Geant4ROOTDump.cpp.
 
-References DD4hep::FATAL, and DD4hep::printout().
+Definition at line 50 of file Geant4\+R\+O\+O\+T\+Dump.\+cpp.
 
-Referenced by dump\_\-root().
+
+
+Referenced by dump\+\_\+root(), extract(), D\+D4hep\+::\+X\+M\+L\+::\+Document\+Handler\+::load(), D\+D4hep\+::\+X\+M\+L\+::\+Document\+Handler\+::output(), D\+D4hep\+::\+L\+C\+D\+D\+Load\+::process\+X\+M\+L(), D\+D4hep\+::\+X\+M\+L\+::\+Document\+Handler\+::system\+\_\+path(), D\+D4hep\+::\+Conditions\+::\+Conditions\+Repository\+::$\sim$\+Conditions\+Repository(), and D\+D4hep\+::\+Conditions\+::\+Conditions\+Text\+Repository\+::$\sim$\+Conditions\+Text\+Repository().
+
+\hypertarget{_geant4_r_o_o_t_dump_8cpp_a89862f71924ba970cf58bd1315d6d5fd}{}\label{_geant4_r_o_o_t_dump_8cpp_a89862f71924ba970cf58bd1315d6d5fd} 
+\index{Geant4\+R\+O\+O\+T\+Dump.\+cpp@{Geant4\+R\+O\+O\+T\+Dump.\+cpp}!usage@{usage}}
+\index{usage@{usage}!Geant4\+R\+O\+O\+T\+Dump.\+cpp@{Geant4\+R\+O\+O\+T\+Dump.\+cpp}}
+\subsubsection{\texorpdfstring{usage()}{usage()}}
+{\footnotesize\ttfamily static long usage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 37 of file Geant4\+R\+O\+O\+T\+Dump.\+cpp.
+
+
+
+References D\+D4hep\+::\+F\+A\+T\+AL, and D\+D4hep\+::printout().
+
+
+
+Referenced by dump\+\_\+root().
+

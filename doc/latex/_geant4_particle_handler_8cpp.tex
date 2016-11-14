@@ -1,42 +1,42 @@
-\hypertarget{_geant4_particle_handler_8cpp}{
-\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/Geant4ParticleHandler.cpp File Reference}
-\label{_geant4_particle_handler_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/Geant4ParticleHandler.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/Geant4ParticleHandler.cpp}}
-}
-{\ttfamily \#include \char`\"{}DD4hep/Primitives.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/InstanceCount.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4StepHandler.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4TrackHandler.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4EventAction.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4SensDetAction.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4TrackingAction.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4SteppingAction.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4ParticleHandler.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4UserParticleHandler.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4Step.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4Track.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4Event.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4TrackStatus.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4PrimaryVertex.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4PrimaryParticle.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4TrackingManager.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4ParticleDefinition.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}CLHEP/Units/SystemOfUnits.h\char`\"{}}\par
-{\ttfamily \#include $<$set$>$}\par
-{\ttfamily \#include $<$stdexcept$>$}\par
-{\ttfamily \#include $<$algorithm$>$}\par
+\hypertarget{_geant4_particle_handler_8cpp}{}\section{/afs/cern.ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/src/\+Geant4\+Particle\+Handler.cpp File Reference}
+\label{_geant4_particle_handler_8cpp}\index{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/src/\+Geant4\+Particle\+Handler.\+cpp@{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/src/\+Geant4\+Particle\+Handler.\+cpp}}
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Primitives.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Instance\+Count.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Step\+Handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Track\+Handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Event\+Action.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Sens\+Det\+Action.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Tracking\+Action.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Stepping\+Action.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Particle\+Handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+User\+Particle\+Handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Step.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Track.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Event.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Track\+Status.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Primary\+Vertex.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Primary\+Particle.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Tracking\+Manager.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Particle\+Definition.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}C\+L\+H\+E\+P/\+Units/\+System\+Of\+Units.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef \hyperlink{class_d_d4hep_1_1_reference_bit_mask}{ReferenceBitMask}$<$ int $>$ \hyperlink{_geant4_particle_handler_8cpp_a5230e4e487f6a330d09a89c3eb7ada6b}{PropertyMask}
+typedef \hyperlink{class_d_d4hep_1_1_reference_bit_mask}{Reference\+Bit\+Mask}$<$ int $>$ \hyperlink{_geant4_particle_handler_8cpp_a5230e4e487f6a330d09a89c3eb7ada6b}{Property\+Mask}
 \end{DoxyCompactItemize}
 
 
 \subsection{Typedef Documentation}
-\hypertarget{_geant4_particle_handler_8cpp_a5230e4e487f6a330d09a89c3eb7ada6b}{
-\index{Geant4ParticleHandler.cpp@{Geant4ParticleHandler.cpp}!PropertyMask@{PropertyMask}}
-\index{PropertyMask@{PropertyMask}!Geant4ParticleHandler.cpp@{Geant4ParticleHandler.cpp}}
-\subsubsection[{PropertyMask}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf ReferenceBitMask}$<$int$>$ {\bf PropertyMask}}}
-\label{_geant4_particle_handler_8cpp_a5230e4e487f6a330d09a89c3eb7ada6b}
+\hypertarget{_geant4_particle_handler_8cpp_a5230e4e487f6a330d09a89c3eb7ada6b}{}\label{_geant4_particle_handler_8cpp_a5230e4e487f6a330d09a89c3eb7ada6b} 
+\index{Geant4\+Particle\+Handler.\+cpp@{Geant4\+Particle\+Handler.\+cpp}!Property\+Mask@{Property\+Mask}}
+\index{Property\+Mask@{Property\+Mask}!Geant4\+Particle\+Handler.\+cpp@{Geant4\+Particle\+Handler.\+cpp}}
+\subsubsection{\texorpdfstring{Property\+Mask}{PropertyMask}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_reference_bit_mask}{Reference\+Bit\+Mask}$<$int$>$ \hyperlink{_geant4_data_dump_8cpp_a2d5b8b62b64496657c7d0034d748ef3f}{Property\+Mask}}
 
 
-Definition at line 48 of file Geant4ParticleHandler.cpp.
+
+Definition at line 48 of file Geant4\+Particle\+Handler.\+cpp.
+

@@ -1,231 +1,379 @@
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment}{
-\section{DD4hep::Alignments::GlobalDetectorAlignment Class Reference}
-\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment}\index{DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}}
-}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment}{}\section{D\+D4hep\+:\+:Alignments\+:\+:Global\+Detector\+Alignment Class Reference}
+\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment}\index{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}}
 
 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment}{GlobalDetectorAlignment}. DetElement \hyperlink{class_d_d4hep_1_1_handle}{Handle} supporting alignment operations.  
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment}{Global\+Detector\+Alignment}. Det\+Element \hyperlink{class_d_d4hep_1_1_handle}{Handle} supporting alignment operations.  
 
 
-{\ttfamily \#include $<$GlobalDetectorAlignment.h$>$}
 
-Inherits Geometry::DetElement.\subsection*{Public Member Functions}
+
+{\ttfamily \#include $<$Global\+Detector\+Alignment.\+h$>$}
+
+Inheritance diagram for D\+D4hep\+:\+:Alignments\+:\+:Global\+Detector\+Alignment\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a82f59bb92f37d35c0d9dbe2b342a25ca}{GlobalDetectorAlignment} (\hyperlink{namespace_d_d4hep_a21dd977310ff183f61ca6ae14b59a989}{DetElement} e)
-\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a05789b13a179780a57c759a573fdfe85}{collectNodes} (std::vector$<$ PlacedVolume $>$ \&nodes)
-\begin{DoxyCompactList}\small\item\em Collect all placements from the detector element up to the world volume. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{GlobalAlignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a4c86dcdecf0985adee4f709f0db5a9e9}{alignment} () const 
-\begin{DoxyCompactList}\small\item\em Access to the alignment block. \item\end{DoxyCompactList}\item 
-std::vector$<$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{GlobalAlignment} $>$ \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_aac0cf5fe586639599e736913cadf00c2}{volumeAlignments} ()
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} entries for lower level volumes, which are NOT attached to daughter DetElements. \item\end{DoxyCompactList}\item 
-const std::vector$<$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{GlobalAlignment} $>$ \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a9795692b0b80e01f6cc3e35d0c953771}{volumeAlignments} () const 
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} entries for lower level volumes, which are NOT attached to daughter DetElements. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{GlobalAlignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a5423eff6a3f3a03fc45c6563d82ee256}{align} (const Position \&pos, bool check=false, double overlap=0.001)
-\begin{DoxyCompactList}\small\item\em Align the PhysicalNode of the placement of the detector element (translation only). \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{GlobalAlignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ae865aabbab6f92bff3bc6dd8c10898fc}{align} (const RotationZYX \&rot, bool check=false, double overlap=0.001)
-\begin{DoxyCompactList}\small\item\em Align the PhysicalNode of the placement of the detector element (rotation only). \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{GlobalAlignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a11e7e399711724497cb9321e74e3e345}{align} (const Position \&pos, const RotationZYX \&rot, bool check=false, double overlap=0.001)
-\begin{DoxyCompactList}\small\item\em Align the PhysicalNode of the placement of the detector element (translation + rotation). \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{GlobalAlignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_af25045f4135b7688c2ec8df38a4f6128}{align} (const Transform3D \&tr, bool check=false, double overlap=0.001)
-\begin{DoxyCompactList}\small\item\em Align the physical node according to a generic Transform3D. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{GlobalAlignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_adbf2906a23e458e6d1630fecfe72678c}{align} (TGeoHMatrix $\ast$matrix, bool check=false, double overlap=0.001)
-\begin{DoxyCompactList}\small\item\em Align the physical node according to a generic TGeo matrix. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{GlobalAlignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a215336c1b789db3fc12eccbd207a028d}{align} (const std::string \&volume\_\-path, const Position \&pos, bool check=false, double overlap=0.001)
-\begin{DoxyCompactList}\small\item\em Align the PhysicalNode of the placement of the detector element (translation only). \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{GlobalAlignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a6a1950c5f869be07e7291660bbbd4fde}{align} (const std::string \&volume\_\-path, const RotationZYX \&rot, bool check=false, double overlap=0.001)
-\begin{DoxyCompactList}\small\item\em Align the PhysicalNode of the placement of the detector element (rotation only). \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{GlobalAlignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a9024ad900cf469292555be0b54ad1d60}{align} (const std::string \&volume\_\-path, const Position \&pos, const RotationZYX \&rot, bool check=false, double overlap=0.001)
-\begin{DoxyCompactList}\small\item\em Align the PhysicalNode of the placement of the detector element (translation + rotation). \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{GlobalAlignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a6fd0199104c9626a04989370178c46d2}{align} (const std::string \&volume\_\-path, const Transform3D \&tr, bool check=false, double overlap=0.001)
-\begin{DoxyCompactList}\small\item\em Align the physical node according to a generic Transform3D. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{GlobalAlignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a843a0475def67045c62d9bfa74fbc20c}{align} (const std::string \&volume\_\-path, TGeoHMatrix $\ast$matrix, bool check=false, double overlap=0.001)
-\begin{DoxyCompactList}\small\item\em Align the physical node according to a generic TGeo matrix. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a82f59bb92f37d35c0d9dbe2b342a25ca}{Global\+Detector\+Alignment} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} \hyperlink{_volumes_8cpp_a8a9a1f93e9b09afccaec215310e64142}{e})
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ac3bae1db0cf6bd1d5df4514d343cb352}{collect\+Nodes} (std\+::vector$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} $>$ \&nodes)
+\begin{DoxyCompactList}\small\item\em Collect all placements from the detector element up to the world volume. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a3a5011151fd6fe30463d7ad7fdbcf9b1}{alignment} () const
+\begin{DoxyCompactList}\small\item\em Access to the alignment block. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} $>$ \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_aac0cf5fe586639599e736913cadf00c2}{volume\+Alignments} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} entries for lower level volumes, which are N\+OT attached to daughter Det\+Elements. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} $>$ \& \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a5b1f3416dd0ba2b7e75973c2efdd1e67}{volume\+Alignments} () const
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} entries for lower level volumes, which are N\+OT attached to daughter Det\+Elements. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a5423eff6a3f3a03fc45c6563d82ee256}{align} (const Position \&pos, bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_aee32c6df93ab1cb7d6dc36e7ae855112}{check}=false, double overlap=0.\+001)
+\begin{DoxyCompactList}\small\item\em Align the Physical\+Node of the placement of the detector element (translation only) \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ae865aabbab6f92bff3bc6dd8c10898fc}{align} (const Rotation\+Z\+YX \&rot, bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_aee32c6df93ab1cb7d6dc36e7ae855112}{check}=false, double overlap=0.\+001)
+\begin{DoxyCompactList}\small\item\em Align the Physical\+Node of the placement of the detector element (rotation only) \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a11e7e399711724497cb9321e74e3e345}{align} (const Position \&pos, const Rotation\+Z\+YX \&rot, bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_aee32c6df93ab1cb7d6dc36e7ae855112}{check}=false, double overlap=0.\+001)
+\begin{DoxyCompactList}\small\item\em Align the Physical\+Node of the placement of the detector element (translation + rotation) \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_af25045f4135b7688c2ec8df38a4f6128}{align} (const Transform3D \&tr, bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_aee32c6df93ab1cb7d6dc36e7ae855112}{check}=false, double overlap=0.\+001)
+\begin{DoxyCompactList}\small\item\em Align the physical node according to a generic Transform3D. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_adbf2906a23e458e6d1630fecfe72678c}{align} (T\+Geo\+H\+Matrix $\ast$matrix, bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_aee32c6df93ab1cb7d6dc36e7ae855112}{check}=false, double overlap=0.\+001)
+\begin{DoxyCompactList}\small\item\em Align the physical node according to a generic T\+Geo matrix. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ab789540ed6730b4440cc3a2fa716ad32}{align} (const std\+::string \&volume\+\_\+path, const Position \&pos, bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_aee32c6df93ab1cb7d6dc36e7ae855112}{check}=false, double overlap=0.\+001)
+\begin{DoxyCompactList}\small\item\em Align the Physical\+Node of the placement of the detector element (translation only) \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ad5277f0db4db98a272e2e58055d3e240}{align} (const std\+::string \&volume\+\_\+path, const Rotation\+Z\+YX \&rot, bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_aee32c6df93ab1cb7d6dc36e7ae855112}{check}=false, double overlap=0.\+001)
+\begin{DoxyCompactList}\small\item\em Align the Physical\+Node of the placement of the detector element (rotation only) \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ae58f439974af5028309077b14688d51b}{align} (const std\+::string \&volume\+\_\+path, const Position \&pos, const Rotation\+Z\+YX \&rot, bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_aee32c6df93ab1cb7d6dc36e7ae855112}{check}=false, double overlap=0.\+001)
+\begin{DoxyCompactList}\small\item\em Align the Physical\+Node of the placement of the detector element (translation + rotation) \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ad269df33b11aa03911a8dd72512eba7b}{align} (const std\+::string \&volume\+\_\+path, const Transform3D \&tr, bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_aee32c6df93ab1cb7d6dc36e7ae855112}{check}=false, double overlap=0.\+001)
+\begin{DoxyCompactList}\small\item\em Align the physical node according to a generic Transform3D. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ae189ba965c23303f0b1f475a0629c164}{align} (const std\+::string \&volume\+\_\+path, T\+Geo\+H\+Matrix $\ast$matrix, bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element_aee32c6df93ab1cb7d6dc36e7ae855112}{check}=false, double overlap=0.\+001)
+\begin{DoxyCompactList}\small\item\em Align the physical node according to a generic T\+Geo matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static bool \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_aeb175ec1d0dede0976111a2887c17fd6}{debug} ()
-\begin{DoxyCompactList}\small\item\em Access debugging flag. \item\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Access debugging flag. \end{DoxyCompactList}\item 
 static bool \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_af14b48c2d73add10f4b9dff410d6a5e0}{debug} (bool value)
-\begin{DoxyCompactList}\small\item\em Set debugging flag. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Set debugging flag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment}{GlobalDetectorAlignment}. DetElement \hyperlink{class_d_d4hep_1_1_handle}{Handle} supporting alignment operations. \begin{DoxyAuthor}{Author}
-M.Frank 
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment}{Global\+Detector\+Alignment}. Det\+Element \hyperlink{class_d_d4hep_1_1_handle}{Handle} supporting alignment operations. 
+
+\begin{DoxyAuthor}{Author}
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
-Definition at line 36 of file GlobalDetectorAlignment.h.
+Definition at line 36 of file Global\+Detector\+Alignment.\+h.
+
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a82f59bb92f37d35c0d9dbe2b342a25ca}{
-\index{DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}!GlobalDetectorAlignment@{GlobalDetectorAlignment}}
-\index{GlobalDetectorAlignment@{GlobalDetectorAlignment}!DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}}
-\subsubsection[{GlobalDetectorAlignment}]{\setlength{\rightskip}{0pt plus 5cm}GlobalDetectorAlignment::GlobalDetectorAlignment ({\bf DetElement} {\em e})}}
-\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a82f59bb92f37d35c0d9dbe2b342a25ca}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a82f59bb92f37d35c0d9dbe2b342a25ca}{}\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a82f59bb92f37d35c0d9dbe2b342a25ca} 
+\index{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}!Global\+Detector\+Alignment@{Global\+Detector\+Alignment}}
+\index{Global\+Detector\+Alignment@{Global\+Detector\+Alignment}!D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}}
+\subsubsection{\texorpdfstring{Global\+Detector\+Alignment()}{GlobalDetectorAlignment()}}
+{\footnotesize\ttfamily Global\+Detector\+Alignment\+::\+Global\+Detector\+Alignment (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}}]{e }\end{DoxyParamCaption})}
+
 
 
 Initializing constructor. 
 
-Definition at line 137 of file GlobalDetectorAlignment.cpp.
+
+
+Definition at line 137 of file Global\+Detector\+Alignment.\+cpp.
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a843a0475def67045c62d9bfa74fbc20c}{
-\index{DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}!align@{align}}
-\index{align@{align}!DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}}
-\subsubsection[{align}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignment} DD4hep::Alignments::GlobalDetectorAlignment::align (const std::string \& {\em volume\_\-path}, \/  TGeoHMatrix $\ast$ {\em matrix}, \/  bool {\em check} = {\ttfamily false}, \/  double {\em overlap} = {\ttfamily 0.001})}}
-\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a843a0475def67045c62d9bfa74fbc20c}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a5423eff6a3f3a03fc45c6563d82ee256}{}\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a5423eff6a3f3a03fc45c6563d82ee256} 
+\index{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}!align@{align}}
+\index{align@{align}!D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}}
+\subsubsection{\texorpdfstring{align()}{align()}\hspace{0.1cm}{\footnotesize\ttfamily [1/10]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} Global\+Detector\+Alignment\+::align (\begin{DoxyParamCaption}\item[{const Position \&}]{pos,  }\item[{bool}]{check = {\ttfamily false},  }\item[{double}]{overlap = {\ttfamily 0.001} }\end{DoxyParamCaption})}
 
 
-Align the physical node according to a generic TGeo matrix. \hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a6fd0199104c9626a04989370178c46d2}{
-\index{DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}!align@{align}}
-\index{align@{align}!DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}}
-\subsubsection[{align}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignment} DD4hep::Alignments::GlobalDetectorAlignment::align (const std::string \& {\em volume\_\-path}, \/  const Transform3D \& {\em tr}, \/  bool {\em check} = {\ttfamily false}, \/  double {\em overlap} = {\ttfamily 0.001})}}
-\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a6fd0199104c9626a04989370178c46d2}
+
+Align the Physical\+Node of the placement of the detector element (translation only) 
+
+alignment\+: Calls to align the detector element itself 
+
+Definition at line 177 of file Global\+Detector\+Alignment.\+cpp.
 
 
-Align the physical node according to a generic Transform3D. \hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a9024ad900cf469292555be0b54ad1d60}{
-\index{DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}!align@{align}}
-\index{align@{align}!DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}}
-\subsubsection[{align}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignment} DD4hep::Alignments::GlobalDetectorAlignment::align (const std::string \& {\em volume\_\-path}, \/  const Position \& {\em pos}, \/  const RotationZYX \& {\em rot}, \/  bool {\em check} = {\ttfamily false}, \/  double {\em overlap} = {\ttfamily 0.001})}}
-\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a9024ad900cf469292555be0b54ad1d60}
+
+References D\+D4hep\+::\+Geometry\+::\+\_\+transform().
 
 
-Align the PhysicalNode of the placement of the detector element (translation + rotation). \hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a6a1950c5f869be07e7291660bbbd4fde}{
-\index{DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}!align@{align}}
-\index{align@{align}!DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}}
-\subsubsection[{align}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignment} DD4hep::Alignments::GlobalDetectorAlignment::align (const std::string \& {\em volume\_\-path}, \/  const RotationZYX \& {\em rot}, \/  bool {\em check} = {\ttfamily false}, \/  double {\em overlap} = {\ttfamily 0.001})}}
-\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a6a1950c5f869be07e7291660bbbd4fde}
+
+Referenced by align(), and D\+D4hep\+::\+Alignments\+::\+Alignment\+Operator\+::insert().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ae865aabbab6f92bff3bc6dd8c10898fc}{}\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ae865aabbab6f92bff3bc6dd8c10898fc} 
+\index{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}!align@{align}}
+\index{align@{align}!D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}}
+\subsubsection{\texorpdfstring{align()}{align()}\hspace{0.1cm}{\footnotesize\ttfamily [2/10]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} Global\+Detector\+Alignment\+::align (\begin{DoxyParamCaption}\item[{const Rotation\+Z\+YX \&}]{rot,  }\item[{bool}]{check = {\ttfamily false},  }\item[{double}]{overlap = {\ttfamily 0.001} }\end{DoxyParamCaption})}
 
 
-Align the PhysicalNode of the placement of the detector element (rotation only). \hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a215336c1b789db3fc12eccbd207a028d}{
-\index{DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}!align@{align}}
-\index{align@{align}!DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}}
-\subsubsection[{align}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignment} DD4hep::Alignments::GlobalDetectorAlignment::align (const std::string \& {\em volume\_\-path}, \/  const Position \& {\em pos}, \/  bool {\em check} = {\ttfamily false}, \/  double {\em overlap} = {\ttfamily 0.001})}}
-\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a215336c1b789db3fc12eccbd207a028d}
+
+Align the Physical\+Node of the placement of the detector element (rotation only) 
 
 
-Align the PhysicalNode of the placement of the detector element (translation only). alignment: Calls to align the volumes within on detector element \hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_adbf2906a23e458e6d1630fecfe72678c}{
-\index{DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}!align@{align}}
-\index{align@{align}!DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}}
-\subsubsection[{align}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignment} GlobalDetectorAlignment::align (TGeoHMatrix $\ast$ {\em matrix}, \/  bool {\em check} = {\ttfamily false}, \/  double {\em overlap} = {\ttfamily 0.001})}}
-\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_adbf2906a23e458e6d1630fecfe72678c}
+
+Definition at line 182 of file Global\+Detector\+Alignment.\+cpp.
 
 
-Align the physical node according to a generic TGeo matrix. 
 
-Definition at line 197 of file GlobalDetectorAlignment.cpp.\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_af25045f4135b7688c2ec8df38a4f6128}{
-\index{DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}!align@{align}}
-\index{align@{align}!DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}}
-\subsubsection[{align}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignment} GlobalDetectorAlignment::align (const Transform3D \& {\em tr}, \/  bool {\em check} = {\ttfamily false}, \/  double {\em overlap} = {\ttfamily 0.001})}}
-\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_af25045f4135b7688c2ec8df38a4f6128}
+References D\+D4hep\+::\+Geometry\+::\+\_\+transform(), and align().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a11e7e399711724497cb9321e74e3e345}{}\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a11e7e399711724497cb9321e74e3e345} 
+\index{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}!align@{align}}
+\index{align@{align}!D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}}
+\subsubsection{\texorpdfstring{align()}{align()}\hspace{0.1cm}{\footnotesize\ttfamily [3/10]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} Global\+Detector\+Alignment\+::align (\begin{DoxyParamCaption}\item[{const Position \&}]{pos,  }\item[{const Rotation\+Z\+YX \&}]{rot,  }\item[{bool}]{check = {\ttfamily false},  }\item[{double}]{overlap = {\ttfamily 0.001} }\end{DoxyParamCaption})}
+
+
+
+Align the Physical\+Node of the placement of the detector element (translation + rotation) 
+
+
+
+Definition at line 187 of file Global\+Detector\+Alignment.\+cpp.
+
+
+
+References D\+D4hep\+::\+Geometry\+::\+\_\+transform(), and align().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_af25045f4135b7688c2ec8df38a4f6128}{}\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_af25045f4135b7688c2ec8df38a4f6128} 
+\index{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}!align@{align}}
+\index{align@{align}!D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}}
+\subsubsection{\texorpdfstring{align()}{align()}\hspace{0.1cm}{\footnotesize\ttfamily [4/10]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} Global\+Detector\+Alignment\+::align (\begin{DoxyParamCaption}\item[{const Transform3D \&}]{tr,  }\item[{bool}]{check = {\ttfamily false},  }\item[{double}]{overlap = {\ttfamily 0.001} }\end{DoxyParamCaption})}
+
 
 
 Align the physical node according to a generic Transform3D. 
 
-Definition at line 192 of file GlobalDetectorAlignment.cpp.
-
-References DD4hep::Geometry::\_\-transform(), and align().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a11e7e399711724497cb9321e74e3e345}{
-\index{DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}!align@{align}}
-\index{align@{align}!DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}}
-\subsubsection[{align}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignment} GlobalDetectorAlignment::align (const Position \& {\em pos}, \/  const RotationZYX \& {\em rot}, \/  bool {\em check} = {\ttfamily false}, \/  double {\em overlap} = {\ttfamily 0.001})}}
-\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a11e7e399711724497cb9321e74e3e345}
 
 
-Align the PhysicalNode of the placement of the detector element (translation + rotation). 
-
-Definition at line 187 of file GlobalDetectorAlignment.cpp.
-
-References DD4hep::Geometry::\_\-transform(), and align().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ae865aabbab6f92bff3bc6dd8c10898fc}{
-\index{DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}!align@{align}}
-\index{align@{align}!DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}}
-\subsubsection[{align}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignment} GlobalDetectorAlignment::align (const RotationZYX \& {\em rot}, \/  bool {\em check} = {\ttfamily false}, \/  double {\em overlap} = {\ttfamily 0.001})}}
-\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ae865aabbab6f92bff3bc6dd8c10898fc}
+Definition at line 192 of file Global\+Detector\+Alignment.\+cpp.
 
 
-Align the PhysicalNode of the placement of the detector element (rotation only). 
 
-Definition at line 182 of file GlobalDetectorAlignment.cpp.
+References D\+D4hep\+::\+Geometry\+::\+\_\+transform(), and align().
 
-References DD4hep::Geometry::\_\-transform(), and align().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a5423eff6a3f3a03fc45c6563d82ee256}{
-\index{DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}!align@{align}}
-\index{align@{align}!DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}}
-\subsubsection[{align}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignment} GlobalDetectorAlignment::align (const Position \& {\em pos}, \/  bool {\em check} = {\ttfamily false}, \/  double {\em overlap} = {\ttfamily 0.001})}}
-\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a5423eff6a3f3a03fc45c6563d82ee256}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_adbf2906a23e458e6d1630fecfe72678c}{}\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_adbf2906a23e458e6d1630fecfe72678c} 
+\index{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}!align@{align}}
+\index{align@{align}!D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}}
+\subsubsection{\texorpdfstring{align()}{align()}\hspace{0.1cm}{\footnotesize\ttfamily [5/10]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} Global\+Detector\+Alignment\+::align (\begin{DoxyParamCaption}\item[{T\+Geo\+H\+Matrix $\ast$}]{matrix,  }\item[{bool}]{check = {\ttfamily false},  }\item[{double}]{overlap = {\ttfamily 0.001} }\end{DoxyParamCaption})}
 
 
-Align the PhysicalNode of the placement of the detector element (translation only). alignment: Calls to align the detector element itself 
 
-Definition at line 177 of file GlobalDetectorAlignment.cpp.
+Align the physical node according to a generic T\+Geo matrix. 
 
-References DD4hep::Geometry::\_\-transform().
 
-Referenced by align().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a4c86dcdecf0985adee4f709f0db5a9e9}{
-\index{DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}!alignment@{alignment}}
-\index{alignment@{alignment}!DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}}
-\subsubsection[{alignment}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GlobalAlignment} GlobalDetectorAlignment::alignment () const}}
-\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a4c86dcdecf0985adee4f709f0db5a9e9}
+
+Definition at line 197 of file Global\+Detector\+Alignment.\+cpp.
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ab789540ed6730b4440cc3a2fa716ad32}{}\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ab789540ed6730b4440cc3a2fa716ad32} 
+\index{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}!align@{align}}
+\index{align@{align}!D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}}
+\subsubsection{\texorpdfstring{align()}{align()}\hspace{0.1cm}{\footnotesize\ttfamily [6/10]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} Global\+Detector\+Alignment\+::align (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{volume\+\_\+path,  }\item[{const Position \&}]{pos,  }\item[{bool}]{check = {\ttfamily false},  }\item[{double}]{overlap = {\ttfamily 0.001} }\end{DoxyParamCaption})}
+
+
+
+Align the Physical\+Node of the placement of the detector element (translation only) 
+
+alignment\+: Calls to align the volumes within on detector element 
+
+Definition at line 202 of file Global\+Detector\+Alignment.\+cpp.
+
+
+
+References D\+D4hep\+::\+Geometry\+::\+\_\+transform(), and align().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ad5277f0db4db98a272e2e58055d3e240}{}\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ad5277f0db4db98a272e2e58055d3e240} 
+\index{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}!align@{align}}
+\index{align@{align}!D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}}
+\subsubsection{\texorpdfstring{align()}{align()}\hspace{0.1cm}{\footnotesize\ttfamily [7/10]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} Global\+Detector\+Alignment\+::align (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{volume\+\_\+path,  }\item[{const Rotation\+Z\+YX \&}]{rot,  }\item[{bool}]{check = {\ttfamily false},  }\item[{double}]{overlap = {\ttfamily 0.001} }\end{DoxyParamCaption})}
+
+
+
+Align the Physical\+Node of the placement of the detector element (rotation only) 
+
+
+
+Definition at line 207 of file Global\+Detector\+Alignment.\+cpp.
+
+
+
+References D\+D4hep\+::\+Geometry\+::\+\_\+transform(), and align().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ae58f439974af5028309077b14688d51b}{}\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ae58f439974af5028309077b14688d51b} 
+\index{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}!align@{align}}
+\index{align@{align}!D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}}
+\subsubsection{\texorpdfstring{align()}{align()}\hspace{0.1cm}{\footnotesize\ttfamily [8/10]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} Global\+Detector\+Alignment\+::align (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{volume\+\_\+path,  }\item[{const Position \&}]{pos,  }\item[{const Rotation\+Z\+YX \&}]{rot,  }\item[{bool}]{check = {\ttfamily false},  }\item[{double}]{overlap = {\ttfamily 0.001} }\end{DoxyParamCaption})}
+
+
+
+Align the Physical\+Node of the placement of the detector element (translation + rotation) 
+
+
+
+Definition at line 213 of file Global\+Detector\+Alignment.\+cpp.
+
+
+
+References D\+D4hep\+::\+Geometry\+::\+\_\+transform(), and align().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ad269df33b11aa03911a8dd72512eba7b}{}\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ad269df33b11aa03911a8dd72512eba7b} 
+\index{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}!align@{align}}
+\index{align@{align}!D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}}
+\subsubsection{\texorpdfstring{align()}{align()}\hspace{0.1cm}{\footnotesize\ttfamily [9/10]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} Global\+Detector\+Alignment\+::align (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{volume\+\_\+path,  }\item[{const Transform3D \&}]{tr,  }\item[{bool}]{check = {\ttfamily false},  }\item[{double}]{overlap = {\ttfamily 0.001} }\end{DoxyParamCaption})}
+
+
+
+Align the physical node according to a generic Transform3D. 
+
+
+
+Definition at line 218 of file Global\+Detector\+Alignment.\+cpp.
+
+
+
+References D\+D4hep\+::\+Geometry\+::\+\_\+transform(), and align().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ae189ba965c23303f0b1f475a0629c164}{}\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ae189ba965c23303f0b1f475a0629c164} 
+\index{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}!align@{align}}
+\index{align@{align}!D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}}
+\subsubsection{\texorpdfstring{align()}{align()}\hspace{0.1cm}{\footnotesize\ttfamily [10/10]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} Global\+Detector\+Alignment\+::align (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{volume\+\_\+path,  }\item[{T\+Geo\+H\+Matrix $\ast$}]{matrix,  }\item[{bool}]{check = {\ttfamily false},  }\item[{double}]{overlap = {\ttfamily 0.001} }\end{DoxyParamCaption})}
+
+
+
+Align the physical node according to a generic T\+Geo matrix. 
+
+
+
+Definition at line 223 of file Global\+Detector\+Alignment.\+cpp.
+
+
+
+References D\+D4hep\+::\+Geometry\+::\+Det\+Element\+::placement\+Path(), and volume\+Alignments().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a3a5011151fd6fe30463d7ad7fdbcf9b1}{}\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a3a5011151fd6fe30463d7ad7fdbcf9b1} 
+\index{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}!alignment@{alignment}}
+\index{alignment@{alignment}!D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}}
+\subsubsection{\texorpdfstring{alignment()}{alignment()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} Global\+Detector\+Alignment\+::alignment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 
 
 Access to the alignment block. 
 
-Definition at line 160 of file GlobalDetectorAlignment.cpp.\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a05789b13a179780a57c759a573fdfe85}{
-\index{DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}!collectNodes@{collectNodes}}
-\index{collectNodes@{collectNodes}!DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}}
-\subsubsection[{collectNodes}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Alignments::GlobalDetectorAlignment::collectNodes (std::vector$<$ PlacedVolume $>$ \& {\em nodes})}}
-\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a05789b13a179780a57c759a573fdfe85}
 
 
-Collect all placements from the detector element up to the world volume. \hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_af14b48c2d73add10f4b9dff410d6a5e0}{
-\index{DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}!debug@{debug}}
-\index{debug@{debug}!DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}}
-\subsubsection[{debug}]{\setlength{\rightskip}{0pt plus 5cm}bool GlobalDetectorAlignment::debug (bool {\em value})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_af14b48c2d73add10f4b9dff410d6a5e0}
+Definition at line 160 of file Global\+Detector\+Alignment.\+cpp.
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ac3bae1db0cf6bd1d5df4514d343cb352}{}\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_ac3bae1db0cf6bd1d5df4514d343cb352} 
+\index{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}!collect\+Nodes@{collect\+Nodes}}
+\index{collect\+Nodes@{collect\+Nodes}!D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}}
+\subsubsection{\texorpdfstring{collect\+Nodes()}{collectNodes()}}
+{\footnotesize\ttfamily void Global\+Detector\+Alignment\+::collect\+Nodes (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} $>$ \&}]{nodes }\end{DoxyParamCaption})}
 
 
-Set debugging flag. 
 
-Definition at line 148 of file GlobalDetectorAlignment.cpp.\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_aeb175ec1d0dede0976111a2887c17fd6}{
-\index{DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}!debug@{debug}}
-\index{debug@{debug}!DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}}
-\subsubsection[{debug}]{\setlength{\rightskip}{0pt plus 5cm}bool GlobalDetectorAlignment::debug ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_aeb175ec1d0dede0976111a2887c17fd6}
+Collect all placements from the detector element up to the world volume. 
+
+
+
+Definition at line 155 of file Global\+Detector\+Alignment.\+cpp.
+
+
+
+References D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::placement\+Path().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_aeb175ec1d0dede0976111a2887c17fd6}{}\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_aeb175ec1d0dede0976111a2887c17fd6} 
+\index{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}!debug@{debug}}
+\index{debug@{debug}!D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}}
+\subsubsection{\texorpdfstring{debug()}{debug()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Global\+Detector\+Alignment\+::debug (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
 
 
 Access debugging flag. 
 
-Definition at line 143 of file GlobalDetectorAlignment.cpp.\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a9795692b0b80e01f6cc3e35d0c953771}{
-\index{DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}!volumeAlignments@{volumeAlignments}}
-\index{volumeAlignments@{volumeAlignments}!DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}}
-\subsubsection[{volumeAlignments}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vector}$<$ {\bf GlobalAlignment} $>$ \& GlobalDetectorAlignment::volumeAlignments () const}}
-\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a9795692b0b80e01f6cc3e35d0c953771}
 
 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} entries for lower level volumes, which are NOT attached to daughter DetElements. 
+Definition at line 143 of file Global\+Detector\+Alignment.\+cpp.
 
-Definition at line 171 of file GlobalDetectorAlignment.cpp.
-
-References \_\-data().\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_aac0cf5fe586639599e736913cadf00c2}{
-\index{DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}!volumeAlignments@{volumeAlignments}}
-\index{volumeAlignments@{volumeAlignments}!DD4hep::Alignments::GlobalDetectorAlignment@{DD4hep::Alignments::GlobalDetectorAlignment}}
-\subsubsection[{volumeAlignments}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vector}$<$ {\bf GlobalAlignment} $>$ \& GlobalDetectorAlignment::volumeAlignments ()}}
-\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_aac0cf5fe586639599e736913cadf00c2}
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_af14b48c2d73add10f4b9dff410d6a5e0}{}\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_af14b48c2d73add10f4b9dff410d6a5e0} 
+\index{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}!debug@{debug}}
+\index{debug@{debug}!D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}}
+\subsubsection{\texorpdfstring{debug()}{debug()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Global\+Detector\+Alignment\+::debug (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
-\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} entries for lower level volumes, which are NOT attached to daughter DetElements. 
 
-Definition at line 165 of file GlobalDetectorAlignment.cpp.
+Set debugging flag. 
 
-References \_\-data().
 
-Referenced by DD4hep::Alignments::GlobalAlignmentWriter::createElement().
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+Definition at line 148 of file Global\+Detector\+Alignment.\+cpp.
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_aac0cf5fe586639599e736913cadf00c2}{}\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_aac0cf5fe586639599e736913cadf00c2} 
+\index{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}!volume\+Alignments@{volume\+Alignments}}
+\index{volume\+Alignments@{volume\+Alignments}!D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}}
+\subsubsection{\texorpdfstring{volume\+Alignments()}{volumeAlignments()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily vector$<$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} $>$ \& Global\+Detector\+Alignment\+::volume\+Alignments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} entries for lower level volumes, which are N\+OT attached to daughter Det\+Elements. 
+
+
+
+Definition at line 165 of file Global\+Detector\+Alignment.\+cpp.
+
+
+
+References D\+D4hep\+::\+Geometry\+::\+Det\+Element\+::\+\_\+data(), and D\+D4hep\+::\+Alignments\+::\+Global\+Alignment\+Data\+::volume\+\_\+alignments.
+
+
+
+Referenced by align(), and D\+D4hep\+::\+Alignments\+::\+Global\+Alignment\+Writer\+::create\+Element().
+
+\hypertarget{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a5b1f3416dd0ba2b7e75973c2efdd1e67}{}\label{class_d_d4hep_1_1_alignments_1_1_global_detector_alignment_a5b1f3416dd0ba2b7e75973c2efdd1e67} 
+\index{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}!volume\+Alignments@{volume\+Alignments}}
+\index{volume\+Alignments@{volume\+Alignments}!D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment@{D\+D4hep\+::\+Alignments\+::\+Global\+Detector\+Alignment}}
+\subsubsection{\texorpdfstring{volume\+Alignments()}{volumeAlignments()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const vector$<$ \hyperlink{class_d_d4hep_1_1_alignments_1_1_global_alignment}{Global\+Alignment} $>$ \& Global\+Detector\+Alignment\+::volume\+Alignments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\hyperlink{class_d_d4hep_1_1_alignments_1_1_alignment}{Alignment} entries for lower level volumes, which are N\+OT attached to daughter Det\+Elements. 
+
+
+
+Definition at line 171 of file Global\+Detector\+Alignment.\+cpp.
+
+
+
+References D\+D4hep\+::\+Geometry\+::\+Det\+Element\+::\+\_\+data(), and D\+D4hep\+::\+Alignments\+::\+Global\+Alignment\+Data\+::volume\+\_\+alignments.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDAlign/include/DDAlign/\hyperlink{_global_detector_alignment_8h}{GlobalDetectorAlignment.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDAlign/src/\hyperlink{_global_detector_alignment_8cpp}{GlobalDetectorAlignment.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Align/include/\+D\+D\+Align/\hyperlink{_global_detector_alignment_8h}{Global\+Detector\+Alignment.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Align/src/\hyperlink{_global_detector_alignment_8cpp}{Global\+Detector\+Alignment.\+cpp}\end{DoxyCompactItemize}

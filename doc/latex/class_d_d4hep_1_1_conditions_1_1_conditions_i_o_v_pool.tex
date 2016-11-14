@@ -1,163 +1,234 @@
-\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool}{
-\section{DD4hep::Conditions::ConditionsIOVPool Class Reference}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool}\index{DD4hep::Conditions::ConditionsIOVPool@{DD4hep::Conditions::ConditionsIOVPool}}
-}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool}{}\section{D\+D4hep\+:\+:Conditions\+:\+:Conditions\+I\+O\+V\+Pool Class Reference}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool}\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool@{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool}}
 
 
-Pool of conditions satisfying one \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} type (epoch, run, fill, etc).  
+Pool of conditions satisfying one \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV} type (epoch, run, fill, etc)  
 
 
-{\ttfamily \#include $<$ConditionsIOVPool.h$>$}\subsection*{Public Types}
+
+
+{\ttfamily \#include $<$Conditions\+I\+O\+V\+Pool.\+h$>$}
+
+\subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_pool}{ConditionsPool} $\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a41146867e220b8f23ef69afe5f724914}{Element}
+typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_pool}{Conditions\+Pool} $\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a41146867e220b8f23ef69afe5f724914}{Element}
 \item 
-typedef std::map$<$ \hyperlink{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}{IOV::Key}, \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_pool}{Element} $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_aa011c5cc19bfb761be62adf9a88b5ee9}{Elements}
+typedef std\+::map$<$ \hyperlink{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}{I\+O\+V\+::\+Key}, \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a41146867e220b8f23ef69afe5f724914}{Element} $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_aa011c5cc19bfb761be62adf9a88b5ee9}{Elements}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a8ccf22020bacb07028aea997d172c7d0}{ConditionsIOVPool} ()
-\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a58a9a1f3f6d282fa24c00010193da303}{$\sim$ConditionsIOVPool} ()
-\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a75f43e7cd7cbc5c07afb0aca2b241a41}{select} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition::key\_\-type} key, const \hyperlink{class_d_d4hep_1_1_i_o_v}{Condition::iov\_\-type} \&req\_\-validity, \hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{RangeConditions} \&result)
-\begin{DoxyCompactList}\small\item\em Retrieve a condition set given the key according to their validity. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a09fb206aaa3c86d249598b7eaa58b322}{selectRange} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition::key\_\-type} key, const \hyperlink{class_d_d4hep_1_1_i_o_v}{Condition::iov\_\-type} \&req\_\-validity, \hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{RangeConditions} \&result)
-\begin{DoxyCompactList}\small\item\em Retrieve a condition set given the key according to their validity. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_ae7ff2198bcdc12e8be275d1aacc5cd0b}{select} (const \hyperlink{class_d_d4hep_1_1_i_o_v}{Condition::iov\_\-type} \&required\_\-validity, \hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{RangeConditions} \&valid, \hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{RangeConditions} \&expired, \hyperlink{class_d_d4hep_1_1_i_o_v}{Condition::iov\_\-type} \&conditions\_\-validity)
-\begin{DoxyCompactList}\small\item\em Select all ACTIVE conditions, which do no longer match the \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} requirement. \item\end{DoxyCompactList}\item 
-int \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a3adc9fa6a89d3195b91b5fb11236f360}{clean} (int max\_\-age)
-\begin{DoxyCompactList}\small\item\em Remove all key based pools with an age beyon the minimum age. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a8ccf22020bacb07028aea997d172c7d0}{Conditions\+I\+O\+V\+Pool} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a58a9a1f3f6d282fa24c00010193da303}{$\sim$\+Conditions\+I\+O\+V\+Pool} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a75f43e7cd7cbc5c07afb0aca2b241a41}{select} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition\+::key\+\_\+type} key, const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_ad84300e226b2085ec5e9db7f47be5539}{Condition\+::iov\+\_\+type} \&req\+\_\+validity, \hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{Range\+Conditions} \&result)
+\begin{DoxyCompactList}\small\item\em Retrieve a condition set given the key according to their validity. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a09fb206aaa3c86d249598b7eaa58b322}{select\+Range} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition\+::key\+\_\+type} key, const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_ad84300e226b2085ec5e9db7f47be5539}{Condition\+::iov\+\_\+type} \&req\+\_\+validity, \hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{Range\+Conditions} \&result)
+\begin{DoxyCompactList}\small\item\em Retrieve a condition set given the key according to their validity. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_ae7ff2198bcdc12e8be275d1aacc5cd0b}{select} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_ad84300e226b2085ec5e9db7f47be5539}{Condition\+::iov\+\_\+type} \&required\+\_\+validity, \hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{Range\+Conditions} \&valid, \hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{Range\+Conditions} \&expired, \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_ad84300e226b2085ec5e9db7f47be5539}{Condition\+::iov\+\_\+type} \&conditions\+\_\+validity)
+\begin{DoxyCompactList}\small\item\em Select all A\+C\+T\+I\+VE conditions, which do no longer match the \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV} requirement. \end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a3adc9fa6a89d3195b91b5fb11236f360}{clean} (int max\+\_\+age)
+\begin{DoxyCompactList}\small\item\em Remove all key based pools with an age beyon the minimum age. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_aa011c5cc19bfb761be62adf9a88b5ee9}{Elements} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_adf0b418e513769d438a8c91d766e86f4}{elements}
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_conditions_1_1_container}{Container} of \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} dependent conditions pools. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_conditions_1_1_container}{Container} of \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV} dependent conditions pools. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Pool of conditions satisfying one \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} type (epoch, run, fill, etc). Purely internal class to the conditions manager implementation. Not at all to be accessed by clients!
+Pool of conditions satisfying one \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV} type (epoch, run, fill, etc) 
+
+Purely internal class to the conditions manager implementation. Not at all to be accessed by clients!
 
 \begin{DoxyAuthor}{Author}
-M.Frank 
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
-Definition at line 41 of file ConditionsIOVPool.h.
+Definition at line 41 of file Conditions\+I\+O\+V\+Pool.\+h.
+
+
 
 \subsection{Member Typedef Documentation}
-\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a41146867e220b8f23ef69afe5f724914}{
-\index{DD4hep::Conditions::ConditionsIOVPool@{DD4hep::Conditions::ConditionsIOVPool}!Element@{Element}}
-\index{Element@{Element}!DD4hep::Conditions::ConditionsIOVPool@{DD4hep::Conditions::ConditionsIOVPool}}
-\subsubsection[{Element}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf ConditionsPool}$\ast$ {\bf DD4hep::Conditions::ConditionsIOVPool::Element}}}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a41146867e220b8f23ef69afe5f724914}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a41146867e220b8f23ef69afe5f724914}{}\label{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a41146867e220b8f23ef69afe5f724914} 
+\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool@{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool}!Element@{Element}}
+\index{Element@{Element}!D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool@{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool}}
+\subsubsection{\texorpdfstring{Element}{Element}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_pool}{Conditions\+Pool}$\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a41146867e220b8f23ef69afe5f724914}{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool\+::\+Element}}
 
 
-Definition at line 43 of file ConditionsIOVPool.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_aa011c5cc19bfb761be62adf9a88b5ee9}{
-\index{DD4hep::Conditions::ConditionsIOVPool@{DD4hep::Conditions::ConditionsIOVPool}!Elements@{Elements}}
-\index{Elements@{Elements}!DD4hep::Conditions::ConditionsIOVPool@{DD4hep::Conditions::ConditionsIOVPool}}
-\subsubsection[{Elements}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<${\bf IOV::Key}, {\bf Element} $>$ {\bf DD4hep::Conditions::ConditionsIOVPool::Elements}}}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_aa011c5cc19bfb761be62adf9a88b5ee9}
+
+Definition at line 43 of file Conditions\+I\+O\+V\+Pool.\+h.
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_aa011c5cc19bfb761be62adf9a88b5ee9}{}\label{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_aa011c5cc19bfb761be62adf9a88b5ee9} 
+\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool@{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool}!Elements@{Elements}}
+\index{Elements@{Elements}!D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool@{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool}}
+\subsubsection{\texorpdfstring{Elements}{Elements}}
+{\footnotesize\ttfamily typedef std\+::map$<$\hyperlink{class_d_d4hep_1_1_i_o_v_a07cb46dc875296dc9cccf4ff370104ae}{I\+O\+V\+::\+Key}, \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a41146867e220b8f23ef69afe5f724914}{Element} $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_aa011c5cc19bfb761be62adf9a88b5ee9}{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool\+::\+Elements}}
 
 
-Definition at line 44 of file ConditionsIOVPool.h.
+
+Definition at line 44 of file Conditions\+I\+O\+V\+Pool.\+h.
+
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a8ccf22020bacb07028aea997d172c7d0}{
-\index{DD4hep::Conditions::ConditionsIOVPool@{DD4hep::Conditions::ConditionsIOVPool}!ConditionsIOVPool@{ConditionsIOVPool}}
-\index{ConditionsIOVPool@{ConditionsIOVPool}!DD4hep::Conditions::ConditionsIOVPool@{DD4hep::Conditions::ConditionsIOVPool}}
-\subsubsection[{ConditionsIOVPool}]{\setlength{\rightskip}{0pt plus 5cm}ConditionsIOVPool::ConditionsIOVPool ()}}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a8ccf22020bacb07028aea997d172c7d0}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a8ccf22020bacb07028aea997d172c7d0}{}\label{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a8ccf22020bacb07028aea997d172c7d0} 
+\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool@{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool}!Conditions\+I\+O\+V\+Pool@{Conditions\+I\+O\+V\+Pool}}
+\index{Conditions\+I\+O\+V\+Pool@{Conditions\+I\+O\+V\+Pool}!D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool@{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool}}
+\subsubsection{\texorpdfstring{Conditions\+I\+O\+V\+Pool()}{ConditionsIOVPool()}}
+{\footnotesize\ttfamily Conditions\+I\+O\+V\+Pool\+::\+Conditions\+I\+O\+V\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 
 
 Default constructor. 
 
-Definition at line 26 of file ConditionsIOVPool.cpp.
 
-References DD4hep::InstanceCount::increment().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a58a9a1f3f6d282fa24c00010193da303}{
-\index{DD4hep::Conditions::ConditionsIOVPool@{DD4hep::Conditions::ConditionsIOVPool}!$\sim$ConditionsIOVPool@{$\sim$ConditionsIOVPool}}
-\index{$\sim$ConditionsIOVPool@{$\sim$ConditionsIOVPool}!DD4hep::Conditions::ConditionsIOVPool@{DD4hep::Conditions::ConditionsIOVPool}}
-\subsubsection[{$\sim$ConditionsIOVPool}]{\setlength{\rightskip}{0pt plus 5cm}ConditionsIOVPool::$\sim$ConditionsIOVPool ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a58a9a1f3f6d282fa24c00010193da303}
+
+Definition at line 26 of file Conditions\+I\+O\+V\+Pool.\+cpp.
+
+
+
+References D\+D4hep\+::\+Instance\+Count\+::increment().
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a58a9a1f3f6d282fa24c00010193da303}{}\label{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a58a9a1f3f6d282fa24c00010193da303} 
+\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool@{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool}!````~Conditions\+I\+O\+V\+Pool@{$\sim$\+Conditions\+I\+O\+V\+Pool}}
+\index{````~Conditions\+I\+O\+V\+Pool@{$\sim$\+Conditions\+I\+O\+V\+Pool}!D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool@{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool}}
+\subsubsection{\texorpdfstring{$\sim$\+Conditions\+I\+O\+V\+Pool()}{~ConditionsIOVPool()}}
+{\footnotesize\ttfamily Conditions\+I\+O\+V\+Pool\+::$\sim$\+Conditions\+I\+O\+V\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Default destructor. 
 
-Definition at line 31 of file ConditionsIOVPool.cpp.
 
-References clean(), and DD4hep::InstanceCount::decrement().
+
+Definition at line 31 of file Conditions\+I\+O\+V\+Pool.\+cpp.
+
+
+
+References clean(), and D\+D4hep\+::\+Instance\+Count\+::decrement().
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a3adc9fa6a89d3195b91b5fb11236f360}{
-\index{DD4hep::Conditions::ConditionsIOVPool@{DD4hep::Conditions::ConditionsIOVPool}!clean@{clean}}
-\index{clean@{clean}!DD4hep::Conditions::ConditionsIOVPool@{DD4hep::Conditions::ConditionsIOVPool}}
-\subsubsection[{clean}]{\setlength{\rightskip}{0pt plus 5cm}int ConditionsIOVPool::clean (int {\em max\_\-age})}}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a3adc9fa6a89d3195b91b5fb11236f360}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a3adc9fa6a89d3195b91b5fb11236f360}{}\label{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a3adc9fa6a89d3195b91b5fb11236f360} 
+\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool@{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool}!clean@{clean}}
+\index{clean@{clean}!D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool@{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool}}
+\subsubsection{\texorpdfstring{clean()}{clean()}}
+{\footnotesize\ttfamily int Conditions\+I\+O\+V\+Pool\+::clean (\begin{DoxyParamCaption}\item[{int}]{max\+\_\+age }\end{DoxyParamCaption})}
 
 
-Remove all key based pools with an age beyon the minimum age. \begin{DoxyReturn}{Returns}
+
+Remove all key based pools with an age beyon the minimum age. 
+
+\begin{DoxyReturn}{Returns}
 Number of conditions cleaned up and removed. 
 \end{DoxyReturn}
 
 
-Definition at line 66 of file ConditionsIOVPool.cpp.
-
-References DD4hep::Conditions::ConditionsPool::age\_\-value, DD4hep::Conditions::ConditionsPool::count(), elements, DD4hep::Conditions::ConditionsPool::insert(), DD4hep::Conditions::ConditionsPool::iov, DD4hep::IOV::keyData, and DD4hep::Conditions::ConditionsPool::print().
-
-Referenced by DD4hep::Conditions::ConditionsManagerObject::clean(), DD4hep::Conditions::ConditionsManagerObject::clear(), and $\sim$ConditionsIOVPool().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_ae7ff2198bcdc12e8be275d1aacc5cd0b}{
-\index{DD4hep::Conditions::ConditionsIOVPool@{DD4hep::Conditions::ConditionsIOVPool}!select@{select}}
-\index{select@{select}!DD4hep::Conditions::ConditionsIOVPool@{DD4hep::Conditions::ConditionsIOVPool}}
-\subsubsection[{select}]{\setlength{\rightskip}{0pt plus 5cm}void ConditionsIOVPool::select (const {\bf Condition::iov\_\-type} \& {\em required\_\-validity}, \/  {\bf RangeConditions} \& {\em valid}, \/  {\bf RangeConditions} \& {\em expired}, \/  {\bf Condition::iov\_\-type} \& {\em conditions\_\-validity})}}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_ae7ff2198bcdc12e8be275d1aacc5cd0b}
+Definition at line 66 of file Conditions\+I\+O\+V\+Pool.\+cpp.
 
 
-Select all ACTIVE conditions, which do no longer match the \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} requirement. 
 
-Definition at line 84 of file ConditionsIOVPool.cpp.
+References D\+D4hep\+::\+Conditions\+::\+Conditions\+Pool\+::age\+\_\+value, D\+D4hep\+::\+Conditions\+::\+Conditions\+Pool\+::count(), elements, D\+D4hep\+::\+Conditions\+::\+Conditions\+Pool\+::insert(), D\+D4hep\+::\+Conditions\+::\+Conditions\+Pool\+::iov, D\+D4hep\+::\+I\+O\+V\+::key\+Data, and D\+D4hep\+::\+Conditions\+::\+Conditions\+Pool\+::print().
 
-References DD4hep::Conditions::ConditionsPool::AGE\_\-NONE, DD4hep::Conditions::ConditionsPool::age\_\-value, elements, DD4hep::IOV::iov\_\-intersection(), DD4hep::IOV::key(), DD4hep::IOV::key\_\-contains\_\-range(), and DD4hep::Conditions::ConditionsPool::select\_\-used().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a75f43e7cd7cbc5c07afb0aca2b241a41}{
-\index{DD4hep::Conditions::ConditionsIOVPool@{DD4hep::Conditions::ConditionsIOVPool}!select@{select}}
-\index{select@{select}!DD4hep::Conditions::ConditionsIOVPool@{DD4hep::Conditions::ConditionsIOVPool}}
-\subsubsection[{select}]{\setlength{\rightskip}{0pt plus 5cm}void ConditionsIOVPool::select ({\bf Condition::key\_\-type} {\em key}, \/  const {\bf Condition::iov\_\-type} \& {\em req\_\-validity}, \/  {\bf RangeConditions} \& {\em result})}}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a75f43e7cd7cbc5c07afb0aca2b241a41}
+
+
+Referenced by D\+D4hep\+::\+Conditions\+::\+Conditions\+Manager\+Object\+::clean(), D\+D4hep\+::\+Conditions\+::\+Conditions\+Manager\+Object\+::clear(), and $\sim$\+Conditions\+I\+O\+V\+Pool().
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a75f43e7cd7cbc5c07afb0aca2b241a41}{}\label{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a75f43e7cd7cbc5c07afb0aca2b241a41} 
+\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool@{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool}!select@{select}}
+\index{select@{select}!D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool@{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool}}
+\subsubsection{\texorpdfstring{select()}{select()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Conditions\+I\+O\+V\+Pool\+::select (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition\+::key\+\_\+type}}]{key,  }\item[{const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_ad84300e226b2085ec5e9db7f47be5539}{Condition\+::iov\+\_\+type} \&}]{req\+\_\+validity,  }\item[{\hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{Range\+Conditions} \&}]{result }\end{DoxyParamCaption})}
+
 
 
 Retrieve a condition set given the key according to their validity. 
 
-Definition at line 36 of file ConditionsIOVPool.cpp.
 
-References elements, DD4hep::IOV::key(), and DD4hep::IOV::key\_\-contains\_\-range().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a09fb206aaa3c86d249598b7eaa58b322}{
-\index{DD4hep::Conditions::ConditionsIOVPool@{DD4hep::Conditions::ConditionsIOVPool}!selectRange@{selectRange}}
-\index{selectRange@{selectRange}!DD4hep::Conditions::ConditionsIOVPool@{DD4hep::Conditions::ConditionsIOVPool}}
-\subsubsection[{selectRange}]{\setlength{\rightskip}{0pt plus 5cm}void ConditionsIOVPool::selectRange ({\bf Condition::key\_\-type} {\em key}, \/  const {\bf Condition::iov\_\-type} \& {\em req\_\-validity}, \/  {\bf RangeConditions} \& {\em result})}}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a09fb206aaa3c86d249598b7eaa58b322}
+
+Definition at line 36 of file Conditions\+I\+O\+V\+Pool.\+cpp.
+
+
+
+References elements, D\+D4hep\+::\+I\+O\+V\+::key(), and D\+D4hep\+::\+I\+O\+V\+::key\+\_\+contains\+\_\+range().
+
+
+
+Referenced by D\+D4hep\+::\+Conditions\+::\+Conditions\+Manager\+Object\+::push\+Updates(), and D\+D4hep\+::\+Conditions\+::\+Conditions\+Manager\+Object\+::select().
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_ae7ff2198bcdc12e8be275d1aacc5cd0b}{}\label{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_ae7ff2198bcdc12e8be275d1aacc5cd0b} 
+\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool@{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool}!select@{select}}
+\index{select@{select}!D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool@{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool}}
+\subsubsection{\texorpdfstring{select()}{select()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Conditions\+I\+O\+V\+Pool\+::select (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_ad84300e226b2085ec5e9db7f47be5539}{Condition\+::iov\+\_\+type} \&}]{required\+\_\+validity,  }\item[{\hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{Range\+Conditions} \&}]{valid,  }\item[{\hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{Range\+Conditions} \&}]{expired,  }\item[{\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_ad84300e226b2085ec5e9db7f47be5539}{Condition\+::iov\+\_\+type} \&}]{conditions\+\_\+validity }\end{DoxyParamCaption})}
+
+
+
+Select all A\+C\+T\+I\+VE conditions, which do no longer match the \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV} requirement. 
+
+
+
+Definition at line 84 of file Conditions\+I\+O\+V\+Pool.\+cpp.
+
+
+
+References D\+D4hep\+::\+Conditions\+::\+Conditions\+Pool\+::\+A\+G\+E\+\_\+\+N\+O\+NE, D\+D4hep\+::\+Conditions\+::\+Conditions\+Pool\+::age\+\_\+value, elements, D\+D4hep\+::\+I\+O\+V\+::iov\+\_\+intersection(), D\+D4hep\+::\+I\+O\+V\+::key(), D\+D4hep\+::\+I\+O\+V\+::key\+\_\+contains\+\_\+range(), and D\+D4hep\+::\+Conditions\+::\+Conditions\+Pool\+::select\+\_\+used().
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a09fb206aaa3c86d249598b7eaa58b322}{}\label{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_a09fb206aaa3c86d249598b7eaa58b322} 
+\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool@{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool}!select\+Range@{select\+Range}}
+\index{select\+Range@{select\+Range}!D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool@{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool}}
+\subsubsection{\texorpdfstring{select\+Range()}{selectRange()}}
+{\footnotesize\ttfamily void Conditions\+I\+O\+V\+Pool\+::select\+Range (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition\+::key\+\_\+type}}]{key,  }\item[{const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_ad84300e226b2085ec5e9db7f47be5539}{Condition\+::iov\+\_\+type} \&}]{req\+\_\+validity,  }\item[{\hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{Range\+Conditions} \&}]{result }\end{DoxyParamCaption})}
+
 
 
 Retrieve a condition set given the key according to their validity. 
 
-Definition at line 48 of file ConditionsIOVPool.cpp.
 
-References elements, DD4hep::IOV::key(), DD4hep::IOV::key\_\-is\_\-contained(), DD4hep::IOV::key\_\-overlaps\_\-higher\_\-end(), and DD4hep::IOV::key\_\-overlaps\_\-lower\_\-end().
+
+Definition at line 48 of file Conditions\+I\+O\+V\+Pool.\+cpp.
+
+
+
+References elements, D\+D4hep\+::\+I\+O\+V\+::key(), D\+D4hep\+::\+I\+O\+V\+::key\+\_\+is\+\_\+contained(), D\+D4hep\+::\+I\+O\+V\+::key\+\_\+overlaps\+\_\+higher\+\_\+end(), and D\+D4hep\+::\+I\+O\+V\+::key\+\_\+overlaps\+\_\+lower\+\_\+end().
+
+
+
+Referenced by D\+D4hep\+::\+Conditions\+::\+Conditions\+Manager\+Object\+::select\+\_\+range().
+
+
 
 \subsection{Member Data Documentation}
-\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_adf0b418e513769d438a8c91d766e86f4}{
-\index{DD4hep::Conditions::ConditionsIOVPool@{DD4hep::Conditions::ConditionsIOVPool}!elements@{elements}}
-\index{elements@{elements}!DD4hep::Conditions::ConditionsIOVPool@{DD4hep::Conditions::ConditionsIOVPool}}
-\subsubsection[{elements}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Elements} {\bf DD4hep::Conditions::ConditionsIOVPool::elements}}}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_adf0b418e513769d438a8c91d766e86f4}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_adf0b418e513769d438a8c91d766e86f4}{}\label{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_adf0b418e513769d438a8c91d766e86f4} 
+\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool@{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool}!elements@{elements}}
+\index{elements@{elements}!D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool@{D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool}}
+\subsubsection{\texorpdfstring{elements}{elements}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_i_o_v_pool_aa011c5cc19bfb761be62adf9a88b5ee9}{Elements} D\+D4hep\+::\+Conditions\+::\+Conditions\+I\+O\+V\+Pool\+::elements}
 
 
-\hyperlink{class_d_d4hep_1_1_conditions_1_1_container}{Container} of \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} dependent conditions pools. 
 
-Definition at line 47 of file ConditionsIOVPool.h.
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_container}{Container} of \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV} dependent conditions pools. 
 
-Referenced by clean(), DD4hep::Conditions::Operators::collectAllConditions(), DD4hep::Conditions::Test::TestEnv::dump\_\-conditions\_\-pools(), DD4hep::Conditions::ConditionsManagerObject::registerIOV(), select(), and selectRange().
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+
+Definition at line 47 of file Conditions\+I\+O\+V\+Pool.\+h.
+
+
+
+Referenced by clean(), D\+D4hep\+::\+Conditions\+::\+Operators\+::collect\+All\+Conditions(), D\+D4hep\+::\+Conditions\+::\+Test\+::\+Test\+Env\+::dump\+\_\+conditions\+\_\+pools(), D\+D4hep\+::\+Conditions\+::\+Conditions\+Manager\+Object\+::register\+I\+O\+V(), D\+D4hep\+::\+Conditions\+::\+Conditions\+Text\+Repository\+::save(), D\+D4hep\+::\+Conditions\+::\+Conditions\+Repository\+::save(), select(), and select\+Range().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCond/include/DDCond/\hyperlink{_conditions_i_o_v_pool_8h}{ConditionsIOVPool.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCond/src/\hyperlink{_conditions_i_o_v_pool_8cpp}{ConditionsIOVPool.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Cond/include/\+D\+D\+Cond/\hyperlink{_conditions_i_o_v_pool_8h}{Conditions\+I\+O\+V\+Pool.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Cond/src/\hyperlink{_conditions_i_o_v_pool_8cpp}{Conditions\+I\+O\+V\+Pool.\+cpp}\end{DoxyCompactItemize}

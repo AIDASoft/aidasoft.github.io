@@ -1,281 +1,434 @@
-\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor}{
-\section{DD4hep::Geometry::IDDescriptor Class Reference}
-\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor}\index{DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}}
-}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor}{}\section{D\+D4hep\+:\+:Geometry\+:\+:I\+D\+Descriptor Class Reference}
+\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor}\index{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}}
 
 
 Class implementing the ID encoding of detector response.  
 
 
-{\ttfamily \#include $<$DDCore/IDDescriptor.h$>$}Inheritance diagram for DD4hep::Geometry::IDDescriptor::\begin{figure}[H]
+
+
+{\ttfamily \#include $<$D\+D\+Core/\+I\+D\+Descriptor.\+h$>$}
+
+Inheritance diagram for D\+D4hep\+:\+:Geometry\+:\+:I\+D\+Descriptor\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2cm]{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor}
+\includegraphics[height=2.000000cm]{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor}
 \end{center}
 \end{figure}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_object}{IDDescriptorObject} \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a798e1c3f32519c2161daa79a7c842279}{Object}
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_object}{I\+D\+Descriptor\+Object} \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a798e1c3f32519c2161daa79a7c842279}{Object}
 \item 
-typedef BitFieldValue $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac06f5915e74f8a8f2ff73e9a322556e4}{Field}
+typedef \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field_value}{Bit\+Field\+Value} $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac06f5915e74f8a8f2ff73e9a322556e4}{Field}
 \item 
-typedef std::vector$<$ std::pair$<$ std::string, \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac06f5915e74f8a8f2ff73e9a322556e4}{Field} $>$ $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac9d6740c50e0c5cf495486c55e5640d4}{FieldMap}
+typedef std\+::vector$<$ std\+::pair$<$ std\+::string, \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac06f5915e74f8a8f2ff73e9a322556e4}{Field} $>$ $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac9d6740c50e0c5cf495486c55e5640d4}{Field\+Map}
 \item 
-typedef std::vector$<$ std::pair$<$ size\_\-t, std::string $>$ $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a0ced4a2fe6dd5775becad359f39a9ee2}{FieldIDs}
+typedef std\+::vector$<$ std\+::pair$<$ size\+\_\+t, std\+::string $>$ $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a0ced4a2fe6dd5775becad359f39a9ee2}{Field\+I\+Ds}
 \item 
-typedef std::pair$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac06f5915e74f8a8f2ff73e9a322556e4}{Field}, VolumeID $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a29eabc3d9c0c0cfdc01c18e915114a71}{VolIDField}
+typedef std\+::pair$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac06f5915e74f8a8f2ff73e9a322556e4}{Field}, Volume\+ID $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a29eabc3d9c0c0cfdc01c18e915114a71}{Vol\+I\+D\+Field}
 \item 
-typedef std::vector$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a29eabc3d9c0c0cfdc01c18e915114a71}{VolIDField} $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a6c4700a96f3a202eedaa25e54d5695ff}{VolIDFields}
+typedef std\+::vector$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a29eabc3d9c0c0cfdc01c18e915114a71}{Vol\+I\+D\+Field} $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a6c4700a96f3a202eedaa25e54d5695ff}{Vol\+I\+D\+Fields}
 \item 
-typedef std::pair$<$ std::string, int $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a6928b7adb965c1c276f22f62a0633750}{VolID}
-\begin{DoxyCompactList}\small\item\em Encode a set of volume identifiers (corresponding to this description of course!) to a volumeID. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+typedef std\+::pair$<$ std\+::string, int $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a6928b7adb965c1c276f22f62a0633750}{Vol\+ID}
+\begin{DoxyCompactList}\small\item\em Encode a set of volume identifiers (corresponding to this description of course!) to a volume\+ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ae8a1de25ea540a8a4b0a51610883cdad}{IDDescriptor} ()
-\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a74bad6296ac351ec41a75fe7e7c9eb7f}{IDDescriptor} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&e)
-\begin{DoxyCompactList}\small\item\em Constructor to be used when reading the already parsed object. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac4736ad94f2d1ccd1a2481cd1af3c833}{IDDescriptor} (const std::string \&description)
-\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
-std::string \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_af80368b77245c1d1b0aa2bb465621eb2}{fieldDescription} () const 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a967c8ac32de2bb90e1f94ecabe20828f}{I\+D\+Descriptor} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_aaa327c8a2e0ed097034624c1cb2e3f8c}{I\+D\+Descriptor} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&\hyperlink{_volumes_8cpp_a8a9a1f93e9b09afccaec215310e64142}{e})
+\begin{DoxyCompactList}\small\item\em Constructor to be used when reading the already parsed object. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a581b17106d07d9a8baec51c6e99cc1dd}{I\+D\+Descriptor} (const std\+::string \&description)
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a5bbbe15fcfb1921bf0cd687e8aa03fb0}{field\+Description} () const
 \item 
-unsigned \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a7a124ef5647a1c5f090c3a60cc4057d6}{maxBit} () const 
-\begin{DoxyCompactList}\small\item\em The total number of encoding bits for this descriptor. \item\end{DoxyCompactList}\item 
-const \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a0ced4a2fe6dd5775becad359f39a9ee2}{FieldIDs} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a76229b96b002d0d33641ff79560f74c9}{ids} () const 
-\begin{DoxyCompactList}\small\item\em Access the field-\/id container. \item\end{DoxyCompactList}\item 
-const \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac9d6740c50e0c5cf495486c55e5640d4}{FieldMap} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac9ac7cfabcfd6f2751cbdb7197404e7c}{fields} () const 
-\begin{DoxyCompactList}\small\item\em Access the fieldmap container. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac06f5915e74f8a8f2ff73e9a322556e4}{Field} \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a87e1718a63ccdf8ed06c8acdaf14f617}{field} (const std::string \&field\_\-name) const 
-\begin{DoxyCompactList}\small\item\em Get the field descriptor of one field by name. \item\end{DoxyCompactList}\item 
-size\_\-t \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_aa7476c8d4708ec4e103ea3bf0220d162}{fieldID} (const std::string \&field\_\-name) const 
-\begin{DoxyCompactList}\small\item\em Get the field identifier of one field by name. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac06f5915e74f8a8f2ff73e9a322556e4}{Field} \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a929d0beaa15914894c8c77f1c4af291a}{field} (size\_\-t identifier) const 
-\begin{DoxyCompactList}\small\item\em Get the field descriptor of one field by its identifier. \item\end{DoxyCompactList}\item 
-VolumeID \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a87bd7f294359971dfdcad72c414597ed}{encode} (const std::vector$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a6928b7adb965c1c276f22f62a0633750}{VolID} $>$ \&ids) const 
-\begin{DoxyCompactList}\small\item\em Encode a set of volume identifiers (corresponding to this description of course!) to a volumeID. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ad946d0b1977723b917f4092cf039235c}{decodeFields} (VolumeID vid, \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a6c4700a96f3a202eedaa25e54d5695ff}{VolIDFields} \&fields)
-\begin{DoxyCompactList}\small\item\em Decode volume IDs and return filled descriptor with all fields. \item\end{DoxyCompactList}\item 
-std::string \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ad147d0eaa67a3a248c35d86b7aa7a4b7}{toString} () const 
-\begin{DoxyCompactList}\small\item\em Access string representation. \item\end{DoxyCompactList}\item 
-BitField64 $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac62f98d6db97a51cadb2f17c58369d18}{decoder} ()
-\begin{DoxyCompactList}\small\item\em Access the BitField64 object. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+unsigned \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a18aca33980ee8741f1d7d3285d8db25f}{max\+Bit} () const
+\begin{DoxyCompactList}\small\item\em The total number of encoding bits for this descriptor. \end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a0ced4a2fe6dd5775becad359f39a9ee2}{Field\+I\+Ds} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a077a567e44dc8200d05e6eae30c42870}{ids} () const
+\begin{DoxyCompactList}\small\item\em Access the field-\/id container. \end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac9d6740c50e0c5cf495486c55e5640d4}{Field\+Map} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ad233517890d70599ba9f3c7f339cd26a}{fields} () const
+\begin{DoxyCompactList}\small\item\em Access the fieldmap container. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac06f5915e74f8a8f2ff73e9a322556e4}{Field} \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a9179d503a536eab536eef71b20904116}{field} (const std\+::string \&field\+\_\+name) const
+\begin{DoxyCompactList}\small\item\em Get the field descriptor of one field by name. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_acc299eb8486e58723ef37522775cd696}{field\+ID} (const std\+::string \&field\+\_\+name) const
+\begin{DoxyCompactList}\small\item\em Get the field identifier of one field by name. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac06f5915e74f8a8f2ff73e9a322556e4}{Field} \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a405b5079fa2243dad5a4b6860aba6648}{field} (size\+\_\+t identifier) const
+\begin{DoxyCompactList}\small\item\em Get the field descriptor of one field by its identifier. \end{DoxyCompactList}\item 
+Volume\+ID \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a22f54f9094eae74d4c0b22dddbec1aef}{encode} (const std\+::vector$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a6928b7adb965c1c276f22f62a0633750}{Vol\+ID} $>$ \&\hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a077a567e44dc8200d05e6eae30c42870}{ids}) const
+\begin{DoxyCompactList}\small\item\em Encode a set of volume identifiers (corresponding to this description of course!) to a volume\+ID. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ad946d0b1977723b917f4092cf039235c}{decode\+Fields} (Volume\+ID vid, \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a6c4700a96f3a202eedaa25e54d5695ff}{Vol\+I\+D\+Fields} \&\hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ad233517890d70599ba9f3c7f339cd26a}{fields})
+\begin{DoxyCompactList}\small\item\em Decode volume I\+Ds and return filled descriptor with all fields. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a0e4113ffe3560b7cef6da4e880d827f3}{to\+String} () const
+\begin{DoxyCompactList}\small\item\em Access string representation. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field64}{Bit\+Field64} $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac62f98d6db97a51cadb2f17c58369d18}{decoder} ()
+\begin{DoxyCompactList}\small\item\em Access the Bit\+Field64 object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
-Class implementing the ID encoding of detector response. \begin{DoxyAuthor}{Author}
-M.Frank 
+Class implementing the ID encoding of detector response. 
+
+\begin{DoxyAuthor}{Author}
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 \begin{DoxyDate}{Date}
 2012/07/31 
 \end{DoxyDate}
 
 
-Definition at line 40 of file IDDescriptor.h.
+Definition at line 40 of file I\+D\+Descriptor.\+h.
+
+
 
 \subsection{Member Typedef Documentation}
-\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac06f5915e74f8a8f2ff73e9a322556e4}{
-\index{DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}!Field@{Field}}
-\index{Field@{Field}!DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}}
-\subsubsection[{Field}]{\setlength{\rightskip}{0pt plus 5cm}typedef BitFieldValue$\ast$ {\bf DD4hep::Geometry::IDDescriptor::Field}}}
-\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac06f5915e74f8a8f2ff73e9a322556e4}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac06f5915e74f8a8f2ff73e9a322556e4}{}\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac06f5915e74f8a8f2ff73e9a322556e4} 
+\index{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}!Field@{Field}}
+\index{Field@{Field}!D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}}
+\subsubsection{\texorpdfstring{Field}{Field}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field_value}{Bit\+Field\+Value}$\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac06f5915e74f8a8f2ff73e9a322556e4}{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor\+::\+Field}}
 
 
-Definition at line 43 of file IDDescriptor.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a0ced4a2fe6dd5775becad359f39a9ee2}{
-\index{DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}!FieldIDs@{FieldIDs}}
-\index{FieldIDs@{FieldIDs}!DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}}
-\subsubsection[{FieldIDs}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<$std::pair$<$size\_\-t, std::string$>$ $>$ {\bf DD4hep::Geometry::IDDescriptor::FieldIDs}}}
-\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a0ced4a2fe6dd5775becad359f39a9ee2}
+
+Definition at line 43 of file I\+D\+Descriptor.\+h.
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a0ced4a2fe6dd5775becad359f39a9ee2}{}\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a0ced4a2fe6dd5775becad359f39a9ee2} 
+\index{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}!Field\+I\+Ds@{Field\+I\+Ds}}
+\index{Field\+I\+Ds@{Field\+I\+Ds}!D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}}
+\subsubsection{\texorpdfstring{Field\+I\+Ds}{FieldIDs}}
+{\footnotesize\ttfamily typedef std\+::vector$<$std\+::pair$<$size\+\_\+t, std\+::string$>$ $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a0ced4a2fe6dd5775becad359f39a9ee2}{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor\+::\+Field\+I\+Ds}}
 
 
-Definition at line 45 of file IDDescriptor.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac9d6740c50e0c5cf495486c55e5640d4}{
-\index{DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}!FieldMap@{FieldMap}}
-\index{FieldMap@{FieldMap}!DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}}
-\subsubsection[{FieldMap}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<$std::pair$<$std::string, {\bf Field}$>$ $>$ {\bf DD4hep::Geometry::IDDescriptor::FieldMap}}}
-\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac9d6740c50e0c5cf495486c55e5640d4}
+
+Definition at line 45 of file I\+D\+Descriptor.\+h.
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac9d6740c50e0c5cf495486c55e5640d4}{}\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac9d6740c50e0c5cf495486c55e5640d4} 
+\index{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}!Field\+Map@{Field\+Map}}
+\index{Field\+Map@{Field\+Map}!D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}}
+\subsubsection{\texorpdfstring{Field\+Map}{FieldMap}}
+{\footnotesize\ttfamily typedef std\+::vector$<$std\+::pair$<$std\+::string, \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac06f5915e74f8a8f2ff73e9a322556e4}{Field}$>$ $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac9d6740c50e0c5cf495486c55e5640d4}{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor\+::\+Field\+Map}}
 
 
-Definition at line 44 of file IDDescriptor.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a798e1c3f32519c2161daa79a7c842279}{
-\index{DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}!Object@{Object}}
-\index{Object@{Object}!DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}}
-\subsubsection[{Object}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf IDDescriptorObject} {\bf DD4hep::Geometry::IDDescriptor::Object}}}
-\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a798e1c3f32519c2161daa79a7c842279}
+
+Definition at line 44 of file I\+D\+Descriptor.\+h.
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a798e1c3f32519c2161daa79a7c842279}{}\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a798e1c3f32519c2161daa79a7c842279} 
+\index{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}!Object@{Object}}
+\index{Object@{Object}!D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}}
+\subsubsection{\texorpdfstring{Object}{Object}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_object}{I\+D\+Descriptor\+Object} \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a798e1c3f32519c2161daa79a7c842279}{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor\+::\+Object}}
 
 
-Definition at line 42 of file IDDescriptor.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a6928b7adb965c1c276f22f62a0633750}{
-\index{DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}!VolID@{VolID}}
-\index{VolID@{VolID}!DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}}
-\subsubsection[{VolID}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::pair$<$std::string, int$>$ {\bf DD4hep::Geometry::IDDescriptor::VolID}}}
-\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a6928b7adb965c1c276f22f62a0633750}
+
+Definition at line 42 of file I\+D\+Descriptor.\+h.
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a6928b7adb965c1c276f22f62a0633750}{}\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a6928b7adb965c1c276f22f62a0633750} 
+\index{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}!Vol\+ID@{Vol\+ID}}
+\index{Vol\+ID@{Vol\+ID}!D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}}
+\subsubsection{\texorpdfstring{Vol\+ID}{VolID}}
+{\footnotesize\ttfamily typedef std\+::pair$<$std\+::string, int$>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a6928b7adb965c1c276f22f62a0633750}{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor\+::\+Vol\+ID}}
 
 
-Encode a set of volume identifiers (corresponding to this description of course!) to a volumeID. 
 
-Definition at line 72 of file IDDescriptor.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a29eabc3d9c0c0cfdc01c18e915114a71}{
-\index{DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}!VolIDField@{VolIDField}}
-\index{VolIDField@{VolIDField}!DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}}
-\subsubsection[{VolIDField}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::pair$<${\bf Field}, VolumeID$>$ {\bf DD4hep::Geometry::IDDescriptor::VolIDField}}}
-\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a29eabc3d9c0c0cfdc01c18e915114a71}
+Encode a set of volume identifiers (corresponding to this description of course!) to a volume\+ID. 
 
 
-Definition at line 46 of file IDDescriptor.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a6c4700a96f3a202eedaa25e54d5695ff}{
-\index{DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}!VolIDFields@{VolIDFields}}
-\index{VolIDFields@{VolIDFields}!DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}}
-\subsubsection[{VolIDFields}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf VolIDField}$>$ {\bf DD4hep::Geometry::IDDescriptor::VolIDFields}}}
-\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a6c4700a96f3a202eedaa25e54d5695ff}
+
+Definition at line 72 of file I\+D\+Descriptor.\+h.
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a29eabc3d9c0c0cfdc01c18e915114a71}{}\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a29eabc3d9c0c0cfdc01c18e915114a71} 
+\index{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}!Vol\+I\+D\+Field@{Vol\+I\+D\+Field}}
+\index{Vol\+I\+D\+Field@{Vol\+I\+D\+Field}!D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}}
+\subsubsection{\texorpdfstring{Vol\+I\+D\+Field}{VolIDField}}
+{\footnotesize\ttfamily typedef std\+::pair$<$\hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac06f5915e74f8a8f2ff73e9a322556e4}{Field}, Volume\+ID$>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a29eabc3d9c0c0cfdc01c18e915114a71}{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor\+::\+Vol\+I\+D\+Field}}
 
 
-Definition at line 47 of file IDDescriptor.h.
+
+Definition at line 46 of file I\+D\+Descriptor.\+h.
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a6c4700a96f3a202eedaa25e54d5695ff}{}\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a6c4700a96f3a202eedaa25e54d5695ff} 
+\index{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}!Vol\+I\+D\+Fields@{Vol\+I\+D\+Fields}}
+\index{Vol\+I\+D\+Fields@{Vol\+I\+D\+Fields}!D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}}
+\subsubsection{\texorpdfstring{Vol\+I\+D\+Fields}{VolIDFields}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a29eabc3d9c0c0cfdc01c18e915114a71}{Vol\+I\+D\+Field}$>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a6c4700a96f3a202eedaa25e54d5695ff}{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor\+::\+Vol\+I\+D\+Fields}}
+
+
+
+Definition at line 47 of file I\+D\+Descriptor.\+h.
+
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ae8a1de25ea540a8a4b0a51610883cdad}{
-\index{DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}!IDDescriptor@{IDDescriptor}}
-\index{IDDescriptor@{IDDescriptor}!DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}}
-\subsubsection[{IDDescriptor}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::IDDescriptor::IDDescriptor ()}}
-\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ae8a1de25ea540a8a4b0a51610883cdad}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a967c8ac32de2bb90e1f94ecabe20828f}{}\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a967c8ac32de2bb90e1f94ecabe20828f} 
+\index{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}!I\+D\+Descriptor@{I\+D\+Descriptor}}
+\index{I\+D\+Descriptor@{I\+D\+Descriptor}!D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}}
+\subsubsection{\texorpdfstring{I\+D\+Descriptor()}{IDDescriptor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor\+::\+I\+D\+Descriptor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
-Default constructor. \hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a74bad6296ac351ec41a75fe7e7c9eb7f}{
-\index{DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}!IDDescriptor@{IDDescriptor}}
-\index{IDDescriptor@{IDDescriptor}!DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}}
-\subsubsection[{IDDescriptor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q $>$ DD4hep::Geometry::IDDescriptor::IDDescriptor (const {\bf Handle}$<$ Q $>$ \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a74bad6296ac351ec41a75fe7e7c9eb7f}
+
+Default constructor. 
+
+
+
+Referenced by I\+D\+Descriptor().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_aaa327c8a2e0ed097034624c1cb2e3f8c}{}\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_aaa327c8a2e0ed097034624c1cb2e3f8c} 
+\index{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}!I\+D\+Descriptor@{I\+D\+Descriptor}}
+\index{I\+D\+Descriptor@{I\+D\+Descriptor}!D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}}
+\subsubsection{\texorpdfstring{I\+D\+Descriptor()}{IDDescriptor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename Q $>$ \\
+D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor\+::\+I\+D\+Descriptor (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Constructor to be used when reading the already parsed object. 
 
-Definition at line 53 of file IDDescriptor.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac4736ad94f2d1ccd1a2481cd1af3c833}{
-\index{DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}!IDDescriptor@{IDDescriptor}}
-\index{IDDescriptor@{IDDescriptor}!DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}}
-\subsubsection[{IDDescriptor}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::IDDescriptor::IDDescriptor (const std::string \& {\em description})}}
-\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac4736ad94f2d1ccd1a2481cd1af3c833}
+
+
+Definition at line 53 of file I\+D\+Descriptor.\+h.
+
+
+
+References decode\+Fields(), decoder(), encode(), field(), field\+Description(), field\+I\+D(), fields(), I\+D\+Descriptor(), ids(), max\+Bit(), and to\+String().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a581b17106d07d9a8baec51c6e99cc1dd}{}\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a581b17106d07d9a8baec51c6e99cc1dd} 
+\index{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}!I\+D\+Descriptor@{I\+D\+Descriptor}}
+\index{I\+D\+Descriptor@{I\+D\+Descriptor}!D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}}
+\subsubsection{\texorpdfstring{I\+D\+Descriptor()}{IDDescriptor()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily I\+D\+Descriptor\+::\+I\+D\+Descriptor (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{description }\end{DoxyParamCaption})}
+
 
 
 Initializing constructor. 
 
+
+
+Definition at line 42 of file I\+D\+Descriptor.\+cpp.
+
+
+
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ad946d0b1977723b917f4092cf039235c}{
-\index{DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}!decodeFields@{decodeFields}}
-\index{decodeFields@{decodeFields}!DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}}
-\subsubsection[{decodeFields}]{\setlength{\rightskip}{0pt plus 5cm}void IDDescriptor::decodeFields (VolumeID {\em vid}, \/  {\bf VolIDFields} \& {\em fields})}}
-\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ad946d0b1977723b917f4092cf039235c}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ad946d0b1977723b917f4092cf039235c}{}\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ad946d0b1977723b917f4092cf039235c} 
+\index{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}!decode\+Fields@{decode\+Fields}}
+\index{decode\+Fields@{decode\+Fields}!D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}}
+\subsubsection{\texorpdfstring{decode\+Fields()}{decodeFields()}}
+{\footnotesize\ttfamily void I\+D\+Descriptor\+::decode\+Fields (\begin{DoxyParamCaption}\item[{Volume\+ID}]{vid,  }\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a6c4700a96f3a202eedaa25e54d5695ff}{Vol\+I\+D\+Fields} \&}]{fields }\end{DoxyParamCaption})}
 
 
-Decode volume IDs and return filled descriptor with all fields. 
 
-Definition at line 120 of file IDDescriptor.cpp.
-
-References DD4hep::Handle$<$ T $>$::isValid(), DD4hep::Handle$<$ T $>$::ptr(), and v.
-
-Referenced by DD4hep::Simulation::Geant4VolumeManager::volumeDescriptor().\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac62f98d6db97a51cadb2f17c58369d18}{
-\index{DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}!decoder@{decoder}}
-\index{decoder@{decoder}!DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}}
-\subsubsection[{decoder}]{\setlength{\rightskip}{0pt plus 5cm}BitField64 $\ast$ IDDescriptor::decoder ()}}
-\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac62f98d6db97a51cadb2f17c58369d18}
+Decode volume I\+Ds and return filled descriptor with all fields. 
 
 
-Access the BitField64 object. 
 
-Definition at line 132 of file IDDescriptor.cpp.\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a87bd7f294359971dfdcad72c414597ed}{
-\index{DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}!encode@{encode}}
-\index{encode@{encode}!DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}}
-\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}VolumeID IDDescriptor::encode (const std::vector$<$ {\bf VolID} $>$ \& {\em ids}) const}}
-\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a87bd7f294359971dfdcad72c414597ed}
+Definition at line 120 of file I\+D\+Descriptor.\+cpp.
 
 
-Encode a set of volume identifiers (corresponding to this description of course!) to a volumeID. 
 
-Definition at line 107 of file IDDescriptor.cpp.
-
-References field().\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a929d0beaa15914894c8c77f1c4af291a}{
-\index{DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}!field@{field}}
-\index{field@{field}!DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}}
-\subsubsection[{field}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IDDescriptor::Field} IDDescriptor::field (size\_\-t {\em identifier}) const}}
-\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a929d0beaa15914894c8c77f1c4af291a}
+References v.
 
 
-Get the field descriptor of one field by its identifier. 
 
-Definition at line 92 of file IDDescriptor.cpp.
+Referenced by I\+D\+Descriptor(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Volume\+Manager\+::volume\+Descriptor().
 
-References fields().\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a87e1718a63ccdf8ed06c8acdaf14f617}{
-\index{DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}!field@{field}}
-\index{field@{field}!DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}}
-\subsubsection[{field}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Field} DD4hep::Geometry::IDDescriptor::field (const std::string \& {\em field\_\-name}) const}}
-\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a87e1718a63ccdf8ed06c8acdaf14f617}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac62f98d6db97a51cadb2f17c58369d18}{}\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac62f98d6db97a51cadb2f17c58369d18} 
+\index{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}!decoder@{decoder}}
+\index{decoder@{decoder}!D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}}
+\subsubsection{\texorpdfstring{decoder()}{decoder()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field64}{Bit\+Field64} $\ast$ I\+D\+Descriptor\+::decoder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Access the Bit\+Field64 object. 
+
+
+
+Definition at line 132 of file I\+D\+Descriptor.\+cpp.
+
+
+
+Referenced by I\+D\+Descriptor().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a22f54f9094eae74d4c0b22dddbec1aef}{}\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a22f54f9094eae74d4c0b22dddbec1aef} 
+\index{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}!encode@{encode}}
+\index{encode@{encode}!D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}}
+\subsubsection{\texorpdfstring{encode()}{encode()}}
+{\footnotesize\ttfamily Volume\+ID I\+D\+Descriptor\+::encode (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a6928b7adb965c1c276f22f62a0633750}{Vol\+ID} $>$ \&}]{ids }\end{DoxyParamCaption}) const}
+
+
+
+Encode a set of volume identifiers (corresponding to this description of course!) to a volume\+ID. 
+
+
+
+Definition at line 107 of file I\+D\+Descriptor.\+cpp.
+
+
+
+References D\+D4hep\+::\+D\+D\+Segmentation\+::\+Bit\+Field\+Value\+::mask(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Bit\+Field\+Value\+::offset(), and D\+D4hep\+::\+D\+D\+Segmentation\+::\+Bit\+Field\+Value\+::value().
+
+
+
+Referenced by I\+D\+Descriptor().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a9179d503a536eab536eef71b20904116}{}\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a9179d503a536eab536eef71b20904116} 
+\index{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}!field@{field}}
+\index{field@{field}!D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}}
+\subsubsection{\texorpdfstring{field()}{field()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac06f5915e74f8a8f2ff73e9a322556e4}{I\+D\+Descriptor\+::\+Field} I\+D\+Descriptor\+::field (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{field\+\_\+name }\end{DoxyParamCaption}) const}
+
 
 
 Get the field descriptor of one field by name. 
 
-Referenced by DD4hep::Geometry::VolumeManager::addSubdetector(), DD4hep::DDRec::IDDecoder::barrelEndcapFlag(), encode(), DD4hep::Simulation::Geant4ReadoutVolumeFilter::Geant4ReadoutVolumeFilter(), DD4hep::DDRec::IDDecoder::layerIndex(), DD4hep::DDRec::IDDecoder::systemIndex(), and DD4hep::Geometry::DetectorTools::toString().\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_af80368b77245c1d1b0aa2bb465621eb2}{
-\index{DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}!fieldDescription@{fieldDescription}}
-\index{fieldDescription@{fieldDescription}!DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}}
-\subsubsection[{fieldDescription}]{\setlength{\rightskip}{0pt plus 5cm}std::string IDDescriptor::fieldDescription () const}}
-\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_af80368b77245c1d1b0aa2bb465621eb2}
 
 
-Definition at line 56 of file IDDescriptor.cpp.
-
-Referenced by DD4hep::Simulation::Geant4ConversionHelper::encoding().\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_aa7476c8d4708ec4e103ea3bf0220d162}{
-\index{DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}!fieldID@{fieldID}}
-\index{fieldID@{fieldID}!DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}}
-\subsubsection[{fieldID}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t DD4hep::Geometry::IDDescriptor::fieldID (const std::string \& {\em field\_\-name}) const}}
-\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_aa7476c8d4708ec4e103ea3bf0220d162}
+Definition at line 83 of file I\+D\+Descriptor.\+cpp.
 
 
-Get the field identifier of one field by name. \hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac9ac7cfabcfd6f2751cbdb7197404e7c}{
-\index{DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}!fields@{fields}}
-\index{fields@{fields}!DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}}
-\subsubsection[{fields}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf IDDescriptor::FieldMap} \& IDDescriptor::fields () const}}
-\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac9ac7cfabcfd6f2751cbdb7197404e7c}
+
+References m.
+
+
+
+Referenced by D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::add\+Subdetector(), D\+D4hep\+::\+D\+D\+Rec\+::\+I\+D\+Decoder\+::barrel\+Endcap\+Flag(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Readout\+Volume\+Filter\+::\+Geant4\+Readout\+Volume\+Filter(), I\+D\+Descriptor(), D\+D4hep\+::\+D\+D\+Rec\+::\+I\+D\+Decoder\+::layer\+Index(), D\+D4hep\+::\+D\+D\+Rec\+::\+I\+D\+Decoder\+::system\+Index(), and D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::to\+String().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a405b5079fa2243dad5a4b6860aba6648}{}\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a405b5079fa2243dad5a4b6860aba6648} 
+\index{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}!field@{field}}
+\index{field@{field}!D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}}
+\subsubsection{\texorpdfstring{field()}{field()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac06f5915e74f8a8f2ff73e9a322556e4}{I\+D\+Descriptor\+::\+Field} I\+D\+Descriptor\+::field (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{identifier }\end{DoxyParamCaption}) const}
+
+
+
+Get the field descriptor of one field by its identifier. 
+
+
+
+Definition at line 92 of file I\+D\+Descriptor.\+cpp.
+
+
+
+References m.
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a5bbbe15fcfb1921bf0cd687e8aa03fb0}{}\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a5bbbe15fcfb1921bf0cd687e8aa03fb0} 
+\index{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}!field\+Description@{field\+Description}}
+\index{field\+Description@{field\+Description}!D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}}
+\subsubsection{\texorpdfstring{field\+Description()}{fieldDescription()}}
+{\footnotesize\ttfamily std\+::string I\+D\+Descriptor\+::field\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 56 of file I\+D\+Descriptor.\+cpp.
+
+
+
+References D\+D4hep\+::\+D\+D\+Segmentation\+::\+Bit\+Field64\+::field\+Description().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Conversion\+Helper\+::encoding(), and I\+D\+Descriptor().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_acc299eb8486e58723ef37522775cd696}{}\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_acc299eb8486e58723ef37522775cd696} 
+\index{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}!field\+ID@{field\+ID}}
+\index{field\+ID@{field\+ID}!D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}}
+\subsubsection{\texorpdfstring{field\+I\+D()}{fieldID()}}
+{\footnotesize\ttfamily size\+\_\+t I\+D\+Descriptor\+::field\+ID (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{field\+\_\+name }\end{DoxyParamCaption}) const}
+
+
+
+Get the field identifier of one field by name. 
+
+
+
+Definition at line 98 of file I\+D\+Descriptor.\+cpp.
+
+
+
+References m.
+
+
+
+Referenced by I\+D\+Descriptor().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ad233517890d70599ba9f3c7f339cd26a}{}\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ad233517890d70599ba9f3c7f339cd26a} 
+\index{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}!fields@{fields}}
+\index{fields@{fields}!D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}}
+\subsubsection{\texorpdfstring{fields()}{fields()}}
+{\footnotesize\ttfamily const \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ac9d6740c50e0c5cf495486c55e5640d4}{I\+D\+Descriptor\+::\+Field\+Map} \& I\+D\+Descriptor\+::fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 
 
 Access the fieldmap container. 
 
-Definition at line 75 of file IDDescriptor.cpp.
 
-References DD4hep::Handle$<$ T $>$::isValid().
 
-Referenced by field().\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a76229b96b002d0d33641ff79560f74c9}{
-\index{DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}!ids@{ids}}
-\index{ids@{ids}!DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}}
-\subsubsection[{ids}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf IDDescriptor::FieldIDs} \& IDDescriptor::ids () const}}
-\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a76229b96b002d0d33641ff79560f74c9}
+Definition at line 75 of file I\+D\+Descriptor.\+cpp.
+
+
+
+Referenced by I\+D\+Descriptor(), and D\+D4hep\+::\+Geometry\+::\+Region\+::store\+Secondaries().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a077a567e44dc8200d05e6eae30c42870}{}\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a077a567e44dc8200d05e6eae30c42870} 
+\index{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}!ids@{ids}}
+\index{ids@{ids}!D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}}
+\subsubsection{\texorpdfstring{ids()}{ids()}}
+{\footnotesize\ttfamily const \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a0ced4a2fe6dd5775becad359f39a9ee2}{I\+D\+Descriptor\+::\+Field\+I\+Ds} \& I\+D\+Descriptor\+::ids (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 
 
 Access the field-\/id container. 
 
-Definition at line 67 of file IDDescriptor.cpp.
 
-References DD4hep::Handle$<$ T $>$::isValid().\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a7a124ef5647a1c5f090c3a60cc4057d6}{
-\index{DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}!maxBit@{maxBit}}
-\index{maxBit@{maxBit}!DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}}
-\subsubsection[{maxBit}]{\setlength{\rightskip}{0pt plus 5cm}unsigned IDDescriptor::maxBit () const}}
-\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a7a124ef5647a1c5f090c3a60cc4057d6}
+
+Definition at line 67 of file I\+D\+Descriptor.\+cpp.
+
+
+
+Referenced by I\+D\+Descriptor(), and D\+D4hep\+::\+Geometry\+::\+Region\+::store\+Secondaries().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a18aca33980ee8741f1d7d3285d8db25f}{}\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a18aca33980ee8741f1d7d3285d8db25f} 
+\index{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}!max\+Bit@{max\+Bit}}
+\index{max\+Bit@{max\+Bit}!D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}}
+\subsubsection{\texorpdfstring{max\+Bit()}{maxBit()}}
+{\footnotesize\ttfamily unsigned I\+D\+Descriptor\+::max\+Bit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 
 
 The total number of encoding bits for this descriptor. 
 
-Definition at line 62 of file IDDescriptor.cpp.\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ad147d0eaa67a3a248c35d86b7aa7a4b7}{
-\index{DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}!toString@{toString}}
-\index{toString@{toString}!DD4hep::Geometry::IDDescriptor@{DD4hep::Geometry::IDDescriptor}}
-\subsubsection[{toString}]{\setlength{\rightskip}{0pt plus 5cm}{\bf string} IDDescriptor::toString () const}}
-\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_ad147d0eaa67a3a248c35d86b7aa7a4b7}
 
 
-Access string representation. Acces string representation. 
+Definition at line 62 of file I\+D\+Descriptor.\+cpp.
 
-Definition at line 49 of file IDDescriptor.cpp.
 
-References DD4hep::Handle$<$ T $>$::isValid(), and DD4hep::Handle$<$ T $>$::m\_\-element.
 
-Referenced by DD4hep::Geometry::operator$<$$<$().
+Referenced by I\+D\+Descriptor(), and D\+D4hep\+::\+Geometry\+::\+Region\+::store\+Secondaries().
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a0e4113ffe3560b7cef6da4e880d827f3}{}\label{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor_a0e4113ffe3560b7cef6da4e880d827f3} 
+\index{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor@{D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily string I\+D\+Descriptor\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Access string representation. 
+
+Acces string representation. 
+
+Definition at line 49 of file I\+D\+Descriptor.\+cpp.
+
+
+
+Referenced by I\+D\+Descriptor(), and D\+D4hep\+::\+Geometry\+::operator$<$$<$().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_i_d_descriptor_8h}{IDDescriptor.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_i_d_descriptor_8cpp}{IDDescriptor.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/include/\+D\+D4hep/\hyperlink{_i_d_descriptor_8h}{I\+D\+Descriptor.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\hyperlink{_i_d_descriptor_8cpp}{I\+D\+Descriptor.\+cpp}\end{DoxyCompactItemize}

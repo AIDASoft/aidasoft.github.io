@@ -1,52 +1,54 @@
-\hypertarget{_segmentations_8cpp}{
-\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/Segmentations.cpp File Reference}
-\label{_segmentations_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/Segmentations.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/Segmentations.cpp}}
-}
-{\ttfamily \#include \char`\"{}DD4hep/Segmentations.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/InstanceCount.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/Printout.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/Plugins.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/Handle.inl\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/objects/SegmentationsInterna.h\char`\"{}}\par
-{\ttfamily \#include $<$iostream$>$}\par
-{\ttfamily \#include $<$stdexcept$>$}\par
-{\ttfamily \#include \char`\"{}DDSegmentation/CartesianGrid.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDSegmentation/CartesianGridXY.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDSegmentation/CartesianGridXZ.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDSegmentation/CartesianGridYZ.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDSegmentation/CartesianGridXYZ.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDSegmentation/TiledLayerGridXY.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDSegmentation/MegatileLayerGridXY.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDSegmentation/WaferGridXY.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDSegmentation/PolarGridRPhi.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDSegmentation/PolarGridRPhi2.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDSegmentation/ProjectiveCylinder.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDSegmentation/MultiSegmentation.h\char`\"{}}\par
-\subsection*{Defines}
+\hypertarget{_segmentations_8cpp}{}\section{/afs/cern.ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\+Segmentations.cpp File Reference}
+\label{_segmentations_8cpp}\index{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\+Segmentations.\+cpp@{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\+Segmentations.\+cpp}}
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Segmentations.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Instance\+Count.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Printout.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Plugins.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Handle.\+inl\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/objects/\+Segmentations\+Interna.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Segmentation/\+Cartesian\+Grid.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Segmentation/\+Cartesian\+Grid\+X\+Y.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Segmentation/\+Cartesian\+Grid\+X\+Z.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Segmentation/\+Cartesian\+Grid\+Y\+Z.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Segmentation/\+Cartesian\+Grid\+X\+Y\+Z.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Segmentation/\+Tiled\+Layer\+Grid\+X\+Y.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Segmentation/\+Megatile\+Layer\+Grid\+X\+Y.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Segmentation/\+Wafer\+Grid\+X\+Y.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Segmentation/\+Polar\+Grid\+R\+Phi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Segmentation/\+Polar\+Grid\+R\+Phi2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Segmentation/\+Projective\+Cylinder.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+Segmentation/\+Multi\+Segmentation.\+h\char`\"{}}\newline
+\subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{_segmentations_8cpp_a659e75483785de89a4c36fc38f07c39d}{IMPLEMENT\_\-SEGMENTATION\_\-HANDLE}(X)~DD4HEP\_\-INSTANTIATE\_\-HANDLE\_\-UNNAMED(\hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_wrapper}{SegmentationWrapper}$<$DDSegmentation::X$>$);
+\#define \hyperlink{_segmentations_8cpp_a659e75483785de89a4c36fc38f07c39d}{I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+S\+E\+G\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+H\+A\+N\+D\+LE}(X)~\hyperlink{_segmentations_8cpp_a13eae4e46c22f57b22be9728fbddd2e3}{D\+D4\+H\+E\+P\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+U\+N\+N\+A\+M\+ED}(\hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_wrapper}{Segmentation\+Wrapper}$<$D\+D\+Segmentation\+::X$>$);
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{_segmentations_8cpp_a13eae4e46c22f57b22be9728fbddd2e3}{DD4HEP\_\-INSTANTIATE\_\-HANDLE\_\-UNNAMED} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object}{SegmentationObject})
+\hyperlink{_segmentations_8cpp_a13eae4e46c22f57b22be9728fbddd2e3}{D\+D4\+H\+E\+P\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+U\+N\+N\+A\+M\+ED} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object}{Segmentation\+Object})
 \end{DoxyCompactItemize}
 
 
-\subsection{Define Documentation}
-\hypertarget{_segmentations_8cpp_a659e75483785de89a4c36fc38f07c39d}{
-\index{Segmentations.cpp@{Segmentations.cpp}!IMPLEMENT\_\-SEGMENTATION\_\-HANDLE@{IMPLEMENT\_\-SEGMENTATION\_\-HANDLE}}
-\index{IMPLEMENT\_\-SEGMENTATION\_\-HANDLE@{IMPLEMENT\_\-SEGMENTATION\_\-HANDLE}!Segmentations.cpp@{Segmentations.cpp}}
-\subsubsection[{IMPLEMENT\_\-SEGMENTATION\_\-HANDLE}]{\setlength{\rightskip}{0pt plus 5cm}\#define IMPLEMENT\_\-SEGMENTATION\_\-HANDLE(X)~DD4HEP\_\-INSTANTIATE\_\-HANDLE\_\-UNNAMED({\bf SegmentationWrapper}$<$DDSegmentation::X$>$);}}
-\label{_segmentations_8cpp_a659e75483785de89a4c36fc38f07c39d}
+\subsection{Macro Definition Documentation}
+\hypertarget{_segmentations_8cpp_a659e75483785de89a4c36fc38f07c39d}{}\label{_segmentations_8cpp_a659e75483785de89a4c36fc38f07c39d} 
+\index{Segmentations.\+cpp@{Segmentations.\+cpp}!I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+S\+E\+G\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+H\+A\+N\+D\+LE@{I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+S\+E\+G\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+H\+A\+N\+D\+LE}}
+\index{I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+S\+E\+G\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+H\+A\+N\+D\+LE@{I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+S\+E\+G\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+H\+A\+N\+D\+LE}!Segmentations.\+cpp@{Segmentations.\+cpp}}
+\subsubsection{\texorpdfstring{I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+S\+E\+G\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+H\+A\+N\+D\+LE}{IMPLEMENT\_SEGMENTATION\_HANDLE}}
+{\footnotesize\ttfamily \#define I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+S\+E\+G\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+H\+A\+N\+D\+LE(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~\hyperlink{_segmentations_8cpp_a13eae4e46c22f57b22be9728fbddd2e3}{D\+D4\+H\+E\+P\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+U\+N\+N\+A\+M\+ED}(\hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_wrapper}{Segmentation\+Wrapper}$<$D\+D\+Segmentation\+::X$>$);}
 
 
-Definition at line 120 of file Segmentations.cpp.
+
+Definition at line 120 of file Segmentations.\+cpp.
+
+
 
 \subsection{Function Documentation}
-\hypertarget{_segmentations_8cpp_a13eae4e46c22f57b22be9728fbddd2e3}{
-\index{Segmentations.cpp@{Segmentations.cpp}!DD4HEP\_\-INSTANTIATE\_\-HANDLE\_\-UNNAMED@{DD4HEP\_\-INSTANTIATE\_\-HANDLE\_\-UNNAMED}}
-\index{DD4HEP\_\-INSTANTIATE\_\-HANDLE\_\-UNNAMED@{DD4HEP\_\-INSTANTIATE\_\-HANDLE\_\-UNNAMED}!Segmentations.cpp@{Segmentations.cpp}}
-\subsubsection[{DD4HEP\_\-INSTANTIATE\_\-HANDLE\_\-UNNAMED}]{\setlength{\rightskip}{0pt plus 5cm}DD4HEP\_\-INSTANTIATE\_\-HANDLE\_\-UNNAMED ({\bf SegmentationObject})}}
-\label{_segmentations_8cpp_a13eae4e46c22f57b22be9728fbddd2e3}
+\hypertarget{_segmentations_8cpp_a13eae4e46c22f57b22be9728fbddd2e3}{}\label{_segmentations_8cpp_a13eae4e46c22f57b22be9728fbddd2e3} 
+\index{Segmentations.\+cpp@{Segmentations.\+cpp}!D\+D4\+H\+E\+P\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+U\+N\+N\+A\+M\+ED@{D\+D4\+H\+E\+P\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+U\+N\+N\+A\+M\+ED}}
+\index{D\+D4\+H\+E\+P\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+U\+N\+N\+A\+M\+ED@{D\+D4\+H\+E\+P\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+U\+N\+N\+A\+M\+ED}!Segmentations.\+cpp@{Segmentations.\+cpp}}
+\subsubsection{\texorpdfstring{D\+D4\+H\+E\+P\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+U\+N\+N\+A\+M\+E\+D()}{DD4HEP\_INSTANTIATE\_HANDLE\_UNNAMED()}}
+{\footnotesize\ttfamily D\+D4\+H\+E\+P\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+U\+N\+N\+A\+M\+ED (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_segmentation_object}{Segmentation\+Object}}]{ }\end{DoxyParamCaption})}
+

@@ -1,188 +1,291 @@
-\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access}{
-\section{DD4hep::Conditions::ConditionsAccess Class Reference}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_access}\index{DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}}
-}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access}{}\section{D\+D4hep\+:\+:Conditions\+:\+:Conditions\+Access Class Reference}
+\label{class_d_d4hep_1_1_conditions_1_1_conditions_access}\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}}
 
 
 Manager class for condition handles.  
 
 
-{\ttfamily \#include $<$ConditionsAccess.h$>$}Inheritance diagram for DD4hep::Conditions::ConditionsAccess::\begin{figure}[H]
+
+
+{\ttfamily \#include $<$Conditions\+Access.\+h$>$}
+
+Inheritance diagram for D\+D4hep\+:\+:Conditions\+:\+:Conditions\+Access\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2cm]{class_d_d4hep_1_1_conditions_1_1_conditions_access}
+\includegraphics[height=2.000000cm]{class_d_d4hep_1_1_conditions_1_1_conditions_access}
 \end{center}
 \end{figure}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object}{ConditionsManagerObject} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_a5d82a416d51349abaf6075b2028faecc}{Object}
-\begin{DoxyCompactList}\small\item\em Standard object type. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object}{Conditions\+Manager\+Object} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_a5d82a416d51349abaf6075b2028faecc}{Object}
+\begin{DoxyCompactList}\small\item\em Standard object type. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_a837aa2f7c771e192a535024a1fc2f10a}{ConditionsAccess} ()
-\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_a1f9e4b69121bbb7416bce5086bab7e9c}{ConditionsAccess} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object}{Object} $\ast$p)
-\begin{DoxyCompactList}\small\item\em Constructor to be used with valid pointer to object. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_a39e09b1816f8a9e0cfc63815356a44fb}{ConditionsAccess} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access}{ConditionsAccess} \&c)
-\begin{DoxyCompactList}\small\item\em Constructor to assing handle of the same type. \item\end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_a117b108aa0675602a50b8b9a4dd3292d}{ConditionsAccess} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&e)
-\begin{DoxyCompactList}\small\item\em Constructor to be used assigning from different type. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_ab654b88bad13706fd78d4a92c1ba0eb4}{$\sim$ConditionsAccess} ()
-\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
-const std::vector$<$ const \hyperlink{class_d_d4hep_1_1_i_o_v_type}{IOVType} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_a7e29a0f6c92bfaa2e0d77772658493d2}{iovTypesUsed} () const 
-\begin{DoxyCompactList}\small\item\em Access the used/registered \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} types. \item\end{DoxyCompactList}\item 
-const \hyperlink{class_d_d4hep_1_1_i_o_v_type}{IOVType} $\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_a4e069c9326b34448e7c78480ee9f8ecc}{iovType} (const std::string \&iov\_\-name) const 
-\begin{DoxyCompactList}\small\item\em Access \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} by its name. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_af8320af218167cfc28bf10763cc64f94}{clean} (const \hyperlink{class_d_d4hep_1_1_i_o_v_type}{IOVType} $\ast$typ, int max\_\-age)
-\begin{DoxyCompactList}\small\item\em Clean conditions, which are above the age limit. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_a9adb922d63cdbb66043c5aaf90fe0a20}{get} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition::key\_\-type} key, const \hyperlink{class_d_d4hep_1_1_i_o_v}{Condition::iov\_\-type} \&req\_\-validity)
-\begin{DoxyCompactList}\small\item\em Retrieve a condition given a Detector Element and the conditions name. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_a274b4e414739ec7bf648075a2f64f0d0}{get} (const std::string \&path, const \hyperlink{class_d_d4hep_1_1_i_o_v}{Condition::iov\_\-type} \&req\_\-validity)
-\begin{DoxyCompactList}\small\item\em Retrieve a condition given the conditions path = $<$Detector element=\char`\"{}\char`\"{} path$>$=\char`\"{}\char`\"{}$>$.$<$conditions name$>$=\char`\"{}\char`\"{}$>$. \item\end{DoxyCompactList}\item 
-\hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{RangeConditions} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_aa5f5712c3083cec42a3cd49d86924611}{getRange} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition::key\_\-type} key, const \hyperlink{class_d_d4hep_1_1_i_o_v}{Condition::iov\_\-type} \&req\_\-validity)
-\begin{DoxyCompactList}\small\item\em Retrieve a condition given a Detector Element and the conditions name. \item\end{DoxyCompactList}\item 
-\hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{RangeConditions} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_a44bbed9e32bd8ffe16319a83556571dd}{getRange} (const std::string \&path, const \hyperlink{class_d_d4hep_1_1_i_o_v}{Condition::iov\_\-type} \&req\_\-validity)
-\begin{DoxyCompactList}\small\item\em Retrieve a condition given the conditions path = $<$Detector element=\char`\"{}\char`\"{} path$>$=\char`\"{}\char`\"{}$>$.$<$conditions name$>$=\char`\"{}\char`\"{}$>$. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_a837aa2f7c771e192a535024a1fc2f10a}{Conditions\+Access} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_a1f9e4b69121bbb7416bce5086bab7e9c}{Conditions\+Access} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_a5d82a416d51349abaf6075b2028faecc}{Object} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Constructor to be used with valid pointer to object. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_a39e09b1816f8a9e0cfc63815356a44fb}{Conditions\+Access} (const \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access}{Conditions\+Access} \&c)
+\begin{DoxyCompactList}\small\item\em Constructor to assing handle of the same type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_a0807e34c93de398b31526a30f1028e44}{Conditions\+Access} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&\hyperlink{_volumes_8cpp_a8a9a1f93e9b09afccaec215310e64142}{e})
+\begin{DoxyCompactList}\small\item\em Constructor to be used assigning from different type. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_ab654b88bad13706fd78d4a92c1ba0eb4}{$\sim$\+Conditions\+Access} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+const std\+::vector$<$ const \hyperlink{class_d_d4hep_1_1_i_o_v_type}{I\+O\+V\+Type} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_a8d22f883fc827ab82631a0a00bcc2c88}{iov\+Types\+Used} () const
+\begin{DoxyCompactList}\small\item\em Access the used/registered \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV} types. \end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_i_o_v_type}{I\+O\+V\+Type} $\ast$ \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_a47adb812dd047300b7b69b6544007397}{iov\+Type} (const std\+::string \&iov\+\_\+name) const
+\begin{DoxyCompactList}\small\item\em Access \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV} by its name. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_af8320af218167cfc28bf10763cc64f94}{clean} (const \hyperlink{class_d_d4hep_1_1_i_o_v_type}{I\+O\+V\+Type} $\ast$typ, int max\+\_\+age)
+\begin{DoxyCompactList}\small\item\em Clean conditions, which are above the age limit. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_a9adb922d63cdbb66043c5aaf90fe0a20}{get} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition\+::key\+\_\+type} key, const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_ad84300e226b2085ec5e9db7f47be5539}{Condition\+::iov\+\_\+type} \&req\+\_\+validity)
+\begin{DoxyCompactList}\small\item\em Retrieve a condition given a Detector Element and the conditions name. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_abadda777e6c3ef97bd6675fdceda2630}{get} (const std\+::string \&path, const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_ad84300e226b2085ec5e9db7f47be5539}{Condition\+::iov\+\_\+type} \&req\+\_\+validity)
+\begin{DoxyCompactList}\small\item\em Retrieve a condition given the conditions path = $<$\+Detector element=\char`\"{}\char`\"{} path$>$=\char`\"{}\char`\"{}$>$.$<$conditions name$>$=\char`\"{}\char`\"{}$>$ \end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{Range\+Conditions} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_aa5f5712c3083cec42a3cd49d86924611}{get\+Range} (\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition\+::key\+\_\+type} key, const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_ad84300e226b2085ec5e9db7f47be5539}{Condition\+::iov\+\_\+type} \&req\+\_\+validity)
+\begin{DoxyCompactList}\small\item\em Retrieve a condition given a Detector Element and the conditions name. \end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{Range\+Conditions} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_a67b7e2ddb0c713445cb34d4217782bce}{get\+Range} (const std\+::string \&path, const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_ad84300e226b2085ec5e9db7f47be5539}{Condition\+::iov\+\_\+type} \&req\+\_\+validity)
+\begin{DoxyCompactList}\small\item\em Retrieve a condition given the conditions path = $<$\+Detector element=\char`\"{}\char`\"{} path$>$=\char`\"{}\char`\"{}$>$.$<$conditions name$>$=\char`\"{}\char`\"{}$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
-Manager class for condition handles. \begin{DoxyAuthor}{Author}
-M.Frank 
+Manager class for condition handles. 
+
+\begin{DoxyAuthor}{Author}
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
-Definition at line 35 of file ConditionsAccess.h.
+Definition at line 35 of file Conditions\+Access.\+h.
+
+
 
 \subsection{Member Typedef Documentation}
-\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_a5d82a416d51349abaf6075b2028faecc}{
-\index{DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}!Object@{Object}}
-\index{Object@{Object}!DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}}
-\subsubsection[{Object}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf ConditionsManagerObject} {\bf DD4hep::Conditions::ConditionsAccess::Object}}}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_a5d82a416d51349abaf6075b2028faecc}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_a5d82a416d51349abaf6075b2028faecc}{}\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_a5d82a416d51349abaf6075b2028faecc} 
+\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}!Object@{Object}}
+\index{Object@{Object}!D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}}
+\subsubsection{\texorpdfstring{Object}{Object}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_manager_object}{Conditions\+Manager\+Object} \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_a5d82a416d51349abaf6075b2028faecc}{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access\+::\+Object}}
+
 
 
 Standard object type. 
 
-Definition at line 39 of file ConditionsAccess.h.
+
+
+Definition at line 39 of file Conditions\+Access.\+h.
+
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_a837aa2f7c771e192a535024a1fc2f10a}{
-\index{DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}!ConditionsAccess@{ConditionsAccess}}
-\index{ConditionsAccess@{ConditionsAccess}!DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}}
-\subsubsection[{ConditionsAccess}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Conditions::ConditionsAccess::ConditionsAccess ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_a837aa2f7c771e192a535024a1fc2f10a}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_a837aa2f7c771e192a535024a1fc2f10a}{}\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_a837aa2f7c771e192a535024a1fc2f10a} 
+\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}!Conditions\+Access@{Conditions\+Access}}
+\index{Conditions\+Access@{Conditions\+Access}!D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}}
+\subsubsection{\texorpdfstring{Conditions\+Access()}{ConditionsAccess()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily D\+D4hep\+::\+Conditions\+::\+Conditions\+Access\+::\+Conditions\+Access (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Default constructor. 
 
-Definition at line 44 of file ConditionsAccess.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_a1f9e4b69121bbb7416bce5086bab7e9c}{
-\index{DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}!ConditionsAccess@{ConditionsAccess}}
-\index{ConditionsAccess@{ConditionsAccess}!DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}}
-\subsubsection[{ConditionsAccess}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Conditions::ConditionsAccess::ConditionsAccess ({\bf Object} $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_a1f9e4b69121bbb7416bce5086bab7e9c}
+
+
+Definition at line 44 of file Conditions\+Access.\+h.
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_a1f9e4b69121bbb7416bce5086bab7e9c}{}\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_a1f9e4b69121bbb7416bce5086bab7e9c} 
+\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}!Conditions\+Access@{Conditions\+Access}}
+\index{Conditions\+Access@{Conditions\+Access}!D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}}
+\subsubsection{\texorpdfstring{Conditions\+Access()}{ConditionsAccess()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily D\+D4hep\+::\+Conditions\+::\+Conditions\+Access\+::\+Conditions\+Access (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access_a5d82a416d51349abaf6075b2028faecc}{Object} $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Constructor to be used with valid pointer to object. 
 
-Definition at line 47 of file ConditionsAccess.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_a39e09b1816f8a9e0cfc63815356a44fb}{
-\index{DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}!ConditionsAccess@{ConditionsAccess}}
-\index{ConditionsAccess@{ConditionsAccess}!DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}}
-\subsubsection[{ConditionsAccess}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Conditions::ConditionsAccess::ConditionsAccess (const {\bf ConditionsAccess} \& {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_a39e09b1816f8a9e0cfc63815356a44fb}
+
+
+Definition at line 47 of file Conditions\+Access.\+h.
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_a39e09b1816f8a9e0cfc63815356a44fb}{}\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_a39e09b1816f8a9e0cfc63815356a44fb} 
+\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}!Conditions\+Access@{Conditions\+Access}}
+\index{Conditions\+Access@{Conditions\+Access}!D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}}
+\subsubsection{\texorpdfstring{Conditions\+Access()}{ConditionsAccess()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily D\+D4hep\+::\+Conditions\+::\+Conditions\+Access\+::\+Conditions\+Access (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_conditions_1_1_conditions_access}{Conditions\+Access} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Constructor to assing handle of the same type. 
 
-Definition at line 50 of file ConditionsAccess.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_a117b108aa0675602a50b8b9a4dd3292d}{
-\index{DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}!ConditionsAccess@{ConditionsAccess}}
-\index{ConditionsAccess@{ConditionsAccess}!DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}}
-\subsubsection[{ConditionsAccess}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q $>$ DD4hep::Conditions::ConditionsAccess::ConditionsAccess (const {\bf Handle}$<$ Q $>$ \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_a117b108aa0675602a50b8b9a4dd3292d}
+
+
+Definition at line 50 of file Conditions\+Access.\+h.
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_a0807e34c93de398b31526a30f1028e44}{}\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_a0807e34c93de398b31526a30f1028e44} 
+\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}!Conditions\+Access@{Conditions\+Access}}
+\index{Conditions\+Access@{Conditions\+Access}!D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}}
+\subsubsection{\texorpdfstring{Conditions\+Access()}{ConditionsAccess()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename Q $>$ \\
+D\+D4hep\+::\+Conditions\+::\+Conditions\+Access\+::\+Conditions\+Access (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Constructor to be used assigning from different type. 
 
-Definition at line 55 of file ConditionsAccess.h.\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_ab654b88bad13706fd78d4a92c1ba0eb4}{
-\index{DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}!$\sim$ConditionsAccess@{$\sim$ConditionsAccess}}
-\index{$\sim$ConditionsAccess@{$\sim$ConditionsAccess}!DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}}
-\subsubsection[{$\sim$ConditionsAccess}]{\setlength{\rightskip}{0pt plus 5cm}ConditionsAccess::$\sim$ConditionsAccess ()}}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_ab654b88bad13706fd78d4a92c1ba0eb4}
+
+
+Definition at line 55 of file Conditions\+Access.\+h.
+
+
+
+References clean(), get\+Range(), iov\+Type(), iov\+Types\+Used(), and $\sim$\+Conditions\+Access().
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_ab654b88bad13706fd78d4a92c1ba0eb4}{}\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_ab654b88bad13706fd78d4a92c1ba0eb4} 
+\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}!````~Conditions\+Access@{$\sim$\+Conditions\+Access}}
+\index{````~Conditions\+Access@{$\sim$\+Conditions\+Access}!D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}}
+\subsubsection{\texorpdfstring{$\sim$\+Conditions\+Access()}{~ConditionsAccess()}}
+{\footnotesize\ttfamily Conditions\+Access\+::$\sim$\+Conditions\+Access (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 
 
 Default destructor. 
 
-Definition at line 29 of file ConditionsAccess.cpp.
+
+
+Definition at line 29 of file Conditions\+Access.\+cpp.
+
+
+
+Referenced by Conditions\+Access().
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_af8320af218167cfc28bf10763cc64f94}{
-\index{DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}!clean@{clean}}
-\index{clean@{clean}!DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}}
-\subsubsection[{clean}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Conditions::ConditionsAccess::clean (const {\bf IOVType} $\ast$ {\em typ}, \/  int {\em max\_\-age})}}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_af8320af218167cfc28bf10763cc64f94}
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_af8320af218167cfc28bf10763cc64f94}{}\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_af8320af218167cfc28bf10763cc64f94} 
+\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}!clean@{clean}}
+\index{clean@{clean}!D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}}
+\subsubsection{\texorpdfstring{clean()}{clean()}}
+{\footnotesize\ttfamily void D\+D4hep\+::\+Conditions\+::\+Conditions\+Access\+::clean (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_i_o_v_type}{I\+O\+V\+Type} $\ast$}]{typ,  }\item[{int}]{max\+\_\+age }\end{DoxyParamCaption})}
 
 
-Clean conditions, which are above the age limit. \hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_a274b4e414739ec7bf648075a2f64f0d0}{
-\index{DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}!get@{get}}
-\index{get@{get}!DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}}
-\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Condition} DD4hep::Conditions::ConditionsAccess::get (const std::string \& {\em path}, \/  const {\bf Condition::iov\_\-type} \& {\em req\_\-validity})}}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_a274b4e414739ec7bf648075a2f64f0d0}
+
+Clean conditions, which are above the age limit. 
 
 
-Retrieve a condition given the conditions path = $<$Detector element=\char`\"{}\char`\"{} path$>$=\char`\"{}\char`\"{}$>$.$<$conditions name$>$=\char`\"{}\char`\"{}$>$. \hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_a9adb922d63cdbb66043c5aaf90fe0a20}{
-\index{DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}!get@{get}}
-\index{get@{get}!DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}}
-\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Condition} ConditionsAccess::get ({\bf Condition::key\_\-type} {\em key}, \/  const {\bf Condition::iov\_\-type} \& {\em req\_\-validity})}}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_a9adb922d63cdbb66043c5aaf90fe0a20}
 
+Referenced by Conditions\+Access().
 
-Retrieve a condition given a Detector Element and the conditions name. 
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_a9adb922d63cdbb66043c5aaf90fe0a20}{}\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_a9adb922d63cdbb66043c5aaf90fe0a20} 
+\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}!get@{get}}
+\index{get@{get}!D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}}
+\subsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} Conditions\+Access\+::get (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition\+::key\+\_\+type}}]{key,  }\item[{const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_ad84300e226b2085ec5e9db7f47be5539}{Condition\+::iov\+\_\+type} \&}]{req\+\_\+validity }\end{DoxyParamCaption})}
 
-Definition at line 49 of file ConditionsAccess.cpp.
-
-References DD4hep::Handle$<$ ConditionsManagerObject $>$::access(), and DD4hep::Conditions::ConditionsManagerObject::get().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_a44bbed9e32bd8ffe16319a83556571dd}{
-\index{DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}!getRange@{getRange}}
-\index{getRange@{getRange}!DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}}
-\subsubsection[{getRange}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RangeConditions} DD4hep::Conditions::ConditionsAccess::getRange (const std::string \& {\em path}, \/  const {\bf Condition::iov\_\-type} \& {\em req\_\-validity})}}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_a44bbed9e32bd8ffe16319a83556571dd}
-
-
-Retrieve a condition given the conditions path = $<$Detector element=\char`\"{}\char`\"{} path$>$=\char`\"{}\char`\"{}$>$.$<$conditions name$>$=\char`\"{}\char`\"{}$>$. \hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_aa5f5712c3083cec42a3cd49d86924611}{
-\index{DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}!getRange@{getRange}}
-\index{getRange@{getRange}!DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}}
-\subsubsection[{getRange}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RangeConditions} ConditionsAccess::getRange ({\bf Condition::key\_\-type} {\em key}, \/  const {\bf Condition::iov\_\-type} \& {\em req\_\-validity})}}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_aa5f5712c3083cec42a3cd49d86924611}
 
 
 Retrieve a condition given a Detector Element and the conditions name. 
 
-Definition at line 62 of file ConditionsAccess.cpp.
-
-References DD4hep::Handle$<$ ConditionsManagerObject $>$::access(), and DD4hep::Conditions::ConditionsManagerObject::getRange().\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_a4e069c9326b34448e7c78480ee9f8ecc}{
-\index{DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}!iovType@{iovType}}
-\index{iovType@{iovType}!DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}}
-\subsubsection[{iovType}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf IOVType}$\ast$ DD4hep::Conditions::ConditionsAccess::iovType (const std::string \& {\em iov\_\-name}) const}}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_a4e069c9326b34448e7c78480ee9f8ecc}
 
 
-Access \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} by its name. \hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_a7e29a0f6c92bfaa2e0d77772658493d2}{
-\index{DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}!iovTypesUsed@{iovTypesUsed}}
-\index{iovTypesUsed@{iovTypesUsed}!DD4hep::Conditions::ConditionsAccess@{DD4hep::Conditions::ConditionsAccess}}
-\subsubsection[{iovTypesUsed}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vector}$<$ const {\bf IOVType} $\ast$ $>$ ConditionsAccess::iovTypesUsed () const}}
-\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_a7e29a0f6c92bfaa2e0d77772658493d2}
+Definition at line 49 of file Conditions\+Access.\+cpp.
 
 
-Access the used/registered \hyperlink{class_d_d4hep_1_1_i_o_v}{IOV} types. 
 
-Definition at line 38 of file ConditionsAccess.cpp.
+References D\+D4hep\+::\+Conditions\+::\+Condition\+::get().
 
-References DD4hep::Handle$<$ ConditionsManagerObject $>$::access(), DD4hep::Conditions::ConditionsManagerObject::iovTypes(), and DD4hep::IOVType::UNKNOWN\_\-IOV.
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_abadda777e6c3ef97bd6675fdceda2630}{}\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_abadda777e6c3ef97bd6675fdceda2630} 
+\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}!get@{get}}
+\index{get@{get}!D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}}
+\subsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition}{Condition} Conditions\+Access\+::get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path,  }\item[{const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_ad84300e226b2085ec5e9db7f47be5539}{Condition\+::iov\+\_\+type} \&}]{req\+\_\+validity }\end{DoxyParamCaption})}
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+
+
+Retrieve a condition given the conditions path = $<$\+Detector element=\char`\"{}\char`\"{} path$>$=\char`\"{}\char`\"{}$>$.$<$conditions name$>$=\char`\"{}\char`\"{}$>$ 
+
+
+
+Definition at line 55 of file Conditions\+Access.\+cpp.
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_aa5f5712c3083cec42a3cd49d86924611}{}\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_aa5f5712c3083cec42a3cd49d86924611} 
+\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}!get\+Range@{get\+Range}}
+\index{get\+Range@{get\+Range}!D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}}
+\subsubsection{\texorpdfstring{get\+Range()}{getRange()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{Range\+Conditions} Conditions\+Access\+::get\+Range (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_a7528efa762e8cc072ef80ea67c3531f9}{Condition\+::key\+\_\+type}}]{key,  }\item[{const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_ad84300e226b2085ec5e9db7f47be5539}{Condition\+::iov\+\_\+type} \&}]{req\+\_\+validity }\end{DoxyParamCaption})}
+
+
+
+Retrieve a condition given a Detector Element and the conditions name. 
+
+
+
+Definition at line 62 of file Conditions\+Access.\+cpp.
+
+
+
+Referenced by Conditions\+Access().
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_a67b7e2ddb0c713445cb34d4217782bce}{}\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_a67b7e2ddb0c713445cb34d4217782bce} 
+\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}!get\+Range@{get\+Range}}
+\index{get\+Range@{get\+Range}!D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}}
+\subsubsection{\texorpdfstring{get\+Range()}{getRange()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_1_1_conditions_ae765f0140a33973a430280f02b6062f4}{Range\+Conditions} Conditions\+Access\+::get\+Range (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path,  }\item[{const \hyperlink{class_d_d4hep_1_1_conditions_1_1_condition_ad84300e226b2085ec5e9db7f47be5539}{Condition\+::iov\+\_\+type} \&}]{req\+\_\+validity }\end{DoxyParamCaption})}
+
+
+
+Retrieve a condition given the conditions path = $<$\+Detector element=\char`\"{}\char`\"{} path$>$=\char`\"{}\char`\"{}$>$.$<$conditions name$>$=\char`\"{}\char`\"{}$>$ 
+
+Retrieve a condition given a Detector Element path and the conditions name. 
+
+Definition at line 68 of file Conditions\+Access.\+cpp.
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_a47adb812dd047300b7b69b6544007397}{}\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_a47adb812dd047300b7b69b6544007397} 
+\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}!iov\+Type@{iov\+Type}}
+\index{iov\+Type@{iov\+Type}!D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}}
+\subsubsection{\texorpdfstring{iov\+Type()}{iovType()}}
+{\footnotesize\ttfamily const \hyperlink{class_d_d4hep_1_1_i_o_v_type}{I\+O\+V\+Type} $\ast$ Conditions\+Access\+::iov\+Type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{iov\+\_\+name }\end{DoxyParamCaption}) const}
+
+
+
+Access \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV} by its name. 
+
+
+
+Definition at line 33 of file Conditions\+Access.\+cpp.
+
+
+
+Referenced by Conditions\+Access().
+
+\hypertarget{class_d_d4hep_1_1_conditions_1_1_conditions_access_a8d22f883fc827ab82631a0a00bcc2c88}{}\label{class_d_d4hep_1_1_conditions_1_1_conditions_access_a8d22f883fc827ab82631a0a00bcc2c88} 
+\index{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}!iov\+Types\+Used@{iov\+Types\+Used}}
+\index{iov\+Types\+Used@{iov\+Types\+Used}!D\+D4hep\+::\+Conditions\+::\+Conditions\+Access@{D\+D4hep\+::\+Conditions\+::\+Conditions\+Access}}
+\subsubsection{\texorpdfstring{iov\+Types\+Used()}{iovTypesUsed()}}
+{\footnotesize\ttfamily const vector$<$ const \hyperlink{class_d_d4hep_1_1_i_o_v_type}{I\+O\+V\+Type} $\ast$ $>$ Conditions\+Access\+::iov\+Types\+Used (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Access the used/registered \hyperlink{class_d_d4hep_1_1_i_o_v}{I\+OV} types. 
+
+
+
+Definition at line 38 of file Conditions\+Access.\+cpp.
+
+
+
+References D\+D4hep\+::\+Conditions\+::\+Conditions\+Manager\+Object\+::iov\+Types().
+
+
+
+Referenced by Conditions\+Access().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCond/include/DDCond/\hyperlink{_conditions_access_8h}{ConditionsAccess.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCond/src/\hyperlink{_conditions_access_8cpp}{ConditionsAccess.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Cond/include/\+D\+D\+Cond/\hyperlink{_conditions_access_8h}{Conditions\+Access.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Cond/src/\hyperlink{_conditions_access_8cpp}{Conditions\+Access.\+cpp}\end{DoxyCompactItemize}

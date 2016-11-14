@@ -1,182 +1,272 @@
-\hypertarget{_volumes_8cpp}{
-\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/Volumes.cpp File Reference}
-\label{_volumes_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/Volumes.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/Volumes.cpp}}
-}
-{\ttfamily \#include \char`\"{}DD4hep/LCDD.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/Printout.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/InstanceCount.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/MatrixHelpers.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/objects/ObjectsInterna.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TColor.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoShape.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoVolume.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoNode.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoMatrix.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoMedium.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoVoxelFinder.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TGeoShapeAssembly.h\char`\"{}}\par
-{\ttfamily \#include $<$climits$>$}\par
-{\ttfamily \#include $<$iostream$>$}\par
-{\ttfamily \#include $<$stdexcept$>$}\par
-{\ttfamily \#include $<$sstream$>$}\par
-{\ttfamily \#include \char`\"{}TROOT.h\char`\"{}}\par
+\hypertarget{_volumes_8cpp}{}\section{/afs/cern.ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\+Volumes.cpp File Reference}
+\label{_volumes_8cpp}\index{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\+Volumes.\+cpp@{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\+Volumes.\+cpp}}
+{\ttfamily \#include \char`\"{}D\+D4hep/\+L\+C\+D\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Printout.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Instance\+Count.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Matrix\+Helpers.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/objects/\+Objects\+Interna.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Color.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Shape.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Volume.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Node.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Matrix.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Medium.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Voxel\+Finder.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Geo\+Shape\+Assembly.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$climits$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include \char`\"{}T\+R\+O\+O\+T.\+h\char`\"{}}\newline
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef TGeoNode \hyperlink{_volumes_8cpp_a83f3b66b11096c206d134e70c9103a8e}{geo\_\-node\_\-t}
+typedef T\+Geo\+Node \hyperlink{_volumes_8cpp_a83f3b66b11096c206d134e70c9103a8e}{geo\+\_\+node\+\_\+t}
 \item 
-typedef TGeoVolume \hyperlink{_volumes_8cpp_a6369702c0bd3a63eeb1ccda4c5fd2885}{geo\_\-volume\_\-t}
+typedef T\+Geo\+Volume \hyperlink{_volumes_8cpp_a6369702c0bd3a63eeb1ccda4c5fd2885}{geo\+\_\+volume\+\_\+t}
 \item 
-typedef TGeoVolumeAssembly \hyperlink{_volumes_8cpp_afd56328e7bf39593ed2be452748b766a}{geo\_\-assembly\_\-t}
+typedef T\+Geo\+Volume\+Assembly \hyperlink{_volumes_8cpp_afd56328e7bf39593ed2be452748b766a}{geo\+\_\+assembly\+\_\+t}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T $>$ }\\static T::Object $\ast$ \hyperlink{_volumes_8cpp_a1c1cde892e7b9b8d7ff4c77fb2b7aa34}{\_\-userExtension} (const \hyperlink{class_t}{T} \&\hyperlink{_multi_view_8cpp_a8320ee13ac034dbf6d624fe8953dd337}{v})
+{\footnotesize template$<$typename T $>$ }\\static T\+::\+Object $\ast$ \hyperlink{_volumes_8cpp_aa27c7e85eeef34dc2ec4e20adbccec62}{\+\_\+user\+Extension} (const \hyperlink{class_t}{T} \&\hyperlink{_multi_view_8cpp_a8320ee13ac034dbf6d624fe8953dd337}{v})
 \item 
-\hyperlink{_volumes_8cpp_ae43a2b26233111b60dfa2908b387adbb}{ClassImp} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume_extension}{PlacedVolumeExtension}) static TGeoVolume $\ast$\_\-createTGeoVolume(const \hyperlink{classstd_1_1string}{string} \&name
+\hyperlink{_volumes_8cpp_ae43a2b26233111b60dfa2908b387adbb}{Class\+Imp} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume_extension}{Placed\+Volume\+Extension}) static T\+Geo\+Volume $\ast$\+\_\+create\+T\+Geo\+Volume(const string \&name
 \item 
-\hyperlink{_volumes_8cpp_ace6d22343ef2267c6169252783997419}{magic} (0)
+\hyperlink{_volumes_8cpp_a8a9a1f93e9b09afccaec215310e64142}{e} \hyperlink{_volumes_8cpp_aa5321c30c636f4285930a99e5cd3047a}{Set\+User\+Extension} (new \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a12968f95257e99e277f773ccf6d58ee5}{Volume\+::\+Object}())
 \item 
-\hyperlink{_volumes_8cpp_a196c28143d6edfa2a06de0e72638dde5}{refCount} (0)
+static T\+Geo\+Volume $\ast$ \hyperlink{_volumes_8cpp_acbc49228fad6f4fa9a1f3d39b8ea4147}{\+\_\+create\+T\+Geo\+Volume\+Assembly} (const string \&name)
 \item 
-\hyperlink{_volumes_8cpp_a51575e459f2c9dab072bf1246119db2a}{volIDs} ()
+static \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume_a9ae505098ca6976164b959e1d8b4bbb0}{Placed\+Volume\+::\+Object} $\ast$ \hyperlink{_volumes_8cpp_a1fed71b283145beb621afd55ac0d795a}{\+\_\+data} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} \&\hyperlink{_multi_view_8cpp_a8320ee13ac034dbf6d624fe8953dd337}{v})
 \item 
-static \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume_extension}{PlacedVolume::Object} $\ast$ \hyperlink{_volumes_8cpp_a1fed71b283145beb621afd55ac0d795a}{\_\-data} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} \&\hyperlink{_multi_view_8cpp_a8320ee13ac034dbf6d624fe8953dd337}{v})
-\item 
-\hyperlink{_volumes_8cpp_a35bfc969417fc823e2baec3e10bdcdfd}{ClassImp} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_extension}{VolumeExtension}) \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_extension}{VolumeExtension}
-\begin{DoxyCompactList}\small\item\em Enable \hyperlink{namespace_r_o_o_t}{ROOT} persistency. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_extension}{Volume::Object} $\ast$ \hyperlink{_volumes_8cpp_af67cc7a88abe7fe25fba4ef71c57782b}{\_\-data} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \&\hyperlink{_multi_view_8cpp_a8320ee13ac034dbf6d624fe8953dd337}{v}, bool throw\_\-exception=true)
-\begin{DoxyCompactList}\small\item\em Accessor to the data part of the Volume. \item\end{DoxyCompactList}\item 
-static \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} \hyperlink{_volumes_8cpp_a17c6076661d5cf9623f4754f19fae1eb}{\_\-addNode} (TGeoVolume $\ast$par, TGeoVolume $\ast$daughter, TGeoMatrix $\ast$transform)
+\hyperlink{_volumes_8cpp_a35bfc969417fc823e2baec3e10bdcdfd}{Class\+Imp} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_extension}{Volume\+Extension}) \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_extension}{Volume\+Extension}
+\begin{DoxyCompactList}\small\item\em Enable \hyperlink{namespace_r_o_o_t}{R\+O\+OT} persistency. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a12968f95257e99e277f773ccf6d58ee5}{Volume\+::\+Object} $\ast$ \hyperlink{_volumes_8cpp_af67cc7a88abe7fe25fba4ef71c57782b}{\+\_\+data} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \&\hyperlink{_multi_view_8cpp_a8320ee13ac034dbf6d624fe8953dd337}{v}, bool throw\+\_\+exception=true)
+\begin{DoxyCompactList}\small\item\em Accessor to the data part of the Volume. \end{DoxyCompactList}\item 
+static \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} \hyperlink{_volumes_8cpp_a17c6076661d5cf9623f4754f19fae1eb}{\+\_\+add\+Node} (T\+Geo\+Volume $\ast$par, T\+Geo\+Volume $\ast$daughter, T\+Geo\+Matrix $\ast$transform)
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-TGeoShape $\ast$ \hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s}
+T\+Geo\+Shape $\ast$ \hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s}
+\item 
+T\+Geo\+Shape T\+Geo\+Medium $\ast$ \hyperlink{_volumes_8cpp_a6fc379aaec47ce424b00d8ffda2a6c59}{m}
+\item 
+return \hyperlink{_volumes_8cpp_a8a9a1f93e9b09afccaec215310e64142}{e}
 \end{DoxyCompactItemize}
 
 
 \subsection{Typedef Documentation}
-\hypertarget{_volumes_8cpp_afd56328e7bf39593ed2be452748b766a}{
-\index{Volumes.cpp@{Volumes.cpp}!geo\_\-assembly\_\-t@{geo\_\-assembly\_\-t}}
-\index{geo\_\-assembly\_\-t@{geo\_\-assembly\_\-t}!Volumes.cpp@{Volumes.cpp}}
-\subsubsection[{geo\_\-assembly\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef TGeoVolumeAssembly {\bf geo\_\-assembly\_\-t}}}
-\label{_volumes_8cpp_afd56328e7bf39593ed2be452748b766a}
+\hypertarget{_volumes_8cpp_afd56328e7bf39593ed2be452748b766a}{}\label{_volumes_8cpp_afd56328e7bf39593ed2be452748b766a} 
+\index{Volumes.\+cpp@{Volumes.\+cpp}!geo\+\_\+assembly\+\_\+t@{geo\+\_\+assembly\+\_\+t}}
+\index{geo\+\_\+assembly\+\_\+t@{geo\+\_\+assembly\+\_\+t}!Volumes.\+cpp@{Volumes.\+cpp}}
+\subsubsection{\texorpdfstring{geo\+\_\+assembly\+\_\+t}{geo\_assembly\_t}}
+{\footnotesize\ttfamily typedef T\+Geo\+Volume\+Assembly \hyperlink{_volumes_8cpp_afd56328e7bf39593ed2be452748b766a}{geo\+\_\+assembly\+\_\+t}}
 
 
-Definition at line 286 of file Volumes.cpp.\hypertarget{_volumes_8cpp_a83f3b66b11096c206d134e70c9103a8e}{
-\index{Volumes.cpp@{Volumes.cpp}!geo\_\-node\_\-t@{geo\_\-node\_\-t}}
-\index{geo\_\-node\_\-t@{geo\_\-node\_\-t}!Volumes.cpp@{Volumes.cpp}}
-\subsubsection[{geo\_\-node\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef TGeoNode {\bf geo\_\-node\_\-t}}}
-\label{_volumes_8cpp_a83f3b66b11096c206d134e70c9103a8e}
+
+Definition at line 286 of file Volumes.\+cpp.
+
+\hypertarget{_volumes_8cpp_a83f3b66b11096c206d134e70c9103a8e}{}\label{_volumes_8cpp_a83f3b66b11096c206d134e70c9103a8e} 
+\index{Volumes.\+cpp@{Volumes.\+cpp}!geo\+\_\+node\+\_\+t@{geo\+\_\+node\+\_\+t}}
+\index{geo\+\_\+node\+\_\+t@{geo\+\_\+node\+\_\+t}!Volumes.\+cpp@{Volumes.\+cpp}}
+\subsubsection{\texorpdfstring{geo\+\_\+node\+\_\+t}{geo\_node\_t}}
+{\footnotesize\ttfamily typedef T\+Geo\+Node \hyperlink{_volumes_8cpp_a83f3b66b11096c206d134e70c9103a8e}{geo\+\_\+node\+\_\+t}}
 
 
-Definition at line 284 of file Volumes.cpp.\hypertarget{_volumes_8cpp_a6369702c0bd3a63eeb1ccda4c5fd2885}{
-\index{Volumes.cpp@{Volumes.cpp}!geo\_\-volume\_\-t@{geo\_\-volume\_\-t}}
-\index{geo\_\-volume\_\-t@{geo\_\-volume\_\-t}!Volumes.cpp@{Volumes.cpp}}
-\subsubsection[{geo\_\-volume\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef TGeoVolume {\bf geo\_\-volume\_\-t}}}
-\label{_volumes_8cpp_a6369702c0bd3a63eeb1ccda4c5fd2885}
+
+Definition at line 284 of file Volumes.\+cpp.
+
+\hypertarget{_volumes_8cpp_a6369702c0bd3a63eeb1ccda4c5fd2885}{}\label{_volumes_8cpp_a6369702c0bd3a63eeb1ccda4c5fd2885} 
+\index{Volumes.\+cpp@{Volumes.\+cpp}!geo\+\_\+volume\+\_\+t@{geo\+\_\+volume\+\_\+t}}
+\index{geo\+\_\+volume\+\_\+t@{geo\+\_\+volume\+\_\+t}!Volumes.\+cpp@{Volumes.\+cpp}}
+\subsubsection{\texorpdfstring{geo\+\_\+volume\+\_\+t}{geo\_volume\_t}}
+{\footnotesize\ttfamily typedef T\+Geo\+Volume \hyperlink{_volumes_8cpp_a6369702c0bd3a63eeb1ccda4c5fd2885}{geo\+\_\+volume\+\_\+t}}
 
 
-Definition at line 285 of file Volumes.cpp.
+
+Definition at line 285 of file Volumes.\+cpp.
+
+
 
 \subsection{Function Documentation}
-\hypertarget{_volumes_8cpp_a17c6076661d5cf9623f4754f19fae1eb}{
-\index{Volumes.cpp@{Volumes.cpp}!\_\-addNode@{\_\-addNode}}
-\index{\_\-addNode@{\_\-addNode}!Volumes.cpp@{Volumes.cpp}}
-\subsubsection[{\_\-addNode}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf PlacedVolume} \_\-addNode (TGeoVolume $\ast$ {\em par}, \/  TGeoVolume $\ast$ {\em daughter}, \/  TGeoMatrix $\ast$ {\em transform})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{_volumes_8cpp_a17c6076661d5cf9623f4754f19fae1eb}
+\hypertarget{_volumes_8cpp_a17c6076661d5cf9623f4754f19fae1eb}{}\label{_volumes_8cpp_a17c6076661d5cf9623f4754f19fae1eb} 
+\index{Volumes.\+cpp@{Volumes.\+cpp}!\+\_\+add\+Node@{\+\_\+add\+Node}}
+\index{\+\_\+add\+Node@{\+\_\+add\+Node}!Volumes.\+cpp@{Volumes.\+cpp}}
+\subsubsection{\texorpdfstring{\+\_\+add\+Node()}{\_addNode()}}
+{\footnotesize\ttfamily static \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} \+\_\+add\+Node (\begin{DoxyParamCaption}\item[{T\+Geo\+Volume $\ast$}]{par,  }\item[{T\+Geo\+Volume $\ast$}]{daughter,  }\item[{T\+Geo\+Matrix $\ast$}]{transform }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
-Definition at line 491 of file Volumes.cpp.
 
-References DD4hep::Geometry::identityTransform().
+Definition at line 491 of file Volumes.\+cpp.
 
-Referenced by DD4hep::Geometry::Volume::placeVolume().\hypertarget{_volumes_8cpp_af67cc7a88abe7fe25fba4ef71c57782b}{
-\index{Volumes.cpp@{Volumes.cpp}!\_\-data@{\_\-data}}
-\index{\_\-data@{\_\-data}!Volumes.cpp@{Volumes.cpp}}
-\subsubsection[{\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Volume::Object}$\ast$ \_\-data (const {\bf Volume} \& {\em v}, \/  bool {\em throw\_\-exception} = {\ttfamily true})}}
-\label{_volumes_8cpp_af67cc7a88abe7fe25fba4ef71c57782b}
+
+
+References D\+D4hep\+::\+Geometry\+::identity\+Transform().
+
+
+
+Referenced by D\+D4hep\+::\+Geometry\+::\+Volume\+::place\+Volume().
+
+\hypertarget{_volumes_8cpp_acbc49228fad6f4fa9a1f3d39b8ea4147}{}\label{_volumes_8cpp_acbc49228fad6f4fa9a1f3d39b8ea4147} 
+\index{Volumes.\+cpp@{Volumes.\+cpp}!\+\_\+create\+T\+Geo\+Volume\+Assembly@{\+\_\+create\+T\+Geo\+Volume\+Assembly}}
+\index{\+\_\+create\+T\+Geo\+Volume\+Assembly@{\+\_\+create\+T\+Geo\+Volume\+Assembly}!Volumes.\+cpp@{Volumes.\+cpp}}
+\subsubsection{\texorpdfstring{\+\_\+create\+T\+Geo\+Volume\+Assembly()}{\_createTGeoVolumeAssembly()}}
+{\footnotesize\ttfamily static T\+Geo\+Volume$\ast$ \+\_\+create\+T\+Geo\+Volume\+Assembly (\begin{DoxyParamCaption}\item[{const string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 300 of file Volumes.\+cpp.
+
+
+
+References e.
+
+
+
+Referenced by D\+D4hep\+::\+Geometry\+::\+Assembly\+::\+Assembly().
+
+\hypertarget{_volumes_8cpp_a1fed71b283145beb621afd55ac0d795a}{}\label{_volumes_8cpp_a1fed71b283145beb621afd55ac0d795a} 
+\index{Volumes.\+cpp@{Volumes.\+cpp}!\+\_\+data@{\+\_\+data}}
+\index{\+\_\+data@{\+\_\+data}!Volumes.\+cpp@{Volumes.\+cpp}}
+\subsubsection{\texorpdfstring{\+\_\+data()}{\_data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume_a9ae505098ca6976164b959e1d8b4bbb0}{Placed\+Volume\+::\+Object}$\ast$ \+\_\+data (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 364 of file Volumes.\+cpp.
+
+
+
+References \+\_\+user\+Extension().
+
+
+
+Referenced by D\+D4hep\+::\+Geometry\+::\+Placed\+Volume\+::add\+Phys\+Vol\+I\+D(), D\+D4hep\+::\+Geometry\+::\+Volume\+::is\+Sensitive(), D\+D4hep\+::\+Geometry\+::\+Volume\+::limit\+Set(), D\+D4hep\+::\+Geometry\+::\+Volume\+::region(), D\+D4hep\+::\+Geometry\+::\+Volume\+::sensitive\+Detector(), D\+D4hep\+::\+Geometry\+::\+Volume\+::set\+Limit\+Set(), D\+D4hep\+::\+Geometry\+::\+Volume\+::set\+Region(), D\+D4hep\+::\+Geometry\+::\+Volume\+::set\+Sensitive\+Detector(), D\+D4hep\+::\+Geometry\+::\+Placed\+Volume\+::to\+String(), D\+D4hep\+::\+Geometry\+::\+Volume\+::vis\+Attributes(), and D\+D4hep\+::\+Geometry\+::\+Placed\+Volume\+::vol\+I\+Ds().
+
+\hypertarget{_volumes_8cpp_af67cc7a88abe7fe25fba4ef71c57782b}{}\label{_volumes_8cpp_af67cc7a88abe7fe25fba4ef71c57782b} 
+\index{Volumes.\+cpp@{Volumes.\+cpp}!\+\_\+data@{\+\_\+data}}
+\index{\+\_\+data@{\+\_\+data}!Volumes.\+cpp@{Volumes.\+cpp}}
+\subsubsection{\texorpdfstring{\+\_\+data()}{\_data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_a12968f95257e99e277f773ccf6d58ee5}{Volume\+::\+Object}$\ast$ \+\_\+data (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} \&}]{v,  }\item[{bool}]{throw\+\_\+exception = {\ttfamily true} }\end{DoxyParamCaption})}
+
 
 
 Accessor to the data part of the Volume. 
 
-Definition at line 465 of file Volumes.cpp.
-
-References \_\-userExtension().
-
-Referenced by DD4hep::Alignments::GlobalDetectorAlignment::volumeAlignments().\hypertarget{_volumes_8cpp_a1fed71b283145beb621afd55ac0d795a}{
-\index{Volumes.cpp@{Volumes.cpp}!\_\-data@{\_\-data}}
-\index{\_\-data@{\_\-data}!Volumes.cpp@{Volumes.cpp}}
-\subsubsection[{\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf PlacedVolume::Object}$\ast$ \_\-data (const {\bf PlacedVolume} \& {\em v})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{_volumes_8cpp_a1fed71b283145beb621afd55ac0d795a}
 
 
-Definition at line 364 of file Volumes.cpp.
-
-References \_\-userExtension().
-
-Referenced by DD4hep::Geometry::Volume::isSensitive(), DD4hep::Geometry::Volume::limitSet(), DD4hep::Geometry::Volume::region(), DD4hep::Geometry::Volume::sensitiveDetector(), DD4hep::Geometry::Volume::setLimitSet(), DD4hep::Geometry::Volume::setRegion(), DD4hep::Geometry::Volume::setSensitiveDetector(), DD4hep::Geometry::PlacedVolume::toString(), DD4hep::Geometry::Volume::visAttributes(), and DD4hep::Geometry::PlacedVolume::volIDs().\hypertarget{_volumes_8cpp_a1c1cde892e7b9b8d7ff4c77fb2b7aa34}{
-\index{Volumes.cpp@{Volumes.cpp}!\_\-userExtension@{\_\-userExtension}}
-\index{\_\-userExtension@{\_\-userExtension}!Volumes.cpp@{Volumes.cpp}}
-\subsubsection[{\_\-userExtension}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ static T::Object$\ast$ \_\-userExtension (const {\bf T} \& {\em v})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
-\label{_volumes_8cpp_a1c1cde892e7b9b8d7ff4c77fb2b7aa34}
+Definition at line 465 of file Volumes.\+cpp.
 
 
-Definition at line 287 of file Volumes.cpp.
 
-Referenced by \_\-data(), DD4hep::Geometry::Volume::data(), DD4hep::Geometry::PlacedVolume::data(), and DD4hep::Geometry::Volume::setVisAttributes().\hypertarget{_volumes_8cpp_a35bfc969417fc823e2baec3e10bdcdfd}{
-\index{Volumes.cpp@{Volumes.cpp}!ClassImp@{ClassImp}}
-\index{ClassImp@{ClassImp}!Volumes.cpp@{Volumes.cpp}}
-\subsubsection[{ClassImp}]{\setlength{\rightskip}{0pt plus 5cm}ClassImp ({\bf VolumeExtension})}}
-\label{_volumes_8cpp_a35bfc969417fc823e2baec3e10bdcdfd}
+References \+\_\+user\+Extension().
 
 
-Enable \hyperlink{namespace_r_o_o_t}{ROOT} persistency. Default constructor 
 
-Definition at line 417 of file Volumes.cpp.
+Referenced by D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::add\+Subdetector(), D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::adopt\+Placement(), D\+D4hep\+::\+Alignments\+::\+Det\+Align\+::\+Det\+Align(), D\+D4hep\+::\+Conditions\+::\+Det\+Conditions\+::\+Det\+Conditions(), D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::detector(), D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::id\+Spec(), D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::lookup\+Context(), and D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::subdetector().
 
-References INCREMENT\_\-COUNTER.\hypertarget{_volumes_8cpp_ae43a2b26233111b60dfa2908b387adbb}{
-\index{Volumes.cpp@{Volumes.cpp}!ClassImp@{ClassImp}}
-\index{ClassImp@{ClassImp}!Volumes.cpp@{Volumes.cpp}}
-\subsubsection[{ClassImp}]{\setlength{\rightskip}{0pt plus 5cm}ClassImp ({\bf PlacedVolumeExtension}) const}}
-\label{_volumes_8cpp_ae43a2b26233111b60dfa2908b387adbb}
-\hypertarget{_volumes_8cpp_ace6d22343ef2267c6169252783997419}{
-\index{Volumes.cpp@{Volumes.cpp}!magic@{magic}}
-\index{magic@{magic}!Volumes.cpp@{Volumes.cpp}}
-\subsubsection[{magic}]{\setlength{\rightskip}{0pt plus 5cm}magic (0)}}
-\label{_volumes_8cpp_ace6d22343ef2267c6169252783997419}
-\begin{Desc}
-\item[Type Constraints]\begin{description}
-\end{description}
-\end{Desc}
+\hypertarget{_volumes_8cpp_aa27c7e85eeef34dc2ec4e20adbccec62}{}\label{_volumes_8cpp_aa27c7e85eeef34dc2ec4e20adbccec62} 
+\index{Volumes.\+cpp@{Volumes.\+cpp}!\+\_\+user\+Extension@{\+\_\+user\+Extension}}
+\index{\+\_\+user\+Extension@{\+\_\+user\+Extension}!Volumes.\+cpp@{Volumes.\+cpp}}
+\subsubsection{\texorpdfstring{\+\_\+user\+Extension()}{\_userExtension()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static T\+::\+Object$\ast$ \+\_\+user\+Extension (\begin{DoxyParamCaption}\item[{const \hyperlink{class_t}{T} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
-Referenced by volIDs().\hypertarget{_volumes_8cpp_a196c28143d6edfa2a06de0e72638dde5}{
-\index{Volumes.cpp@{Volumes.cpp}!refCount@{refCount}}
-\index{refCount@{refCount}!Volumes.cpp@{Volumes.cpp}}
-\subsubsection[{refCount}]{\setlength{\rightskip}{0pt plus 5cm}refCount (0)}}
-\label{_volumes_8cpp_a196c28143d6edfa2a06de0e72638dde5}
-\hypertarget{_volumes_8cpp_a51575e459f2c9dab072bf1246119db2a}{
-\index{Volumes.cpp@{Volumes.cpp}!volIDs@{volIDs}}
-\index{volIDs@{volIDs}!Volumes.cpp@{Volumes.cpp}}
-\subsubsection[{volIDs}]{\setlength{\rightskip}{0pt plus 5cm}volIDs ()}}
-\label{_volumes_8cpp_a51575e459f2c9dab072bf1246119db2a}
+
+Definition at line 287 of file Volumes.\+cpp.
 
 
-Definition at line 308 of file Volumes.cpp.
 
-References INCREMENT\_\-COUNTER, magic(), and DD4hep::magic\_\-word().
+References Class\+Imp().
+
+
+
+Referenced by \+\_\+data(), D\+D4hep\+::\+Geometry\+::\+Placed\+Volume\+::data(), D\+D4hep\+::\+Geometry\+::\+Volume\+::data(), and D\+D4hep\+::\+Geometry\+::\+Volume\+::set\+Vis\+Attributes().
+
+\hypertarget{_volumes_8cpp_ae43a2b26233111b60dfa2908b387adbb}{}\label{_volumes_8cpp_ae43a2b26233111b60dfa2908b387adbb} 
+\index{Volumes.\+cpp@{Volumes.\+cpp}!Class\+Imp@{Class\+Imp}}
+\index{Class\+Imp@{Class\+Imp}!Volumes.\+cpp@{Volumes.\+cpp}}
+\subsubsection{\texorpdfstring{Class\+Imp()}{ClassImp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Class\+Imp (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume_extension}{Placed\+Volume\+Extension}}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Referenced by \+\_\+user\+Extension().
+
+\hypertarget{_volumes_8cpp_a35bfc969417fc823e2baec3e10bdcdfd}{}\label{_volumes_8cpp_a35bfc969417fc823e2baec3e10bdcdfd} 
+\index{Volumes.\+cpp@{Volumes.\+cpp}!Class\+Imp@{Class\+Imp}}
+\index{Class\+Imp@{Class\+Imp}!Volumes.\+cpp@{Volumes.\+cpp}}
+\subsubsection{\texorpdfstring{Class\+Imp()}{ClassImp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Class\+Imp (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_extension}{Volume\+Extension}}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable \hyperlink{namespace_r_o_o_t}{R\+O\+OT} persistency. 
+
+Default constructor 
+
+Definition at line 417 of file Volumes.\+cpp.
+
+
+
+References I\+N\+C\+R\+E\+M\+E\+N\+T\+\_\+\+C\+O\+U\+N\+T\+ER.
+
+\hypertarget{_volumes_8cpp_aa5321c30c636f4285930a99e5cd3047a}{}\label{_volumes_8cpp_aa5321c30c636f4285930a99e5cd3047a} 
+\index{Volumes.\+cpp@{Volumes.\+cpp}!Set\+User\+Extension@{Set\+User\+Extension}}
+\index{Set\+User\+Extension@{Set\+User\+Extension}!Volumes.\+cpp@{Volumes.\+cpp}}
+\subsubsection{\texorpdfstring{Set\+User\+Extension()}{SetUserExtension()}}
+{\footnotesize\ttfamily \hyperlink{_volumes_8cpp_a8a9a1f93e9b09afccaec215310e64142}{e} Set\+User\+Extension (\begin{DoxyParamCaption}\item[{new }]{Volume\+::\+Object() }\end{DoxyParamCaption})}
+
+
 
 \subsection{Variable Documentation}
-\hypertarget{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{
-\index{Volumes.cpp@{Volumes.cpp}!s@{s}}
-\index{s@{s}!Volumes.cpp@{Volumes.cpp}}
-\subsubsection[{s}]{\setlength{\rightskip}{0pt plus 5cm}TGeoShape$\ast$ {\bf s}}}
-\label{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}
+\hypertarget{_volumes_8cpp_a8a9a1f93e9b09afccaec215310e64142}{}\label{_volumes_8cpp_a8a9a1f93e9b09afccaec215310e64142} 
+\index{Volumes.\+cpp@{Volumes.\+cpp}!e@{e}}
+\index{e@{e}!Volumes.\+cpp@{Volumes.\+cpp}}
+\subsubsection{\texorpdfstring{e}{e}}
+{\footnotesize\ttfamily return e}
 
 
-Definition at line 295 of file Volumes.cpp.
 
-Referenced by \_\-stack(), DD4hep::Layering::absorberThicknessInLayer(), DD4hep::DDSegmentation::BitField64::addField(), TiXmlElement::Attribute(), DD4hep::DDSegmentation::BitFieldValue::BitFieldValue(), ClassImp(), DD4hep::copyObject(), create\_\-detector(), DD4hep::DDRec::createGearForCLIC(), DD4hep::DDRec::createGearForILD(), DD4hep::DDRec::invalid\_\-detector\_\-element::createMsg(), DD4hep::DDRec::invalid\_\-position::createMsg(), DD4hep::DDRec::invalid\_\-cell\_\-id::createMsg(), DD4hep::DDSegmentation::TypedSegmentationParameter$<$ std::vector$<$ TYPE $>$ $>$::defaultValue(), DD4hep::DDSegmentation::TypedSegmentationParameter$<$ TYPE $>$::defaultValue(), DD4hep::Geometry::DetectorTools::elementPath(), DD4hep::XML::LayeringCnv::fromCompact(), DD4hep::View::ImportEventElement(), DD4hep::View::ImportGeoElement(), DD4hep::DDSegmentation::BitField64::init(), DD4hep::ElementListContextMenu::install(), DD4hep::PluginFactoryBase::make\_\-return(), DD4hep::Utilities::MakeNodesVisible(), DD4hep::DDSegmentation::BitFieldValue::operator=(), DD4hep::DDSegmentation::Segmentation::parameter(), DD4hep::Path::Path(), DD4hep::Simulation::Geant4GeometryMaps::placementPath(), DD4hep::Geometry::DetectorTools::placementPath(), DD4hep::Simulation::Geant4SensDetActionSequence::process(), DD4hep::Simulation::Geant4StepHandler::sdName(), DD4hep::Layering::sensitivePositionsInLayer(), DD4hep::DDSegmentation::TypedSegmentationParameter$<$ std::vector$<$ TYPE $>$ $>$::setValue(), DD4hep::DDSegmentation::TypedSegmentationParameter$<$ TYPE $>$::setValue(), DD4hep::Layering::singleLayerThickness(), DD4hep::DDSegmentation::MultiSegmentation::subsegmentation(), DD4hep::DDSegmentation::SegmentationParameter::toString(), DD4hep::Geometry::PlacedVolume::toString(), DD4hep::Geometry::toStringSolid(), DD4hep::DDSegmentation::TypedSegmentationParameter$<$ std::vector$<$ TYPE $>$ $>$::type(), DD4hep::DDSegmentation::TypedSegmentationParameter$<$ std::vector$<$ TYPE $>$ $>$::value(), and DD4hep::DDSegmentation::TypedSegmentationParameter$<$ TYPE $>$::value().
+Definition at line 298 of file Volumes.\+cpp.
+
+
+
+Referenced by \+\_\+create\+T\+Geo\+Volume\+Assembly(), D\+D4hep\+::\+Layering\+::absorber\+Thickness\+In\+Layer(), D\+D4hep\+::\+X\+M\+L\+::\+Element\+::add\+Child(), D\+D4hep\+::\+Alignments\+::\+Global\+Alignment\+Writer\+::add\+Node(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::add\+Subsegmentation(), D\+D4hep\+::\+Alignments\+::\+Global\+Alignment\+Cache\+::apply(), D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+Imp\+::apply(), D\+D4hep\+::\+Geometry\+::\+Atom\+::\+Atom(), D\+D4hep\+::\+X\+M\+L\+::\+Handle\+\_\+t\+::attr(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Output2\+L\+C\+I\+O\+::begin(), D\+D4hep\+::\+X\+M\+L\+::\+Handle\+\_\+t\+::checksum(), D\+D4hep\+::\+X\+M\+L\+::\+Handle\+\_\+t\+::child(), D\+D4hep\+::\+Object\+Extensions\+::clear(), D\+D4hep\+::\+X\+M\+L\+::\+Handle\+\_\+t\+::clone(), D\+D4hep\+::\+Conditions\+::\+Operators\+::collect\+All\+Conditions(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Output2\+L\+C\+I\+O\+::commit(), D\+D4hep\+::\+Alignments\+::\+Alignments\+Manager\+Object\+::compute(), D\+D4hep\+::\+View\+::\+Configure\+Geometry(), D\+D4hep\+::\+Object\+Extensions\+::copy\+From(), create\+\_\+detector(), create\+\_\+element(), D\+D4hep\+::\+Simulation\+::\+Sequence\+Hdl$<$ Geant4\+Generator\+Action\+Sequence $>$\+::create\+Client\+Context(), D\+D4hep\+::\+Alignments\+::\+Global\+Alignment\+Writer\+::create\+Element(), D\+D4hep\+::\+D\+D\+Rec\+::create\+Gear\+For\+C\+L\+I\+C(), D\+D4hep\+::\+D\+D\+Rec\+::create\+Gear\+For\+I\+L\+D(), D\+D4hep\+::create\+Gear\+Mgr(), D\+D4hep\+::\+X\+M\+L\+::create\+Placed\+Envelope(), D\+D4hep\+::\+X\+M\+L\+::\+Collection\+\_\+t\+::current(), D\+D4hep\+::\+Simulation\+::\+Sequence\+Hdl$<$ Geant4\+Generator\+Action\+Sequence $>$\+::destroy\+Client\+Context(), D\+D4hep\+::\+Alignments\+::\+Det\+Align\+::\+Det\+Align(), D\+D4hep\+::\+Conditions\+::\+Det\+Conditions\+::\+Det\+Conditions(), D\+D4hep\+::\+Geometry\+::\+Det\+Element\+::\+Det\+Element(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::direction(), D\+D4hep\+::\+Conditions\+::\+Conditions\+Dependency\+Handler\+::do\+\_\+callback(), D\+D4hep\+::\+Conditions\+::\+Test\+::\+Test\+Env\+::dump\+\_\+conditions\+\_\+pools(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Output\+Action\+::end(), extract(), D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+Imp\+::from\+Compact(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Field\+Tracking\+Construction\+::\+Geant4\+Field\+Tracking\+Construction(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Field\+Tracking\+Setup\+Action\+::\+Geant4\+Field\+Tracking\+Setup\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Handle$<$ T\+Y\+P\+E $>$\+::\+Geant4\+Handle(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::\+Geant4\+Particle\+Handler(), D\+D4hep\+::\+Display\+::get\+Event\+Handler\+Name(), D\+D4hep\+::\+D\+D\+Rec\+::\+Surface\+::get\+Lines(), D\+D4hep\+::\+D\+D\+Rec\+::\+Subdetector\+Extension\+Impl\+::get\+N\+Sides(), D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+Imp\+::get\+Ref\+Child(), D\+D4hep\+::\+D\+D\+Rec\+::\+Subdetector\+Extension\+Impl\+::get\+R\+Max(), D\+D4hep\+::\+D\+D\+Rec\+::\+Subdetector\+Extension\+Impl\+::get\+R\+Min(), D\+D4hep\+::\+Handle$<$ Readout\+Object $>$\+::\+Handle(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Converter\+::handle\+Material(), D\+D4hep\+::\+Popup\+Menu\+::\+Handle\+Menu(), D\+D4hep\+::\+Projection\+::\+Import\+Element(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Actor$<$ T $>$\+::init(), D\+D4hep\+::\+D\+D\+Rec\+::\+Detector\+Surfaces\+::initialize(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Operator\+::insert(), D\+D4hep\+::\+X\+M\+L\+::\+Xml\+String\+::length(), D\+D4hep\+::\+Geometry\+::\+Limit\+Set\+::\+Limit\+Set(), D\+D4hep\+::\+X\+M\+L\+::\+Document\+Handler\+::load(), D\+D4hep\+::\+Utilities\+::\+Load\+Det\+Element(), D\+D4hep\+::\+Display\+::\+Load\+Geo\+Children(), D\+D4hep\+::\+Utilities\+::\+Make\+Nodes\+Visible(), mapped\+\_\+entries(), D\+D4hep\+::\+Geometry\+::\+Material\+::\+Material(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::neighbours(), D\+D4hep\+::\+Generic\+Event\+Handler\+::\+Next\+Event(), D\+D4hep\+::\+Generic\+Event\+Handler\+::\+Open(), D\+D4hep\+::\+M\+C\+Particle\+Creator\+::operator()(), D\+D4hep\+::\+X\+M\+L\+::\+Collection\+\_\+t\+::operator++(), D\+D4hep\+::\+X\+M\+L\+::\+Collection\+\_\+t\+::operator-\/-\/(), D\+D4hep\+::\+X\+M\+L\+::\+Document\+Handler\+::output(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Stack\+::pop(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::position\+To\+Bin(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Action$<$ T $>$\+::process(), D\+D4hep\+::\+L\+C\+D\+D\+Load\+::process\+X\+M\+L(), D\+D4hep\+::\+D\+D\+Rec\+::\+Vol\+Surface\+::ptr(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Input\+Action\+::read\+Particles(), D\+D4hep\+::\+Geometry\+::\+Region\+::\+Region(), D\+D4hep\+::\+X\+M\+L\+::\+Handle\+\_\+t\+::remove(), D\+D4hep\+::\+X\+M\+L\+::\+Handle\+\_\+t\+::remove\+Attrs(), D\+D4hep\+::\+X\+M\+L\+::\+Handle\+\_\+t\+::remove\+Children(), D\+D4hep\+::\+Object\+Extensions\+::remove\+Extension(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Selector\+::reset(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::run(), D\+D4hep\+::\+Conditions\+::\+Conditions\+Text\+Repository\+::save(), D\+D4hep\+::\+Conditions\+::\+Conditions\+Repository\+::save(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Output2\+L\+C\+I\+O\+::save\+Event(), D\+D4hep\+::\+Geometry\+::\+Segmentation\+::\+Segmentation(), D\+D4hep\+::\+Layering\+::sensitive\+Positions\+In\+Layer(), D\+D4hep\+::\+X\+M\+L\+::\+Handle\+\_\+t\+::set\+Attr(), D\+D4hep\+::\+X\+M\+L\+::\+Handle\+\_\+t\+::set\+Attrs(), D\+D4hep\+::\+X\+M\+L\+::\+Element\+::set\+Child(), D\+D4hep\+::\+X\+M\+L\+::set\+Detector\+Type\+Flag(), D\+D4hep\+::\+Simulation\+::\+Geant4\+U\+I\+Messenger\+::\+Set\+New\+Value(), D\+D4hep\+::\+Utilities\+::\+Set\+Rnr\+All(), D\+D4hep\+::\+Geometry\+::\+Readout\+::set\+Segmentation(), setup\+\_\+\+D\+D\+Eve(), D\+D4hep\+::\+Layering\+::single\+Layer\+Thickness(), D\+D4hep\+::\+Surface\+Installer\+::stop\+Scanning(), D\+D4hep\+::\+Geometry\+::\+Region\+::store\+Secondaries(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::subsegmentation(), D\+D4hep\+::\+X\+M\+L\+::\+Document\+Handler\+::system\+\_\+path(), D\+D4hep\+::\+Conditions\+::\+Test\+::\+Test\+Env\+::\+Test\+Env(), D\+D4hep\+::\+Alignments\+::\+Alignments\+Manager\+Object\+::to\+\_\+world(), D\+D4hep\+::\+Layering\+::total\+Thickness(), D\+D4hep\+::\+Geometry\+::\+Vis\+Attr\+::\+Vis\+Attr(), D\+D4hep\+::\+D\+D\+Rec\+::\+Vol\+Cone\+Impl\+::\+Vol\+Cone\+Impl(), D\+D4hep\+::\+D\+D\+Rec\+::\+Surface\+::vol\+Surface(), D\+D4hep\+::\+D\+D\+Rec\+::vol\+Surface\+List(), D\+D4hep\+::\+D\+D\+Rec\+::\+Vol\+Surface\+Base\+::volume(), D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::\+Volume\+Manager(), D\+D4hep\+::\+X\+M\+L\+::\+Document\+Error\+Handler\+::warning(), D\+D4hep\+::\+Conditions\+::\+Conditions\+Repository\+::$\sim$\+Conditions\+Repository(), D\+D4hep\+::\+Conditions\+::\+Conditions\+Text\+Repository\+::$\sim$\+Conditions\+Text\+Repository(), and D\+D\+Surfaces\+::\+I\+Surface\+::$\sim$\+I\+Surface().
+
+\hypertarget{_volumes_8cpp_a6fc379aaec47ce424b00d8ffda2a6c59}{}\label{_volumes_8cpp_a6fc379aaec47ce424b00d8ffda2a6c59} 
+\index{Volumes.\+cpp@{Volumes.\+cpp}!m@{m}}
+\index{m@{m}!Volumes.\+cpp@{Volumes.\+cpp}}
+\subsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily T\+Geo\+Shape T\+Geo\+Medium$\ast$ m}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+  \hyperlink{_volumes_8cpp_a6369702c0bd3a63eeb1ccda4c5fd2885}{geo\_volume\_t}* \hyperlink{_volumes_8cpp_a8a9a1f93e9b09afccaec215310e64142}{e} = \textcolor{keyword}{new} \hyperlink{_volumes_8cpp_a6369702c0bd3a63eeb1ccda4c5fd2885}{geo\_volume\_t}(name.c\_str(),\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s},\hyperlink{_volumes_8cpp_a6fc379aaec47ce424b00d8ffda2a6c59}{m})
+\end{DoxyCode}
+
+
+Definition at line 295 of file Volumes.\+cpp.
+
+
+
+Referenced by D\+D4hep\+::\+Geometry\+::\+Material\+::\+A(), D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::add\+Subdetector(), D\+D4hep\+::\+Geometry\+::\+Alignment\+Entry\+::align(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::begin(), D\+D4hep\+::\+Simulation\+::boost\+Interaction(), D\+D4hep\+::\+D\+D4hep\+Menu\+::\+Build(), D\+D4hep\+::\+View\+Menu\+::\+Build\+View(), D\+D4hep\+::\+X\+M\+L\+::\+Handle\+\_\+t\+::checksum(), D\+D4hep\+::\+Geometry\+::\+Geo\+Handler\+::collect(), D\+D4hep\+::\+Alignments\+::\+Alignment\+Tools\+::compute\+Ideal(), create\+\_\+detector(), D\+D4hep\+::\+Geometry\+::\+Material\+::density(), D\+D4hep\+::destroy\+Handles(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Map\+::dump(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::end(), D\+D4hep\+::\+X\+M\+L\+::\+Document\+Error\+Handler\+::error(), D\+D4hep\+::\+X\+M\+L\+::\+Document\+Error\+Handler\+::fatal\+Error(), D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor\+::field(), D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor\+::field\+I\+D(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Hit\+Collection\+::get\+Data(), D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+Imp\+::get\+Ref\+Child(), D\+D4hep\+::\+Alignments\+::\+Global\+Alignment\+::global\+To\+Local(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Converter\+::handle\+Solid(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Converter\+::handle\+Volume(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Assembly\+Volume\+::imprint(), D\+D4hep\+::\+D\+D\+Rec\+::\+Surface\+::initialize(), D\+D4hep\+::\+Eve\+User\+Context\+Menu\+::\+Install\+Geometry\+Context\+Menu(), D\+D4hep\+::\+Context\+Menu\+::instance(), D\+D4hep\+::\+Geometry\+::\+Material\+::int\+Length(), D\+D4hep\+::\+Reference\+Bit\+Mask$<$ T $>$\+::is\+Set(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::is\+Worker(), D\+D4hep\+::unrelated\+\_\+type\+\_\+error\+::msg(), D\+D4hep\+::unrelated\+\_\+value\+\_\+error\+::msg(), D\+D4hep\+::not\+Implemented(), D\+D4hep\+::\+D\+D4hep\+Menu\+::\+On\+Geometry\+Loaded(), D\+D4hep\+::\+D\+D4hep\+Menu\+::\+On\+Open\+Event\+Data(), D\+D4hep\+::\+Printer$<$ T $>$\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Stepping\+Action\+::operator()(), D\+D4hep\+::\+Converter$<$ T, A\+R\+G $>$\+::operator()(), D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::operator=(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Mapping\+::placement(), D\+D4hep\+::\+Geometry\+::\+Material\+::rad\+Length(), D\+D4hep\+::\+Simulation\+::\+Hep\+M\+C\+::read\+\_\+units(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Hit\+Collection\+::release\+Data(), D\+D4hep\+::release\+Handles(), D\+D4hep\+::\+Reference\+Bit\+Mask$<$ T $>$\+::set(), D\+D4hep\+::\+Geometry\+::\+Region\+::store\+Secondaries(), D\+D4hep\+::\+Reference\+Bit\+Mask$<$ T $>$\+::test\+Bit(), D\+D4hep\+::\+Alignments\+::\+Global\+Alignment\+::to\+Global(), D\+D4hep\+::\+Geometry\+::\+Volume\+::\+Volume(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Volume\+Manager\+::volume\+Descriptor(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Volume\+Manager\+::volume\+I\+D(), and D\+D4hep\+::\+Geometry\+::\+Material\+::\+Z().
+
+\hypertarget{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{}\label{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40} 
+\index{Volumes.\+cpp@{Volumes.\+cpp}!s@{s}}
+\index{s@{s}!Volumes.\+cpp@{Volumes.\+cpp}}
+\subsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily T\+Geo\+Shape$\ast$ s}
+
+
+
+Definition at line 295 of file Volumes.\+cpp.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Ref\+Counted\+Sequence$<$ Geant4\+Sens\+Det\+Action\+Sequence $>$\+::\+\_\+aquire(), D\+D4hep\+::\+Simulation\+::\+Sequence\+Hdl$<$ Geant4\+Generator\+Action\+Sequence $>$\+::\+\_\+aquire(), \+\_\+fill(), \+\_\+stack(), D\+D4hep\+::\+X\+M\+L\+::\+\_\+to\+Bool(), D\+D4hep\+::\+X\+M\+L\+::\+\_\+to\+Double(), D\+D4hep\+::\+X\+M\+L\+::\+\_\+to\+Float(), D\+D4hep\+::\+X\+M\+L\+::\+\_\+to\+Int(), D\+D4hep\+::\+\_\+to\+Int(), D\+D4hep\+::\+X\+M\+L\+::\+\_\+to\+Long(), D\+D4hep\+::\+\_\+to\+Long(), D\+D4hep\+::\+\_\+to\+Short(), D\+D4hep\+::\+X\+M\+L\+::\+\_\+to\+String(), D\+D4hep\+::\+Layering\+::absorber\+Thickness\+In\+Layer(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Bit\+Field64\+::add\+Field(), D\+D4hep\+::\+Geometry\+::\+Polycone\+::add\+Z\+Planes(), D\+D4hep\+::\+Handle$<$ Readout\+Object $>$\+::assign(), Ti\+Xml\+Element\+::\+Attribute(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Bit\+Field\+Value\+::\+Bit\+Field\+Value(), Class\+Imp(), D\+D4hep\+::copy\+Object(), create\+\_\+detector(), D\+D4hep\+::\+D\+D\+Rec\+::create\+Gear\+For\+C\+L\+I\+C(), D\+D4hep\+::\+D\+D\+Rec\+::create\+Gear\+For\+I\+L\+D(), D\+D4hep\+::\+D\+D\+Rec\+::invalid\+\_\+cell\+\_\+id\+::create\+Msg(), D\+D4hep\+::\+D\+D\+Rec\+::invalid\+\_\+position\+::create\+Msg(), D\+D4hep\+::\+D\+D\+Rec\+::invalid\+\_\+detector\+\_\+element\+::create\+Msg(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Typed\+Segmentation\+Parameter$<$ T\+Y\+P\+E $>$\+::default\+Value(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Typed\+Segmentation\+Parameter$<$ std\+::vector$<$ T\+Y\+P\+E $>$ $>$\+::default\+Value(), D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::element\+Path(), D\+D4hep\+::eval\+\_\+item$<$ std\+::string $>$(), D\+D4hep\+::\+X\+M\+L\+::\+Layering\+Cnv\+::from\+Compact(), D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+Imp\+::get\+Ref\+Child(), D\+D4hep\+::\+Geometry\+::\+Geometry\+Tree\+Dump\+::handle\+Solid(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Converter\+::handle\+Solid(), D\+D4hep\+::\+Geometry\+::\+Simple\+G\+D\+M\+L\+Writer\+::handle\+Solid(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Converter\+::handle\+Volume(), D\+D4hep\+::\+View\+::\+Import\+Event\+Element(), D\+D4hep\+::\+View\+::\+Import\+Geo\+Element(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Assembly\+Volume\+::imprint(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Bit\+Field64\+::init(), D\+D4hep\+::\+Element\+List\+Context\+Menu\+::install(), D\+D4hep\+::dd4hep\+\_\+file$<$ T $>$\+::is\+\_\+open(), D\+D4hep\+::\+Plugin\+Factory\+Base\+::make\+\_\+return(), D\+D4hep\+::\+Utilities\+::\+Make\+Nodes\+Visible(), D\+D4hep\+::\+Popup\+Menu\+::menu(), D\+D4hep\+::\+Printer$<$ T $>$\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Stepping\+Action\+::operator()(), operator$<$$<$(), D\+D\+Surfaces\+::operator$<$$<$(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Bit\+Field\+Value\+::operator=(), D\+D4hep\+::\+X\+M\+L\+::\+Tag\+\_\+t\+::operator=(), D\+D4hep\+::\+X\+M\+L\+::\+Document\+Handler\+::output(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::parameter(), D\+D4hep\+::\+Path\+::\+Path(), D\+D4hep\+::\+Geometry\+::\+Detector\+Tools\+::placement\+Path(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Geometry\+Maps\+::placement\+Path(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+Action\+Sequence\+::process(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::sd\+Name(), D\+D4hep\+::\+Layering\+::sensitive\+Positions\+In\+Layer(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Typed\+Segmentation\+Parameter$<$ T\+Y\+P\+E $>$\+::set\+Value(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Typed\+Segmentation\+Parameter$<$ std\+::vector$<$ T\+Y\+P\+E $>$ $>$\+::set\+Value(), D\+D4hep\+::\+Layering\+::single\+Layer\+Thickness(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::subsegmentation(), D\+D4hep\+::\+Utils\+::to\+Stream(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+Parameter\+::to\+String(), D\+D4hep\+::\+Geometry\+::\+Placed\+Volume\+::to\+String(), D\+D4hep\+::\+Utils\+::to\+String(), D\+D4hep\+::\+Geometry\+::to\+String\+Solid(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Typed\+Segmentation\+Parameter$<$ std\+::vector$<$ T\+Y\+P\+E $>$ $>$\+::type(), D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Stepping\+Action\+::\+User\+Stepping\+Action(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Typed\+Segmentation\+Parameter$<$ T\+Y\+P\+E $>$\+::value(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Typed\+Segmentation\+Parameter$<$ std\+::vector$<$ T\+Y\+P\+E $>$ $>$\+::value(), D\+D4hep\+::\+Geometry\+::\+Volume\+::\+Volume(), and D\+D4hep\+::dd4hep\+\_\+file$<$ T $>$\+::write().
+

@@ -1,131 +1,139 @@
-\hypertarget{_geant4_hierarchy_dump_8cpp}{
-\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/Geant4HierarchyDump.cpp File Reference}
-\label{_geant4_hierarchy_dump_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/Geant4HierarchyDump.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/Geant4HierarchyDump.cpp}}
-}
-{\ttfamily \#include \char`\"{}DD4hep/LCDD.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/Plugins.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/Volumes.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/Printout.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DDG4/Geant4HierarchyDump.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4Version.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4VisAttributes.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4ProductionCuts.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4VUserRegionInformation.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4Element.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4SDManager.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4AssemblyVolume.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4Box.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4Trd.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4Tubs.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4Cons.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4Torus.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4Sphere.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4Polycone.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4Polyhedra.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4UnionSolid.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4Paraboloid.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4SubtractionSolid.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4IntersectionSolid.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4Region.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4UserLimits.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4VSensitiveDetector.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4LogicalVolume.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4Material.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4Isotope.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4Transform3D.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4ThreeVector.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4PVPlacement.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4ElectroMagneticField.hh\char`\"{}}\par
-{\ttfamily \#include \char`\"{}G4FieldManager.hh\char`\"{}}\par
-{\ttfamily \#include $<$iostream$>$}\par
-{\ttfamily \#include $<$iomanip$>$}\par
-{\ttfamily \#include $<$sstream$>$}\par
+\hypertarget{_geant4_hierarchy_dump_8cpp}{}\section{/afs/cern.ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/src/\+Geant4\+Hierarchy\+Dump.cpp File Reference}
+\label{_geant4_hierarchy_dump_8cpp}\index{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/src/\+Geant4\+Hierarchy\+Dump.\+cpp@{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/src/\+Geant4\+Hierarchy\+Dump.\+cpp}}
+{\ttfamily \#include \char`\"{}D\+D4hep/\+L\+C\+D\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Plugins.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Volumes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Printout.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Hierarchy\+Dump.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Version.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Vis\+Attributes.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Production\+Cuts.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+V\+User\+Region\+Information.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Element.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+S\+D\+Manager.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Assembly\+Volume.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Box.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Trd.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Tubs.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Cons.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Torus.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Sphere.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Polycone.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Polyhedra.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Union\+Solid.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Paraboloid.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Subtraction\+Solid.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Intersection\+Solid.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Region.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+User\+Limits.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+V\+Sensitive\+Detector.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Logical\+Volume.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Material.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Isotope.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Transform3\+D.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Three\+Vector.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+P\+V\+Placement.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Electro\+Magnetic\+Field.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G4\+Field\+Manager.\+hh\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
 \subsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum \{ \par
-\hyperlink{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a366c045ad7ef5b832c7269f30d510eac}{G4DUMP\_\-ALL} =  0xFFFFFFFF, 
-\hyperlink{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a923d7acaaab06e63f732f5816cb3bf1c}{G4DUMP\_\-LOGVOL} =  1 $<$$<$ 0, 
-\hyperlink{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a63b13a2f174016825921dc1d47e3532e}{G4DUMP\_\-SOLID} =  1 $<$$<$ 1, 
-\hyperlink{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a6c3eb5ec4d2f4a4c3499a535d7ab5fff}{G4DUMP\_\-SENSDET} =  1 $<$$<$ 2, 
-\par
-\hyperlink{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a3a1c11de245ca67db47c52324fbb9bab}{G4DUMP\_\-LIMITS} =  1 $<$$<$ 3, 
-\hyperlink{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a6ef7b1ce714d5cba8bce6e4d32a472aa}{G4DUMP\_\-REGION} =  1 $<$$<$ 4, 
-\hyperlink{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a12cf731b0c1ca9f942e2945b35f5160c}{G4DUMP\_\-LAST}
+enum \{ \newline
+\hyperlink{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a366c045ad7ef5b832c7269f30d510eac}{G4\+D\+U\+M\+P\+\_\+\+A\+LL} = 0x\+F\+F\+F\+F\+F\+F\+FF, 
+\hyperlink{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a923d7acaaab06e63f732f5816cb3bf1c}{G4\+D\+U\+M\+P\+\_\+\+L\+O\+G\+V\+OL} = 1 $<$$<$ 0, 
+\hyperlink{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a63b13a2f174016825921dc1d47e3532e}{G4\+D\+U\+M\+P\+\_\+\+S\+O\+L\+ID} = 1 $<$$<$ 1, 
+\hyperlink{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a6c3eb5ec4d2f4a4c3499a535d7ab5fff}{G4\+D\+U\+M\+P\+\_\+\+S\+E\+N\+S\+D\+ET} = 1 $<$$<$ 2, 
+\newline
+\hyperlink{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a3a1c11de245ca67db47c52324fbb9bab}{G4\+D\+U\+M\+P\+\_\+\+L\+I\+M\+I\+TS} = 1 $<$$<$ 3, 
+\hyperlink{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a6ef7b1ce714d5cba8bce6e4d32a472aa}{G4\+D\+U\+M\+P\+\_\+\+R\+E\+G\+I\+ON} = 1 $<$$<$ 4, 
+\hyperlink{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a12cf731b0c1ca9f942e2945b35f5160c}{G4\+D\+U\+M\+P\+\_\+\+L\+A\+ST}
  \}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-static const char $\ast$ \hyperlink{_geant4_hierarchy_dump_8cpp_a9a28433ec80a7e932e930e9e3a97301d}{\_\-T} (const std::string \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s})
+static const char $\ast$ \hyperlink{_geant4_hierarchy_dump_8cpp_a9a28433ec80a7e932e930e9e3a97301d}{\+\_\+T} (const std\+::string \&\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s})
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-static unsigned long \hyperlink{_geant4_hierarchy_dump_8cpp_a93ca962439b7c1a754c88854f351dab1}{m\_\-flags} = $\sim$0x0UL
+static unsigned long \hyperlink{_geant4_hierarchy_dump_8cpp_a93ca962439b7c1a754c88854f351dab1}{m\+\_\+flags} = $\sim$0x0\+UL
 \end{DoxyCompactItemize}
 
 
 \subsection{Enumeration Type Documentation}
-\hypertarget{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8}{
-\subsubsection[{"@12}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
-\label{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8}
-\begin{Desc}
-\item[Enumerator: ]\par
-\begin{description}
-\index{G4DUMP\_\-ALL@{G4DUMP\_\-ALL}!Geant4HierarchyDump.cpp@{Geant4HierarchyDump.cpp}}\index{Geant4HierarchyDump.cpp@{Geant4HierarchyDump.cpp}!G4DUMP\_\-ALL@{G4DUMP\_\-ALL}}\item[{\em 
-\hypertarget{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a366c045ad7ef5b832c7269f30d510eac}{
-G4DUMP\_\-ALL}
-\label{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a366c045ad7ef5b832c7269f30d510eac}
-}]\index{G4DUMP\_\-LOGVOL@{G4DUMP\_\-LOGVOL}!Geant4HierarchyDump.cpp@{Geant4HierarchyDump.cpp}}\index{Geant4HierarchyDump.cpp@{Geant4HierarchyDump.cpp}!G4DUMP\_\-LOGVOL@{G4DUMP\_\-LOGVOL}}\item[{\em 
-\hypertarget{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a923d7acaaab06e63f732f5816cb3bf1c}{
-G4DUMP\_\-LOGVOL}
-\label{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a923d7acaaab06e63f732f5816cb3bf1c}
-}]\index{G4DUMP\_\-SOLID@{G4DUMP\_\-SOLID}!Geant4HierarchyDump.cpp@{Geant4HierarchyDump.cpp}}\index{Geant4HierarchyDump.cpp@{Geant4HierarchyDump.cpp}!G4DUMP\_\-SOLID@{G4DUMP\_\-SOLID}}\item[{\em 
-\hypertarget{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a63b13a2f174016825921dc1d47e3532e}{
-G4DUMP\_\-SOLID}
-\label{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a63b13a2f174016825921dc1d47e3532e}
-}]\index{G4DUMP\_\-SENSDET@{G4DUMP\_\-SENSDET}!Geant4HierarchyDump.cpp@{Geant4HierarchyDump.cpp}}\index{Geant4HierarchyDump.cpp@{Geant4HierarchyDump.cpp}!G4DUMP\_\-SENSDET@{G4DUMP\_\-SENSDET}}\item[{\em 
-\hypertarget{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a6c3eb5ec4d2f4a4c3499a535d7ab5fff}{
-G4DUMP\_\-SENSDET}
-\label{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a6c3eb5ec4d2f4a4c3499a535d7ab5fff}
-}]\index{G4DUMP\_\-LIMITS@{G4DUMP\_\-LIMITS}!Geant4HierarchyDump.cpp@{Geant4HierarchyDump.cpp}}\index{Geant4HierarchyDump.cpp@{Geant4HierarchyDump.cpp}!G4DUMP\_\-LIMITS@{G4DUMP\_\-LIMITS}}\item[{\em 
-\hypertarget{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a3a1c11de245ca67db47c52324fbb9bab}{
-G4DUMP\_\-LIMITS}
-\label{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a3a1c11de245ca67db47c52324fbb9bab}
-}]\index{G4DUMP\_\-REGION@{G4DUMP\_\-REGION}!Geant4HierarchyDump.cpp@{Geant4HierarchyDump.cpp}}\index{Geant4HierarchyDump.cpp@{Geant4HierarchyDump.cpp}!G4DUMP\_\-REGION@{G4DUMP\_\-REGION}}\item[{\em 
-\hypertarget{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a6ef7b1ce714d5cba8bce6e4d32a472aa}{
-G4DUMP\_\-REGION}
-\label{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a6ef7b1ce714d5cba8bce6e4d32a472aa}
-}]\index{G4DUMP\_\-LAST@{G4DUMP\_\-LAST}!Geant4HierarchyDump.cpp@{Geant4HierarchyDump.cpp}}\index{Geant4HierarchyDump.cpp@{Geant4HierarchyDump.cpp}!G4DUMP\_\-LAST@{G4DUMP\_\-LAST}}\item[{\em 
-\hypertarget{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a12cf731b0c1ca9f942e2945b35f5160c}{
-G4DUMP\_\-LAST}
-\label{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a12cf731b0c1ca9f942e2945b35f5160c}
-}]\end{description}
-\end{Desc}
+\hypertarget{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8}{}\label{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G4\+D\+U\+M\+P\+\_\+\+A\+LL@{G4\+D\+U\+M\+P\+\_\+\+A\+LL}!Geant4\+Hierarchy\+Dump.\+cpp@{Geant4\+Hierarchy\+Dump.\+cpp}}\index{Geant4\+Hierarchy\+Dump.\+cpp@{Geant4\+Hierarchy\+Dump.\+cpp}!G4\+D\+U\+M\+P\+\_\+\+A\+LL@{G4\+D\+U\+M\+P\+\_\+\+A\+LL}}}\hypertarget{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a366c045ad7ef5b832c7269f30d510eac}{}\label{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a366c045ad7ef5b832c7269f30d510eac} 
+G4\+D\+U\+M\+P\+\_\+\+A\+LL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G4\+D\+U\+M\+P\+\_\+\+L\+O\+G\+V\+OL@{G4\+D\+U\+M\+P\+\_\+\+L\+O\+G\+V\+OL}!Geant4\+Hierarchy\+Dump.\+cpp@{Geant4\+Hierarchy\+Dump.\+cpp}}\index{Geant4\+Hierarchy\+Dump.\+cpp@{Geant4\+Hierarchy\+Dump.\+cpp}!G4\+D\+U\+M\+P\+\_\+\+L\+O\+G\+V\+OL@{G4\+D\+U\+M\+P\+\_\+\+L\+O\+G\+V\+OL}}}\hypertarget{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a923d7acaaab06e63f732f5816cb3bf1c}{}\label{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a923d7acaaab06e63f732f5816cb3bf1c} 
+G4\+D\+U\+M\+P\+\_\+\+L\+O\+G\+V\+OL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G4\+D\+U\+M\+P\+\_\+\+S\+O\+L\+ID@{G4\+D\+U\+M\+P\+\_\+\+S\+O\+L\+ID}!Geant4\+Hierarchy\+Dump.\+cpp@{Geant4\+Hierarchy\+Dump.\+cpp}}\index{Geant4\+Hierarchy\+Dump.\+cpp@{Geant4\+Hierarchy\+Dump.\+cpp}!G4\+D\+U\+M\+P\+\_\+\+S\+O\+L\+ID@{G4\+D\+U\+M\+P\+\_\+\+S\+O\+L\+ID}}}\hypertarget{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a63b13a2f174016825921dc1d47e3532e}{}\label{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a63b13a2f174016825921dc1d47e3532e} 
+G4\+D\+U\+M\+P\+\_\+\+S\+O\+L\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G4\+D\+U\+M\+P\+\_\+\+S\+E\+N\+S\+D\+ET@{G4\+D\+U\+M\+P\+\_\+\+S\+E\+N\+S\+D\+ET}!Geant4\+Hierarchy\+Dump.\+cpp@{Geant4\+Hierarchy\+Dump.\+cpp}}\index{Geant4\+Hierarchy\+Dump.\+cpp@{Geant4\+Hierarchy\+Dump.\+cpp}!G4\+D\+U\+M\+P\+\_\+\+S\+E\+N\+S\+D\+ET@{G4\+D\+U\+M\+P\+\_\+\+S\+E\+N\+S\+D\+ET}}}\hypertarget{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a6c3eb5ec4d2f4a4c3499a535d7ab5fff}{}\label{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a6c3eb5ec4d2f4a4c3499a535d7ab5fff} 
+G4\+D\+U\+M\+P\+\_\+\+S\+E\+N\+S\+D\+ET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G4\+D\+U\+M\+P\+\_\+\+L\+I\+M\+I\+TS@{G4\+D\+U\+M\+P\+\_\+\+L\+I\+M\+I\+TS}!Geant4\+Hierarchy\+Dump.\+cpp@{Geant4\+Hierarchy\+Dump.\+cpp}}\index{Geant4\+Hierarchy\+Dump.\+cpp@{Geant4\+Hierarchy\+Dump.\+cpp}!G4\+D\+U\+M\+P\+\_\+\+L\+I\+M\+I\+TS@{G4\+D\+U\+M\+P\+\_\+\+L\+I\+M\+I\+TS}}}\hypertarget{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a3a1c11de245ca67db47c52324fbb9bab}{}\label{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a3a1c11de245ca67db47c52324fbb9bab} 
+G4\+D\+U\+M\+P\+\_\+\+L\+I\+M\+I\+TS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G4\+D\+U\+M\+P\+\_\+\+R\+E\+G\+I\+ON@{G4\+D\+U\+M\+P\+\_\+\+R\+E\+G\+I\+ON}!Geant4\+Hierarchy\+Dump.\+cpp@{Geant4\+Hierarchy\+Dump.\+cpp}}\index{Geant4\+Hierarchy\+Dump.\+cpp@{Geant4\+Hierarchy\+Dump.\+cpp}!G4\+D\+U\+M\+P\+\_\+\+R\+E\+G\+I\+ON@{G4\+D\+U\+M\+P\+\_\+\+R\+E\+G\+I\+ON}}}\hypertarget{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a6ef7b1ce714d5cba8bce6e4d32a472aa}{}\label{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a6ef7b1ce714d5cba8bce6e4d32a472aa} 
+G4\+D\+U\+M\+P\+\_\+\+R\+E\+G\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G4\+D\+U\+M\+P\+\_\+\+L\+A\+ST@{G4\+D\+U\+M\+P\+\_\+\+L\+A\+ST}!Geant4\+Hierarchy\+Dump.\+cpp@{Geant4\+Hierarchy\+Dump.\+cpp}}\index{Geant4\+Hierarchy\+Dump.\+cpp@{Geant4\+Hierarchy\+Dump.\+cpp}!G4\+D\+U\+M\+P\+\_\+\+L\+A\+ST@{G4\+D\+U\+M\+P\+\_\+\+L\+A\+ST}}}\hypertarget{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a12cf731b0c1ca9f942e2945b35f5160c}{}\label{_geant4_hierarchy_dump_8cpp_ac36f475ca5b446f4fde4c9b90bec77c8a12cf731b0c1ca9f942e2945b35f5160c} 
+G4\+D\+U\+M\+P\+\_\+\+L\+A\+ST&\\
+\hline
+
+\end{DoxyEnumFields}
 
 
+Definition at line 73 of file Geant4\+Hierarchy\+Dump.\+cpp.
 
-Definition at line 73 of file Geant4HierarchyDump.cpp.
+
 
 \subsection{Function Documentation}
-\hypertarget{_geant4_hierarchy_dump_8cpp_a9a28433ec80a7e932e930e9e3a97301d}{
-\index{Geant4HierarchyDump.cpp@{Geant4HierarchyDump.cpp}!\_\-T@{\_\-T}}
-\index{\_\-T@{\_\-T}!Geant4HierarchyDump.cpp@{Geant4HierarchyDump.cpp}}
-\subsubsection[{\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}static const char$\ast$ \_\-T (const std::string \& {\em s})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{_geant4_hierarchy_dump_8cpp_a9a28433ec80a7e932e930e9e3a97301d}
+\hypertarget{_geant4_hierarchy_dump_8cpp_a9a28433ec80a7e932e930e9e3a97301d}{}\label{_geant4_hierarchy_dump_8cpp_a9a28433ec80a7e932e930e9e3a97301d} 
+\index{Geant4\+Hierarchy\+Dump.\+cpp@{Geant4\+Hierarchy\+Dump.\+cpp}!\+\_\+T@{\+\_\+T}}
+\index{\+\_\+T@{\+\_\+T}!Geant4\+Hierarchy\+Dump.\+cpp@{Geant4\+Hierarchy\+Dump.\+cpp}}
+\subsubsection{\texorpdfstring{\+\_\+\+T()}{\_T()}}
+{\footnotesize\ttfamily static const char$\ast$ \+\_\+T (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
-Definition at line 68 of file Geant4HierarchyDump.cpp.
 
-Referenced by DD4hep::Conditions::Operators::collectAllConditions().
+Definition at line 68 of file Geant4\+Hierarchy\+Dump.\+cpp.
+
+
+
+Referenced by D\+D4hep\+::\+Conditions\+::\+Operators\+::collect\+All\+Conditions(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Hierarchy\+Dump\+::dump(), D\+D4hep\+::\+Conditions\+::\+Conditions\+Text\+Repository\+::save(), and D\+D4hep\+::\+Conditions\+::\+Conditions\+Repository\+::save().
+
+
 
 \subsection{Variable Documentation}
-\hypertarget{_geant4_hierarchy_dump_8cpp_a93ca962439b7c1a754c88854f351dab1}{
-\index{Geant4HierarchyDump.cpp@{Geant4HierarchyDump.cpp}!m\_\-flags@{m\_\-flags}}
-\index{m\_\-flags@{m\_\-flags}!Geant4HierarchyDump.cpp@{Geant4HierarchyDump.cpp}}
-\subsubsection[{m\_\-flags}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf m\_\-flags} = $\sim$0x0UL\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{_geant4_hierarchy_dump_8cpp_a93ca962439b7c1a754c88854f351dab1}
+\hypertarget{_geant4_hierarchy_dump_8cpp_a93ca962439b7c1a754c88854f351dab1}{}\label{_geant4_hierarchy_dump_8cpp_a93ca962439b7c1a754c88854f351dab1} 
+\index{Geant4\+Hierarchy\+Dump.\+cpp@{Geant4\+Hierarchy\+Dump.\+cpp}!m\+\_\+flags@{m\+\_\+flags}}
+\index{m\+\_\+flags@{m\+\_\+flags}!Geant4\+Hierarchy\+Dump.\+cpp@{Geant4\+Hierarchy\+Dump.\+cpp}}
+\subsubsection{\texorpdfstring{m\+\_\+flags}{m\_flags}}
+{\footnotesize\ttfamily unsigned long m\+\_\+flags = $\sim$0x0\+UL\hspace{0.3cm}{\ttfamily [static]}}
 
 
-Definition at line 82 of file Geant4HierarchyDump.cpp.
+
+Definition at line 82 of file Geant4\+Hierarchy\+Dump.\+cpp.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Hierarchy\+Dump\+::dump(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Hit\+Collection\+::find\+Hit().
+

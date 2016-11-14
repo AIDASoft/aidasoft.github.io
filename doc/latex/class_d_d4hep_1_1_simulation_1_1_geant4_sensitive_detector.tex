@@ -1,394 +1,650 @@
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector}{
-\section{DD4hep::Simulation::Geant4SensitiveDetector Class Reference}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector}\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector}{}\section{D\+D4hep\+:\+:Simulation\+:\+:Geant4\+Sensitive\+Detector Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector}\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
 
 
-Deprecated: Example \hyperlink{class_g4_v_sensitive_detector}{G4VSensitiveDetector} implementation.  
+Deprecated\+: Example \hyperlink{class_g4_v_sensitive_detector}{G4\+V\+Sensitive\+Detector} implementation.  
 
 
-{\ttfamily \#include $<$Geant4SensitiveDetector.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4SensitiveDetector::\begin{figure}[H]
+
+
+{\ttfamily \#include $<$Geant4\+Sensitive\+Detector.\+h$>$}
+
+Inheritance diagram for D\+D4hep\+:\+:Simulation\+:\+:Geant4\+Sensitive\+Detector\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3cm]{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector}
+\includegraphics[height=3.000000cm]{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector}
 \end{center}
 \end{figure}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_sensitive_detector}{Geometry::SensitiveDetector} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a6375f9a4f776b531e443483ff9fa8c28}{SensitiveDetector}
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_sensitive_detector}{Geometry\+::\+Sensitive\+Detector} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a6375f9a4f776b531e443483ff9fa8c28}{Sensitive\+Detector}
 \item 
-typedef G4THitsCollection$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit}{Geant4Hit} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a4865cf9c96edfef8cd41e309a4cd6211}{HitCollection}
+typedef G4\+T\+Hits\+Collection$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit}{Geant4\+Hit} $>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a4865cf9c96edfef8cd41e309a4cd6211}{Hit\+Collection}
 \item 
-typedef \hyperlink{struct_d_d4hep_1_1_simulation_1_1_geant4_hit_1_1_monte_carlo_contrib}{Geant4Hit::Contribution} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a82e16b04c44370489f88b1e6a1ef2ab0}{HitContribution}
+typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_a03a5270c4d1410302fe278ce6a47f268}{Geant4\+Hit\+::\+Contribution} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a82e16b04c44370489f88b1e6a1ef2ab0}{Hit\+Contribution}
 \item 
-typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler}{Geant4StepHandler} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_ad8f31d0680aa437d6eb7242292e50a15}{StepHandler}
+typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler}{Geant4\+Step\+Handler} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_ad8f31d0680aa437d6eb7242292e50a15}{Step\+Handler}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a2630f603ed8098fe28faa6b7c29b585d}{Geant4SensitiveDetector} (const std::string \&name, \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \&lcdd)
-\begin{DoxyCompactList}\small\item\em Constructor. The sensitive detector element is identified by the detector name. \item\end{DoxyCompactList}\item 
-virtual bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_ad66e6523db65dab402beb511e438c2c9}{defineCollection} (const std::string \&coll\_\-name)
-\begin{DoxyCompactList}\small\item\em Initialize the sensitive detector for the usage of a single hit collection. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a15bd6477c7c266c3478c59ac34b2fe31}{$\sim$Geant4SensitiveDetector} ()
-\begin{DoxyCompactList}\small\item\em Standard destructor. \item\end{DoxyCompactList}\item 
-std::string \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a64cea03962fea7ef96ce5daa21652bdf}{name} () const 
-\begin{DoxyCompactList}\small\item\em Standard access to the name. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{class_d_d4hep_1_1_geometry_1_1_hit_collection}{HitCollection} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_ab787fe98fb6da409b9f342b9a20906f1}{createCollection} (const std::string \&coll\_\-name) const 
-\begin{DoxyCompactList}\small\item\em Create single hits collection. \item\end{DoxyCompactList}\item 
-const std::string \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_ad8477ffc5ca65a24cb8270784177762d}{hitCollectionName} (int which) const 
-\begin{DoxyCompactList}\small\item\em Access HitCollection container names. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_hit_collection}{HitCollection} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a29e835271c9efa731bba49c64790281b}{collection} (int id)
-\begin{DoxyCompactList}\small\item\em Retrieve the hits collection associated with this detector by its serial number. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_hit_collection}{HitCollection} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a45d013173dd5a1b159e2bb2bfca12d56}{collectionByID} (int id)
-\begin{DoxyCompactList}\small\item\em Retrieve the hits collection associated with this detector by its collection identifier. \item\end{DoxyCompactList}\item 
-virtual bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a96d4594c8e1af23ef5c572938460670e}{buildHits} (G4Step $\ast$, G4TouchableHistory $\ast$)
-\begin{DoxyCompactList}\small\item\em Method for generating hit(s) using the information of G4Step object. \item\end{DoxyCompactList}\item 
-long long \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_adb27c3e691e051044fbf1bd06cd70cac}{getVolumeID} (G4Step $\ast$step)
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a5f0a68385e61bdf9434712079302319e}{Geant4\+Sensitive\+Detector} (const std\+::string \&\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a55cba2957295dc39988b888d0b5a5127}{name}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{L\+C\+DD} \&lcdd)
+\begin{DoxyCompactList}\small\item\em Constructor. The sensitive detector element is identified by the detector name. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a4664d651826df03d0aba6f25a385b862}{define\+Collection} (const std\+::string \&coll\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Initialize the sensitive detector for the usage of a single hit collection. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a15bd6477c7c266c3478c59ac34b2fe31}{$\sim$\+Geant4\+Sensitive\+Detector} ()
+\begin{DoxyCompactList}\small\item\em Standard destructor. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a55cba2957295dc39988b888d0b5a5127}{name} () const
+\begin{DoxyCompactList}\small\item\em Standard access to the name. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a4865cf9c96edfef8cd41e309a4cd6211}{Hit\+Collection} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a9373b761f736437a3a7157c3afece920}{create\+Collection} (const std\+::string \&coll\+\_\+name) const
+\begin{DoxyCompactList}\small\item\em Create single hits collection. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a5959c9da6bc6498e5a443b8553e6f573}{hit\+Collection\+Name} (int which) const
+\begin{DoxyCompactList}\small\item\em Access Hit\+Collection container names. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a4865cf9c96edfef8cd41e309a4cd6211}{Hit\+Collection} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a29e835271c9efa731bba49c64790281b}{collection} (int id)
+\begin{DoxyCompactList}\small\item\em Retrieve the hits collection associated with this detector by its serial number. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a4865cf9c96edfef8cd41e309a4cd6211}{Hit\+Collection} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a45d013173dd5a1b159e2bb2bfca12d56}{collection\+By\+ID} (int id)
+\begin{DoxyCompactList}\small\item\em Retrieve the hits collection associated with this detector by its collection identifier. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a96d4594c8e1af23ef5c572938460670e}{build\+Hits} (G4\+Step $\ast$, G4\+Touchable\+History $\ast$)
+\begin{DoxyCompactList}\small\item\em Method for generating hit(s) using the information of G4\+Step object. \end{DoxyCompactList}\item 
+long long \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_adb27c3e691e051044fbf1bd06cd70cac}{get\+Volume\+ID} (G4\+Step $\ast$step)
 \item 
-long long \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a02a92ee533ee2067bc629f7a8b123c89}{getCellID} (G4Step $\ast$step)
+long long \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a02a92ee533ee2067bc629f7a8b123c89}{get\+Cell\+ID} (G4\+Step $\ast$step)
 \item 
-virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a7ee158e29937473f04db1cc6c7284923}{Initialize} (G4HCofThisEvent $\ast$HCE)
-\begin{DoxyCompactList}\small\item\em Method invoked at the begining of each event. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a1275a33abdbd4efb70ee1698eda3d2db}{EndOfEvent} (G4HCofThisEvent $\ast$HCE)
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_g4_v_sensitive_detector}{G4VSensitiveDetector} interface: Method invoked at the end of each event. \item\end{DoxyCompactList}\item 
-virtual G4bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_ac889694c4406ea089f3172b73da49134}{ProcessHits} (G4Step $\ast$step, G4TouchableHistory $\ast$history)
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_g4_v_sensitive_detector}{G4VSensitiveDetector} interface: Method for generating hit(s) using the information of G4Step object. \item\end{DoxyCompactList}\item 
-virtual G4bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_aea5cd9b90bf1102dcf9e027f618cabe6}{process} (G4Step $\ast$step, G4TouchableHistory $\ast$history)
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_g4_v_sensitive_detector}{G4VSensitiveDetector} interface: Method for generating hit(s) using the information of G4Step object. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a7ee158e29937473f04db1cc6c7284923}{Initialize} (G4\+H\+Cof\+This\+Event $\ast$H\+CE)
+\begin{DoxyCompactList}\small\item\em Method invoked at the begining of each event. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a1275a33abdbd4efb70ee1698eda3d2db}{End\+Of\+Event} (G4\+H\+Cof\+This\+Event $\ast$H\+CE)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_g4_v_sensitive_detector}{G4\+V\+Sensitive\+Detector} interface\+: Method invoked at the end of each event. \end{DoxyCompactList}\item 
+virtual G4bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_ac889694c4406ea089f3172b73da49134}{Process\+Hits} (G4\+Step $\ast$step, G4\+Touchable\+History $\ast$history)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_g4_v_sensitive_detector}{G4\+V\+Sensitive\+Detector} interface\+: Method for generating hit(s) using the information of G4\+Step object. \end{DoxyCompactList}\item 
+virtual G4bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_aea5cd9b90bf1102dcf9e027f618cabe6}{process} (G4\+Step $\ast$step, G4\+Touchable\+History $\ast$history)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_g4_v_sensitive_detector}{G4\+V\+Sensitive\+Detector} interface\+: Method for generating hit(s) using the information of G4\+Step object. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a594a8e0083028c98326f99ace2f0f8dd}{clear} ()
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_g4_v_sensitive_detector}{G4VSensitiveDetector} interface: Method invoked if the event was aborted. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_g4_v_sensitive_detector}{G4\+V\+Sensitive\+Detector} interface\+: Method invoked if the event was aborted. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_t}{T} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a04d024952896041576da2d022d80cc08}{find} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_hit_collection}{HitCollection} $\ast$c, const \hyperlink{class_d_d4hep_1_1_simulation_1_1_hit_compare}{HitCompare}$<$ \hyperlink{class_t}{T} $>$ \&cmp)
-\begin{DoxyCompactList}\small\item\em Find hits by position in a collection. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_aa5dfd46956ecfddd3815e12be4436430}{dumpStep} (G4Step $\ast$step, G4TouchableHistory $\ast$history)
-\begin{DoxyCompactList}\small\item\em Dump Step information (careful: very verbose). \item\end{DoxyCompactList}\item 
-{\footnotesize template$<$$>$ }\\\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_calorimeter_hit}{Geant4CalorimeterHit} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_aa3245e74ef546a9aec6cb2c34d2adedb}{find} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_hit_collection}{HitCollection} $\ast$c, const \hyperlink{class_d_d4hep_1_1_simulation_1_1_hit_compare}{HitCompare}$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_calorimeter_hit}{Geant4CalorimeterHit} $>$ \&cmp)
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_t}{T} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a6c8e0611bafa6aab392e12ae55d14ad0}{find} (const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a4865cf9c96edfef8cd41e309a4cd6211}{Hit\+Collection} $\ast$c, const \hyperlink{class_d_d4hep_1_1_simulation_1_1_hit_compare}{Hit\+Compare}$<$ \hyperlink{class_t}{T} $>$ \&cmp)
+\begin{DoxyCompactList}\small\item\em Find hits by position in a collection. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_aa5dfd46956ecfddd3815e12be4436430}{dump\+Step} (G4\+Step $\ast$step, G4\+Touchable\+History $\ast$history)
+\begin{DoxyCompactList}\small\item\em Dump Step information (careful\+: very verbose) \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_calorimeter_hit}{Geant4\+Calorimeter\+Hit} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a8908101354409b3b4eb073222fd7bbee}{find} (const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a4865cf9c96edfef8cd41e309a4cd6211}{Hit\+Collection} $\ast$c, const \hyperlink{class_d_d4hep_1_1_simulation_1_1_hit_compare}{Hit\+Compare}$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_calorimeter_hit}{Geant4\+Calorimeter\+Hit} $>$ \&cmp)
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_af2c638cb0b0a50437852cf6fb57ef7f1}{m\_\-lcdd}
-\begin{DoxyCompactList}\small\item\em Reference to the detector description object. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a0483eb9c4a7e8d31c499239867b53ff1}{m\_\-detector}
-\begin{DoxyCompactList}\small\item\em Reference to the detector element describing this sensitive element. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_sensitive_detector}{SensitiveDetector} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a6292e7640bd34206cb682962570a6721}{m\_\-sensitive}
-\begin{DoxyCompactList}\small\item\em Reference to the sensitive detector element. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_readout}{Readout} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a896a6c6cb7ea1a05384a0a36516da34f}{m\_\-readout}
-\begin{DoxyCompactList}\small\item\em Reference to the readout structure. \item\end{DoxyCompactList}\item 
-G4HCofThisEvent $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_abba73e5c3e4dfb26cc46bb5c165cf225}{m\_\-hce}
-\begin{DoxyCompactList}\small\item\em Geant4 event context. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{L\+C\+DD} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_af2c638cb0b0a50437852cf6fb57ef7f1}{m\+\_\+lcdd}
+\begin{DoxyCompactList}\small\item\em Reference to the detector description object. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a0483eb9c4a7e8d31c499239867b53ff1}{m\+\_\+detector}
+\begin{DoxyCompactList}\small\item\em Reference to the detector element describing this sensitive element. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a6375f9a4f776b531e443483ff9fa8c28}{Sensitive\+Detector} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a6292e7640bd34206cb682962570a6721}{m\+\_\+sensitive}
+\begin{DoxyCompactList}\small\item\em Reference to the sensitive detector element. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_readout}{Readout} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a896a6c6cb7ea1a05384a0a36516da34f}{m\+\_\+readout}
+\begin{DoxyCompactList}\small\item\em Reference to the readout structure. \end{DoxyCompactList}\item 
+G4\+H\+Cof\+This\+Event $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_abba73e5c3e4dfb26cc46bb5c165cf225}{m\+\_\+hce}
+\begin{DoxyCompactList}\small\item\em Geant4 event context. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Deprecated: Example \hyperlink{class_g4_v_sensitive_detector}{G4VSensitiveDetector} implementation. \begin{Desc}
-\item[\hyperlink{deprecated__deprecated000006}{Deprecated}]Deprecated class. Not supported by the DDG4 kernel.\end{Desc}
+Deprecated\+: Example \hyperlink{class_g4_v_sensitive_detector}{G4\+V\+Sensitive\+Detector} implementation. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000006}{Deprecated}]Deprecated class. Not supported by the D\+D\+G4 kernel.\end{DoxyRefDesc}
+
+
 \begin{DoxyAuthor}{Author}
-M.Frank 
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
-Definition at line 47 of file Geant4SensitiveDetector.h.
+Definition at line 47 of file Geant4\+Sensitive\+Detector.\+h.
+
+
 
 \subsection{Member Typedef Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a4865cf9c96edfef8cd41e309a4cd6211}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!HitCollection@{HitCollection}}
-\index{HitCollection@{HitCollection}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{HitCollection}]{\setlength{\rightskip}{0pt plus 5cm}typedef G4THitsCollection$<${\bf Geant4Hit}$>$ {\bf DD4hep::Simulation::Geant4SensitiveDetector::HitCollection}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a4865cf9c96edfef8cd41e309a4cd6211}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a4865cf9c96edfef8cd41e309a4cd6211}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a4865cf9c96edfef8cd41e309a4cd6211} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!Hit\+Collection@{Hit\+Collection}}
+\index{Hit\+Collection@{Hit\+Collection}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{Hit\+Collection}{HitCollection}}
+{\footnotesize\ttfamily typedef G4\+T\+Hits\+Collection$<$\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit}{Geant4\+Hit}$>$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a4865cf9c96edfef8cd41e309a4cd6211}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::\+Hit\+Collection}}
 
 
-Definition at line 50 of file Geant4SensitiveDetector.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a82e16b04c44370489f88b1e6a1ef2ab0}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!HitContribution@{HitContribution}}
-\index{HitContribution@{HitContribution}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{HitContribution}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geant4Hit::Contribution} {\bf DD4hep::Simulation::Geant4SensitiveDetector::HitContribution}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a82e16b04c44370489f88b1e6a1ef2ab0}
+
+Definition at line 50 of file Geant4\+Sensitive\+Detector.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a82e16b04c44370489f88b1e6a1ef2ab0}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a82e16b04c44370489f88b1e6a1ef2ab0} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!Hit\+Contribution@{Hit\+Contribution}}
+\index{Hit\+Contribution@{Hit\+Contribution}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{Hit\+Contribution}{HitContribution}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_hit_a03a5270c4d1410302fe278ce6a47f268}{Geant4\+Hit\+::\+Contribution} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a82e16b04c44370489f88b1e6a1ef2ab0}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::\+Hit\+Contribution}}
 
 
-Definition at line 51 of file Geant4SensitiveDetector.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a6375f9a4f776b531e443483ff9fa8c28}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!SensitiveDetector@{SensitiveDetector}}
-\index{SensitiveDetector@{SensitiveDetector}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{SensitiveDetector}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geometry::SensitiveDetector} {\bf DD4hep::Simulation::Geant4SensitiveDetector::SensitiveDetector}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a6375f9a4f776b531e443483ff9fa8c28}
+
+Definition at line 51 of file Geant4\+Sensitive\+Detector.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a6375f9a4f776b531e443483ff9fa8c28}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a6375f9a4f776b531e443483ff9fa8c28} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!Sensitive\+Detector@{Sensitive\+Detector}}
+\index{Sensitive\+Detector@{Sensitive\+Detector}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{Sensitive\+Detector}{SensitiveDetector}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_sensitive_detector}{Geometry\+::\+Sensitive\+Detector} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a6375f9a4f776b531e443483ff9fa8c28}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::\+Sensitive\+Detector}}
 
 
-Definition at line 49 of file Geant4SensitiveDetector.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_ad8f31d0680aa437d6eb7242292e50a15}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!StepHandler@{StepHandler}}
-\index{StepHandler@{StepHandler}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{StepHandler}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Geant4StepHandler} {\bf DD4hep::Simulation::Geant4SensitiveDetector::StepHandler}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_ad8f31d0680aa437d6eb7242292e50a15}
+
+Definition at line 49 of file Geant4\+Sensitive\+Detector.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_ad8f31d0680aa437d6eb7242292e50a15}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_ad8f31d0680aa437d6eb7242292e50a15} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!Step\+Handler@{Step\+Handler}}
+\index{Step\+Handler@{Step\+Handler}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{Step\+Handler}{StepHandler}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler}{Geant4\+Step\+Handler} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_ad8f31d0680aa437d6eb7242292e50a15}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::\+Step\+Handler}}
 
 
-Definition at line 52 of file Geant4SensitiveDetector.h.
+
+Definition at line 52 of file Geant4\+Sensitive\+Detector.\+h.
+
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a2630f603ed8098fe28faa6b7c29b585d}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!Geant4SensitiveDetector@{Geant4SensitiveDetector}}
-\index{Geant4SensitiveDetector@{Geant4SensitiveDetector}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{Geant4SensitiveDetector}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4SensitiveDetector::Geant4SensitiveDetector (const std::string \& {\em name}, \/  {\bf LCDD} \& {\em lcdd})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a2630f603ed8098fe28faa6b7c29b585d}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a5f0a68385e61bdf9434712079302319e}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a5f0a68385e61bdf9434712079302319e} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!Geant4\+Sensitive\+Detector@{Geant4\+Sensitive\+Detector}}
+\index{Geant4\+Sensitive\+Detector@{Geant4\+Sensitive\+Detector}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{Geant4\+Sensitive\+Detector()}{Geant4SensitiveDetector()}}
+{\footnotesize\ttfamily Geant4\+Sensitive\+Detector\+::\+Geant4\+Sensitive\+Detector (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{L\+C\+DD} \&}]{lcdd }\end{DoxyParamCaption})}
 
 
-Constructor. The sensitive detector element is identified by the detector name. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a15bd6477c7c266c3478c59ac34b2fe31}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!$\sim$Geant4SensitiveDetector@{$\sim$Geant4SensitiveDetector}}
-\index{$\sim$Geant4SensitiveDetector@{$\sim$Geant4SensitiveDetector}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{$\sim$Geant4SensitiveDetector}]{\setlength{\rightskip}{0pt plus 5cm}Geant4SensitiveDetector::$\sim$Geant4SensitiveDetector ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a15bd6477c7c266c3478c59ac34b2fe31}
+
+Constructor. The sensitive detector element is identified by the detector name. 
+
+Constructor. The detector element is identified by the name. 
+
+Definition at line 41 of file Geant4\+Sensitive\+Detector.\+cpp.
+
+
+
+References D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+::detector(), m\+\_\+detector, m\+\_\+readout, m\+\_\+sensitive, D\+D4hep\+::\+Geometry\+::\+Sensitive\+Detector\+::readout(), and D\+D4hep\+::\+Geometry\+::\+L\+C\+D\+D\+::sensitive\+Detector().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a15bd6477c7c266c3478c59ac34b2fe31}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a15bd6477c7c266c3478c59ac34b2fe31} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!````~Geant4\+Sensitive\+Detector@{$\sim$\+Geant4\+Sensitive\+Detector}}
+\index{````~Geant4\+Sensitive\+Detector@{$\sim$\+Geant4\+Sensitive\+Detector}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{$\sim$\+Geant4\+Sensitive\+Detector()}{~Geant4SensitiveDetector()}}
+{\footnotesize\ttfamily Geant4\+Sensitive\+Detector\+::$\sim$\+Geant4\+Sensitive\+Detector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Standard destructor. 
 
-Definition at line 49 of file Geant4SensitiveDetector.cpp.
+
+
+Definition at line 49 of file Geant4\+Sensitive\+Detector.\+cpp.
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a96d4594c8e1af23ef5c572938460670e}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!buildHits@{buildHits}}
-\index{buildHits@{buildHits}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{buildHits}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool DD4hep::Simulation::Geant4SensitiveDetector::buildHits (G4Step $\ast$, \/  G4TouchableHistory $\ast$)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a96d4594c8e1af23ef5c572938460670e}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a96d4594c8e1af23ef5c572938460670e}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a96d4594c8e1af23ef5c572938460670e} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!build\+Hits@{build\+Hits}}
+\index{build\+Hits@{build\+Hits}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{build\+Hits()}{buildHits()}}
+{\footnotesize\ttfamily virtual bool D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::build\+Hits (\begin{DoxyParamCaption}\item[{G4\+Step $\ast$}]{,  }\item[{G4\+Touchable\+History $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
-Method for generating hit(s) using the information of G4Step object. 
 
-Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generic_s_d_a72d6c9cb683b9a0bd58fdbd17dc94be6}{DD4hep::Simulation::Geant4GenericSD$<$ T $>$}.
-
-Definition at line 101 of file Geant4SensitiveDetector.h.
-
-Referenced by process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a594a8e0083028c98326f99ace2f0f8dd}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!clear@{clear}}
-\index{clear@{clear}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SensitiveDetector::clear ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a594a8e0083028c98326f99ace2f0f8dd}
+Method for generating hit(s) using the information of G4\+Step object. 
 
 
-\hyperlink{class_g4_v_sensitive_detector}{G4VSensitiveDetector} interface: Method invoked if the event was aborted. Method is invoked if the event abortion is occured.
 
-Hits collections created but not beibg set to G4HCofThisEvent at the event should be deleted. Collection(s) which have already set to G4HCofThisEvent will be deleted automatically. 
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generic_s_d_a72d6c9cb683b9a0bd58fdbd17dc94be6}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generic\+S\+D$<$ T $>$}.
 
-Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generic_s_d_acf8f9146d5683a8131fc5d8ee26d7f01}{DD4hep::Simulation::Geant4GenericSD$<$ T $>$}.
 
-Definition at line 148 of file Geant4SensitiveDetector.cpp.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a29e835271c9efa731bba49c64790281b}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!collection@{collection}}
-\index{collection@{collection}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{collection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4SensitiveDetector::HitCollection} $\ast$ Geant4SensitiveDetector::collection (int {\em id})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a29e835271c9efa731bba49c64790281b}
+
+Definition at line 101 of file Geant4\+Sensitive\+Detector.\+h.
+
+
+
+References clear(), End\+Of\+Event(), get\+Cell\+I\+D(), get\+Volume\+I\+D(), Initialize(), process(), and Process\+Hits().
+
+
+
+Referenced by process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a594a8e0083028c98326f99ace2f0f8dd}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a594a8e0083028c98326f99ace2f0f8dd} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!clear@{clear}}
+\index{clear@{clear}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Geant4\+Sensitive\+Detector\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_g4_v_sensitive_detector}{G4\+V\+Sensitive\+Detector} interface\+: Method invoked if the event was aborted. 
+
+Method is invoked if the event abortion is occured.
+
+Hits collections created but not beibg set to G4\+H\+Cof\+This\+Event at the event should be deleted. Collection(s) which have already set to G4\+H\+Cof\+This\+Event will be deleted automatically. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generic_s_d_acf8f9146d5683a8131fc5d8ee26d7f01}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generic\+S\+D$<$ T $>$}.
+
+
+
+Definition at line 148 of file Geant4\+Sensitive\+Detector.\+cpp.
+
+
+
+Referenced by build\+Hits(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Generic\+S\+D$<$ T $>$\+::clear().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a29e835271c9efa731bba49c64790281b}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a29e835271c9efa731bba49c64790281b} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!collection@{collection}}
+\index{collection@{collection}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{collection()}{collection()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a4865cf9c96edfef8cd41e309a4cd6211}{Geant4\+Sensitive\+Detector\+::\+Hit\+Collection} $\ast$ Geant4\+Sensitive\+Detector\+::collection (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
 
 
 Retrieve the hits collection associated with this detector by its serial number. 
 
-Definition at line 136 of file Geant4SensitiveDetector.cpp.
 
-References m\_\-hce, and name().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a45d013173dd5a1b159e2bb2bfca12d56}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!collectionByID@{collectionByID}}
-\index{collectionByID@{collectionByID}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{collectionByID}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4SensitiveDetector::HitCollection} $\ast$ Geant4SensitiveDetector::collectionByID (int {\em id})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a45d013173dd5a1b159e2bb2bfca12d56}
+
+Definition at line 136 of file Geant4\+Sensitive\+Detector.\+cpp.
+
+
+
+References m\+\_\+hce, and name().
+
+
+
+Referenced by name().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a45d013173dd5a1b159e2bb2bfca12d56}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a45d013173dd5a1b159e2bb2bfca12d56} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!collection\+By\+ID@{collection\+By\+ID}}
+\index{collection\+By\+ID@{collection\+By\+ID}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{collection\+By\+I\+D()}{collectionByID()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a4865cf9c96edfef8cd41e309a4cd6211}{Geant4\+Sensitive\+Detector\+::\+Hit\+Collection} $\ast$ Geant4\+Sensitive\+Detector\+::collection\+By\+ID (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
 
 
 Retrieve the hits collection associated with this detector by its collection identifier. 
 
-Definition at line 128 of file Geant4SensitiveDetector.cpp.
 
-References m\_\-hce, and name().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_ab787fe98fb6da409b9f342b9a20906f1}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!createCollection@{createCollection}}
-\index{createCollection@{createCollection}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{createCollection}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf HitCollection}$\ast$ DD4hep::Simulation::Geant4SensitiveDetector::createCollection (const std::string \& {\em coll\_\-name}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_ab787fe98fb6da409b9f342b9a20906f1}
+
+Definition at line 128 of file Geant4\+Sensitive\+Detector.\+cpp.
+
+
+
+References m\+\_\+hce, and name().
+
+
+
+Referenced by name().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a9373b761f736437a3a7157c3afece920}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a9373b761f736437a3a7157c3afece920} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!create\+Collection@{create\+Collection}}
+\index{create\+Collection@{create\+Collection}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{create\+Collection()}{createCollection()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a4865cf9c96edfef8cd41e309a4cd6211}{Geant4\+Sensitive\+Detector\+::\+Hit\+Collection} $\ast$ Geant4\+Sensitive\+Detector\+::create\+Collection (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{coll\+\_\+name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Create single hits collection. 
 
-Referenced by Initialize().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_ad66e6523db65dab402beb511e438c2c9}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!defineCollection@{defineCollection}}
-\index{defineCollection@{defineCollection}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{defineCollection}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool DD4hep::Simulation::Geant4SensitiveDetector::defineCollection (const std::string \& {\em coll\_\-name})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_ad66e6523db65dab402beb511e438c2c9}
+
+
+Definition at line 71 of file Geant4\+Sensitive\+Detector.\+cpp.
+
+
+
+References D\+D4hep\+::\+Utilities\+::\+Get\+Name().
+
+
+
+Referenced by Initialize(), and name().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a4664d651826df03d0aba6f25a385b862}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a4664d651826df03d0aba6f25a385b862} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!define\+Collection@{define\+Collection}}
+\index{define\+Collection@{define\+Collection}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{define\+Collection()}{defineCollection()}}
+{\footnotesize\ttfamily bool Geant4\+Sensitive\+Detector\+::define\+Collection (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{coll\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Initialize the sensitive detector for the usage of a single hit collection. 
 
-Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generic_s_d_a3c70c7c1f1be8bd0e6364327e28228e4}{DD4hep::Simulation::Geant4GenericSD$<$ T $>$}.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_aa5dfd46956ecfddd3815e12be4436430}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!dumpStep@{dumpStep}}
-\index{dumpStep@{dumpStep}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{dumpStep}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SensitiveDetector::dumpStep (G4Step $\ast$ {\em step}, \/  G4TouchableHistory $\ast$ {\em history})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_aa5dfd46956ecfddd3815e12be4436430}
 
 
-Dump Step information (careful: very verbose). 
-
-Definition at line 152 of file Geant4SensitiveDetector.cpp.
-
-References DD4hep::Simulation::Geant4Mapping::data(), DD4hep::Simulation::Geant4GeometryInfo::g4Placements, DD4hep::INFO, DD4hep::Simulation::Geant4Mapping::instance(), DD4hep::Simulation::Geant4StepHandler::post, DD4hep::Simulation::Geant4StepHandler::postMom(), DD4hep::Simulation::Geant4StepHandler::postPos(), DD4hep::Simulation::Geant4StepHandler::postStepStatus(), DD4hep::Simulation::Geant4StepHandler::postVolume(), DD4hep::Simulation::Geant4StepHandler::prePos(), DD4hep::Simulation::Geant4StepHandler::preStepStatus(), DD4hep::Simulation::Geant4StepHandler::preVolume(), DD4hep::printout(), DD4hep::Simulation::Geant4StepHandler::track, and DD4hep::Simulation::Geant4StepHandler::volume().
-
-Referenced by process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a1275a33abdbd4efb70ee1698eda3d2db}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!EndOfEvent@{EndOfEvent}}
-\index{EndOfEvent@{EndOfEvent}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{EndOfEvent}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SensitiveDetector::EndOfEvent (G4HCofThisEvent $\ast$ {\em HCE})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a1275a33abdbd4efb70ee1698eda3d2db}
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generic_s_d_a3c70c7c1f1be8bd0e6364327e28228e4}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generic\+S\+D$<$ T $>$}.
 
 
-\hyperlink{class_g4_v_sensitive_detector}{G4VSensitiveDetector} interface: Method invoked at the end of each event. Method invoked at the end of each event. 
 
-Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generic_s_d_a07009f3334d1f7125c128cc59fc20e6e}{DD4hep::Simulation::Geant4GenericSD$<$ T $>$}.
-
-Definition at line 99 of file Geant4SensitiveDetector.cpp.
-
-References m\_\-hce.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_aa3245e74ef546a9aec6cb2c34d2adedb}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!find@{find}}
-\index{find@{find}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ {\bf Geant4CalorimeterHit}$\ast$ DD4hep::Simulation::Geant4SensitiveDetector::find (const {\bf HitCollection} $\ast$ {\em c}, \/  const {\bf HitCompare}$<$ {\bf Geant4CalorimeterHit} $>$ \& {\em cmp})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_aa3245e74ef546a9aec6cb2c34d2adedb}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a04d024952896041576da2d022d80cc08}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!find@{find}}
-\index{find@{find}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf T}$\ast$ DD4hep::Simulation::Geant4SensitiveDetector::find (const {\bf HitCollection} $\ast$ {\em c}, \/  const {\bf HitCompare}$<$ {\bf T} $>$ \& {\em cmp})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a04d024952896041576da2d022d80cc08}
+Definition at line 53 of file Geant4\+Sensitive\+Detector.\+cpp.
 
 
-Find hits by position in a collection. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a02a92ee533ee2067bc629f7a8b123c89}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!getCellID@{getCellID}}
-\index{getCellID@{getCellID}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{getCellID}]{\setlength{\rightskip}{0pt plus 5cm}long long Geant4SensitiveDetector::getCellID (G4Step $\ast$ {\em step})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a02a92ee533ee2067bc629f7a8b123c89}
-Returns the volumeID of the sensitive volume corresponding to the step -\/ combining the VolIDS of the complete geometry path (Geant4TouchableHistory) 
 
-Definition at line 220 of file Geant4SensitiveDetector.cpp.
-
-References DD4hep::Geometry::Segmentation::cellID(), DD4hep::Simulation::Geant4Mapping::instance(), DD4hep::Handle$<$ T $>$::isValid(), m\_\-readout, MM\_\-2\_\-CM, DD4hep::Simulation::Geant4StepHandler::postPosG4(), DD4hep::Simulation::Geant4StepHandler::prePosG4(), DD4hep::Simulation::Geant4StepHandler::preTouchable(), DD4hep::Geometry::Readout::segmentation(), DD4hep::Simulation::Geant4VolumeManager::volumeID(), and DD4hep::Simulation::Geant4Mapping::volumeManager().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_adb27c3e691e051044fbf1bd06cd70cac}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!getVolumeID@{getVolumeID}}
-\index{getVolumeID@{getVolumeID}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{getVolumeID}]{\setlength{\rightskip}{0pt plus 5cm}long long Geant4SensitiveDetector::getVolumeID (G4Step $\ast$ {\em step})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_adb27c3e691e051044fbf1bd06cd70cac}
-Returns the volumeID of the sensitive volume corresponding to the step -\/ combining the VolIDS of the complete geometry path (Geant4TouchableHistory) 
-
-Definition at line 187 of file Geant4SensitiveDetector.cpp.
-
-References DD4hep::Simulation::Geant4VolumeManager::Insensitive, DD4hep::Simulation::Geant4Mapping::instance(), DD4hep::Simulation::Geant4VolumeManager::InvalidPath, DD4hep::Simulation::Geant4VolumeManager::NonExisting, DD4hep::Simulation::Geant4StepHandler::pre, DD4hep::Simulation::Geant4StepHandler::preTouchable(), DD4hep::Simulation::Geant4StepHandler::volume(), DD4hep::Simulation::Geant4VolumeManager::volumeDescriptor(), DD4hep::Simulation::Geant4VolumeManager::volumeID(), and DD4hep::Simulation::Geant4Mapping::volumeManager().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_ad8477ffc5ca65a24cb8270784177762d}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!hitCollectionName@{hitCollectionName}}
-\index{hitCollectionName@{hitCollectionName}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{hitCollectionName}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf string} \& Geant4SensitiveDetector::hitCollectionName (int {\em which}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_ad8477ffc5ca65a24cb8270784177762d}
+References m\+\_\+sensitive, name(), and D\+D4hep\+::\+Geometry\+::\+Sensitive\+Detector\+::type().
 
 
-Access HitCollection container names. 
 
-Definition at line 62 of file Geant4SensitiveDetector.cpp.
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Generic\+S\+D$<$ T $>$\+::define\+Collection().
 
-References name().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a7ee158e29937473f04db1cc6c7284923}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!Initialize@{Initialize}}
-\index{Initialize@{Initialize}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4SensitiveDetector::Initialize (G4HCofThisEvent $\ast$ {\em HCE})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a7ee158e29937473f04db1cc6c7284923}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_aa5dfd46956ecfddd3815e12be4436430}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_aa5dfd46956ecfddd3815e12be4436430} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!dump\+Step@{dump\+Step}}
+\index{dump\+Step@{dump\+Step}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{dump\+Step()}{dumpStep()}}
+{\footnotesize\ttfamily void Geant4\+Sensitive\+Detector\+::dump\+Step (\begin{DoxyParamCaption}\item[{G4\+Step $\ast$}]{step,  }\item[{G4\+Touchable\+History $\ast$}]{history }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
-Method invoked at the begining of each event. \hyperlink{class_g4_v_sensitive_detector}{G4VSensitiveDetector} interface: Method invoked at the begining of each event. The hits collection(s) created by this sensitive detector must be set to the G4HCofThisEvent object at one of these two methods. 
 
-Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generic_s_d_a1e65440bc948eb7ba84792fcfdd002ed}{DD4hep::Simulation::Geant4GenericSD$<$ T $>$}.
+Dump Step information (careful\+: very verbose) 
 
-Definition at line 89 of file Geant4SensitiveDetector.cpp.
 
-References createCollection(), and m\_\-hce.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a64cea03962fea7ef96ce5daa21652bdf}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!name@{name}}
-\index{name@{name}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std::string DD4hep::Simulation::Geant4SensitiveDetector::name () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a64cea03962fea7ef96ce5daa21652bdf}
+
+Definition at line 152 of file Geant4\+Sensitive\+Detector.\+cpp.
+
+
+
+References D\+D4hep\+::\+Simulation\+::\+Geant4\+Mapping\+::data(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Geometry\+Info\+::g4\+Placements, D\+D4hep\+::\+I\+N\+FO, D\+D4hep\+::\+Simulation\+::\+Geant4\+Mapping\+::instance(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::post, D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::post\+Mom(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::post\+Pos(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::post\+Step\+Status(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::post\+Volume(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::pre\+Pos(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::pre\+Step\+Status(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::pre\+Volume(), D\+D4hep\+::printout(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::track, and D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::volume().
+
+
+
+Referenced by process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a1275a33abdbd4efb70ee1698eda3d2db}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a1275a33abdbd4efb70ee1698eda3d2db} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!End\+Of\+Event@{End\+Of\+Event}}
+\index{End\+Of\+Event@{End\+Of\+Event}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{End\+Of\+Event()}{EndOfEvent()}}
+{\footnotesize\ttfamily void Geant4\+Sensitive\+Detector\+::\+End\+Of\+Event (\begin{DoxyParamCaption}\item[{G4\+H\+Cof\+This\+Event $\ast$}]{H\+CE }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_g4_v_sensitive_detector}{G4\+V\+Sensitive\+Detector} interface\+: Method invoked at the end of each event. 
+
+Method invoked at the end of each event. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generic_s_d_a07009f3334d1f7125c128cc59fc20e6e}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generic\+S\+D$<$ T $>$}.
+
+
+
+Definition at line 99 of file Geant4\+Sensitive\+Detector.\+cpp.
+
+
+
+References m\+\_\+hce.
+
+
+
+Referenced by build\+Hits(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Generic\+S\+D$<$ T $>$\+::\+End\+Of\+Event().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a6c8e0611bafa6aab392e12ae55d14ad0}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a6c8e0611bafa6aab392e12ae55d14ad0} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!find@{find}}
+\index{find@{find}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{find()}{find()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{class_t}{T}$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::find (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a4865cf9c96edfef8cd41e309a4cd6211}{Hit\+Collection} $\ast$}]{c,  }\item[{const \hyperlink{class_d_d4hep_1_1_simulation_1_1_hit_compare}{Hit\+Compare}$<$ \hyperlink{class_t}{T} $>$ \&}]{cmp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Find hits by position in a collection. 
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a8908101354409b3b4eb073222fd7bbee}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a8908101354409b3b4eb073222fd7bbee} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!find@{find}}
+\index{find@{find}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{find()}{find()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_calorimeter_hit}{Geant4\+Calorimeter\+Hit}$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::find (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a4865cf9c96edfef8cd41e309a4cd6211}{Hit\+Collection} $\ast$}]{c,  }\item[{const \hyperlink{class_d_d4hep_1_1_simulation_1_1_hit_compare}{Hit\+Compare}$<$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_calorimeter_hit}{Geant4\+Calorimeter\+Hit} $>$ \&}]{cmp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 77 of file Geant4\+Sensitive\+Detector.\+cpp.
+
+
+
+References v.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a02a92ee533ee2067bc629f7a8b123c89}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a02a92ee533ee2067bc629f7a8b123c89} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!get\+Cell\+ID@{get\+Cell\+ID}}
+\index{get\+Cell\+ID@{get\+Cell\+ID}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{get\+Cell\+I\+D()}{getCellID()}}
+{\footnotesize\ttfamily long long Geant4\+Sensitive\+Detector\+::get\+Cell\+ID (\begin{DoxyParamCaption}\item[{G4\+Step $\ast$}]{step }\end{DoxyParamCaption})}
+
+Returns the volume\+ID of the sensitive volume corresponding to the step -\/ combining the Vol\+I\+DS of the complete geometry path (Geant4\+Touchable\+History) 
+
+Definition at line 220 of file Geant4\+Sensitive\+Detector.\+cpp.
+
+
+
+References D\+D4hep\+::\+Geometry\+::\+Segmentation\+::cell\+I\+D(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Mapping\+::instance(), D\+D4hep\+::\+Handle$<$ T $>$\+::is\+Valid(), m\+\_\+readout, M\+M\+\_\+2\+\_\+\+CM, D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::post\+Pos\+G4(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::pre\+Pos\+G4(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::pre\+Touchable(), D\+D4hep\+::\+Geometry\+::\+Readout\+::segmentation(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Volume\+Manager\+::volume\+I\+D(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Mapping\+::volume\+Manager().
+
+
+
+Referenced by build\+Hits().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_adb27c3e691e051044fbf1bd06cd70cac}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_adb27c3e691e051044fbf1bd06cd70cac} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!get\+Volume\+ID@{get\+Volume\+ID}}
+\index{get\+Volume\+ID@{get\+Volume\+ID}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{get\+Volume\+I\+D()}{getVolumeID()}}
+{\footnotesize\ttfamily long long Geant4\+Sensitive\+Detector\+::get\+Volume\+ID (\begin{DoxyParamCaption}\item[{G4\+Step $\ast$}]{step }\end{DoxyParamCaption})}
+
+Returns the volume\+ID of the sensitive volume corresponding to the step -\/ combining the Vol\+I\+DS of the complete geometry path (Geant4\+Touchable\+History) 
+
+Definition at line 187 of file Geant4\+Sensitive\+Detector.\+cpp.
+
+
+
+References D\+D4hep\+::\+Simulation\+::\+Geant4\+Volume\+Manager\+::\+Insensitive, D\+D4hep\+::\+Simulation\+::\+Geant4\+Mapping\+::instance(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Volume\+Manager\+::\+Invalid\+Path, D\+D4hep\+::\+Simulation\+::\+Geant4\+Volume\+Manager\+::\+Non\+Existing, D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::pre, D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::pre\+Touchable(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::volume(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Volume\+Manager\+::volume\+Descriptor(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Volume\+Manager\+::volume\+I\+D(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Mapping\+::volume\+Manager().
+
+
+
+Referenced by build\+Hits().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a5959c9da6bc6498e5a443b8553e6f573}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a5959c9da6bc6498e5a443b8553e6f573} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!hit\+Collection\+Name@{hit\+Collection\+Name}}
+\index{hit\+Collection\+Name@{hit\+Collection\+Name}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{hit\+Collection\+Name()}{hitCollectionName()}}
+{\footnotesize\ttfamily const string \& Geant4\+Sensitive\+Detector\+::hit\+Collection\+Name (\begin{DoxyParamCaption}\item[{int}]{which }\end{DoxyParamCaption}) const}
+
+
+
+Access Hit\+Collection container names. 
+
+
+
+Definition at line 62 of file Geant4\+Sensitive\+Detector.\+cpp.
+
+
+
+References name().
+
+
+
+Referenced by name().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a7ee158e29937473f04db1cc6c7284923}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a7ee158e29937473f04db1cc6c7284923} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void Geant4\+Sensitive\+Detector\+::\+Initialize (\begin{DoxyParamCaption}\item[{G4\+H\+Cof\+This\+Event $\ast$}]{H\+CE }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method invoked at the begining of each event. 
+
+\hyperlink{class_g4_v_sensitive_detector}{G4\+V\+Sensitive\+Detector} interface\+: Method invoked at the begining of each event. The hits collection(s) created by this sensitive detector must be set to the G4\+H\+Cof\+This\+Event object at one of these two methods. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generic_s_d_a1e65440bc948eb7ba84792fcfdd002ed}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generic\+S\+D$<$ T $>$}.
+
+
+
+Definition at line 89 of file Geant4\+Sensitive\+Detector.\+cpp.
+
+
+
+References create\+Collection(), and m\+\_\+hce.
+
+
+
+Referenced by build\+Hits(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Generic\+S\+D$<$ T $>$\+::\+Initialize().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a55cba2957295dc39988b888d0b5a5127}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a55cba2957295dc39988b888d0b5a5127} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!name@{name}}
+\index{name@{name}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Standard access to the name. 
 
-Definition at line 86 of file Geant4SensitiveDetector.h.
-
-References DD4hep::Utilities::GetName().
-
-Referenced by collection(), collectionByID(), and hitCollectionName().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_aea5cd9b90bf1102dcf9e027f618cabe6}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!process@{process}}
-\index{process@{process}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{process}]{\setlength{\rightskip}{0pt plus 5cm}G4bool Geant4SensitiveDetector::process (G4Step $\ast$ {\em step}, \/  G4TouchableHistory $\ast$ {\em history})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_aea5cd9b90bf1102dcf9e027f618cabe6}
 
 
-\hyperlink{class_g4_v_sensitive_detector}{G4VSensitiveDetector} interface: Method for generating hit(s) using the information of G4Step object. Method for generating hit(s) using the information of G4Step object. 
-
-Definition at line 110 of file Geant4SensitiveDetector.cpp.
-
-References buildHits(), dumpStep(), DD4hep::Geometry::SensitiveDetector::energyCutoff(), DD4hep::Simulation::Geant4Hit::isGeantino(), and m\_\-sensitive.
-
-Referenced by ProcessHits().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_ac889694c4406ea089f3172b73da49134}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!ProcessHits@{ProcessHits}}
-\index{ProcessHits@{ProcessHits}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{ProcessHits}]{\setlength{\rightskip}{0pt plus 5cm}G4bool Geant4SensitiveDetector::ProcessHits (G4Step $\ast$ {\em step}, \/  G4TouchableHistory $\ast$ {\em history})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_ac889694c4406ea089f3172b73da49134}
+Definition at line 86 of file Geant4\+Sensitive\+Detector.\+h.
 
 
-\hyperlink{class_g4_v_sensitive_detector}{G4VSensitiveDetector} interface: Method for generating hit(s) using the information of G4Step object. Method for generating hit(s) using the information of G4Step object. 
 
-Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generic_s_d_aecea47598186c697197f51c683f13bbb}{DD4hep::Simulation::Geant4GenericSD$<$ T $>$}.
+References collection(), collection\+By\+I\+D(), create\+Collection(), D\+D4hep\+::\+Utilities\+::\+Get\+Name(), and hit\+Collection\+Name().
 
-Definition at line 105 of file Geant4SensitiveDetector.cpp.
+
+
+Referenced by collection(), collection\+By\+I\+D(), define\+Collection(), and hit\+Collection\+Name().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_aea5cd9b90bf1102dcf9e027f618cabe6}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_aea5cd9b90bf1102dcf9e027f618cabe6} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!process@{process}}
+\index{process@{process}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily G4bool Geant4\+Sensitive\+Detector\+::process (\begin{DoxyParamCaption}\item[{G4\+Step $\ast$}]{step,  }\item[{G4\+Touchable\+History $\ast$}]{history }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_g4_v_sensitive_detector}{G4\+V\+Sensitive\+Detector} interface\+: Method for generating hit(s) using the information of G4\+Step object. 
+
+Method for generating hit(s) using the information of G4\+Step object. 
+
+Definition at line 110 of file Geant4\+Sensitive\+Detector.\+cpp.
+
+
+
+References build\+Hits(), dump\+Step(), D\+D4hep\+::\+Geometry\+::\+Sensitive\+Detector\+::energy\+Cutoff(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Hit\+::is\+Geantino(), and m\+\_\+sensitive.
+
+
+
+Referenced by build\+Hits(), and Process\+Hits().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_ac889694c4406ea089f3172b73da49134}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_ac889694c4406ea089f3172b73da49134} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!Process\+Hits@{Process\+Hits}}
+\index{Process\+Hits@{Process\+Hits}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{Process\+Hits()}{ProcessHits()}}
+{\footnotesize\ttfamily G4bool Geant4\+Sensitive\+Detector\+::\+Process\+Hits (\begin{DoxyParamCaption}\item[{G4\+Step $\ast$}]{step,  }\item[{G4\+Touchable\+History $\ast$}]{history }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_g4_v_sensitive_detector}{G4\+V\+Sensitive\+Detector} interface\+: Method for generating hit(s) using the information of G4\+Step object. 
+
+Method for generating hit(s) using the information of G4\+Step object. 
+
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generic_s_d_aecea47598186c697197f51c683f13bbb}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generic\+S\+D$<$ T $>$}.
+
+
+
+Definition at line 105 of file Geant4\+Sensitive\+Detector.\+cpp.
+
+
 
 References process().
 
+
+
+Referenced by build\+Hits(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Generic\+S\+D$<$ T $>$\+::\+Process\+Hits().
+
+
+
 \subsection{Member Data Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a0483eb9c4a7e8d31c499239867b53ff1}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!m\_\-detector@{m\_\-detector}}
-\index{m\_\-detector@{m\_\-detector}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{m\_\-detector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} {\bf DD4hep::Simulation::Geant4SensitiveDetector::m\_\-detector}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a0483eb9c4a7e8d31c499239867b53ff1}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a0483eb9c4a7e8d31c499239867b53ff1}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a0483eb9c4a7e8d31c499239867b53ff1} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!m\+\_\+detector@{m\+\_\+detector}}
+\index{m\+\_\+detector@{m\+\_\+detector}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+detector}{m\_detector}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::m\+\_\+detector\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Reference to the detector element describing this sensitive element. 
 
-Definition at line 59 of file Geant4SensitiveDetector.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_abba73e5c3e4dfb26cc46bb5c165cf225}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!m\_\-hce@{m\_\-hce}}
-\index{m\_\-hce@{m\_\-hce}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{m\_\-hce}]{\setlength{\rightskip}{0pt plus 5cm}G4HCofThisEvent$\ast$ {\bf DD4hep::Simulation::Geant4SensitiveDetector::m\_\-hce}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_abba73e5c3e4dfb26cc46bb5c165cf225}
+
+
+Definition at line 59 of file Geant4\+Sensitive\+Detector.\+h.
+
+
+
+Referenced by Geant4\+Sensitive\+Detector().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_abba73e5c3e4dfb26cc46bb5c165cf225}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_abba73e5c3e4dfb26cc46bb5c165cf225} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!m\+\_\+hce@{m\+\_\+hce}}
+\index{m\+\_\+hce@{m\+\_\+hce}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+hce}{m\_hce}}
+{\footnotesize\ttfamily G4\+H\+Cof\+This\+Event$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::m\+\_\+hce\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Geant4 event context. 
 
-Definition at line 66 of file Geant4SensitiveDetector.h.
 
-Referenced by collection(), collectionByID(), EndOfEvent(), and Initialize().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_af2c638cb0b0a50437852cf6fb57ef7f1}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!m\_\-lcdd@{m\_\-lcdd}}
-\index{m\_\-lcdd@{m\_\-lcdd}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{m\_\-lcdd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LCDD}\& {\bf DD4hep::Simulation::Geant4SensitiveDetector::m\_\-lcdd}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_af2c638cb0b0a50437852cf6fb57ef7f1}
+
+Definition at line 66 of file Geant4\+Sensitive\+Detector.\+h.
+
+
+
+Referenced by collection(), collection\+By\+I\+D(), End\+Of\+Event(), and Initialize().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_af2c638cb0b0a50437852cf6fb57ef7f1}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_af2c638cb0b0a50437852cf6fb57ef7f1} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!m\+\_\+lcdd@{m\+\_\+lcdd}}
+\index{m\+\_\+lcdd@{m\+\_\+lcdd}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+lcdd}{m\_lcdd}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{L\+C\+DD}\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::m\+\_\+lcdd\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Reference to the detector description object. 
 
-Definition at line 57 of file Geant4SensitiveDetector.h.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a896a6c6cb7ea1a05384a0a36516da34f}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!m\_\-readout@{m\_\-readout}}
-\index{m\_\-readout@{m\_\-readout}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{m\_\-readout}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Readout} {\bf DD4hep::Simulation::Geant4SensitiveDetector::m\_\-readout}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a896a6c6cb7ea1a05384a0a36516da34f}
+
+
+Definition at line 57 of file Geant4\+Sensitive\+Detector.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a896a6c6cb7ea1a05384a0a36516da34f}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a896a6c6cb7ea1a05384a0a36516da34f} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!m\+\_\+readout@{m\+\_\+readout}}
+\index{m\+\_\+readout@{m\+\_\+readout}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+readout}{m\_readout}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_readout}{Readout} D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::m\+\_\+readout\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Reference to the readout structure. 
 
-Definition at line 63 of file Geant4SensitiveDetector.h.
 
-Referenced by getCellID().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a6292e7640bd34206cb682962570a6721}{
-\index{DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}!m\_\-sensitive@{m\_\-sensitive}}
-\index{m\_\-sensitive@{m\_\-sensitive}!DD4hep::Simulation::Geant4SensitiveDetector@{DD4hep::Simulation::Geant4SensitiveDetector}}
-\subsubsection[{m\_\-sensitive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SensitiveDetector} {\bf DD4hep::Simulation::Geant4SensitiveDetector::m\_\-sensitive}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a6292e7640bd34206cb682962570a6721}
+
+Definition at line 63 of file Geant4\+Sensitive\+Detector.\+h.
+
+
+
+Referenced by Geant4\+Sensitive\+Detector(), and get\+Cell\+I\+D().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a6292e7640bd34206cb682962570a6721}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a6292e7640bd34206cb682962570a6721} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}!m\+\_\+sensitive@{m\+\_\+sensitive}}
+\index{m\+\_\+sensitive@{m\+\_\+sensitive}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+sensitive}{m\_sensitive}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sensitive_detector_a6375f9a4f776b531e443483ff9fa8c28}{Sensitive\+Detector} D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::m\+\_\+sensitive\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Reference to the sensitive detector element. 
 
-Definition at line 61 of file Geant4SensitiveDetector.h.
 
-Referenced by DD4hep::Simulation::Geant4GenericSD$<$ T $>$::Geant4GenericSD(), and process().
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+Definition at line 61 of file Geant4\+Sensitive\+Detector.\+h.
+
+
+
+Referenced by define\+Collection(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Generic\+S\+D$<$ T $>$\+::\+Geant4\+Generic\+S\+D(), Geant4\+Sensitive\+Detector(), and process().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_sensitive_detector_8h}{Geant4SensitiveDetector.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_sensitive_detector_8cpp}{Geant4SensitiveDetector.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/include/\+D\+D\+G4/\hyperlink{_geant4_sensitive_detector_8h}{Geant4\+Sensitive\+Detector.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/src/\hyperlink{_geant4_sensitive_detector_8cpp}{Geant4\+Sensitive\+Detector.\+cpp}\end{DoxyCompactItemize}

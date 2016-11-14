@@ -1,67 +1,73 @@
-\hypertarget{_geant4_event_reader_hep_evt_8cpp}{
-\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/plugins/Geant4EventReaderHepEvt.cpp File Reference}
-\label{_geant4_event_reader_hep_evt_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/plugins/Geant4EventReaderHepEvt.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/plugins/Geant4EventReaderHepEvt.cpp}}
-}
-{\ttfamily \#include \char`\"{}DDG4/Geant4InputAction.h\char`\"{}}\par
-{\ttfamily \#include $<$fstream$>$}\par
-{\ttfamily \#include \char`\"{}DDG4/Factories.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}DD4hep/Printout.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}CLHEP/Units/SystemOfUnits.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}CLHEP/Units/PhysicalConstants.h\char`\"{}}\par
-{\ttfamily \#include $<$cerrno$>$}\par
+\hypertarget{_geant4_event_reader_hep_evt_8cpp}{}\section{/afs/cern.ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/plugins/\+Geant4\+Event\+Reader\+Hep\+Evt.cpp File Reference}
+\label{_geant4_event_reader_hep_evt_8cpp}\index{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/plugins/\+Geant4\+Event\+Reader\+Hep\+Evt.\+cpp@{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/plugins/\+Geant4\+Event\+Reader\+Hep\+Evt.\+cpp}}
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Geant4\+Input\+Action.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}D\+D\+G4/\+Factories.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Printout.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}C\+L\+H\+E\+P/\+Units/\+System\+Of\+Units.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}C\+L\+H\+E\+P/\+Units/\+Physical\+Constants.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cerrno$>$}\newline
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt}{DD4hep::Simulation::Geant4EventReaderHepEvt}
-\begin{DoxyCompactList}\small\item\em Class to populate Geant4 primaries from StdHep files. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_reader_hep_evt}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Reader\+Hep\+Evt}
+\begin{DoxyCompactList}\small\item\em Class to populate Geant4 primaries from Std\+Hep files. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
-namespace \hyperlink{namespace_d_d4hep}{DD4hep}
-
-
-\begin{DoxyCompactList}\small\item\em Namespace for the AIDA detector description toolkit. \item\end{DoxyCompactList}\item 
-namespace \hyperlink{namespace_d_d4hep_1_1_simulation}{DD4hep::Simulation}
-
-
-\begin{DoxyCompactList}\small\item\em Namespace for the Geant4 based simulation part of the AIDA detector description toolkit. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Defines}
+ \hyperlink{namespace_d_d4hep}{D\+D4hep}
+\begin{DoxyCompactList}\small\item\em Namespace for the A\+I\+DA detector description toolkit. \end{DoxyCompactList}\item 
+ \hyperlink{namespace_d_d4hep_1_1_simulation}{D\+D4hep\+::\+Simulation}
+\begin{DoxyCompactList}\small\item\em Namespace for the Geant4 based simulation part of the A\+I\+DA detector description toolkit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{_geant4_event_reader_hep_evt_8cpp_ae07b033c647c23ce38954ff9f4fda426}{HEPEvtShort}~1
+\#define \hyperlink{_geant4_event_reader_hep_evt_8cpp_ae07b033c647c23ce38954ff9f4fda426}{H\+E\+P\+Evt\+Short}~1
 \item 
-\#define \hyperlink{_geant4_event_reader_hep_evt_8cpp_a364cd64cfe2bc667030f6928559901ac}{HEPEvtLong}~2
+\#define \hyperlink{_geant4_event_reader_hep_evt_8cpp_a364cd64cfe2bc667030f6928559901ac}{H\+E\+P\+Evt\+Long}~2
 \end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef \hyperlink{class_d_d4hep_1_1_reference_bit_mask}{DD4hep::ReferenceBitMask}$<$ int $>$ \hyperlink{_geant4_event_reader_hep_evt_8cpp_a26571eca698a4610629e5036e207ee88}{PropertyMask}
+typedef \hyperlink{class_d_d4hep_1_1_reference_bit_mask}{D\+D4hep\+::\+Reference\+Bit\+Mask}$<$ int $>$ \hyperlink{_geant4_event_reader_hep_evt_8cpp_a26571eca698a4610629e5036e207ee88}{Property\+Mask}
 \end{DoxyCompactItemize}
 
 
-\subsection{Define Documentation}
-\hypertarget{_geant4_event_reader_hep_evt_8cpp_a364cd64cfe2bc667030f6928559901ac}{
-\index{Geant4EventReaderHepEvt.cpp@{Geant4EventReaderHepEvt.cpp}!HEPEvtLong@{HEPEvtLong}}
-\index{HEPEvtLong@{HEPEvtLong}!Geant4EventReaderHepEvt.cpp@{Geant4EventReaderHepEvt.cpp}}
-\subsubsection[{HEPEvtLong}]{\setlength{\rightskip}{0pt plus 5cm}\#define HEPEvtLong~2}}
-\label{_geant4_event_reader_hep_evt_8cpp_a364cd64cfe2bc667030f6928559901ac}
+\subsection{Macro Definition Documentation}
+\hypertarget{_geant4_event_reader_hep_evt_8cpp_a364cd64cfe2bc667030f6928559901ac}{}\label{_geant4_event_reader_hep_evt_8cpp_a364cd64cfe2bc667030f6928559901ac} 
+\index{Geant4\+Event\+Reader\+Hep\+Evt.\+cpp@{Geant4\+Event\+Reader\+Hep\+Evt.\+cpp}!H\+E\+P\+Evt\+Long@{H\+E\+P\+Evt\+Long}}
+\index{H\+E\+P\+Evt\+Long@{H\+E\+P\+Evt\+Long}!Geant4\+Event\+Reader\+Hep\+Evt.\+cpp@{Geant4\+Event\+Reader\+Hep\+Evt.\+cpp}}
+\subsubsection{\texorpdfstring{H\+E\+P\+Evt\+Long}{HEPEvtLong}}
+{\footnotesize\ttfamily \#define H\+E\+P\+Evt\+Long~2}
 
 
-Definition at line 81 of file Geant4EventReaderHepEvt.cpp.\hypertarget{_geant4_event_reader_hep_evt_8cpp_ae07b033c647c23ce38954ff9f4fda426}{
-\index{Geant4EventReaderHepEvt.cpp@{Geant4EventReaderHepEvt.cpp}!HEPEvtShort@{HEPEvtShort}}
-\index{HEPEvtShort@{HEPEvtShort}!Geant4EventReaderHepEvt.cpp@{Geant4EventReaderHepEvt.cpp}}
-\subsubsection[{HEPEvtShort}]{\setlength{\rightskip}{0pt plus 5cm}\#define HEPEvtShort~1}}
-\label{_geant4_event_reader_hep_evt_8cpp_ae07b033c647c23ce38954ff9f4fda426}
+
+Definition at line 81 of file Geant4\+Event\+Reader\+Hep\+Evt.\+cpp.
+
+\hypertarget{_geant4_event_reader_hep_evt_8cpp_ae07b033c647c23ce38954ff9f4fda426}{}\label{_geant4_event_reader_hep_evt_8cpp_ae07b033c647c23ce38954ff9f4fda426} 
+\index{Geant4\+Event\+Reader\+Hep\+Evt.\+cpp@{Geant4\+Event\+Reader\+Hep\+Evt.\+cpp}!H\+E\+P\+Evt\+Short@{H\+E\+P\+Evt\+Short}}
+\index{H\+E\+P\+Evt\+Short@{H\+E\+P\+Evt\+Short}!Geant4\+Event\+Reader\+Hep\+Evt.\+cpp@{Geant4\+Event\+Reader\+Hep\+Evt.\+cpp}}
+\subsubsection{\texorpdfstring{H\+E\+P\+Evt\+Short}{HEPEvtShort}}
+{\footnotesize\ttfamily \#define H\+E\+P\+Evt\+Short~1}
 
 
-Definition at line 80 of file Geant4EventReaderHepEvt.cpp.
+
+Definition at line 80 of file Geant4\+Event\+Reader\+Hep\+Evt.\+cpp.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Reader\+Hep\+Evt\+::read\+Particles().
+
+
 
 \subsection{Typedef Documentation}
-\hypertarget{_geant4_event_reader_hep_evt_8cpp_a26571eca698a4610629e5036e207ee88}{
-\index{Geant4EventReaderHepEvt.cpp@{Geant4EventReaderHepEvt.cpp}!PropertyMask@{PropertyMask}}
-\index{PropertyMask@{PropertyMask}!Geant4EventReaderHepEvt.cpp@{Geant4EventReaderHepEvt.cpp}}
-\subsubsection[{PropertyMask}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf DD4hep::ReferenceBitMask}$<$int$>$ {\bf PropertyMask}}}
-\label{_geant4_event_reader_hep_evt_8cpp_a26571eca698a4610629e5036e207ee88}
+\hypertarget{_geant4_event_reader_hep_evt_8cpp_a26571eca698a4610629e5036e207ee88}{}\label{_geant4_event_reader_hep_evt_8cpp_a26571eca698a4610629e5036e207ee88} 
+\index{Geant4\+Event\+Reader\+Hep\+Evt.\+cpp@{Geant4\+Event\+Reader\+Hep\+Evt.\+cpp}!Property\+Mask@{Property\+Mask}}
+\index{Property\+Mask@{Property\+Mask}!Geant4\+Event\+Reader\+Hep\+Evt.\+cpp@{Geant4\+Event\+Reader\+Hep\+Evt.\+cpp}}
+\subsubsection{\texorpdfstring{Property\+Mask}{PropertyMask}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_reference_bit_mask}{D\+D4hep\+::\+Reference\+Bit\+Mask}$<$int$>$ \hyperlink{_geant4_data_dump_8cpp_a2d5b8b62b64496657c7d0034d748ef3f}{Property\+Mask}}
 
 
-Definition at line 78 of file Geant4EventReaderHepEvt.cpp.
+
+Definition at line 78 of file Geant4\+Event\+Reader\+Hep\+Evt.\+cpp.
+

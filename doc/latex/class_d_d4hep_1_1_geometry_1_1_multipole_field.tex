@@ -1,30 +1,32 @@
-\hypertarget{class_d_d4hep_1_1_geometry_1_1_multipole_field}{
-\section{DD4hep::Geometry::MultipoleField Class Reference}
-\label{class_d_d4hep_1_1_geometry_1_1_multipole_field}\index{DD4hep::Geometry::MultipoleField@{DD4hep::Geometry::MultipoleField}}
-}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_multipole_field}{}\section{D\+D4hep\+:\+:Geometry\+:\+:Multipole\+Field Class Reference}
+\label{class_d_d4hep_1_1_geometry_1_1_multipole_field}\index{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field@{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field}}
 
 
 Implementation object of a Multipole magnetic field.  
 
 
-{\ttfamily \#include $<$FieldTypes.h$>$}Inheritance diagram for DD4hep::Geometry::MultipoleField::\begin{figure}[H]
+
+
+{\ttfamily \#include $<$Field\+Types.\+h$>$}
+
+Inheritance diagram for D\+D4hep\+:\+:Geometry\+:\+:Multipole\+Field\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3cm]{class_d_d4hep_1_1_geometry_1_1_multipole_field}
+\includegraphics[height=3.000000cm]{class_d_d4hep_1_1_geometry_1_1_multipole_field}
 \end{center}
 \end{figure}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef std::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_multipole_field_a760b1b7561c93dd8438ea523cbc660bc}{Coefficents}
+typedef std\+::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_multipole_field_a760b1b7561c93dd8438ea523cbc660bc}{Coefficents}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_multipole_field_a66745189fa088d26122bbf841eb18f90}{MultipoleField} ()
-\begin{DoxyCompactList}\small\item\em Initializing constructor. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_geometry_1_1_multipole_field_a06782e6f0fbdfcf53394ee5dda83b052}{fieldComponents} (const double $\ast$pos, double $\ast$field)
-\begin{DoxyCompactList}\small\item\em Call to access the field components at a given location. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_multipole_field_a66745189fa088d26122bbf841eb18f90}{Multipole\+Field} ()
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_geometry_1_1_multipole_field_a06782e6f0fbdfcf53394ee5dda83b052}{field\+Components} (const double $\ast$pos, double $\ast$field)
+\begin{DoxyCompactList}\small\item\em Call to access the field components at a given location. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -32,147 +34,195 @@ virtual void \hyperlink{class_d_d4hep_1_1_geometry_1_1_multipole_field_a06782e6f
 \item 
 \hyperlink{class_d_d4hep_1_1_geometry_1_1_multipole_field_a760b1b7561c93dd8438ea523cbc660bc}{Coefficents} \hyperlink{class_d_d4hep_1_1_geometry_1_1_multipole_field_a52a44a6298e89815f17e1c271b7644d2}{skews}
 \item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_solid__type}{Solid} \hyperlink{class_d_d4hep_1_1_geometry_1_1_multipole_field_a6ff1c10d2c4b9a47db39b466e45de63a}{volume}
+\hyperlink{namespace_d_d4hep_1_1_geometry_a83de90a8dcc7378ba47d54ef9a6a687b}{Solid} \hyperlink{class_d_d4hep_1_1_geometry_1_1_multipole_field_a6ff1c10d2c4b9a47db39b466e45de63a}{volume}
 \item 
 \hyperlink{namespace_d_d4hep_1_1_geometry_aeb4c0356d12fd7be49a0aae50514e64b}{Transform3D} \hyperlink{class_d_d4hep_1_1_geometry_1_1_multipole_field_aa4040740a5339e8dc1f1d7e65187ea0e}{transform}
 \item 
-double \hyperlink{class_d_d4hep_1_1_geometry_1_1_multipole_field_a5b182acb00dda0675a4166293230e948}{B\_\-z}
+double \hyperlink{class_d_d4hep_1_1_geometry_1_1_multipole_field_a5b182acb00dda0675a4166293230e948}{B\+\_\+z}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Implementation object of a Multipole magnetic field. Generic multipole magnetic field using the Multipole approach. The dipole is assumed to be horizontal as it is used for bending beams in large colliders ie. the dipole field lines are vertical.
+Implementation object of a Multipole magnetic field. 
 
-The different momenta are given by:
+Generic multipole magnetic field using the Multipole approach. The dipole is assumed to be horizontal as it is used for bending beams in large colliders ie. the dipole field lines are vertical.
 
-\begin{eqnarray*} B_y + i*B_x &=& C_n * (x + iy)^{n-1} \\ B_sum = B_y + i B_x &=& Sum_{n=1..4} (b_n + ia_n) (x + iy)^{n-1} \\ \end{eqnarray*} With C\_\-n being the complex multipole coefficients and b\_\-n the \char`\"{}normal multipole coefficients\char`\"{} and a\_\-n the \char`\"{}skew multipole coefficients\char`\"{}.
+The different momenta are given by\+:
+
+\begin{eqnarray*} B_y + i*B_x &=& C_n * (x + iy)^{n-1} \\ B_sum = B_y + i B_x &=& Sum_{n=1..4} (b_n + ia_n) (x + iy)^{n-1} \\ \end{eqnarray*} With C\+\_\+n being the complex multipole coefficients and b\+\_\+n the \char`\"{}normal multipole coefficients\char`\"{} and a\+\_\+n the \char`\"{}skew multipole coefficients\char`\"{}.
 
 The maximal momentum used is the octopole momentum.
 
-The lower momenta are:
+The lower momenta are\+:
 
 \begin{DoxyItemize}
-\item Dipole (n=1): \begin{eqnarray*} B_y &=& b_1 \\ B_x &=& a_1 \\ B_z &=& constant \\ \end{eqnarray*}\end{DoxyItemize}
+\item Dipole (n=1)\+: \begin{eqnarray*} B_y &=& b_1 \\ B_x &=& a_1 \\ B_z &=& constant \\ \end{eqnarray*}\end{DoxyItemize}
 \begin{DoxyItemize}
-\item Quadrupole (n=2):\end{DoxyItemize}
+\item Quadrupole (n=2)\+:\end{DoxyItemize}
 \begin{eqnarray*} B_y &=& b_2 x - a_2 y \\ B_x &=& b_2 y + a_2 x \\ \end{eqnarray*}
 
 \begin{DoxyItemize}
-\item Sextupole (n=3):\end{DoxyItemize}
+\item Sextupole (n=3)\+:\end{DoxyItemize}
 \begin{eqnarray*} B_y + i B_x &=& (b_3 +ia_3) (x^2 + 2ixy - y^2) \\ B_y &=& b_3 x^2 - b_3 y^2 - 2 a_3 xy \\ B_x &=& a_3 x^2 - a_3 y^2 + 2 b_3 xy \\ \end{eqnarray*}
 
 \begin{DoxyItemize}
-\item Octopole (n=4):\end{DoxyItemize}
+\item Octopole (n=4)\+:\end{DoxyItemize}
 \begin{eqnarray*} B_y + i B_x &=& (b_4 +ia_4) (x^3 + 3ix^2y - 3xy^2 -iy^3) \\ B_y &=& b_4 x^3 - 3 b_4 x y^2 - 3 a_4 x^2 y + a_4 y^3 \\ B_x &=& 3 b_4 x^2 y + b_4 y^3 + a_4 x^3 - 3 a_4 x y^2 \\ \end{eqnarray*}
 
-The defined field components only apply within the shape 'volume'. If 'volume' is an invalid shape (ie. not defined), then the field components are valied throughout the 'universe'.
+The defined field components only apply within the shape \textquotesingle{}volume\textquotesingle{}. If \textquotesingle{}volume\textquotesingle{} is an invalid shape (ie. not defined), then the field components are valied throughout the \textquotesingle{}universe\textquotesingle{}.
 
 \begin{DoxySeeAlso}{See also}
-\href{http://cas.web.cern.ch/cas/Belgium-2009/Lectures/PDFs/Wolski-1.pdf}{\tt http://cas.web.cern.ch/cas/Belgium-\/2009/Lectures/PDFs/Wolski-\/1.pdf} 
+\href{http://cas.web.cern.ch/cas/Belgium-2009/Lectures/PDFs/Wolski-1.pdf}{\tt http\+://cas.\+web.\+cern.\+ch/cas/\+Belgium-\/2009/\+Lectures/\+P\+D\+Fs/\+Wolski-\/1.\+pdf} 
 
-\href{http://cas.web.cern.ch/cas/Bulgaria-2010/Talks-web/Brandt-1-web.pdf}{\tt http://cas.web.cern.ch/cas/Bulgaria-\/2010/Talks-\/web/Brandt-\/1-\/web.pdf} 
+\href{http://cas.web.cern.ch/cas/Bulgaria-2010/Talks-web/Brandt-1-web.pdf}{\tt http\+://cas.\+web.\+cern.\+ch/cas/\+Bulgaria-\/2010/\+Talks-\/web/\+Brandt-\/1-\/web.\+pdf} 
 
-\href{https://en.wikipedia.org/wiki/Multipole_magnet}{\tt https://en.wikipedia.org/wiki/Multipole\_\-magnet}
+\href{https://en.wikipedia.org/wiki/Multipole_magnet}{\tt https\+://en.\+wikipedia.\+org/wiki/\+Multipole\+\_\+magnet}
 \end{DoxySeeAlso}
 \begin{DoxyAuthor}{Author}
-M.Frank 
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
-Definition at line 158 of file FieldTypes.h.
+Definition at line 158 of file Field\+Types.\+h.
+
+
 
 \subsection{Member Typedef Documentation}
-\hypertarget{class_d_d4hep_1_1_geometry_1_1_multipole_field_a760b1b7561c93dd8438ea523cbc660bc}{
-\index{DD4hep::Geometry::MultipoleField@{DD4hep::Geometry::MultipoleField}!Coefficents@{Coefficents}}
-\index{Coefficents@{Coefficents}!DD4hep::Geometry::MultipoleField@{DD4hep::Geometry::MultipoleField}}
-\subsubsection[{Coefficents}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<$double$>$ {\bf DD4hep::Geometry::MultipoleField::Coefficents}}}
-\label{class_d_d4hep_1_1_geometry_1_1_multipole_field_a760b1b7561c93dd8438ea523cbc660bc}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_multipole_field_a760b1b7561c93dd8438ea523cbc660bc}{}\label{class_d_d4hep_1_1_geometry_1_1_multipole_field_a760b1b7561c93dd8438ea523cbc660bc} 
+\index{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field@{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field}!Coefficents@{Coefficents}}
+\index{Coefficents@{Coefficents}!D\+D4hep\+::\+Geometry\+::\+Multipole\+Field@{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field}}
+\subsubsection{\texorpdfstring{Coefficents}{Coefficents}}
+{\footnotesize\ttfamily typedef std\+::vector$<$double$>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_multipole_field_a760b1b7561c93dd8438ea523cbc660bc}{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field\+::\+Coefficents}}
 
 
-Definition at line 160 of file FieldTypes.h.
+
+Definition at line 160 of file Field\+Types.\+h.
+
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_geometry_1_1_multipole_field_a66745189fa088d26122bbf841eb18f90}{
-\index{DD4hep::Geometry::MultipoleField@{DD4hep::Geometry::MultipoleField}!MultipoleField@{MultipoleField}}
-\index{MultipoleField@{MultipoleField}!DD4hep::Geometry::MultipoleField@{DD4hep::Geometry::MultipoleField}}
-\subsubsection[{MultipoleField}]{\setlength{\rightskip}{0pt plus 5cm}MultipoleField::MultipoleField ()}}
-\label{class_d_d4hep_1_1_geometry_1_1_multipole_field_a66745189fa088d26122bbf841eb18f90}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_multipole_field_a66745189fa088d26122bbf841eb18f90}{}\label{class_d_d4hep_1_1_geometry_1_1_multipole_field_a66745189fa088d26122bbf841eb18f90} 
+\index{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field@{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field}!Multipole\+Field@{Multipole\+Field}}
+\index{Multipole\+Field@{Multipole\+Field}!D\+D4hep\+::\+Geometry\+::\+Multipole\+Field@{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field}}
+\subsubsection{\texorpdfstring{Multipole\+Field()}{MultipoleField()}}
+{\footnotesize\ttfamily Multipole\+Field\+::\+Multipole\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 
 
 Initializing constructor. 
 
-Definition at line 85 of file FieldTypes.cpp.
 
-References DD4hep::Geometry::CartesianField::MAGNETIC, and DD4hep::Geometry::CartesianField::Object::type.
+
+Definition at line 85 of file Field\+Types.\+cpp.
+
+
+
+References D\+D4hep\+::\+Geometry\+::\+Cartesian\+Field\+::\+M\+A\+G\+N\+E\+T\+IC, and D\+D4hep\+::\+Geometry\+::\+Cartesian\+Field\+::\+Object\+::type.
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_geometry_1_1_multipole_field_a06782e6f0fbdfcf53394ee5dda83b052}{
-\index{DD4hep::Geometry::MultipoleField@{DD4hep::Geometry::MultipoleField}!fieldComponents@{fieldComponents}}
-\index{fieldComponents@{fieldComponents}!DD4hep::Geometry::MultipoleField@{DD4hep::Geometry::MultipoleField}}
-\subsubsection[{fieldComponents}]{\setlength{\rightskip}{0pt plus 5cm}void MultipoleField::fieldComponents (const double $\ast$ {\em pos}, \/  double $\ast$ {\em field})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_geometry_1_1_multipole_field_a06782e6f0fbdfcf53394ee5dda83b052}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_multipole_field_a06782e6f0fbdfcf53394ee5dda83b052}{}\label{class_d_d4hep_1_1_geometry_1_1_multipole_field_a06782e6f0fbdfcf53394ee5dda83b052} 
+\index{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field@{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field}!field\+Components@{field\+Components}}
+\index{field\+Components@{field\+Components}!D\+D4hep\+::\+Geometry\+::\+Multipole\+Field@{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field}}
+\subsubsection{\texorpdfstring{field\+Components()}{fieldComponents()}}
+{\footnotesize\ttfamily void Multipole\+Field\+::field\+Components (\begin{DoxyParamCaption}\item[{const double $\ast$}]{pos,  }\item[{double $\ast$}]{field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Call to access the field components at a given location. 
 
-Implements \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field_1_1_object_ab3fa7f39545c8b0f769ee1ddfd03ed90}{DD4hep::Geometry::CartesianField::Object}.
 
-Definition at line 90 of file FieldTypes.cpp.
 
-References B\_\-z, coefficents, DD4hep::Handle$<$ T $>$::ptr(), skews, transform, and volume.
+Implements \hyperlink{class_d_d4hep_1_1_geometry_1_1_cartesian_field_1_1_object_ab3fa7f39545c8b0f769ee1ddfd03ed90}{D\+D4hep\+::\+Geometry\+::\+Cartesian\+Field\+::\+Object}.
+
+
+
+Definition at line 90 of file Field\+Types.\+cpp.
+
+
+
+References B\+\_\+z, coefficents, D\+D4hep\+::\+Handle$<$ T $>$\+::ptr(), skews, transform, and volume.
+
+
 
 \subsection{Member Data Documentation}
-\hypertarget{class_d_d4hep_1_1_geometry_1_1_multipole_field_a5b182acb00dda0675a4166293230e948}{
-\index{DD4hep::Geometry::MultipoleField@{DD4hep::Geometry::MultipoleField}!B\_\-z@{B\_\-z}}
-\index{B\_\-z@{B\_\-z}!DD4hep::Geometry::MultipoleField@{DD4hep::Geometry::MultipoleField}}
-\subsubsection[{B\_\-z}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf DD4hep::Geometry::MultipoleField::B\_\-z}}}
-\label{class_d_d4hep_1_1_geometry_1_1_multipole_field_a5b182acb00dda0675a4166293230e948}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_multipole_field_a5b182acb00dda0675a4166293230e948}{}\label{class_d_d4hep_1_1_geometry_1_1_multipole_field_a5b182acb00dda0675a4166293230e948} 
+\index{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field@{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field}!B\+\_\+z@{B\+\_\+z}}
+\index{B\+\_\+z@{B\+\_\+z}!D\+D4hep\+::\+Geometry\+::\+Multipole\+Field@{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field}}
+\subsubsection{\texorpdfstring{B\+\_\+z}{B\_z}}
+{\footnotesize\ttfamily double D\+D4hep\+::\+Geometry\+::\+Multipole\+Field\+::\+B\+\_\+z}
 
 
-Definition at line 165 of file FieldTypes.h.
 
-Referenced by fieldComponents().\hypertarget{class_d_d4hep_1_1_geometry_1_1_multipole_field_a0d73fa0209b6773df83c05b53060324a}{
-\index{DD4hep::Geometry::MultipoleField@{DD4hep::Geometry::MultipoleField}!coefficents@{coefficents}}
-\index{coefficents@{coefficents}!DD4hep::Geometry::MultipoleField@{DD4hep::Geometry::MultipoleField}}
-\subsubsection[{coefficents}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coefficents} {\bf DD4hep::Geometry::MultipoleField::coefficents}}}
-\label{class_d_d4hep_1_1_geometry_1_1_multipole_field_a0d73fa0209b6773df83c05b53060324a}
+Definition at line 165 of file Field\+Types.\+h.
 
 
-Definition at line 161 of file FieldTypes.h.
 
-Referenced by fieldComponents().\hypertarget{class_d_d4hep_1_1_geometry_1_1_multipole_field_a52a44a6298e89815f17e1c271b7644d2}{
-\index{DD4hep::Geometry::MultipoleField@{DD4hep::Geometry::MultipoleField}!skews@{skews}}
-\index{skews@{skews}!DD4hep::Geometry::MultipoleField@{DD4hep::Geometry::MultipoleField}}
-\subsubsection[{skews}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Coefficents} {\bf DD4hep::Geometry::MultipoleField::skews}}}
-\label{class_d_d4hep_1_1_geometry_1_1_multipole_field_a52a44a6298e89815f17e1c271b7644d2}
+Referenced by field\+Components().
 
-
-Definition at line 162 of file FieldTypes.h.
-
-Referenced by fieldComponents().\hypertarget{class_d_d4hep_1_1_geometry_1_1_multipole_field_aa4040740a5339e8dc1f1d7e65187ea0e}{
-\index{DD4hep::Geometry::MultipoleField@{DD4hep::Geometry::MultipoleField}!transform@{transform}}
-\index{transform@{transform}!DD4hep::Geometry::MultipoleField@{DD4hep::Geometry::MultipoleField}}
-\subsubsection[{transform}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Transform3D} {\bf DD4hep::Geometry::MultipoleField::transform}}}
-\label{class_d_d4hep_1_1_geometry_1_1_multipole_field_aa4040740a5339e8dc1f1d7e65187ea0e}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_multipole_field_a0d73fa0209b6773df83c05b53060324a}{}\label{class_d_d4hep_1_1_geometry_1_1_multipole_field_a0d73fa0209b6773df83c05b53060324a} 
+\index{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field@{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field}!coefficents@{coefficents}}
+\index{coefficents@{coefficents}!D\+D4hep\+::\+Geometry\+::\+Multipole\+Field@{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field}}
+\subsubsection{\texorpdfstring{coefficents}{coefficents}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_multipole_field_a760b1b7561c93dd8438ea523cbc660bc}{Coefficents} D\+D4hep\+::\+Geometry\+::\+Multipole\+Field\+::coefficents}
 
 
-Definition at line 164 of file FieldTypes.h.
 
-Referenced by fieldComponents().\hypertarget{class_d_d4hep_1_1_geometry_1_1_multipole_field_a6ff1c10d2c4b9a47db39b466e45de63a}{
-\index{DD4hep::Geometry::MultipoleField@{DD4hep::Geometry::MultipoleField}!volume@{volume}}
-\index{volume@{volume}!DD4hep::Geometry::MultipoleField@{DD4hep::Geometry::MultipoleField}}
-\subsubsection[{volume}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Solid} {\bf DD4hep::Geometry::MultipoleField::volume}}}
-\label{class_d_d4hep_1_1_geometry_1_1_multipole_field_a6ff1c10d2c4b9a47db39b466e45de63a}
+Definition at line 161 of file Field\+Types.\+h.
 
 
-Definition at line 163 of file FieldTypes.h.
 
-Referenced by fieldComponents().
+Referenced by field\+Components().
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_multipole_field_a52a44a6298e89815f17e1c271b7644d2}{}\label{class_d_d4hep_1_1_geometry_1_1_multipole_field_a52a44a6298e89815f17e1c271b7644d2} 
+\index{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field@{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field}!skews@{skews}}
+\index{skews@{skews}!D\+D4hep\+::\+Geometry\+::\+Multipole\+Field@{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field}}
+\subsubsection{\texorpdfstring{skews}{skews}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_multipole_field_a760b1b7561c93dd8438ea523cbc660bc}{Coefficents} D\+D4hep\+::\+Geometry\+::\+Multipole\+Field\+::skews}
+
+
+
+Definition at line 162 of file Field\+Types.\+h.
+
+
+
+Referenced by field\+Components().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_multipole_field_aa4040740a5339e8dc1f1d7e65187ea0e}{}\label{class_d_d4hep_1_1_geometry_1_1_multipole_field_aa4040740a5339e8dc1f1d7e65187ea0e} 
+\index{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field@{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field}!transform@{transform}}
+\index{transform@{transform}!D\+D4hep\+::\+Geometry\+::\+Multipole\+Field@{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field}}
+\subsubsection{\texorpdfstring{transform}{transform}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_1_1_geometry_aeb4c0356d12fd7be49a0aae50514e64b}{Transform3D} D\+D4hep\+::\+Geometry\+::\+Multipole\+Field\+::transform}
+
+
+
+Definition at line 164 of file Field\+Types.\+h.
+
+
+
+Referenced by field\+Components().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_multipole_field_a6ff1c10d2c4b9a47db39b466e45de63a}{}\label{class_d_d4hep_1_1_geometry_1_1_multipole_field_a6ff1c10d2c4b9a47db39b466e45de63a} 
+\index{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field@{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field}!volume@{volume}}
+\index{volume@{volume}!D\+D4hep\+::\+Geometry\+::\+Multipole\+Field@{D\+D4hep\+::\+Geometry\+::\+Multipole\+Field}}
+\subsubsection{\texorpdfstring{volume}{volume}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_1_1_geometry_a83de90a8dcc7378ba47d54ef9a6a687b}{Solid} D\+D4hep\+::\+Geometry\+::\+Multipole\+Field\+::volume}
+
+
+
+Definition at line 163 of file Field\+Types.\+h.
+
+
+
+Referenced by field\+Components().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_field_types_8h}{FieldTypes.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_field_types_8cpp}{FieldTypes.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/include/\+D\+D4hep/\hyperlink{_field_types_8h}{Field\+Types.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\hyperlink{_field_types_8cpp}{Field\+Types.\+cpp}\end{DoxyCompactItemize}

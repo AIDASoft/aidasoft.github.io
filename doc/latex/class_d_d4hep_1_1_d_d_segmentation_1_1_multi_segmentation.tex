@@ -1,16 +1,18 @@
-\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation}{
-\section{DD4hep::DDSegmentation::MultiSegmentation Class Reference}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation}\index{DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}}
-}
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation}{}\section{D\+D4hep\+:\+:D\+D\+Segmentation\+:\+:Multi\+Segmentation Class Reference}
+\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation}\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}}
 
 
 Wrapper to support multiple segmentations.  
 
 
-{\ttfamily \#include $<$MultiSegmentation.h$>$}Inheritance diagram for DD4hep::DDSegmentation::MultiSegmentation::\begin{figure}[H]
+
+
+{\ttfamily \#include $<$Multi\+Segmentation.\+h$>$}
+
+Inheritance diagram for D\+D4hep\+:\+:D\+D\+Segmentation\+:\+:Multi\+Segmentation\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2cm]{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation}
+\includegraphics[height=2.000000cm]{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation}
 \end{center}
 \end{figure}
 \subsection*{Classes}
@@ -21,267 +23,411 @@ struct \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_1_1
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef std::vector$<$ \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_1_1_entry}{Entry} $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a083ba7cc081c5c3c47cafac5980100f8}{Segmentations}
+typedef std\+::vector$<$ \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_1_1_entry}{Entry} $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a083ba7cc081c5c3c47cafac5980100f8}{Segmentations}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_ad1a80e739f693a231afc09295a565e85}{MultiSegmentation} (const std::string \&cellEncoding=\char`\"{}\char`\"{})
-\begin{DoxyCompactList}\small\item\em Default constructor passing the encoding string. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a2d73598a701bfad32ba2be3793799bd8}{MultiSegmentation} (\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field64}{BitField64} $\ast$decoder)
-\begin{DoxyCompactList}\small\item\em Default constructor used by derived classes passing an existing decoder. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_ac59d1f2a2145181f48c0c7ffdd13a5ba}{$\sim$MultiSegmentation} ()
-\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_aa92e91f45ba11b074fd6cafb87e15325}{addSubsegmentation} (long key\_\-min, long key\_\-max, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation}{Segmentation} $\ast$entry)
-\begin{DoxyCompactList}\small\item\em Add subsegmentation. \item\end{DoxyCompactList}\item 
-const \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation}{Segmentation} \& \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_aa5766661f6e3194f4bc782b84e7636be}{subsegmentation} (const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{CellID} \&cellID) const 
-\begin{DoxyCompactList}\small\item\em Access subsegmentation by cell identifier. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_abbcc00c36274bb97c5ff3d01d64e45b6}{position} (const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{CellID} \&cellID) const 
-\begin{DoxyCompactList}\small\item\em determine the position based on the cell ID \item\end{DoxyCompactList}\item 
-virtual \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{CellID} \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_aefbdc896e43100b7781e07dafc9a9fec}{cellID} (const \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \&localPosition, const \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \&globalPosition, const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_a61a6833a18d1800bdef176595f83e3ba}{VolumeID} \&volumeID) const 
-\begin{DoxyCompactList}\small\item\em determine the cell ID based on the position \item\end{DoxyCompactList}\item 
-virtual std::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a2762cc8dd45fdfcab8aa8dfaea47e7fd}{cellDimensions} (const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{CellID} \&cellID) const 
-\begin{DoxyCompactList}\small\item\em Returns a vector$<$double$>$ of the cellDimensions of the given cell ID in natural order of dimensions, e.g., dx/dy/dz, or dr/r$\ast$dPhi. \item\end{DoxyCompactList}\item 
-const std::string \& \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a4be6f41c8a5f08fec8c2a5cc3cb47e6c}{discriminatorName} () const 
-\begin{DoxyCompactList}\small\item\em access the field name used to discriminate sub-\/segmentations \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field_value}{BitFieldValue} $\ast$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a4dbbd970a59a21ac2da3b83ab2782d95}{discriminator} () const 
-\begin{DoxyCompactList}\small\item\em Discriminating bitfield entry. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a21a046717c1aae25d103dddeb2829cb9}{setDecoder} (\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field64}{BitField64} $\ast$decoder)
-\begin{DoxyCompactList}\small\item\em Set the underlying decoder. \item\end{DoxyCompactList}\item 
-const \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a083ba7cc081c5c3c47cafac5980100f8}{Segmentations} \& \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a8a5a0095cb0f92224d1e221449cdcad8}{subSegmentations} () const 
-\begin{DoxyCompactList}\small\item\em The underlying sub-\/segementations. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_ad1a80e739f693a231afc09295a565e85}{Multi\+Segmentation} (const std\+::string \&cell\+Encoding=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Default constructor passing the encoding string. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a2d73598a701bfad32ba2be3793799bd8}{Multi\+Segmentation} (\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field64}{Bit\+Field64} $\ast$\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_abec3489982d0fe91ef4b142d9d755576}{decoder})
+\begin{DoxyCompactList}\small\item\em Default constructor used by derived classes passing an existing decoder. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_ac59d1f2a2145181f48c0c7ffdd13a5ba}{$\sim$\+Multi\+Segmentation} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_aa92e91f45ba11b074fd6cafb87e15325}{add\+Subsegmentation} (long key\+\_\+min, long key\+\_\+max, \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation}{Segmentation} $\ast$entry)
+\begin{DoxyCompactList}\small\item\em Add subsegmentation. \end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation}{Segmentation} \& \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_ab92a5093c6c11598715a9af554475175}{subsegmentation} (const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{Cell\+ID} \&\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a3e054169c43049547cdd67e4f2f60105}{cell\+ID}) const
+\begin{DoxyCompactList}\small\item\em Access subsegmentation by cell identifier. \end{DoxyCompactList}\item 
+virtual \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a45377b4442211346de8bea2edfeb1bf4}{position} (const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{Cell\+ID} \&\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a3e054169c43049547cdd67e4f2f60105}{cell\+ID}) const
+\begin{DoxyCompactList}\small\item\em determine the position based on the cell ID \end{DoxyCompactList}\item 
+virtual \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{Cell\+ID} \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a3e054169c43049547cdd67e4f2f60105}{cell\+ID} (const \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \&local\+Position, const \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \&global\+Position, const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_a61a6833a18d1800bdef176595f83e3ba}{Volume\+ID} \&\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a43c0e9648e3b7cded015847c0802f757}{volume\+ID}) const
+\begin{DoxyCompactList}\small\item\em determine the cell ID based on the position \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ double $>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a2e0625412d4b05158509a3d1e45dc1e7}{cell\+Dimensions} (const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{Cell\+ID} \&\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a3e054169c43049547cdd67e4f2f60105}{cell\+ID}) const
+\begin{DoxyCompactList}\small\item\em Returns a vector$<$double$>$ of the cell\+Dimensions of the given cell ID in natural order of dimensions, e.\+g., dx/dy/dz, or dr/r$\ast$d\+Phi. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a6b12b7c8e81de25c22aafee61b5821eb}{discriminator\+Name} () const
+\begin{DoxyCompactList}\small\item\em access the field name used to discriminate sub-\/segmentations \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field_value}{Bit\+Field\+Value} $\ast$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_afec54824e5d7d0ec1cb9077b2e215c72}{discriminator} () const
+\begin{DoxyCompactList}\small\item\em Discriminating bitfield entry. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a21a046717c1aae25d103dddeb2829cb9}{set\+Decoder} (\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field64}{Bit\+Field64} $\ast$\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_abec3489982d0fe91ef4b142d9d755576}{decoder})
+\begin{DoxyCompactList}\small\item\em Set the underlying decoder. \end{DoxyCompactList}\item 
+const \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a083ba7cc081c5c3c47cafac5980100f8}{Segmentations} \& \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_ace27c57dfd4a10a4ef80f721f7d24f01}{sub\+Segmentations} () const
+\begin{DoxyCompactList}\small\item\em The underlying sub-\/segementations. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a083ba7cc081c5c3c47cafac5980100f8}{Segmentations} \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a9af45d1b08e9f34c17ea27dcdf2e1019}{m\_\-segmentations}
-\begin{DoxyCompactList}\small\item\em Sub-\/segmentaion container. \item\end{DoxyCompactList}\item 
-std::string \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a922d7825b1c14d0724bfd1711082b943}{m\_\-discriminatorId}
-\begin{DoxyCompactList}\small\item\em the field name used to discriminate sub-\/segmentations \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field_value}{BitFieldValue} $\ast$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a5d86769ef20468667fbc44fc6d8b2a4e}{m\_\-discriminator}
-\begin{DoxyCompactList}\small\item\em Bitfield corresponding to dicriminator identifier. \item\end{DoxyCompactList}\item 
-int \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_aa78b5218bf4246b81cf5e74a1233184c}{m\_\-debug}
-\begin{DoxyCompactList}\small\item\em Debug flags. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a083ba7cc081c5c3c47cafac5980100f8}{Segmentations} \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a9af45d1b08e9f34c17ea27dcdf2e1019}{m\+\_\+segmentations}
+\begin{DoxyCompactList}\small\item\em Sub-\/segmentaion container. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a922d7825b1c14d0724bfd1711082b943}{m\+\_\+discriminator\+Id}
+\begin{DoxyCompactList}\small\item\em the field name used to discriminate sub-\/segmentations \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field_value}{Bit\+Field\+Value} $\ast$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a5d86769ef20468667fbc44fc6d8b2a4e}{m\+\_\+discriminator}
+\begin{DoxyCompactList}\small\item\em Bitfield corresponding to dicriminator identifier. \end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_aa78b5218bf4246b81cf5e74a1233184c}{m\+\_\+debug}
+\begin{DoxyCompactList}\small\item\em Debug flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
-Wrapper to support multiple segmentations. \begin{DoxyAuthor}{Author}
-M.Frank 
+Wrapper to support multiple segmentations. 
+
+\begin{DoxyAuthor}{Author}
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
-Definition at line 30 of file MultiSegmentation.h.
+Definition at line 30 of file Multi\+Segmentation.\+h.
+
+
 
 \subsection{Member Typedef Documentation}
-\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a083ba7cc081c5c3c47cafac5980100f8}{
-\index{DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}!Segmentations@{Segmentations}}
-\index{Segmentations@{Segmentations}!DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}}
-\subsubsection[{Segmentations}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf Entry}$>$ {\bf DD4hep::DDSegmentation::MultiSegmentation::Segmentations}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a083ba7cc081c5c3c47cafac5980100f8}
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a083ba7cc081c5c3c47cafac5980100f8}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a083ba7cc081c5c3c47cafac5980100f8} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}!Segmentations@{Segmentations}}
+\index{Segmentations@{Segmentations}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}}
+\subsubsection{\texorpdfstring{Segmentations}{Segmentations}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_1_1_entry}{Entry}$>$ \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a083ba7cc081c5c3c47cafac5980100f8}{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::\+Segmentations}}
 
 
-Definition at line 37 of file MultiSegmentation.h.
+
+Definition at line 37 of file Multi\+Segmentation.\+h.
+
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_ad1a80e739f693a231afc09295a565e85}{
-\index{DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}!MultiSegmentation@{MultiSegmentation}}
-\index{MultiSegmentation@{MultiSegmentation}!DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}}
-\subsubsection[{MultiSegmentation}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDSegmentation::MultiSegmentation::MultiSegmentation (const std::string \& {\em cellEncoding} = {\ttfamily \char`\"{}\char`\"{}})}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_ad1a80e739f693a231afc09295a565e85}
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_ad1a80e739f693a231afc09295a565e85}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_ad1a80e739f693a231afc09295a565e85} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}!Multi\+Segmentation@{Multi\+Segmentation}}
+\index{Multi\+Segmentation@{Multi\+Segmentation}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}}
+\subsubsection{\texorpdfstring{Multi\+Segmentation()}{MultiSegmentation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::\+Multi\+Segmentation (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{cell\+Encoding = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
 
 
-Default constructor passing the encoding string. \hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a2d73598a701bfad32ba2be3793799bd8}{
-\index{DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}!MultiSegmentation@{MultiSegmentation}}
-\index{MultiSegmentation@{MultiSegmentation}!DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}}
-\subsubsection[{MultiSegmentation}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDSegmentation::MultiSegmentation::MultiSegmentation ({\bf BitField64} $\ast$ {\em decoder})}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a2d73598a701bfad32ba2be3793799bd8}
+
+Default constructor passing the encoding string. 
+
+default constructor using an encoding string 
+
+Definition at line 18 of file Multi\+Segmentation.\+cpp.
+
+
+
+References D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::\+\_\+description, D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::\+\_\+type, and m\+\_\+discriminator\+Id.
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a2d73598a701bfad32ba2be3793799bd8}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a2d73598a701bfad32ba2be3793799bd8} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}!Multi\+Segmentation@{Multi\+Segmentation}}
+\index{Multi\+Segmentation@{Multi\+Segmentation}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}}
+\subsubsection{\texorpdfstring{Multi\+Segmentation()}{MultiSegmentation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::\+Multi\+Segmentation (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field64}{Bit\+Field64} $\ast$}]{decoder }\end{DoxyParamCaption})}
+
 
 
 Default constructor used by derived classes passing an existing decoder. 
 
-Definition at line 29 of file MultiSegmentation.cpp.
-
-References DD4hep::DDSegmentation::Segmentation::\_\-description, DD4hep::DDSegmentation::Segmentation::\_\-type, and m\_\-discriminatorId.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_ac59d1f2a2145181f48c0c7ffdd13a5ba}{
-\index{DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}!$\sim$MultiSegmentation@{$\sim$MultiSegmentation}}
-\index{$\sim$MultiSegmentation@{$\sim$MultiSegmentation}!DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}}
-\subsubsection[{$\sim$MultiSegmentation}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::DDSegmentation::MultiSegmentation::$\sim$MultiSegmentation ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_ac59d1f2a2145181f48c0c7ffdd13a5ba}
 
 
-Default destructor. destructor 
+Definition at line 29 of file Multi\+Segmentation.\+cpp.
 
-Definition at line 40 of file MultiSegmentation.cpp.
 
-References m\_\-segmentations.
+
+References D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::\+\_\+description, D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::\+\_\+type, and m\+\_\+discriminator\+Id.
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_ac59d1f2a2145181f48c0c7ffdd13a5ba}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_ac59d1f2a2145181f48c0c7ffdd13a5ba} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}!````~Multi\+Segmentation@{$\sim$\+Multi\+Segmentation}}
+\index{````~Multi\+Segmentation@{$\sim$\+Multi\+Segmentation}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}}
+\subsubsection{\texorpdfstring{$\sim$\+Multi\+Segmentation()}{~MultiSegmentation()}}
+{\footnotesize\ttfamily D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::$\sim$\+Multi\+Segmentation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Default destructor. 
+
+destructor 
+
+Definition at line 40 of file Multi\+Segmentation.\+cpp.
+
+
+
+References m\+\_\+segmentations.
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_aa92e91f45ba11b074fd6cafb87e15325}{
-\index{DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}!addSubsegmentation@{addSubsegmentation}}
-\index{addSubsegmentation@{addSubsegmentation}!DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}}
-\subsubsection[{addSubsegmentation}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::MultiSegmentation::addSubsegmentation (long {\em key\_\-min}, \/  long {\em key\_\-max}, \/  {\bf Segmentation} $\ast$ {\em entry})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_aa92e91f45ba11b074fd6cafb87e15325}
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_aa92e91f45ba11b074fd6cafb87e15325}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_aa92e91f45ba11b074fd6cafb87e15325} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}!add\+Subsegmentation@{add\+Subsegmentation}}
+\index{add\+Subsegmentation@{add\+Subsegmentation}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}}
+\subsubsection{\texorpdfstring{add\+Subsegmentation()}{addSubsegmentation()}}
+{\footnotesize\ttfamily void D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::add\+Subsegmentation (\begin{DoxyParamCaption}\item[{long}]{key\+\_\+min,  }\item[{long}]{key\+\_\+max,  }\item[{\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation}{Segmentation} $\ast$}]{entry }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
-Add subsegmentation. Add subsegmentation. Call only valid for Multi-\/segmentations. Default implementation throws an exception. 
 
-Definition at line 47 of file MultiSegmentation.cpp.
+Add subsegmentation. 
 
-References DD4hep::DDSegmentation::MultiSegmentation::Entry::key\_\-max, DD4hep::DDSegmentation::MultiSegmentation::Entry::key\_\-min, m\_\-segmentations, and DD4hep::DDSegmentation::MultiSegmentation::Entry::segmentation.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a2762cc8dd45fdfcab8aa8dfaea47e7fd}{
-\index{DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}!cellDimensions@{cellDimensions}}
-\index{cellDimensions@{cellDimensions}!DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}}
-\subsubsection[{cellDimensions}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ DD4hep::DDSegmentation::MultiSegmentation::cellDimensions (const {\bf CellID} \& {\em cellID}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a2762cc8dd45fdfcab8aa8dfaea47e7fd}
+Add subsegmentation. Call only valid for Multi-\/segmentations. Default implementation throws an exception. 
+
+Reimplemented from \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a881469fb51d55c2119e0a94672cb62da}{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation}.
 
 
-Returns a vector$<$double$>$ of the cellDimensions of the given cell ID in natural order of dimensions, e.g., dx/dy/dz, or dr/r$\ast$dPhi. 
+
+Definition at line 47 of file Multi\+Segmentation.\+cpp.
+
+
+
+References e, D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::\+Entry\+::key\+\_\+max, D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::\+Entry\+::key\+\_\+min, m\+\_\+segmentations, and D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::\+Entry\+::segmentation.
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a2e0625412d4b05158509a3d1e45dc1e7}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a2e0625412d4b05158509a3d1e45dc1e7} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}!cell\+Dimensions@{cell\+Dimensions}}
+\index{cell\+Dimensions@{cell\+Dimensions}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}}
+\subsubsection{\texorpdfstring{cell\+Dimensions()}{cellDimensions()}}
+{\footnotesize\ttfamily vector$<$ double $>$ D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::cell\+Dimensions (\begin{DoxyParamCaption}\item[{const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{Cell\+ID} \&}]{cell\+ID }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns a vector$<$double$>$ of the cell\+Dimensions of the given cell ID in natural order of dimensions, e.\+g., dx/dy/dz, or dr/r$\ast$d\+Phi. 
+
+
 \begin{DoxyParams}{Parameters}
-\item[{\em cellID}]cellID of the cell for which parameters are returned \end{DoxyParams}
+{\em cell\+ID} & cell\+ID of the cell for which parameters are returned \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-vector$<$double$>$ in natural order of dimensions, e.g., dx/dy/dz, or dr/r$\ast$dPhi 
+vector$<$double$>$ in natural order of dimensions, e.\+g., dx/dy/dz, or dr/r$\ast$d\+Phi 
 \end{DoxyReturn}
 
 
-Reimplemented from \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a9710f4942d7f6b52ae5342652e17c88d}{DD4hep::DDSegmentation::Segmentation}.
+Reimplemented from \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ac2119ba64c9805751e08b6100ef6fee6}{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation}.
 
-Definition at line 96 of file MultiSegmentation.cpp.
 
-References DD4hep::DDSegmentation::Segmentation::cellDimensions(), and subsegmentation().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_aefbdc896e43100b7781e07dafc9a9fec}{
-\index{DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}!cellID@{cellID}}
-\index{cellID@{cellID}!DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}}
-\subsubsection[{cellID}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CellID} DD4hep::DDSegmentation::MultiSegmentation::cellID (const {\bf Vector3D} \& {\em localPosition}, \/  const {\bf Vector3D} \& {\em globalPosition}, \/  const {\bf VolumeID} \& {\em volumeID}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_aefbdc896e43100b7781e07dafc9a9fec}
+
+Definition at line 96 of file Multi\+Segmentation.\+cpp.
+
+
+
+References D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::cell\+Dimensions(), R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+S\+E\+G\+M\+E\+N\+T\+A\+T\+I\+ON, and subsegmentation().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a3e054169c43049547cdd67e4f2f60105}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a3e054169c43049547cdd67e4f2f60105} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}!cell\+ID@{cell\+ID}}
+\index{cell\+ID@{cell\+ID}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}}
+\subsubsection{\texorpdfstring{cell\+I\+D()}{cellID()}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{Cell\+ID} D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::cell\+ID (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \&}]{local\+Position,  }\item[{const \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} \&}]{global\+Position,  }\item[{const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_a61a6833a18d1800bdef176595f83e3ba}{Volume\+ID} \&}]{volume\+ID }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 determine the cell ID based on the position 
 
-Implements \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ad5a60953d96d409850d8192f64f8ce3c}{DD4hep::DDSegmentation::Segmentation}.
 
-Definition at line 92 of file MultiSegmentation.cpp.
 
-References DD4hep::DDSegmentation::Segmentation::cellID(), and subsegmentation().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a4dbbd970a59a21ac2da3b83ab2782d95}{
-\index{DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}!discriminator@{discriminator}}
-\index{discriminator@{discriminator}!DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}}
-\subsubsection[{discriminator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BitFieldValue}$\ast$ DD4hep::DDSegmentation::MultiSegmentation::discriminator () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a4dbbd970a59a21ac2da3b83ab2782d95}
+Implements \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ad5a60953d96d409850d8192f64f8ce3c}{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation}.
+
+
+
+Definition at line 92 of file Multi\+Segmentation.\+cpp.
+
+
+
+References D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::cell\+I\+D(), and subsegmentation().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_afec54824e5d7d0ec1cb9077b2e215c72}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_afec54824e5d7d0ec1cb9077b2e215c72} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}!discriminator@{discriminator}}
+\index{discriminator@{discriminator}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}}
+\subsubsection{\texorpdfstring{discriminator()}{discriminator()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field_value}{Bit\+Field\+Value}$\ast$ D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::discriminator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Discriminating bitfield entry. 
 
-Definition at line 86 of file MultiSegmentation.h.
 
-References m\_\-discriminator.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a4be6f41c8a5f08fec8c2a5cc3cb47e6c}{
-\index{DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}!discriminatorName@{discriminatorName}}
-\index{discriminatorName@{discriminatorName}!DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}}
-\subsubsection[{discriminatorName}]{\setlength{\rightskip}{0pt plus 5cm}const std::string\& DD4hep::DDSegmentation::MultiSegmentation::discriminatorName () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a4be6f41c8a5f08fec8c2a5cc3cb47e6c}
+
+Definition at line 86 of file Multi\+Segmentation.\+h.
+
+
+
+References D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::decoder(), m\+\_\+discriminator, and set\+Decoder().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a6b12b7c8e81de25c22aafee61b5821eb}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a6b12b7c8e81de25c22aafee61b5821eb} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}!discriminator\+Name@{discriminator\+Name}}
+\index{discriminator\+Name@{discriminator\+Name}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}}
+\subsubsection{\texorpdfstring{discriminator\+Name()}{discriminatorName()}}
+{\footnotesize\ttfamily const std\+::string\& D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::discriminator\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 access the field name used to discriminate sub-\/segmentations 
 
-Definition at line 83 of file MultiSegmentation.h.
 
-References m\_\-discriminatorId.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_abbcc00c36274bb97c5ff3d01d64e45b6}{
-\index{DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}!position@{position}}
-\index{position@{position}!DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}}
-\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector3D} DD4hep::DDSegmentation::MultiSegmentation::position (const {\bf CellID} \& {\em cellID}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_abbcc00c36274bb97c5ff3d01d64e45b6}
+
+Definition at line 83 of file Multi\+Segmentation.\+h.
+
+
+
+References m\+\_\+discriminator\+Id.
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a45377b4442211346de8bea2edfeb1bf4}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a45377b4442211346de8bea2edfeb1bf4} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}!position@{position}}
+\index{position@{position}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}}
+\subsubsection{\texorpdfstring{position()}{position()}}
+{\footnotesize\ttfamily \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{Vector3D} D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::position (\begin{DoxyParamCaption}\item[{const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{Cell\+ID} \&}]{cell\+ID }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 determine the position based on the cell ID 
 
-Implements \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a594fe6d78667415855858d083b64acad}{DD4hep::DDSegmentation::Segmentation}.
 
-Definition at line 87 of file MultiSegmentation.cpp.
 
-References DD4hep::DDSegmentation::Segmentation::position(), and subsegmentation().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a21a046717c1aae25d103dddeb2829cb9}{
-\index{DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}!setDecoder@{setDecoder}}
-\index{setDecoder@{setDecoder}!DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}}
-\subsubsection[{setDecoder}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::DDSegmentation::MultiSegmentation::setDecoder ({\bf BitField64} $\ast$ {\em decoder})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a21a046717c1aae25d103dddeb2829cb9}
+Implements \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_a594fe6d78667415855858d083b64acad}{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation}.
+
+
+
+Definition at line 87 of file Multi\+Segmentation.\+cpp.
+
+
+
+References D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::position(), and subsegmentation().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a21a046717c1aae25d103dddeb2829cb9}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a21a046717c1aae25d103dddeb2829cb9} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}!set\+Decoder@{set\+Decoder}}
+\index{set\+Decoder@{set\+Decoder}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}}
+\subsubsection{\texorpdfstring{set\+Decoder()}{setDecoder()}}
+{\footnotesize\ttfamily void D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::set\+Decoder (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field64}{Bit\+Field64} $\ast$}]{decoder }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Set the underlying decoder. 
 
-Reimplemented from \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ab5973bc06538d13b1991f55e40635fa0}{DD4hep::DDSegmentation::Segmentation}.
 
-Definition at line 56 of file MultiSegmentation.cpp.
 
-References m\_\-discriminator, m\_\-discriminatorId, and m\_\-segmentations.\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_aa5766661f6e3194f4bc782b84e7636be}{
-\index{DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}!subsegmentation@{subsegmentation}}
-\index{subsegmentation@{subsegmentation}!DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}}
-\subsubsection[{subsegmentation}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Segmentation} \& DD4hep::DDSegmentation::MultiSegmentation::subsegmentation (const {\bf CellID} \& {\em cellID}) const}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_aa5766661f6e3194f4bc782b84e7636be}
+Reimplemented from \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation_ab5973bc06538d13b1991f55e40635fa0}{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation}.
+
+
+
+Definition at line 56 of file Multi\+Segmentation.\+cpp.
+
+
+
+References m\+\_\+discriminator, m\+\_\+discriminator\+Id, m\+\_\+segmentations, and D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::set\+Decoder().
+
+
+
+Referenced by discriminator().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_ab92a5093c6c11598715a9af554475175}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_ab92a5093c6c11598715a9af554475175} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}!subsegmentation@{subsegmentation}}
+\index{subsegmentation@{subsegmentation}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}}
+\subsubsection{\texorpdfstring{subsegmentation()}{subsegmentation()}}
+{\footnotesize\ttfamily const \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_segmentation}{Segmentation} \& D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::subsegmentation (\begin{DoxyParamCaption}\item[{const \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation_ac7af071d85cb48820914434a07e21ba1}{Cell\+ID} \&}]{cell\+ID }\end{DoxyParamCaption}) const}
+
 
 
 Access subsegmentation by cell identifier. 
 
-Definition at line 64 of file MultiSegmentation.cpp.
 
-References DD4hep::DDSegmentation::MultiSegmentation::Entry::key\_\-max, DD4hep::DDSegmentation::MultiSegmentation::Entry::key\_\-min, m\_\-debug, m\_\-discriminator, m\_\-segmentations, DD4hep::DDSegmentation::Segmentation::name(), DD4hep::DDSegmentation::Segmentation::parameters(), s, DD4hep::DDSegmentation::MultiSegmentation::Entry::segmentation, and DD4hep::DDSegmentation::BitFieldValue::value().
 
-Referenced by cellDimensions(), cellID(), and position().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a8a5a0095cb0f92224d1e221449cdcad8}{
-\index{DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}!subSegmentations@{subSegmentations}}
-\index{subSegmentations@{subSegmentations}!DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}}
-\subsubsection[{subSegmentations}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Segmentations}\& DD4hep::DDSegmentation::MultiSegmentation::subSegmentations () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a8a5a0095cb0f92224d1e221449cdcad8}
+Definition at line 64 of file Multi\+Segmentation.\+cpp.
+
+
+
+References e, D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::\+Entry\+::key\+\_\+max, D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::\+Entry\+::key\+\_\+min, m\+\_\+debug, m\+\_\+discriminator, m\+\_\+segmentations, D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::name(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Segmentation\+::parameters(), s, D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::\+Entry\+::segmentation, and D\+D4hep\+::\+D\+D\+Segmentation\+::\+Bit\+Field\+Value\+::value().
+
+
+
+Referenced by cell\+Dimensions(), cell\+I\+D(), and position().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_ace27c57dfd4a10a4ef80f721f7d24f01}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_ace27c57dfd4a10a4ef80f721f7d24f01} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}!sub\+Segmentations@{sub\+Segmentations}}
+\index{sub\+Segmentations@{sub\+Segmentations}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}}
+\subsubsection{\texorpdfstring{sub\+Segmentations()}{subSegmentations()}}
+{\footnotesize\ttfamily const \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a083ba7cc081c5c3c47cafac5980100f8}{Segmentations}\& D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::sub\+Segmentations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 The underlying sub-\/segementations. 
 
-Definition at line 92 of file MultiSegmentation.h.
 
-References m\_\-segmentations.
+
+Definition at line 92 of file Multi\+Segmentation.\+h.
+
+
+
+References m\+\_\+segmentations.
+
+
 
 \subsection{Member Data Documentation}
-\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_aa78b5218bf4246b81cf5e74a1233184c}{
-\index{DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}!m\_\-debug@{m\_\-debug}}
-\index{m\_\-debug@{m\_\-debug}!DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}}
-\subsubsection[{m\_\-debug}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::DDSegmentation::MultiSegmentation::m\_\-debug}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_aa78b5218bf4246b81cf5e74a1233184c}
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_aa78b5218bf4246b81cf5e74a1233184c}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_aa78b5218bf4246b81cf5e74a1233184c} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}!m\+\_\+debug@{m\+\_\+debug}}
+\index{m\+\_\+debug@{m\+\_\+debug}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}}
+\subsubsection{\texorpdfstring{m\+\_\+debug}{m\_debug}}
+{\footnotesize\ttfamily int D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::m\+\_\+debug\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Debug flags. 
 
-Definition at line 50 of file MultiSegmentation.h.
 
-Referenced by subsegmentation().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a5d86769ef20468667fbc44fc6d8b2a4e}{
-\index{DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}!m\_\-discriminator@{m\_\-discriminator}}
-\index{m\_\-discriminator@{m\_\-discriminator}!DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}}
-\subsubsection[{m\_\-discriminator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BitFieldValue}$\ast$ {\bf DD4hep::DDSegmentation::MultiSegmentation::m\_\-discriminator}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a5d86769ef20468667fbc44fc6d8b2a4e}
+
+Definition at line 50 of file Multi\+Segmentation.\+h.
+
+
+
+Referenced by subsegmentation().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a5d86769ef20468667fbc44fc6d8b2a4e}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a5d86769ef20468667fbc44fc6d8b2a4e} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}!m\+\_\+discriminator@{m\+\_\+discriminator}}
+\index{m\+\_\+discriminator@{m\+\_\+discriminator}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}}
+\subsubsection{\texorpdfstring{m\+\_\+discriminator}{m\_discriminator}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_bit_field_value}{Bit\+Field\+Value}$\ast$ D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::m\+\_\+discriminator\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Bitfield corresponding to dicriminator identifier. 
 
-Definition at line 47 of file MultiSegmentation.h.
 
-Referenced by discriminator(), setDecoder(), and subsegmentation().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a922d7825b1c14d0724bfd1711082b943}{
-\index{DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}!m\_\-discriminatorId@{m\_\-discriminatorId}}
-\index{m\_\-discriminatorId@{m\_\-discriminatorId}!DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}}
-\subsubsection[{m\_\-discriminatorId}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::DDSegmentation::MultiSegmentation::m\_\-discriminatorId}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a922d7825b1c14d0724bfd1711082b943}
+
+Definition at line 47 of file Multi\+Segmentation.\+h.
+
+
+
+Referenced by discriminator(), set\+Decoder(), and subsegmentation().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a922d7825b1c14d0724bfd1711082b943}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a922d7825b1c14d0724bfd1711082b943} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}!m\+\_\+discriminator\+Id@{m\+\_\+discriminator\+Id}}
+\index{m\+\_\+discriminator\+Id@{m\+\_\+discriminator\+Id}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}}
+\subsubsection{\texorpdfstring{m\+\_\+discriminator\+Id}{m\_discriminatorId}}
+{\footnotesize\ttfamily std\+::string D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::m\+\_\+discriminator\+Id\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 the field name used to discriminate sub-\/segmentations 
 
-Definition at line 44 of file MultiSegmentation.h.
 
-Referenced by discriminatorName(), MultiSegmentation(), and setDecoder().\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a9af45d1b08e9f34c17ea27dcdf2e1019}{
-\index{DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}!m\_\-segmentations@{m\_\-segmentations}}
-\index{m\_\-segmentations@{m\_\-segmentations}!DD4hep::DDSegmentation::MultiSegmentation@{DD4hep::DDSegmentation::MultiSegmentation}}
-\subsubsection[{m\_\-segmentations}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Segmentations} {\bf DD4hep::DDSegmentation::MultiSegmentation::m\_\-segmentations}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a9af45d1b08e9f34c17ea27dcdf2e1019}
+
+Definition at line 44 of file Multi\+Segmentation.\+h.
+
+
+
+Referenced by discriminator\+Name(), Multi\+Segmentation(), and set\+Decoder().
+
+\hypertarget{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a9af45d1b08e9f34c17ea27dcdf2e1019}{}\label{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a9af45d1b08e9f34c17ea27dcdf2e1019} 
+\index{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}!m\+\_\+segmentations@{m\+\_\+segmentations}}
+\index{m\+\_\+segmentations@{m\+\_\+segmentations}!D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation@{D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation}}
+\subsubsection{\texorpdfstring{m\+\_\+segmentations}{m\_segmentations}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_d_d_segmentation_1_1_multi_segmentation_a083ba7cc081c5c3c47cafac5980100f8}{Segmentations} D\+D4hep\+::\+D\+D\+Segmentation\+::\+Multi\+Segmentation\+::m\+\_\+segmentations\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Sub-\/segmentaion container. 
 
-Definition at line 41 of file MultiSegmentation.h.
 
-Referenced by addSubsegmentation(), setDecoder(), subsegmentation(), subSegmentations(), and $\sim$MultiSegmentation().
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+Definition at line 41 of file Multi\+Segmentation.\+h.
+
+
+
+Referenced by add\+Subsegmentation(), set\+Decoder(), subsegmentation(), sub\+Segmentations(), and $\sim$\+Multi\+Segmentation().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDSegmentation/include/DDSegmentation/\hyperlink{_d_d_segmentation_2include_2_d_d_segmentation_2_multi_segmentation_8h}{MultiSegmentation.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDSegmentation/src/\hyperlink{_d_d_segmentation_2src_2_multi_segmentation_8cpp}{MultiSegmentation.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Segmentation/include/\+D\+D\+Segmentation/\hyperlink{_d_d_segmentation_2include_2_d_d_segmentation_2_multi_segmentation_8h}{Multi\+Segmentation.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Segmentation/src/\hyperlink{_d_d_segmentation_2src_2_multi_segmentation_8cpp}{Multi\+Segmentation.\+cpp}\end{DoxyCompactItemize}

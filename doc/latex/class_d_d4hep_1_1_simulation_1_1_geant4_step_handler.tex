@@ -1,802 +1,1106 @@
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler}{
-\section{DD4hep::Simulation::Geant4StepHandler Class Reference}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler}\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler}{}\section{D\+D4hep\+:\+:Simulation\+:\+:Geant4\+Step\+Handler Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler}\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
 
 
-Helper class to ease the extraction of information from a G4Step object.  
+Helper class to ease the extraction of information from a G4\+Step object.  
 
 
-{\ttfamily \#include $<$Geant4StepHandler.h$>$}\subsection*{Public Member Functions}
+
+
+{\ttfamily \#include $<$Geant4\+Step\+Handler.\+h$>$}
+
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aa523240f8dd670751a61d26b02c4e0a7}{Geant4StepHandler} (const G4Step $\ast$\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s})
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aa523240f8dd670751a61d26b02c4e0a7}{Geant4\+Step\+Handler} (const G4\+Step $\ast$\hyperlink{_volumes_8cpp_a17ca6bfc8040d695d3cada22a4763d40}{s})
 \item 
-G4ParticleDefinition $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a68f835da79e638dc11306c417bc9495b}{trackDef} () const 
+G4\+Particle\+Definition $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a989b3f079f3d153718d381d766bb2a58}{track\+Def} () const
 \item 
-int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ac3bbde8d1c91b9375c00cfc3b65fac23}{trkPdgID} () const 
+int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a30aa9c15093a6ffef6402e1a41a1c82f}{trk\+Pdg\+ID} () const
 \item 
-const char $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a9e603d8e2f5db29921955409b8fd55be}{preStepStatus} () const 
-\begin{DoxyCompactList}\small\item\em Returns the pre-\/step status in form of a string. \item\end{DoxyCompactList}\item 
-const char $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a607960c9505518f75ad1c9feb3afa935}{postStepStatus} () const 
-\begin{DoxyCompactList}\small\item\em Returns the post-\/step status in form of a string. \item\end{DoxyCompactList}\item 
-double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_addaa9eb154cfccd6500e81a47fb637b0}{totalEnergy} () const 
-\begin{DoxyCompactList}\small\item\em Returns total energy deposit. \item\end{DoxyCompactList}\item 
-\hyperlink{namespace_d_d4hep_1_1_simulation_ad6fd94b3439e31d1ba4b2e640d578558}{Position} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aaa60daae1bdca84d9dee8e7eb4585f75}{prePos} () const 
-\begin{DoxyCompactList}\small\item\em Returns the pre-\/step position. \item\end{DoxyCompactList}\item 
-const G4ThreeVector \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a1cecfe16026e80f0b803b3d113b8e535}{prePosG4} () const 
-\begin{DoxyCompactList}\small\item\em Returns the pre-\/step position as a G4ThreeVector. \item\end{DoxyCompactList}\item 
-\hyperlink{namespace_d_d4hep_1_1_simulation_ad6fd94b3439e31d1ba4b2e640d578558}{Position} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a93fb68b4ef3a4172a19b483d77d87b01}{postPos} () const 
-\begin{DoxyCompactList}\small\item\em Returns the post-\/step position. \item\end{DoxyCompactList}\item 
-const G4ThreeVector \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a41cd79af212c7cab9d2bb5a9d070bf0f}{postPosG4} () const 
-\begin{DoxyCompactList}\small\item\em Returns the post-\/step position as a G4ThreeVector. \item\end{DoxyCompactList}\item 
-\hyperlink{namespace_d_d4hep_1_1_simulation_ad6fd94b3439e31d1ba4b2e640d578558}{Position} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a4d4f10349d7e13492f237f88c9b47fc3}{avgPosition} () const 
-\begin{DoxyCompactList}\small\item\em Average position vector of the step. \item\end{DoxyCompactList}\item 
-\hyperlink{namespace_d_d4hep_1_1_simulation_ad6fd94b3439e31d1ba4b2e640d578558}{Position} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aa44b96c9905fb7da6a8a8dd95b39abea}{direction} () const 
-\begin{DoxyCompactList}\small\item\em Direction calculated from the post-\/ and pre-\/position ofthe step. \item\end{DoxyCompactList}\item 
-\hyperlink{namespace_d_d4hep_1_1_simulation_aead01eb580dc503a5abba194d179c963}{Momentum} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a3262383310d646a583768f7b408a2d94}{preMom} () const 
+const char $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_abbe2109ee72c4bd038db33c7f9b55bf1}{pre\+Step\+Status} () const
+\begin{DoxyCompactList}\small\item\em Returns the pre-\/step status in form of a string. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a2e267e523aefa237ace0474ab22a7b87}{post\+Step\+Status} () const
+\begin{DoxyCompactList}\small\item\em Returns the post-\/step status in form of a string. \end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a1945532b5c538c979b75f598dd1f54d0}{total\+Energy} () const
+\begin{DoxyCompactList}\small\item\em Returns total energy deposit. \end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ad168390a8f6da55740c092686d2c9f84}{pre\+Pos} () const
+\begin{DoxyCompactList}\small\item\em Returns the pre-\/step position. \end{DoxyCompactList}\item 
+const G4\+Three\+Vector \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a087079e78925eeaedf2e20c394c5c820}{pre\+Pos\+G4} () const
+\begin{DoxyCompactList}\small\item\em Returns the pre-\/step position as a G4\+Three\+Vector. \end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a41172681a0ca6e6aa21e99df5af11be3}{post\+Pos} () const
+\begin{DoxyCompactList}\small\item\em Returns the post-\/step position. \end{DoxyCompactList}\item 
+const G4\+Three\+Vector \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a8724fb0d717e73716f12a30a851a6b3f}{post\+Pos\+G4} () const
+\begin{DoxyCompactList}\small\item\em Returns the post-\/step position as a G4\+Three\+Vector. \end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a876eeb25864f93069d4bd2227d64d598}{avg\+Position} () const
+\begin{DoxyCompactList}\small\item\em Average position vector of the step. \end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a14b596b04db07b10254b26148e28fcb9}{direction} () const
+\begin{DoxyCompactList}\small\item\em Direction calculated from the post-\/ and pre-\/position ofthe step. \end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_1_1_simulation_aead01eb580dc503a5abba194d179c963}{Momentum} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ac04cff5a17eae75d0ce7ff1e496e5885}{pre\+Mom} () const
 \item 
-\hyperlink{namespace_d_d4hep_1_1_simulation_aead01eb580dc503a5abba194d179c963}{Momentum} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a20327303625dbb2ae209885d2b098564}{postMom} () const 
+\hyperlink{namespace_d_d4hep_1_1_simulation_aead01eb580dc503a5abba194d179c963}{Momentum} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a076e5f37eebfe47622756fe81069ee89}{post\+Mom} () const
 \item 
-\hyperlink{namespace_d_d4hep_1_1_simulation_aead01eb580dc503a5abba194d179c963}{Momentum} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ae7c77f7a22ebb78200c03e5efaa6e18c}{trkMom} () const 
+\hyperlink{namespace_d_d4hep_1_1_simulation_aead01eb580dc503a5abba194d179c963}{Momentum} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a28d90fb5cec49ff63a1741526a1e4d02}{trk\+Mom} () const
 \item 
-double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a35ffa3abf0d0d88425b1e6bb0f686d97}{deposit} () const 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_af06796925f270fe69057201b9b815657}{deposit} () const
 \item 
-double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ab5ff5a25a2af70cd601dc9cf0d4c4447}{stepLength} () const 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a4d10cc802cc8a07492695d7aff68a87f}{step\+Length} () const
 \item 
-int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a6b639a13014e835db1a7b4a1e69469d1}{trkID} () const 
+int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aeebb8ecf7ce627d87e08d61b712e32b5}{trk\+ID} () const
 \item 
-int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a3c5bcd136c18f2269c58e81f36e97eae}{parentID} () const 
+int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a2bec797f0c464cf576382c62b900ff40}{parent\+ID} () const
 \item 
-double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a1962e84c22f2078e94e634fd7244172c}{trkTime} () const 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aab3ccbc05dede7d3b67c0623cfbaadfb}{trk\+Time} () const
 \item 
-double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a959289c814f1eb86b0ab9968f6fd84c5}{trkEnergy} () const 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a41eb8945c98180d3da922d1781504bad}{trk\+Energy} () const
 \item 
-double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_afd5bdb880e61a61270f3fb84d606a5d9}{trkKineEnergy} () const 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a9b1be56b8cea41c5e210cf2b53bf7763}{trk\+Kine\+Energy} () const
 \item 
-int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aba809cb57c873101356094271008c068}{trkStatus} () const 
+int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ab1a42f1b82a5b21c01681c6c4c3a61fa}{trk\+Status} () const
 \item 
-bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a8960f975f297caa7c6d227e329ec4f95}{trkAlive} () const 
+bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a37df3c141c8f16fbad4f17bf32a4538b}{trk\+Alive} () const
 \item 
-const G4VProcess $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a6935bbfe146b71fd4019a5ec0ea397a3}{trkProcess} () const 
+const G4\+V\+Process $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_acffd1bd0147db2b8b82802a21ce11e35}{trk\+Process} () const
 \item 
-const G4VTouchable $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ae808f346ce65f89c398ea839327b5c2f}{preTouchable} () const 
+const G4\+V\+Touchable $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ad2ab7468011fc1d570e24345d458b7fc}{pre\+Touchable} () const
 \item 
-const G4VTouchable $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a886d0adf0ab8439d86f59505f92d7389}{postTouchable} () const 
+const G4\+V\+Touchable $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a40e0ed6100cd44d95d7ac4f07f938a6d}{post\+Touchable} () const
 \item 
-const char $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_afee3ff3d85321b5bf9a453d7c2ada632}{volName} (const G4StepPoint $\ast$p, const char $\ast$undefined=\char`\"{}\char`\"{}) const 
+const char $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ad9fc43129fcb070b2198d3dc37ad1242}{vol\+Name} (const G4\+Step\+Point $\ast$p, const char $\ast$undefined=\char`\"{}\char`\"{}) const
 \item 
-G4VPhysicalVolume $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a95ee141aadb5e72b9bd204b44ef62f0a}{volume} (const G4StepPoint $\ast$p) const 
+G4\+V\+Physical\+Volume $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ae2a51d281ec1ae871d450ed8076dec71}{volume} (const G4\+Step\+Point $\ast$p) const
 \item 
-G4VSolid $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a8ce2c4056ad81f1d2500abfa819a2198}{solid} (const G4StepPoint $\ast$p) const 
+G4\+V\+Solid $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aa132f6298c07600c95aa3a6f92f26985}{solid} (const G4\+Step\+Point $\ast$p) const
 \item 
-G4VPhysicalVolume $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ab484afdaf7e593c1f2f41e70aaf9cb71}{physvol} (const G4StepPoint $\ast$p) const 
+G4\+V\+Physical\+Volume $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a426ef22f777e563d8aaae3630372f913}{physvol} (const G4\+Step\+Point $\ast$p) const
 \item 
-G4LogicalVolume $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a60c5a97f61fc6aa52224c474632aed47}{logvol} (const G4StepPoint $\ast$p) const 
+G4\+Logical\+Volume $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a53a2b41474e29e847e68fec64060bf60}{logvol} (const G4\+Step\+Point $\ast$p) const
 \item 
-\hyperlink{class_g4_v_sensitive_detector}{G4VSensitiveDetector} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a6b7355a5af216dddcf41af1c1d9e2b8d}{sd} (const G4StepPoint $\ast$p) const 
+\hyperlink{class_g4_v_sensitive_detector}{G4\+V\+Sensitive\+Detector} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a1d1ca52479f381ba0aea15ce64c6d09e}{sd} (const G4\+Step\+Point $\ast$p) const
 \item 
-const char $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a0bf72f4bb74c03b2489ab9c9b79e7a30}{sdName} (const G4StepPoint $\ast$p, const char $\ast$undefined=\char`\"{}\char`\"{}) const 
+const char $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a806c70983f2c58596a75099f8ac36395}{sd\+Name} (const G4\+Step\+Point $\ast$p, const char $\ast$undefined=\char`\"{}\char`\"{}) const
 \item 
-bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a180c0a67f1cc88eba63fbbcb4fe6f47d}{isSensitive} (const G4LogicalVolume $\ast$lv) const 
+bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aef01d884b1c2ca9e728e74e1b43a12fe}{is\+Sensitive} (const G4\+Logical\+Volume $\ast$lv) const
 \item 
-bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_afdd1be009c5f8aa81de959a8fc8c6f7d}{isSensitive} (const G4VPhysicalVolume $\ast$pv) const 
+bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_af411bcef115f2924a2966a19181c49c8}{is\+Sensitive} (const G4\+V\+Physical\+Volume $\ast$pv) const
 \item 
-bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ac3fdad18d7737b2c7b44969ccba8cb24}{isSensitive} (const G4StepPoint $\ast$point) const 
+bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a09217021b75c4be5ce4d33c4104d5b09}{is\+Sensitive} (const G4\+Step\+Point $\ast$point) const
 \item 
-G4VPhysicalVolume $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a39eab28ff81a1a24daea4b6a1e376dea}{preVolume} () const 
+G4\+V\+Physical\+Volume $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ac40ec64fd69ed915b95fb79cdc20c741}{pre\+Volume} () const
 \item 
-\hyperlink{class_g4_v_sensitive_detector}{G4VSensitiveDetector} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_afa4f53d4d2e41898f948baf79fabd29b}{preSD} () const 
+\hyperlink{class_g4_v_sensitive_detector}{G4\+V\+Sensitive\+Detector} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a7b3384fa3ce4d4465a79aa286371b4bb}{pre\+SD} () const
 \item 
-G4VPhysicalVolume $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a0d568a83cad6f9cb0a300c0426c551da}{postVolume} () const 
+G4\+V\+Physical\+Volume $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_afee73068f429b8f9956acad5580493a9}{post\+Volume} () const
 \item 
-\hyperlink{class_g4_v_sensitive_detector}{G4VSensitiveDetector} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a9974306f45eb485f2463808f0dd96280}{postSD} () const 
+\hyperlink{class_g4_v_sensitive_detector}{G4\+V\+Sensitive\+Detector} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_adb9d9942e898b61710985c58eda88972}{post\+SD} () const
 \item 
-bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_af92e626fd9c595d566a2ad50dc309fd0}{firstInVolume} () const 
+bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a96df262594297b7030eaac7ed154c622}{first\+In\+Volume} () const
 \item 
-bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_accb8e37cbde988e9c4b2da379d28779e}{lastInVolume} () const 
+bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a473152bc5d131b17fff220204f1a866c}{last\+In\+Volume} () const
 \item 
-\hyperlink{namespace_d_d4hep_1_1_simulation_ad6fd94b3439e31d1ba4b2e640d578558}{Position} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a4287f0adeca49bd4a4e6c5bc1054e1a1}{localToGlobal} (const \hyperlink{namespace_d_d4hep_1_1_simulation_ad6fd94b3439e31d1ba4b2e640d578558}{Position} \&local) const 
-\begin{DoxyCompactList}\small\item\em Coordinate transformation to global coordinates. \item\end{DoxyCompactList}\item 
-\hyperlink{namespace_d_d4hep_1_1_simulation_ad6fd94b3439e31d1ba4b2e640d578558}{Position} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aa2d8418b5a6009da51dc6c70cb7c22f2}{localToGlobal} (const \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{DDSegmentation::Vector3D} \&local) const 
-\begin{DoxyCompactList}\small\item\em Coordinate transformation to global coordinates. \item\end{DoxyCompactList}\item 
-\hyperlink{namespace_d_d4hep_1_1_simulation_ad6fd94b3439e31d1ba4b2e640d578558}{Position} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a8854ed1b3496d3630144f659f67d203e}{localToGlobal} (const G4ThreeVector \&local) const 
-\begin{DoxyCompactList}\small\item\em Coordinate transformation to global coordinates in MM. \item\end{DoxyCompactList}\item 
-\hyperlink{namespace_d_d4hep_1_1_simulation_ad6fd94b3439e31d1ba4b2e640d578558}{Position} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a6c3a63a6514cc13aace2f1d85ae3cef3}{localToGlobal} (double x, double y, double z) const 
-\begin{DoxyCompactList}\small\item\em Coordinate transformation to global coordinates in MM. \item\end{DoxyCompactList}\item 
-\hyperlink{namespace_d_d4hep_1_1_simulation_ad6fd94b3439e31d1ba4b2e640d578558}{Position} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_af8c0b11ac1954f94db1e3bd785c76227}{globalToLocal} (double x, double y, double z) const 
-\begin{DoxyCompactList}\small\item\em Coordinate transformation to local coordinates. \item\end{DoxyCompactList}\item 
-\hyperlink{namespace_d_d4hep_1_1_simulation_ad6fd94b3439e31d1ba4b2e640d578558}{Position} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ab13cf409429a7de0f2ecec3b4c944578}{globalToLocal} (const \hyperlink{namespace_d_d4hep_1_1_simulation_ad6fd94b3439e31d1ba4b2e640d578558}{Position} \&global) const 
-\begin{DoxyCompactList}\small\item\em Coordinate transformation to local coordinates. \item\end{DoxyCompactList}\item 
-\hyperlink{namespace_d_d4hep_1_1_simulation_ad6fd94b3439e31d1ba4b2e640d578558}{Position} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a90c665198f858b7bc5989b7cd92fe774}{globalToLocal} (const G4ThreeVector \&global) const 
-\begin{DoxyCompactList}\small\item\em Coordinate transformation to local coordinates. \item\end{DoxyCompactList}\item 
-G4ThreeVector \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ad08f4724ef8345d764de6313d1e121fa}{globalToLocalG4} (double x, double y, double z) const 
-\begin{DoxyCompactList}\small\item\em Coordinate transformation to local coordinates. \item\end{DoxyCompactList}\item 
-G4ThreeVector \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a1a0e03eb5215e033eb98538e6c963d6f}{globalToLocalG4} (const G4ThreeVector \&loc) const 
-\begin{DoxyCompactList}\small\item\em Coordinate transformation to local coordinates with G4 objects. \item\end{DoxyCompactList}\item 
-double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a35dae8faec24cfac1914db2e73c55bb2}{birkAttenuation} () const 
-\begin{DoxyCompactList}\small\item\em Apply BirksLaw. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a67ef04d7d190e233ae9f3a23d5aedf33}{doApplyBirksLaw} (void)
-\begin{DoxyCompactList}\small\item\em Set applyBirksLaw to ture. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a5b70d64c9a938c857e5b63fa996aaf1e}{local\+To\+Global} (const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&local) const
+\begin{DoxyCompactList}\small\item\em Coordinate transformation to global coordinates. \end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ab778e17a1f7038772c91d128c680f65b}{local\+To\+Global} (const \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{D\+D\+Segmentation\+::\+Vector3D} \&local) const
+\begin{DoxyCompactList}\small\item\em Coordinate transformation to global coordinates. \end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a9ea78bcf920fa47e9bbb84a71f91acfa}{local\+To\+Global} (const G4\+Three\+Vector \&local) const
+\begin{DoxyCompactList}\small\item\em Coordinate transformation to global coordinates in MM. \end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a8010afaef177a2734e709daa23e724c9}{local\+To\+Global} (double x, double y, double z) const
+\begin{DoxyCompactList}\small\item\em Coordinate transformation to global coordinates in MM. \end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a95c39168e580011edf1a247a1f2debb0}{global\+To\+Local} (double x, double y, double z) const
+\begin{DoxyCompactList}\small\item\em Coordinate transformation to local coordinates. \end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_acaf616fb9b9baa3c16a41995f810b985}{global\+To\+Local} (const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&global) const
+\begin{DoxyCompactList}\small\item\em Coordinate transformation to local coordinates. \end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a9d7db51a7a7d6bc11853a4dddb49cc1d}{global\+To\+Local} (const G4\+Three\+Vector \&global) const
+\begin{DoxyCompactList}\small\item\em Coordinate transformation to local coordinates. \end{DoxyCompactList}\item 
+G4\+Three\+Vector \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a2f746a7669e0ab4e52f39e4fbc2cd742}{global\+To\+Local\+G4} (double x, double y, double z) const
+\begin{DoxyCompactList}\small\item\em Coordinate transformation to local coordinates. \end{DoxyCompactList}\item 
+G4\+Three\+Vector \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ad606e21ce6d279416e75f3400e825207}{global\+To\+Local\+G4} (const G4\+Three\+Vector \&loc) const
+\begin{DoxyCompactList}\small\item\em Coordinate transformation to local coordinates with G4 objects. \end{DoxyCompactList}\item 
+double \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_af07e4f457781ff9350953c89e986fb9e}{birk\+Attenuation} () const
+\begin{DoxyCompactList}\small\item\em Apply Birks\+Law. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a67ef04d7d190e233ae9f3a23d5aedf33}{do\+Apply\+Birks\+Law} (void)
+\begin{DoxyCompactList}\small\item\em Set apply\+Birks\+Law to ture. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static const char $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a749fffe231a34f253d498edf989ae035}{stepStatus} (G4StepStatus status)
-\begin{DoxyCompactList}\small\item\em Returns the step status (argument) in form of a string. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+static const char $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a749fffe231a34f253d498edf989ae035}{step\+Status} (G4\+Step\+Status status)
+\begin{DoxyCompactList}\small\item\em Returns the step status (argument) in form of a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-const G4Step $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a5f8ecf6b8e58ab857df4d639d9b8f235}{step}
+const G4\+Step $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a5f8ecf6b8e58ab857df4d639d9b8f235}{step}
 \item 
-G4StepPoint $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a7c18f2d6e46ecbb380fbe0995029accb}{pre}
+G4\+Step\+Point $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a7c18f2d6e46ecbb380fbe0995029accb}{pre}
 \item 
-G4StepPoint $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aed9081f8334e95c40e321c14621c0a35}{post}
+G4\+Step\+Point $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aed9081f8334e95c40e321c14621c0a35}{post}
 \item 
-G4Track $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a8bb7d5d357693c499d319fdc1fa3b34b}{track}
+G4\+Track $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a8bb7d5d357693c499d319fdc1fa3b34b}{track}
 \item 
-bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ae14ced51d527345a4efed73a39ecd1c0}{applyBirksLaw}
+bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ae14ced51d527345a4efed73a39ecd1c0}{apply\+Birks\+Law}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Helper class to ease the extraction of information from a G4Step object. Helper/utility class to easily access Geant4 step information. Born by lazyness: Avoid typing millions of statements!
+Helper class to ease the extraction of information from a G4\+Step object. 
+
+Helper/utility class to easily access Geant4 step information. Born by lazyness\+: Avoid typing millions of statements!
 
 \begin{DoxyAuthor}{Author}
-M.Frank 
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
-Definition at line 47 of file Geant4StepHandler.h.
+Definition at line 47 of file Geant4\+Step\+Handler.\+h.
+
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aa523240f8dd670751a61d26b02c4e0a7}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!Geant4StepHandler@{Geant4StepHandler}}
-\index{Geant4StepHandler@{Geant4StepHandler}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{Geant4StepHandler}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4StepHandler::Geant4StepHandler (const G4Step $\ast$ {\em s})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aa523240f8dd670751a61d26b02c4e0a7}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aa523240f8dd670751a61d26b02c4e0a7}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aa523240f8dd670751a61d26b02c4e0a7} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!Geant4\+Step\+Handler@{Geant4\+Step\+Handler}}
+\index{Geant4\+Step\+Handler@{Geant4\+Step\+Handler}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{Geant4\+Step\+Handler()}{Geant4StepHandler()}}
+{\footnotesize\ttfamily D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::\+Geant4\+Step\+Handler (\begin{DoxyParamCaption}\item[{const G4\+Step $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
-Definition at line 54 of file Geant4StepHandler.h.
 
-References applyBirksLaw, post, pre, and track.
+Definition at line 54 of file Geant4\+Step\+Handler.\+h.
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a4d4f10349d7e13492f237f88c9b47fc3}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!avgPosition@{avgPosition}}
-\index{avgPosition@{avgPosition}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{avgPosition}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} DD4hep::Simulation::Geant4StepHandler::avgPosition () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a4d4f10349d7e13492f237f88c9b47fc3}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a876eeb25864f93069d4bd2227d64d598}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a876eeb25864f93069d4bd2227d64d598} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!avg\+Position@{avg\+Position}}
+\index{avg\+Position@{avg\+Position}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{avg\+Position()}{avgPosition()}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::avg\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Average position vector of the step. 
 
-Definition at line 99 of file Geant4StepHandler.h.
-
-References post, and pre.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a35dae8faec24cfac1914db2e73c55bb2}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!birkAttenuation@{birkAttenuation}}
-\index{birkAttenuation@{birkAttenuation}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{birkAttenuation}]{\setlength{\rightskip}{0pt plus 5cm}double Geant4StepHandler::birkAttenuation () const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a35dae8faec24cfac1914db2e73c55bb2}
 
 
-Apply BirksLaw. 
+Definition at line 99 of file Geant4\+Step\+Handler.\+h.
 
-Definition at line 115 of file Geant4StepHandler.cpp.
-
-References step.
-
-Referenced by totalEnergy().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a35ffa3abf0d0d88425b1e6bb0f686d97}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!deposit@{deposit}}
-\index{deposit@{deposit}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{deposit}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::Simulation::Geant4StepHandler::deposit () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a35ffa3abf0d0d88425b1e6bb0f686d97}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_af07e4f457781ff9350953c89e986fb9e}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_af07e4f457781ff9350953c89e986fb9e} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!birk\+Attenuation@{birk\+Attenuation}}
+\index{birk\+Attenuation@{birk\+Attenuation}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{birk\+Attenuation()}{birkAttenuation()}}
+{\footnotesize\ttfamily double Geant4\+Step\+Handler\+::birk\+Attenuation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
-Definition at line 129 of file Geant4StepHandler.h.
+
+Apply Birks\+Law. 
+
+
+
+Definition at line 115 of file Geant4\+Step\+Handler.\+cpp.
+
+
 
 References step.
 
-Referenced by DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::process(), and DD4hep::Simulation::Geant4EscapeCounter::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aa44b96c9905fb7da6a8a8dd95b39abea}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!direction@{direction}}
-\index{direction@{direction}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{direction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} DD4hep::Simulation::Geant4StepHandler::direction () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aa44b96c9905fb7da6a8a8dd95b39abea}
+
+
+Referenced by last\+In\+Volume(), and total\+Energy().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_af06796925f270fe69057201b9b815657}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_af06796925f270fe69057201b9b815657} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!deposit@{deposit}}
+\index{deposit@{deposit}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{deposit()}{deposit()}}
+{\footnotesize\ttfamily double D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::deposit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 129 of file Geant4\+Step\+Handler.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Escape\+Counter\+::process(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Action$<$ T $>$\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a14b596b04db07b10254b26148e28fcb9}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a14b596b04db07b10254b26148e28fcb9} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!direction@{direction}}
+\index{direction@{direction}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{direction()}{direction()}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Direction calculated from the post-\/ and pre-\/position ofthe step. 
 
-Definition at line 106 of file Geant4StepHandler.h.
-
-References post, and pre.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a67ef04d7d190e233ae9f3a23d5aedf33}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!doApplyBirksLaw@{doApplyBirksLaw}}
-\index{doApplyBirksLaw@{doApplyBirksLaw}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{doApplyBirksLaw}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Simulation::Geant4StepHandler::doApplyBirksLaw (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a67ef04d7d190e233ae9f3a23d5aedf33}
 
 
-Set applyBirksLaw to ture. 
-
-Definition at line 242 of file Geant4StepHandler.h.
-
-References applyBirksLaw.
-
-Referenced by DD4hep::Simulation::Geant4HitData::extractContribution().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_af92e626fd9c595d566a2ad50dc309fd0}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!firstInVolume@{firstInVolume}}
-\index{firstInVolume@{firstInVolume}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{firstInVolume}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Simulation::Geant4StepHandler::firstInVolume () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_af92e626fd9c595d566a2ad50dc309fd0}
+Definition at line 106 of file Geant4\+Step\+Handler.\+h.
 
 
-Definition at line 211 of file Geant4StepHandler.h.
 
-References step.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a90c665198f858b7bc5989b7cd92fe774}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!globalToLocal@{globalToLocal}}
-\index{globalToLocal@{globalToLocal}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{globalToLocal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Geant4StepHandler::globalToLocal (const G4ThreeVector \& {\em global}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a90c665198f858b7bc5989b7cd92fe774}
+References e.
 
-
-Coordinate transformation to local coordinates. 
-
-Definition at line 98 of file Geant4StepHandler.cpp.
-
-References globalToLocalG4().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ab13cf409429a7de0f2ecec3b4c944578}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!globalToLocal@{globalToLocal}}
-\index{globalToLocal@{globalToLocal}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{globalToLocal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Geant4StepHandler::globalToLocal (const {\bf Position} \& {\em global}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ab13cf409429a7de0f2ecec3b4c944578}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a67ef04d7d190e233ae9f3a23d5aedf33}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a67ef04d7d190e233ae9f3a23d5aedf33} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!do\+Apply\+Birks\+Law@{do\+Apply\+Birks\+Law}}
+\index{do\+Apply\+Birks\+Law@{do\+Apply\+Birks\+Law}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{do\+Apply\+Birks\+Law()}{doApplyBirksLaw()}}
+{\footnotesize\ttfamily void D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::do\+Apply\+Birks\+Law (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
-Coordinate transformation to local coordinates. 
 
-Definition at line 92 of file Geant4StepHandler.cpp.
+Set apply\+Birks\+Law to ture. 
 
-References globalToLocalG4().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_af8c0b11ac1954f94db1e3bd785c76227}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!globalToLocal@{globalToLocal}}
-\index{globalToLocal@{globalToLocal}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{globalToLocal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Geant4StepHandler::globalToLocal (double {\em x}, \/  double {\em y}, \/  double {\em z}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_af8c0b11ac1954f94db1e3bd785c76227}
+
+
+Definition at line 242 of file Geant4\+Step\+Handler.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Hit\+Data\+::extract\+Contribution().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a96df262594297b7030eaac7ed154c622}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a96df262594297b7030eaac7ed154c622} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!first\+In\+Volume@{first\+In\+Volume}}
+\index{first\+In\+Volume@{first\+In\+Volume}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{first\+In\+Volume()}{firstInVolume()}}
+{\footnotesize\ttfamily bool D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::first\+In\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 211 of file Geant4\+Step\+Handler.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a95c39168e580011edf1a247a1f2debb0}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a95c39168e580011edf1a247a1f2debb0} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!global\+To\+Local@{global\+To\+Local}}
+\index{global\+To\+Local@{global\+To\+Local}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{global\+To\+Local()}{globalToLocal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} Geant4\+Step\+Handler\+::global\+To\+Local (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{z }\end{DoxyParamCaption}) const}
+
 
 
 Coordinate transformation to local coordinates. 
 
-Definition at line 86 of file Geant4StepHandler.cpp.
-
-References globalToLocalG4().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a1a0e03eb5215e033eb98538e6c963d6f}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!globalToLocalG4@{globalToLocalG4}}
-\index{globalToLocalG4@{globalToLocalG4}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{globalToLocalG4}]{\setlength{\rightskip}{0pt plus 5cm}G4ThreeVector Geant4StepHandler::globalToLocalG4 (const G4ThreeVector \& {\em loc}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a1a0e03eb5215e033eb98538e6c963d6f}
 
 
-Coordinate transformation to local coordinates with G4 objects. Coordinate transformation to local coordinates. 
+Definition at line 86 of file Geant4\+Step\+Handler.\+cpp.
 
-Definition at line 109 of file Geant4StepHandler.cpp.
 
-References step.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ad08f4724ef8345d764de6313d1e121fa}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!globalToLocalG4@{globalToLocalG4}}
-\index{globalToLocalG4@{globalToLocalG4}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{globalToLocalG4}]{\setlength{\rightskip}{0pt plus 5cm}G4ThreeVector Geant4StepHandler::globalToLocalG4 (double {\em x}, \/  double {\em y}, \/  double {\em z}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ad08f4724ef8345d764de6313d1e121fa}
+
+References global\+To\+Local\+G4().
+
+
+
+Referenced by last\+In\+Volume().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_acaf616fb9b9baa3c16a41995f810b985}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_acaf616fb9b9baa3c16a41995f810b985} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!global\+To\+Local@{global\+To\+Local}}
+\index{global\+To\+Local@{global\+To\+Local}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{global\+To\+Local()}{globalToLocal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} Geant4\+Step\+Handler\+::global\+To\+Local (\begin{DoxyParamCaption}\item[{const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&}]{global }\end{DoxyParamCaption}) const}
+
 
 
 Coordinate transformation to local coordinates. 
 
-Definition at line 104 of file Geant4StepHandler.cpp.
-
-Referenced by globalToLocal(), and DD4hep::Simulation::TrackerWeighted::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ac3fdad18d7737b2c7b44969ccba8cb24}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!isSensitive@{isSensitive}}
-\index{isSensitive@{isSensitive}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{isSensitive}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Simulation::Geant4StepHandler::isSensitive (const G4StepPoint $\ast$ {\em point}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ac3fdad18d7737b2c7b44969ccba8cb24}
 
 
-Definition at line 196 of file Geant4StepHandler.h.
-
-References isSensitive(), and volume().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_afdd1be009c5f8aa81de959a8fc8c6f7d}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!isSensitive@{isSensitive}}
-\index{isSensitive@{isSensitive}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{isSensitive}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Simulation::Geant4StepHandler::isSensitive (const G4VPhysicalVolume $\ast$ {\em pv}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_afdd1be009c5f8aa81de959a8fc8c6f7d}
+Definition at line 92 of file Geant4\+Step\+Handler.\+cpp.
 
 
-Definition at line 193 of file Geant4StepHandler.h.
 
-References isSensitive().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a180c0a67f1cc88eba63fbbcb4fe6f47d}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!isSensitive@{isSensitive}}
-\index{isSensitive@{isSensitive}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{isSensitive}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Simulation::Geant4StepHandler::isSensitive (const G4LogicalVolume $\ast$ {\em lv}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a180c0a67f1cc88eba63fbbcb4fe6f47d}
+References global\+To\+Local\+G4().
 
-
-Definition at line 190 of file Geant4StepHandler.h.
-
-Referenced by isSensitive().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_accb8e37cbde988e9c4b2da379d28779e}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!lastInVolume@{lastInVolume}}
-\index{lastInVolume@{lastInVolume}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{lastInVolume}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Simulation::Geant4StepHandler::lastInVolume () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_accb8e37cbde988e9c4b2da379d28779e}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a9d7db51a7a7d6bc11853a4dddb49cc1d}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a9d7db51a7a7d6bc11853a4dddb49cc1d} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!global\+To\+Local@{global\+To\+Local}}
+\index{global\+To\+Local@{global\+To\+Local}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{global\+To\+Local()}{globalToLocal()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} Geant4\+Step\+Handler\+::global\+To\+Local (\begin{DoxyParamCaption}\item[{const G4\+Three\+Vector \&}]{global }\end{DoxyParamCaption}) const}
 
 
-Definition at line 214 of file Geant4StepHandler.h.
 
-References step.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a6c3a63a6514cc13aace2f1d85ae3cef3}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!localToGlobal@{localToGlobal}}
-\index{localToGlobal@{localToGlobal}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{localToGlobal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Geant4StepHandler::localToGlobal (double {\em x}, \/  double {\em y}, \/  double {\em z}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a6c3a63a6514cc13aace2f1d85ae3cef3}
+Coordinate transformation to local coordinates. 
 
 
-Coordinate transformation to global coordinates in MM. Coordinate transformation to global coordinates. 
 
-Definition at line 74 of file Geant4StepHandler.cpp.
-
-References localToGlobal().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a8854ed1b3496d3630144f659f67d203e}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!localToGlobal@{localToGlobal}}
-\index{localToGlobal@{localToGlobal}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{localToGlobal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Geant4StepHandler::localToGlobal (const G4ThreeVector \& {\em local}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a8854ed1b3496d3630144f659f67d203e}
+Definition at line 98 of file Geant4\+Step\+Handler.\+cpp.
 
 
-Coordinate transformation to global coordinates in MM. Coordinate transformation to global coordinates. 
 
-Definition at line 79 of file Geant4StepHandler.cpp.
+References global\+To\+Local\+G4().
 
-References step.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aa2d8418b5a6009da51dc6c70cb7c22f2}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!localToGlobal@{localToGlobal}}
-\index{localToGlobal@{localToGlobal}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{localToGlobal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Geant4StepHandler::localToGlobal (const {\bf DDSegmentation::Vector3D} \& {\em local}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aa2d8418b5a6009da51dc6c70cb7c22f2}
-
-
-Coordinate transformation to global coordinates. Coordinate transformation to global coordinate.
-
-Note: \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation}{DDSegmentation} points are units in CM! Conversion done inside! 
-
-Definition at line 64 of file Geant4StepHandler.cpp.
-
-References localToGlobal(), dd4hep::mm, DD4hep::DDSegmentation::Vector3D::X, DD4hep::DDSegmentation::Vector3D::Y, and DD4hep::DDSegmentation::Vector3D::Z.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a4287f0adeca49bd4a4e6c5bc1054e1a1}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!localToGlobal@{localToGlobal}}
-\index{localToGlobal@{localToGlobal}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{localToGlobal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Geant4StepHandler::localToGlobal (const {\bf Position} \& {\em local}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a4287f0adeca49bd4a4e6c5bc1054e1a1}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a2f746a7669e0ab4e52f39e4fbc2cd742}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a2f746a7669e0ab4e52f39e4fbc2cd742} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!global\+To\+Local\+G4@{global\+To\+Local\+G4}}
+\index{global\+To\+Local\+G4@{global\+To\+Local\+G4}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{global\+To\+Local\+G4()}{globalToLocalG4()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily G4\+Three\+Vector Geant4\+Step\+Handler\+::global\+To\+Local\+G4 (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{z }\end{DoxyParamCaption}) const}
 
 
-Coordinate transformation to global coordinates. Note: Positions are in units of MM! 
 
-Definition at line 69 of file Geant4StepHandler.cpp.
-
-Referenced by localToGlobal(), and DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a60c5a97f61fc6aa52224c474632aed47}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!logvol@{logvol}}
-\index{logvol@{logvol}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{logvol}]{\setlength{\rightskip}{0pt plus 5cm}G4LogicalVolume$\ast$ DD4hep::Simulation::Geant4StepHandler::logvol (const G4StepPoint $\ast$ {\em p}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a60c5a97f61fc6aa52224c474632aed47}
+Coordinate transformation to local coordinates. 
 
 
-Definition at line 178 of file Geant4StepHandler.h.
+
+Definition at line 104 of file Geant4\+Step\+Handler.\+cpp.
+
+
+
+Referenced by global\+To\+Local(), last\+In\+Volume(), and D\+D4hep\+::\+Simulation\+::\+Tracker\+Weighted\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ad606e21ce6d279416e75f3400e825207}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ad606e21ce6d279416e75f3400e825207} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!global\+To\+Local\+G4@{global\+To\+Local\+G4}}
+\index{global\+To\+Local\+G4@{global\+To\+Local\+G4}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{global\+To\+Local\+G4()}{globalToLocalG4()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily G4\+Three\+Vector Geant4\+Step\+Handler\+::global\+To\+Local\+G4 (\begin{DoxyParamCaption}\item[{const G4\+Three\+Vector \&}]{loc }\end{DoxyParamCaption}) const}
+
+
+
+Coordinate transformation to local coordinates with G4 objects. 
+
+Coordinate transformation to local coordinates. 
+
+Definition at line 109 of file Geant4\+Step\+Handler.\+cpp.
+
+
+
+References step.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aef01d884b1c2ca9e728e74e1b43a12fe}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aef01d884b1c2ca9e728e74e1b43a12fe} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!is\+Sensitive@{is\+Sensitive}}
+\index{is\+Sensitive@{is\+Sensitive}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{is\+Sensitive()}{isSensitive()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::is\+Sensitive (\begin{DoxyParamCaption}\item[{const G4\+Logical\+Volume $\ast$}]{lv }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 190 of file Geant4\+Step\+Handler.\+h.
+
+
+
+Referenced by is\+Sensitive().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_af411bcef115f2924a2966a19181c49c8}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_af411bcef115f2924a2966a19181c49c8} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!is\+Sensitive@{is\+Sensitive}}
+\index{is\+Sensitive@{is\+Sensitive}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{is\+Sensitive()}{isSensitive()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::is\+Sensitive (\begin{DoxyParamCaption}\item[{const G4\+V\+Physical\+Volume $\ast$}]{pv }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 193 of file Geant4\+Step\+Handler.\+h.
+
+
+
+References is\+Sensitive().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a09217021b75c4be5ce4d33c4104d5b09}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a09217021b75c4be5ce4d33c4104d5b09} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!is\+Sensitive@{is\+Sensitive}}
+\index{is\+Sensitive@{is\+Sensitive}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{is\+Sensitive()}{isSensitive()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::is\+Sensitive (\begin{DoxyParamCaption}\item[{const G4\+Step\+Point $\ast$}]{point }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 196 of file Geant4\+Step\+Handler.\+h.
+
+
+
+References is\+Sensitive(), and volume().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a473152bc5d131b17fff220204f1a866c}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a473152bc5d131b17fff220204f1a866c} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!last\+In\+Volume@{last\+In\+Volume}}
+\index{last\+In\+Volume@{last\+In\+Volume}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{last\+In\+Volume()}{lastInVolume()}}
+{\footnotesize\ttfamily bool D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::last\+In\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 214 of file Geant4\+Step\+Handler.\+h.
+
+
+
+References birk\+Attenuation(), global\+To\+Local(), global\+To\+Local\+G4(), and local\+To\+Global().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a5b70d64c9a938c857e5b63fa996aaf1e}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a5b70d64c9a938c857e5b63fa996aaf1e} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!local\+To\+Global@{local\+To\+Global}}
+\index{local\+To\+Global@{local\+To\+Global}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{local\+To\+Global()}{localToGlobal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} Geant4\+Step\+Handler\+::local\+To\+Global (\begin{DoxyParamCaption}\item[{const \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} \&}]{local }\end{DoxyParamCaption}) const}
+
+
+
+Coordinate transformation to global coordinates. 
+
+Note\+: Positions are in units of M\+M! 
+
+Definition at line 69 of file Geant4\+Step\+Handler.\+cpp.
+
+
+
+Referenced by last\+In\+Volume(), local\+To\+Global(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Action$<$ T $>$\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ab778e17a1f7038772c91d128c680f65b}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ab778e17a1f7038772c91d128c680f65b} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!local\+To\+Global@{local\+To\+Global}}
+\index{local\+To\+Global@{local\+To\+Global}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{local\+To\+Global()}{localToGlobal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} Geant4\+Step\+Handler\+::local\+To\+Global (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_d_d4hep_1_1_d_d_segmentation_1_1_vector3_d}{D\+D\+Segmentation\+::\+Vector3D} \&}]{local }\end{DoxyParamCaption}) const}
+
+
+
+Coordinate transformation to global coordinates. 
+
+Coordinate transformation to global coordinate.
+
+Note\+: \hyperlink{namespace_d_d4hep_1_1_d_d_segmentation}{D\+D\+Segmentation} points are units in C\+M! Conversion done inside! 
+
+Definition at line 64 of file Geant4\+Step\+Handler.\+cpp.
+
+
+
+References local\+To\+Global(), dd4hep\+::mm, D\+D4hep\+::\+D\+D\+Segmentation\+::\+Vector3\+D\+::X, D\+D4hep\+::\+D\+D\+Segmentation\+::\+Vector3\+D\+::Y, and D\+D4hep\+::\+D\+D\+Segmentation\+::\+Vector3\+D\+::Z.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a9ea78bcf920fa47e9bbb84a71f91acfa}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a9ea78bcf920fa47e9bbb84a71f91acfa} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!local\+To\+Global@{local\+To\+Global}}
+\index{local\+To\+Global@{local\+To\+Global}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{local\+To\+Global()}{localToGlobal()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} Geant4\+Step\+Handler\+::local\+To\+Global (\begin{DoxyParamCaption}\item[{const G4\+Three\+Vector \&}]{local }\end{DoxyParamCaption}) const}
+
+
+
+Coordinate transformation to global coordinates in MM. 
+
+Coordinate transformation to global coordinates. 
+
+Definition at line 79 of file Geant4\+Step\+Handler.\+cpp.
+
+
+
+References step.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a8010afaef177a2734e709daa23e724c9}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a8010afaef177a2734e709daa23e724c9} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!local\+To\+Global@{local\+To\+Global}}
+\index{local\+To\+Global@{local\+To\+Global}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{local\+To\+Global()}{localToGlobal()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} Geant4\+Step\+Handler\+::local\+To\+Global (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{z }\end{DoxyParamCaption}) const}
+
+
+
+Coordinate transformation to global coordinates in MM. 
+
+Coordinate transformation to global coordinates. 
+
+Definition at line 74 of file Geant4\+Step\+Handler.\+cpp.
+
+
+
+References local\+To\+Global().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a53a2b41474e29e847e68fec64060bf60}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a53a2b41474e29e847e68fec64060bf60} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!logvol@{logvol}}
+\index{logvol@{logvol}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{logvol()}{logvol()}}
+{\footnotesize\ttfamily G4\+Logical\+Volume$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::logvol (\begin{DoxyParamCaption}\item[{const G4\+Step\+Point $\ast$}]{p }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 178 of file Geant4\+Step\+Handler.\+h.
+
+
 
 References physvol().
 
-Referenced by DD4hep::Simulation::Geant4MaterialScanner::operator()(), and sd().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a3c5bcd136c18f2269c58e81f36e97eae}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!parentID@{parentID}}
-\index{parentID@{parentID}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{parentID}]{\setlength{\rightskip}{0pt plus 5cm}int DD4hep::Simulation::Geant4StepHandler::parentID () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a3c5bcd136c18f2269c58e81f36e97eae}
 
 
-Definition at line 138 of file Geant4StepHandler.h.
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Material\+Scanner\+::operator()(), and sd().
 
-References track.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ab484afdaf7e593c1f2f41e70aaf9cb71}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!physvol@{physvol}}
-\index{physvol@{physvol}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{physvol}]{\setlength{\rightskip}{0pt plus 5cm}G4VPhysicalVolume$\ast$ DD4hep::Simulation::Geant4StepHandler::physvol (const G4StepPoint $\ast$ {\em p}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ab484afdaf7e593c1f2f41e70aaf9cb71}
-
-
-Definition at line 175 of file Geant4StepHandler.h.
-
-Referenced by logvol().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a20327303625dbb2ae209885d2b098564}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!postMom@{postMom}}
-\index{postMom@{postMom}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{postMom}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Momentum} DD4hep::Simulation::Geant4StepHandler::postMom () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a20327303625dbb2ae209885d2b098564}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a2bec797f0c464cf576382c62b900ff40}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a2bec797f0c464cf576382c62b900ff40} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!parent\+ID@{parent\+ID}}
+\index{parent\+ID@{parent\+ID}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{parent\+I\+D()}{parentID()}}
+{\footnotesize\ttfamily int D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::parent\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
-Definition at line 121 of file Geant4StepHandler.h.
 
-References post.
+Definition at line 138 of file Geant4\+Step\+Handler.\+h.
 
-Referenced by DD4hep::Simulation::Geant4SensitiveDetector::dumpStep(), DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::process(), and Tests::Geant4SensitiveAction$<$ T $>$::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a93fb68b4ef3a4172a19b483d77d87b01}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!postPos@{postPos}}
-\index{postPos@{postPos}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{postPos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} DD4hep::Simulation::Geant4StepHandler::postPos () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a93fb68b4ef3a4172a19b483d77d87b01}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a426ef22f777e563d8aaae3630372f913}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a426ef22f777e563d8aaae3630372f913} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!physvol@{physvol}}
+\index{physvol@{physvol}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{physvol()}{physvol()}}
+{\footnotesize\ttfamily G4\+V\+Physical\+Volume$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::physvol (\begin{DoxyParamCaption}\item[{const G4\+Step\+Point $\ast$}]{p }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 175 of file Geant4\+Step\+Handler.\+h.
+
+
+
+Referenced by logvol().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a076e5f37eebfe47622756fe81069ee89}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a076e5f37eebfe47622756fe81069ee89} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!post\+Mom@{post\+Mom}}
+\index{post\+Mom@{post\+Mom}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{post\+Mom()}{postMom()}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_1_1_simulation_aead01eb580dc503a5abba194d179c963}{Momentum} D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::post\+Mom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 121 of file Geant4\+Step\+Handler.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::dump\+Step(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Action$<$ T $>$\+::process(), and Tests\+::\+Geant4\+Sensitive\+Action$<$ T $>$\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a41172681a0ca6e6aa21e99df5af11be3}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a41172681a0ca6e6aa21e99df5af11be3} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!post\+Pos@{post\+Pos}}
+\index{post\+Pos@{post\+Pos}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{post\+Pos()}{postPos()}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::post\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Returns the post-\/step position. 
 
-Definition at line 90 of file Geant4StepHandler.h.
-
-References post.
-
-Referenced by DD4hep::Simulation::Geant4SensitiveDetector::dumpStep(), DD4hep::Simulation::Geant4MaterialScanner::operator()(), DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::process(), and Tests::Geant4SensitiveAction$<$ T $>$::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a41cd79af212c7cab9d2bb5a9d070bf0f}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!postPosG4@{postPosG4}}
-\index{postPosG4@{postPosG4}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{postPosG4}]{\setlength{\rightskip}{0pt plus 5cm}const G4ThreeVector\& DD4hep::Simulation::Geant4StepHandler::postPosG4 () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a41cd79af212c7cab9d2bb5a9d070bf0f}
 
 
-Returns the post-\/step position as a G4ThreeVector. 
-
-Definition at line 95 of file Geant4StepHandler.h.
-
-References post.
-
-Referenced by DD4hep::Simulation::Geant4Sensitive::cellID(), DD4hep::Simulation::Geant4HitData::extractContribution(), DD4hep::Simulation::Geant4SensitiveDetector::getCellID(), and DD4hep::Simulation::TrackerWeighted::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a9974306f45eb485f2463808f0dd96280}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!postSD@{postSD}}
-\index{postSD@{postSD}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{postSD}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G4VSensitiveDetector}$\ast$ DD4hep::Simulation::Geant4StepHandler::postSD () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a9974306f45eb485f2463808f0dd96280}
+Definition at line 90 of file Geant4\+Step\+Handler.\+h.
 
 
-Definition at line 208 of file Geant4StepHandler.h.
 
-References post, and sd().
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::dump\+Step(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Material\+Scanner\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Action$<$ T $>$\+::process(), and Tests\+::\+Geant4\+Sensitive\+Action$<$ T $>$\+::process().
 
-Referenced by DD4hep::Simulation::TrackerWeighted::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a607960c9505518f75ad1c9feb3afa935}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!postStepStatus@{postStepStatus}}
-\index{postStepStatus@{postStepStatus}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{postStepStatus}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Geant4StepHandler::postStepStatus () const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a607960c9505518f75ad1c9feb3afa935}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a8724fb0d717e73716f12a30a851a6b3f}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a8724fb0d717e73716f12a30a851a6b3f} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!post\+Pos\+G4@{post\+Pos\+G4}}
+\index{post\+Pos\+G4@{post\+Pos\+G4}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{post\+Pos\+G4()}{postPosG4()}}
+{\footnotesize\ttfamily const G4\+Three\+Vector\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::post\+Pos\+G4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the post-\/step position as a G4\+Three\+Vector. 
+
+
+
+Definition at line 95 of file Geant4\+Step\+Handler.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+::cell\+I\+D(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Hit\+Data\+::extract\+Contribution(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::get\+Cell\+I\+D(), and D\+D4hep\+::\+Simulation\+::\+Tracker\+Weighted\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_adb9d9942e898b61710985c58eda88972}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_adb9d9942e898b61710985c58eda88972} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!post\+SD@{post\+SD}}
+\index{post\+SD@{post\+SD}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{post\+S\+D()}{postSD()}}
+{\footnotesize\ttfamily \hyperlink{class_g4_v_sensitive_detector}{G4\+V\+Sensitive\+Detector}$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::post\+SD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 208 of file Geant4\+Step\+Handler.\+h.
+
+
+
+References sd().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Tracker\+Weighted\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a2e267e523aefa237ace0474ab22a7b87}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a2e267e523aefa237ace0474ab22a7b87} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!post\+Step\+Status@{post\+Step\+Status}}
+\index{post\+Step\+Status@{post\+Step\+Status}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{post\+Step\+Status()}{postStepStatus()}}
+{\footnotesize\ttfamily const char $\ast$ Geant4\+Step\+Handler\+::post\+Step\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 
 
 Returns the post-\/step status in form of a string. 
 
-Definition at line 59 of file Geant4StepHandler.cpp.
-
-References post, and stepStatus().
-
-Referenced by DD4hep::Simulation::Geant4SensitiveDetector::dumpStep().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a886d0adf0ab8439d86f59505f92d7389}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!postTouchable@{postTouchable}}
-\index{postTouchable@{postTouchable}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{postTouchable}]{\setlength{\rightskip}{0pt plus 5cm}const G4VTouchable$\ast$ DD4hep::Simulation::Geant4StepHandler::postTouchable () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a886d0adf0ab8439d86f59505f92d7389}
 
 
-Definition at line 162 of file Geant4StepHandler.h.
-
-References post.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a0d568a83cad6f9cb0a300c0426c551da}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!postVolume@{postVolume}}
-\index{postVolume@{postVolume}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{postVolume}]{\setlength{\rightskip}{0pt plus 5cm}G4VPhysicalVolume$\ast$ DD4hep::Simulation::Geant4StepHandler::postVolume () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a0d568a83cad6f9cb0a300c0426c551da}
+Definition at line 59 of file Geant4\+Step\+Handler.\+cpp.
 
 
-Definition at line 205 of file Geant4StepHandler.h.
 
-References post, and volume().
-
-Referenced by DD4hep::Simulation::Geant4SensitiveDetector::dumpStep(), and DD4hep::Simulation::TrackerWeighted::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a3262383310d646a583768f7b408a2d94}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!preMom@{preMom}}
-\index{preMom@{preMom}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{preMom}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Momentum} DD4hep::Simulation::Geant4StepHandler::preMom () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a3262383310d646a583768f7b408a2d94}
+References post, and step\+Status().
 
 
-Definition at line 117 of file Geant4StepHandler.h.
 
-References pre.
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::dump\+Step(), and trk\+Pdg\+I\+D().
 
-Referenced by Tests::Geant4SensitiveAction$<$ T $>$::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aaa60daae1bdca84d9dee8e7eb4585f75}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!prePos@{prePos}}
-\index{prePos@{prePos}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{prePos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} DD4hep::Simulation::Geant4StepHandler::prePos () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aaa60daae1bdca84d9dee8e7eb4585f75}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a40e0ed6100cd44d95d7ac4f07f938a6d}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a40e0ed6100cd44d95d7ac4f07f938a6d} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!post\+Touchable@{post\+Touchable}}
+\index{post\+Touchable@{post\+Touchable}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{post\+Touchable()}{postTouchable()}}
+{\footnotesize\ttfamily const G4\+V\+Touchable$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::post\+Touchable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 162 of file Geant4\+Step\+Handler.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_afee73068f429b8f9956acad5580493a9}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_afee73068f429b8f9956acad5580493a9} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!post\+Volume@{post\+Volume}}
+\index{post\+Volume@{post\+Volume}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{post\+Volume()}{postVolume()}}
+{\footnotesize\ttfamily G4\+V\+Physical\+Volume$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::post\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 205 of file Geant4\+Step\+Handler.\+h.
+
+
+
+References volume().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::dump\+Step(), and D\+D4hep\+::\+Simulation\+::\+Tracker\+Weighted\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ac04cff5a17eae75d0ce7ff1e496e5885}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ac04cff5a17eae75d0ce7ff1e496e5885} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!pre\+Mom@{pre\+Mom}}
+\index{pre\+Mom@{pre\+Mom}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{pre\+Mom()}{preMom()}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_1_1_simulation_aead01eb580dc503a5abba194d179c963}{Momentum} D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::pre\+Mom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 117 of file Geant4\+Step\+Handler.\+h.
+
+
+
+Referenced by Tests\+::\+Geant4\+Sensitive\+Action$<$ T $>$\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ad168390a8f6da55740c092686d2c9f84}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ad168390a8f6da55740c092686d2c9f84} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!pre\+Pos@{pre\+Pos}}
+\index{pre\+Pos@{pre\+Pos}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{pre\+Pos()}{prePos()}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_1_1_geometry_a55083902099d03506c6db01b80404900}{Position} D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::pre\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Returns the pre-\/step position. 
 
-Definition at line 81 of file Geant4StepHandler.h.
-
-References pre.
-
-Referenced by DD4hep::Simulation::Geant4SensitiveDetector::dumpStep(), DD4hep::Simulation::Geant4MaterialScanner::operator()(), DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::process(), DD4hep::Simulation::Geant4EscapeCounter::process(), and Tests::Geant4SensitiveAction$<$ T $>$::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a1cecfe16026e80f0b803b3d113b8e535}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!prePosG4@{prePosG4}}
-\index{prePosG4@{prePosG4}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{prePosG4}]{\setlength{\rightskip}{0pt plus 5cm}const G4ThreeVector\& DD4hep::Simulation::Geant4StepHandler::prePosG4 () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a1cecfe16026e80f0b803b3d113b8e535}
 
 
-Returns the pre-\/step position as a G4ThreeVector. 
-
-Definition at line 86 of file Geant4StepHandler.h.
-
-References pre.
-
-Referenced by DD4hep::Simulation::Geant4Sensitive::cellID(), DD4hep::Simulation::Geant4HitData::extractContribution(), DD4hep::Simulation::Geant4SensitiveDetector::getCellID(), and DD4hep::Simulation::TrackerWeighted::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_afa4f53d4d2e41898f948baf79fabd29b}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!preSD@{preSD}}
-\index{preSD@{preSD}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{preSD}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G4VSensitiveDetector}$\ast$ DD4hep::Simulation::Geant4StepHandler::preSD () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_afa4f53d4d2e41898f948baf79fabd29b}
+Definition at line 81 of file Geant4\+Step\+Handler.\+h.
 
 
-Definition at line 202 of file Geant4StepHandler.h.
 
-References pre, and sd().
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::dump\+Step(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Material\+Scanner\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Escape\+Counter\+::process(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Action$<$ T $>$\+::process(), and Tests\+::\+Geant4\+Sensitive\+Action$<$ T $>$\+::process().
 
-Referenced by DD4hep::Simulation::TrackerWeighted::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a9e603d8e2f5db29921955409b8fd55be}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!preStepStatus@{preStepStatus}}
-\index{preStepStatus@{preStepStatus}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{preStepStatus}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Geant4StepHandler::preStepStatus () const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a9e603d8e2f5db29921955409b8fd55be}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a087079e78925eeaedf2e20c394c5c820}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a087079e78925eeaedf2e20c394c5c820} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!pre\+Pos\+G4@{pre\+Pos\+G4}}
+\index{pre\+Pos\+G4@{pre\+Pos\+G4}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{pre\+Pos\+G4()}{prePosG4()}}
+{\footnotesize\ttfamily const G4\+Three\+Vector\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::pre\+Pos\+G4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the pre-\/step position as a G4\+Three\+Vector. 
+
+
+
+Definition at line 86 of file Geant4\+Step\+Handler.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+::cell\+I\+D(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Hit\+Data\+::extract\+Contribution(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::get\+Cell\+I\+D(), and D\+D4hep\+::\+Simulation\+::\+Tracker\+Weighted\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a7b3384fa3ce4d4465a79aa286371b4bb}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a7b3384fa3ce4d4465a79aa286371b4bb} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!pre\+SD@{pre\+SD}}
+\index{pre\+SD@{pre\+SD}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{pre\+S\+D()}{preSD()}}
+{\footnotesize\ttfamily \hyperlink{class_g4_v_sensitive_detector}{G4\+V\+Sensitive\+Detector}$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::pre\+SD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 202 of file Geant4\+Step\+Handler.\+h.
+
+
+
+References sd().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Tracker\+Weighted\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_abbe2109ee72c4bd038db33c7f9b55bf1}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_abbe2109ee72c4bd038db33c7f9b55bf1} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!pre\+Step\+Status@{pre\+Step\+Status}}
+\index{pre\+Step\+Status@{pre\+Step\+Status}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{pre\+Step\+Status()}{preStepStatus()}}
+{\footnotesize\ttfamily const char $\ast$ Geant4\+Step\+Handler\+::pre\+Step\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 
 
 Returns the pre-\/step status in form of a string. 
 
-Definition at line 54 of file Geant4StepHandler.cpp.
-
-References pre, and stepStatus().
-
-Referenced by DD4hep::Simulation::Geant4SensitiveDetector::dumpStep().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ae808f346ce65f89c398ea839327b5c2f}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!preTouchable@{preTouchable}}
-\index{preTouchable@{preTouchable}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{preTouchable}]{\setlength{\rightskip}{0pt plus 5cm}const G4VTouchable$\ast$ DD4hep::Simulation::Geant4StepHandler::preTouchable () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ae808f346ce65f89c398ea839327b5c2f}
 
 
-Definition at line 159 of file Geant4StepHandler.h.
-
-References pre.
-
-Referenced by DD4hep::Simulation::Geant4Sensitive::cellID(), DD4hep::Simulation::Geant4SensitiveDetector::getCellID(), DD4hep::Simulation::Geant4SensitiveDetector::getVolumeID(), DD4hep::Simulation::Geant4ReadoutVolumeFilter::operator()(), and DD4hep::Simulation::Geant4Sensitive::volumeID().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a39eab28ff81a1a24daea4b6a1e376dea}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!preVolume@{preVolume}}
-\index{preVolume@{preVolume}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{preVolume}]{\setlength{\rightskip}{0pt plus 5cm}G4VPhysicalVolume$\ast$ DD4hep::Simulation::Geant4StepHandler::preVolume () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a39eab28ff81a1a24daea4b6a1e376dea}
+Definition at line 54 of file Geant4\+Step\+Handler.\+cpp.
 
 
-Definition at line 199 of file Geant4StepHandler.h.
 
-References pre, and volume().
-
-Referenced by DD4hep::Simulation::Geant4SensitiveDetector::dumpStep(), and DD4hep::Simulation::TrackerWeighted::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a6b7355a5af216dddcf41af1c1d9e2b8d}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!sd@{sd}}
-\index{sd@{sd}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{sd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G4VSensitiveDetector}$\ast$ DD4hep::Simulation::Geant4StepHandler::sd (const G4StepPoint $\ast$ {\em p}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a6b7355a5af216dddcf41af1c1d9e2b8d}
+References pre, and step\+Status().
 
 
-Definition at line 182 of file Geant4StepHandler.h.
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::dump\+Step(), and trk\+Pdg\+I\+D().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ad2ab7468011fc1d570e24345d458b7fc}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ad2ab7468011fc1d570e24345d458b7fc} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!pre\+Touchable@{pre\+Touchable}}
+\index{pre\+Touchable@{pre\+Touchable}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{pre\+Touchable()}{preTouchable()}}
+{\footnotesize\ttfamily const G4\+V\+Touchable$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::pre\+Touchable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 159 of file Geant4\+Step\+Handler.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+::cell\+I\+D(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::get\+Cell\+I\+D(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::get\+Volume\+I\+D(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Readout\+Volume\+Filter\+::operator()(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+::volume\+I\+D().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ac40ec64fd69ed915b95fb79cdc20c741}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ac40ec64fd69ed915b95fb79cdc20c741} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!pre\+Volume@{pre\+Volume}}
+\index{pre\+Volume@{pre\+Volume}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{pre\+Volume()}{preVolume()}}
+{\footnotesize\ttfamily G4\+V\+Physical\+Volume$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::pre\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 199 of file Geant4\+Step\+Handler.\+h.
+
+
+
+References volume().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::dump\+Step(), and D\+D4hep\+::\+Simulation\+::\+Tracker\+Weighted\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a1d1ca52479f381ba0aea15ce64c6d09e}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a1d1ca52479f381ba0aea15ce64c6d09e} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!sd@{sd}}
+\index{sd@{sd}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{sd()}{sd()}}
+{\footnotesize\ttfamily \hyperlink{class_g4_v_sensitive_detector}{G4\+V\+Sensitive\+Detector}$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::sd (\begin{DoxyParamCaption}\item[{const G4\+Step\+Point $\ast$}]{p }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 182 of file Geant4\+Step\+Handler.\+h.
+
+
 
 References logvol().
 
-Referenced by postSD(), preSD(), DD4hep::Simulation::TrackerCombine::process(), and sdName().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a0bf72f4bb74c03b2489ab9c9b79e7a30}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!sdName@{sdName}}
-\index{sdName@{sdName}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{sdName}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ DD4hep::Simulation::Geant4StepHandler::sdName (const G4StepPoint $\ast$ {\em p}, \/  const char $\ast$ {\em undefined} = {\ttfamily \char`\"{}\char`\"{}}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a0bf72f4bb74c03b2489ab9c9b79e7a30}
 
 
-Definition at line 186 of file Geant4StepHandler.h.
+Referenced by post\+S\+D(), pre\+S\+D(), D\+D4hep\+::\+Simulation\+::\+Tracker\+Combine\+::process(), and sd\+Name().
 
-References s, and sd().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a8ce2c4056ad81f1d2500abfa819a2198}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!solid@{solid}}
-\index{solid@{solid}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{solid}]{\setlength{\rightskip}{0pt plus 5cm}G4VSolid$\ast$ DD4hep::Simulation::Geant4StepHandler::solid (const G4StepPoint $\ast$ {\em p}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a8ce2c4056ad81f1d2500abfa819a2198}
-
-
-Definition at line 172 of file Geant4StepHandler.h.
-
-Referenced by DD4hep::Simulation::TrackerWeighted::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ab5ff5a25a2af70cd601dc9cf0d4c4447}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!stepLength@{stepLength}}
-\index{stepLength@{stepLength}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{stepLength}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::Simulation::Geant4StepHandler::stepLength () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ab5ff5a25a2af70cd601dc9cf0d4c4447}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a806c70983f2c58596a75099f8ac36395}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a806c70983f2c58596a75099f8ac36395} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!sd\+Name@{sd\+Name}}
+\index{sd\+Name@{sd\+Name}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{sd\+Name()}{sdName()}}
+{\footnotesize\ttfamily const char$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::sd\+Name (\begin{DoxyParamCaption}\item[{const G4\+Step\+Point $\ast$}]{p,  }\item[{const char $\ast$}]{undefined = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
-Definition at line 132 of file Geant4StepHandler.h.
 
-References step.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a749fffe231a34f253d498edf989ae035}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!stepStatus@{stepStatus}}
-\index{stepStatus@{stepStatus}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{stepStatus}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Geant4StepHandler::stepStatus (G4StepStatus {\em status})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a749fffe231a34f253d498edf989ae035}
+Definition at line 186 of file Geant4\+Step\+Handler.\+h.
 
 
-Returns the step status (argument) in form of a string. Returns the step status in form of a string. 
 
-Definition at line 23 of file Geant4StepHandler.cpp.
+References s, and sd().
 
-Referenced by postStepStatus(), and preStepStatus().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_addaa9eb154cfccd6500e81a47fb637b0}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!totalEnergy@{totalEnergy}}
-\index{totalEnergy@{totalEnergy}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{totalEnergy}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::Simulation::Geant4StepHandler::totalEnergy () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_addaa9eb154cfccd6500e81a47fb637b0}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aa132f6298c07600c95aa3a6f92f26985}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aa132f6298c07600c95aa3a6f92f26985} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!solid@{solid}}
+\index{solid@{solid}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{solid()}{solid()}}
+{\footnotesize\ttfamily G4\+V\+Solid$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::solid (\begin{DoxyParamCaption}\item[{const G4\+Step\+Point $\ast$}]{p }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 172 of file Geant4\+Step\+Handler.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Tracker\+Weighted\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a4d10cc802cc8a07492695d7aff68a87f}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a4d10cc802cc8a07492695d7aff68a87f} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!step\+Length@{step\+Length}}
+\index{step\+Length@{step\+Length}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{step\+Length()}{stepLength()}}
+{\footnotesize\ttfamily double D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::step\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 132 of file Geant4\+Step\+Handler.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a749fffe231a34f253d498edf989ae035}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a749fffe231a34f253d498edf989ae035} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!step\+Status@{step\+Status}}
+\index{step\+Status@{step\+Status}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{step\+Status()}{stepStatus()}}
+{\footnotesize\ttfamily const char $\ast$ Geant4\+Step\+Handler\+::step\+Status (\begin{DoxyParamCaption}\item[{G4\+Step\+Status}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the step status (argument) in form of a string. 
+
+Returns the step status in form of a string. 
+
+Definition at line 23 of file Geant4\+Step\+Handler.\+cpp.
+
+
+
+Referenced by post\+Step\+Status(), pre\+Step\+Status(), and trk\+Pdg\+I\+D().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a1945532b5c538c979b75f598dd1f54d0}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a1945532b5c538c979b75f598dd1f54d0} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!total\+Energy@{total\+Energy}}
+\index{total\+Energy@{total\+Energy}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{total\+Energy()}{totalEnergy()}}
+{\footnotesize\ttfamily double D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::total\+Energy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Returns total energy deposit. 
 
-Definition at line 74 of file Geant4StepHandler.h.
-
-References applyBirksLaw, birkAttenuation(), and step.
-
-Referenced by DD4hep::Simulation::Geant4HitData::extractContribution().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a68f835da79e638dc11306c417bc9495b}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!trackDef@{trackDef}}
-\index{trackDef@{trackDef}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{trackDef}]{\setlength{\rightskip}{0pt plus 5cm}G4ParticleDefinition$\ast$ DD4hep::Simulation::Geant4StepHandler::trackDef () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a68f835da79e638dc11306c417bc9495b}
 
 
-Definition at line 61 of file Geant4StepHandler.h.
-
-References track.
-
-Referenced by DD4hep::Simulation::Geant4HitData::extractContribution().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a8960f975f297caa7c6d227e329ec4f95}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!trkAlive@{trkAlive}}
-\index{trkAlive@{trkAlive}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{trkAlive}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Simulation::Geant4StepHandler::trkAlive () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a8960f975f297caa7c6d227e329ec4f95}
+Definition at line 74 of file Geant4\+Step\+Handler.\+h.
 
 
-Definition at line 153 of file Geant4StepHandler.h.
 
-References track.
-
-Referenced by DD4hep::Simulation::TrackerWeighted::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a959289c814f1eb86b0ab9968f6fd84c5}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!trkEnergy@{trkEnergy}}
-\index{trkEnergy@{trkEnergy}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{trkEnergy}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::Simulation::Geant4StepHandler::trkEnergy () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a959289c814f1eb86b0ab9968f6fd84c5}
+References birk\+Attenuation().
 
 
-Definition at line 144 of file Geant4StepHandler.h.
 
-References track.
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Hit\+Data\+::extract\+Contribution().
 
-Referenced by DD4hep::Simulation::Geant4HitData::extractContribution(), and DD4hep::Simulation::Geant4EscapeCounter::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a6b639a13014e835db1a7b4a1e69469d1}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!trkID@{trkID}}
-\index{trkID@{trkID}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{trkID}]{\setlength{\rightskip}{0pt plus 5cm}int DD4hep::Simulation::Geant4StepHandler::trkID () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a6b639a13014e835db1a7b4a1e69469d1}
-
-
-Definition at line 135 of file Geant4StepHandler.h.
-
-References track.
-
-Referenced by DD4hep::Simulation::Geant4HitData::extractContribution(), DD4hep::Simulation::TrackerWeighted::process(), DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::process(), and DD4hep::Simulation::Geant4EscapeCounter::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_afd5bdb880e61a61270f3fb84d606a5d9}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!trkKineEnergy@{trkKineEnergy}}
-\index{trkKineEnergy@{trkKineEnergy}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{trkKineEnergy}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::Simulation::Geant4StepHandler::trkKineEnergy () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_afd5bdb880e61a61270f3fb84d606a5d9}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a989b3f079f3d153718d381d766bb2a58}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a989b3f079f3d153718d381d766bb2a58} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!track\+Def@{track\+Def}}
+\index{track\+Def@{track\+Def}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{track\+Def()}{trackDef()}}
+{\footnotesize\ttfamily G4\+Particle\+Definition$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::track\+Def (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
-Definition at line 147 of file Geant4StepHandler.h.
 
-References track.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ae7c77f7a22ebb78200c03e5efaa6e18c}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!trkMom@{trkMom}}
-\index{trkMom@{trkMom}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{trkMom}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Momentum} DD4hep::Simulation::Geant4StepHandler::trkMom () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ae7c77f7a22ebb78200c03e5efaa6e18c}
+Definition at line 61 of file Geant4\+Step\+Handler.\+h.
 
 
-Definition at line 125 of file Geant4StepHandler.h.
 
-References track.
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Hit\+Data\+::extract\+Contribution().
 
-Referenced by DD4hep::Simulation::Geant4EscapeCounter::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ac3bbde8d1c91b9375c00cfc3b65fac23}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!trkPdgID@{trkPdgID}}
-\index{trkPdgID@{trkPdgID}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{trkPdgID}]{\setlength{\rightskip}{0pt plus 5cm}int DD4hep::Simulation::Geant4StepHandler::trkPdgID () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ac3bbde8d1c91b9375c00cfc3b65fac23}
-
-
-Definition at line 64 of file Geant4StepHandler.h.
-
-References track.
-
-Referenced by DD4hep::Simulation::Geant4HitData::extractContribution(), and DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a6935bbfe146b71fd4019a5ec0ea397a3}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!trkProcess@{trkProcess}}
-\index{trkProcess@{trkProcess}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{trkProcess}]{\setlength{\rightskip}{0pt plus 5cm}const G4VProcess$\ast$ DD4hep::Simulation::Geant4StepHandler::trkProcess () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a6935bbfe146b71fd4019a5ec0ea397a3}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a37df3c141c8f16fbad4f17bf32a4538b}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a37df3c141c8f16fbad4f17bf32a4538b} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!trk\+Alive@{trk\+Alive}}
+\index{trk\+Alive@{trk\+Alive}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{trk\+Alive()}{trkAlive()}}
+{\footnotesize\ttfamily bool D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::trk\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
-Definition at line 156 of file Geant4StepHandler.h.
 
-References track.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aba809cb57c873101356094271008c068}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!trkStatus@{trkStatus}}
-\index{trkStatus@{trkStatus}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{trkStatus}]{\setlength{\rightskip}{0pt plus 5cm}int DD4hep::Simulation::Geant4StepHandler::trkStatus () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aba809cb57c873101356094271008c068}
+Definition at line 153 of file Geant4\+Step\+Handler.\+h.
 
 
-Definition at line 150 of file Geant4StepHandler.h.
 
-References track.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a1962e84c22f2078e94e634fd7244172c}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!trkTime@{trkTime}}
-\index{trkTime@{trkTime}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{trkTime}]{\setlength{\rightskip}{0pt plus 5cm}double DD4hep::Simulation::Geant4StepHandler::trkTime () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a1962e84c22f2078e94e634fd7244172c}
+Referenced by D\+D4hep\+::\+Simulation\+::\+Tracker\+Weighted\+::process().
 
-
-Definition at line 141 of file Geant4StepHandler.h.
-
-References track.
-
-Referenced by DD4hep::Simulation::Geant4HitData::extractContribution().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_afee3ff3d85321b5bf9a453d7c2ada632}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!volName@{volName}}
-\index{volName@{volName}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{volName}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ DD4hep::Simulation::Geant4StepHandler::volName (const G4StepPoint $\ast$ {\em p}, \/  const char $\ast$ {\em undefined} = {\ttfamily \char`\"{}\char`\"{}}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_afee3ff3d85321b5bf9a453d7c2ada632}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a41eb8945c98180d3da922d1781504bad}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a41eb8945c98180d3da922d1781504bad} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!trk\+Energy@{trk\+Energy}}
+\index{trk\+Energy@{trk\+Energy}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{trk\+Energy()}{trkEnergy()}}
+{\footnotesize\ttfamily double D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::trk\+Energy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
-Definition at line 165 of file Geant4StepHandler.h.
 
-References v, and volume().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a95ee141aadb5e72b9bd204b44ef62f0a}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!volume@{volume}}
-\index{volume@{volume}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{volume}]{\setlength{\rightskip}{0pt plus 5cm}G4VPhysicalVolume$\ast$ DD4hep::Simulation::Geant4StepHandler::volume (const G4StepPoint $\ast$ {\em p}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a95ee141aadb5e72b9bd204b44ef62f0a}
+Definition at line 144 of file Geant4\+Step\+Handler.\+h.
 
 
-Definition at line 169 of file Geant4StepHandler.h.
 
-Referenced by DD4hep::Simulation::Geant4SensitiveDetector::dumpStep(), DD4hep::Simulation::Geant4SensitiveDetector::getVolumeID(), isSensitive(), postVolume(), preVolume(), DD4hep::Simulation::TrackerCombine::process(), and volName().
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Hit\+Data\+::extract\+Contribution(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Escape\+Counter\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aeebb8ecf7ce627d87e08d61b712e32b5}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aeebb8ecf7ce627d87e08d61b712e32b5} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!trk\+ID@{trk\+ID}}
+\index{trk\+ID@{trk\+ID}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{trk\+I\+D()}{trkID()}}
+{\footnotesize\ttfamily int D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::trk\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 135 of file Geant4\+Step\+Handler.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Hit\+Data\+::extract\+Contribution(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Escape\+Counter\+::process(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Action$<$ T $>$\+::process(), and D\+D4hep\+::\+Simulation\+::\+Tracker\+Weighted\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a9b1be56b8cea41c5e210cf2b53bf7763}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a9b1be56b8cea41c5e210cf2b53bf7763} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!trk\+Kine\+Energy@{trk\+Kine\+Energy}}
+\index{trk\+Kine\+Energy@{trk\+Kine\+Energy}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{trk\+Kine\+Energy()}{trkKineEnergy()}}
+{\footnotesize\ttfamily double D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::trk\+Kine\+Energy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 147 of file Geant4\+Step\+Handler.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a28d90fb5cec49ff63a1741526a1e4d02}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a28d90fb5cec49ff63a1741526a1e4d02} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!trk\+Mom@{trk\+Mom}}
+\index{trk\+Mom@{trk\+Mom}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{trk\+Mom()}{trkMom()}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_1_1_simulation_aead01eb580dc503a5abba194d179c963}{Momentum} D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::trk\+Mom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 125 of file Geant4\+Step\+Handler.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Escape\+Counter\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a30aa9c15093a6ffef6402e1a41a1c82f}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a30aa9c15093a6ffef6402e1a41a1c82f} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!trk\+Pdg\+ID@{trk\+Pdg\+ID}}
+\index{trk\+Pdg\+ID@{trk\+Pdg\+ID}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{trk\+Pdg\+I\+D()}{trkPdgID()}}
+{\footnotesize\ttfamily int D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::trk\+Pdg\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 64 of file Geant4\+Step\+Handler.\+h.
+
+
+
+References post\+Step\+Status(), pre\+Step\+Status(), and step\+Status().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Hit\+Data\+::extract\+Contribution(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Action$<$ T $>$\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_acffd1bd0147db2b8b82802a21ce11e35}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_acffd1bd0147db2b8b82802a21ce11e35} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!trk\+Process@{trk\+Process}}
+\index{trk\+Process@{trk\+Process}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{trk\+Process()}{trkProcess()}}
+{\footnotesize\ttfamily const G4\+V\+Process$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::trk\+Process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 156 of file Geant4\+Step\+Handler.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ab1a42f1b82a5b21c01681c6c4c3a61fa}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ab1a42f1b82a5b21c01681c6c4c3a61fa} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!trk\+Status@{trk\+Status}}
+\index{trk\+Status@{trk\+Status}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{trk\+Status()}{trkStatus()}}
+{\footnotesize\ttfamily int D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::trk\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 150 of file Geant4\+Step\+Handler.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aab3ccbc05dede7d3b67c0623cfbaadfb}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aab3ccbc05dede7d3b67c0623cfbaadfb} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!trk\+Time@{trk\+Time}}
+\index{trk\+Time@{trk\+Time}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{trk\+Time()}{trkTime()}}
+{\footnotesize\ttfamily double D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::trk\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 141 of file Geant4\+Step\+Handler.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Hit\+Data\+::extract\+Contribution().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ad9fc43129fcb070b2198d3dc37ad1242}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ad9fc43129fcb070b2198d3dc37ad1242} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!vol\+Name@{vol\+Name}}
+\index{vol\+Name@{vol\+Name}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{vol\+Name()}{volName()}}
+{\footnotesize\ttfamily const char$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::vol\+Name (\begin{DoxyParamCaption}\item[{const G4\+Step\+Point $\ast$}]{p,  }\item[{const char $\ast$}]{undefined = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 165 of file Geant4\+Step\+Handler.\+h.
+
+
+
+References v, and volume().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ae2a51d281ec1ae871d450ed8076dec71}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ae2a51d281ec1ae871d450ed8076dec71} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!volume@{volume}}
+\index{volume@{volume}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{volume()}{volume()}}
+{\footnotesize\ttfamily G4\+V\+Physical\+Volume$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::volume (\begin{DoxyParamCaption}\item[{const G4\+Step\+Point $\ast$}]{p }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 169 of file Geant4\+Step\+Handler.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::dump\+Step(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::get\+Volume\+I\+D(), is\+Sensitive(), post\+Volume(), pre\+Volume(), D\+D4hep\+::\+Simulation\+::\+Tracker\+Combine\+::process(), and vol\+Name().
+
+
 
 \subsection{Member Data Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ae14ced51d527345a4efed73a39ecd1c0}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!applyBirksLaw@{applyBirksLaw}}
-\index{applyBirksLaw@{applyBirksLaw}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{applyBirksLaw}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf DD4hep::Simulation::Geant4StepHandler::applyBirksLaw}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ae14ced51d527345a4efed73a39ecd1c0}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ae14ced51d527345a4efed73a39ecd1c0}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_ae14ced51d527345a4efed73a39ecd1c0} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!apply\+Birks\+Law@{apply\+Birks\+Law}}
+\index{apply\+Birks\+Law@{apply\+Birks\+Law}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{apply\+Birks\+Law}{applyBirksLaw}}
+{\footnotesize\ttfamily bool D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::apply\+Birks\+Law}
 
 
-Definition at line 53 of file Geant4StepHandler.h.
 
-Referenced by doApplyBirksLaw(), Geant4StepHandler(), and totalEnergy().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aed9081f8334e95c40e321c14621c0a35}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!post@{post}}
-\index{post@{post}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{post}]{\setlength{\rightskip}{0pt plus 5cm}G4StepPoint$\ast$ {\bf DD4hep::Simulation::Geant4StepHandler::post}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aed9081f8334e95c40e321c14621c0a35}
+Definition at line 53 of file Geant4\+Step\+Handler.\+h.
 
-
-Definition at line 51 of file Geant4StepHandler.h.
-
-Referenced by avgPosition(), direction(), DD4hep::Simulation::Geant4SensitiveDetector::dumpStep(), Geant4StepHandler(), postMom(), postPos(), postPosG4(), postSD(), postStepStatus(), postTouchable(), postVolume(), DD4hep::Simulation::TrackerWeighted::process(), and DD4hep::Simulation::TrackerCombine::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a7c18f2d6e46ecbb380fbe0995029accb}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!pre@{pre}}
-\index{pre@{pre}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{pre}]{\setlength{\rightskip}{0pt plus 5cm}G4StepPoint$\ast$ {\bf DD4hep::Simulation::Geant4StepHandler::pre}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a7c18f2d6e46ecbb380fbe0995029accb}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aed9081f8334e95c40e321c14621c0a35}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_aed9081f8334e95c40e321c14621c0a35} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!post@{post}}
+\index{post@{post}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{post}{post}}
+{\footnotesize\ttfamily G4\+Step\+Point$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::post}
 
 
-Definition at line 50 of file Geant4StepHandler.h.
 
-Referenced by avgPosition(), direction(), Geant4StepHandler(), DD4hep::Simulation::Geant4SensitiveDetector::getVolumeID(), DD4hep::Simulation::Geant4MaterialScanner::operator()(), preMom(), prePos(), prePosG4(), preSD(), preStepStatus(), preTouchable(), preVolume(), DD4hep::Simulation::TrackerWeighted::process(), and DD4hep::Simulation::TrackerCombine::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a5f8ecf6b8e58ab857df4d639d9b8f235}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!step@{step}}
-\index{step@{step}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{step}]{\setlength{\rightskip}{0pt plus 5cm}const G4Step$\ast$ {\bf DD4hep::Simulation::Geant4StepHandler::step}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a5f8ecf6b8e58ab857df4d639d9b8f235}
+Definition at line 51 of file Geant4\+Step\+Handler.\+h.
 
 
-Definition at line 49 of file Geant4StepHandler.h.
 
-Referenced by birkAttenuation(), deposit(), firstInVolume(), globalToLocalG4(), lastInVolume(), localToGlobal(), stepLength(), and totalEnergy().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a8bb7d5d357693c499d319fdc1fa3b34b}{
-\index{DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}!track@{track}}
-\index{track@{track}!DD4hep::Simulation::Geant4StepHandler@{DD4hep::Simulation::Geant4StepHandler}}
-\subsubsection[{track}]{\setlength{\rightskip}{0pt plus 5cm}G4Track$\ast$ {\bf DD4hep::Simulation::Geant4StepHandler::track}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a8bb7d5d357693c499d319fdc1fa3b34b}
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::dump\+Step(), post\+Step\+Status(), D\+D4hep\+::\+Simulation\+::\+Tracker\+Weighted\+::process(), and D\+D4hep\+::\+Simulation\+::\+Tracker\+Combine\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a7c18f2d6e46ecbb380fbe0995029accb}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a7c18f2d6e46ecbb380fbe0995029accb} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!pre@{pre}}
+\index{pre@{pre}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{pre}{pre}}
+{\footnotesize\ttfamily G4\+Step\+Point$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::pre}
 
 
-Definition at line 52 of file Geant4StepHandler.h.
 
-Referenced by DD4hep::Simulation::Geant4SensitiveDetector::dumpStep(), Geant4StepHandler(), parentID(), DD4hep::Simulation::TrackerCombine::process(), DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::process(), DD4hep::Simulation::Geant4EscapeCounter::process(), trackDef(), trkAlive(), trkEnergy(), trkID(), trkKineEnergy(), trkMom(), trkPdgID(), trkProcess(), trkStatus(), and trkTime().
+Definition at line 50 of file Geant4\+Step\+Handler.\+h.
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::get\+Volume\+I\+D(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Material\+Scanner\+::operator()(), pre\+Step\+Status(), D\+D4hep\+::\+Simulation\+::\+Tracker\+Weighted\+::process(), and D\+D4hep\+::\+Simulation\+::\+Tracker\+Combine\+::process().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a5f8ecf6b8e58ab857df4d639d9b8f235}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a5f8ecf6b8e58ab857df4d639d9b8f235} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!step@{step}}
+\index{step@{step}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{step}{step}}
+{\footnotesize\ttfamily const G4\+Step$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::step}
+
+
+
+Definition at line 49 of file Geant4\+Step\+Handler.\+h.
+
+
+
+Referenced by birk\+Attenuation(), global\+To\+Local\+G4(), and local\+To\+Global().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a8bb7d5d357693c499d319fdc1fa3b34b}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_step_handler_a8bb7d5d357693c499d319fdc1fa3b34b} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}!track@{track}}
+\index{track@{track}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler}}
+\subsubsection{\texorpdfstring{track}{track}}
+{\footnotesize\ttfamily G4\+Track$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Step\+Handler\+::track}
+
+
+
+Definition at line 52 of file Geant4\+Step\+Handler.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Detector\+::dump\+Step(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Escape\+Counter\+::process(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Action$<$ T $>$\+::process(), and D\+D4hep\+::\+Simulation\+::\+Tracker\+Combine\+::process().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_step_handler_8h}{Geant4StepHandler.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_step_handler_8cpp}{Geant4StepHandler.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/include/\+D\+D\+G4/\hyperlink{_geant4_step_handler_8h}{Geant4\+Step\+Handler.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/src/\hyperlink{_geant4_step_handler_8cpp}{Geant4\+Step\+Handler.\+cpp}\end{DoxyCompactItemize}

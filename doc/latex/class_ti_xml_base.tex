@@ -1,731 +1,950 @@
-\hypertarget{class_ti_xml_base}{
-\section{TiXmlBase Class Reference}
-\label{class_ti_xml_base}\index{TiXmlBase@{TiXmlBase}}
-}
+\hypertarget{class_ti_xml_base}{}\section{Ti\+Xml\+Base Class Reference}
+\label{class_ti_xml_base}\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}}
 
 
-TinyXML class. See \href{http://www.grinninglizard.com/tinyxml.}{\tt http://www.grinninglizard.com/tinyxml.}  
+Tiny\+X\+ML class. See \href{http://www.grinninglizard.com/tinyxml}{\tt http\+://www.\+grinninglizard.\+com/tinyxml}.  
 
 
-{\ttfamily \#include $<$tinyxml.h$>$}Inheritance diagram for TiXmlBase::\begin{figure}[H]
+
+
+{\ttfamily \#include $<$tinyxml.\+h$>$}
+
+Inheritance diagram for Ti\+Xml\+Base\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.41379cm]{class_ti_xml_base}
+\includegraphics[height=2.413793cm]{class_ti_xml_base}
 \end{center}
 \end{figure}
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 class \hyperlink{struct_ti_xml_base_1_1_entity}{Entity}
-\begin{DoxyCompactList}\small\item\em TinyXML class. See \href{http://www.grinninglizard.com/tinyxml.}{\tt http://www.grinninglizard.com/tinyxml.} \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Tiny\+X\+ML class. See \href{http://www.grinninglizard.com/tinyxml}{\tt http\+://www.\+grinninglizard.\+com/tinyxml}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \{ \par
-\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda750a76ca602241c416d5ec357d55fba1}{TIXML\_\-NO\_\-ERROR} =  0, 
-\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdabcabc1b8efabeda1cc4352aa73d64390}{TIXML\_\-ERROR}, 
-\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdab803949b8f12e03b5b57f86d9c52b614}{TIXML\_\-ERROR\_\-OPENING\_\-FILE}, 
-\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda92e3bfc96126d3544f47e8b3f031e7bb}{TIXML\_\-ERROR\_\-OUT\_\-OF\_\-MEMORY}, 
-\par
-\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda5cbfcf7fe5e67f0cd1aef98deac55dd2}{TIXML\_\-ERROR\_\-PARSING\_\-ELEMENT}, 
-\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdadcc31ca78a9d507a88c9fafb3d18a3c4}{TIXML\_\-ERROR\_\-FAILED\_\-TO\_\-READ\_\-ELEMENT\_\-NAME}, 
-\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdafefdc75db23215e846605a2b5af0c2d3}{TIXML\_\-ERROR\_\-READING\_\-ELEMENT\_\-VALUE}, 
-\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda670fac23171b64829f90639cc3696d6e}{TIXML\_\-ERROR\_\-READING\_\-ATTRIBUTES}, 
-\par
-\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda5f2aee664733a20f13f6f77556b9fa85}{TIXML\_\-ERROR\_\-PARSING\_\-EMPTY}, 
-\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda175f7c72e2f9630bb96ef5137b325502}{TIXML\_\-ERROR\_\-READING\_\-END\_\-TAG}, 
-\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda24c814fdcf1d84704869e6f76b19cb6e}{TIXML\_\-ERROR\_\-PARSING\_\-UNKNOWN}, 
-\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda72e3072a44be499edb89593f6ce10f6c}{TIXML\_\-ERROR\_\-PARSING\_\-COMMENT}, 
-\par
-\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda4c200f9d125027ab449e2be7be471ba0}{TIXML\_\-ERROR\_\-PARSING\_\-DECLARATION}, 
-\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdab345f3e42e6ae9cdedee2b95e4d461b9}{TIXML\_\-ERROR\_\-DOCUMENT\_\-EMPTY}, 
-\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdade7edbad3a94a6c161cac2638f380e17}{TIXML\_\-ERROR\_\-EMBEDDED\_\-NULL}, 
-\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdaab2c858631b5d38eae1e6675949b9cd4}{TIXML\_\-ERROR\_\-PARSING\_\-CDATA}, 
-\par
-\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda679b15d950f29257700a724bb118c34d}{TIXML\_\-ERROR\_\-DOCUMENT\_\-TOP\_\-ONLY}, 
-\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda14552894942250efcec6b00dc52fc48a}{TIXML\_\-ERROR\_\-STRING\_\-COUNT}
+enum \{ \newline
+\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda750a76ca602241c416d5ec357d55fba1}{T\+I\+X\+M\+L\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR} = 0, 
+\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdabcabc1b8efabeda1cc4352aa73d64390}{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+OR}, 
+\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdab803949b8f12e03b5b57f86d9c52b614}{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+P\+E\+N\+I\+N\+G\+\_\+\+F\+I\+LE}, 
+\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda92e3bfc96126d3544f47e8b3f031e7bb}{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY}, 
+\newline
+\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda5cbfcf7fe5e67f0cd1aef98deac55dd2}{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+E\+L\+E\+M\+E\+NT}, 
+\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdadcc31ca78a9d507a88c9fafb3d18a3c4}{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+T\+O\+\_\+\+R\+E\+A\+D\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+N\+A\+ME}, 
+\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdafefdc75db23215e846605a2b5af0c2d3}{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+I\+N\+G\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+V\+A\+L\+UE}, 
+\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda670fac23171b64829f90639cc3696d6e}{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+I\+N\+G\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+ES}, 
+\newline
+\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda5f2aee664733a20f13f6f77556b9fa85}{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+E\+M\+P\+TY}, 
+\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda175f7c72e2f9630bb96ef5137b325502}{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+I\+N\+G\+\_\+\+E\+N\+D\+\_\+\+T\+AG}, 
+\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda24c814fdcf1d84704869e6f76b19cb6e}{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+U\+N\+K\+N\+O\+WN}, 
+\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda72e3072a44be499edb89593f6ce10f6c}{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+C\+O\+M\+M\+E\+NT}, 
+\newline
+\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda4c200f9d125027ab449e2be7be471ba0}{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON}, 
+\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdab345f3e42e6ae9cdedee2b95e4d461b9}{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+O\+C\+U\+M\+E\+N\+T\+\_\+\+E\+M\+P\+TY}, 
+\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdade7edbad3a94a6c161cac2638f380e17}{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+N\+U\+LL}, 
+\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdaab2c858631b5d38eae1e6675949b9cd4}{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+C\+D\+A\+TA}, 
+\newline
+\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda679b15d950f29257700a724bb118c34d}{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+O\+C\+U\+M\+E\+N\+T\+\_\+\+T\+O\+P\+\_\+\+O\+N\+LY}, 
+\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda14552894942250efcec6b00dc52fc48a}{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+C\+O\+U\+NT}
  \}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_ti_xml_base_ac6753fe8a2c89669038fcf281cb301bf}{TiXmlBase} ()
+\hyperlink{class_ti_xml_base_ac6753fe8a2c89669038fcf281cb301bf}{Ti\+Xml\+Base} ()
 \item 
-virtual \hyperlink{class_ti_xml_base_ad1837ecb25a913612fa1115f090cbb56}{$\sim$TiXmlBase} ()
+virtual \hyperlink{class_ti_xml_base_ad1837ecb25a913612fa1115f090cbb56}{$\sim$\+Ti\+Xml\+Base} ()
 \item 
-virtual void \hyperlink{class_ti_xml_base_a0de56b3f2ef14c65091a3b916437b512}{Print} (FILE $\ast$cfile, int depth) const =0
+virtual void \hyperlink{class_ti_xml_base_a0de56b3f2ef14c65091a3b916437b512}{Print} (F\+I\+LE $\ast$cfile, int depth) const =0
 \item 
-int \hyperlink{class_ti_xml_base_a024bceb070188df92c2a8d8852dd0853}{Row} () const 
+int \hyperlink{class_ti_xml_base_ad0cacca5d76d156b26511f46080b442e}{Row} () const
 \item 
-int \hyperlink{class_ti_xml_base_ab54bfb9b70fe6dd276e7b279cab7f003}{Column} () const 
-\begin{DoxyCompactList}\small\item\em See \hyperlink{class_ti_xml_base_a024bceb070188df92c2a8d8852dd0853}{Row()}. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_ti_xml_base_ac6b3e0f790930d4970ec30764e937b5d}{SetUserData} (void $\ast$user)
-\begin{DoxyCompactList}\small\item\em Set a pointer to arbitrary user data. \item\end{DoxyCompactList}\item 
-void $\ast$ \hyperlink{class_ti_xml_base_a6559a530ca6763fc301a14d77ed28c17}{GetUserData} ()
-\begin{DoxyCompactList}\small\item\em Get a pointer to arbitrary user data. \item\end{DoxyCompactList}\item 
-const void $\ast$ \hyperlink{class_ti_xml_base_ad0120210e4680ef2088601753ce0ede4}{GetUserData} () const 
-\begin{DoxyCompactList}\small\item\em Get a pointer to arbitrary user data. \item\end{DoxyCompactList}\item 
-virtual const char $\ast$ \hyperlink{class_ti_xml_base_a00e4edb0219d00a1379c856e5a1d2025}{Parse} (const char $\ast$p, \hyperlink{class_ti_xml_parsing_data}{TiXmlParsingData} $\ast$data, \hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{TiXmlEncoding} encoding)=0
+int \hyperlink{class_ti_xml_base_ad283b95d9858d5d78c334f4a61b07bb4}{Column} () const
+\begin{DoxyCompactList}\small\item\em See \hyperlink{class_ti_xml_base_ad0cacca5d76d156b26511f46080b442e}{Row()} \end{DoxyCompactList}\item 
+void \hyperlink{class_ti_xml_base_ac6b3e0f790930d4970ec30764e937b5d}{Set\+User\+Data} (void $\ast$user)
+\begin{DoxyCompactList}\small\item\em Set a pointer to arbitrary user data. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{class_ti_xml_base_a6559a530ca6763fc301a14d77ed28c17}{Get\+User\+Data} ()
+\begin{DoxyCompactList}\small\item\em Get a pointer to arbitrary user data. \end{DoxyCompactList}\item 
+const void $\ast$ \hyperlink{class_ti_xml_base_aaaaefcef8c0e6e32f8920f4982b2daf3}{Get\+User\+Data} () const
+\begin{DoxyCompactList}\small\item\em Get a pointer to arbitrary user data. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \hyperlink{class_ti_xml_base_a00e4edb0219d00a1379c856e5a1d2025}{Parse} (const char $\ast$p, \hyperlink{class_ti_xml_parsing_data}{Ti\+Xml\+Parsing\+Data} $\ast$data, \hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{Ti\+Xml\+Encoding} encoding)=0
 \end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \hyperlink{class_ti_xml_base_a0f799ec645bfb8d8a969e83478f379c1}{SetCondenseWhiteSpace} (bool condense)
+static void \hyperlink{class_ti_xml_base_a0f799ec645bfb8d8a969e83478f379c1}{Set\+Condense\+White\+Space} (bool condense)
 \item 
-static bool \hyperlink{class_ti_xml_base_ad4b1472531c647a25b1840a87ae42438}{IsWhiteSpaceCondensed} ()
-\begin{DoxyCompactList}\small\item\em Return the current white space setting. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+static bool \hyperlink{class_ti_xml_base_ad4b1472531c647a25b1840a87ae42438}{Is\+White\+Space\+Condensed} ()
+\begin{DoxyCompactList}\small\item\em Return the current white space setting. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-static const int \hyperlink{class_ti_xml_base_ac8c86058137bdb4b413c3eca58f2d467}{utf8ByteTable} \mbox{[}256\mbox{]}
+static const int \hyperlink{class_ti_xml_base_ac8c86058137bdb4b413c3eca58f2d467}{utf8\+Byte\+Table} \mbox{[}256\mbox{]}
 \end{DoxyCompactItemize}
 \subsection*{Static Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static const char $\ast$ \hyperlink{class_ti_xml_base_ac0c3d66d8a9e6996a1fa016275e16875}{SkipWhiteSpace} (const char $\ast$, \hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{TiXmlEncoding} encoding)
+static const char $\ast$ \hyperlink{class_ti_xml_base_ac0c3d66d8a9e6996a1fa016275e16875}{Skip\+White\+Space} (const char $\ast$, \hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{Ti\+Xml\+Encoding} encoding)
 \item 
-static bool \hyperlink{class_ti_xml_base_af56296d561c0bab4bc8e198cdcf5c48e}{IsWhiteSpace} (char c)
+static bool \hyperlink{class_ti_xml_base_af56296d561c0bab4bc8e198cdcf5c48e}{Is\+White\+Space} (char c)
 \item 
-static bool \hyperlink{class_ti_xml_base_a3de391ea9f4c4a8aa10d04480b048795}{IsWhiteSpace} (int c)
+static bool \hyperlink{class_ti_xml_base_a3de391ea9f4c4a8aa10d04480b048795}{Is\+White\+Space} (int c)
 \item 
-static const char $\ast$ \hyperlink{class_ti_xml_base_a1c21a6ab5f7b503acd91f35f183734b3}{ReadName} (const char $\ast$p, TIXML\_\-STRING $\ast$name, \hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{TiXmlEncoding} encoding)
+static bool \hyperlink{class_ti_xml_base_aafe51421ca2f618d250a0541e8d61a4e}{Stream\+White\+Space} (std\+::istream $\ast$in, \hyperlink{tinyxml_8h_a92bada05fd84d9a0c9a5bbe53de26887}{T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG} $\ast$tag)
 \item 
-static const char $\ast$ \hyperlink{class_ti_xml_base_aa646c74921aa33156968b802bbf5566e}{ReadText} (const char $\ast$in, TIXML\_\-STRING $\ast$text, bool ignoreWhiteSpace, const char $\ast$endTag, bool ignoreCase, \hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{TiXmlEncoding} encoding)
+static bool \hyperlink{class_ti_xml_base_aac761023c11f3216de865f0a4b2b137b}{Stream\+To} (std\+::istream $\ast$in, int character, \hyperlink{tinyxml_8h_a92bada05fd84d9a0c9a5bbe53de26887}{T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG} $\ast$tag)
 \item 
-static const char $\ast$ \hyperlink{class_ti_xml_base_ac5c08bf3deffcda0bf8ce2958372b584}{GetEntity} (const char $\ast$in, char $\ast$value, int $\ast$length, \hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{TiXmlEncoding} encoding)
+static const char $\ast$ \hyperlink{class_ti_xml_base_a1c21a6ab5f7b503acd91f35f183734b3}{Read\+Name} (const char $\ast$p, \hyperlink{tinyxml_8h_a92bada05fd84d9a0c9a5bbe53de26887}{T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG} $\ast$name, \hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{Ti\+Xml\+Encoding} encoding)
 \item 
-static const char $\ast$ \hyperlink{class_ti_xml_base_a5b0fde72d6f662ae1fd6303195d2159b}{GetChar} (const char $\ast$p, char $\ast$\_\-value, int $\ast$length, \hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{TiXmlEncoding} encoding)
+static const char $\ast$ \hyperlink{class_ti_xml_base_aa646c74921aa33156968b802bbf5566e}{Read\+Text} (const char $\ast$in, \hyperlink{tinyxml_8h_a92bada05fd84d9a0c9a5bbe53de26887}{T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG} $\ast$text, bool ignore\+White\+Space, const char $\ast$end\+Tag, bool ignore\+Case, \hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{Ti\+Xml\+Encoding} encoding)
 \item 
-static void \hyperlink{class_ti_xml_base_a283ddc4f1f53a53e7111eff4e12a63d9}{PutString} (const TIXML\_\-STRING \&str, TIXML\_\-STRING $\ast$out)
+static const char $\ast$ \hyperlink{class_ti_xml_base_ac5c08bf3deffcda0bf8ce2958372b584}{Get\+Entity} (const char $\ast$in, char $\ast$value, int $\ast$length, \hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{Ti\+Xml\+Encoding} encoding)
 \item 
-static bool \hyperlink{class_ti_xml_base_a51631e6986179558b9e5850723ed165a}{StringEqual} (const char $\ast$p, const char $\ast$endTag, bool ignoreCase, \hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{TiXmlEncoding} encoding)
+static const char $\ast$ \hyperlink{class_ti_xml_base_a5b0fde72d6f662ae1fd6303195d2159b}{Get\+Char} (const char $\ast$p, char $\ast$\+\_\+value, int $\ast$length, \hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{Ti\+Xml\+Encoding} encoding)
 \item 
-static int \hyperlink{class_ti_xml_base_ae22522b2e8e1ac43102d16394f639fc8}{IsAlpha} (unsigned char anyByte, \hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{TiXmlEncoding} encoding)
+static void \hyperlink{class_ti_xml_base_a283ddc4f1f53a53e7111eff4e12a63d9}{Put\+String} (const \hyperlink{tinyxml_8h_a92bada05fd84d9a0c9a5bbe53de26887}{T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG} \&str, \hyperlink{tinyxml_8h_a92bada05fd84d9a0c9a5bbe53de26887}{T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG} $\ast$out)
 \item 
-static int \hyperlink{class_ti_xml_base_a321919055c115c78ded17f85a793f368}{IsAlphaNum} (unsigned char anyByte, \hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{TiXmlEncoding} encoding)
+static bool \hyperlink{class_ti_xml_base_a51631e6986179558b9e5850723ed165a}{String\+Equal} (const char $\ast$p, const char $\ast$end\+Tag, bool ignore\+Case, \hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{Ti\+Xml\+Encoding} encoding)
 \item 
-static int \hyperlink{class_ti_xml_base_a799f17405a86a5c2029618e85f11a097}{ToLower} (int \hyperlink{_multi_view_8cpp_a8320ee13ac034dbf6d624fe8953dd337}{v}, \hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{TiXmlEncoding} encoding)
+static int \hyperlink{class_ti_xml_base_ae22522b2e8e1ac43102d16394f639fc8}{Is\+Alpha} (unsigned char any\+Byte, \hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{Ti\+Xml\+Encoding} encoding)
 \item 
-static void \hyperlink{class_ti_xml_base_a07c765e3a7f979d343e646ea797b180b}{ConvertUTF32ToUTF8} (unsigned long input, char $\ast$output, int $\ast$length)
+static int \hyperlink{class_ti_xml_base_a321919055c115c78ded17f85a793f368}{Is\+Alpha\+Num} (unsigned char any\+Byte, \hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{Ti\+Xml\+Encoding} encoding)
+\item 
+static int \hyperlink{class_ti_xml_base_a799f17405a86a5c2029618e85f11a097}{To\+Lower} (int \hyperlink{_multi_view_8cpp_a8320ee13ac034dbf6d624fe8953dd337}{v}, \hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{Ti\+Xml\+Encoding} encoding)
+\item 
+static void \hyperlink{class_ti_xml_base_a07c765e3a7f979d343e646ea797b180b}{Convert\+U\+T\+F32\+To\+U\+T\+F8} (unsigned long input, char $\ast$output, int $\ast$length)
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{struct_ti_xml_cursor}{TiXmlCursor} \hyperlink{class_ti_xml_base_a0d992580f3bc264909f898e942677a3c}{location}
+\hyperlink{struct_ti_xml_cursor}{Ti\+Xml\+Cursor} \hyperlink{class_ti_xml_base_a0d992580f3bc264909f898e942677a3c}{location}
 \item 
-void $\ast$ \hyperlink{class_ti_xml_base_ab242c01590191f644569fa89a080d97c}{userData}
-\begin{DoxyCompactList}\small\item\em Field containing a generic user pointer. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+void $\ast$ \hyperlink{class_ti_xml_base_ab242c01590191f644569fa89a080d97c}{user\+Data}
+\begin{DoxyCompactList}\small\item\em Field containing a generic user pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-static const char $\ast$ \hyperlink{class_ti_xml_base_a7ac8feec4100e446b3d78e1ac0659700}{errorString} \mbox{[}TIXML\_\-ERROR\_\-STRING\_\-COUNT\mbox{]}
+static const char $\ast$ \hyperlink{class_ti_xml_base_a7ac8feec4100e446b3d78e1ac0659700}{error\+String} \mbox{[}\hyperlink{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda14552894942250efcec6b00dc52fc48a}{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+C\+O\+U\+NT}\mbox{]}
 \end{DoxyCompactItemize}
 \subsection*{Private Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \{ \hyperlink{class_ti_xml_base_a99a2fe4c7ab51f1be33d349c5fd382e8ab848893c6d03fcd8f42941d7079ccb47}{NUM\_\-ENTITY} =  5, 
-\hyperlink{class_ti_xml_base_a99a2fe4c7ab51f1be33d349c5fd382e8aeb571e41586d47e28f60445cb9b41d49}{MAX\_\-ENTITY\_\-LENGTH} =  6
+enum \{ \hyperlink{class_ti_xml_base_a99a2fe4c7ab51f1be33d349c5fd382e8ab848893c6d03fcd8f42941d7079ccb47}{N\+U\+M\+\_\+\+E\+N\+T\+I\+TY} = 5, 
+\hyperlink{class_ti_xml_base_a99a2fe4c7ab51f1be33d349c5fd382e8aeb571e41586d47e28f60445cb9b41d49}{M\+A\+X\+\_\+\+E\+N\+T\+I\+T\+Y\+\_\+\+L\+E\+N\+G\+TH} = 6
  \}
 \end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_ti_xml_base_a626975d7fb27b0a471142ca582b561b4}{TiXmlBase} (const \hyperlink{class_ti_xml_base}{TiXmlBase} \&)
+\hyperlink{class_ti_xml_base_a626975d7fb27b0a471142ca582b561b4}{Ti\+Xml\+Base} (const \hyperlink{class_ti_xml_base}{Ti\+Xml\+Base} \&)
 \item 
-void \hyperlink{class_ti_xml_base_a183315aa6f1bb36d509b179e912cb93f}{operator=} (const \hyperlink{class_ti_xml_base}{TiXmlBase} \&base)
+void \hyperlink{class_ti_xml_base_a183315aa6f1bb36d509b179e912cb93f}{operator=} (const \hyperlink{class_ti_xml_base}{Ti\+Xml\+Base} \&base)
 \end{DoxyCompactItemize}
 \subsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-static \hyperlink{struct_ti_xml_base_1_1_entity}{Entity} \hyperlink{class_ti_xml_base_aae956c75fedff20d337f7cc109c6b71a}{entity} \mbox{[}NUM\_\-ENTITY\mbox{]}
+static \hyperlink{struct_ti_xml_base_1_1_entity}{Entity} \hyperlink{class_ti_xml_base_aae956c75fedff20d337f7cc109c6b71a}{entity} \mbox{[}\hyperlink{class_ti_xml_base_a99a2fe4c7ab51f1be33d349c5fd382e8ab848893c6d03fcd8f42941d7079ccb47}{N\+U\+M\+\_\+\+E\+N\+T\+I\+TY}\mbox{]}
 \item 
-static bool \hyperlink{class_ti_xml_base_a447a05f6a3edbb7892f66f9df8244a3d}{condenseWhiteSpace} = true
+static bool \hyperlink{class_ti_xml_base_a447a05f6a3edbb7892f66f9df8244a3d}{condense\+White\+Space} = true
 \end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{class_ti_xml_base_a218872a0d985ae30e78c55adc4bdb196}{TiXmlNode}
+class \hyperlink{class_ti_xml_base_a218872a0d985ae30e78c55adc4bdb196}{Ti\+Xml\+Node}
 \item 
-class \hyperlink{class_ti_xml_base_ab6592e32cb9132be517cc12a70564c4b}{TiXmlElement}
+class \hyperlink{class_ti_xml_base_ab6592e32cb9132be517cc12a70564c4b}{Ti\+Xml\+Element}
 \item 
-class \hyperlink{class_ti_xml_base_a173617f6dfe902cf484ce5552b950475}{TiXmlDocument}
+class \hyperlink{class_ti_xml_base_a173617f6dfe902cf484ce5552b950475}{Ti\+Xml\+Document}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-TinyXML class. See \href{http://www.grinninglizard.com/tinyxml.}{\tt http://www.grinninglizard.com/tinyxml.} \hyperlink{class_ti_xml_base}{TiXmlBase} is a base class for every class in TinyXml. It does little except to establish that TinyXml classes can be printed and provide some utility functions.
+Tiny\+X\+ML class. See \href{http://www.grinninglizard.com/tinyxml}{\tt http\+://www.\+grinninglizard.\+com/tinyxml}. 
 
-In XML, the document and elements can contain other elements and other types of nodes.
+\hyperlink{class_ti_xml_base}{Ti\+Xml\+Base} is a base class for every class in Tiny\+Xml. It does little except to establish that Tiny\+Xml classes can be printed and provide some utility functions.
 
-\begin{DoxyVerb}
-    A Document can contain:     Element (container or leaf)
-    Comment (leaf)
-    Unknown (leaf)
-    Declaration( leaf )
+In X\+ML, the document and elements can contain other elements and other types of nodes.
 
-    An Element can contain:     Element (container or leaf)
-    Text        (leaf)
-    Attributes (not on tree)
-    Comment (leaf)
-    Unknown (leaf)
+\begin{DoxyVerb}A Document can contain:     Element (container or leaf)
+Comment (leaf)
+Unknown (leaf)
+Declaration( leaf )
 
-    A Decleration contains: Attributes (not on tree)
-    \end{DoxyVerb}
+An Element can contain:     Element (container or leaf)
+Text        (leaf)
+Attributes (not on tree)
+Comment (leaf)
+Unknown (leaf)
+
+A Decleration contains: Attributes (not on tree)
+\end{DoxyVerb}
 
 
 See \begin{DoxySeeAlso}{See also}
-\href{http://www.grinninglizard.com/tinyxml}{\tt http://www.grinninglizard.com/tinyxml} 
+\href{http://www.grinninglizard.com/tinyxml}{\tt http\+://www.\+grinninglizard.\+com/tinyxml} 
 \end{DoxySeeAlso}
 
 
-Definition at line 207 of file tinyxml.h.
+Definition at line 207 of file tinyxml.\+h.
+
+
 
 \subsection{Member Enumeration Documentation}
-\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cd}{
-\subsubsection[{"@8}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
-\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cd}
-\begin{Desc}
-\item[Enumerator: ]\par
-\begin{description}
-\index{TIXML\_\-NO\_\-ERROR@{TIXML\_\-NO\_\-ERROR}!TiXmlBase@{TiXmlBase}}\index{TiXmlBase@{TiXmlBase}!TIXML\_\-NO\_\-ERROR@{TIXML\_\-NO\_\-ERROR}}\item[{\em 
-\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda750a76ca602241c416d5ec357d55fba1}{
-TIXML\_\-NO\_\-ERROR}
-\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda750a76ca602241c416d5ec357d55fba1}
-}]\index{TIXML\_\-ERROR@{TIXML\_\-ERROR}!TiXmlBase@{TiXmlBase}}\index{TiXmlBase@{TiXmlBase}!TIXML\_\-ERROR@{TIXML\_\-ERROR}}\item[{\em 
-\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdabcabc1b8efabeda1cc4352aa73d64390}{
-TIXML\_\-ERROR}
-\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdabcabc1b8efabeda1cc4352aa73d64390}
-}]\index{TIXML\_\-ERROR\_\-OPENING\_\-FILE@{TIXML\_\-ERROR\_\-OPENING\_\-FILE}!TiXmlBase@{TiXmlBase}}\index{TiXmlBase@{TiXmlBase}!TIXML\_\-ERROR\_\-OPENING\_\-FILE@{TIXML\_\-ERROR\_\-OPENING\_\-FILE}}\item[{\em 
-\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdab803949b8f12e03b5b57f86d9c52b614}{
-TIXML\_\-ERROR\_\-OPENING\_\-FILE}
-\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdab803949b8f12e03b5b57f86d9c52b614}
-}]\index{TIXML\_\-ERROR\_\-OUT\_\-OF\_\-MEMORY@{TIXML\_\-ERROR\_\-OUT\_\-OF\_\-MEMORY}!TiXmlBase@{TiXmlBase}}\index{TiXmlBase@{TiXmlBase}!TIXML\_\-ERROR\_\-OUT\_\-OF\_\-MEMORY@{TIXML\_\-ERROR\_\-OUT\_\-OF\_\-MEMORY}}\item[{\em 
-\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda92e3bfc96126d3544f47e8b3f031e7bb}{
-TIXML\_\-ERROR\_\-OUT\_\-OF\_\-MEMORY}
-\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda92e3bfc96126d3544f47e8b3f031e7bb}
-}]\index{TIXML\_\-ERROR\_\-PARSING\_\-ELEMENT@{TIXML\_\-ERROR\_\-PARSING\_\-ELEMENT}!TiXmlBase@{TiXmlBase}}\index{TiXmlBase@{TiXmlBase}!TIXML\_\-ERROR\_\-PARSING\_\-ELEMENT@{TIXML\_\-ERROR\_\-PARSING\_\-ELEMENT}}\item[{\em 
-\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda5cbfcf7fe5e67f0cd1aef98deac55dd2}{
-TIXML\_\-ERROR\_\-PARSING\_\-ELEMENT}
-\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda5cbfcf7fe5e67f0cd1aef98deac55dd2}
-}]\index{TIXML\_\-ERROR\_\-FAILED\_\-TO\_\-READ\_\-ELEMENT\_\-NAME@{TIXML\_\-ERROR\_\-FAILED\_\-TO\_\-READ\_\-ELEMENT\_\-NAME}!TiXmlBase@{TiXmlBase}}\index{TiXmlBase@{TiXmlBase}!TIXML\_\-ERROR\_\-FAILED\_\-TO\_\-READ\_\-ELEMENT\_\-NAME@{TIXML\_\-ERROR\_\-FAILED\_\-TO\_\-READ\_\-ELEMENT\_\-NAME}}\item[{\em 
-\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdadcc31ca78a9d507a88c9fafb3d18a3c4}{
-TIXML\_\-ERROR\_\-FAILED\_\-TO\_\-READ\_\-ELEMENT\_\-NAME}
-\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdadcc31ca78a9d507a88c9fafb3d18a3c4}
-}]\index{TIXML\_\-ERROR\_\-READING\_\-ELEMENT\_\-VALUE@{TIXML\_\-ERROR\_\-READING\_\-ELEMENT\_\-VALUE}!TiXmlBase@{TiXmlBase}}\index{TiXmlBase@{TiXmlBase}!TIXML\_\-ERROR\_\-READING\_\-ELEMENT\_\-VALUE@{TIXML\_\-ERROR\_\-READING\_\-ELEMENT\_\-VALUE}}\item[{\em 
-\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdafefdc75db23215e846605a2b5af0c2d3}{
-TIXML\_\-ERROR\_\-READING\_\-ELEMENT\_\-VALUE}
-\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdafefdc75db23215e846605a2b5af0c2d3}
-}]\index{TIXML\_\-ERROR\_\-READING\_\-ATTRIBUTES@{TIXML\_\-ERROR\_\-READING\_\-ATTRIBUTES}!TiXmlBase@{TiXmlBase}}\index{TiXmlBase@{TiXmlBase}!TIXML\_\-ERROR\_\-READING\_\-ATTRIBUTES@{TIXML\_\-ERROR\_\-READING\_\-ATTRIBUTES}}\item[{\em 
-\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda670fac23171b64829f90639cc3696d6e}{
-TIXML\_\-ERROR\_\-READING\_\-ATTRIBUTES}
-\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda670fac23171b64829f90639cc3696d6e}
-}]\index{TIXML\_\-ERROR\_\-PARSING\_\-EMPTY@{TIXML\_\-ERROR\_\-PARSING\_\-EMPTY}!TiXmlBase@{TiXmlBase}}\index{TiXmlBase@{TiXmlBase}!TIXML\_\-ERROR\_\-PARSING\_\-EMPTY@{TIXML\_\-ERROR\_\-PARSING\_\-EMPTY}}\item[{\em 
-\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda5f2aee664733a20f13f6f77556b9fa85}{
-TIXML\_\-ERROR\_\-PARSING\_\-EMPTY}
-\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda5f2aee664733a20f13f6f77556b9fa85}
-}]\index{TIXML\_\-ERROR\_\-READING\_\-END\_\-TAG@{TIXML\_\-ERROR\_\-READING\_\-END\_\-TAG}!TiXmlBase@{TiXmlBase}}\index{TiXmlBase@{TiXmlBase}!TIXML\_\-ERROR\_\-READING\_\-END\_\-TAG@{TIXML\_\-ERROR\_\-READING\_\-END\_\-TAG}}\item[{\em 
-\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda175f7c72e2f9630bb96ef5137b325502}{
-TIXML\_\-ERROR\_\-READING\_\-END\_\-TAG}
-\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda175f7c72e2f9630bb96ef5137b325502}
-}]\index{TIXML\_\-ERROR\_\-PARSING\_\-UNKNOWN@{TIXML\_\-ERROR\_\-PARSING\_\-UNKNOWN}!TiXmlBase@{TiXmlBase}}\index{TiXmlBase@{TiXmlBase}!TIXML\_\-ERROR\_\-PARSING\_\-UNKNOWN@{TIXML\_\-ERROR\_\-PARSING\_\-UNKNOWN}}\item[{\em 
-\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda24c814fdcf1d84704869e6f76b19cb6e}{
-TIXML\_\-ERROR\_\-PARSING\_\-UNKNOWN}
-\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda24c814fdcf1d84704869e6f76b19cb6e}
-}]\index{TIXML\_\-ERROR\_\-PARSING\_\-COMMENT@{TIXML\_\-ERROR\_\-PARSING\_\-COMMENT}!TiXmlBase@{TiXmlBase}}\index{TiXmlBase@{TiXmlBase}!TIXML\_\-ERROR\_\-PARSING\_\-COMMENT@{TIXML\_\-ERROR\_\-PARSING\_\-COMMENT}}\item[{\em 
-\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda72e3072a44be499edb89593f6ce10f6c}{
-TIXML\_\-ERROR\_\-PARSING\_\-COMMENT}
-\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda72e3072a44be499edb89593f6ce10f6c}
-}]\index{TIXML\_\-ERROR\_\-PARSING\_\-DECLARATION@{TIXML\_\-ERROR\_\-PARSING\_\-DECLARATION}!TiXmlBase@{TiXmlBase}}\index{TiXmlBase@{TiXmlBase}!TIXML\_\-ERROR\_\-PARSING\_\-DECLARATION@{TIXML\_\-ERROR\_\-PARSING\_\-DECLARATION}}\item[{\em 
-\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda4c200f9d125027ab449e2be7be471ba0}{
-TIXML\_\-ERROR\_\-PARSING\_\-DECLARATION}
-\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda4c200f9d125027ab449e2be7be471ba0}
-}]\index{TIXML\_\-ERROR\_\-DOCUMENT\_\-EMPTY@{TIXML\_\-ERROR\_\-DOCUMENT\_\-EMPTY}!TiXmlBase@{TiXmlBase}}\index{TiXmlBase@{TiXmlBase}!TIXML\_\-ERROR\_\-DOCUMENT\_\-EMPTY@{TIXML\_\-ERROR\_\-DOCUMENT\_\-EMPTY}}\item[{\em 
-\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdab345f3e42e6ae9cdedee2b95e4d461b9}{
-TIXML\_\-ERROR\_\-DOCUMENT\_\-EMPTY}
-\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdab345f3e42e6ae9cdedee2b95e4d461b9}
-}]\index{TIXML\_\-ERROR\_\-EMBEDDED\_\-NULL@{TIXML\_\-ERROR\_\-EMBEDDED\_\-NULL}!TiXmlBase@{TiXmlBase}}\index{TiXmlBase@{TiXmlBase}!TIXML\_\-ERROR\_\-EMBEDDED\_\-NULL@{TIXML\_\-ERROR\_\-EMBEDDED\_\-NULL}}\item[{\em 
-\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdade7edbad3a94a6c161cac2638f380e17}{
-TIXML\_\-ERROR\_\-EMBEDDED\_\-NULL}
-\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdade7edbad3a94a6c161cac2638f380e17}
-}]\index{TIXML\_\-ERROR\_\-PARSING\_\-CDATA@{TIXML\_\-ERROR\_\-PARSING\_\-CDATA}!TiXmlBase@{TiXmlBase}}\index{TiXmlBase@{TiXmlBase}!TIXML\_\-ERROR\_\-PARSING\_\-CDATA@{TIXML\_\-ERROR\_\-PARSING\_\-CDATA}}\item[{\em 
-\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdaab2c858631b5d38eae1e6675949b9cd4}{
-TIXML\_\-ERROR\_\-PARSING\_\-CDATA}
-\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdaab2c858631b5d38eae1e6675949b9cd4}
-}]\index{TIXML\_\-ERROR\_\-DOCUMENT\_\-TOP\_\-ONLY@{TIXML\_\-ERROR\_\-DOCUMENT\_\-TOP\_\-ONLY}!TiXmlBase@{TiXmlBase}}\index{TiXmlBase@{TiXmlBase}!TIXML\_\-ERROR\_\-DOCUMENT\_\-TOP\_\-ONLY@{TIXML\_\-ERROR\_\-DOCUMENT\_\-TOP\_\-ONLY}}\item[{\em 
-\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda679b15d950f29257700a724bb118c34d}{
-TIXML\_\-ERROR\_\-DOCUMENT\_\-TOP\_\-ONLY}
-\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda679b15d950f29257700a724bb118c34d}
-}]\index{TIXML\_\-ERROR\_\-STRING\_\-COUNT@{TIXML\_\-ERROR\_\-STRING\_\-COUNT}!TiXmlBase@{TiXmlBase}}\index{TiXmlBase@{TiXmlBase}!TIXML\_\-ERROR\_\-STRING\_\-COUNT@{TIXML\_\-ERROR\_\-STRING\_\-COUNT}}\item[{\em 
-\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda14552894942250efcec6b00dc52fc48a}{
-TIXML\_\-ERROR\_\-STRING\_\-COUNT}
-\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda14552894942250efcec6b00dc52fc48a}
-}]\end{description}
-\end{Desc}
+\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cd}{}\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cd} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+X\+M\+L\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR@{T\+I\+X\+M\+L\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!T\+I\+X\+M\+L\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR@{T\+I\+X\+M\+L\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR}}}\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda750a76ca602241c416d5ec357d55fba1}{}\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda750a76ca602241c416d5ec357d55fba1} 
+T\+I\+X\+M\+L\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+OR@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+OR}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+OR@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+OR}}}\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdabcabc1b8efabeda1cc4352aa73d64390}{}\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdabcabc1b8efabeda1cc4352aa73d64390} 
+T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+P\+E\+N\+I\+N\+G\+\_\+\+F\+I\+LE@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+P\+E\+N\+I\+N\+G\+\_\+\+F\+I\+LE}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+P\+E\+N\+I\+N\+G\+\_\+\+F\+I\+LE@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+P\+E\+N\+I\+N\+G\+\_\+\+F\+I\+LE}}}\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdab803949b8f12e03b5b57f86d9c52b614}{}\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdab803949b8f12e03b5b57f86d9c52b614} 
+T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+P\+E\+N\+I\+N\+G\+\_\+\+F\+I\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY}}}\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda92e3bfc96126d3544f47e8b3f031e7bb}{}\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda92e3bfc96126d3544f47e8b3f031e7bb} 
+T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+E\+L\+E\+M\+E\+NT@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+E\+L\+E\+M\+E\+NT}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+E\+L\+E\+M\+E\+NT@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+E\+L\+E\+M\+E\+NT}}}\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda5cbfcf7fe5e67f0cd1aef98deac55dd2}{}\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda5cbfcf7fe5e67f0cd1aef98deac55dd2} 
+T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+E\+L\+E\+M\+E\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+T\+O\+\_\+\+R\+E\+A\+D\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+N\+A\+ME@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+T\+O\+\_\+\+R\+E\+A\+D\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+N\+A\+ME}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+T\+O\+\_\+\+R\+E\+A\+D\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+N\+A\+ME@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+T\+O\+\_\+\+R\+E\+A\+D\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+N\+A\+ME}}}\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdadcc31ca78a9d507a88c9fafb3d18a3c4}{}\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdadcc31ca78a9d507a88c9fafb3d18a3c4} 
+T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+T\+O\+\_\+\+R\+E\+A\+D\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+N\+A\+ME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+I\+N\+G\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+V\+A\+L\+UE@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+I\+N\+G\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+V\+A\+L\+UE}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+I\+N\+G\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+V\+A\+L\+UE@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+I\+N\+G\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+V\+A\+L\+UE}}}\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdafefdc75db23215e846605a2b5af0c2d3}{}\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdafefdc75db23215e846605a2b5af0c2d3} 
+T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+I\+N\+G\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+V\+A\+L\+UE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+I\+N\+G\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+ES@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+I\+N\+G\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+ES}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+I\+N\+G\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+ES@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+I\+N\+G\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+ES}}}\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda670fac23171b64829f90639cc3696d6e}{}\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda670fac23171b64829f90639cc3696d6e} 
+T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+I\+N\+G\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+ES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+E\+M\+P\+TY@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+E\+M\+P\+TY}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+E\+M\+P\+TY@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+E\+M\+P\+TY}}}\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda5f2aee664733a20f13f6f77556b9fa85}{}\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda5f2aee664733a20f13f6f77556b9fa85} 
+T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+E\+M\+P\+TY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+I\+N\+G\+\_\+\+E\+N\+D\+\_\+\+T\+AG@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+I\+N\+G\+\_\+\+E\+N\+D\+\_\+\+T\+AG}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+I\+N\+G\+\_\+\+E\+N\+D\+\_\+\+T\+AG@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+I\+N\+G\+\_\+\+E\+N\+D\+\_\+\+T\+AG}}}\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda175f7c72e2f9630bb96ef5137b325502}{}\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda175f7c72e2f9630bb96ef5137b325502} 
+T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+I\+N\+G\+\_\+\+E\+N\+D\+\_\+\+T\+AG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+U\+N\+K\+N\+O\+WN@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+U\+N\+K\+N\+O\+WN}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+U\+N\+K\+N\+O\+WN@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+U\+N\+K\+N\+O\+WN}}}\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda24c814fdcf1d84704869e6f76b19cb6e}{}\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda24c814fdcf1d84704869e6f76b19cb6e} 
+T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+U\+N\+K\+N\+O\+WN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+C\+O\+M\+M\+E\+NT@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+C\+O\+M\+M\+E\+NT}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+C\+O\+M\+M\+E\+NT@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+C\+O\+M\+M\+E\+NT}}}\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda72e3072a44be499edb89593f6ce10f6c}{}\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda72e3072a44be499edb89593f6ce10f6c} 
+T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+C\+O\+M\+M\+E\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON}}}\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda4c200f9d125027ab449e2be7be471ba0}{}\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda4c200f9d125027ab449e2be7be471ba0} 
+T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+O\+C\+U\+M\+E\+N\+T\+\_\+\+E\+M\+P\+TY@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+O\+C\+U\+M\+E\+N\+T\+\_\+\+E\+M\+P\+TY}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+O\+C\+U\+M\+E\+N\+T\+\_\+\+E\+M\+P\+TY@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+O\+C\+U\+M\+E\+N\+T\+\_\+\+E\+M\+P\+TY}}}\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdab345f3e42e6ae9cdedee2b95e4d461b9}{}\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdab345f3e42e6ae9cdedee2b95e4d461b9} 
+T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+O\+C\+U\+M\+E\+N\+T\+\_\+\+E\+M\+P\+TY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+N\+U\+LL@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+N\+U\+LL}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+N\+U\+LL@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+N\+U\+LL}}}\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdade7edbad3a94a6c161cac2638f380e17}{}\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdade7edbad3a94a6c161cac2638f380e17} 
+T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+N\+U\+LL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+C\+D\+A\+TA@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+C\+D\+A\+TA}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+C\+D\+A\+TA@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+C\+D\+A\+TA}}}\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdaab2c858631b5d38eae1e6675949b9cd4}{}\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cdaab2c858631b5d38eae1e6675949b9cd4} 
+T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+C\+D\+A\+TA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+O\+C\+U\+M\+E\+N\+T\+\_\+\+T\+O\+P\+\_\+\+O\+N\+LY@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+O\+C\+U\+M\+E\+N\+T\+\_\+\+T\+O\+P\+\_\+\+O\+N\+LY}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+O\+C\+U\+M\+E\+N\+T\+\_\+\+T\+O\+P\+\_\+\+O\+N\+LY@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+O\+C\+U\+M\+E\+N\+T\+\_\+\+T\+O\+P\+\_\+\+O\+N\+LY}}}\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda679b15d950f29257700a724bb118c34d}{}\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda679b15d950f29257700a724bb118c34d} 
+T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+O\+C\+U\+M\+E\+N\+T\+\_\+\+T\+O\+P\+\_\+\+O\+N\+LY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+C\+O\+U\+NT@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+C\+O\+U\+NT}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+C\+O\+U\+NT@{T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+C\+O\+U\+NT}}}\hypertarget{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda14552894942250efcec6b00dc52fc48a}{}\label{class_ti_xml_base_a4b788e6990f18d930cc68e38587f05cda14552894942250efcec6b00dc52fc48a} 
+T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+C\+O\+U\+NT&\\
+\hline
+
+\end{DoxyEnumFields}
 
 
+Definition at line 286 of file tinyxml.\+h.
 
-Definition at line 286 of file tinyxml.h.\hypertarget{class_ti_xml_base_a99a2fe4c7ab51f1be33d349c5fd382e8}{
-\subsubsection[{"@9}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
-\label{class_ti_xml_base_a99a2fe4c7ab51f1be33d349c5fd382e8}
-\begin{Desc}
-\item[Enumerator: ]\par
-\begin{description}
-\index{NUM\_\-ENTITY@{NUM\_\-ENTITY}!TiXmlBase@{TiXmlBase}}\index{TiXmlBase@{TiXmlBase}!NUM\_\-ENTITY@{NUM\_\-ENTITY}}\item[{\em 
-\hypertarget{class_ti_xml_base_a99a2fe4c7ab51f1be33d349c5fd382e8ab848893c6d03fcd8f42941d7079ccb47}{
-NUM\_\-ENTITY}
-\label{class_ti_xml_base_a99a2fe4c7ab51f1be33d349c5fd382e8ab848893c6d03fcd8f42941d7079ccb47}
-}]\index{MAX\_\-ENTITY\_\-LENGTH@{MAX\_\-ENTITY\_\-LENGTH}!TiXmlBase@{TiXmlBase}}\index{TiXmlBase@{TiXmlBase}!MAX\_\-ENTITY\_\-LENGTH@{MAX\_\-ENTITY\_\-LENGTH}}\item[{\em 
-\hypertarget{class_ti_xml_base_a99a2fe4c7ab51f1be33d349c5fd382e8aeb571e41586d47e28f60445cb9b41d49}{
-MAX\_\-ENTITY\_\-LENGTH}
-\label{class_ti_xml_base_a99a2fe4c7ab51f1be33d349c5fd382e8aeb571e41586d47e28f60445cb9b41d49}
-}]\end{description}
-\end{Desc}
+\hypertarget{class_ti_xml_base_a99a2fe4c7ab51f1be33d349c5fd382e8}{}\label{class_ti_xml_base_a99a2fe4c7ab51f1be33d349c5fd382e8} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum\hspace{0.3cm}{\ttfamily [private]}}
 
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+U\+M\+\_\+\+E\+N\+T\+I\+TY@{N\+U\+M\+\_\+\+E\+N\+T\+I\+TY}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!N\+U\+M\+\_\+\+E\+N\+T\+I\+TY@{N\+U\+M\+\_\+\+E\+N\+T\+I\+TY}}}\hypertarget{class_ti_xml_base_a99a2fe4c7ab51f1be33d349c5fd382e8ab848893c6d03fcd8f42941d7079ccb47}{}\label{class_ti_xml_base_a99a2fe4c7ab51f1be33d349c5fd382e8ab848893c6d03fcd8f42941d7079ccb47} 
+N\+U\+M\+\_\+\+E\+N\+T\+I\+TY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+A\+X\+\_\+\+E\+N\+T\+I\+T\+Y\+\_\+\+L\+E\+N\+G\+TH@{M\+A\+X\+\_\+\+E\+N\+T\+I\+T\+Y\+\_\+\+L\+E\+N\+G\+TH}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!M\+A\+X\+\_\+\+E\+N\+T\+I\+T\+Y\+\_\+\+L\+E\+N\+G\+TH@{M\+A\+X\+\_\+\+E\+N\+T\+I\+T\+Y\+\_\+\+L\+E\+N\+G\+TH}}}\hypertarget{class_ti_xml_base_a99a2fe4c7ab51f1be33d349c5fd382e8aeb571e41586d47e28f60445cb9b41d49}{}\label{class_ti_xml_base_a99a2fe4c7ab51f1be33d349c5fd382e8aeb571e41586d47e28f60445cb9b41d49} 
+M\+A\+X\+\_\+\+E\+N\+T\+I\+T\+Y\+\_\+\+L\+E\+N\+G\+TH&\\
+\hline
+
+\end{DoxyEnumFields}
 
 
-Definition at line 417 of file tinyxml.h.
+Definition at line 417 of file tinyxml.\+h.
+
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_ti_xml_base_ac6753fe8a2c89669038fcf281cb301bf}{
-\index{TiXmlBase@{TiXmlBase}!TiXmlBase@{TiXmlBase}}
-\index{TiXmlBase@{TiXmlBase}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{TiXmlBase}]{\setlength{\rightskip}{0pt plus 5cm}TiXmlBase::TiXmlBase ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_ti_xml_base_ac6753fe8a2c89669038fcf281cb301bf}
+\hypertarget{class_ti_xml_base_ac6753fe8a2c89669038fcf281cb301bf}{}\label{class_ti_xml_base_ac6753fe8a2c89669038fcf281cb301bf} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Ti\+Xml\+Base()}{TiXmlBase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Ti\+Xml\+Base\+::\+Ti\+Xml\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
-Definition at line 213 of file tinyxml.h.\hypertarget{class_ti_xml_base_ad1837ecb25a913612fa1115f090cbb56}{
-\index{TiXmlBase@{TiXmlBase}!$\sim$TiXmlBase@{$\sim$TiXmlBase}}
-\index{$\sim$TiXmlBase@{$\sim$TiXmlBase}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{$\sim$TiXmlBase}]{\setlength{\rightskip}{0pt plus 5cm}virtual TiXmlBase::$\sim$TiXmlBase ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
-\label{class_ti_xml_base_ad1837ecb25a913612fa1115f090cbb56}
+
+Definition at line 213 of file tinyxml.\+h.
 
 
-Definition at line 216 of file tinyxml.h.\hypertarget{class_ti_xml_base_a626975d7fb27b0a471142ca582b561b4}{
-\index{TiXmlBase@{TiXmlBase}!TiXmlBase@{TiXmlBase}}
-\index{TiXmlBase@{TiXmlBase}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{TiXmlBase}]{\setlength{\rightskip}{0pt plus 5cm}TiXmlBase::TiXmlBase (const {\bf TiXmlBase} \&)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
-\label{class_ti_xml_base_a626975d7fb27b0a471142ca582b561b4}
+
+Referenced by To\+Lower().
+
+\hypertarget{class_ti_xml_base_ad1837ecb25a913612fa1115f090cbb56}{}\label{class_ti_xml_base_ad1837ecb25a913612fa1115f090cbb56} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!````~Ti\+Xml\+Base@{$\sim$\+Ti\+Xml\+Base}}
+\index{````~Ti\+Xml\+Base@{$\sim$\+Ti\+Xml\+Base}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{$\sim$\+Ti\+Xml\+Base()}{~TiXmlBase()}}
+{\footnotesize\ttfamily virtual Ti\+Xml\+Base\+::$\sim$\+Ti\+Xml\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 216 of file tinyxml.\+h.
+
+
+
+References Ti\+Xml\+Document\+::\+Print().
+
+\hypertarget{class_ti_xml_base_a626975d7fb27b0a471142ca582b561b4}{}\label{class_ti_xml_base_a626975d7fb27b0a471142ca582b561b4} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Ti\+Xml\+Base()}{TiXmlBase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Ti\+Xml\+Base\+::\+Ti\+Xml\+Base (\begin{DoxyParamCaption}\item[{const \hyperlink{class_ti_xml_base}{Ti\+Xml\+Base} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_ti_xml_base_ab54bfb9b70fe6dd276e7b279cab7f003}{
-\index{TiXmlBase@{TiXmlBase}!Column@{Column}}
-\index{Column@{Column}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{Column}]{\setlength{\rightskip}{0pt plus 5cm}int TiXmlBase::Column () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_ti_xml_base_ab54bfb9b70fe6dd276e7b279cab7f003}
+\hypertarget{class_ti_xml_base_ad283b95d9858d5d78c334f4a61b07bb4}{}\label{class_ti_xml_base_ad283b95d9858d5d78c334f4a61b07bb4} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Column@{Column}}
+\index{Column@{Column}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Column()}{Column()}}
+{\footnotesize\ttfamily int Ti\+Xml\+Base\+::\+Column (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
-See \hyperlink{class_ti_xml_base_a024bceb070188df92c2a8d8852dd0853}{Row()}. 
 
-Definition at line 266 of file tinyxml.h.
-
-References TiXmlCursor::col, and location.\hypertarget{class_ti_xml_base_a07c765e3a7f979d343e646ea797b180b}{
-\index{TiXmlBase@{TiXmlBase}!ConvertUTF32ToUTF8@{ConvertUTF32ToUTF8}}
-\index{ConvertUTF32ToUTF8@{ConvertUTF32ToUTF8}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{ConvertUTF32ToUTF8}]{\setlength{\rightskip}{0pt plus 5cm}void TiXmlBase::ConvertUTF32ToUTF8 (unsigned long {\em input}, \/  char $\ast$ {\em output}, \/  int $\ast$ {\em length})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
-\label{class_ti_xml_base_a07c765e3a7f979d343e646ea797b180b}
+See \hyperlink{class_ti_xml_base_ad0cacca5d76d156b26511f46080b442e}{Row()} 
 
 
-Definition at line 96 of file tinyxmlparser\_\-inl.h.
 
-Referenced by GetEntity().\hypertarget{class_ti_xml_base_a5b0fde72d6f662ae1fd6303195d2159b}{
-\index{TiXmlBase@{TiXmlBase}!GetChar@{GetChar}}
-\index{GetChar@{GetChar}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{GetChar}]{\setlength{\rightskip}{0pt plus 5cm}static const char$\ast$ TiXmlBase::GetChar (const char $\ast$ {\em p}, \/  char $\ast$ {\em \_\-value}, \/  int $\ast$ {\em length}, \/  {\bf TiXmlEncoding} {\em encoding})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
-\label{class_ti_xml_base_a5b0fde72d6f662ae1fd6303195d2159b}
+Definition at line 266 of file tinyxml.\+h.
 
 
-Definition at line 346 of file tinyxml.h.
 
-References GetEntity(), TIXML\_\-ENCODING\_\-UTF8, and utf8ByteTable.
+References Ti\+Xml\+Cursor\+::col, and location.
 
-Referenced by ReadText().\hypertarget{class_ti_xml_base_ac5c08bf3deffcda0bf8ce2958372b584}{
-\index{TiXmlBase@{TiXmlBase}!GetEntity@{GetEntity}}
-\index{GetEntity@{GetEntity}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{GetEntity}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ TiXmlBase::GetEntity (const char $\ast$ {\em in}, \/  char $\ast$ {\em value}, \/  int $\ast$ {\em length}, \/  {\bf TiXmlEncoding} {\em encoding})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
-\label{class_ti_xml_base_ac5c08bf3deffcda0bf8ce2958372b584}
+\hypertarget{class_ti_xml_base_a07c765e3a7f979d343e646ea797b180b}{}\label{class_ti_xml_base_a07c765e3a7f979d343e646ea797b180b} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Convert\+U\+T\+F32\+To\+U\+T\+F8@{Convert\+U\+T\+F32\+To\+U\+T\+F8}}
+\index{Convert\+U\+T\+F32\+To\+U\+T\+F8@{Convert\+U\+T\+F32\+To\+U\+T\+F8}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Convert\+U\+T\+F32\+To\+U\+T\+F8()}{ConvertUTF32ToUTF8()}}
+{\footnotesize\ttfamily void Ti\+Xml\+Base\+::\+Convert\+U\+T\+F32\+To\+U\+T\+F8 (\begin{DoxyParamCaption}\item[{unsigned long}]{input,  }\item[{char $\ast$}]{output,  }\item[{int $\ast$}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
 
 
-Definition at line 446 of file tinyxmlparser\_\-inl.h.
 
-References TiXmlBase::Entity::chr, ConvertUTF32ToUTF8(), entity, NUM\_\-ENTITY, TIXML\_\-ENCODING\_\-UTF8, and TIXML\_\-STRING.
+Definition at line 96 of file tinyxmlparser\+\_\+inl.\+h.
 
-Referenced by GetChar().\hypertarget{class_ti_xml_base_ad0120210e4680ef2088601753ce0ede4}{
-\index{TiXmlBase@{TiXmlBase}!GetUserData@{GetUserData}}
-\index{GetUserData@{GetUserData}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{GetUserData}]{\setlength{\rightskip}{0pt plus 5cm}const void$\ast$ TiXmlBase::GetUserData () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_ti_xml_base_ad0120210e4680ef2088601753ce0ede4}
+
+
+Referenced by Get\+Entity(), and To\+Lower().
+
+\hypertarget{class_ti_xml_base_a5b0fde72d6f662ae1fd6303195d2159b}{}\label{class_ti_xml_base_a5b0fde72d6f662ae1fd6303195d2159b} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Get\+Char@{Get\+Char}}
+\index{Get\+Char@{Get\+Char}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Get\+Char()}{GetChar()}}
+{\footnotesize\ttfamily static const char$\ast$ Ti\+Xml\+Base\+::\+Get\+Char (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p,  }\item[{char $\ast$}]{\+\_\+value,  }\item[{int $\ast$}]{length,  }\item[{\hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{Ti\+Xml\+Encoding}}]{encoding }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 346 of file tinyxml.\+h.
+
+
+
+References Get\+Entity(), Put\+String(), String\+Equal(), T\+I\+X\+M\+L\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+U\+T\+F8, and T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG.
+
+
+
+Referenced by Read\+Text().
+
+\hypertarget{class_ti_xml_base_ac5c08bf3deffcda0bf8ce2958372b584}{}\label{class_ti_xml_base_ac5c08bf3deffcda0bf8ce2958372b584} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Get\+Entity@{Get\+Entity}}
+\index{Get\+Entity@{Get\+Entity}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Get\+Entity()}{GetEntity()}}
+{\footnotesize\ttfamily const char $\ast$ Ti\+Xml\+Base\+::\+Get\+Entity (\begin{DoxyParamCaption}\item[{const char $\ast$}]{in,  }\item[{char $\ast$}]{value,  }\item[{int $\ast$}]{length,  }\item[{\hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{Ti\+Xml\+Encoding}}]{encoding }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 446 of file tinyxmlparser\+\_\+inl.\+h.
+
+
+
+References Ti\+Xml\+Base\+::\+Entity\+::chr, Convert\+U\+T\+F32\+To\+U\+T\+F8(), entity, N\+U\+M\+\_\+\+E\+N\+T\+I\+TY, T\+I\+X\+M\+L\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+U\+T\+F8, and T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG.
+
+
+
+Referenced by Get\+Char(), and Is\+White\+Space().
+
+\hypertarget{class_ti_xml_base_a6559a530ca6763fc301a14d77ed28c17}{}\label{class_ti_xml_base_a6559a530ca6763fc301a14d77ed28c17} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Get\+User\+Data@{Get\+User\+Data}}
+\index{Get\+User\+Data@{Get\+User\+Data}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Get\+User\+Data()}{GetUserData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void$\ast$ Ti\+Xml\+Base\+::\+Get\+User\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Get a pointer to arbitrary user data. 
 
-Definition at line 276 of file tinyxml.h.
 
-References userData.\hypertarget{class_ti_xml_base_a6559a530ca6763fc301a14d77ed28c17}{
-\index{TiXmlBase@{TiXmlBase}!GetUserData@{GetUserData}}
-\index{GetUserData@{GetUserData}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{GetUserData}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ TiXmlBase::GetUserData ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_ti_xml_base_a6559a530ca6763fc301a14d77ed28c17}
+
+Definition at line 273 of file tinyxml.\+h.
+
+
+
+References user\+Data.
+
+\hypertarget{class_ti_xml_base_aaaaefcef8c0e6e32f8920f4982b2daf3}{}\label{class_ti_xml_base_aaaaefcef8c0e6e32f8920f4982b2daf3} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Get\+User\+Data@{Get\+User\+Data}}
+\index{Get\+User\+Data@{Get\+User\+Data}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Get\+User\+Data()}{GetUserData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const void$\ast$ Ti\+Xml\+Base\+::\+Get\+User\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Get a pointer to arbitrary user data. 
 
-Definition at line 273 of file tinyxml.h.
-
-References userData.\hypertarget{class_ti_xml_base_ae22522b2e8e1ac43102d16394f639fc8}{
-\index{TiXmlBase@{TiXmlBase}!IsAlpha@{IsAlpha}}
-\index{IsAlpha@{IsAlpha}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{IsAlpha}]{\setlength{\rightskip}{0pt plus 5cm}int TiXmlBase::IsAlpha (unsigned char {\em anyByte}, \/  {\bf TiXmlEncoding} {\em encoding})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
-\label{class_ti_xml_base_ae22522b2e8e1ac43102d16394f639fc8}
 
 
-Definition at line 137 of file tinyxmlparser\_\-inl.h.
-
-Referenced by TiXmlNode::Identify(), and ReadName().\hypertarget{class_ti_xml_base_a321919055c115c78ded17f85a793f368}{
-\index{TiXmlBase@{TiXmlBase}!IsAlphaNum@{IsAlphaNum}}
-\index{IsAlphaNum@{IsAlphaNum}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{IsAlphaNum}]{\setlength{\rightskip}{0pt plus 5cm}int TiXmlBase::IsAlphaNum (unsigned char {\em anyByte}, \/  {\bf TiXmlEncoding} {\em encoding})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
-\label{class_ti_xml_base_a321919055c115c78ded17f85a793f368}
+Definition at line 276 of file tinyxml.\+h.
 
 
-Definition at line 158 of file tinyxmlparser\_\-inl.h.
 
-Referenced by ReadName().\hypertarget{class_ti_xml_base_a3de391ea9f4c4a8aa10d04480b048795}{
-\index{TiXmlBase@{TiXmlBase}!IsWhiteSpace@{IsWhiteSpace}}
-\index{IsWhiteSpace@{IsWhiteSpace}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{IsWhiteSpace}]{\setlength{\rightskip}{0pt plus 5cm}static bool TiXmlBase::IsWhiteSpace (int {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
-\label{class_ti_xml_base_a3de391ea9f4c4a8aa10d04480b048795}
+References user\+Data.
 
-
-Definition at line 314 of file tinyxml.h.
-
-References IsWhiteSpace().\hypertarget{class_ti_xml_base_af56296d561c0bab4bc8e198cdcf5c48e}{
-\index{TiXmlBase@{TiXmlBase}!IsWhiteSpace@{IsWhiteSpace}}
-\index{IsWhiteSpace@{IsWhiteSpace}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{IsWhiteSpace}]{\setlength{\rightskip}{0pt plus 5cm}static bool TiXmlBase::IsWhiteSpace (char {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
-\label{class_ti_xml_base_af56296d561c0bab4bc8e198cdcf5c48e}
+\hypertarget{class_ti_xml_base_ae22522b2e8e1ac43102d16394f639fc8}{}\label{class_ti_xml_base_ae22522b2e8e1ac43102d16394f639fc8} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Is\+Alpha@{Is\+Alpha}}
+\index{Is\+Alpha@{Is\+Alpha}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Is\+Alpha()}{IsAlpha()}}
+{\footnotesize\ttfamily int Ti\+Xml\+Base\+::\+Is\+Alpha (\begin{DoxyParamCaption}\item[{unsigned char}]{any\+Byte,  }\item[{\hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{Ti\+Xml\+Encoding}}]{encoding }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
 
 
-Definition at line 311 of file tinyxml.h.
 
-Referenced by TiXmlText::Blank(), IsWhiteSpace(), TiXmlDeclaration::Parse(), TiXmlAttribute::Parse(), ReadText(), and SkipWhiteSpace().\hypertarget{class_ti_xml_base_ad4b1472531c647a25b1840a87ae42438}{
-\index{TiXmlBase@{TiXmlBase}!IsWhiteSpaceCondensed@{IsWhiteSpaceCondensed}}
-\index{IsWhiteSpaceCondensed@{IsWhiteSpaceCondensed}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{IsWhiteSpaceCondensed}]{\setlength{\rightskip}{0pt plus 5cm}static bool TiXmlBase::IsWhiteSpaceCondensed ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
-\label{class_ti_xml_base_ad4b1472531c647a25b1840a87ae42438}
+Definition at line 137 of file tinyxmlparser\+\_\+inl.\+h.
+
+
+
+Referenced by Ti\+Xml\+Node\+::\+Identify(), and Read\+Name().
+
+\hypertarget{class_ti_xml_base_a321919055c115c78ded17f85a793f368}{}\label{class_ti_xml_base_a321919055c115c78ded17f85a793f368} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Is\+Alpha\+Num@{Is\+Alpha\+Num}}
+\index{Is\+Alpha\+Num@{Is\+Alpha\+Num}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Is\+Alpha\+Num()}{IsAlphaNum()}}
+{\footnotesize\ttfamily int Ti\+Xml\+Base\+::\+Is\+Alpha\+Num (\begin{DoxyParamCaption}\item[{unsigned char}]{any\+Byte,  }\item[{\hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{Ti\+Xml\+Encoding}}]{encoding }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 158 of file tinyxmlparser\+\_\+inl.\+h.
+
+
+
+Referenced by Read\+Name().
+
+\hypertarget{class_ti_xml_base_af56296d561c0bab4bc8e198cdcf5c48e}{}\label{class_ti_xml_base_af56296d561c0bab4bc8e198cdcf5c48e} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Is\+White\+Space@{Is\+White\+Space}}
+\index{Is\+White\+Space@{Is\+White\+Space}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Is\+White\+Space()}{IsWhiteSpace()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static bool Ti\+Xml\+Base\+::\+Is\+White\+Space (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 311 of file tinyxml.\+h.
+
+
+
+Referenced by Ti\+Xml\+Text\+::\+Blank(), Ti\+Xml\+Node\+::\+Identify(), Is\+White\+Space(), Ti\+Xml\+Attribute\+::\+Parse(), Ti\+Xml\+Declaration\+::\+Parse(), Read\+Text(), and Skip\+White\+Space().
+
+\hypertarget{class_ti_xml_base_a3de391ea9f4c4a8aa10d04480b048795}{}\label{class_ti_xml_base_a3de391ea9f4c4a8aa10d04480b048795} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Is\+White\+Space@{Is\+White\+Space}}
+\index{Is\+White\+Space@{Is\+White\+Space}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Is\+White\+Space()}{IsWhiteSpace()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static bool Ti\+Xml\+Base\+::\+Is\+White\+Space (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 314 of file tinyxml.\+h.
+
+
+
+References Get\+Entity(), Is\+White\+Space(), Read\+Name(), Read\+Text(), Stream\+To(), Stream\+White\+Space(), T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG, and Ti\+Xml\+Node\+::value.
+
+\hypertarget{class_ti_xml_base_ad4b1472531c647a25b1840a87ae42438}{}\label{class_ti_xml_base_ad4b1472531c647a25b1840a87ae42438} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Is\+White\+Space\+Condensed@{Is\+White\+Space\+Condensed}}
+\index{Is\+White\+Space\+Condensed@{Is\+White\+Space\+Condensed}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Is\+White\+Space\+Condensed()}{IsWhiteSpaceCondensed()}}
+{\footnotesize\ttfamily static bool Ti\+Xml\+Base\+::\+Is\+White\+Space\+Condensed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
 
 
 Return the current white space setting. 
 
-Definition at line 241 of file tinyxml.h.
-
-References condenseWhiteSpace.
-
-Referenced by TiXmlElement::ReadValue().\hypertarget{class_ti_xml_base_a183315aa6f1bb36d509b179e912cb93f}{
-\index{TiXmlBase@{TiXmlBase}!operator=@{operator=}}
-\index{operator=@{operator=}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void TiXmlBase::operator= (const {\bf TiXmlBase} \& {\em base})\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
-\label{class_ti_xml_base_a183315aa6f1bb36d509b179e912cb93f}
 
 
-Reimplemented in \hyperlink{class_ti_xml_node_a9eb62a8d95b8a98ec2df481cc9e5a7e2}{TiXmlNode}, \hyperlink{class_ti_xml_attribute_a83b9c2a47dbfadf5029f2c0f13c18466}{TiXmlAttribute}, \hyperlink{class_ti_xml_element_af5cd4156e082ef3bf23adfe0ed173340}{TiXmlElement}, \hyperlink{class_ti_xml_comment_a46373f99b65cb960637dccb1f126bd49}{TiXmlComment}, \hyperlink{class_ti_xml_text_af5f15d40d048cea7cab9d0eb4fd8a7d2}{TiXmlText}, \hyperlink{class_ti_xml_declaration_a0fedc57539af9049be8db2d7d9d9ba33}{TiXmlDeclaration}, \hyperlink{class_ti_xml_unknown_a5097fe228cd5ad4edcdddf02c334fd83}{TiXmlUnknown}, and \hyperlink{class_ti_xml_document_aafbfacc3414008f619b1345775ef12a4}{TiXmlDocument}.\hypertarget{class_ti_xml_base_a00e4edb0219d00a1379c856e5a1d2025}{
-\index{TiXmlBase@{TiXmlBase}!Parse@{Parse}}
-\index{Parse@{Parse}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{Parse}]{\setlength{\rightskip}{0pt plus 5cm}virtual const char$\ast$ TiXmlBase::Parse (const char $\ast$ {\em p}, \/  {\bf TiXmlParsingData} $\ast$ {\em data}, \/  {\bf TiXmlEncoding} {\em encoding})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_ti_xml_base_a00e4edb0219d00a1379c856e5a1d2025}
+Definition at line 241 of file tinyxml.\+h.
 
 
-Implemented in \hyperlink{class_ti_xml_attribute_ad62774421b814894b995af3b5d231dda}{TiXmlAttribute}, \hyperlink{class_ti_xml_element_af95c9165159fd9dfdcc5b894a3fcf85b}{TiXmlElement}, \hyperlink{class_ti_xml_comment_a43bddc18ac057734b41d84653b71d3e0}{TiXmlComment}, \hyperlink{class_ti_xml_text_a8d2dcfa41fc73d3e62dacc2fcf633819}{TiXmlText}, \hyperlink{class_ti_xml_declaration_a9839ea97ed687a2b7342fd7b0f04361b}{TiXmlDeclaration}, \hyperlink{class_ti_xml_unknown_aa51c2694e4177b5f0b5429ee5a81b58d}{TiXmlUnknown}, and \hyperlink{class_ti_xml_document_a789ad2f06f93d52bdb5570b2f3670289}{TiXmlDocument}.
 
-Referenced by TiXmlDocument::Parse(), and TiXmlElement::ReadValue().\hypertarget{class_ti_xml_base_a0de56b3f2ef14c65091a3b916437b512}{
-\index{TiXmlBase@{TiXmlBase}!Print@{Print}}
-\index{Print@{Print}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{Print}]{\setlength{\rightskip}{0pt plus 5cm}virtual void TiXmlBase::Print (FILE $\ast$ {\em cfile}, \/  int {\em depth}) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
-\label{class_ti_xml_base_a0de56b3f2ef14c65091a3b916437b512}
-All TinyXml classes can print themselves to a filestream or the string class (\hyperlink{class_ti_xml_string}{TiXmlString} in non-\/STL mode, \hyperlink{classstd_1_1string}{std::string} in STL mode.) Either or both cfile and str can be null.
+References condense\+White\+Space.
+
+
+
+Referenced by Ti\+Xml\+Element\+::\+Read\+Value().
+
+\hypertarget{class_ti_xml_base_a183315aa6f1bb36d509b179e912cb93f}{}\label{class_ti_xml_base_a183315aa6f1bb36d509b179e912cb93f} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!operator=@{operator=}}
+\index{operator=@{operator=}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void Ti\+Xml\+Base\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_ti_xml_base}{Ti\+Xml\+Base} \&}]{base }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\hypertarget{class_ti_xml_base_a00e4edb0219d00a1379c856e5a1d2025}{}\label{class_ti_xml_base_a00e4edb0219d00a1379c856e5a1d2025} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Parse@{Parse}}
+\index{Parse@{Parse}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Parse()}{Parse()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Ti\+Xml\+Base\+::\+Parse (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p,  }\item[{\hyperlink{class_ti_xml_parsing_data}{Ti\+Xml\+Parsing\+Data} $\ast$}]{data,  }\item[{\hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{Ti\+Xml\+Encoding}}]{encoding }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{class_ti_xml_document_a789ad2f06f93d52bdb5570b2f3670289}{Ti\+Xml\+Document}, \hyperlink{class_ti_xml_unknown_aa51c2694e4177b5f0b5429ee5a81b58d}{Ti\+Xml\+Unknown}, \hyperlink{class_ti_xml_declaration_a9839ea97ed687a2b7342fd7b0f04361b}{Ti\+Xml\+Declaration}, \hyperlink{class_ti_xml_text_a8d2dcfa41fc73d3e62dacc2fcf633819}{Ti\+Xml\+Text}, \hyperlink{class_ti_xml_comment_a43bddc18ac057734b41d84653b71d3e0}{Ti\+Xml\+Comment}, \hyperlink{class_ti_xml_element_af95c9165159fd9dfdcc5b894a3fcf85b}{Ti\+Xml\+Element}, and \hyperlink{class_ti_xml_attribute_ad62774421b814894b995af3b5d231dda}{Ti\+Xml\+Attribute}.
+
+
+
+Referenced by Ti\+Xml\+Attribute\+Set\+::\+Find(), Ti\+Xml\+Document\+::\+Parse(), and Ti\+Xml\+Element\+::\+Read\+Value().
+
+\hypertarget{class_ti_xml_base_a0de56b3f2ef14c65091a3b916437b512}{}\label{class_ti_xml_base_a0de56b3f2ef14c65091a3b916437b512} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Print@{Print}}
+\index{Print@{Print}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily virtual void Ti\+Xml\+Base\+::\+Print (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{cfile,  }\item[{int}]{depth }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+All Tiny\+Xml classes can print themselves to a filestream or the string class (\hyperlink{class_ti_xml_string}{Ti\+Xml\+String} in non-\/\+S\+TL mode, std\+::string in S\+TL mode.) Either or both cfile and str can be null.
 
 This is a formatted print, and will insert tabs and newlines.
 
 (For an unformatted stream, use the $<$$<$ operator.) 
 
-Implemented in \hyperlink{class_ti_xml_attribute_acc04956c1d5c4c31fe74f7a7528d109a}{TiXmlAttribute}, \hyperlink{class_ti_xml_element_ad9d0c008866982ab8d9aafae7e14d692}{TiXmlElement}, \hyperlink{class_ti_xml_comment_a17398061d62c470f57801ce28fa33ad4}{TiXmlComment}, \hyperlink{class_ti_xml_text_ae74d56c5b3ddec6cc3103dd51821af92}{TiXmlText}, \hyperlink{class_ti_xml_declaration_abf6303db4bd05b5be554036817ff1cb4}{TiXmlDeclaration}, \hyperlink{class_ti_xml_unknown_a025f19c21ef01ea9be50febb8fe0ba06}{TiXmlUnknown}, and \hyperlink{class_ti_xml_document_a7b1aea204fee266b70b9c105c8bf2ada}{TiXmlDocument}.
-
-Referenced by TiXmlElement::Print().\hypertarget{class_ti_xml_base_a283ddc4f1f53a53e7111eff4e12a63d9}{
-\index{TiXmlBase@{TiXmlBase}!PutString@{PutString}}
-\index{PutString@{PutString}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{PutString}]{\setlength{\rightskip}{0pt plus 5cm}void TiXmlBase::PutString (const TIXML\_\-STRING \& {\em str}, \/  TIXML\_\-STRING $\ast$ {\em out})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
-\label{class_ti_xml_base_a283ddc4f1f53a53e7111eff4e12a63d9}
+Implemented in \hyperlink{class_ti_xml_document_aa9e166fae51da603641380a964f21eeb}{Ti\+Xml\+Document}, \hyperlink{class_ti_xml_unknown_a5793fbc48ab3419783c0e866ca2d334e}{Ti\+Xml\+Unknown}, \hyperlink{class_ti_xml_declaration_ae46cff6565f299210ab945e78bf28514}{Ti\+Xml\+Declaration}, \hyperlink{class_ti_xml_text_a75f6895906333894e2574cc8cf77ea79}{Ti\+Xml\+Text}, \hyperlink{class_ti_xml_comment_a873171beac19d40f0eaae945711c98ed}{Ti\+Xml\+Comment}, \hyperlink{class_ti_xml_element_aa31a15cddfb8601a31236fe7d2569fb4}{Ti\+Xml\+Element}, and \hyperlink{class_ti_xml_attribute_a68ae373e03b9c35be4c9d0c3c233b894}{Ti\+Xml\+Attribute}.
 
 
-Definition at line 42 of file tinyxml\_\-inl.h.
+
+Referenced by Ti\+Xml\+Element\+::\+Print().
+
+\hypertarget{class_ti_xml_base_a283ddc4f1f53a53e7111eff4e12a63d9}{}\label{class_ti_xml_base_a283ddc4f1f53a53e7111eff4e12a63d9} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Put\+String@{Put\+String}}
+\index{Put\+String@{Put\+String}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Put\+String()}{PutString()}}
+{\footnotesize\ttfamily void Ti\+Xml\+Base\+::\+Put\+String (\begin{DoxyParamCaption}\item[{const \hyperlink{tinyxml_8h_a92bada05fd84d9a0c9a5bbe53de26887}{T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG} \&}]{str,  }\item[{\hyperlink{tinyxml_8h_a92bada05fd84d9a0c9a5bbe53de26887}{T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG} $\ast$}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 42 of file tinyxml\+\_\+inl.\+h.
+
+
 
 References entity.
 
-Referenced by TiXmlText::Print(), and TiXmlAttribute::Print().\hypertarget{class_ti_xml_base_a1c21a6ab5f7b503acd91f35f183734b3}{
-\index{TiXmlBase@{TiXmlBase}!ReadName@{ReadName}}
-\index{ReadName@{ReadName}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{ReadName}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ TiXmlBase::ReadName (const char $\ast$ {\em p}, \/  TIXML\_\-STRING $\ast$ {\em name}, \/  {\bf TiXmlEncoding} {\em encoding})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
-\label{class_ti_xml_base_a1c21a6ab5f7b503acd91f35f183734b3}
 
 
-Definition at line 409 of file tinyxmlparser\_\-inl.h.
+Referenced by Get\+Char(), Ti\+Xml\+Attribute\+::\+Print(), and Ti\+Xml\+Text\+::\+Print().
 
-References IsAlpha(), and IsAlphaNum().
-
-Referenced by TiXmlAttribute::Parse(), and TiXmlElement::Parse().\hypertarget{class_ti_xml_base_aa646c74921aa33156968b802bbf5566e}{
-\index{TiXmlBase@{TiXmlBase}!ReadText@{ReadText}}
-\index{ReadText@{ReadText}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{ReadText}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ TiXmlBase::ReadText (const char $\ast$ {\em in}, \/  TIXML\_\-STRING $\ast$ {\em text}, \/  bool {\em ignoreWhiteSpace}, \/  const char $\ast$ {\em endTag}, \/  bool {\em ignoreCase}, \/  {\bf TiXmlEncoding} {\em encoding})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
-\label{class_ti_xml_base_aa646c74921aa33156968b802bbf5566e}
+\hypertarget{class_ti_xml_base_a1c21a6ab5f7b503acd91f35f183734b3}{}\label{class_ti_xml_base_a1c21a6ab5f7b503acd91f35f183734b3} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Read\+Name@{Read\+Name}}
+\index{Read\+Name@{Read\+Name}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Read\+Name()}{ReadName()}}
+{\footnotesize\ttfamily const char $\ast$ Ti\+Xml\+Base\+::\+Read\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p,  }\item[{\hyperlink{tinyxml_8h_a92bada05fd84d9a0c9a5bbe53de26887}{T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG} $\ast$}]{name,  }\item[{\hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{Ti\+Xml\+Encoding}}]{encoding }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
 
 
-Definition at line 582 of file tinyxmlparser\_\-inl.h.
 
-References condenseWhiteSpace, GetChar(), IsWhiteSpace(), SkipWhiteSpace(), and StringEqual().
+Definition at line 409 of file tinyxmlparser\+\_\+inl.\+h.
 
-Referenced by TiXmlText::Parse(), TiXmlAttribute::Parse(), and TiXmlComment::Parse().\hypertarget{class_ti_xml_base_a024bceb070188df92c2a8d8852dd0853}{
-\index{TiXmlBase@{TiXmlBase}!Row@{Row}}
-\index{Row@{Row}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{Row}]{\setlength{\rightskip}{0pt plus 5cm}int TiXmlBase::Row () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_ti_xml_base_a024bceb070188df92c2a8d8852dd0853}
+
+
+References Is\+Alpha(), and Is\+Alpha\+Num().
+
+
+
+Referenced by Is\+White\+Space(), Ti\+Xml\+Attribute\+::\+Parse(), and Ti\+Xml\+Element\+::\+Parse().
+
+\hypertarget{class_ti_xml_base_aa646c74921aa33156968b802bbf5566e}{}\label{class_ti_xml_base_aa646c74921aa33156968b802bbf5566e} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Read\+Text@{Read\+Text}}
+\index{Read\+Text@{Read\+Text}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Read\+Text()}{ReadText()}}
+{\footnotesize\ttfamily const char $\ast$ Ti\+Xml\+Base\+::\+Read\+Text (\begin{DoxyParamCaption}\item[{const char $\ast$}]{in,  }\item[{\hyperlink{tinyxml_8h_a92bada05fd84d9a0c9a5bbe53de26887}{T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG} $\ast$}]{text,  }\item[{bool}]{ignore\+White\+Space,  }\item[{const char $\ast$}]{end\+Tag,  }\item[{bool}]{ignore\+Case,  }\item[{\hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{Ti\+Xml\+Encoding}}]{encoding }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 582 of file tinyxmlparser\+\_\+inl.\+h.
+
+
+
+References condense\+White\+Space, Get\+Char(), Ti\+Xml\+Node\+::\+Identify(), Is\+White\+Space(), Ti\+Xml\+Document\+::\+Set\+Error(), Skip\+White\+Space(), Ti\+Xml\+Node\+::\+Stream\+In(), Ti\+Xml\+Document\+::\+Stream\+In(), Stream\+To(), String\+Equal(), T\+I\+X\+M\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+E\+N\+C\+O\+D\+I\+NG, T\+I\+X\+M\+L\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+U\+N\+K\+N\+O\+WN, T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+OR, T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+N\+U\+LL, T\+I\+X\+M\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+A\+R\+S\+I\+N\+G\+\_\+\+E\+M\+P\+TY, T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG, and Ti\+Xml\+Node\+::\+To\+Element().
+
+
+
+Referenced by Is\+White\+Space(), Ti\+Xml\+Attribute\+::\+Parse(), Ti\+Xml\+Comment\+::\+Parse(), and Ti\+Xml\+Text\+::\+Parse().
+
+\hypertarget{class_ti_xml_base_ad0cacca5d76d156b26511f46080b442e}{}\label{class_ti_xml_base_ad0cacca5d76d156b26511f46080b442e} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Row@{Row}}
+\index{Row@{Row}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Row()}{Row()}}
+{\footnotesize\ttfamily int Ti\+Xml\+Base\+::\+Row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 Return the position, in the original source file, of this node or attribute. The row and column are 1-\/based. (That is the first row and first column is 1,1). If the returns values are 0 or less, then the parser does not have a row and column value.
 
-Generally, the row and column value will be set when the TiXmlDocument::Load(), \hyperlink{class_ti_xml_document_a4c852a889c02cf251117fd1d9fe1845f}{TiXmlDocument::LoadFile()}, or any \hyperlink{class_ti_xml_base_a00e4edb0219d00a1379c856e5a1d2025}{TiXmlNode::Parse()} is called. It will NOT be set when the DOM was created from operator$>$$>$.
+Generally, the row and column value will be set when the Ti\+Xml\+Document\+::\+Load(), \hyperlink{class_ti_xml_document_a4c852a889c02cf251117fd1d9fe1845f}{Ti\+Xml\+Document\+::\+Load\+File()}, or any \hyperlink{class_ti_xml_base_a00e4edb0219d00a1379c856e5a1d2025}{Ti\+Xml\+Node\+::\+Parse()} is called. It will N\+OT be set when the D\+OM was created from operator$>$$>$.
 
-The values reflect the initial load. Once the DOM is modified programmatically (by adding or changing nodes and attributes) the new values will NOT update to reflect changes in the document.
+The values reflect the initial load. Once the D\+OM is modified programmatically (by adding or changing nodes and attributes) the new values will N\+OT update to reflect changes in the document.
 
-There is a minor performance cost to computing the row and column. Computation can be disabled if \hyperlink{class_ti_xml_document_a51dac56316f89b35bdb7d0d433ba988e}{TiXmlDocument::SetTabSize()} is called with 0 as the value.
+There is a minor performance cost to computing the row and column. Computation can be disabled if \hyperlink{class_ti_xml_document_a51dac56316f89b35bdb7d0d433ba988e}{Ti\+Xml\+Document\+::\+Set\+Tab\+Size()} is called with 0 as the value.
 
 \begin{DoxySeeAlso}{See also}
-\hyperlink{class_ti_xml_document_a51dac56316f89b35bdb7d0d433ba988e}{TiXmlDocument::SetTabSize()} 
+\hyperlink{class_ti_xml_document_a51dac56316f89b35bdb7d0d433ba988e}{Ti\+Xml\+Document\+::\+Set\+Tab\+Size()} 
 \end{DoxySeeAlso}
 
 
-Definition at line 263 of file tinyxml.h.
+Definition at line 263 of file tinyxml.\+h.
 
-References location, and TiXmlCursor::row.\hypertarget{class_ti_xml_base_a0f799ec645bfb8d8a969e83478f379c1}{
-\index{TiXmlBase@{TiXmlBase}!SetCondenseWhiteSpace@{SetCondenseWhiteSpace}}
-\index{SetCondenseWhiteSpace@{SetCondenseWhiteSpace}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{SetCondenseWhiteSpace}]{\setlength{\rightskip}{0pt plus 5cm}static void TiXmlBase::SetCondenseWhiteSpace (bool {\em condense})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
-\label{class_ti_xml_base_a0f799ec645bfb8d8a969e83478f379c1}
-The world does not agree on whether white space should be kept or not. In order to make everyone happy, these global, static functions are provided to set whether or not TinyXml will condense all white space into a single space or not. The default is to condense. Note changing this value is not thread safe. 
 
-Definition at line 236 of file tinyxml.h.
 
-References condenseWhiteSpace.\hypertarget{class_ti_xml_base_ac6b3e0f790930d4970ec30764e937b5d}{
-\index{TiXmlBase@{TiXmlBase}!SetUserData@{SetUserData}}
-\index{SetUserData@{SetUserData}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{SetUserData}]{\setlength{\rightskip}{0pt plus 5cm}void TiXmlBase::SetUserData (void $\ast$ {\em user})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_ti_xml_base_ac6b3e0f790930d4970ec30764e937b5d}
+References location, and Ti\+Xml\+Cursor\+::row.
+
+\hypertarget{class_ti_xml_base_a0f799ec645bfb8d8a969e83478f379c1}{}\label{class_ti_xml_base_a0f799ec645bfb8d8a969e83478f379c1} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Set\+Condense\+White\+Space@{Set\+Condense\+White\+Space}}
+\index{Set\+Condense\+White\+Space@{Set\+Condense\+White\+Space}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Set\+Condense\+White\+Space()}{SetCondenseWhiteSpace()}}
+{\footnotesize\ttfamily static void Ti\+Xml\+Base\+::\+Set\+Condense\+White\+Space (\begin{DoxyParamCaption}\item[{bool}]{condense }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+The world does not agree on whether white space should be kept or not. In order to make everyone happy, these global, static functions are provided to set whether or not Tiny\+Xml will condense all white space into a single space or not. The default is to condense. Note changing this value is not thread safe. 
+
+Definition at line 236 of file tinyxml.\+h.
+
+
+
+References condense\+White\+Space.
+
+\hypertarget{class_ti_xml_base_ac6b3e0f790930d4970ec30764e937b5d}{}\label{class_ti_xml_base_ac6b3e0f790930d4970ec30764e937b5d} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Set\+User\+Data@{Set\+User\+Data}}
+\index{Set\+User\+Data@{Set\+User\+Data}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Set\+User\+Data()}{SetUserData()}}
+{\footnotesize\ttfamily void Ti\+Xml\+Base\+::\+Set\+User\+Data (\begin{DoxyParamCaption}\item[{void $\ast$}]{user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Set a pointer to arbitrary user data. 
 
-Definition at line 270 of file tinyxml.h.
-
-References userData.\hypertarget{class_ti_xml_base_ac0c3d66d8a9e6996a1fa016275e16875}{
-\index{TiXmlBase@{TiXmlBase}!SkipWhiteSpace@{SkipWhiteSpace}}
-\index{SkipWhiteSpace@{SkipWhiteSpace}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{SkipWhiteSpace}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ TiXmlBase::SkipWhiteSpace (const char $\ast$ {\em p}, \/  {\bf TiXmlEncoding} {\em encoding})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
-\label{class_ti_xml_base_ac0c3d66d8a9e6996a1fa016275e16875}
 
 
-Definition at line 322 of file tinyxmlparser\_\-inl.h.
-
-References IsWhiteSpace(), TIXML\_\-ENCODING\_\-UTF8, TIXML\_\-UTF\_\-LEAD\_\-0, TIXML\_\-UTF\_\-LEAD\_\-1, and TIXML\_\-UTF\_\-LEAD\_\-2.
-
-Referenced by TiXmlNode::Identify(), TiXmlDeclaration::Parse(), TiXmlAttribute::Parse(), TiXmlComment::Parse(), TiXmlUnknown::Parse(), TiXmlElement::Parse(), TiXmlDocument::Parse(), ReadText(), and TiXmlElement::ReadValue().\hypertarget{class_ti_xml_base_a51631e6986179558b9e5850723ed165a}{
-\index{TiXmlBase@{TiXmlBase}!StringEqual@{StringEqual}}
-\index{StringEqual@{StringEqual}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{StringEqual}]{\setlength{\rightskip}{0pt plus 5cm}bool TiXmlBase::StringEqual (const char $\ast$ {\em p}, \/  const char $\ast$ {\em endTag}, \/  bool {\em ignoreCase}, \/  {\bf TiXmlEncoding} {\em encoding})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
-\label{class_ti_xml_base_a51631e6986179558b9e5850723ed165a}
+Definition at line 270 of file tinyxml.\+h.
 
 
-Definition at line 542 of file tinyxmlparser\_\-inl.h.
 
-References ToLower().
+References user\+Data.
 
-Referenced by TiXmlNode::Identify(), TiXmlDeclaration::Parse(), TiXmlText::Parse(), TiXmlComment::Parse(), TiXmlElement::Parse(), TiXmlDocument::Parse(), ReadText(), and TiXmlElement::ReadValue().\hypertarget{class_ti_xml_base_a799f17405a86a5c2029618e85f11a097}{
-\index{TiXmlBase@{TiXmlBase}!ToLower@{ToLower}}
-\index{ToLower@{ToLower}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{ToLower}]{\setlength{\rightskip}{0pt plus 5cm}static int TiXmlBase::ToLower (int {\em v}, \/  {\bf TiXmlEncoding} {\em encoding})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
-\label{class_ti_xml_base_a799f17405a86a5c2029618e85f11a097}
+\hypertarget{class_ti_xml_base_ac0c3d66d8a9e6996a1fa016275e16875}{}\label{class_ti_xml_base_ac0c3d66d8a9e6996a1fa016275e16875} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Skip\+White\+Space@{Skip\+White\+Space}}
+\index{Skip\+White\+Space@{Skip\+White\+Space}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Skip\+White\+Space()}{SkipWhiteSpace()}}
+{\footnotesize\ttfamily const char $\ast$ Ti\+Xml\+Base\+::\+Skip\+White\+Space (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p,  }\item[{\hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{Ti\+Xml\+Encoding}}]{encoding }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
 
 
-Definition at line 396 of file tinyxml.h.
 
-References TIXML\_\-ENCODING\_\-UTF8.
+Definition at line 322 of file tinyxmlparser\+\_\+inl.\+h.
 
-Referenced by StringEqual().
+
+
+References Is\+White\+Space(), Stream\+To(), Stream\+White\+Space(), T\+I\+X\+M\+L\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+U\+T\+F8, T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG, T\+I\+X\+M\+L\+\_\+\+U\+T\+F\+\_\+\+L\+E\+A\+D\+\_\+0, T\+I\+X\+M\+L\+\_\+\+U\+T\+F\+\_\+\+L\+E\+A\+D\+\_\+1, and T\+I\+X\+M\+L\+\_\+\+U\+T\+F\+\_\+\+L\+E\+A\+D\+\_\+2.
+
+
+
+Referenced by Ti\+Xml\+Node\+::\+Identify(), Ti\+Xml\+Attribute\+::\+Parse(), Ti\+Xml\+Element\+::\+Parse(), Ti\+Xml\+Comment\+::\+Parse(), Ti\+Xml\+Declaration\+::\+Parse(), Ti\+Xml\+Unknown\+::\+Parse(), Ti\+Xml\+Document\+::\+Parse(), Read\+Text(), and Ti\+Xml\+Element\+::\+Read\+Value().
+
+\hypertarget{class_ti_xml_base_aac761023c11f3216de865f0a4b2b137b}{}\label{class_ti_xml_base_aac761023c11f3216de865f0a4b2b137b} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Stream\+To@{Stream\+To}}
+\index{Stream\+To@{Stream\+To}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Stream\+To()}{StreamTo()}}
+{\footnotesize\ttfamily static bool Ti\+Xml\+Base\+::\+Stream\+To (\begin{DoxyParamCaption}\item[{std\+::istream $\ast$}]{in,  }\item[{int}]{character,  }\item[{\hyperlink{tinyxml_8h_a92bada05fd84d9a0c9a5bbe53de26887}{T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG} $\ast$}]{tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Referenced by Is\+White\+Space(), Read\+Text(), and Skip\+White\+Space().
+
+\hypertarget{class_ti_xml_base_aafe51421ca2f618d250a0541e8d61a4e}{}\label{class_ti_xml_base_aafe51421ca2f618d250a0541e8d61a4e} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Stream\+White\+Space@{Stream\+White\+Space}}
+\index{Stream\+White\+Space@{Stream\+White\+Space}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Stream\+White\+Space()}{StreamWhiteSpace()}}
+{\footnotesize\ttfamily static bool Ti\+Xml\+Base\+::\+Stream\+White\+Space (\begin{DoxyParamCaption}\item[{std\+::istream $\ast$}]{in,  }\item[{\hyperlink{tinyxml_8h_a92bada05fd84d9a0c9a5bbe53de26887}{T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG} $\ast$}]{tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Referenced by Ti\+Xml\+Node\+::\+Identify(), Is\+White\+Space(), and Skip\+White\+Space().
+
+\hypertarget{class_ti_xml_base_a51631e6986179558b9e5850723ed165a}{}\label{class_ti_xml_base_a51631e6986179558b9e5850723ed165a} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!String\+Equal@{String\+Equal}}
+\index{String\+Equal@{String\+Equal}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{String\+Equal()}{StringEqual()}}
+{\footnotesize\ttfamily bool Ti\+Xml\+Base\+::\+String\+Equal (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p,  }\item[{const char $\ast$}]{end\+Tag,  }\item[{bool}]{ignore\+Case,  }\item[{\hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{Ti\+Xml\+Encoding}}]{encoding }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 542 of file tinyxmlparser\+\_\+inl.\+h.
+
+
+
+References To\+Lower().
+
+
+
+Referenced by Get\+Char(), Ti\+Xml\+Node\+::\+Identify(), Ti\+Xml\+Element\+::\+Parse(), Ti\+Xml\+Comment\+::\+Parse(), Ti\+Xml\+Text\+::\+Parse(), Ti\+Xml\+Declaration\+::\+Parse(), Ti\+Xml\+Document\+::\+Parse(), Read\+Text(), and Ti\+Xml\+Element\+::\+Read\+Value().
+
+\hypertarget{class_ti_xml_base_a799f17405a86a5c2029618e85f11a097}{}\label{class_ti_xml_base_a799f17405a86a5c2029618e85f11a097} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!To\+Lower@{To\+Lower}}
+\index{To\+Lower@{To\+Lower}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{To\+Lower()}{ToLower()}}
+{\footnotesize\ttfamily static int Ti\+Xml\+Base\+::\+To\+Lower (\begin{DoxyParamCaption}\item[{int}]{v,  }\item[{\hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{Ti\+Xml\+Encoding}}]{encoding }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 396 of file tinyxml.\+h.
+
+
+
+References Convert\+U\+T\+F32\+To\+U\+T\+F8(), Ti\+Xml\+Document\+::operator=(), T\+I\+X\+M\+L\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+U\+T\+F8, Ti\+Xml\+Base(), and v.
+
+
+
+Referenced by String\+Equal().
+
+
 
 \subsection{Friends And Related Function Documentation}
-\hypertarget{class_ti_xml_base_a173617f6dfe902cf484ce5552b950475}{
-\index{TiXmlBase@{TiXmlBase}!TiXmlDocument@{TiXmlDocument}}
-\index{TiXmlDocument@{TiXmlDocument}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{TiXmlDocument}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf TiXmlDocument}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
-\label{class_ti_xml_base_a173617f6dfe902cf484ce5552b950475}
+\hypertarget{class_ti_xml_base_a173617f6dfe902cf484ce5552b950475}{}\label{class_ti_xml_base_a173617f6dfe902cf484ce5552b950475} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Ti\+Xml\+Document@{Ti\+Xml\+Document}}
+\index{Ti\+Xml\+Document@{Ti\+Xml\+Document}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Ti\+Xml\+Document}{TiXmlDocument}}
+{\footnotesize\ttfamily friend class \hyperlink{class_ti_xml_document}{Ti\+Xml\+Document}\hspace{0.3cm}{\ttfamily [friend]}}
 
 
-Reimplemented in \hyperlink{class_ti_xml_node_a173617f6dfe902cf484ce5552b950475}{TiXmlNode}.
 
-Definition at line 210 of file tinyxml.h.\hypertarget{class_ti_xml_base_ab6592e32cb9132be517cc12a70564c4b}{
-\index{TiXmlBase@{TiXmlBase}!TiXmlElement@{TiXmlElement}}
-\index{TiXmlElement@{TiXmlElement}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{TiXmlElement}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf TiXmlElement}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
-\label{class_ti_xml_base_ab6592e32cb9132be517cc12a70564c4b}
+Definition at line 210 of file tinyxml.\+h.
 
-
-Reimplemented in \hyperlink{class_ti_xml_node_ab6592e32cb9132be517cc12a70564c4b}{TiXmlNode}, and \hyperlink{class_ti_xml_text_ab6592e32cb9132be517cc12a70564c4b}{TiXmlText}.
-
-Definition at line 209 of file tinyxml.h.\hypertarget{class_ti_xml_base_a218872a0d985ae30e78c55adc4bdb196}{
-\index{TiXmlBase@{TiXmlBase}!TiXmlNode@{TiXmlNode}}
-\index{TiXmlNode@{TiXmlNode}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{TiXmlNode}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf TiXmlNode}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
-\label{class_ti_xml_base_a218872a0d985ae30e78c55adc4bdb196}
+\hypertarget{class_ti_xml_base_ab6592e32cb9132be517cc12a70564c4b}{}\label{class_ti_xml_base_ab6592e32cb9132be517cc12a70564c4b} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Ti\+Xml\+Element@{Ti\+Xml\+Element}}
+\index{Ti\+Xml\+Element@{Ti\+Xml\+Element}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Ti\+Xml\+Element}{TiXmlElement}}
+{\footnotesize\ttfamily friend class \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element}\hspace{0.3cm}{\ttfamily [friend]}}
 
 
-Definition at line 208 of file tinyxml.h.
+
+Definition at line 209 of file tinyxml.\+h.
+
+
+
+Referenced by Ti\+Xml\+Node\+::\+Identify().
+
+\hypertarget{class_ti_xml_base_a218872a0d985ae30e78c55adc4bdb196}{}\label{class_ti_xml_base_a218872a0d985ae30e78c55adc4bdb196} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
+\index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{Ti\+Xml\+Node}{TiXmlNode}}
+{\footnotesize\ttfamily friend class \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 208 of file tinyxml.\+h.
+
+
 
 \subsection{Member Data Documentation}
-\hypertarget{class_ti_xml_base_a447a05f6a3edbb7892f66f9df8244a3d}{
-\index{TiXmlBase@{TiXmlBase}!condenseWhiteSpace@{condenseWhiteSpace}}
-\index{condenseWhiteSpace@{condenseWhiteSpace}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{condenseWhiteSpace}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf TiXmlBase::condenseWhiteSpace} = true\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}
-\label{class_ti_xml_base_a447a05f6a3edbb7892f66f9df8244a3d}
+\hypertarget{class_ti_xml_base_a447a05f6a3edbb7892f66f9df8244a3d}{}\label{class_ti_xml_base_a447a05f6a3edbb7892f66f9df8244a3d} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!condense\+White\+Space@{condense\+White\+Space}}
+\index{condense\+White\+Space@{condense\+White\+Space}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{condense\+White\+Space}{condenseWhiteSpace}}
+{\footnotesize\ttfamily bool Ti\+Xml\+Base\+::condense\+White\+Space = true\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
-Definition at line 422 of file tinyxml.h.
 
-Referenced by IsWhiteSpaceCondensed(), ReadText(), and SetCondenseWhiteSpace().\hypertarget{class_ti_xml_base_aae956c75fedff20d337f7cc109c6b71a}{
-\index{TiXmlBase@{TiXmlBase}!entity@{entity}}
-\index{entity@{entity}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{entity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf TiXmlBase::Entity} {\bf TiXmlBase::entity}\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}
-\label{class_ti_xml_base_aae956c75fedff20d337f7cc109c6b71a}
-{\bfseries Initial value:}
+Definition at line 422 of file tinyxml.\+h.
+
+
+
+Referenced by Is\+White\+Space\+Condensed(), Read\+Text(), and Set\+Condense\+White\+Space().
+
+\hypertarget{class_ti_xml_base_aae956c75fedff20d337f7cc109c6b71a}{}\label{class_ti_xml_base_aae956c75fedff20d337f7cc109c6b71a} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!entity@{entity}}
+\index{entity@{entity}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{entity}{entity}}
+{\footnotesize\ttfamily \hyperlink{struct_ti_xml_base_1_1_entity}{Ti\+Xml\+Base\+::\+Entity} Ti\+Xml\+Base\+::entity\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
 \begin{DoxyCode}
+=
+  \{
+    
+    
+    \{ \textcolor{stringliteral}{"&"},  1, \textcolor{charliteral}{'&'} \},
+    
 
-  {
-    
-    
-    { "&",  1, '&' },
-    
-
-    { "&lt;",   4, '<' },
-    { "&gt;",   4, '>' },
-    { "&quot;", 6, '\"' },
-    { "&apos;", 6, '\'' }
-  }
+    \{ \textcolor{stringliteral}{"&lt;"},   4, \textcolor{charliteral}{'<'} \},
+    \{ \textcolor{stringliteral}{"&gt;"},   4, \textcolor{charliteral}{'>'} \},
+    \{ \textcolor{stringliteral}{"&quot;"}, 6, \textcolor{charliteral}{'\(\backslash\)"'} \},
+    \{ \textcolor{stringliteral}{"&apos;"}, 6, \textcolor{charliteral}{'\(\backslash\)''} \}
+  \}
 \end{DoxyCode}
 
 
-Definition at line 421 of file tinyxml.h.
+Definition at line 421 of file tinyxml.\+h.
 
-Referenced by GetEntity(), and PutString().\hypertarget{class_ti_xml_base_a7ac8feec4100e446b3d78e1ac0659700}{
-\index{TiXmlBase@{TiXmlBase}!errorString@{errorString}}
-\index{errorString@{errorString}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{errorString}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ {\bf TiXmlBase::errorString}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
-\label{class_ti_xml_base_a7ac8feec4100e446b3d78e1ac0659700}
-{\bfseries Initial value:}
+
+
+Referenced by Get\+Entity(), and Put\+String().
+
+\hypertarget{class_ti_xml_base_a7ac8feec4100e446b3d78e1ac0659700}{}\label{class_ti_xml_base_a7ac8feec4100e446b3d78e1ac0659700} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!error\+String@{error\+String}}
+\index{error\+String@{error\+String}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{error\+String}{errorString}}
+{\footnotesize\ttfamily const char $\ast$ Ti\+Xml\+Base\+::error\+String\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
 \begin{DoxyCode}
-
-  {
-    "No error",
-    "Error",
-    "Failed to open file",
-    "Memory allocation failed.",
-    "Error parsing Element.",
-    "Failed to read Element name",
-    "Error reading Element value.",
-    "Error reading Attributes.",
-    "Error: empty tag.",
-    "Error reading end tag.",
-    "Error parsing Unknown.",
-    "Error parsing Comment.",
-    "Error parsing Declaration.",
-    "Error document empty.",
-    "Error null (0) or unexpected EOF found in input stream.",
-    "Error parsing CDATA.",
-    "Error when TiXmlDocument added to document, because TiXmlDocument can only b
-      e at the root.",
-  }
+=
+  \{
+    \textcolor{stringliteral}{"No error"},
+    \textcolor{stringliteral}{"Error"},
+    \textcolor{stringliteral}{"Failed to open file"},
+    \textcolor{stringliteral}{"Memory allocation failed."},
+    \textcolor{stringliteral}{"Error parsing Element."},
+    \textcolor{stringliteral}{"Failed to read Element name"},
+    \textcolor{stringliteral}{"Error reading Element value."},
+    \textcolor{stringliteral}{"Error reading Attributes."},
+    \textcolor{stringliteral}{"Error: empty tag."},
+    \textcolor{stringliteral}{"Error reading end tag."},
+    \textcolor{stringliteral}{"Error parsing Unknown."},
+    \textcolor{stringliteral}{"Error parsing Comment."},
+    \textcolor{stringliteral}{"Error parsing Declaration."},
+    \textcolor{stringliteral}{"Error document empty."},
+    \textcolor{stringliteral}{"Error null (0) or unexpected EOF found in input stream."},
+    \textcolor{stringliteral}{"Error parsing CDATA."},
+    \textcolor{stringliteral}{"Error when TiXmlDocument added to document, because TiXmlDocument can only be at the root."},
+  \}
 \end{DoxyCode}
 
 
-Definition at line 385 of file tinyxml.h.
-
-Referenced by TiXmlDocument::SetError().\hypertarget{class_ti_xml_base_a0d992580f3bc264909f898e942677a3c}{
-\index{TiXmlBase@{TiXmlBase}!location@{location}}
-\index{location@{location}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{location}]{\setlength{\rightskip}{0pt plus 5cm}{\bf TiXmlCursor} {\bf TiXmlBase::location}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_ti_xml_base_a0d992580f3bc264909f898e942677a3c}
+Definition at line 385 of file tinyxml.\+h.
 
 
-Definition at line 387 of file tinyxml.h.
 
-Referenced by Column(), TiXmlDocument::LoadFile(), TiXmlDeclaration::Parse(), TiXmlText::Parse(), TiXmlAttribute::Parse(), TiXmlComment::Parse(), TiXmlUnknown::Parse(), TiXmlElement::Parse(), TiXmlDocument::Parse(), and Row().\hypertarget{class_ti_xml_base_ab242c01590191f644569fa89a080d97c}{
-\index{TiXmlBase@{TiXmlBase}!userData@{userData}}
-\index{userData@{userData}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{userData}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ {\bf TiXmlBase::userData}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_ti_xml_base_ab242c01590191f644569fa89a080d97c}
+Referenced by Ti\+Xml\+Document\+::\+Set\+Error().
+
+\hypertarget{class_ti_xml_base_a0d992580f3bc264909f898e942677a3c}{}\label{class_ti_xml_base_a0d992580f3bc264909f898e942677a3c} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!location@{location}}
+\index{location@{location}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{location}{location}}
+{\footnotesize\ttfamily \hyperlink{struct_ti_xml_cursor}{Ti\+Xml\+Cursor} Ti\+Xml\+Base\+::location\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 387 of file tinyxml.\+h.
+
+
+
+Referenced by Column(), Ti\+Xml\+Document\+::\+Load\+File(), Ti\+Xml\+Attribute\+::\+Parse(), Ti\+Xml\+Element\+::\+Parse(), Ti\+Xml\+Comment\+::\+Parse(), Ti\+Xml\+Text\+::\+Parse(), Ti\+Xml\+Declaration\+::\+Parse(), Ti\+Xml\+Unknown\+::\+Parse(), Ti\+Xml\+Document\+::\+Parse(), and Row().
+
+\hypertarget{class_ti_xml_base_ab242c01590191f644569fa89a080d97c}{}\label{class_ti_xml_base_ab242c01590191f644569fa89a080d97c} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!user\+Data@{user\+Data}}
+\index{user\+Data@{user\+Data}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{user\+Data}{userData}}
+{\footnotesize\ttfamily void$\ast$ Ti\+Xml\+Base\+::user\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Field containing a generic user pointer. 
 
-Definition at line 390 of file tinyxml.h.
 
-Referenced by TiXmlNode::CopyTo(), GetUserData(), and SetUserData().\hypertarget{class_ti_xml_base_ac8c86058137bdb4b413c3eca58f2d467}{
-\index{TiXmlBase@{TiXmlBase}!utf8ByteTable@{utf8ByteTable}}
-\index{utf8ByteTable@{utf8ByteTable}!TiXmlBase@{TiXmlBase}}
-\subsubsection[{utf8ByteTable}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf TiXmlBase::utf8ByteTable}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
-\label{class_ti_xml_base_ac8c86058137bdb4b413c3eca58f2d467}
-{\bfseries Initial value:}
+
+Definition at line 390 of file tinyxml.\+h.
+
+
+
+Referenced by Ti\+Xml\+Node\+::\+Copy\+To(), Get\+User\+Data(), and Set\+User\+Data().
+
+\hypertarget{class_ti_xml_base_ac8c86058137bdb4b413c3eca58f2d467}{}\label{class_ti_xml_base_ac8c86058137bdb4b413c3eca58f2d467} 
+\index{Ti\+Xml\+Base@{Ti\+Xml\+Base}!utf8\+Byte\+Table@{utf8\+Byte\+Table}}
+\index{utf8\+Byte\+Table@{utf8\+Byte\+Table}!Ti\+Xml\+Base@{Ti\+Xml\+Base}}
+\subsubsection{\texorpdfstring{utf8\+Byte\+Table}{utf8ByteTable}}
+{\footnotesize\ttfamily const int Ti\+Xml\+Base\+::utf8\+Byte\+Table\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
 \begin{DoxyCode}
-
-  {
+=
+  \{
     
-    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1
-      ,      1,      1,      1,      1,      1,      
-    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1
-      ,      1,      1,      1,      1,      1,      
-    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1
-      ,      1,      1,      1,      1,      1,      
-    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1
-      ,      1,      1,      1,      1,      1,      
-    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1
-      ,      1,      1,      1,      1,      1,      
-    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1
-      ,      1,      1,      1,      1,      1,      
-    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1
-      ,      1,      1,      1,      1,      1,      
-    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1
-      ,      1,      1,      1,      1,      1,      
-    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1
-      ,      1,      1,      1,      1,      1,      
-    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1
-      ,      1,      1,      1,      1,      1,      
-    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1
-      ,      1,      1,      1,      1,      1,      
-    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1
-      ,      1,      1,      1,      1,      1,      
-    1,  1,      2,      2,      2,      2,      2,      2,      2,      2,      2
-      ,      2,      2,      2,      2,      2,      
-    2,  2,      2,      2,      2,      2,      2,      2,      2,      2,      2
-      ,      2,      2,      2,      2,      2,      
-    3,  3,      3,      3,      3,      3,      3,      3,      3,      3,      3
-      ,      3,      3,      3,      3,      3,      
-    4,  4,      4,      4,      4,      1,      1,      1,      1,      1,      1
-      ,      1,      1,      1,      1,      1       
-  }
+    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1, 
+           1,      1,      
+    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1, 
+           1,      1,      
+    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1, 
+           1,      1,      
+    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1, 
+           1,      1,      
+    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1, 
+           1,      1,      
+    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1, 
+           1,      1,      
+    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1, 
+           1,      1,      
+    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1, 
+           1,      1,      
+    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1, 
+           1,      1,      
+    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1, 
+           1,      1,      
+    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1, 
+           1,      1,      
+    1,  1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1, 
+           1,      1,      
+    1,  1,      2,      2,      2,      2,      2,      2,      2,      2,      2,      2,      2,      2, 
+           2,      2,      
+    2,  2,      2,      2,      2,      2,      2,      2,      2,      2,      2,      2,      2,      2, 
+           2,      2,      
+    3,  3,      3,      3,      3,      3,      3,      3,      3,      3,      3,      3,      3,      3, 
+           3,      3,      
+    4,  4,      4,      4,      4,      1,      1,      1,      1,      1,      1,      1,      1,      1, 
+           1,      1       
+  \}
 \end{DoxyCode}
 
 
-Definition at line 282 of file tinyxml.h.
+Definition at line 282 of file tinyxml.\+h.
 
-Referenced by GetChar(), and TiXmlParsingData::Stamp().
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+
+Referenced by Ti\+Xml\+Parsing\+Data\+::\+Stamp().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/XML/\hyperlink{tinyxml_8h}{tinyxml.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/XML/\hyperlink{tinyxml__inl_8h}{tinyxml\_\-inl.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/XML/\hyperlink{tinyxmlerror__inl_8h}{tinyxmlerror\_\-inl.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/XML/\hyperlink{tinyxmlparser__inl_8h}{tinyxmlparser\_\-inl.h}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/include/\+X\+M\+L/\hyperlink{tinyxml_8h}{tinyxml.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\+X\+M\+L/\hyperlink{tinyxml__inl_8h}{tinyxml\+\_\+inl.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\+X\+M\+L/\hyperlink{tinyxmlerror__inl_8h}{tinyxmlerror\+\_\+inl.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\+X\+M\+L/\hyperlink{tinyxmlparser__inl_8h}{tinyxmlparser\+\_\+inl.\+h}\end{DoxyCompactItemize}

@@ -1,740 +1,1085 @@
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action}{
-\section{DD4hep::Simulation::Geant4Action Class Reference}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action}\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action}{}\section{D\+D4hep\+:\+:Simulation\+:\+:Geant4\+Action Class Reference}
+\label{class_d_d4hep_1_1_simulation_1_1_geant4_action}\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
 
 
 Default base class for all Geant 4 actions and derivates thereof.  
 
 
-{\ttfamily \#include $<$Geant4Action.h$>$}Inheritance diagram for DD4hep::Simulation::Geant4Action::\begin{figure}[H]
+
+
+{\ttfamily \#include $<$Geant4\+Action.\+h$>$}
+
+Inheritance diagram for D\+D4hep\+:\+:Simulation\+:\+:Geant4\+Action\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=12cm]{class_d_d4hep_1_1_simulation_1_1_geant4_action}
+\includegraphics[height=12.000000cm]{class_d_d4hep_1_1_simulation_1_1_geant4_action}
 \end{center}
 \end{figure}
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_1_1_actors}{Actors}
-\begin{DoxyCompactList}\small\item\em Actor class to manipulate action groups. \item\end{DoxyCompactList}\item 
-class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_1_1_context_swap}{ContextSwap}
-\begin{DoxyCompactList}\small\item\em Functor to update the context of a \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} object. \item\end{DoxyCompactList}\item 
-struct \hyperlink{struct_d_d4hep_1_1_simulation_1_1_geant4_action_1_1_find_by_name}{FindByName}
-\begin{DoxyCompactList}\small\item\em Functor to access elements by name. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Actor class to manipulate action groups. \end{DoxyCompactList}\item 
+class \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_1_1_context_swap}{Context\+Swap}
+\begin{DoxyCompactList}\small\item\em Functor to update the context of a \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} object. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_d_d4hep_1_1_simulation_1_1_geant4_action_1_1_find_by_name}{Find\+By\+Name}
+\begin{DoxyCompactList}\small\item\em Functor to access elements by name. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_aa4751aea8e811093f9c88aa2016f16b3}{Geant4Action} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$context, const std::string \&nam)
-\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
-long \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_abf90df73db256488940810101fd63a8a}{addRef} ()
-\begin{DoxyCompactList}\small\item\em Increase reference count. \item\end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a030276e3d60d7da13a2339f0d87ed52e}{Geant4\+Action} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4\+Context} $\ast$\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_aa9d87f0ec2a72b7fc2591b18f98d75cf}{context}, const std\+::string \&nam)
+\begin{DoxyCompactList}\small\item\em Standard constructor. \end{DoxyCompactList}\item 
+long \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_abf90df73db256488940810101fd63a8a}{add\+Ref} ()
+\begin{DoxyCompactList}\small\item\em Increase reference count. \end{DoxyCompactList}\item 
 long \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a3afba3ee937fdbd25d27994e4e75c5ac}{release} ()
-\begin{DoxyCompactList}\small\item\em Decrease reference count. Implicit destruction. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae695d6fe735edceeea30e84afd329e38}{context} () const 
-\begin{DoxyCompactList}\small\item\em Access the context. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae3b9daf2af881df956c46568c0743313}{updateContext} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$ctxt)
-\begin{DoxyCompactList}\small\item\em Set or update client context. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a6adc7138508303e4e417cb48a737ab19}{configureFiber} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$thread\_\-context)
-\begin{DoxyCompactList}\small\item\em Set or update client for the use in a new thread fiber. \item\end{DoxyCompactList}\item 
-const std::string \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a3471b931eb84ab4fdc3fc4beddae512b}{name} () const 
-\begin{DoxyCompactList}\small\item\em Access name of the action. \item\end{DoxyCompactList}\item 
-const char $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a81f7a014edf0a3086149b3f45c14d826}{c\_\-name} () const 
-\begin{DoxyCompactList}\small\item\em Access name of the action. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a88c6c831673b3c152961079507056daa}{setName} (const std::string \&new\_\-name)
-\begin{DoxyCompactList}\small\item\em Set the object name. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_property_manager}{PropertyManager} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a4159b11cc0acd293357e80980e3ba7d8}{properties} ()
-\begin{DoxyCompactList}\small\item\em Access to the properties of the object. \item\end{DoxyCompactList}\item 
-\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{PrintLevel} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a24f50b96085f6af082b8aaef3813e218}{outputLevel} () const 
-\begin{DoxyCompactList}\small\item\em Access the output level. \item\end{DoxyCompactList}\item 
-\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{PrintLevel} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a20453f25c4556d21e25b68f140955cc3}{setOutputLevel} (\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{PrintLevel} new\_\-level)
-\begin{DoxyCompactList}\small\item\em Set the output level; returns previous value. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_u_i_messenger}{Geant4UIMessenger} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae5e218a61d3dceff2d164429b854fb61}{control} () const 
-\begin{DoxyCompactList}\small\item\em Access to the UI messenger. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a3cc9526eece0aaceec6b62fa74d8c055}{enableUI} ()
-\begin{DoxyCompactList}\small\item\em Enable and install UI messenger. \item\end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_acef2b66c2126c84bec80d8f57ceb9789}{declareProperty} (const std::string \&nam, \hyperlink{class_t}{T} \&val)
-\begin{DoxyCompactList}\small\item\em Declare property. \item\end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_abd5a683c0c6511aabb8ed0502ad25ee6}{declareProperty} (const char $\ast$nam, \hyperlink{class_t}{T} \&val)
-\begin{DoxyCompactList}\small\item\em Declare property. \item\end{DoxyCompactList}\item 
-bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a31164c4232326b2a3c98d6c00b592427}{hasProperty} (const std::string \&name) const 
-\begin{DoxyCompactList}\small\item\em Check property for existence. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_property}{Property} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_aa9797c4749e92c0611ca7ce6f8b7bc78}{property} (const std::string \&name)
-\begin{DoxyCompactList}\small\item\em Access single property. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4Action} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_af7cca1826781c1367ecc79c4225e09da}{setProperties} (\hyperlink{class_d_d4hep_1_1_property_configurator}{PropertyConfigurator} \&setup)
-\begin{DoxyCompactList}\small\item\em Set object properties. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a82c72e9476d6a5541252edbb93fe69c6}{installMessengers} ()
-\begin{DoxyCompactList}\small\item\em Install property control messenger if wanted. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_aaaa0718b7d4f52e4c31e982b91c0eeda}{installCommandMessenger} ()
-\begin{DoxyCompactList}\small\item\em Install command control messenger if wanted. \item\end{DoxyCompactList}\item 
-virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a04fb6b6b16ed0aad5f552e04d99d278f}{installPropertyMessenger} ()
-\begin{DoxyCompactList}\small\item\em Install property control messenger if wanted. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_abff9f8350b90ba55ee98041b0c6291ae}{print} (const char $\ast$fmt,...) const 
-\begin{DoxyCompactList}\small\item\em Support for messages with variable output level using output level. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a902ac87d9764b8fdb6abba259482713b}{printM1} (const char $\ast$fmt,...) const 
-\begin{DoxyCompactList}\small\item\em Support for messages with variable output level using output level-\/1. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_affc21c47844a7be6edf2824d4d042e64}{printM2} (const char $\ast$fmt,...) const 
-\begin{DoxyCompactList}\small\item\em Support for messages with variable output level using output level-\/2. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a655489f4d250231f566c6db624a70410}{printP1} (const char $\ast$fmt,...) const 
-\begin{DoxyCompactList}\small\item\em Support for messages with variable output level using output level+1. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a03ed6b722207ae7b656bf19c8e070fba}{printP2} (const char $\ast$fmt,...) const 
-\begin{DoxyCompactList}\small\item\em Support for messages with variable output level using output level+2. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a89cb100e04f08e07046e7d490a8bc747}{debug} (const char $\ast$fmt,...) const 
-\begin{DoxyCompactList}\small\item\em Support of debug messages. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a30bb1539e63536cfeaddb0b5b4032214}{info} (const char $\ast$fmt,...) const 
-\begin{DoxyCompactList}\small\item\em Support of info messages. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_ab006988f8f6db3df39a6d90ed1e69a1d}{warning} (const char $\ast$fmt,...) const 
-\begin{DoxyCompactList}\small\item\em Support of warning messages. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a2e1c04c087846bf9bf349d26667660a2}{error} (const char $\ast$fmt,...) const 
-\begin{DoxyCompactList}\small\item\em Support of error messages. \item\end{DoxyCompactList}\item 
-bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a3cdefc7063e8ca7d7fe55ebb7487daab}{return\_\-error} (bool return\_\-value, const char $\ast$fmt,...) const 
-\begin{DoxyCompactList}\small\item\em Action to support error messages. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a80edeed66bdf7dc97aecb68f246a7b24}{fatal} (const char $\ast$fmt,...) const 
-\begin{DoxyCompactList}\small\item\em Support of fatal messages. Throws exception. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a05d5b6e6de246d0b7a7d76f66b9dc608}{except} (const char $\ast$fmt,...) const 
-\begin{DoxyCompactList}\small\item\em Support of exceptions: Print fatal message and throw runtime\_\-error. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_aed0d02c2f482dc0435b6ca51504356be}{abortRun} (const std::string \&\hyperlink{classstd_1_1exception}{exception}, const char $\ast$fmt,...) const 
-\begin{DoxyCompactList}\small\item\em Abort Geant4 Run by throwing a G4Exception with type RunMustBeAborted. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence}{Geant4RunActionSequence} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a242b367d623151c0cd3a892915f371b9}{runAction} () const 
-\begin{DoxyCompactList}\small\item\em Access to the main run action sequence from the kernel object. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence}{Geant4EventActionSequence} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a5ac8a0e311d6f5b7d297de21dfcd56a7}{eventAction} () const 
-\begin{DoxyCompactList}\small\item\em Access to the main event action sequence from the kernel object. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence}{Geant4SteppingActionSequence} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a7dd8d0f77997e948fefb72f0d0a2179e}{steppingAction} () const 
-\begin{DoxyCompactList}\small\item\em Access to the main stepping action sequence from the kernel object. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_tracking_action_sequence}{Geant4TrackingActionSequence} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_aa62c971500809db112b2cb4a8732b748}{trackingAction} () const 
-\begin{DoxyCompactList}\small\item\em Access to the main tracking action sequence from the kernel object. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stacking_action_sequence}{Geant4StackingActionSequence} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a6b95f50c5be424298cd711510450c1c4}{stackingAction} () const 
-\begin{DoxyCompactList}\small\item\em Access to the main stacking action sequence from the kernel object. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_sequence}{Geant4GeneratorActionSequence} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a9c9d5445811b06f67319a88df1288094}{generatorAction} () const 
-\begin{DoxyCompactList}\small\item\em Access to the main generator action sequence from the kernel object. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Decrease reference count. Implicit destruction. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4\+Context} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_aa9d87f0ec2a72b7fc2591b18f98d75cf}{context} () const
+\begin{DoxyCompactList}\small\item\em Access the context. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae3b9daf2af881df956c46568c0743313}{update\+Context} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4\+Context} $\ast$ctxt)
+\begin{DoxyCompactList}\small\item\em Set or update client context. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a6adc7138508303e4e417cb48a737ab19}{configure\+Fiber} (\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4\+Context} $\ast$thread\+\_\+context)
+\begin{DoxyCompactList}\small\item\em Set or update client for the use in a new thread fiber. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_af374e70b014d16afb81dd9d77cc3894b}{name} () const
+\begin{DoxyCompactList}\small\item\em Access name of the action. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a7e0ce5a638e716e0e607536a73a85cbf}{c\+\_\+name} () const
+\begin{DoxyCompactList}\small\item\em Access name of the action. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a88c6c831673b3c152961079507056daa}{set\+Name} (const std\+::string \&new\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Set the object name. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_property_manager}{Property\+Manager} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a4159b11cc0acd293357e80980e3ba7d8}{properties} ()
+\begin{DoxyCompactList}\small\item\em Access to the properties of the object. \end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{Print\+Level} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a1de6421e968b3fc53cae8444c6f29b3d}{output\+Level} () const
+\begin{DoxyCompactList}\small\item\em Access the output level. \end{DoxyCompactList}\item 
+\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{Print\+Level} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a20453f25c4556d21e25b68f140955cc3}{set\+Output\+Level} (\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{Print\+Level} new\+\_\+level)
+\begin{DoxyCompactList}\small\item\em Set the output level; returns previous value. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_u_i_messenger}{Geant4\+U\+I\+Messenger} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a1bdb7c4a8b5a40c4fbae05068c1e8c93}{control} () const
+\begin{DoxyCompactList}\small\item\em Access to the UI messenger. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a3cc9526eece0aaceec6b62fa74d8c055}{enable\+UI} ()
+\begin{DoxyCompactList}\small\item\em Enable and install UI messenger. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a51be57d542edbba2b5e4a53a7fea6315}{declare\+Property} (const std\+::string \&nam, \hyperlink{class_t}{T} \&val)
+\begin{DoxyCompactList}\small\item\em Declare property. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_ad00f53780d6155fb3ab806a68a284762}{declare\+Property} (const char $\ast$nam, \hyperlink{class_t}{T} \&val)
+\begin{DoxyCompactList}\small\item\em Declare property. \end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_ad2ba790e944389191e28f1e618da33b1}{has\+Property} (const std\+::string \&\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_af374e70b014d16afb81dd9d77cc3894b}{name}) const
+\begin{DoxyCompactList}\small\item\em Check property for existence. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_property}{Property} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a7b1a0ac81a980bfa966a972caaaf5bfc}{property} (const std\+::string \&\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_af374e70b014d16afb81dd9d77cc3894b}{name})
+\begin{DoxyCompactList}\small\item\em Access single property. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_af7cca1826781c1367ecc79c4225e09da}{set\+Properties} (\hyperlink{class_d_d4hep_1_1_property_configurator}{Property\+Configurator} \&setup)
+\begin{DoxyCompactList}\small\item\em Set object properties. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a82c72e9476d6a5541252edbb93fe69c6}{install\+Messengers} ()
+\begin{DoxyCompactList}\small\item\em Install property control messenger if wanted. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_aaaa0718b7d4f52e4c31e982b91c0eeda}{install\+Command\+Messenger} ()
+\begin{DoxyCompactList}\small\item\em Install command control messenger if wanted. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a04fb6b6b16ed0aad5f552e04d99d278f}{install\+Property\+Messenger} ()
+\begin{DoxyCompactList}\small\item\em Install property control messenger if wanted. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a623119a9f20ff7f5a2fb78f4f76b9276}{print} (const char $\ast$fmt,...) const
+\begin{DoxyCompactList}\small\item\em Support for messages with variable output level using output level. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_ada091d86e8b88d764d13b4cd79f8543d}{print\+M1} (const char $\ast$fmt,...) const
+\begin{DoxyCompactList}\small\item\em Support for messages with variable output level using output level-\/1. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a973b20385610fd757154eff3635c55a1}{print\+M2} (const char $\ast$fmt,...) const
+\begin{DoxyCompactList}\small\item\em Support for messages with variable output level using output level-\/2. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae90c8c67240ca2a418d38a1c8a924077}{print\+P1} (const char $\ast$fmt,...) const
+\begin{DoxyCompactList}\small\item\em Support for messages with variable output level using output level+1. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae56185e13ffe3255d349b848c2157699}{print\+P2} (const char $\ast$fmt,...) const
+\begin{DoxyCompactList}\small\item\em Support for messages with variable output level using output level+2. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a22a58ac372d240b1a7d0f34f1fc1a67b}{debug} (const char $\ast$fmt,...) const
+\begin{DoxyCompactList}\small\item\em Support of debug messages. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_ad458cc4957a876c0cbbc9ad6354fc187}{info} (const char $\ast$fmt,...) const
+\begin{DoxyCompactList}\small\item\em Support of info messages. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae62935fef8595dbc8c1d7f9c278523e4}{warning} (const char $\ast$fmt,...) const
+\begin{DoxyCompactList}\small\item\em Support of warning messages. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a1abdae5d2d2af327f406697322b0d821}{error} (const char $\ast$fmt,...) const
+\begin{DoxyCompactList}\small\item\em Support of error messages. \end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a2f0ed49ced8246f3165476ed5866620a}{return\+\_\+error} (bool return\+\_\+value, const char $\ast$fmt,...) const
+\begin{DoxyCompactList}\small\item\em Action to support error messages. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_ab7efc61d1f82a99fd8011ab2a24bbc07}{fatal} (const char $\ast$fmt,...) const
+\begin{DoxyCompactList}\small\item\em Support of fatal messages. Throws exception. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a9817394f45f311d2fb19f544e9a72e23}{except} (const char $\ast$fmt,...) const
+\begin{DoxyCompactList}\small\item\em Support of exceptions\+: Print fatal message and throw runtime\+\_\+error. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a2773212a37fbe7b3187e79870a4d7f65}{abort\+Run} (const std\+::string \&exception, const char $\ast$fmt,...) const
+\begin{DoxyCompactList}\small\item\em Abort Geant4 Run by throwing a G4\+Exception with type Run\+Must\+Be\+Aborted. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence}{Geant4\+Run\+Action\+Sequence} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a3d2a1a32cd7f6733c3553ce7723e6fb7}{run\+Action} () const
+\begin{DoxyCompactList}\small\item\em Access to the main run action sequence from the kernel object. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence}{Geant4\+Event\+Action\+Sequence} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a57665214b75d7e7682998dcf1d1ef7e2}{event\+Action} () const
+\begin{DoxyCompactList}\small\item\em Access to the main event action sequence from the kernel object. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence}{Geant4\+Stepping\+Action\+Sequence} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a2dd6a5716aedfdab406510a4239b0c5a}{stepping\+Action} () const
+\begin{DoxyCompactList}\small\item\em Access to the main stepping action sequence from the kernel object. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_tracking_action_sequence}{Geant4\+Tracking\+Action\+Sequence} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a42e67d0f379567b039b4249bd650a30b}{tracking\+Action} () const
+\begin{DoxyCompactList}\small\item\em Access to the main tracking action sequence from the kernel object. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stacking_action_sequence}{Geant4\+Stacking\+Action\+Sequence} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_afdcb408fdab69261bdd9351c553e8103}{stacking\+Action} () const
+\begin{DoxyCompactList}\small\item\em Access to the main stacking action sequence from the kernel object. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_sequence}{Geant4\+Generator\+Action\+Sequence} \& \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a401a8dceb3d540c069fc24f66d41bf64}{generator\+Action} () const
+\begin{DoxyCompactList}\small\item\em Access to the main generator action sequence from the kernel object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_af1ba7438be6c70743727ce6606c5f76a}{$\sim$Geant4Action} ()
-\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+virtual \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_af1ba7438be6c70743727ce6606c5f76a}{$\sim$\+Geant4\+Action} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4Context} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a5cdb706a8dea3dea288b5b9f65398c1d}{m\_\-context}
-\begin{DoxyCompactList}\small\item\em Reference to the Geant4 context. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_u_i_messenger}{Geant4UIMessenger} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_aff23910feb64988b85e08b1faff251f4}{m\_\-control}
-\begin{DoxyCompactList}\small\item\em Control directory of this action. \item\end{DoxyCompactList}\item 
-int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a6dc880b8e55e2dada947ad06d7678dd4}{m\_\-outputLevel}
-\begin{DoxyCompactList}\small\item\em Default property: Output level. \item\end{DoxyCompactList}\item 
-bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a4d64f5159d58c4a43d74d0ddd0a695ba}{m\_\-needsControl}
-\begin{DoxyCompactList}\small\item\em Default property: Flag to create control instance. \item\end{DoxyCompactList}\item 
-std::string \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_adb04332ff4e52bce5b9ae1a5848b5d5e}{m\_\-name}
-\begin{DoxyCompactList}\small\item\em Action name. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_property_manager}{PropertyManager} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a30ee75af74df39aa7b34946c59da17ba}{m\_\-properties}
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property} pool. \item\end{DoxyCompactList}\item 
-long \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a5ea9f95e6db274a1515b947b4f69da9e}{m\_\-refCount}
-\begin{DoxyCompactList}\small\item\em Reference count. Initial value: 1. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4\+Context} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a5cdb706a8dea3dea288b5b9f65398c1d}{m\+\_\+context}
+\begin{DoxyCompactList}\small\item\em Reference to the Geant4 context. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_u_i_messenger}{Geant4\+U\+I\+Messenger} $\ast$ \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_aff23910feb64988b85e08b1faff251f4}{m\+\_\+control}
+\begin{DoxyCompactList}\small\item\em Control directory of this action. \end{DoxyCompactList}\item 
+int \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a6dc880b8e55e2dada947ad06d7678dd4}{m\+\_\+output\+Level}
+\begin{DoxyCompactList}\small\item\em Default property\+: Output level. \end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a4d64f5159d58c4a43d74d0ddd0a695ba}{m\+\_\+needs\+Control}
+\begin{DoxyCompactList}\small\item\em Default property\+: Flag to create control instance. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_adb04332ff4e52bce5b9ae1a5848b5d5e}{m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em Action name. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_property_manager}{Property\+Manager} \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a30ee75af74df39aa7b34946c59da17ba}{m\+\_\+properties}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_d_d4hep_1_1_property}{Property} pool. \end{DoxyCompactList}\item 
+long \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action_a5ea9f95e6db274a1515b947b4f69da9e}{m\+\_\+ref\+Count}
+\begin{DoxyCompactList}\small\item\em Reference count. Initial value\+: 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Default base class for all Geant 4 actions and derivates thereof. This is a utility class supporting properties, output and access to event and run objects through the context.
+Default base class for all Geant 4 actions and derivates thereof. 
+
+This is a utility class supporting properties, output and access to event and run objects through the context.
 
 \begin{DoxyAuthor}{Author}
-M.Frank 
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
-Definition at line 89 of file Geant4Action.h.
+Definition at line 89 of file Geant4\+Action.\+h.
+
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_af1ba7438be6c70743727ce6606c5f76a}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!$\sim$Geant4Action@{$\sim$Geant4Action}}
-\index{$\sim$Geant4Action@{$\sim$Geant4Action}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{$\sim$Geant4Action}]{\setlength{\rightskip}{0pt plus 5cm}Geant4Action::$\sim$Geant4Action ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_af1ba7438be6c70743727ce6606c5f76a}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_af1ba7438be6c70743727ce6606c5f76a}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_af1ba7438be6c70743727ce6606c5f76a} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!````~Geant4\+Action@{$\sim$\+Geant4\+Action}}
+\index{````~Geant4\+Action@{$\sim$\+Geant4\+Action}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{$\sim$\+Geant4\+Action()}{~Geant4Action()}}
+{\footnotesize\ttfamily Geant4\+Action\+::$\sim$\+Geant4\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
 
 
 Default destructor. 
 
-Definition at line 70 of file Geant4Action.cpp.
 
-References DD4hep::InstanceCount::decrement().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_aa4751aea8e811093f9c88aa2016f16b3}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!Geant4Action@{Geant4Action}}
-\index{Geant4Action@{Geant4Action}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{Geant4Action}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Simulation::Geant4Action::Geant4Action ({\bf Geant4Context} $\ast$ {\em context}, \/  const std::string \& {\em nam})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_aa4751aea8e811093f9c88aa2016f16b3}
+
+Definition at line 70 of file Geant4\+Action.\+cpp.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a030276e3d60d7da13a2339f0d87ed52e}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a030276e3d60d7da13a2339f0d87ed52e} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!Geant4\+Action@{Geant4\+Action}}
+\index{Geant4\+Action@{Geant4\+Action}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{Geant4\+Action()}{Geant4Action()}}
+{\footnotesize\ttfamily Geant4\+Action\+::\+Geant4\+Action (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4\+Context} $\ast$}]{context,  }\item[{const std\+::string \&}]{nam }\end{DoxyParamCaption})}
+
 
 
 Standard constructor. 
 
+
+
+Definition at line 57 of file Geant4\+Action.\+cpp.
+
+
+
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_aed0d02c2f482dc0435b6ca51504356be}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!abortRun@{abortRun}}
-\index{abortRun@{abortRun}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{abortRun}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Simulation::Geant4Action::abortRun (const std::string \& {\em exception}, \/  const char $\ast$ {\em fmt}, \/   {\em ...}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_aed0d02c2f482dc0435b6ca51504356be}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a2773212a37fbe7b3187e79870a4d7f65}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a2773212a37fbe7b3187e79870a4d7f65} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!abort\+Run@{abort\+Run}}
+\index{abort\+Run@{abort\+Run}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{abort\+Run()}{abortRun()}}
+{\footnotesize\ttfamily void Geant4\+Action\+::abort\+Run (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{exception,  }\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption}) const}
 
 
-Abort Geant4 Run by throwing a G4Exception with type RunMustBeAborted. 
 
-Referenced by appendInteraction(), DD4hep::Simulation::boostInteraction(), DD4hep::Simulation::generatePrimaries(), DD4hep::Simulation::mergeInteractions(), and DD4hep::Simulation::smearInteraction().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_abf90df73db256488940810101fd63a8a}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!addRef@{addRef}}
-\index{addRef@{addRef}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{addRef}]{\setlength{\rightskip}{0pt plus 5cm}long Geant4Action::addRef ()}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_abf90df73db256488940810101fd63a8a}
+Abort Geant4 Run by throwing a G4\+Exception with type Run\+Must\+Be\+Aborted. 
 
 
-Increase reference count. Implicit destruction. 
 
-Definition at line 75 of file Geant4Action.cpp.
+Definition at line 268 of file Geant4\+Action.\+cpp.
 
-References m\_\-refCount.
 
-Referenced by DD4hep::Simulation::Geant4ActionPhase::add(), DD4hep::Simulation::Geant4UserInitializationSequence::adopt(), DD4hep::Simulation::Geant4TrackingActionSequence::adopt(), DD4hep::Simulation::Geant4SteppingActionSequence::adopt(), DD4hep::Simulation::Geant4StackingActionSequence::adopt(), DD4hep::Simulation::Geant4SensDetActionSequence::adopt(), DD4hep::Simulation::Geant4Sensitive::adopt(), DD4hep::Simulation::Geant4RunActionSequence::adopt(), DD4hep::Simulation::Geant4PhysicsListActionSequence::adopt(), DD4hep::Simulation::Geant4ParticleHandler::adopt(), DD4hep::Simulation::Geant4GeneratorActionSequence::adopt(), DD4hep::Simulation::Geant4EventActionSequence::adopt(), DD4hep::Simulation::Geant4DetectorConstructionSequence::adopt(), DD4hep::Simulation::Geant4Sensitive::adopt\_\-front(), DD4hep::Simulation::Geant4PhysicsList::adoptPhysicsConstructor(), DD4hep::Simulation::Geant4Kernel::registerGlobalAction(), DD4hep::Simulation::Geant4Kernel::registerGlobalFilter(), DD4hep::Simulation::Geant4SharedTrackingAction::use(), DD4hep::Simulation::Geant4SharedSteppingAction::use(), DD4hep::Simulation::Geant4SharedStackingAction::use(), DD4hep::Simulation::Geant4SharedRunAction::use(), DD4hep::Simulation::Geant4SharedGeneratorAction::use(), and DD4hep::Simulation::Geant4SharedEventAction::use().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a81f7a014edf0a3086149b3f45c14d826}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!c\_\-name@{c\_\-name}}
-\index{c\_\-name@{c\_\-name}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{c\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ DD4hep::Simulation::Geant4Action::c\_\-name () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a81f7a014edf0a3086149b3f45c14d826}
+
+References D\+D4hep\+::format(), and D\+D4hep\+::type\+Name().
+
+
+
+Referenced by append\+Interaction(), D\+D4hep\+::\+Simulation\+::boost\+Interaction(), D\+D4hep\+::\+Simulation\+::generate\+Primaries(), D\+D4hep\+::\+Simulation\+::merge\+Interactions(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Input\+Action\+::read\+Particles(), and D\+D4hep\+::\+Simulation\+::smear\+Interaction().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_abf90df73db256488940810101fd63a8a}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_abf90df73db256488940810101fd63a8a} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!add\+Ref@{add\+Ref}}
+\index{add\+Ref@{add\+Ref}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{add\+Ref()}{addRef()}}
+{\footnotesize\ttfamily long Geant4\+Action\+::add\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Increase reference count. 
+
+Implicit destruction. 
+
+Definition at line 75 of file Geant4\+Action.\+cpp.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+Phase\+::add(), D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Initialization\+Sequence\+::adopt(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Stepping\+Action\+Sequence\+::adopt(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Stacking\+Action\+Sequence\+::adopt(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action\+Sequence\+::adopt(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::adopt(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Run\+Action\+Sequence\+::adopt(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Detector\+Construction\+Sequence\+::adopt(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence\+::adopt(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracking\+Action\+Sequence\+::adopt(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+::adopt(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+Action\+Sequence\+::adopt(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+Action\+Sequence\+::adopt(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+::adopt\+\_\+front(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::adopt\+Physics\+Constructor(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+Sequences\+::insert(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::register\+Global\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::register\+Global\+Filter(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Stacking\+Action\+::use(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Stepping\+Action\+::use(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Run\+Action\+::use(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Tracking\+Action\+::use(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Generator\+Action\+::use(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Event\+Action\+::use().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a7e0ce5a638e716e0e607536a73a85cbf}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a7e0ce5a638e716e0e607536a73a85cbf} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!c\+\_\+name@{c\+\_\+name}}
+\index{c\+\_\+name@{c\+\_\+name}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{c\+\_\+name()}{c\_name()}}
+{\footnotesize\ttfamily const char$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::c\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Access name of the action. 
 
-Definition at line 281 of file Geant4Action.h.
 
-References m\_\-name.
 
-Referenced by DD4hep::Simulation::Geant4ParticleHandler::adopt(), DD4hep::Simulation::Geant4PhysicsList::adoptPhysicsConstructor(), DD4hep::Simulation::Geant4SensDetActionSequence::collection(), DD4hep::Simulation::Geant4SensDetActionSequence::collectionByID(), DD4hep::Simulation::Geant4SensDet::defineCollection(), DD4hep::Simulation::TrackerCombine::extractHit(), DD4hep::Simulation::Geant4SensDetActionSequence::hitCollectionName(), DD4hep::Simulation::Geant4ParticlePrint::makePrintout(), DD4hep::Simulation::Geant4ParticleHandler::mark(), DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::process(), and Tests::Geant4SensitiveAction$<$ T $>$::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a6adc7138508303e4e417cb48a737ab19}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!configureFiber@{configureFiber}}
-\index{configureFiber@{configureFiber}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{configureFiber}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Action::configureFiber ({\bf Geant4Context} $\ast$ {\em thread\_\-context})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a6adc7138508303e4e417cb48a737ab19}
+Definition at line 281 of file Geant4\+Action.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::adopt(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::adopt\+Physics\+Constructor(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+Action\+Sequence\+::collection(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+Action\+Sequence\+::collection\+By\+I\+D(), D\+D4hep\+::\+Simulation\+::\+Tracker\+Combine\+::extract\+Hit(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+Action\+Sequence\+::hit\+Collection\+Name(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Print\+::make\+Printout(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::mark().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a6adc7138508303e4e417cb48a737ab19}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a6adc7138508303e4e417cb48a737ab19} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!configure\+Fiber@{configure\+Fiber}}
+\index{configure\+Fiber@{configure\+Fiber}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{configure\+Fiber()}{configureFiber()}}
+{\footnotesize\ttfamily void Geant4\+Action\+::configure\+Fiber (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4\+Context} $\ast$}]{thread\+\_\+context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Set or update client for the use in a new thread fiber. 
 
-Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_a7933d545b7caacaca3928b3af1038df6}{DD4hep::Simulation::Geant4SharedEventAction}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a552fac0ec8632b417f81453b4d79e0c4}{DD4hep::Simulation::Geant4EventActionSequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_generator_action_a9ca0ac287c96f37ceaa07740c43e7457}{DD4hep::Simulation::Geant4SharedGeneratorAction}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_sequence_a0ba4324a4f977eb12057e789eaf44f07}{DD4hep::Simulation::Geant4GeneratorActionSequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_abc1171027ea0a21fedef2d49a14ec557}{DD4hep::Simulation::Geant4OutputAction}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_run_action_a6077a3ce7deb655ef76d4fe4e8dc1b19}{DD4hep::Simulation::Geant4SharedRunAction}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_adf657c521620857ffed702783c0a2712}{DD4hep::Simulation::Geant4RunActionSequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_af204c8b8ed06b5ac14c168ea639c51ac}{DD4hep::Simulation::Geant4SharedStackingAction}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stacking_action_sequence_af292bcae909cc6b7bc4a94c0f0e07b9c}{DD4hep::Simulation::Geant4StackingActionSequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stepping_action_ae023874861eb3048eba53ef6cd253224}{DD4hep::Simulation::Geant4SharedSteppingAction}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_ad5680d2d225421b9cf2cd6b530d3ab5f}{DD4hep::Simulation::Geant4SteppingActionSequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_tracking_action_a7033aa446a1fbce97cf260caaf55b5b2}{DD4hep::Simulation::Geant4SharedTrackingAction}, and \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_tracking_action_sequence_afff6a1aeeb049c8ee0ee2819d54b65d0}{DD4hep::Simulation::Geant4TrackingActionSequence}.
 
-Definition at line 150 of file Geant4Action.cpp.
 
-Referenced by DD4hep::Simulation::Geant4SharedTrackingAction::configureFiber(), DD4hep::Simulation::Geant4TrackingActionSequence::configureFiber(), DD4hep::Simulation::Geant4SteppingActionSequence::configureFiber(), DD4hep::Simulation::Geant4SharedSteppingAction::configureFiber(), DD4hep::Simulation::Geant4StackingActionSequence::configureFiber(), DD4hep::Simulation::Geant4SharedStackingAction::configureFiber(), DD4hep::Simulation::Geant4RunActionSequence::configureFiber(), DD4hep::Simulation::Geant4SharedRunAction::configureFiber(), DD4hep::Simulation::Geant4GeneratorActionSequence::configureFiber(), DD4hep::Simulation::Geant4SharedGeneratorAction::configureFiber(), DD4hep::Simulation::Geant4EventActionSequence::configureFiber(), and DD4hep::Simulation::Geant4SharedEventAction::configureFiber().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae695d6fe735edceeea30e84afd329e38}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!context@{context}}
-\index{context@{context}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{context}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Context}$\ast$ DD4hep::Simulation::Geant4Action::context () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae695d6fe735edceeea30e84afd329e38}
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a552fac0ec8632b417f81453b4d79e0c4}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_tracking_action_sequence_afff6a1aeeb049c8ee0ee2819d54b65d0}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracking\+Action\+Sequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_sequence_a0ba4324a4f977eb12057e789eaf44f07}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action\+Sequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_adf657c521620857ffed702783c0a2712}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Run\+Action\+Sequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stacking_action_sequence_af292bcae909cc6b7bc4a94c0f0e07b9c}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Stacking\+Action\+Sequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_ad5680d2d225421b9cf2cd6b530d3ab5f}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Stepping\+Action\+Sequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_event_action_a7933d545b7caacaca3928b3af1038df6}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Event\+Action}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_generator_action_a9ca0ac287c96f37ceaa07740c43e7457}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Generator\+Action}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_tracking_action_a7033aa446a1fbce97cf260caaf55b5b2}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Tracking\+Action}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_run_action_a6077a3ce7deb655ef76d4fe4e8dc1b19}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Run\+Action}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stacking_action_af204c8b8ed06b5ac14c168ea639c51ac}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Stacking\+Action}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_shared_stepping_action_ae023874861eb3048eba53ef6cd253224}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Stepping\+Action}, and \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_output_action_abc1171027ea0a21fedef2d49a14ec557}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Output\+Action}.
+
+
+
+Definition at line 150 of file Geant4\+Action.\+cpp.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Output\+Action\+::configure\+Fiber(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Stacking\+Action\+::configure\+Fiber(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Stepping\+Action\+::configure\+Fiber(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Run\+Action\+::configure\+Fiber(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Tracking\+Action\+::configure\+Fiber(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Generator\+Action\+::configure\+Fiber(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Event\+Action\+::configure\+Fiber(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Stepping\+Action\+Sequence\+::configure\+Fiber(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Stacking\+Action\+Sequence\+::configure\+Fiber(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Run\+Action\+Sequence\+::configure\+Fiber(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action\+Sequence\+::configure\+Fiber(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracking\+Action\+Sequence\+::configure\+Fiber(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence\+::configure\+Fiber().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_aa9d87f0ec2a72b7fc2591b18f98d75cf}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_aa9d87f0ec2a72b7fc2591b18f98d75cf} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!context@{context}}
+\index{context@{context}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{context()}{context()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4\+Context}$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Access the context. 
 
-Definition at line 267 of file Geant4Action.h.
 
-References m\_\-context.
 
-Referenced by DD4hep::Simulation::Geant4TrackingPreAction::begin(), DD4hep::Simulation::Geant4TrackingPostAction::begin(), DD4hep::Simulation::Geant4SharedTrackingAction::begin(), DD4hep::Simulation::Test::Geant4TestSensitive::begin(), DD4hep::Simulation::Test::Geant4TestTrackAction::begin(), DD4hep::Simulation::Test::Geant4TestEventAction::begin(), DD4hep::Simulation::Test::Geant4TestRunAction::begin(), DD4hep::Simulation::Geant4SharedRunAction::begin(), DD4hep::Simulation::Geant4SharedEventAction::begin(), DD4hep::Simulation::Geant4Output2LCIO::begin(), DD4hep::Simulation::Test::Geant4TestRunAction::beginEvent(), DD4hep::Simulation::Geant4ParticleHandler::beginEvent(), DD4hep::Simulation::Test::Geant4TestEventAction::beginRun(), DD4hep::Simulation::Geant4UserActionInitialization::Build(), DD4hep::Simulation::Geant4Output2LCIO::commit(), DD4hep::Simulation::Geant4UserDetectorConstruction::Construct(), DD4hep::Simulation::Geant4UserDetectorConstruction::ConstructSDandField(), DD4hep::Simulation::Geant4Action::ContextSwap::ContextSwap(), DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::defineReadoutCollection(), DD4hep::Simulation::Geant4SharedTrackingAction::end(), DD4hep::Simulation::Test::Geant4TestSensitive::end(), DD4hep::Simulation::Test::Geant4TestTrackAction::end(), DD4hep::Simulation::Test::Geant4TestEventAction::end(), DD4hep::Simulation::Test::Geant4TestRunAction::end(), DD4hep::Simulation::Geant4SharedRunAction::end(), DD4hep::Simulation::Geant4OutputAction::end(), DD4hep::Simulation::Geant4SharedEventAction::end(), DD4hep::Simulation::Test::Geant4TestRunAction::endEvent(), DD4hep::Simulation::Geant4ParticleHandler::endEvent(), DD4hep::Simulation::Test::Geant4TestEventAction::endRun(), DD4hep::Simulation::Geant4GeneratorActionInit::Geant4GeneratorActionInit(), DD4hep::Simulation::Geant4IsotropeGenerator::getParticleDirectionCosTheta(), DD4hep::Simulation::Geant4IsotropeGenerator::getParticleDirectionEta(), DD4hep::Simulation::Geant4IsotropeGenerator::getParticleDirectionFFbar(), DD4hep::Simulation::Geant4IsotropeGenerator::getParticleDirectionUniform(), installMessengers(), DD4hep::Simulation::Geant4ParticlePrint::makePrintout(), DD4hep::Simulation::Geant4TrackingAction::mark(), DD4hep::Simulation::Geant4Sensitive::mark(), DD4hep::Simulation::Geant4SharedStackingAction::newStage(), DD4hep::Simulation::Test::Geant4TestGeneratorAction::operator()(), DD4hep::Simulation::Geant4SharedSteppingAction::operator()(), DD4hep::Simulation::Geant4PrimaryHandler::operator()(), DD4hep::Simulation::Geant4ParticleHandler::operator()(), DD4hep::Simulation::Geant4ParticleGun::operator()(), DD4hep::Simulation::Geant4ParticleGenerator::operator()(), DD4hep::Simulation::Geant4InteractionVertexSmear::operator()(), DD4hep::Simulation::Geant4InteractionVertexBoost::operator()(), DD4hep::Simulation::Geant4InteractionMerger::operator()(), DD4hep::Simulation::Geant4InputAction::operator()(), DD4hep::Simulation::Geant4GeneratorWrapper::operator()(), DD4hep::Simulation::Geant4GeneratorActionInit::operator()(), DD4hep::Simulation::Geant4SharedGeneratorAction::operator()(), DD4hep::Simulation::Geant4FieldTrackingConstruction::operator()(), DD4hep::Simulation::Geant4FieldTrackingSetupAction::operator()(), DD4hep::Simulation::Geant4UserTrackingAction::PostUserTrackingAction(), DD4hep::Simulation::Geant4SharedStackingAction::prepare(), DD4hep::Simulation::Geant4UserTrackingAction::PreUserTrackingAction(), DD4hep::Simulation::Geant4ParticleGenerator::printInteraction(), DD4hep::Simulation::Geant4ParticlePrint::printParticle(), DD4hep::Simulation::Test::Geant4TestSensitive::process(), DD4hep::Simulation::Geant4ParticleHandler::rebaseSimulatedTracks(), DD4hep::Simulation::Geant4Output2LCIO::saveCollection(), DD4hep::Simulation::Geant4Output2ROOT::saveEvent(), DD4hep::Simulation::Geant4Output2LCIO::saveEvent(), DD4hep::Simulation::Geant4Output2LCIO::saveRun(), DD4hep::Simulation::Geant4InteractionVertexSmear::smear(), and DD4hep::Simulation::Geant4UIManager::start().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae5e218a61d3dceff2d164429b854fb61}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!control@{control}}
-\index{control@{control}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{control}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4UIMessenger} $\ast$ Geant4Action::control () const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae5e218a61d3dceff2d164429b854fb61}
+Definition at line 267 of file Geant4\+Action.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracking\+Pre\+Action\+::begin(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracking\+Post\+Action\+::begin(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Run\+Action\+::begin(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Run\+Action\+::begin(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Tracking\+Action\+::begin(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Event\+Action\+::begin(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Event\+Action\+::begin(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Track\+Action\+::begin(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Sensitive\+::begin(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Run\+Action\+::begin\+Event(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::begin\+Event(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Event\+Action\+::begin\+Run(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::\+Context\+Swap\+::\+Context\+Swap(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Action$<$ T $>$\+::define\+Readout\+Collection(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Output\+Action\+::end(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Run\+Action\+::end(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Run\+Action\+::end(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Tracking\+Action\+::end(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Event\+Action\+::end(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Event\+Action\+::end(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Track\+Action\+::end(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Sensitive\+::end(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Run\+Action\+::end\+Event(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::end\+Event(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Event\+Action\+::end\+Run(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action\+Init\+::\+Geant4\+Generator\+Action\+Init(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+Action\+Sequence\+::\+Geant4\+Sens\+Det\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+::\+Geant4\+Sensitive(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Gun\+::get\+Particle\+Direction(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Isotrope\+Generator\+::get\+Particle\+Direction\+Cos\+Theta(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Isotrope\+Generator\+::get\+Particle\+Direction\+Eta(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Isotrope\+Generator\+::get\+Particle\+Direction\+F\+Fbar(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Isotrope\+Generator\+::get\+Particle\+Direction\+Uniform(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Print\+::make\+Printout(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracking\+Action\+::mark(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+::mark(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Stacking\+Action\+::new\+Stage(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Primary\+Handler\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Interaction\+Merger\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Wrapper\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Interaction\+Vertex\+Boost\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Interaction\+Vertex\+Smear\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action\+Init\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Gun\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Generator\+Action\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Stepping\+Action\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Generator\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Generator\+Action\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Field\+Tracking\+Setup\+Action\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Field\+Tracking\+Construction\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Input\+Action\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Stacking\+Action\+::prepare(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Generator\+::print\+Interaction(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Print\+::print\+Particle(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Sensitive\+::process(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::rebase\+Simulated\+Tracks(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Output2\+R\+O\+O\+T\+::save\+Event(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Interaction\+Vertex\+Smear\+::smear(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+U\+I\+Manager\+::start().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a1bdb7c4a8b5a40c4fbae05068c1e8c93}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a1bdb7c4a8b5a40c4fbae05068c1e8c93} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!control@{control}}
+\index{control@{control}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{control()}{control()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_u_i_messenger}{Geant4\+U\+I\+Messenger} $\ast$ Geant4\+Action\+::control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 
 
 Access to the UI messenger. 
 
-Definition at line 135 of file Geant4Action.cpp.
 
-References except(), and m\_\-control.
 
-Referenced by DD4hep::Simulation::Geant4PhysicsListActionSequence::installCommandMessenger(), and DD4hep::Simulation::Geant4PhysicsList::installCommandMessenger().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a89cb100e04f08e07046e7d490a8bc747}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!debug@{debug}}
-\index{debug@{debug}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{debug}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Action::debug (const char $\ast$ {\em fmt}, \/   {\em ...}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a89cb100e04f08e07046e7d490a8bc747}
+Definition at line 135 of file Geant4\+Action.\+cpp.
+
+
+
+References D\+D4hep\+::except().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::install\+Command\+Messenger(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+Action\+Sequence\+::install\+Command\+Messenger().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a22a58ac372d240b1a7d0f34f1fc1a67b}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a22a58ac372d240b1a7d0f34f1fc1a67b} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!debug@{debug}}
+\index{debug@{debug}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{debug()}{debug()}}
+{\footnotesize\ttfamily void Geant4\+Action\+::debug (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption}) const}
+
 
 
 Support of debug messages. 
 
-Definition at line 209 of file Geant4Action.cpp.
 
-References DD4hep::DEBUG, m\_\-name, and DD4hep::printout().
 
-Referenced by DD4hep::Simulation::Geant4PhysicsList::constructParticles(), DD4hep::Simulation::Geant4PhysicsList::constructPhysics(), DD4hep::Simulation::Geant4PhysicsList::constructProcesses(), DD4hep::Simulation::Geant4ParticleHandler::endEvent(), DD4hep::Simulation::mergeInteractions(), DD4hep::Simulation::Geant4ParticleHandler::operator()(), and DD4hep::Simulation::Geant4InteractionMerger::operator()().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_abd5a683c0c6511aabb8ed0502ad25ee6}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!declareProperty@{declareProperty}}
-\index{declareProperty@{declareProperty}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{declareProperty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Geant4Action} \& DD4hep::Simulation::Geant4Action::declareProperty (const char $\ast$ {\em nam}, \/  {\bf T} \& {\em val})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_abd5a683c0c6511aabb8ed0502ad25ee6}
+Definition at line 209 of file Geant4\+Action.\+cpp.
+
+
+
+References D\+D4hep\+::\+D\+E\+B\+UG, and D\+D4hep\+::printout().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::construct\+Particles(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::construct\+Physics(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::construct\+Processes(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::end\+Event(), D\+D4hep\+::\+Simulation\+::merge\+Interactions(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Interaction\+Merger\+::operator()(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::operator()().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a51be57d542edbba2b5e4a53a7fea6315}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a51be57d542edbba2b5e4a53a7fea6315} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!declare\+Property@{declare\+Property}}
+\index{declare\+Property@{declare\+Property}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{declare\+Property()}{declareProperty()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} \& D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::declare\+Property (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nam,  }\item[{\hyperlink{class_t}{T} \&}]{val }\end{DoxyParamCaption})}
+
 
 
 Declare property. 
 
-Definition at line 370 of file Geant4Action.h.
 
-References DD4hep::PropertyManager::add(), and m\_\-properties.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_acef2b66c2126c84bec80d8f57ceb9789}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!declareProperty@{declareProperty}}
-\index{declareProperty@{declareProperty}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{declareProperty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Geant4Action} \& DD4hep::Simulation::Geant4Action::declareProperty (const std::string \& {\em nam}, \/  {\bf T} \& {\em val})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_acef2b66c2126c84bec80d8f57ceb9789}
+
+Definition at line 364 of file Geant4\+Action.\+h.
+
+
+
+References D\+D4hep\+::\+Property\+Manager\+::add().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Energy\+Deposit\+Minimum\+Cut\+::\+Energy\+Deposit\+Minimum\+Cut(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Default\+Range\+Cut\+::\+Geant4\+Default\+Range\+Cut(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Escape\+Counter\+::\+Geant4\+Escape\+Counter(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Field\+Tracking\+Construction\+::\+Geant4\+Field\+Tracking\+Construction(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Field\+Tracking\+Setup\+Action\+::\+Geant4\+Field\+Tracking\+Setup\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Wrapper\+::\+Geant4\+Generator\+Wrapper(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Input\+Action\+::\+Geant4\+Input\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Interaction\+Vertex\+Boost\+::\+Geant4\+Interaction\+Vertex\+Boost(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Interaction\+Vertex\+Smear\+::\+Geant4\+Interaction\+Vertex\+Smear(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Isotrope\+Generator\+::\+Geant4\+Isotrope\+Generator(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Output2\+R\+O\+O\+T\+::\+Geant4\+Output2\+R\+O\+O\+T(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Output\+Action\+::\+Geant4\+Output\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Generator\+::\+Geant4\+Particle\+Generator(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Gun\+::\+Geant4\+Particle\+Gun(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::\+Geant4\+Particle\+Handler(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Print\+::\+Geant4\+Particle\+Print(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+Constructor\+::\+Geant4\+Physics\+Constructor(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+Action\+Sequence\+::\+Geant4\+Physics\+List\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Random\+::\+Geant4\+Random(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+::\+Geant4\+Sensitive(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Action$<$ T $>$\+::\+Geant4\+Sensitive\+Action(), D\+D4hep\+::\+Simulation\+::\+Test\+::\+Geant4\+Test\+Base\+::\+Geant4\+Test\+Base(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracking\+Post\+Action\+::\+Geant4\+Tracking\+Post\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+U\+I\+Manager\+::\+Geant4\+U\+I\+Manager(), D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Particle\+Handler\+::\+Geant4\+User\+Particle\+Handler(), D\+D4hep\+::\+Simulation\+::\+Particle\+Filter\+::\+Particle\+Filter(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+T\+C\+User\+Particle\+Handler\+::$\sim$\+Geant4\+T\+C\+User\+Particle\+Handler().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_ad00f53780d6155fb3ab806a68a284762}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_ad00f53780d6155fb3ab806a68a284762} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!declare\+Property@{declare\+Property}}
+\index{declare\+Property@{declare\+Property}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{declare\+Property()}{declareProperty()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} \& D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::declare\+Property (\begin{DoxyParamCaption}\item[{const char $\ast$}]{nam,  }\item[{\hyperlink{class_t}{T} \&}]{val }\end{DoxyParamCaption})}
+
 
 
 Declare property. 
 
-Definition at line 364 of file Geant4Action.h.
 
-References DD4hep::PropertyManager::add(), and m\_\-properties.
 
-Referenced by DD4hep::Simulation::EnergyDepositMinimumCut::EnergyDepositMinimumCut(), DD4hep::Simulation::Geant4DefaultRangeCut::Geant4DefaultRangeCut(), DD4hep::Simulation::Geant4FieldTrackingConstruction::Geant4FieldTrackingConstruction(), DD4hep::Simulation::Geant4FieldTrackingSetupAction::Geant4FieldTrackingSetupAction(), DD4hep::Simulation::Geant4InteractionVertexBoost::Geant4InteractionVertexBoost(), DD4hep::Simulation::Geant4InteractionVertexSmear::Geant4InteractionVertexSmear(), DD4hep::Simulation::Geant4ParticlePrint::Geant4ParticlePrint(), DD4hep::Simulation::Geant4PhysicsConstructor::Geant4PhysicsConstructor(), DD4hep::Simulation::Geant4Random::Geant4Random(), Tests::Geant4SensitiveAction$<$ T $>$::Geant4SensitiveAction(), DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::Geant4SensitiveAction(), DD4hep::Simulation::Test::Geant4TestBase::Geant4TestBase(), DD4hep::Simulation::Geant4TrackingPostAction::Geant4TrackingPostAction(), DD4hep::Simulation::Geant4UIManager::Geant4UIManager(), DD4hep::Simulation::Geant4UserParticleHandler::Geant4UserParticleHandler(), and DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::initialize().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a3cc9526eece0aaceec6b62fa74d8c055}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!enableUI@{enableUI}}
-\index{enableUI@{enableUI}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{enableUI}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Action::enableUI ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a3cc9526eece0aaceec6b62fa74d8c055}
+Definition at line 370 of file Geant4\+Action.\+h.
+
+
+
+References D\+D4hep\+::\+Property\+Manager\+::add().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a3cc9526eece0aaceec6b62fa74d8c055}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a3cc9526eece0aaceec6b62fa74d8c055} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!enable\+UI@{enable\+UI}}
+\index{enable\+UI@{enable\+UI}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{enable\+U\+I()}{enableUI()}}
+{\footnotesize\ttfamily void Geant4\+Action\+::enable\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Enable and install UI messenger. 
 
-Definition at line 144 of file Geant4Action.cpp.
-
-References installMessengers(), and m\_\-needsControl.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a2e1c04c087846bf9bf349d26667660a2}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!error@{error}}
-\index{error@{error}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{error}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Action::error (const char $\ast$ {\em fmt}, \/   {\em ...}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a2e1c04c087846bf9bf349d26667660a2}
 
 
-Support of error messages. Action to support error messages. 
+Definition at line 144 of file Geant4\+Action.\+cpp.
 
-Definition at line 233 of file Geant4Action.cpp.
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a1abdae5d2d2af327f406697322b0d821}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a1abdae5d2d2af327f406697322b0d821} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!error@{error}}
+\index{error@{error}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily void Geant4\+Action\+::error (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption}) const}
 
-References DD4hep::ERROR, m\_\-name, and DD4hep::printout().
 
-Referenced by DD4hep::Simulation::Geant4ParticleHandler::checkConsistency(), DD4hep::Simulation::TrackerWeighted::process(), DD4hep::Simulation::Geant4ParticleHandler::rebaseSimulatedTracks(), and DD4hep::Simulation::Geant4Random::showStatus().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a5ac8a0e311d6f5b7d297de21dfcd56a7}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!eventAction@{eventAction}}
-\index{eventAction@{eventAction}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{eventAction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4EventActionSequence} \& Geant4Action::eventAction () const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a5ac8a0e311d6f5b7d297de21dfcd56a7}
+
+Support of error messages. 
+
+Action to support error messages. 
+
+Definition at line 233 of file Geant4\+Action.\+cpp.
+
+
+
+References D\+D4hep\+::\+E\+R\+R\+OR, and D\+D4hep\+::printout().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::check\+Consistency(), D\+D4hep\+::\+Simulation\+::\+Tracker\+Weighted\+::process(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Input\+Action\+::read\+Particles(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::rebase\+Simulated\+Tracks(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Random\+::show\+Status().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a57665214b75d7e7682998dcf1d1ef7e2}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a57665214b75d7e7682998dcf1d1ef7e2} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!event\+Action@{event\+Action}}
+\index{event\+Action@{event\+Action}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{event\+Action()}{eventAction()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence}{Geant4\+Event\+Action\+Sequence} \& Geant4\+Action\+::event\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 
 
 Access to the main event action sequence from the kernel object. 
 
-Definition at line 285 of file Geant4Action.cpp.
-
-References DD4hep::Simulation::Geant4ActionContainer::eventAction(), DD4hep::Simulation::Geant4Context::kernel(), and m\_\-context.
-
-Referenced by DD4hep::Simulation::Geant4EventSeed::Geant4EventSeed(), and DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::initialize().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a05d5b6e6de246d0b7a7d76f66b9dc608}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!except@{except}}
-\index{except@{except}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{except}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Action::except (const char $\ast$ {\em fmt}, \/   {\em ...}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a05d5b6e6de246d0b7a7d76f66b9dc608}
 
 
-Support of exceptions: Print fatal message and throw runtime\_\-error. 
-
-Definition at line 258 of file Geant4Action.cpp.
-
-References DD4hep::FATAL, DD4hep::format(), m\_\-name, and DD4hep::printout().
-
-Referenced by DD4hep::Simulation::Geant4PhysicsListActionSequence::adopt(), DD4hep::Simulation::Geant4ParticleHandler::adopt(), DD4hep::Simulation::Geant4PhysicsList::adoptPhysicsConstructor(), DD4hep::Simulation::Geant4ParticleHandler::begin(), DD4hep::Simulation::Geant4ParticleHandler::checkConsistency(), DD4hep::Simulation::Geant4SensDetActionSequence::collection(), DD4hep::Simulation::Geant4SensDetActionSequence::collectionByID(), DD4hep::Simulation::Geant4Output2LCIO::commit(), DD4hep::Simulation::Geant4UserDetectorConstruction::Construct(), DD4hep::Simulation::Geant4PhysicsList::constructParticles(), DD4hep::Simulation::Geant4PhysicsList::constructPhysics(), DD4hep::Simulation::Geant4PhysicsList::constructProcesses(), DD4hep::Simulation::Geant4DefaultRangeCut::constructProcesses(), control(), DD4hep::Simulation::Geant4SensDet::defineCollection(), DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::defineReadoutCollection(), DD4hep::Simulation::Geant4ReadoutVolumeFilter::Geant4ReadoutVolumeFilter(), DD4hep::Simulation::Geant4IsotropeGenerator::getParticleDirection(), DD4hep::Simulation::Geant4SensDetActionSequence::hitCollectionName(), DD4hep::Simulation::Geant4Random::initialize(), DD4hep::Simulation::Geant4ParticlePrint::makePrintout(), DD4hep::Simulation::Geant4ParticleHandler::mark(), DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::process(), DD4hep::Simulation::Geant4Exec::run(), DD4hep::Simulation::Geant4Random::saveStatus(), DD4hep::Simulation::TrackerWeighted::update(), and DD4hep::Simulation::TrackerCombine::update().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a80edeed66bdf7dc97aecb68f246a7b24}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!fatal@{fatal}}
-\index{fatal@{fatal}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{fatal}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Action::fatal (const char $\ast$ {\em fmt}, \/   {\em ...}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a80edeed66bdf7dc97aecb68f246a7b24}
+Definition at line 285 of file Geant4\+Action.\+cpp.
 
 
-Support of fatal messages. Throws exception. Support of fatal messages. Throws exception if required. 
 
-Definition at line 250 of file Geant4Action.cpp.
+References event\+Action().
 
-References DD4hep::FATAL, m\_\-name, and DD4hep::printout().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a9c9d5445811b06f67319a88df1288094}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!generatorAction@{generatorAction}}
-\index{generatorAction@{generatorAction}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{generatorAction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4GeneratorActionSequence} \& Geant4Action::generatorAction () const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a9c9d5445811b06f67319a88df1288094}
+
+
+Referenced by event\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Seed\+::\+Geant4\+Event\+Seed(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Material\+Scanner\+::\+Geant4\+Material\+Scanner(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::\+Geant4\+Particle\+Handler().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a9817394f45f311d2fb19f544e9a72e23}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a9817394f45f311d2fb19f544e9a72e23} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!except@{except}}
+\index{except@{except}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{except()}{except()}}
+{\footnotesize\ttfamily void Geant4\+Action\+::except (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption}) const}
+
+
+
+Support of exceptions\+: Print fatal message and throw runtime\+\_\+error. 
+
+
+
+Definition at line 258 of file Geant4\+Action.\+cpp.
+
+
+
+References D\+D4hep\+::\+F\+A\+T\+AL, D\+D4hep\+::format(), and D\+D4hep\+::printout().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::adopt(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+Action\+Sequence\+::adopt(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::adopt\+Physics\+Constructor(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::begin(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::check\+Consistency(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+Action\+Sequence\+::collection(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+Action\+Sequence\+::collection\+By\+I\+D(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::construct\+Particles(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::construct\+Physics(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Default\+Range\+Cut\+::construct\+Processes(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::construct\+Processes(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Action$<$ T $>$\+::define\+Readout\+Collection(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Readout\+Volume\+Filter\+::\+Geant4\+Readout\+Volume\+Filter(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Isotrope\+Generator\+::get\+Particle\+Direction(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+Action\+Sequence\+::hit\+Collection\+Name(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Random\+::initialize(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Print\+::make\+Printout(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::mark(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::processes(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Input\+Action\+::read\+Particles(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Exec\+::run(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Random\+::save\+Status(), D\+D4hep\+::\+Simulation\+::\+Tracker\+Weighted\+::update(), and D\+D4hep\+::\+Simulation\+::\+Tracker\+Combine\+::update().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_ab7efc61d1f82a99fd8011ab2a24bbc07}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_ab7efc61d1f82a99fd8011ab2a24bbc07} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!fatal@{fatal}}
+\index{fatal@{fatal}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{fatal()}{fatal()}}
+{\footnotesize\ttfamily void Geant4\+Action\+::fatal (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption}) const}
+
+
+
+Support of fatal messages. Throws exception. 
+
+Support of fatal messages. Throws exception if required. 
+
+Definition at line 250 of file Geant4\+Action.\+cpp.
+
+
+
+References D\+D4hep\+::\+F\+A\+T\+AL, and D\+D4hep\+::printout().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a401a8dceb3d540c069fc24f66d41bf64}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a401a8dceb3d540c069fc24f66d41bf64} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!generator\+Action@{generator\+Action}}
+\index{generator\+Action@{generator\+Action}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{generator\+Action()}{generatorAction()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_sequence}{Geant4\+Generator\+Action\+Sequence} \& Geant4\+Action\+::generator\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 
 
 Access to the main generator action sequence from the kernel object. 
 
-Definition at line 305 of file Geant4Action.cpp.
-
-References DD4hep::Simulation::Geant4ActionContainer::generatorAction(), DD4hep::Simulation::Geant4Context::kernel(), and m\_\-context.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a31164c4232326b2a3c98d6c00b592427}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!hasProperty@{hasProperty}}
-\index{hasProperty@{hasProperty}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{hasProperty}]{\setlength{\rightskip}{0pt plus 5cm}bool DD4hep::Simulation::Geant4Action::hasProperty (const std::string \& {\em name}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a31164c4232326b2a3c98d6c00b592427}
 
 
-Check property for existence. \hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a30bb1539e63536cfeaddb0b5b4032214}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!info@{info}}
-\index{info@{info}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{info}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Action::info (const char $\ast$ {\em fmt}, \/   {\em ...}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a30bb1539e63536cfeaddb0b5b4032214}
+Definition at line 305 of file Geant4\+Action.\+cpp.
+
+
+
+References generator\+Action().
+
+
+
+Referenced by generator\+Action().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_ad2ba790e944389191e28f1e618da33b1}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_ad2ba790e944389191e28f1e618da33b1} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!has\+Property@{has\+Property}}
+\index{has\+Property@{has\+Property}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{has\+Property()}{hasProperty()}}
+{\footnotesize\ttfamily bool Geant4\+Action\+::has\+Property (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Check property for existence. 
+
+
+
+Definition at line 104 of file Geant4\+Action.\+cpp.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_ad458cc4957a876c0cbbc9ad6354fc187}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_ad458cc4957a876c0cbbc9ad6354fc187} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!info@{info}}
+\index{info@{info}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily void Geant4\+Action\+::info (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption}) const}
+
 
 
 Support of info messages. 
 
-Definition at line 217 of file Geant4Action.cpp.
 
-References DD4hep::INFO, m\_\-name, and DD4hep::printout().
 
-Referenced by DD4hep::Simulation::Geant4ParticleHandler::beginEvent(), DD4hep::Simulation::Geant4UserActionInitialization::Build(), DD4hep::Simulation::Geant4UserActionInitialization::BuildForMaster(), DD4hep::Simulation::Geant4PhysicsListActionSequence::constructDecays(), DD4hep::Simulation::Geant4PhysicsList::constructParticles(), DD4hep::Simulation::Geant4PhysicsList::constructPhysics(), DD4hep::Simulation::Geant4PhysicsList::constructProcesses(), and DD4hep::Simulation::Geant4DefaultRangeCut::constructProcesses().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_aaaa0718b7d4f52e4c31e982b91c0eeda}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!installCommandMessenger@{installCommandMessenger}}
-\index{installCommandMessenger@{installCommandMessenger}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{installCommandMessenger}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Action::installCommandMessenger ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_aaaa0718b7d4f52e4c31e982b91c0eeda}
+Definition at line 217 of file Geant4\+Action.\+cpp.
+
+
+
+References D\+D4hep\+::\+I\+N\+FO, and D\+D4hep\+::printout().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::begin\+Event(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+Action\+Sequence\+::construct\+Decays(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::construct\+Particles(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::construct\+Physics(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Default\+Range\+Cut\+::construct\+Processes(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::construct\+Processes().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_aaaa0718b7d4f52e4c31e982b91c0eeda}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_aaaa0718b7d4f52e4c31e982b91c0eeda} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!install\+Command\+Messenger@{install\+Command\+Messenger}}
+\index{install\+Command\+Messenger@{install\+Command\+Messenger}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{install\+Command\+Messenger()}{installCommandMessenger()}}
+{\footnotesize\ttfamily void Geant4\+Action\+::install\+Command\+Messenger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Install command control messenger if wanted. 
 
-Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_af18b7d6454f56d0aa6e55a2046cff019}{DD4hep::Simulation::Geant4PhysicsList}, and \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_action_sequence_a9c60c66de8a46726b0b3d781042c22a6}{DD4hep::Simulation::Geant4PhysicsListActionSequence}.
-
-Definition at line 131 of file Geant4Action.cpp.
-
-Referenced by installMessengers().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a82c72e9476d6a5541252edbb93fe69c6}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!installMessengers@{installMessengers}}
-\index{installMessengers@{installMessengers}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{installMessengers}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Action::installMessengers ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a82c72e9476d6a5541252edbb93fe69c6}
 
 
-Install property control messenger if wanted. Install all control messenger if wanted. 
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_action_sequence_a9c60c66de8a46726b0b3d781042c22a6}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+Action\+Sequence}, and \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_physics_list_af18b7d6454f56d0aa6e55a2046cff019}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List}.
 
-Definition at line 114 of file Geant4Action.cpp.
 
-References context(), DD4hep::Simulation::Geant4Kernel::directoryName(), installCommandMessenger(), installPropertyMessenger(), DD4hep::Simulation::Geant4Context::kernel(), m\_\-control, m\_\-needsControl, and name().
 
-Referenced by enableUI().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a04fb6b6b16ed0aad5f552e04d99d278f}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!installPropertyMessenger@{installPropertyMessenger}}
-\index{installPropertyMessenger@{installPropertyMessenger}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{installPropertyMessenger}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Action::installPropertyMessenger ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a04fb6b6b16ed0aad5f552e04d99d278f}
+Definition at line 131 of file Geant4\+Action.\+cpp.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a82c72e9476d6a5541252edbb93fe69c6}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a82c72e9476d6a5541252edbb93fe69c6} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!install\+Messengers@{install\+Messengers}}
+\index{install\+Messengers@{install\+Messengers}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{install\+Messengers()}{installMessengers()}}
+{\footnotesize\ttfamily void Geant4\+Action\+::install\+Messengers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Install property control messenger if wanted. 
 
-Definition at line 126 of file Geant4Action.cpp.
+Install all control messenger if wanted. 
 
-References DD4hep::Simulation::Geant4UIMessenger::exportProperties(), m\_\-control, and m\_\-properties.
+Definition at line 114 of file Geant4\+Action.\+cpp.
 
-Referenced by installMessengers().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a3471b931eb84ab4fdc3fc4beddae512b}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!name@{name}}
-\index{name@{name}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}const std::string\& DD4hep::Simulation::Geant4Action::name () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a3471b931eb84ab4fdc3fc4beddae512b}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a04fb6b6b16ed0aad5f552e04d99d278f}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a04fb6b6b16ed0aad5f552e04d99d278f} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!install\+Property\+Messenger@{install\+Property\+Messenger}}
+\index{install\+Property\+Messenger@{install\+Property\+Messenger}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{install\+Property\+Messenger()}{installPropertyMessenger()}}
+{\footnotesize\ttfamily void Geant4\+Action\+::install\+Property\+Messenger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Install property control messenger if wanted. 
+
+
+
+Definition at line 126 of file Geant4\+Action.\+cpp.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_af374e70b014d16afb81dd9d77cc3894b}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_af374e70b014d16afb81dd9d77cc3894b} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!name@{name}}
+\index{name@{name}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily const std\+::string\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Access name of the action. 
 
-Definition at line 277 of file Geant4Action.h.
 
-References m\_\-name.
 
-Referenced by DD4hep::Simulation::Geant4PhysicsList::adoptPhysicsConstructor(), DD4hep::Simulation::Geant4SensDetActionSequence::begin(), DD4hep::Simulation::Geant4ParticleHandler::checkConsistency(), DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::defineReadoutCollection(), DD4hep::Simulation::Geant4Sensitive::detector(), DD4hep::Simulation::Geant4Sensitive::detectorName(), DD4hep::Simulation::Geant4PhysicsListActionSequence::dump(), DD4hep::Simulation::Geant4PhysicsList::dump(), DD4hep::Simulation::Geant4ParticleHandler::dumpMap(), DD4hep::Simulation::Geant4ParticleHandler::end(), DD4hep::Simulation::Geant4OutputAction::end(), DD4hep::Simulation::generatePrimaries(), DD4hep::Simulation::Geant4PhysicsListActionSequence::installCommandMessenger(), DD4hep::Simulation::Geant4PhysicsList::installCommandMessenger(), installMessengers(), DD4hep::Simulation::Geant4InputAction::issue(), DD4hep::Simulation::mergeInteractions(), DD4hep::Simulation::Geant4ParticleGenerator::operator()(), DD4hep::Simulation::Geant4InputAction::operator()(), DD4hep::Simulation::Geant4Action::FindByName::operator()(), DD4hep::Simulation::Geant4ParticleGenerator::printInteraction(), DD4hep::Simulation::Geant4Kernel::registerGlobalAction(), DD4hep::Simulation::Geant4Kernel::registerGlobalFilter(), DD4hep::Simulation::Geant4Output2ROOT::saveCollection(), DD4hep::Simulation::Geant4Output2LCIO::saveEvent(), and DD4hep::Simulation::Geant4Output2LCIO::saveRun().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a24f50b96085f6af082b8aaef3813e218}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!outputLevel@{outputLevel}}
-\index{outputLevel@{outputLevel}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{outputLevel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PrintLevel} DD4hep::Simulation::Geant4Action::outputLevel () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a24f50b96085f6af082b8aaef3813e218}
+Definition at line 277 of file Geant4\+Action.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::adopt\+Physics\+Constructor(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+Action\+Sequence\+::begin(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::check\+Consistency(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+Action$<$ T $>$\+::define\+Readout\+Collection(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+::detector(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::dump(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+Action\+Sequence\+::dump(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::dump\+Map(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Output\+Action\+::end(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::end(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+Sequences\+::find(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Escape\+Counter\+::\+Geant4\+Escape\+Counter(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+Action\+Sequence\+::\+Geant4\+Sens\+Det\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::generate\+Primaries(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Gun\+::get\+Particle\+Direction(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+Sequences\+::insert(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+::install\+Command\+Messenger(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+Action\+Sequence\+::install\+Command\+Messenger(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Input\+Action\+::issue(), D\+D4hep\+::\+Simulation\+::merge\+Interactions(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Generator\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::\+Find\+By\+Name\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Input\+Action\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+Sequences\+::operator\mbox{[}$\,$\mbox{]}(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Generator\+::print\+Interaction(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::register\+Global\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Kernel\+::register\+Global\+Filter(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Output2\+R\+O\+O\+T\+::save\+Collection().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a1de6421e968b3fc53cae8444c6f29b3d}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a1de6421e968b3fc53cae8444c6f29b3d} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!output\+Level@{output\+Level}}
+\index{output\+Level@{output\+Level}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{output\+Level()}{outputLevel()}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{Print\+Level} D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::output\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Access the output level. 
 
-Definition at line 293 of file Geant4Action.h.
 
-References m\_\-outputLevel.
 
-Referenced by DD4hep::Simulation::Geant4DetectorGeometryConstruction::constructGeo(), DD4hep::Simulation::Geant4ParticleHandler::end(), DD4hep::Simulation::Geant4ParticleHandler::endEvent(), DD4hep::Simulation::generatePrimaries(), DD4hep::Simulation::Geant4InputAction::operator()(), print(), DD4hep::Simulation::Geant4ParticleGenerator::printInteraction(), printM1(), printM2(), printP1(), and printP2().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_abff9f8350b90ba55ee98041b0c6291ae}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!print@{print}}
-\index{print@{print}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Action::print (const char $\ast$ {\em fmt}, \/   {\em ...}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_abff9f8350b90ba55ee98041b0c6291ae}
+Definition at line 293 of file Geant4\+Action.\+h.
+
+
+
+References D\+D4hep\+::except(), and D\+D4hep\+::print().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Detector\+Geometry\+Construction\+::construct\+Geo(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::end(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::end\+Event(), D\+D4hep\+::\+Simulation\+::generate\+Primaries(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Input\+Action\+::operator()(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Generator\+::print\+Interaction().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a623119a9f20ff7f5a2fb78f4f76b9276}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a623119a9f20ff7f5a2fb78f4f76b9276} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!print@{print}}
+\index{print@{print}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Geant4\+Action\+::print (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption}) const}
+
 
 
 Support for messages with variable output level using output level. 
 
-Definition at line 154 of file Geant4Action.cpp.
 
-References m\_\-name, outputLevel(), DD4hep::printLevel(), DD4hep::printout(), and DD4hep::VERBOSE.
 
-Referenced by DD4hep::Simulation::Geant4InteractionVertexBoost::boost(), DD4hep::Simulation::Geant4DetectorSensitivesConstruction::constructSensitives(), DD4hep::Simulation::TrackerWeighted::endEvent(), DD4hep::Simulation::TrackerWeighted::extractHit(), DD4hep::Simulation::generatePrimaries(), DD4hep::Simulation::Geant4ParticlePrint::makePrintout(), DD4hep::Simulation::Geant4ParticleGun::operator()(), DD4hep::Simulation::Geant4InputAction::operator()(), DD4hep::Simulation::Geant4GeneratorActionInit::operator()(), DD4hep::Simulation::Geant4ParticleGenerator::printInteraction(), DD4hep::Simulation::Geant4ParticlePrint::printParticle(), DD4hep::Simulation::Geant4ParticlePrint::printParticles(), DD4hep::Simulation::Geant4ParticlePrint::printParticleTree(), DD4hep::Simulation::TrackerWeighted::process(), DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::process(), DD4hep::Simulation::Geant4EscapeCounter::process(), DD4hep::Simulation::Geant4Output2LCIO::saveCollection(), DD4hep::Simulation::Geant4Output2LCIO::saveEvent(), and DD4hep::Simulation::Geant4InteractionVertexSmear::smear().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a902ac87d9764b8fdb6abba259482713b}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!printM1@{printM1}}
-\index{printM1@{printM1}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{printM1}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Action::printM1 (const char $\ast$ {\em fmt}, \/   {\em ...}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a902ac87d9764b8fdb6abba259482713b}
+Definition at line 154 of file Geant4\+Action.\+cpp.
+
+
+
+References D\+D4hep\+::print\+Level(), D\+D4hep\+::printout(), and D\+D4hep\+::\+V\+E\+R\+B\+O\+SE.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Interaction\+Vertex\+Boost\+::boost(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Detector\+Sensitives\+Construction\+::construct\+Sensitives(), D\+D4hep\+::\+Simulation\+::\+Tracker\+Weighted\+::end\+Event(), D\+D4hep\+::\+Simulation\+::\+Tracker\+Weighted\+::extract\+Hit(), D\+D4hep\+::\+Simulation\+::generate\+Primaries(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Print\+::make\+Printout(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action\+Init\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Gun\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Input\+Action\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Generator\+::print\+Interaction(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Print\+::print\+Particle(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Print\+::print\+Particles(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Print\+::print\+Particle\+Tree(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Escape\+Counter\+::process(), D\+D4hep\+::\+Simulation\+::\+Tracker\+Weighted\+::process(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Interaction\+Vertex\+Smear\+::smear().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_ada091d86e8b88d764d13b4cd79f8543d}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_ada091d86e8b88d764d13b4cd79f8543d} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!print\+M1@{print\+M1}}
+\index{print\+M1@{print\+M1}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{print\+M1()}{printM1()}}
+{\footnotesize\ttfamily void Geant4\+Action\+::print\+M1 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption}) const}
+
 
 
 Support for messages with variable output level using output level-\/1. 
 
-Definition at line 165 of file Geant4Action.cpp.
 
-References m\_\-name, outputLevel(), DD4hep::printLevel(), DD4hep::printout(), and DD4hep::VERBOSE.
 
-Referenced by release().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_affc21c47844a7be6edf2824d4d042e64}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!printM2@{printM2}}
-\index{printM2@{printM2}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{printM2}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Action::printM2 (const char $\ast$ {\em fmt}, \/   {\em ...}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_affc21c47844a7be6edf2824d4d042e64}
+Definition at line 165 of file Geant4\+Action.\+cpp.
+
+
+
+References D\+D4hep\+::print\+Level(), D\+D4hep\+::printout(), and D\+D4hep\+::\+V\+E\+R\+B\+O\+SE.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a973b20385610fd757154eff3635c55a1}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a973b20385610fd757154eff3635c55a1} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!print\+M2@{print\+M2}}
+\index{print\+M2@{print\+M2}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{print\+M2()}{printM2()}}
+{\footnotesize\ttfamily void Geant4\+Action\+::print\+M2 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption}) const}
+
 
 
 Support for messages with variable output level using output level-\/2. 
 
-Definition at line 176 of file Geant4Action.cpp.
-
-References m\_\-name, outputLevel(), DD4hep::printLevel(), DD4hep::printout(), and DD4hep::VERBOSE.
-
-Referenced by DD4hep::Simulation::TrackerCombine::extractHit(), and DD4hep::Simulation::Geant4SensitiveAction$<$ T $>$::process().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a655489f4d250231f566c6db624a70410}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!printP1@{printP1}}
-\index{printP1@{printP1}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{printP1}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Action::printP1 (const char $\ast$ {\em fmt}, \/   {\em ...}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a655489f4d250231f566c6db624a70410}
 
 
-Support for messages with variable output level using output level+1. Support for messages with variable output level using output level-\/1. 
-
-Definition at line 187 of file Geant4Action.cpp.
-
-References DD4hep::FATAL, m\_\-name, outputLevel(), DD4hep::printLevel(), and DD4hep::printout().
-
-Referenced by DD4hep::Simulation::Geant4GeneratorActionInit::end().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a03ed6b722207ae7b656bf19c8e070fba}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!printP2@{printP2}}
-\index{printP2@{printP2}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{printP2}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Action::printP2 (const char $\ast$ {\em fmt}, \/   {\em ...}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a03ed6b722207ae7b656bf19c8e070fba}
+Definition at line 176 of file Geant4\+Action.\+cpp.
 
 
-Support for messages with variable output level using output level+2. Support for messages with variable output level using output level-\/2. 
 
-Definition at line 198 of file Geant4Action.cpp.
+References D\+D4hep\+::print\+Level(), D\+D4hep\+::printout(), and D\+D4hep\+::\+V\+E\+R\+B\+O\+SE.
 
-References DD4hep::FATAL, m\_\-name, outputLevel(), DD4hep::printLevel(), and DD4hep::printout().
 
-Referenced by DD4hep::Simulation::Geant4MaterialScanner::begin(), DD4hep::Simulation::Geant4Random::setMainInstance(), and DD4hep::Simulation::Geant4Random::showStatus().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a4159b11cc0acd293357e80980e3ba7d8}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!properties@{properties}}
-\index{properties@{properties}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{properties}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PropertyManager}\& DD4hep::Simulation::Geant4Action::properties ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a4159b11cc0acd293357e80980e3ba7d8}
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Tracker\+Combine\+::extract\+Hit().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae90c8c67240ca2a418d38a1c8a924077}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae90c8c67240ca2a418d38a1c8a924077} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!print\+P1@{print\+P1}}
+\index{print\+P1@{print\+P1}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{print\+P1()}{printP1()}}
+{\footnotesize\ttfamily void Geant4\+Action\+::print\+P1 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption}) const}
+
+
+
+Support for messages with variable output level using output level+1. 
+
+Support for messages with variable output level using output level-\/1. 
+
+Definition at line 187 of file Geant4\+Action.\+cpp.
+
+
+
+References D\+D4hep\+::\+F\+A\+T\+AL, D\+D4hep\+::print\+Level(), and D\+D4hep\+::printout().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action\+Init\+::end().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae56185e13ffe3255d349b848c2157699}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae56185e13ffe3255d349b848c2157699} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!print\+P2@{print\+P2}}
+\index{print\+P2@{print\+P2}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{print\+P2()}{printP2()}}
+{\footnotesize\ttfamily void Geant4\+Action\+::print\+P2 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption}) const}
+
+
+
+Support for messages with variable output level using output level+2. 
+
+Support for messages with variable output level using output level-\/2. 
+
+Definition at line 198 of file Geant4\+Action.\+cpp.
+
+
+
+References D\+D4hep\+::\+F\+A\+T\+AL, D\+D4hep\+::print\+Level(), and D\+D4hep\+::printout().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Material\+Scanner\+::begin(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Random\+::set\+Main\+Instance(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Random\+::show\+Status().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a4159b11cc0acd293357e80980e3ba7d8}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a4159b11cc0acd293357e80980e3ba7d8} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!properties@{properties}}
+\index{properties@{properties}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{properties()}{properties()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_property_manager}{Property\+Manager}\& D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Access to the properties of the object. 
 
-Definition at line 289 of file Geant4Action.h.
 
-References m\_\-properties.
 
-Referenced by DD4hep::Converter$<$ T, ARG $>$::operator()(), DD4hep::Simulation::Geant4SharedTrackingAction::use(), DD4hep::Simulation::Geant4SharedSteppingAction::use(), DD4hep::Simulation::Geant4SharedStackingAction::use(), DD4hep::Simulation::Geant4SharedRunAction::use(), and DD4hep::Simulation::Geant4SharedEventAction::use().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_aa9797c4749e92c0611ca7ce6f8b7bc78}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!property@{property}}
-\index{property@{property}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{property}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Property}\& DD4hep::Simulation::Geant4Action::property (const std::string \& {\em name})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_aa9797c4749e92c0611ca7ce6f8b7bc78}
+Definition at line 289 of file Geant4\+Action.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Converter$<$ T, A\+R\+G $>$\+::operator()(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Stacking\+Action\+::use(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Stepping\+Action\+::use(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Run\+Action\+::use(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Tracking\+Action\+::use(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Event\+Action\+::use().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a7b1a0ac81a980bfa966a972caaaf5bfc}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a7b1a0ac81a980bfa966a972caaaf5bfc} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!property@{property}}
+\index{property@{property}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{property()}{property()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_property}{Property} \& Geant4\+Action\+::property (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
 
 
 Access single property. 
 
-Referenced by DD4hep::Simulation::Geant4Exec::configure().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a3afba3ee937fdbd25d27994e4e75c5ac}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!release@{release}}
-\index{release@{release}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}long Geant4Action::release ()}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a3afba3ee937fdbd25d27994e4e75c5ac}
+
+
+Definition at line 109 of file Geant4\+Action.\+cpp.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Exec\+::configure().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a3afba3ee937fdbd25d27994e4e75c5ac}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a3afba3ee937fdbd25d27994e4e75c5ac} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!release@{release}}
+\index{release@{release}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily long Geant4\+Action\+::release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 
 
 Decrease reference count. Implicit destruction. 
 
-Definition at line 80 of file Geant4Action.cpp.
 
-References m\_\-name, m\_\-refCount, printM1(), and DD4hep::typeName().
 
-Referenced by DD4hep::Simulation::Geant4DetectorConstructionSequence::$\sim$Geant4DetectorConstructionSequence(), DD4hep::Simulation::Geant4EventActionSequence::$\sim$Geant4EventActionSequence(), DD4hep::Simulation::Geant4GeneratorActionSequence::$\sim$Geant4GeneratorActionSequence(), DD4hep::Simulation::Geant4PhysicsListActionSequence::$\sim$Geant4PhysicsListActionSequence(), DD4hep::Simulation::Geant4RunActionSequence::$\sim$Geant4RunActionSequence(), DD4hep::Simulation::Geant4SensDetActionSequence::$\sim$Geant4SensDetActionSequence(), DD4hep::Simulation::Geant4Sensitive::$\sim$Geant4Sensitive(), DD4hep::Simulation::Geant4StackingActionSequence::$\sim$Geant4StackingActionSequence(), DD4hep::Simulation::Geant4SteppingActionSequence::$\sim$Geant4SteppingActionSequence(), DD4hep::Simulation::Geant4TrackingActionSequence::$\sim$Geant4TrackingActionSequence(), and DD4hep::Simulation::Geant4UserInitializationSequence::$\sim$Geant4UserInitializationSequence().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a3cdefc7063e8ca7d7fe55ebb7487daab}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!return\_\-error@{return\_\-error}}
-\index{return\_\-error@{return\_\-error}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{return\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}bool Geant4Action::return\_\-error (bool {\em return\_\-value}, \/  const char $\ast$ {\em fmt}, \/   {\em ...}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a3cdefc7063e8ca7d7fe55ebb7487daab}
+Definition at line 80 of file Geant4\+Action.\+cpp.
+
+
+
+References D\+D4hep\+::type\+Name().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Detector\+Construction\+Sequence\+::$\sim$\+Geant4\+Detector\+Construction\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence\+::$\sim$\+Geant4\+Event\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action\+Sequence\+::$\sim$\+Geant4\+Generator\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+Action\+Sequence\+::$\sim$\+Geant4\+Physics\+List\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Run\+Action\+Sequence\+::$\sim$\+Geant4\+Run\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+Action\+Sequence\+::$\sim$\+Geant4\+Sens\+Det\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sensitive\+::$\sim$\+Geant4\+Sensitive(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Stacking\+Action\+Sequence\+::$\sim$\+Geant4\+Stacking\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Stepping\+Action\+Sequence\+::$\sim$\+Geant4\+Stepping\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracking\+Action\+Sequence\+::$\sim$\+Geant4\+Tracking\+Action\+Sequence(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Initialization\+Sequence\+::$\sim$\+Geant4\+User\+Initialization\+Sequence().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a2f0ed49ced8246f3165476ed5866620a}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a2f0ed49ced8246f3165476ed5866620a} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!return\+\_\+error@{return\+\_\+error}}
+\index{return\+\_\+error@{return\+\_\+error}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{return\+\_\+error()}{return\_error()}}
+{\footnotesize\ttfamily bool Geant4\+Action\+::return\+\_\+error (\begin{DoxyParamCaption}\item[{bool}]{return\+\_\+value,  }\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption}) const}
+
 
 
 Action to support error messages. 
 
-Definition at line 241 of file Geant4Action.cpp.
 
-References DD4hep::ERROR, m\_\-name, and DD4hep::printout().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a242b367d623151c0cd3a892915f371b9}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!runAction@{runAction}}
-\index{runAction@{runAction}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{runAction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4RunActionSequence} \& Geant4Action::runAction () const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a242b367d623151c0cd3a892915f371b9}
+
+Definition at line 241 of file Geant4\+Action.\+cpp.
+
+
+
+References D\+D4hep\+::\+E\+R\+R\+OR, and D\+D4hep\+::printout().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a3d2a1a32cd7f6733c3553ce7723e6fb7}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a3d2a1a32cd7f6733c3553ce7723e6fb7} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!run\+Action@{run\+Action}}
+\index{run\+Action@{run\+Action}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{run\+Action()}{runAction()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence}{Geant4\+Run\+Action\+Sequence} \& Geant4\+Action\+::run\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 
 
 Access to the main run action sequence from the kernel object. 
 
-Definition at line 280 of file Geant4Action.cpp.
 
-References DD4hep::Simulation::Geant4Context::kernel(), m\_\-context, and DD4hep::Simulation::Geant4ActionContainer::runAction().
 
-Referenced by DD4hep::Simulation::Geant4EventSeed::Geant4EventSeed().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a88c6c831673b3c152961079507056daa}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!setName@{setName}}
-\index{setName@{setName}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{setName}]{\setlength{\rightskip}{0pt plus 5cm}void DD4hep::Simulation::Geant4Action::setName (const std::string \& {\em new\_\-name})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a88c6c831673b3c152961079507056daa}
+Definition at line 280 of file Geant4\+Action.\+cpp.
+
+
+
+References run\+Action().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Seed\+::\+Geant4\+Event\+Seed(), and run\+Action().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a88c6c831673b3c152961079507056daa}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a88c6c831673b3c152961079507056daa} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{set\+Name()}{setName()}}
+{\footnotesize\ttfamily void D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{new\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Set the object name. 
 
-Definition at line 285 of file Geant4Action.h.
 
-References m\_\-name.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a20453f25c4556d21e25b68f140955cc3}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!setOutputLevel@{setOutputLevel}}
-\index{setOutputLevel@{setOutputLevel}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{setOutputLevel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PrintLevel} Geant4Action::setOutputLevel ({\bf PrintLevel} {\em new\_\-level})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a20453f25c4556d21e25b68f140955cc3}
+
+Definition at line 285 of file Geant4\+Action.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a20453f25c4556d21e25b68f140955cc3}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a20453f25c4556d21e25b68f140955cc3} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!set\+Output\+Level@{set\+Output\+Level}}
+\index{set\+Output\+Level@{set\+Output\+Level}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{set\+Output\+Level()}{setOutputLevel()}}
+{\footnotesize\ttfamily \hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{Print\+Level} Geant4\+Action\+::set\+Output\+Level (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_d_d4hep_a5b5a64d56252469451f2020a27d57d42}{Print\+Level}}]{new\+\_\+level }\end{DoxyParamCaption})}
+
 
 
 Set the output level; returns previous value. 
 
-Definition at line 91 of file Geant4Action.cpp.
 
-References m\_\-outputLevel.\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_af7cca1826781c1367ecc79c4225e09da}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!setProperties@{setProperties}}
-\index{setProperties@{setProperties}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{setProperties}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Action} \& Geant4Action::setProperties ({\bf PropertyConfigurator} \& {\em setup})}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_af7cca1826781c1367ecc79c4225e09da}
+
+Definition at line 91 of file Geant4\+Action.\+cpp.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_af7cca1826781c1367ecc79c4225e09da}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_af7cca1826781c1367ecc79c4225e09da} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!set\+Properties@{set\+Properties}}
+\index{set\+Properties@{set\+Properties}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{set\+Properties()}{setProperties()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_action}{Geant4\+Action} \& Geant4\+Action\+::set\+Properties (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_property_configurator}{Property\+Configurator} \&}]{setup }\end{DoxyParamCaption})}
+
 
 
 Set object properties. 
 
-Definition at line 98 of file Geant4Action.cpp.
 
-References m\_\-name, m\_\-properties, and DD4hep::PropertyManager::set().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a6b95f50c5be424298cd711510450c1c4}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!stackingAction@{stackingAction}}
-\index{stackingAction@{stackingAction}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{stackingAction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4StackingActionSequence} \& Geant4Action::stackingAction () const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a6b95f50c5be424298cd711510450c1c4}
+
+Definition at line 98 of file Geant4\+Action.\+cpp.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_afdcb408fdab69261bdd9351c553e8103}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_afdcb408fdab69261bdd9351c553e8103} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!stacking\+Action@{stacking\+Action}}
+\index{stacking\+Action@{stacking\+Action}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{stacking\+Action()}{stackingAction()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stacking_action_sequence}{Geant4\+Stacking\+Action\+Sequence} \& Geant4\+Action\+::stacking\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 
 
 Access to the main stacking action sequence from the kernel object. 
 
-Definition at line 300 of file Geant4Action.cpp.
 
-References DD4hep::Simulation::Geant4Context::kernel(), m\_\-context, and DD4hep::Simulation::Geant4ActionContainer::stackingAction().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a7dd8d0f77997e948fefb72f0d0a2179e}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!steppingAction@{steppingAction}}
-\index{steppingAction@{steppingAction}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{steppingAction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4SteppingActionSequence} \& Geant4Action::steppingAction () const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a7dd8d0f77997e948fefb72f0d0a2179e}
+
+Definition at line 300 of file Geant4\+Action.\+cpp.
+
+
+
+References stacking\+Action().
+
+
+
+Referenced by stacking\+Action().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a2dd6a5716aedfdab406510a4239b0c5a}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a2dd6a5716aedfdab406510a4239b0c5a} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!stepping\+Action@{stepping\+Action}}
+\index{stepping\+Action@{stepping\+Action}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{stepping\+Action()}{steppingAction()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence}{Geant4\+Stepping\+Action\+Sequence} \& Geant4\+Action\+::stepping\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 
 
 Access to the main stepping action sequence from the kernel object. 
 
-Definition at line 290 of file Geant4Action.cpp.
 
-References DD4hep::Simulation::Geant4Context::kernel(), m\_\-context, and DD4hep::Simulation::Geant4ActionContainer::steppingAction().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_aa62c971500809db112b2cb4a8732b748}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!trackingAction@{trackingAction}}
-\index{trackingAction@{trackingAction}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{trackingAction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4TrackingActionSequence} \& Geant4Action::trackingAction () const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_aa62c971500809db112b2cb4a8732b748}
+
+Definition at line 290 of file Geant4\+Action.\+cpp.
+
+
+
+References stepping\+Action().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::\+Geant4\+Particle\+Handler(), and stepping\+Action().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a42e67d0f379567b039b4249bd650a30b}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a42e67d0f379567b039b4249bd650a30b} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!tracking\+Action@{tracking\+Action}}
+\index{tracking\+Action@{tracking\+Action}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{tracking\+Action()}{trackingAction()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_tracking_action_sequence}{Geant4\+Tracking\+Action\+Sequence} \& Geant4\+Action\+::tracking\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 
 
 Access to the main tracking action sequence from the kernel object. 
 
-Definition at line 295 of file Geant4Action.cpp.
 
-References DD4hep::Simulation::Geant4Context::kernel(), m\_\-context, and DD4hep::Simulation::Geant4ActionContainer::trackingAction().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae3b9daf2af881df956c46568c0743313}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!updateContext@{updateContext}}
-\index{updateContext@{updateContext}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{updateContext}]{\setlength{\rightskip}{0pt plus 5cm}virtual void DD4hep::Simulation::Geant4Action::updateContext ({\bf Geant4Context} $\ast$ {\em ctxt})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae3b9daf2af881df956c46568c0743313}
+
+Definition at line 295 of file Geant4\+Action.\+cpp.
+
+
+
+References tracking\+Action().
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Material\+Scanner\+::\+Geant4\+Material\+Scanner(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::\+Geant4\+Particle\+Handler(), and tracking\+Action().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae3b9daf2af881df956c46568c0743313}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae3b9daf2af881df956c46568c0743313} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!update\+Context@{update\+Context}}
+\index{update\+Context@{update\+Context}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{update\+Context()}{updateContext()}}
+{\footnotesize\ttfamily virtual void D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::update\+Context (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4\+Context} $\ast$}]{ctxt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 Set or update client context. 
 
-Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a2ccfc854d0b38a4b1547422c2779e346}{DD4hep::Simulation::Geant4DetectorConstructionSequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a26291513e94aec2a01464d0121532999}{DD4hep::Simulation::Geant4EventActionSequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_sequence_a52b0d18dd3c29e1b1e133d9e1c73284b}{DD4hep::Simulation::Geant4GeneratorActionSequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_ad94eee6a819a88302a0eaa0874d88fa3}{DD4hep::Simulation::Geant4RunActionSequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a5878271f8da03d02bf4b3b8145246775}{DD4hep::Simulation::Geant4SensDetActionSequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stacking_action_sequence_a093447274a6d135bc1d69fe96ed0961c}{DD4hep::Simulation::Geant4StackingActionSequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_aababd8e6f650101a6ade162f82a29f61}{DD4hep::Simulation::Geant4SteppingActionSequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_tracking_action_sequence_a7afac2362f030a76e39cbdc7ab5b0ee7}{DD4hep::Simulation::Geant4TrackingActionSequence}, and \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_initialization_sequence_ae73630ce8b3759e3793dc58f585a291b}{DD4hep::Simulation::Geant4UserInitializationSequence}.
 
-Definition at line 271 of file Geant4Action.h.
 
-References m\_\-context.
+Reimplemented in \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_sens_det_action_sequence_a5878271f8da03d02bf4b3b8145246775}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+Action\+Sequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_detector_construction_sequence_a2ccfc854d0b38a4b1547422c2779e346}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Detector\+Construction\+Sequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_event_action_sequence_a26291513e94aec2a01464d0121532999}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_tracking_action_sequence_a7afac2362f030a76e39cbdc7ab5b0ee7}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracking\+Action\+Sequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_generator_action_sequence_a52b0d18dd3c29e1b1e133d9e1c73284b}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action\+Sequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_run_action_sequence_ad94eee6a819a88302a0eaa0874d88fa3}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Run\+Action\+Sequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stacking_action_sequence_a093447274a6d135bc1d69fe96ed0961c}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Stacking\+Action\+Sequence}, \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_stepping_action_sequence_aababd8e6f650101a6ade162f82a29f61}{D\+D4hep\+::\+Simulation\+::\+Geant4\+Stepping\+Action\+Sequence}, and \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_user_initialization_sequence_ae73630ce8b3759e3793dc58f585a291b}{D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Initialization\+Sequence}.
 
-Referenced by DD4hep::Simulation::Geant4Action::ContextSwap::ContextSwap(), DD4hep::Simulation::Geant4DetectorConstructionSequence::updateContext(), and DD4hep::Simulation::Geant4Action::ContextSwap::$\sim$ContextSwap().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_ab006988f8f6db3df39a6d90ed1e69a1d}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!warning@{warning}}
-\index{warning@{warning}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{warning}]{\setlength{\rightskip}{0pt plus 5cm}void Geant4Action::warning (const char $\ast$ {\em fmt}, \/   {\em ...}) const}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_ab006988f8f6db3df39a6d90ed1e69a1d}
+
+
+Definition at line 271 of file Geant4\+Action.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Initialization\+Sequence\+::build\+Master(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::\+Context\+Swap\+::\+Context\+Swap(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Detector\+Construction\+Sequence\+::update\+Context(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::\+Context\+Swap\+::$\sim$\+Context\+Swap().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae62935fef8595dbc8c1d7f9c278523e4}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_ae62935fef8595dbc8c1d7f9c278523e4} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!warning@{warning}}
+\index{warning@{warning}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{warning()}{warning()}}
+{\footnotesize\ttfamily void Geant4\+Action\+::warning (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption}) const}
+
 
 
 Support of warning messages. 
 
-Definition at line 225 of file Geant4Action.cpp.
 
-References m\_\-name, DD4hep::printout(), and DD4hep::WARNING.
 
-Referenced by DD4hep::Simulation::Geant4TrackingPostAction::end(), and DD4hep::Simulation::Geant4ParticleGenerator::printInteraction().
+Definition at line 225 of file Geant4\+Action.\+cpp.
+
+
+
+References D\+D4hep\+::printout(), and D\+D4hep\+::\+W\+A\+R\+N\+I\+NG.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracking\+Post\+Action\+::end(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Generator\+::print\+Interaction().
+
+
 
 \subsection{Member Data Documentation}
-\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a5cdb706a8dea3dea288b5b9f65398c1d}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!m\_\-context@{m\_\-context}}
-\index{m\_\-context@{m\_\-context}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{m\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4Context}$\ast$ {\bf DD4hep::Simulation::Geant4Action::m\_\-context}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a5cdb706a8dea3dea288b5b9f65398c1d}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a5cdb706a8dea3dea288b5b9f65398c1d}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a5cdb706a8dea3dea288b5b9f65398c1d} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!m\+\_\+context@{m\+\_\+context}}
+\index{m\+\_\+context@{m\+\_\+context}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{m\+\_\+context}{m\_context}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_context}{Geant4\+Context}$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::m\+\_\+context\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Reference to the Geant4 context. 
 
-Definition at line 92 of file Geant4Action.h.
 
-Referenced by context(), eventAction(), DD4hep::Simulation::Geant4SensDet::Geant4SensDet(), generatorAction(), runAction(), stackingAction(), steppingAction(), trackingAction(), DD4hep::Simulation::Geant4TrackingAction::trackMgr(), DD4hep::Simulation::Geant4UserInitializationSequence::updateContext(), DD4hep::Simulation::Geant4TrackingActionSequence::updateContext(), DD4hep::Simulation::Geant4SteppingActionSequence::updateContext(), DD4hep::Simulation::Geant4StackingActionSequence::updateContext(), DD4hep::Simulation::Geant4SensDetActionSequence::updateContext(), DD4hep::Simulation::Geant4RunActionSequence::updateContext(), DD4hep::Simulation::Geant4GeneratorActionSequence::updateContext(), DD4hep::Simulation::Geant4EventActionSequence::updateContext(), DD4hep::Simulation::Geant4DetectorConstructionSequence::updateContext(), and updateContext().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_aff23910feb64988b85e08b1faff251f4}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!m\_\-control@{m\_\-control}}
-\index{m\_\-control@{m\_\-control}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{m\_\-control}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geant4UIMessenger}$\ast$ {\bf DD4hep::Simulation::Geant4Action::m\_\-control}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_aff23910feb64988b85e08b1faff251f4}
+
+Definition at line 92 of file Geant4\+Action.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Type\+Name\+::split(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracking\+Action\+::track\+Mgr(), D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Initialization\+Sequence\+::update\+Context(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Stepping\+Action\+Sequence\+::update\+Context(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Stacking\+Action\+Sequence\+::update\+Context(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Run\+Action\+Sequence\+::update\+Context(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action\+Sequence\+::update\+Context(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracking\+Action\+Sequence\+::update\+Context(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence\+::update\+Context(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Detector\+Construction\+Sequence\+::update\+Context(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+Action\+Sequence\+::update\+Context().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_aff23910feb64988b85e08b1faff251f4}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_aff23910feb64988b85e08b1faff251f4} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!m\+\_\+control@{m\+\_\+control}}
+\index{m\+\_\+control@{m\+\_\+control}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{m\+\_\+control}{m\_control}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_simulation_1_1_geant4_u_i_messenger}{Geant4\+U\+I\+Messenger}$\ast$ D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::m\+\_\+control\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Control directory of this action. 
 
-Definition at line 94 of file Geant4Action.h.
 
-Referenced by control(), installMessengers(), and installPropertyMessenger().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_adb04332ff4e52bce5b9ae1a5848b5d5e}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!m\_\-name@{m\_\-name}}
-\index{m\_\-name@{m\_\-name}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{m\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf DD4hep::Simulation::Geant4Action::m\_\-name}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_adb04332ff4e52bce5b9ae1a5848b5d5e}
+
+Definition at line 94 of file Geant4\+Action.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_adb04332ff4e52bce5b9ae1a5848b5d5e}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_adb04332ff4e52bce5b9ae1a5848b5d5e} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!m\+\_\+name@{m\+\_\+name}}
+\index{m\+\_\+name@{m\+\_\+name}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{m\+\_\+name}{m\_name}}
+{\footnotesize\ttfamily std\+::string D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::m\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 Action name. 
 
-Definition at line 101 of file Geant4Action.h.
-
-Referenced by c\_\-name(), debug(), error(), except(), fatal(), info(), name(), print(), printM1(), printM2(), printP1(), printP2(), release(), return\_\-error(), setName(), setProperties(), and warning().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a4d64f5159d58c4a43d74d0ddd0a695ba}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!m\_\-needsControl@{m\_\-needsControl}}
-\index{m\_\-needsControl@{m\_\-needsControl}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{m\_\-needsControl}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf DD4hep::Simulation::Geant4Action::m\_\-needsControl}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a4d64f5159d58c4a43d74d0ddd0a695ba}
 
 
-Default property: Flag to create control instance. 
+Definition at line 101 of file Geant4\+Action.\+h.
 
-Definition at line 99 of file Geant4Action.h.
-
-Referenced by enableUI(), DD4hep::Simulation::Geant4DetectorConstructionSequence::Geant4DetectorConstructionSequence(), DD4hep::Simulation::Geant4InteractionVertexBoost::Geant4InteractionVertexBoost(), DD4hep::Simulation::Geant4InteractionVertexSmear::Geant4InteractionVertexSmear(), DD4hep::Simulation::Geant4UserParticleHandler::Geant4UserParticleHandler(), and installMessengers().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a6dc880b8e55e2dada947ad06d7678dd4}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!m\_\-outputLevel@{m\_\-outputLevel}}
-\index{m\_\-outputLevel@{m\_\-outputLevel}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{m\_\-outputLevel}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DD4hep::Simulation::Geant4Action::m\_\-outputLevel}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a6dc880b8e55e2dada947ad06d7678dd4}
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a4d64f5159d58c4a43d74d0ddd0a695ba}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a4d64f5159d58c4a43d74d0ddd0a695ba} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!m\+\_\+needs\+Control@{m\+\_\+needs\+Control}}
+\index{m\+\_\+needs\+Control@{m\+\_\+needs\+Control}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{m\+\_\+needs\+Control}{m\_needsControl}}
+{\footnotesize\ttfamily bool D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::m\+\_\+needs\+Control\hspace{0.3cm}{\ttfamily [protected]}}
 
 
-Default property: Output level. 
 
-Definition at line 97 of file Geant4Action.h.
+Default property\+: Flag to create control instance. 
 
-Referenced by DD4hep::Simulation::Geant4SensDet::Geant4SensDet(), outputLevel(), and setOutputLevel().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a30ee75af74df39aa7b34946c59da17ba}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!m\_\-properties@{m\_\-properties}}
-\index{m\_\-properties@{m\_\-properties}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{m\_\-properties}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PropertyManager} {\bf DD4hep::Simulation::Geant4Action::m\_\-properties}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a30ee75af74df39aa7b34946c59da17ba}
+
+
+Definition at line 99 of file Geant4\+Action.\+h.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Detector\+Construction\+Sequence\+::\+Geant4\+Detector\+Construction\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Escape\+Counter\+::\+Geant4\+Escape\+Counter(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Event\+Action\+Sequence\+::\+Geant4\+Event\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Generator\+Action\+Sequence\+::\+Geant4\+Generator\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Input\+Action\+::\+Geant4\+Input\+Action(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Interaction\+Vertex\+Boost\+::\+Geant4\+Interaction\+Vertex\+Boost(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Interaction\+Vertex\+Smear\+::\+Geant4\+Interaction\+Vertex\+Smear(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Material\+Scanner\+::\+Geant4\+Material\+Scanner(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Generator\+::\+Geant4\+Particle\+Generator(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Gun\+::\+Geant4\+Particle\+Gun(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Particle\+Handler\+::\+Geant4\+Particle\+Handler(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Physics\+List\+Action\+Sequence\+::\+Geant4\+Physics\+List\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Run\+Action\+Sequence\+::\+Geant4\+Run\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Sens\+Det\+Action\+Sequence\+::\+Geant4\+Sens\+Det\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Stacking\+Action\+Sequence\+::\+Geant4\+Stacking\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Stepping\+Action\+Sequence\+::\+Geant4\+Stepping\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Tracking\+Action\+Sequence\+::\+Geant4\+Tracking\+Action\+Sequence(), D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Initialization\+::\+Geant4\+User\+Initialization(), D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Initialization\+Sequence\+::\+Geant4\+User\+Initialization\+Sequence(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+User\+Particle\+Handler\+::\+Geant4\+User\+Particle\+Handler().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a6dc880b8e55e2dada947ad06d7678dd4}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a6dc880b8e55e2dada947ad06d7678dd4} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!m\+\_\+output\+Level@{m\+\_\+output\+Level}}
+\index{m\+\_\+output\+Level@{m\+\_\+output\+Level}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{m\+\_\+output\+Level}{m\_outputLevel}}
+{\footnotesize\ttfamily int D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::m\+\_\+output\+Level\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Default property\+: Output level. 
+
+
+
+Definition at line 97 of file Geant4\+Action.\+h.
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a30ee75af74df39aa7b34946c59da17ba}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a30ee75af74df39aa7b34946c59da17ba} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!m\+\_\+properties@{m\+\_\+properties}}
+\index{m\+\_\+properties@{m\+\_\+properties}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{m\+\_\+properties}{m\_properties}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_property_manager}{Property\+Manager} D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::m\+\_\+properties\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 \hyperlink{class_d_d4hep_1_1_property}{Property} pool. 
 
-Definition at line 103 of file Geant4Action.h.
-
-Referenced by declareProperty(), installPropertyMessenger(), properties(), setProperties(), DD4hep::Simulation::Geant4SharedTrackingAction::use(), DD4hep::Simulation::Geant4SharedSteppingAction::use(), DD4hep::Simulation::Geant4SharedStackingAction::use(), DD4hep::Simulation::Geant4SharedRunAction::use(), and DD4hep::Simulation::Geant4SharedEventAction::use().\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a5ea9f95e6db274a1515b947b4f69da9e}{
-\index{DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}!m\_\-refCount@{m\_\-refCount}}
-\index{m\_\-refCount@{m\_\-refCount}!DD4hep::Simulation::Geant4Action@{DD4hep::Simulation::Geant4Action}}
-\subsubsection[{m\_\-refCount}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf DD4hep::Simulation::Geant4Action::m\_\-refCount}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a5ea9f95e6db274a1515b947b4f69da9e}
 
 
-Reference count. Initial value: 1. 
+Definition at line 103 of file Geant4\+Action.\+h.
 
-Definition at line 105 of file Geant4Action.h.
 
-Referenced by addRef(), and release().
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Stacking\+Action\+::use(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Stepping\+Action\+::use(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Run\+Action\+::use(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Tracking\+Action\+::use(), and D\+D4hep\+::\+Simulation\+::\+Geant4\+Shared\+Event\+Action\+::use().
+
+\hypertarget{class_d_d4hep_1_1_simulation_1_1_geant4_action_a5ea9f95e6db274a1515b947b4f69da9e}{}\label{class_d_d4hep_1_1_simulation_1_1_geant4_action_a5ea9f95e6db274a1515b947b4f69da9e} 
+\index{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}!m\+\_\+ref\+Count@{m\+\_\+ref\+Count}}
+\index{m\+\_\+ref\+Count@{m\+\_\+ref\+Count}!D\+D4hep\+::\+Simulation\+::\+Geant4\+Action@{D\+D4hep\+::\+Simulation\+::\+Geant4\+Action}}
+\subsubsection{\texorpdfstring{m\+\_\+ref\+Count}{m\_refCount}}
+{\footnotesize\ttfamily long D\+D4hep\+::\+Simulation\+::\+Geant4\+Action\+::m\+\_\+ref\+Count\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Reference count. Initial value\+: 1. 
+
+
+
+Definition at line 105 of file Geant4\+Action.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/include/DDG4/\hyperlink{_geant4_action_8h}{Geant4Action.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDG4/src/\hyperlink{_geant4_action_8cpp}{Geant4Action.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/include/\+D\+D\+G4/\hyperlink{_geant4_action_8h}{Geant4\+Action.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+G4/src/\hyperlink{_geant4_action_8cpp}{Geant4\+Action.\+cpp}\end{DoxyCompactItemize}

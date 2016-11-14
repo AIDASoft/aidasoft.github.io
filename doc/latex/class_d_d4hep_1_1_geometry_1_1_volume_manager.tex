@@ -1,436 +1,635 @@
-\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager}{
-\section{DD4hep::Geometry::VolumeManager Class Reference}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager}\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager}{}\section{D\+D4hep\+:\+:Geometry\+:\+:Volume\+Manager Class Reference}
+\label{class_d_d4hep_1_1_geometry_1_1_volume_manager}\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
 
 
 Class to support the retrieval of detector elements and volumes given a valid identifier.  
 
 
-{\ttfamily \#include $<$VolumeManager.h$>$}Inheritance diagram for DD4hep::Geometry::VolumeManager::\begin{figure}[H]
+
+
+{\ttfamily \#include $<$Volume\+Manager.\+h$>$}
+
+Inheritance diagram for D\+D4hep\+:\+:Geometry\+:\+:Volume\+Manager\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2cm]{class_d_d4hep_1_1_geometry_1_1_volume_manager}
+\includegraphics[height=2.000000cm]{class_d_d4hep_1_1_geometry_1_1_volume_manager}
 \end{center}
 \end{figure}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebde}{PopulateFlags} \{ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdea8562837522298e9c40ab9cd35d9307ba}{NONE} =  0, 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdeaf55015e5bb5659a574e760177f74324f}{TREE} =  1 $<$$<$ 1, 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdeafbb9de2f3dcf9fbe2da0b22fa5cafac1}{ONE} =  1 $<$$<$ 2, 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdea50ba5350b45be9b9e1b328d3069b572c}{LAST}
+enum \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebde}{Populate\+Flags} \{ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdea8562837522298e9c40ab9cd35d9307ba}{N\+O\+NE} = 0, 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdeaf55015e5bb5659a574e760177f74324f}{T\+R\+EE} = 1 $<$$<$ 1, 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdeafbb9de2f3dcf9fbe2da0b22fa5cafac1}{O\+NE} = 1 $<$$<$ 2, 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdea50ba5350b45be9b9e1b328d3069b572c}{L\+A\+ST}
  \}
 \item 
-typedef DD4hep::VolumeID \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{VolumeID}
+typedef D\+D4hep\+::\+Volume\+ID \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{Volume\+ID}
 \item 
-typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{VolumeID} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a934cf07a47c6c2d9932aef080f789da8}{VolIdentifier}
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{Volume\+ID} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a934cf07a47c6c2d9932aef080f789da8}{Vol\+Identifier}
 \item 
-typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_object}{VolumeManagerObject} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ac464fd441e5c72fb082e8cc6dd0937c4}{Object}
-\begin{DoxyCompactList}\small\item\em Some useful Container abbreviations used by the \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{VolumeManager}. \item\end{DoxyCompactList}\item 
-typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context}{VolumeManagerContext} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_adadb14f2ccbeaad001b7bc6ddb6dc715}{Context}
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_object}{Volume\+Manager\+Object} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ac464fd441e5c72fb082e8cc6dd0937c4}{Object}
+\begin{DoxyCompactList}\small\item\em Some useful Container abbreviations used by the \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{Volume\+Manager}. \end{DoxyCompactList}\item 
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context}{Volume\+Manager\+Context} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_adadb14f2ccbeaad001b7bc6ddb6dc715}{Context}
 \item 
-typedef std::map$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{VolumeID}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{VolumeManager} $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ad60f5618f569c6604861b6e0eb1c71c9}{Managers}
+typedef std\+::map$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{Volume\+ID}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{Volume\+Manager} $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ad60f5618f569c6604861b6e0eb1c71c9}{Managers}
 \item 
-typedef std::map$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{VolumeManager} $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a89d31fb00522aa56dfa2708fedaf1e4f}{Detectors}
+typedef std\+::map$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{Volume\+Manager} $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a89d31fb00522aa56dfa2708fedaf1e4f}{Detectors}
 \item 
-typedef std::map$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{VolumeID}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context}{VolumeManagerContext} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a81625fd63b37636f0b4019b102aba787}{Volumes}
+typedef std\+::map$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{Volume\+ID}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context}{Volume\+Manager\+Context} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a81625fd63b37636f0b4019b102aba787}{Volumes}
 \item 
-typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume_extension_1_1_vol_i_ds}{PlacedVolume::VolIDs} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a38763d6e830cf8e61ddd89d5416656eb}{VolIDs}
+typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume_a4383991fbc94adc2997ef98c9d30d9a6}{Placed\+Volume\+::\+Vol\+I\+Ds} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a38763d6e830cf8e61ddd89d5416656eb}{Vol\+I\+Ds}
 \item 
-typedef std::map$<$ TGeoNode $\ast$, \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context}{Context} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a6dd3900be98a6b11d4c8ab7f59632f36}{PhysVolumes}
+typedef std\+::map$<$ T\+Geo\+Node $\ast$, \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_adadb14f2ccbeaad001b7bc6ddb6dc715}{Context} $\ast$ $>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a6dd3900be98a6b11d4c8ab7f59632f36}{Phys\+Volumes}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a5dc0919df1764151f01b9c026f957a5b}{VolumeManager} ()
-\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_aea6772fb6a92c17765eb90c3362f59b6}{VolumeManager} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{VolumeManager} \&e)
-\begin{DoxyCompactList}\small\item\em Constructor to be used when reading the already parsed object. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_abb2a930f5dbb6da83d03a6b17f81d3ee}{VolumeManager} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_object}{VolumeManagerObject} $>$ \&e)
-\begin{DoxyCompactList}\small\item\em Constructor to be used when reading the already parsed object. \item\end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a859915ea833af0e215a307c57f6b419d}{VolumeManager} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&e)
-\begin{DoxyCompactList}\small\item\em Constructor to be used when reading the already parsed object. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a58b19b490cdb4d064b13c3f83e9df214}{VolumeManager} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} \&lcdd, const std::string \&name, \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} world=\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement}(), \hyperlink{class_d_d4hep_1_1_geometry_1_1_readout}{Readout} ro=\hyperlink{class_d_d4hep_1_1_geometry_1_1_readout}{Readout}(), int flags=NONE)
-\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ae1612218645bcd2734d83519d352aea9}{VolumeManager} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} subdetector, \hyperlink{class_d_d4hep_1_1_geometry_1_1_readout}{Readout} ro)
-\begin{DoxyCompactList}\small\item\em Initializing constructor for subdetector volume managers. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{VolumeManager} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ad81abecb3dd9f512683df8e41d84f2c9}{operator=} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{VolumeManager} \&m)
-\begin{DoxyCompactList}\small\item\em Assignment operator. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{VolumeManager} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a6a9318986cf6574d07eaa86ea4da5085}{addSubdetector} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} detector, \hyperlink{class_d_d4hep_1_1_geometry_1_1_readout}{Readout} ro)
-\begin{DoxyCompactList}\small\item\em Add a new \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} manager section according to a new subdetector. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{VolumeManager} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_aea4b44d4815c7fe573151d009082422b}{subdetector} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{VolumeID} id) const 
-\begin{DoxyCompactList}\small\item\em Access the volume manager by cell id. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a6cd7f039c11a3bafe055375ce449a83d}{detector} () const 
-\begin{DoxyCompactList}\small\item\em Access the top level detector element. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor}{IDDescriptor} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a9a972916fb9871361da60077f80c9ef7}{idSpec} () const 
-\begin{DoxyCompactList}\small\item\em Access IDDescription structure. \item\end{DoxyCompactList}\item 
-bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_acfeddaf04beb69692702c453a9ad9933}{adoptPlacement} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context}{Context} $\ast$context)
-\begin{DoxyCompactList}\small\item\em Register physical volume with the manager (normally: section manager). \item\end{DoxyCompactList}\item 
-bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ac7ad07c472812b32144b3c2a8b4475b2}{adoptPlacement} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{VolumeID} volume\_\-id, \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context}{Context} $\ast$context)
-\begin{DoxyCompactList}\small\item\em Register physical volume with the manager and pre-\/computed volume id. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context}{Context} $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ae79db756ac5864d0f36bb61e09c95e70}{lookupContext} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{VolumeID} volume\_\-id) const 
-\begin{DoxyCompactList}\small\item\em Lookup the context, which belongs to a registered physical volume. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{PlacedVolume} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1b1dc5fd02dcae196511200f32c9e309}{lookupPlacement} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{VolumeID} volume\_\-id) const 
-\begin{DoxyCompactList}\small\item\em Lookup a physical (placed) volume identified by its 64 bit hit ID. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a3734beabd6ff537a641b80e79e84b93b}{lookupDetector} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{VolumeID} volume\_\-id) const 
-\begin{DoxyCompactList}\small\item\em Lookup a top level subdetector detector element according to a contained 64 bit hit ID. \item\end{DoxyCompactList}\item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{DetElement} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a47c43ad4eda1df62d538e2adde993b78}{lookupDetElement} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{VolumeID} volume\_\-id) const 
-\begin{DoxyCompactList}\small\item\em Lookup the closest subdetector detector element in the hierarchy according to a contained 64 bit hit ID. \item\end{DoxyCompactList}\item 
-const TGeoMatrix \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a2e00b14d61e22f8da9dc00640840b4c8}{worldTransformation} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{VolumeID} volume\_\-id) const 
-\begin{DoxyCompactList}\small\item\em Access the transformation of a physical volume to the world coordinate system. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a5dc0919df1764151f01b9c026f957a5b}{Volume\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_aea6772fb6a92c17765eb90c3362f59b6}{Volume\+Manager} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{Volume\+Manager} \&\hyperlink{_volumes_8cpp_a8a9a1f93e9b09afccaec215310e64142}{e})
+\begin{DoxyCompactList}\small\item\em Constructor to be used when reading the already parsed object. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_abb2a930f5dbb6da83d03a6b17f81d3ee}{Volume\+Manager} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_object}{Volume\+Manager\+Object} $>$ \&\hyperlink{_volumes_8cpp_a8a9a1f93e9b09afccaec215310e64142}{e})
+\begin{DoxyCompactList}\small\item\em Constructor to be used when reading the already parsed object. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Q $>$ }\\\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ad80e8aa0bda5daacfa73164d2e8630ee}{Volume\+Manager} (const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&\hyperlink{_volumes_8cpp_a8a9a1f93e9b09afccaec215310e64142}{e})
+\begin{DoxyCompactList}\small\item\em Constructor to be used when reading the already parsed object. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a3d11859d5bd8a89d64108af31afa4e1d}{Volume\+Manager} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{L\+C\+DD} \&lcdd, const std\+::string \&\hyperlink{class_d_d4hep_1_1_handle_a27c7d467a609ab32c133e1f3c7d85ef5}{name}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} world=\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}(), \hyperlink{class_d_d4hep_1_1_geometry_1_1_readout}{Readout} ro=\hyperlink{class_d_d4hep_1_1_geometry_1_1_readout}{Readout}(), int flags=\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdea8562837522298e9c40ab9cd35d9307ba}{N\+O\+NE})
+\begin{DoxyCompactList}\small\item\em Initializing constructor to create a new object. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ae1612218645bcd2734d83519d352aea9}{Volume\+Manager} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a2205b56a64279e2cba6345f8f7aab7ff}{subdetector}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_readout}{Readout} ro)
+\begin{DoxyCompactList}\small\item\em Initializing constructor for subdetector volume managers. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{Volume\+Manager} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ad81abecb3dd9f512683df8e41d84f2c9}{operator=} (const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{Volume\+Manager} \&\hyperlink{_volumes_8cpp_a6fc379aaec47ce424b00d8ffda2a6c59}{m})
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{Volume\+Manager} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a6a9318986cf6574d07eaa86ea4da5085}{add\+Subdetector} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a0da5e3f504392edecef3b1f1f3c7b111}{detector}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_readout}{Readout} ro)
+\begin{DoxyCompactList}\small\item\em Add a new \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} manager section according to a new subdetector. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{Volume\+Manager} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a2205b56a64279e2cba6345f8f7aab7ff}{subdetector} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{Volume\+ID} id) const
+\begin{DoxyCompactList}\small\item\em Access the volume manager by cell id. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a0da5e3f504392edecef3b1f1f3c7b111}{detector} () const
+\begin{DoxyCompactList}\small\item\em Access the top level detector element. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor}{I\+D\+Descriptor} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_aa114fa9663579ed3ca0f5d59ae8d32db}{id\+Spec} () const
+\begin{DoxyCompactList}\small\item\em Access I\+D\+Description structure. \end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_acfeddaf04beb69692702c453a9ad9933}{adopt\+Placement} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_adadb14f2ccbeaad001b7bc6ddb6dc715}{Context} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Register physical volume with the manager (normally\+: section manager) \end{DoxyCompactList}\item 
+bool \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ac7ad07c472812b32144b3c2a8b4475b2}{adopt\+Placement} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{Volume\+ID} volume\+\_\+id, \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_adadb14f2ccbeaad001b7bc6ddb6dc715}{Context} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Register physical volume with the manager and pre-\/computed volume id. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_adadb14f2ccbeaad001b7bc6ddb6dc715}{Context} $\ast$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ac6e159608642efd4a62d81f793a01263}{lookup\+Context} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{Volume\+ID} volume\+\_\+id) const
+\begin{DoxyCompactList}\small\item\em Lookup the context, which belongs to a registered physical volume. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_aff0f31cb3233b2ebf3d99e5769737e94}{lookup\+Placement} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{Volume\+ID} volume\+\_\+id) const
+\begin{DoxyCompactList}\small\item\em Lookup a physical (placed) volume identified by its 64 bit hit ID. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1b674c835b5dc04d22ab1e4c2cd52775}{lookup\+Detector} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{Volume\+ID} volume\+\_\+id) const
+\begin{DoxyCompactList}\small\item\em Lookup a top level subdetector detector element according to a contained 64 bit hit ID. \end{DoxyCompactList}\item 
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1be2614964d7ecc227ba03639e55894}{lookup\+Det\+Element} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{Volume\+ID} volume\+\_\+id) const
+\begin{DoxyCompactList}\small\item\em Lookup the closest subdetector detector element in the hierarchy according to a contained 64 bit hit ID. \end{DoxyCompactList}\item 
+const T\+Geo\+Matrix \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a3d94720b4fe3f949fbfe9c3c332147dc}{world\+Transformation} (\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{Volume\+ID} volume\+\_\+id) const
+\begin{DoxyCompactList}\small\item\em Access the transformation of a physical volume to the world coordinate system. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_object}{Object} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ae450087aa8e00fdd9829e84c3638a4e7}{\_\-data} () const 
-\begin{DoxyCompactList}\small\item\em Additional data accessor. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ac464fd441e5c72fb082e8cc6dd0937c4}{Object} \& \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ae553c9b75d52a6ed8d38867fca2cf9a0}{\+\_\+data} () const
+\begin{DoxyCompactList}\small\item\em Additional data accessor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
-Class to support the retrieval of detector elements and volumes given a valid identifier. The \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{VolumeManager} manages the repository of sensitive physical volumes (placements). These volumes can then be accessed together with basic other elements, such as the top level Detector element of the subdetector or the coordinate trasformation to world coordinates. The basic key to access this information is the 'VolumeID', a 64 bit number, which uniquely identifies a placement.
+Class to support the retrieval of detector elements and volumes given a valid identifier. 
 
-There are 2 working modes:
+The \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{Volume\+Manager} manages the repository of sensitive physical volumes (placements). These volumes can then be accessed together with basic other elements, such as the top level Detector element of the subdetector or the coordinate trasformation to world coordinates. The basic key to access this information is the \textquotesingle{}Volume\+ID\textquotesingle{}, a 64 bit number, which uniquely identifies a placement.
 
-1) Starting from the top level element, the next level is addressed separately and the volumes are stored in a 2-\/level 'tree'. Placements this way are partitioned e.g. 'by subdetector'. This tries to keep the number of mapped elements at a reasonable level.
+There are 2 working modes\+:
 
-2) All placements are mapped to the top-\/level element. Good for small setups. Note, that the system field of all IDDescriptors of the subdetectors must have the same length to ensure the uniqueness of the placement keys.
+1) Starting from the top level element, the next level is addressed separately and the volumes are stored in a 2-\/level \textquotesingle{}tree\textquotesingle{}. Placements this way are partitioned e.\+g. \textquotesingle{}by subdetector\textquotesingle{}. This tries to keep the number of mapped elements at a reasonable level.
 
-By default the volume manager in TREE mode (-\/$>$ 1)) is attached to the \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{LCDD} instance and also managed by this instance. If you wish to create instances yourself, you must ensure that the handle is destroyed once no other references are present. \mbox{[}call DestroyHandle(VolumeManager)\mbox{]}
+2) All placements are mapped to the top-\/level element. Good for small setups. Note, that the system field of all I\+D\+Descriptors of the subdetectors must have the same length to ensure the uniqueness of the placement keys.
+
+By default the volume manager in T\+R\+EE mode (-\/$>$ 1)) is attached to the \hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{L\+C\+DD} instance and also managed by this instance. If you wish to create instances yourself, you must ensure that the handle is destroyed once no other references are present. \mbox{[}call Destroy\+Handle(\+Volume\+Manager)\mbox{]}
 
 \begin{DoxyAuthor}{Author}
-M.Frank 
+M.\+Frank 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.0 
+1.\+0 
 \end{DoxyVersion}
 
 
-Definition at line 70 of file VolumeManager.h.
+Definition at line 70 of file Volume\+Manager.\+h.
+
+
 
 \subsection{Member Typedef Documentation}
-\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_adadb14f2ccbeaad001b7bc6ddb6dc715}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!Context@{Context}}
-\index{Context@{Context}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{Context}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf VolumeManagerContext} {\bf DD4hep::Geometry::VolumeManager::Context}}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_adadb14f2ccbeaad001b7bc6ddb6dc715}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_adadb14f2ccbeaad001b7bc6ddb6dc715}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_adadb14f2ccbeaad001b7bc6ddb6dc715} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!Context@{Context}}
+\index{Context@{Context}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{Context}{Context}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context}{Volume\+Manager\+Context} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_adadb14f2ccbeaad001b7bc6ddb6dc715}{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::\+Context}}
 
 
-Definition at line 85 of file VolumeManager.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a89d31fb00522aa56dfa2708fedaf1e4f}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!Detectors@{Detectors}}
-\index{Detectors@{Detectors}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{Detectors}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<${\bf DetElement}, {\bf VolumeManager}$>$ {\bf DD4hep::Geometry::VolumeManager::Detectors}}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a89d31fb00522aa56dfa2708fedaf1e4f}
+
+Definition at line 85 of file Volume\+Manager.\+h.
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a89d31fb00522aa56dfa2708fedaf1e4f}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a89d31fb00522aa56dfa2708fedaf1e4f} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!Detectors@{Detectors}}
+\index{Detectors@{Detectors}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{Detectors}{Detectors}}
+{\footnotesize\ttfamily typedef std\+::map$<$\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{Volume\+Manager}$>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a89d31fb00522aa56dfa2708fedaf1e4f}{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::\+Detectors}}
 
 
-Definition at line 87 of file VolumeManager.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_ad60f5618f569c6604861b6e0eb1c71c9}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!Managers@{Managers}}
-\index{Managers@{Managers}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{Managers}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<${\bf VolumeID}, {\bf VolumeManager}$>$ {\bf DD4hep::Geometry::VolumeManager::Managers}}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_ad60f5618f569c6604861b6e0eb1c71c9}
+
+Definition at line 87 of file Volume\+Manager.\+h.
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_ad60f5618f569c6604861b6e0eb1c71c9}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_ad60f5618f569c6604861b6e0eb1c71c9} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!Managers@{Managers}}
+\index{Managers@{Managers}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{Managers}{Managers}}
+{\footnotesize\ttfamily typedef std\+::map$<$\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{Volume\+ID}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{Volume\+Manager}$>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ad60f5618f569c6604861b6e0eb1c71c9}{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::\+Managers}}
 
 
-Definition at line 86 of file VolumeManager.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_ac464fd441e5c72fb082e8cc6dd0937c4}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!Object@{Object}}
-\index{Object@{Object}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{Object}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf VolumeManagerObject} {\bf DD4hep::Geometry::VolumeManager::Object}}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_ac464fd441e5c72fb082e8cc6dd0937c4}
+
+Definition at line 86 of file Volume\+Manager.\+h.
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_ac464fd441e5c72fb082e8cc6dd0937c4}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_ac464fd441e5c72fb082e8cc6dd0937c4} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!Object@{Object}}
+\index{Object@{Object}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{Object}{Object}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_object}{Volume\+Manager\+Object} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ac464fd441e5c72fb082e8cc6dd0937c4}{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::\+Object}}
 
 
-Some useful Container abbreviations used by the \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{VolumeManager}. 
 
-Definition at line 84 of file VolumeManager.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a6dd3900be98a6b11d4c8ab7f59632f36}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!PhysVolumes@{PhysVolumes}}
-\index{PhysVolumes@{PhysVolumes}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{PhysVolumes}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$TGeoNode$\ast$, {\bf Context}$\ast$$>$ {\bf DD4hep::Geometry::VolumeManager::PhysVolumes}}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a6dd3900be98a6b11d4c8ab7f59632f36}
+Some useful Container abbreviations used by the \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{Volume\+Manager}. 
 
 
-Definition at line 90 of file VolumeManager.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a934cf07a47c6c2d9932aef080f789da8}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!VolIdentifier@{VolIdentifier}}
-\index{VolIdentifier@{VolIdentifier}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{VolIdentifier}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf VolumeID} {\bf DD4hep::Geometry::VolumeManager::VolIdentifier}}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a934cf07a47c6c2d9932aef080f789da8}
+
+Definition at line 84 of file Volume\+Manager.\+h.
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a6dd3900be98a6b11d4c8ab7f59632f36}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a6dd3900be98a6b11d4c8ab7f59632f36} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!Phys\+Volumes@{Phys\+Volumes}}
+\index{Phys\+Volumes@{Phys\+Volumes}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{Phys\+Volumes}{PhysVolumes}}
+{\footnotesize\ttfamily typedef std\+::map$<$T\+Geo\+Node$\ast$, \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_adadb14f2ccbeaad001b7bc6ddb6dc715}{Context}$\ast$$>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a6dd3900be98a6b11d4c8ab7f59632f36}{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::\+Phys\+Volumes}}
 
 
-Definition at line 73 of file VolumeManager.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a38763d6e830cf8e61ddd89d5416656eb}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!VolIDs@{VolIDs}}
-\index{VolIDs@{VolIDs}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{VolIDs}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf PlacedVolume::VolIDs} {\bf DD4hep::Geometry::VolumeManager::VolIDs}}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a38763d6e830cf8e61ddd89d5416656eb}
+
+Definition at line 90 of file Volume\+Manager.\+h.
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a934cf07a47c6c2d9932aef080f789da8}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a934cf07a47c6c2d9932aef080f789da8} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!Vol\+Identifier@{Vol\+Identifier}}
+\index{Vol\+Identifier@{Vol\+Identifier}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{Vol\+Identifier}{VolIdentifier}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{Volume\+ID} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a934cf07a47c6c2d9932aef080f789da8}{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::\+Vol\+Identifier}}
 
 
-Definition at line 89 of file VolumeManager.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!VolumeID@{VolumeID}}
-\index{VolumeID@{VolumeID}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{VolumeID}]{\setlength{\rightskip}{0pt plus 5cm}typedef DD4hep::VolumeID {\bf DD4hep::Geometry::VolumeManager::VolumeID}}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}
+
+Definition at line 73 of file Volume\+Manager.\+h.
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a38763d6e830cf8e61ddd89d5416656eb}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a38763d6e830cf8e61ddd89d5416656eb} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!Vol\+I\+Ds@{Vol\+I\+Ds}}
+\index{Vol\+I\+Ds@{Vol\+I\+Ds}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{Vol\+I\+Ds}{VolIDs}}
+{\footnotesize\ttfamily typedef \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume_a4383991fbc94adc2997ef98c9d30d9a6}{Placed\+Volume\+::\+Vol\+I\+Ds} \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a38763d6e830cf8e61ddd89d5416656eb}{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::\+Vol\+I\+Ds}}
 
 
-Definition at line 72 of file VolumeManager.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a81625fd63b37636f0b4019b102aba787}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!Volumes@{Volumes}}
-\index{Volumes@{Volumes}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{Volumes}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<${\bf VolumeID}, {\bf VolumeManagerContext}$\ast$$>$ {\bf DD4hep::Geometry::VolumeManager::Volumes}}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a81625fd63b37636f0b4019b102aba787}
+
+Definition at line 89 of file Volume\+Manager.\+h.
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!Volume\+ID@{Volume\+ID}}
+\index{Volume\+ID@{Volume\+ID}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{Volume\+ID}{VolumeID}}
+{\footnotesize\ttfamily typedef D\+D4hep\+::\+Volume\+ID \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::\+Volume\+ID}}
 
 
-Definition at line 88 of file VolumeManager.h.
+
+Definition at line 72 of file Volume\+Manager.\+h.
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a81625fd63b37636f0b4019b102aba787}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a81625fd63b37636f0b4019b102aba787} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!Volumes@{Volumes}}
+\index{Volumes@{Volumes}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{Volumes}{Volumes}}
+{\footnotesize\ttfamily typedef std\+::map$<$\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{Volume\+ID}, \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_context}{Volume\+Manager\+Context}$\ast$$>$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a81625fd63b37636f0b4019b102aba787}{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::\+Volumes}}
+
+
+
+Definition at line 88 of file Volume\+Manager.\+h.
+
+
 
 \subsection{Member Enumeration Documentation}
-\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebde}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!PopulateFlags@{PopulateFlags}}
-\index{PopulateFlags@{PopulateFlags}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{PopulateFlags}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DD4hep::Geometry::VolumeManager::PopulateFlags}}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebde}
-\begin{Desc}
-\item[Enumerator: ]\par
-\begin{description}
-\index{NONE@{NONE}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!NONE@{NONE}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdea8562837522298e9c40ab9cd35d9307ba}{
-NONE}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdea8562837522298e9c40ab9cd35d9307ba}
-}]\index{TREE@{TREE}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!TREE@{TREE}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdeaf55015e5bb5659a574e760177f74324f}{
-TREE}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdeaf55015e5bb5659a574e760177f74324f}
-}]\index{ONE@{ONE}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!ONE@{ONE}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdeafbb9de2f3dcf9fbe2da0b22fa5cafac1}{
-ONE}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdeafbb9de2f3dcf9fbe2da0b22fa5cafac1}
-}]\index{LAST@{LAST}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!LAST@{LAST}}\item[{\em 
-\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdea50ba5350b45be9b9e1b328d3069b572c}{
-LAST}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdea50ba5350b45be9b9e1b328d3069b572c}
-}]\end{description}
-\end{Desc}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebde}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebde} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!Populate\+Flags@{Populate\+Flags}}
+\index{Populate\+Flags@{Populate\+Flags}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{Populate\+Flags}{PopulateFlags}}
+{\footnotesize\ttfamily enum \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebde}{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::\+Populate\+Flags}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!N\+O\+NE@{N\+O\+NE}}}\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdea8562837522298e9c40ab9cd35d9307ba}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdea8562837522298e9c40ab9cd35d9307ba} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+R\+EE@{T\+R\+EE}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!T\+R\+EE@{T\+R\+EE}}}\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdeaf55015e5bb5659a574e760177f74324f}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdeaf55015e5bb5659a574e760177f74324f} 
+T\+R\+EE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+NE@{O\+NE}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!O\+NE@{O\+NE}}}\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdeafbb9de2f3dcf9fbe2da0b22fa5cafac1}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdeafbb9de2f3dcf9fbe2da0b22fa5cafac1} 
+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+A\+ST@{L\+A\+ST}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!L\+A\+ST@{L\+A\+ST}}}\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdea50ba5350b45be9b9e1b328d3069b572c}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdea50ba5350b45be9b9e1b328d3069b572c} 
+L\+A\+ST&\\
+\hline
+
+\end{DoxyEnumFields}
 
 
+Definition at line 75 of file Volume\+Manager.\+h.
 
-Definition at line 75 of file VolumeManager.h.
+
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a5dc0919df1764151f01b9c026f957a5b}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!VolumeManager@{VolumeManager}}
-\index{VolumeManager@{VolumeManager}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{VolumeManager}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::VolumeManager::VolumeManager ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a5dc0919df1764151f01b9c026f957a5b}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a5dc0919df1764151f01b9c026f957a5b}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a5dc0919df1764151f01b9c026f957a5b} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!Volume\+Manager@{Volume\+Manager}}
+\index{Volume\+Manager@{Volume\+Manager}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{Volume\+Manager()}{VolumeManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::\+Volume\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Default constructor. 
 
-Definition at line 100 of file VolumeManager.h.
-
-Referenced by addSubdetector(), and lookupContext().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_aea6772fb6a92c17765eb90c3362f59b6}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!VolumeManager@{VolumeManager}}
-\index{VolumeManager@{VolumeManager}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{VolumeManager}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::VolumeManager::VolumeManager (const {\bf VolumeManager} \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_aea6772fb6a92c17765eb90c3362f59b6}
 
 
-Constructor to be used when reading the already parsed object. 
+Definition at line 100 of file Volume\+Manager.\+h.
 
-Definition at line 104 of file VolumeManager.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_abb2a930f5dbb6da83d03a6b17f81d3ee}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!VolumeManager@{VolumeManager}}
-\index{VolumeManager@{VolumeManager}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{VolumeManager}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::VolumeManager::VolumeManager (const {\bf Handle}$<$ {\bf VolumeManagerObject} $>$ \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_abb2a930f5dbb6da83d03a6b17f81d3ee}
+
+
+Referenced by Volume\+Manager().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_aea6772fb6a92c17765eb90c3362f59b6}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_aea6772fb6a92c17765eb90c3362f59b6} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!Volume\+Manager@{Volume\+Manager}}
+\index{Volume\+Manager@{Volume\+Manager}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{Volume\+Manager()}{VolumeManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::\+Volume\+Manager (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{Volume\+Manager} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Constructor to be used when reading the already parsed object. 
 
-Definition at line 109 of file VolumeManager.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a859915ea833af0e215a307c57f6b419d}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!VolumeManager@{VolumeManager}}
-\index{VolumeManager@{VolumeManager}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{VolumeManager}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Q $>$ DD4hep::Geometry::VolumeManager::VolumeManager (const {\bf Handle}$<$ Q $>$ \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a859915ea833af0e215a307c57f6b419d}
+
+
+Definition at line 104 of file Volume\+Manager.\+h.
+
+
+
+References e, D\+D4hep\+::\+Handle$<$ T $>$\+::name(), N\+O\+NE, subdetector(), and Volume\+Manager().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_abb2a930f5dbb6da83d03a6b17f81d3ee}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_abb2a930f5dbb6da83d03a6b17f81d3ee} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!Volume\+Manager@{Volume\+Manager}}
+\index{Volume\+Manager@{Volume\+Manager}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{Volume\+Manager()}{VolumeManager()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::\+Volume\+Manager (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_object}{Volume\+Manager\+Object} $>$ \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Constructor to be used when reading the already parsed object. 
 
-Definition at line 114 of file VolumeManager.h.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a58b19b490cdb4d064b13c3f83e9df214}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!VolumeManager@{VolumeManager}}
-\index{VolumeManager@{VolumeManager}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{VolumeManager}]{\setlength{\rightskip}{0pt plus 5cm}DD4hep::Geometry::VolumeManager::VolumeManager ({\bf LCDD} \& {\em lcdd}, \/  const std::string \& {\em name}, \/  {\bf DetElement} {\em world} = {\ttfamily {\bf DetElement}()}, \/  {\bf Readout} {\em ro} = {\ttfamily {\bf Readout}()}, \/  int {\em flags} = {\ttfamily NONE})}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a58b19b490cdb4d064b13c3f83e9df214}
-Initializing constructor. The tree will automatically be built if the detelement is valid Please see enum PopulateFlags for further info. No action whatsoever is performed here, if the detector element is not valid. \hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_ae1612218645bcd2734d83519d352aea9}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!VolumeManager@{VolumeManager}}
-\index{VolumeManager@{VolumeManager}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{VolumeManager}]{\setlength{\rightskip}{0pt plus 5cm}VolumeManager::VolumeManager ({\bf DetElement} {\em subdetector}, \/  {\bf Readout} {\em ro})}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_ae1612218645bcd2734d83519d352aea9}
 
 
-Initializing constructor for subdetector volume managers. Initializing constructor to create a new object. 
+Definition at line 109 of file Volume\+Manager.\+h.
 
-Definition at line 440 of file VolumeManager.cpp.
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_ad80e8aa0bda5daacfa73164d2e8630ee}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_ad80e8aa0bda5daacfa73164d2e8630ee} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!Volume\+Manager@{Volume\+Manager}}
+\index{Volume\+Manager@{Volume\+Manager}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{Volume\+Manager()}{VolumeManager()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily template$<$typename Q $>$ \\
+D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::\+Volume\+Manager (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_handle}{Handle}$<$ Q $>$ \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-References DD4hep::Handle$<$ T $>$::assign(), DD4hep::Geometry::VolumeManagerObject::detector, DD4hep::Geometry::VolumeManagerObject::id, DD4hep::Geometry::Readout::idSpec(), DD4hep::Handle$<$ T $>$::isValid(), and DD4hep::Handle$<$ T $>$::name().
+
+
+Constructor to be used when reading the already parsed object. 
+
+
+
+Definition at line 114 of file Volume\+Manager.\+h.
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a3d11859d5bd8a89d64108af31afa4e1d}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a3d11859d5bd8a89d64108af31afa4e1d} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!Volume\+Manager@{Volume\+Manager}}
+\index{Volume\+Manager@{Volume\+Manager}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{Volume\+Manager()}{VolumeManager()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily Volume\+Manager\+::\+Volume\+Manager (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_l_c_d_d}{L\+C\+DD} \&}]{lcdd,  }\item[{const std\+::string \&}]{name,  }\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}}]{world = {\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}()},  }\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_readout}{Readout}}]{ro = {\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_readout}{Readout}()},  }\item[{int}]{flags = {\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1c25b37c1377654bf2fbe1cf4743ebdea8562837522298e9c40ab9cd35d9307ba}{N\+O\+NE}} }\end{DoxyParamCaption})}
+
+
+
+Initializing constructor to create a new object. 
+
+Initializing constructor. The tree will automatically be built if the detelement is valid Please see enum Populate\+Flags for further info. No action whatsoever is performed here, if the detector element is not valid. 
+
+Definition at line 424 of file Volume\+Manager.\+cpp.
+
+
+
+References D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::detector, D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::flags, D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::id, D\+D4hep\+::\+Geometry\+::\+Readout\+::id\+Spec(), D\+D4hep\+::\+I\+N\+FO, D\+D4hep\+::\+Handle$<$ T $>$\+::is\+Valid(), D\+D4hep\+::printout(), and D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::top.
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_ae1612218645bcd2734d83519d352aea9}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_ae1612218645bcd2734d83519d352aea9} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!Volume\+Manager@{Volume\+Manager}}
+\index{Volume\+Manager@{Volume\+Manager}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{Volume\+Manager()}{VolumeManager()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily Volume\+Manager\+::\+Volume\+Manager (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}}]{subdetector,  }\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_readout}{Readout}}]{ro }\end{DoxyParamCaption})}
+
+
+
+Initializing constructor for subdetector volume managers. 
+
+Initializing constructor to create a new object. 
+
+Definition at line 440 of file Volume\+Manager.\+cpp.
+
+
+
+References D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::detector, D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::id, D\+D4hep\+::\+Geometry\+::\+Readout\+::id\+Spec(), D\+D4hep\+::\+Handle$<$ T $>$\+::is\+Valid(), and D\+D4hep\+::\+Handle$<$ T $>$\+::name().
+
+
 
 \subsection{Member Function Documentation}
-\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_ae450087aa8e00fdd9829e84c3638a4e7}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!\_\-data@{\_\-data}}
-\index{\_\-data@{\_\-data}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}\& DD4hep::Geometry::VolumeManager::\_\-data () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_ae450087aa8e00fdd9829e84c3638a4e7}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_ae553c9b75d52a6ed8d38867fca2cf9a0}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_ae553c9b75d52a6ed8d38867fca2cf9a0} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!\+\_\+data@{\+\_\+data}}
+\index{\+\_\+data@{\+\_\+data}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{\+\_\+data()}{\_data()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ac464fd441e5c72fb082e8cc6dd0937c4}{Object}\& D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
 
 
 Additional data accessor. 
 
-Definition at line 94 of file VolumeManager.h.
 
-References DD4hep::Handle$<$ T $>$::ptr().
 
-Referenced by addSubdetector(), adoptPlacement(), detector(), idSpec(), lookupContext(), and subdetector().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a6a9318986cf6574d07eaa86ea4da5085}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!addSubdetector@{addSubdetector}}
-\index{addSubdetector@{addSubdetector}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{addSubdetector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf VolumeManager} VolumeManager::addSubdetector ({\bf DetElement} {\em detector}, \/  {\bf Readout} {\em ro})}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a6a9318986cf6574d07eaa86ea4da5085}
+Definition at line 94 of file Volume\+Manager.\+h.
+
+
+
+References D\+D4hep\+::\+Handle$<$ T $>$\+::ptr().
+
+
+
+Referenced by add\+Subdetector().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a6a9318986cf6574d07eaa86ea4da5085}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a6a9318986cf6574d07eaa86ea4da5085} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!add\+Subdetector@{add\+Subdetector}}
+\index{add\+Subdetector@{add\+Subdetector}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{add\+Subdetector()}{addSubdetector()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{Volume\+Manager} Volume\+Manager\+::add\+Subdetector (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element}}]{detector,  }\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_readout}{Readout}}]{ro }\end{DoxyParamCaption})}
+
 
 
 Add a new \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume}{Volume} manager section according to a new subdetector. 
 
-Definition at line 448 of file VolumeManager.cpp.
-
-References \_\-data(), DD4hep::Geometry::DetElement::callAtUpdate(), DD4hep::Geometry::VolumeManagerObject::detMask, DD4hep::Geometry::IDDescriptor::field(), DD4hep::Geometry::PlacedVolumeExtension::VolIDs::find(), DD4hep::Geometry::VolumeManagerObject::flags, DD4hep::Geometry::Readout::idSpec(), DD4hep::Handle$<$ T $>$::isValid(), DD4hep::Geometry::VolumeManagerObject::managers, DD4hep::Handle$<$ T $>$::name(), DD4hep::Geometry::DetElement::placement(), DD4hep::Geometry::DetElement::PLACEMENT\_\-CHANGED, DD4hep::Geometry::DetElement::PLACEMENT\_\-DETECTOR, DD4hep::Geometry::VolumeManagerObject::subdetectors, DD4hep::Geometry::VolumeManagerObject::sysID, DD4hep::Geometry::VolumeManagerObject::system, DD4hep::Geometry::VolumeManagerObject::top, DD4hep::Geometry::VolumeManagerObject::update(), DD4hep::Geometry::PlacedVolume::volIDs(), and VolumeManager().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_ac7ad07c472812b32144b3c2a8b4475b2}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!adoptPlacement@{adoptPlacement}}
-\index{adoptPlacement@{adoptPlacement}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{adoptPlacement}]{\setlength{\rightskip}{0pt plus 5cm}bool VolumeManager::adoptPlacement ({\bf VolumeID} {\em volume\_\-id}, \/  {\bf Context} $\ast$ {\em context})}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_ac7ad07c472812b32144b3c2a8b4475b2}
 
 
-Register physical volume with the manager and pre-\/computed volume id. Register physical volume with the manager (normally: section manager). 
-
-Definition at line 531 of file VolumeManager.cpp.
-
-References \_\-data(), DD4hep::Geometry::VolumeManagerObject::detector, DD4hep::Geometry::VolumeManagerObject::detMask, DD4hep::ERROR, DD4hep::Geometry::VolumeManagerContext::identifier, DD4hep::Geometry::Volume::isSensitive(), DD4hep::Geometry::VolumeManagerContext::mask, DD4hep::Handle$<$ T $>$::name(), DD4hep::Geometry::VolumeManagerContext::placement, DD4hep::printout(), DD4hep::Handle$<$ T $>$::ptr(), DD4hep::VERBOSE, DD4hep::Geometry::VolumeManagerContext::volID, DD4hep::Geometry::PlacedVolume::volume(), DD4hep::Geometry::VolumeManagerObject::volumes, and DD4hep::yes\_\-no().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_acfeddaf04beb69692702c453a9ad9933}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!adoptPlacement@{adoptPlacement}}
-\index{adoptPlacement@{adoptPlacement}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{adoptPlacement}]{\setlength{\rightskip}{0pt plus 5cm}bool VolumeManager::adoptPlacement ({\bf Context} $\ast$ {\em context})}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_acfeddaf04beb69692702c453a9ad9933}
+Definition at line 448 of file Volume\+Manager.\+cpp.
 
 
-Register physical volume with the manager (normally: section manager). 
 
-Definition at line 591 of file VolumeManager.cpp.
+References \+\_\+data(), \+\_\+data(), D\+D4hep\+::\+Geometry\+::\+Det\+Element\+::call\+At\+Update(), D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::det\+Mask, D\+D4hep\+::\+Geometry\+::\+I\+D\+Descriptor\+::field(), D\+D4hep\+::\+Geometry\+::\+Placed\+Volume\+Extension\+::\+Vol\+I\+Ds\+::find(), D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::flags, D\+D4hep\+::\+Geometry\+::\+Readout\+::id\+Spec(), D\+D4hep\+::\+Handle$<$ T $>$\+::is\+Valid(), m, D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::managers, D\+D4hep\+::\+Handle$<$ T $>$\+::name(), D\+D4hep\+::\+Geometry\+::\+Det\+Element\+::placement(), D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::subdetectors, D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::sys\+ID, D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::system, D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::top, and D\+D4hep\+::\+Geometry\+::\+Placed\+Volume\+::vol\+I\+Ds().
 
-References \_\-data(), adoptPlacement(), DD4hep::Geometry::VolumeManagerObject::detector, DD4hep::Geometry::VolumeManagerObject::flags, DD4hep::Geometry::VolumeManagerContext::identifier, DD4hep::Handle$<$ T $>$::isValid(), DD4hep::Geometry::VolumeManagerObject::managers, DD4hep::Handle$<$ T $>$::name(), ONE, DD4hep::Handle$<$ T $>$::ptr(), DD4hep::Geometry::VolumeManagerObject::sysID, DD4hep::Geometry::VolumeManagerObject::system, DD4hep::Geometry::VolumeManagerObject::top, and TREE.
 
-Referenced by adoptPlacement().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a6cd7f039c11a3bafe055375ce449a83d}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!detector@{detector}}
-\index{detector@{detector}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{detector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} VolumeManager::detector () const}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a6cd7f039c11a3bafe055375ce449a83d}
+
+Referenced by operator=().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_acfeddaf04beb69692702c453a9ad9933}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_acfeddaf04beb69692702c453a9ad9933} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!adopt\+Placement@{adopt\+Placement}}
+\index{adopt\+Placement@{adopt\+Placement}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{adopt\+Placement()}{adoptPlacement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Volume\+Manager\+::adopt\+Placement (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_adadb14f2ccbeaad001b7bc6ddb6dc715}{Context} $\ast$}]{context }\end{DoxyParamCaption})}
+
+
+
+Register physical volume with the manager (normally\+: section manager) 
+
+
+
+Definition at line 591 of file Volume\+Manager.\+cpp.
+
+
+
+References \+\_\+data(), adopt\+Placement(), D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::detector, D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::flags, D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Context\+::identifier, D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::managers, D\+D4hep\+::\+Handle$<$ T $>$\+::name(), D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::sys\+ID, D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::system, D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::top, and D\+D4hep\+::\+D\+D\+Segmentation\+::\+Bit\+Field\+Value\+::value().
+
+
+
+Referenced by adopt\+Placement(), and operator=().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_ac7ad07c472812b32144b3c2a8b4475b2}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_ac7ad07c472812b32144b3c2a8b4475b2} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!adopt\+Placement@{adopt\+Placement}}
+\index{adopt\+Placement@{adopt\+Placement}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{adopt\+Placement()}{adoptPlacement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Volume\+Manager\+::adopt\+Placement (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{Volume\+ID}}]{volume\+\_\+id,  }\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_adadb14f2ccbeaad001b7bc6ddb6dc715}{Context} $\ast$}]{context }\end{DoxyParamCaption})}
+
+
+
+Register physical volume with the manager and pre-\/computed volume id. 
+
+Register physical volume with the manager (normally\+: section manager) 
+
+Definition at line 531 of file Volume\+Manager.\+cpp.
+
+
+
+References \+\_\+data(), D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::detector, D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::det\+Mask, D\+D4hep\+::\+E\+R\+R\+OR, D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Context\+::identifier, D\+D4hep\+::\+Geometry\+::\+Volume\+::is\+Sensitive(), D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Context\+::mask, D\+D4hep\+::\+Handle$<$ T $>$\+::name(), D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Context\+::placement, D\+D4hep\+::printout(), D\+D4hep\+::\+Handle$<$ T $>$\+::ptr(), D\+D4hep\+::\+V\+E\+R\+B\+O\+SE, D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Context\+::vol\+ID, D\+D4hep\+::\+Geometry\+::\+Placed\+Volume\+::volume(), D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::volumes, and D\+D4hep\+::yes\+\_\+no().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a0da5e3f504392edecef3b1f1f3c7b111}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a0da5e3f504392edecef3b1f1f3c7b111} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!detector@{detector}}
+\index{detector@{detector}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{detector()}{detector()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} Volume\+Manager\+::detector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 
 
 Access the top level detector element. 
 
-Definition at line 518 of file VolumeManager.cpp.
-
-References \_\-data(), DD4hep::Geometry::VolumeManagerObject::detector, and DD4hep::Handle$<$ T $>$::isValid().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a9a972916fb9871361da60077f80c9ef7}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!idSpec@{idSpec}}
-\index{idSpec@{idSpec}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{idSpec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IDDescriptor} VolumeManager::idSpec () const}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a9a972916fb9871361da60077f80c9ef7}
 
 
-Access IDDescription structure. 
-
-Definition at line 526 of file VolumeManager.cpp.
-
-References \_\-data(), and DD4hep::Geometry::VolumeManagerObject::id.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_ae79db756ac5864d0f36bb61e09c95e70}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!lookupContext@{lookupContext}}
-\index{lookupContext@{lookupContext}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{lookupContext}]{\setlength{\rightskip}{0pt plus 5cm}{\bf VolumeManager::Context} $\ast$ VolumeManager::lookupContext ({\bf VolumeID} {\em volume\_\-id}) const}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_ae79db756ac5864d0f36bb61e09c95e70}
+Definition at line 518 of file Volume\+Manager.\+cpp.
 
 
-Lookup the context, which belongs to a registered physical volume. This set of functions is required when reading/analyzing already created hits which have a VolumeID attached. 
 
-First look in our own volume cache if the entry is found.
+References \+\_\+data().
 
-Second: look in the subdetector volume cache if the entry is found. 
 
-Definition at line 630 of file VolumeManager.cpp.
 
-References \_\-data(), DD4hep::Geometry::VolumeManagerObject::flags, DD4hep::Handle$<$ T $>$::isValid(), ONE, DD4hep::Handle$<$ T $>$::ptr(), DD4hep::Geometry::VolumeManagerObject::search(), DD4hep::Geometry::VolumeManagerObject::subdetectors, DD4hep::Geometry::VolumeManagerObject::top, and VolumeManager().
+Referenced by operator=().
 
-Referenced by lookupDetector(), lookupDetElement(), lookupPlacement(), and worldTransformation().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a3734beabd6ff537a641b80e79e84b93b}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!lookupDetector@{lookupDetector}}
-\index{lookupDetector@{lookupDetector}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{lookupDetector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} VolumeManager::lookupDetector ({\bf VolumeID} {\em volume\_\-id}) const}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a3734beabd6ff537a641b80e79e84b93b}
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_aa114fa9663579ed3ca0f5d59ae8d32db}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_aa114fa9663579ed3ca0f5d59ae8d32db} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!id\+Spec@{id\+Spec}}
+\index{id\+Spec@{id\+Spec}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{id\+Spec()}{idSpec()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_i_d_descriptor}{I\+D\+Descriptor} Volume\+Manager\+::id\+Spec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Access I\+D\+Description structure. 
+
+
+
+Definition at line 526 of file Volume\+Manager.\+cpp.
+
+
+
+References \+\_\+data().
+
+
+
+Referenced by operator=().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_ac6e159608642efd4a62d81f793a01263}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_ac6e159608642efd4a62d81f793a01263} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!lookup\+Context@{lookup\+Context}}
+\index{lookup\+Context@{lookup\+Context}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{lookup\+Context()}{lookupContext()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_adadb14f2ccbeaad001b7bc6ddb6dc715}{Volume\+Manager\+::\+Context} $\ast$ Volume\+Manager\+::lookup\+Context (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{Volume\+ID}}]{volume\+\_\+id }\end{DoxyParamCaption}) const}
+
+
+
+Lookup the context, which belongs to a registered physical volume. 
+
+This set of functions is required when reading/analyzing already created hits which have a Volume\+ID attached. First look in our own volume cache if the entry is found.
+
+Second\+: look in the subdetector volume cache if the entry is found. 
+
+Definition at line 630 of file Volume\+Manager.\+cpp.
+
+
+
+References \+\_\+data(), D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::flags, lookup\+Context(), D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::search(), D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::subdetectors, and D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::top.
+
+
+
+Referenced by lookup\+Context(), and operator=().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1b674c835b5dc04d22ab1e4c2cd52775}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1b674c835b5dc04d22ab1e4c2cd52775} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!lookup\+Detector@{lookup\+Detector}}
+\index{lookup\+Detector@{lookup\+Detector}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{lookup\+Detector()}{lookupDetector()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} Volume\+Manager\+::lookup\+Detector (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{Volume\+ID}}]{volume\+\_\+id }\end{DoxyParamCaption}) const}
+
 
 
 Lookup a top level subdetector detector element according to a contained 64 bit hit ID. 
 
-Definition at line 667 of file VolumeManager.cpp.
 
-References DD4hep::Geometry::VolumeManagerContext::detector, and lookupContext().
 
-Referenced by DD4hep::DDRec::IDDecoder::subDetector().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a47c43ad4eda1df62d538e2adde993b78}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!lookupDetElement@{lookupDetElement}}
-\index{lookupDetElement@{lookupDetElement}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{lookupDetElement}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DetElement} VolumeManager::lookupDetElement ({\bf VolumeID} {\em volume\_\-id}) const}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a47c43ad4eda1df62d538e2adde993b78}
+Definition at line 667 of file Volume\+Manager.\+cpp.
+
+
+
+References D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Context\+::detector.
+
+
+
+Referenced by operator=(), and D\+D4hep\+::\+D\+D\+Rec\+::\+I\+D\+Decoder\+::sub\+Detector().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1be2614964d7ecc227ba03639e55894}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1be2614964d7ecc227ba03639e55894} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!lookup\+Det\+Element@{lookup\+Det\+Element}}
+\index{lookup\+Det\+Element@{lookup\+Det\+Element}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{lookup\+Det\+Element()}{lookupDetElement()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_det_element}{Det\+Element} Volume\+Manager\+::lookup\+Det\+Element (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{Volume\+ID}}]{volume\+\_\+id }\end{DoxyParamCaption}) const}
+
 
 
 Lookup the closest subdetector detector element in the hierarchy according to a contained 64 bit hit ID. 
 
-Definition at line 673 of file VolumeManager.cpp.
 
-References DD4hep::Geometry::VolumeManagerContext::element, and lookupContext().
 
-Referenced by DD4hep::DDRec::IDDecoder::detectorElement().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1b1dc5fd02dcae196511200f32c9e309}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!lookupPlacement@{lookupPlacement}}
-\index{lookupPlacement@{lookupPlacement}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{lookupPlacement}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PlacedVolume} VolumeManager::lookupPlacement ({\bf VolumeID} {\em volume\_\-id}) const}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a1b1dc5fd02dcae196511200f32c9e309}
+Definition at line 673 of file Volume\+Manager.\+cpp.
+
+
+
+References D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Context\+::element.
+
+
+
+Referenced by D\+D4hep\+::\+D\+D\+Rec\+::\+I\+D\+Decoder\+::detector\+Element(), and operator=().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_aff0f31cb3233b2ebf3d99e5769737e94}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_aff0f31cb3233b2ebf3d99e5769737e94} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!lookup\+Placement@{lookup\+Placement}}
+\index{lookup\+Placement@{lookup\+Placement}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{lookup\+Placement()}{lookupPlacement()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_placed_volume}{Placed\+Volume} Volume\+Manager\+::lookup\+Placement (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{Volume\+ID}}]{volume\+\_\+id }\end{DoxyParamCaption}) const}
+
 
 
 Lookup a physical (placed) volume identified by its 64 bit hit ID. 
 
-Definition at line 661 of file VolumeManager.cpp.
 
-References lookupContext(), and DD4hep::Geometry::VolumeManagerContext::placement.
 
-Referenced by DD4hep::Simulation::Geant4ConversionHelper::encoding(), and DD4hep::DDRec::IDDecoder::placement().\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_ad81abecb3dd9f512683df8e41d84f2c9}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!operator=@{operator=}}
-\index{operator=@{operator=}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf VolumeManager}\& DD4hep::Geometry::VolumeManager::operator= (const {\bf VolumeManager} \& {\em m})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_ad81abecb3dd9f512683df8e41d84f2c9}
+Definition at line 661 of file Volume\+Manager.\+cpp.
+
+
+
+References D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Context\+::placement.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+Conversion\+Helper\+::encoding(), operator=(), and D\+D4hep\+::\+D\+D\+Rec\+::\+I\+D\+Decoder\+::placement().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_ad81abecb3dd9f512683df8e41d84f2c9}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_ad81abecb3dd9f512683df8e41d84f2c9} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!operator=@{operator=}}
+\index{operator=@{operator=}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{Volume\+Manager}\& D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{Volume\+Manager} \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Assignment operator. 
 
-Reimplemented from \hyperlink{class_d_d4hep_1_1_handle_a9bbf8f498df42e81ad26fb00233505a6}{DD4hep::Handle$<$ T $>$}.
 
-Definition at line 127 of file VolumeManager.h.
 
-References DD4hep::Handle$<$ T $>$::m\_\-element.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_aea4b44d4815c7fe573151d009082422b}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!subdetector@{subdetector}}
-\index{subdetector@{subdetector}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{subdetector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf VolumeManager} VolumeManager::subdetector ({\bf VolumeID} {\em id}) const}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_aea4b44d4815c7fe573151d009082422b}
+Definition at line 127 of file Volume\+Manager.\+h.
+
+
+
+References add\+Subdetector(), adopt\+Placement(), detector(), id\+Spec(), lookup\+Context(), lookup\+Detector(), lookup\+Det\+Element(), lookup\+Placement(), m, D\+D4hep\+::\+Handle$<$ T $>$\+::m\+\_\+element, D\+D4hep\+::\+Geometry\+::operator$<$$<$(), subdetector(), and world\+Transformation().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a2205b56a64279e2cba6345f8f7aab7ff}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a2205b56a64279e2cba6345f8f7aab7ff} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!subdetector@{subdetector}}
+\index{subdetector@{subdetector}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{subdetector()}{subdetector()}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager}{Volume\+Manager} Volume\+Manager\+::subdetector (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{Volume\+ID}}]{id }\end{DoxyParamCaption}) const}
+
 
 
 Access the volume manager by cell id. 
 
 Need to perform a linear search, because the \char`\"{}system\char`\"{} tag width may vary between subdetectors 
 
-Definition at line 499 of file VolumeManager.cpp.
+Definition at line 499 of file Volume\+Manager.\+cpp.
 
-References \_\-data(), DD4hep::Handle$<$ T $>$::isValid(), DD4hep::Geometry::VolumeManagerObject::subdetectors, DD4hep::Geometry::VolumeManagerObject::sysID, and DD4hep::Geometry::VolumeManagerObject::system.\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a2e00b14d61e22f8da9dc00640840b4c8}{
-\index{DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}!worldTransformation@{worldTransformation}}
-\index{worldTransformation@{worldTransformation}!DD4hep::Geometry::VolumeManager@{DD4hep::Geometry::VolumeManager}}
-\subsubsection[{worldTransformation}]{\setlength{\rightskip}{0pt plus 5cm}const TGeoMatrix \& VolumeManager::worldTransformation ({\bf VolumeID} {\em volume\_\-id}) const}}
-\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a2e00b14d61e22f8da9dc00640840b4c8}
+
+
+References \+\_\+data(), D\+D4hep\+::\+D\+D\+Segmentation\+::\+Bit\+Field\+Value\+::offset(), D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::subdetectors, D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::sys\+ID, D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Object\+::system, and D\+D4hep\+::\+D\+D\+Segmentation\+::\+Bit\+Field\+Value\+::value().
+
+
+
+Referenced by operator=(), and Volume\+Manager().
+
+\hypertarget{class_d_d4hep_1_1_geometry_1_1_volume_manager_a3d94720b4fe3f949fbfe9c3c332147dc}{}\label{class_d_d4hep_1_1_geometry_1_1_volume_manager_a3d94720b4fe3f949fbfe9c3c332147dc} 
+\index{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}!world\+Transformation@{world\+Transformation}}
+\index{world\+Transformation@{world\+Transformation}!D\+D4hep\+::\+Geometry\+::\+Volume\+Manager@{D\+D4hep\+::\+Geometry\+::\+Volume\+Manager}}
+\subsubsection{\texorpdfstring{world\+Transformation()}{worldTransformation()}}
+{\footnotesize\ttfamily const T\+Geo\+Matrix \& Volume\+Manager\+::world\+Transformation (\begin{DoxyParamCaption}\item[{\hyperlink{class_d_d4hep_1_1_geometry_1_1_volume_manager_ab1f746b561c93be38bc7c6e66fc8ca8a}{Volume\+ID}}]{volume\+\_\+id }\end{DoxyParamCaption}) const}
+
 
 
 Access the transformation of a physical volume to the world coordinate system. 
 
-Definition at line 679 of file VolumeManager.cpp.
 
-References lookupContext(), and DD4hep::Geometry::VolumeManagerContext::toWorld.
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+Definition at line 679 of file Volume\+Manager.\+cpp.
+
+
+
+References D\+D4hep\+::\+Geometry\+::\+Volume\+Manager\+Context\+::to\+World.
+
+
+
+Referenced by operator=().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/include/DD4hep/\hyperlink{_volume_manager_8h}{VolumeManager.h}\item 
-/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/\hyperlink{_volume_manager_8cpp}{VolumeManager.cpp}\end{DoxyCompactItemize}
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/include/\+D\+D4hep/\hyperlink{_volume_manager_8h}{Volume\+Manager.\+h}\item 
+/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\hyperlink{_volume_manager_8cpp}{Volume\+Manager.\+cpp}\end{DoxyCompactItemize}

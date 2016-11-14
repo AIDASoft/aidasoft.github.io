@@ -1,97 +1,110 @@
-\hypertarget{_document_handler_8cpp}{
-\section{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/XML/DocumentHandler.cpp File Reference}
-\label{_document_handler_8cpp}\index{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/XML/DocumentHandler.cpp@{/afs/cern.ch/user/m/mpetric/nightly\_\-cppcheck/dd4hep/DDCore/src/XML/DocumentHandler.cpp}}
-}
-{\ttfamily \#include \char`\"{}DD4hep/Printout.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}XML/UriReader.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}XML/DocumentHandler.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TUri.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}TUrl.h\char`\"{}}\par
-{\ttfamily \#include $<$iostream$>$}\par
-{\ttfamily \#include $<$stdexcept$>$}\par
-{\ttfamily \#include $<$sys/types.h$>$}\par
-{\ttfamily \#include $<$sys/stat.h$>$}\par
-{\ttfamily \#include $<$libgen.h$>$}\par
-{\ttfamily \#include \char`\"{}xercesc/framework/LocalFileFormatTarget.hpp\char`\"{}}\par
-{\ttfamily \#include \char`\"{}xercesc/framework/StdOutFormatTarget.hpp\char`\"{}}\par
-{\ttfamily \#include \char`\"{}xercesc/framework/MemBufFormatTarget.hpp\char`\"{}}\par
-{\ttfamily \#include \char`\"{}xercesc/framework/MemBufInputSource.hpp\char`\"{}}\par
-{\ttfamily \#include \char`\"{}xercesc/sax/SAXParseException.hpp\char`\"{}}\par
-{\ttfamily \#include \char`\"{}xercesc/sax/EntityResolver.hpp\char`\"{}}\par
-{\ttfamily \#include \char`\"{}xercesc/sax/InputSource.hpp\char`\"{}}\par
-{\ttfamily \#include \char`\"{}xercesc/parsers/XercesDOMParser.hpp\char`\"{}}\par
-{\ttfamily \#include \char`\"{}xercesc/util/XMLEntityResolver.hpp\char`\"{}}\par
-{\ttfamily \#include \char`\"{}xercesc/util/PlatformUtils.hpp\char`\"{}}\par
-{\ttfamily \#include \char`\"{}xercesc/util/XercesDefs.hpp\char`\"{}}\par
-{\ttfamily \#include \char`\"{}xercesc/util/XMLUni.hpp\char`\"{}}\par
-{\ttfamily \#include \char`\"{}xercesc/util/XMLURL.hpp\char`\"{}}\par
-{\ttfamily \#include \char`\"{}xercesc/util/XMLString.hpp\char`\"{}}\par
-{\ttfamily \#include \char`\"{}xercesc/dom/DOM.hpp\char`\"{}}\par
-{\ttfamily \#include \char`\"{}xercesc/sax/ErrorHandler.hpp\char`\"{}}\par
+\hypertarget{_document_handler_8cpp}{}\section{/afs/cern.ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\+X\+M\+L/\+Document\+Handler.cpp File Reference}
+\label{_document_handler_8cpp}\index{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\+X\+M\+L/\+Document\+Handler.\+cpp@{/afs/cern.\+ch/user/m/mpetric/nightly\+\_\+cppcheck/dd4hep/\+D\+D\+Core/src/\+X\+M\+L/\+Document\+Handler.\+cpp}}
+{\ttfamily \#include \char`\"{}D\+D4hep/\+Printout.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}X\+M\+L/\+Uri\+Reader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}X\+M\+L/\+Document\+Handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Uri.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Url.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$libgen.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xercesc/framework/\+Local\+File\+Format\+Target.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xercesc/framework/\+Std\+Out\+Format\+Target.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xercesc/framework/\+Mem\+Buf\+Format\+Target.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xercesc/framework/\+Mem\+Buf\+Input\+Source.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xercesc/sax/\+S\+A\+X\+Parse\+Exception.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xercesc/sax/\+Entity\+Resolver.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xercesc/sax/\+Input\+Source.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xercesc/parsers/\+Xerces\+D\+O\+M\+Parser.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xercesc/util/\+X\+M\+L\+Entity\+Resolver.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xercesc/util/\+Platform\+Utils.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xercesc/util/\+Xerces\+Defs.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xercesc/util/\+X\+M\+L\+Uni.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xercesc/util/\+X\+M\+L\+U\+R\+L.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xercesc/util/\+X\+M\+L\+String.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xercesc/dom/\+D\+O\+M.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xercesc/sax/\+Error\+Handler.\+hpp\char`\"{}}\newline
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_document_error_handler}{DD4hep::XML::DocumentErrorHandler}
-\begin{DoxyCompactList}\small\item\em XML-\/DOM ERror handler class for the XercesC document parser. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+class \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_document_error_handler}{D\+D4hep\+::\+X\+M\+L\+::\+Document\+Error\+Handler}
+\begin{DoxyCompactList}\small\item\em X\+M\+L-\/\+D\+OM E\+Rror handler class for the XercesC document parser. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
-namespace \hyperlink{namespace_d_d4hep}{DD4hep}
-
-
-\begin{DoxyCompactList}\small\item\em Namespace for the AIDA detector description toolkit. \item\end{DoxyCompactList}\item 
-namespace \hyperlink{namespace_d_d4hep_1_1_x_m_l}{DD4hep::XML}
-
-
-\begin{DoxyCompactList}\small\item\em Namespace containing utilities to parse \hyperlink{namespace_d_d4hep_1_1_x_m_l}{XML} files using XercesC or TinyXML. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+ \hyperlink{namespace_d_d4hep}{D\+D4hep}
+\begin{DoxyCompactList}\small\item\em Namespace for the A\+I\+DA detector description toolkit. \end{DoxyCompactList}\item 
+ \hyperlink{namespace_d_d4hep_1_1_x_m_l}{D\+D4hep\+::\+X\+ML}
+\begin{DoxyCompactList}\small\item\em Namespace containing utilities to parse \hyperlink{namespace_d_d4hep_1_1_x_m_l}{X\+ML} files using XercesC or Tiny\+X\+ML. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{namespace_d_d4hep_1_1_x_m_l_a5378d08fbf2f2c9e495fc772360b62d8}{DD4hep::XML::dumpTree} (DOMNode $\ast$doc, ostream \&os)
-\begin{DoxyCompactList}\small\item\em Dump DOM tree using XercesC handles. \item\end{DoxyCompactList}\item 
-void \hyperlink{namespace_d_d4hep_1_1_x_m_l_ae465472cdddbe11a365f14b04b15b191}{DD4hep::XML::dump\_\-doc} (DOMDocument $\ast$doc, ostream \&os)
-\begin{DoxyCompactList}\small\item\em Dump DOM tree using XercesC handles. \item\end{DoxyCompactList}\item 
-void \hyperlink{namespace_d_d4hep_1_1_x_m_l_a1130069b87e258d98105350c812835dd}{DD4hep::XML::dump\_\-tree} (\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_handle__t}{Handle\_\-t} elt, ostream \&os)
-\begin{DoxyCompactList}\small\item\em Dump DOM tree using XercesC handles. \item\end{DoxyCompactList}\item 
-void \hyperlink{namespace_d_d4hep_1_1_x_m_l_a890f94a51fe7c0a877ec482ec35caaf9}{DD4hep::XML::dump\_\-tree} (\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_document}{Document} doc, ostream \&os)
-\begin{DoxyCompactList}\small\item\em Dump DOM tree using XercesC handles. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{namespace_d_d4hep_1_1_x_m_l_a5378d08fbf2f2c9e495fc772360b62d8}{D\+D4hep\+::\+X\+M\+L\+::dump\+Tree} (D\+O\+M\+Node $\ast$doc, ostream \&os)
+\begin{DoxyCompactList}\small\item\em Dump D\+OM tree using XercesC handles. \end{DoxyCompactList}\item 
+void \hyperlink{namespace_d_d4hep_1_1_x_m_l_ae465472cdddbe11a365f14b04b15b191}{D\+D4hep\+::\+X\+M\+L\+::dump\+\_\+doc} (D\+O\+M\+Document $\ast$doc, ostream \&os)
+\begin{DoxyCompactList}\small\item\em Dump D\+OM tree using XercesC handles. \end{DoxyCompactList}\item 
+void \hyperlink{namespace_d_d4hep_1_1_x_m_l_a1130069b87e258d98105350c812835dd}{D\+D4hep\+::\+X\+M\+L\+::dump\+\_\+tree} (\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_handle__t}{Handle\+\_\+t} elt, ostream \&os)
+\begin{DoxyCompactList}\small\item\em Dump D\+OM tree using XercesC handles. \end{DoxyCompactList}\item 
+void \hyperlink{namespace_d_d4hep_1_1_x_m_l_a890f94a51fe7c0a877ec482ec35caaf9}{D\+D4hep\+::\+X\+M\+L\+::dump\+\_\+tree} (\hyperlink{class_d_d4hep_1_1_x_m_l_1_1_document}{Document} doc, ostream \&os)
+\begin{DoxyCompactList}\small\item\em Dump D\+OM tree using XercesC handles. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Variable Documentation}
-\hypertarget{_document_handler_8cpp_ac13d723774872e925cbcdf4f112f0dd9}{
-\index{DocumentHandler.cpp@{DocumentHandler.cpp}!m\_\-errHandler@{m\_\-errHandler}}
-\index{m\_\-errHandler@{m\_\-errHandler}!DocumentHandler.cpp@{DocumentHandler.cpp}}
-\subsubsection[{m\_\-errHandler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DocumentErrorHandler} {\bf m\_\-errHandler}}}
-\label{_document_handler_8cpp_ac13d723774872e925cbcdf4f112f0dd9}
+\hypertarget{_document_handler_8cpp_ac13d723774872e925cbcdf4f112f0dd9}{}\label{_document_handler_8cpp_ac13d723774872e925cbcdf4f112f0dd9} 
+\index{Document\+Handler.\+cpp@{Document\+Handler.\+cpp}!m\+\_\+err\+Handler@{m\+\_\+err\+Handler}}
+\index{m\+\_\+err\+Handler@{m\+\_\+err\+Handler}!Document\+Handler.\+cpp@{Document\+Handler.\+cpp}}
+\subsubsection{\texorpdfstring{m\+\_\+err\+Handler}{m\_errHandler}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_document_error_handler}{Document\+Error\+Handler} m\+\_\+err\+Handler\hspace{0.3cm}{\ttfamily [private]}}
+
 
 
 Xerces Error handler. 
 
-Definition at line 139 of file DocumentHandler.cpp.\hypertarget{_document_handler_8cpp_a981722077bc96d06fe681f9e01f5c559}{
-\index{DocumentHandler.cpp@{DocumentHandler.cpp}!m\_\-reader@{m\_\-reader}}
-\index{m\_\-reader@{m\_\-reader}!DocumentHandler.cpp@{DocumentHandler.cpp}}
-\subsubsection[{m\_\-reader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UriReader}$\ast$ {\bf m\_\-reader}}}
-\label{_document_handler_8cpp_a981722077bc96d06fe681f9e01f5c559}
 
 
-Pointer to URI reader. 
+Definition at line 139 of file Document\+Handler.\+cpp.
 
-Definition at line 137 of file DocumentHandler.cpp.
-
-Referenced by DD4hep::Simulation::LCIOFileReader::LCIOFileReader().\hypertarget{_document_handler_8cpp_a8a8e8174cc158d77295e35e55a491730}{
-\index{DocumentHandler.cpp@{DocumentHandler.cpp}!m\_\-resolver@{m\_\-resolver}}
-\index{m\_\-resolver@{m\_\-resolver}!DocumentHandler.cpp@{DocumentHandler.cpp}}
-\subsubsection[{m\_\-resolver}]{\setlength{\rightskip}{0pt plus 5cm}Resolver {\bf m\_\-resolver}}}
-\label{_document_handler_8cpp_a8a8e8174cc158d77295e35e55a491730}
+\hypertarget{_document_handler_8cpp_a981722077bc96d06fe681f9e01f5c559}{}\label{_document_handler_8cpp_a981722077bc96d06fe681f9e01f5c559} 
+\index{Document\+Handler.\+cpp@{Document\+Handler.\+cpp}!m\+\_\+reader@{m\+\_\+reader}}
+\index{m\+\_\+reader@{m\+\_\+reader}!Document\+Handler.\+cpp@{Document\+Handler.\+cpp}}
+\subsubsection{\texorpdfstring{m\+\_\+reader}{m\_reader}}
+{\footnotesize\ttfamily \hyperlink{class_d_d4hep_1_1_x_m_l_1_1_uri_reader}{Uri\+Reader}$\ast$ m\+\_\+reader\hspace{0.3cm}{\ttfamily [private]}}
 
 
-Definition at line 148 of file DocumentHandler.cpp.\hypertarget{_document_handler_8cpp_a94c4b399c284242a40bb49e9ce2a5d0d}{
-\index{DocumentHandler.cpp@{DocumentHandler.cpp}!parser@{parser}}
-\index{parser@{parser}!DocumentHandler.cpp@{DocumentHandler.cpp}}
-\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}DD4hepDOMParser$\ast$ {\bf parser}}}
-\label{_document_handler_8cpp_a94c4b399c284242a40bb49e9ce2a5d0d}
+
+Pointer to U\+RI reader. 
 
 
-Definition at line 141 of file DocumentHandler.cpp.
 
-Referenced by DD4hep::Simulation::Geant4GDMLDetector::Construct(), DD4hep::Simulation::Geant4DetectorGeometryConstruction::constructGeo(), and DD4hep::XML::DocumentHandler::parse().
+Definition at line 137 of file Document\+Handler.\+cpp.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+L\+C\+I\+O\+File\+Reader\+::move\+To\+Event(), D\+D4hep\+::\+Simulation\+::\+L\+C\+I\+O\+File\+Reader\+::read\+Particle\+Collection(), D\+D4hep\+::\+Simulation\+::\+L\+C\+I\+O\+File\+Reader\+::skip\+Event(), and D\+D4hep\+::\+Simulation\+::\+L\+C\+I\+O\+File\+Reader\+::$\sim$\+L\+C\+I\+O\+File\+Reader().
+
+\hypertarget{_document_handler_8cpp_a8a8e8174cc158d77295e35e55a491730}{}\label{_document_handler_8cpp_a8a8e8174cc158d77295e35e55a491730} 
+\index{Document\+Handler.\+cpp@{Document\+Handler.\+cpp}!m\+\_\+resolver@{m\+\_\+resolver}}
+\index{m\+\_\+resolver@{m\+\_\+resolver}!Document\+Handler.\+cpp@{Document\+Handler.\+cpp}}
+\subsubsection{\texorpdfstring{m\+\_\+resolver}{m\_resolver}}
+{\footnotesize\ttfamily Resolver m\+\_\+resolver\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 148 of file Document\+Handler.\+cpp.
+
+\hypertarget{_document_handler_8cpp_a94c4b399c284242a40bb49e9ce2a5d0d}{}\label{_document_handler_8cpp_a94c4b399c284242a40bb49e9ce2a5d0d} 
+\index{Document\+Handler.\+cpp@{Document\+Handler.\+cpp}!parser@{parser}}
+\index{parser@{parser}!Document\+Handler.\+cpp@{Document\+Handler.\+cpp}}
+\subsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily D\+D4hep\+D\+O\+M\+Parser$\ast$ parser\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 141 of file Document\+Handler.\+cpp.
+
+
+
+Referenced by D\+D4hep\+::\+Simulation\+::\+Geant4\+G\+D\+M\+L\+Detector\+::\+Construct(), D\+D4hep\+::\+Simulation\+::\+Geant4\+Detector\+Geometry\+Construction\+::construct\+Geo(), D\+D4hep\+::\+X\+M\+L\+::\+Document\+Handler\+::load(), and D\+D4hep\+::\+X\+M\+L\+::\+Document\+Handler\+::parse().
+
